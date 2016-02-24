@@ -1,6 +1,7 @@
 \select@language {english}
-\contentsline {part}{\@mypartnumtocformat {I}{Preface}}{5}{part.1}
-\contentsline {part}{\@mypartnumtocformat {II}{Foundations 基础}}{1}{part.2}
+\contentsline {part}{\@mypartnumtocformat {I}{Foundations 基础}}{1}{part.1}
 \contentsline {chapter}{\numberline {1}Introduction 简介}{3}{chapter.1}
 \contentsline {section}{\numberline {1.1}What we Cannot Derive 得不到的事情}{3}{section.1.1}
+\contentsline {part}{\@mypartnumtocformat {II}{Symmetry Tools 对称性工具}}{5}{part.2}
+\contentsline {chapter}{\numberline {2}The Framework 框架/参考系}{7}{chapter.2}
 \contentsfinish 
