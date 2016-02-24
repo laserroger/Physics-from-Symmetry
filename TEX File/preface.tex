@@ -1,0 +1,105 @@
+\documentclass[hyperref, UTF8]{ctexart}
+
+\usepackage{geometry}
+\geometry{a4paper}
+
+\bibliographystyle{plain}
+
+\usepackage{ulem}     % 删除线指令\sout{}
+\usepackage{faktor}   % 斜分数指令\faktor{}{} (数学模式)
+\usepackage{nicefrac} % 斜分数指令\nicefrac{}{} (文本公式)
+\usepackage{amsopn}   % 新算符指令\DeclareMathOperator{command}{text}
+\usepackage{xfrac}	  % 斜分式指令\sfrac
+\usepackage{mathtools}
+\usepackage{amstext}  % 数学文本指令\text{}
+\usepackage{color}    % 文本颜色指令\color
+\usepackage{amsmath}  % 数学环境宏包
+\usepackage{amsthm}   % 数学环境宏包2
+\usepackage{graphicx} % 插入图片命令\includegraphics
+\usepackage{amsfonts} % \mathbb命令用
+\usepackage{mathrsfs} % \mathscr命令用
+\usepackage{hyperref} % 加载为电子文档提供目录标签和超链接功能的hyperref宏包
+\hypersetup{
+	colorlinks = true,
+	linkcolor = blue
+}
+
+
+\newtheorem*{Exam}{例}   % 例环境Exam
+\newtheorem{Defi}{定义} % 定义环境Defi
+\newtheorem*{Note}{注}   % 注环境Note
+\newtheorem{Theo}{定理} % 定理环境Theo
+\newcommand\dd{\mathrm{d}}
+\DeclareMathOperator{\fE}{fE}
+\DeclareMathOperator{\sinn}{sinn}
+\DeclareMathOperator{\arcsinh}{arcsinh}
+
+\title{前言}
+
+
+
+
+
+\begin{document}
+	
+\maketitle
+
+\begin{quote}
+世界上最无法理解的事情是这个世界竟然是可以理解的.
+\end{quote}
+--- Albert Einstein\marginpar{引自Jon Fripp, Deborah Fripp, and Michael Fripp. {\it{Speaking of Science}}. Newnes, 1st edition, 4 2000. ISBN 9781878707512}
+
+\ 
+
+在物理课上, 我像任何一个物理系学生那样熟悉许多基本方程与它们的解, 但我不是很清楚它们之间的联系.
+
+当我理解它们中的大多数具有共同的起源 --- \textbf{对称性(Symmetry)}时我十分激动. 对我而言搞物理最美的经历莫过于原本费解的东西经过深入探究之后豁然开朗. 我因此深爱着对称性.
+
+例如, 有一段时间我不能真正理解自旋 --- 几乎所有基本粒子都具有的奇特的内禀角动量, 后来我学到了原来自旋一种对称性(称为Lorentz对称性)的直接结果, 于是有关自旋的内容开始充满意义.
+
+本书的目的就是为读者提供这样的经历, 在某种意义上, 当我开始学物理的时候我就有写这本书的愿望了.\footnote{同感! 这就是物理系学生的中二病吗2333333 --- 译者(SI)} 对称性漂亮地解释了其它方面的许多复杂物理现象, 这让我们认为可以从对称导出物理学的基本理论, 本书正是基于这个锐利而光芒耀眼的信念.\footnote{锐(するど)くギラつかせた希望(きぼう), もっと本気(ほんき)出(だ)していいよ, あ$\sim$, あ$\sim$, あ$\sim$, あ$\sim$}
+
+% flag1:  we will use the (as far as we know) exact symmetries of nature to derive ... (我们将利用大自然(据我们所知的)精确的对称性) 'exact symmetries'翻译不好
+可以说本书的写作顺序是倒过来的: 在我们讨论经典力学与非相对论量子力学之前, 我们将利用大自然(据我们所知)精确的对称性导出量子场论的基本方程. 不过尽管途径不同, 本书的内容仍为标准物理学, 我们不涉及仍有争议未经实验验证的内容, 而是通过物理学的标准假设导出物理学的标准理论.
+
+根据读者的物理水平, 本书可以有两种用途:
+\begin{itemize}
+	\item 物理学的初学者\footnote{这个`初学者'是`相对而言的'(relatively)... --- 译者注}可以把这本书当成入门教材, 它包含了经典力学,电动力学,量子力学,狭义相对论和量子场论的基本理论, 在阅读之后, 读者可再深入学习各部分内容. 各部分有许多更加深入的优秀书籍, 在各章的末尾列出了一些延伸阅读的推荐表. 如果你觉得你属于这一种, 我们建议你在阅读正文之前先从附录的数学补充\marginpar{开始自附录A. 此外, 当正文使用一个新的数学概念时, 边注中会说明相应的附录目录.}开始.
+	\item 
+	另一种情况, 身经百战见得多的学生可以通过本书将松散的各物理领域紧密联系起来. 回顾历史的进程我们会发现许多物理思想可能看起来随意甚至乱来, 但从对称性的观点看, 它们往往就变得必然而直接.
+\end{itemize}
+
+とにかく, 不管哪种情况都应该按顺序阅读本书, 因为各章之间是递进的.
+
+\ 
+
+% flag2: (Lagrangian formalism) makes working with symmetries in a physical context straightforward  (它使我们能够在物理形式中直接利用对称性) 翻译不好
+开始的短章节是关于狭义相对论的, 它是之后讨论的所有内容的基础. 我们会看到对物理理论最重要的限制之一是它们必须符合狭义相对论. 
+
+本书的第二部分引入了描述对称性的数学工具(在物理味道的表述下), 大多数工具来自数学的重要分支 --- 群论. 之后我们介绍Lagrangian体系, 它使我们能够在物理形式中直接利用对称性. 
+
+第五章和第六章利用之前引入的Lagrangian体系和群论导出了现代物理学的基本方程. 
+
+在最后一部分, 我们把之前的基本方程加以应用: %Ps: 差点把 these equations are put into action翻译成'把这些方程塞进作用量里'
+应用于粒子理论我们可以导出量子力学, 应用于场理论我们可以导出量子场论. 然后我们研究这些理论在非相对论极限与经典极限的变体, 这样又导出了经典力学与电动力学.
+
+每章的开始是本章内容的摘要. 如果你发现你在思考`这是在讲些啥', 不妨回到章节开头看看摘要以明白某一部分的目的是什么. 书页留有巨大的页边空白\footnote{给译文排版造成了小小的麻烦. --- 译者}\sout{以防止想出Fermat大定理的证明却没地方写}
+%flag3: \sout{}指令下的文本不能自动换行, 有啥解决办法?
+你可以一边阅读一边在页边记下笔记与灵感\marginpar{许多页边注的内容是拓展信息与图景.}.
+
+我希望你读这本书能够像我写这本书的时候一样愉悦.
+
+\begin{flushright}
+Karlsruhe, 2015.01
+
+Jakob Schwichtenberg
+\end{flushright}
+\end{document}
+
+
+
+
+
+
+
+
