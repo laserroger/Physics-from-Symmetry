@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015) (preloaded format=xelatex 2015.5.24)  24 FEB 2016 17:08
+This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015) (preloaded format=xelatex 2015.5.24)  24 FEB 2016 17:30
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1125,6 +1125,9 @@ Package color Info: Driver file: xetex.def on input line 142.
 )
 \sc@wm@fontsize=\skip71
 )
+(/usr/local/texlive/2015/texmf-dist/tex/latex/setspace/setspace.sty
+Package: setspace 2011/12/19 v6.7a set line spacing
+)
 (/usr/local/texlive/2015/texmf-dist/tex/latex/marginnote/marginnote.sty
 Package: marginnote 2012/03/29 v1.1i non floating margin notes for LaTeX
 \c@mn@abspage=\count192
@@ -2197,6 +2200,33 @@ Underfull \hbox (badness 10000) in paragraph at lines 89--90
  []
 
 [2]
+\openout2 = `Preface.aux'.
+
+ (./Preface.tex
+File: Pictures/chapter_head_1.pdf Graphic file (type QTm)
+ <use  "Pictures/chapter_head_1.pdf" >
+Underfull \hbox (badness 1436) in paragraph at lines 8--8
+\T1/lmr/m/n/10.95 tion, 4 2000. ISBN
+ []
+
+[3
+
+
+
+] [4]) [5]
+\openout2 = `Acknowledge.aux'.
+
+ (./Acknowledge.tex [6
+
+
+
+]
+File: Pictures/chapter_head_1.pdf Graphic file (type QTm)
+ <use  "Pictures/chapter_head_1.pdf" >)
+[7] [8
+
+
+]
 File: Pictures/chapter_head_1.pdf Graphic file (type QTm)
  <use  "Pictures/chapter_head_1.pdf" > (./main.toc
 LaTeX Font Info:    Font shape `T1/pag/bx/n' in size <12> not available
@@ -2211,38 +2241,8 @@ LaTeX Font Info:    Font shape `T1/pag/b/n' in size <10.95> not available
 \tf@toc=\write5
 \openout5 = `main.toc'.
 
- [3
-
-] [4
-
-]
-\openout2 = `Preface.aux'.
-
- (./Preface.tex
-File: Pictures/chapter_head_1.pdf Graphic file (type QTm)
-
-<use  "Pictures/chapter_head_1.pdf" >
-Underfull \hbox (badness 1436) in paragraph at lines 8--8
-\T1/lmr/m/n/10.95 tion, 4 2000. ISBN
- []
-
-[5
-
-
-]) [6]
-\openout2 = `Acknowledge.aux'.
-
- (./Acknowledge.tex
-File: Pictures/chapter_head_1.pdf Graphic file (type QTm)
- <use  "Pictures/chapter_head_1.pdf" >) [7
-
-
-
-]
-(./Parts/Part1.tex [0
-
-
-]
+ (./Parts/Part1.tex
+[0]
 \c@ttl@toc@default=\count286
 LaTeX Font Info:    Font shape `T1/pag/bx/n' in size <220> not available
 (Font)              Font shape `T1/pag/b/n' tried instead on input line 3.
@@ -2253,40 +2253,46 @@ LaTeX Font Info:    Font shape `T1/pag/bx/n' in size <30> not available
 (Font)              Font shape `T1/pag/b/n' tried instead on input line 3.
 LaTeX Font Info:    Font shape `T1/pag/b/n' in size <30> not available
 (Font)              Font shape `T1/pag/db/n' tried instead on input line 3.
- [1] [2]) (./Chaps/Chap1.tex
+ [1
+
+] [2]) (./Chaps/Chap1.tex
 Chapter 1.
 File: Pictures/chapter_head_1.pdf Graphic file (type QTm)
 <use  "Pictures/chapter_head_1.pdf" >
 
 LaTeX Warning: Marginpar on page 3 moved.
 
-) (./Parts/Part2.tex [3
+[3
 
-] [4
+]) (./Parts/Part2.tex [4] (./main.ptc) [5
 
-] (./main.ptc) [5] [6]) (./Chaps/Chap4.tex
+] [6]) (./Chaps/Chap4.tex
 Chapter 2.
 File: Pictures/chapter_head_1.pdf Graphic file (type QTm)
-<use  "Pictures/chapter_head_1.pdf" > [7
+<use  "Pictures/chapter_head_1.pdf" >
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-]) [8]
-No file main.bbl.
+ [7
+
+]
+[8])
 \tf@ptc=\write6
 \openout6 = `main.ptc'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 167.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 167.
-(./main.aux (./Preface.aux) (./Acknowledge.aux))
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 167.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 167.
+ [9]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 168.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 168.
+ (./main.aux (./Preface.aux) (./Acknowledge.aux))
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 168.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 168.
  ) 
 Here is how much of TeX's memory you used:
- 40204 strings out of 493706
- 794297 string characters out of 6145769
- 950817 words of memory out of 5000000
- 42865 multiletter control sequences out of 15000+600000
+ 40235 strings out of 493706
+ 794887 string characters out of 6145769
+ 952152 words of memory out of 5000000
+ 42893 multiletter control sequences out of 15000+600000
  116627 words of font info for 198 fonts, out of 8000000 for 9000
  1328 hyphenation exceptions out of 8191
- 57i,11n,69p,10472b,1206s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 57i,12n,69p,10472b,1341s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on main.pdf (16 pages).
+Output written on main.pdf (18 pages).
