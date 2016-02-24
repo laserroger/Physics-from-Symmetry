@@ -44,9 +44,13 @@
 
 
 \newcounter{mparcnt}
-\renewcommand\themparcnt{\textbf{\arabic{mparcnt}: }}
+\renewcommand\themparcnt{\small{$^{\arabic{mparcnt}}$}}
 \newcommand\mpar[1]{\refstepcounter{mparcnt}{$^{\arabic{mparcnt}}$}\marginpar{\themparcnt\tiny#1}}
 
+\newcommand{\lmarginpar}[1]{%
+  \vadjust{\smash{\llap{\parbox[t]{\marginparwidth}{\strut#1}\kern\marginparsep}}}}
+\newcommand{\rmarginpar}[1]{%
+  \vadjust{\smash{\rlap{\hspace*{\dimexpr\linewidth+\marginparsep}\parbox[t]{\marginparwidth}{\strut#1}}}}}
 
 
 \begin{document}
