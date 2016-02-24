@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015) (preloaded format=xelatex 2015.5.24)  24 FEB 2016 16:33
+This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015) (preloaded format=xelatex 2015.5.24)  24 FEB 2016 17:08
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -2267,11 +2267,9 @@ LaTeX Warning: Marginpar on page 3 moved.
 ] (./main.ptc) [5] [6]) (./Chaps/Chap4.tex
 Chapter 2.
 File: Pictures/chapter_head_1.pdf Graphic file (type QTm)
-<use  "Pictures/chapter_head_1.pdf" >) [7
+<use  "Pictures/chapter_head_1.pdf" > [7
 
-] [8
-
-]
+]) [8]
 No file main.bbl.
 \tf@ptc=\write6
 \openout6 = `main.ptc'.
@@ -2283,12 +2281,12 @@ Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 167.
 Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 167.
  ) 
 Here is how much of TeX's memory you used:
- 40071 strings out of 493706
- 788558 string characters out of 6145769
+ 40204 strings out of 493706
+ 794297 string characters out of 6145769
  950817 words of memory out of 5000000
- 42747 multiletter control sequences out of 15000+600000
- 110578 words of font info for 187 fonts, out of 8000000 for 9000
+ 42865 multiletter control sequences out of 15000+600000
+ 116627 words of font info for 198 fonts, out of 8000000 for 9000
  1328 hyphenation exceptions out of 8191
- 57i,11n,69p,10472b,1230s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 57i,11n,69p,10472b,1206s stack positions out of 5000i,500n,10000p,200000b,80000s
 
 Output written on main.pdf (16 pages).
