@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015) (preloaded format=xelatex 2015.5.24)  23 FEB 2016 23:07
+This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015) (preloaded format=xelatex 2015.5.24)  24 FEB 2016 15:54
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1117,6 +1117,10 @@ Package color Info: Driver file: xetex.def on input line 142.
 )
 \sc@wm@fontsize=\skip70
 )
+(/usr/local/texlive/2015/texmf-dist/tex/latex/preprint/fullpage.sty
+Package: fullpage 1999/02/23 1.1 (PWD)
+\FP@margin=\skip71
+)
 (./structure.tex
 (/usr/local/texlive/2015/texmf-dist/tex/latex/geometry/geometry.sty
 Package: geometry 2010/09/12 v5.6 Page Geometry
@@ -1461,7 +1465,7 @@ File: babel.def 2014/09/25 3.9l Babel common definitions
 ))
 (/usr/local/texlive/2015/texmf-dist/tex/latex/enumitem/enumitem.sty
 Package: enumitem 2011/09/28 v3.5.2 Customized lists
-\labelindent=\skip71
+\labelindent=\skip72
 \enit@outerparindent=\dimen256
 \enit@toks=\toks37
 \enit@inbox=\box57
@@ -1541,15 +1545,15 @@ Package: titletoc 2011/12/15 v1.6 TOC entries
 \ttl@leftsep=\dimen271
 )
 (/usr/local/texlive/2015/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
-\fancy@headwidth=\skip72
-\f@ncyO@elh=\skip73
-\f@ncyO@erh=\skip74
-\f@ncyO@olh=\skip75
-\f@ncyO@orh=\skip76
-\f@ncyO@elf=\skip77
-\f@ncyO@erf=\skip78
-\f@ncyO@olf=\skip79
-\f@ncyO@orf=\skip80
+\fancy@headwidth=\skip73
+\f@ncyO@elh=\skip74
+\f@ncyO@erh=\skip75
+\f@ncyO@olh=\skip76
+\f@ncyO@orh=\skip77
+\f@ncyO@elf=\skip78
+\f@ncyO@erf=\skip79
+\f@ncyO@olf=\skip80
+\f@ncyO@orf=\skip81
 )
 (/usr/local/texlive/2015/texmf-dist/tex/latex/amscls/amsthm.sty
 Package: amsthm 2015/03/04 v2.20.2
@@ -1558,9 +1562,9 @@ Package: amsthm 2015/03/04 v2.20.2
 \thm@headfont=\toks43
 \thm@notefont=\toks44
 \thm@headpunct=\toks45
-\thm@preskip=\skip81
-\thm@postskip=\skip82
-\thm@headsep=\skip83
+\thm@preskip=\skip82
+\thm@postskip=\skip83
+\thm@headsep=\skip84
 \dth@everypar=\toks46
 )
 \c@notation=\count223
@@ -1636,47 +1640,47 @@ Package zref Info: New property: abspage on input line 62.
 (/usr/local/texlive/2015/texmf-dist/tex/latex/needspace/needspace.sty
 Package: needspace 2010/09/12 v1.3d reserve vertical space
 )
-\mdf@templength=\skip84
+\mdf@templength=\skip85
 \c@mdf@globalstyle@cnt=\count232
-\mdf@skipabove@length=\skip85
-\mdf@skipbelow@length=\skip86
-\mdf@leftmargin@length=\skip87
-\mdf@rightmargin@length=\skip88
-\mdf@innerleftmargin@length=\skip89
-\mdf@innerrightmargin@length=\skip90
-\mdf@innertopmargin@length=\skip91
-\mdf@innerbottommargin@length=\skip92
-\mdf@splittopskip@length=\skip93
-\mdf@splitbottomskip@length=\skip94
-\mdf@outermargin@length=\skip95
-\mdf@innermargin@length=\skip96
-\mdf@linewidth@length=\skip97
-\mdf@innerlinewidth@length=\skip98
-\mdf@middlelinewidth@length=\skip99
-\mdf@outerlinewidth@length=\skip100
-\mdf@roundcorner@length=\skip101
-\mdf@footenotedistance@length=\skip102
-\mdf@userdefinedwidth@length=\skip103
-\mdf@needspace@length=\skip104
-\mdf@frametitleaboveskip@length=\skip105
-\mdf@frametitlebelowskip@length=\skip106
-\mdf@frametitlerulewidth@length=\skip107
-\mdf@frametitleleftmargin@length=\skip108
-\mdf@frametitlerightmargin@length=\skip109
-\mdf@shadowsize@length=\skip110
-\mdf@extratopheight@length=\skip111
-\mdf@subtitleabovelinewidth@length=\skip112
-\mdf@subtitlebelowlinewidth@length=\skip113
-\mdf@subtitleaboveskip@length=\skip114
-\mdf@subtitlebelowskip@length=\skip115
-\mdf@subtitleinneraboveskip@length=\skip116
-\mdf@subtitleinnerbelowskip@length=\skip117
-\mdf@subsubtitleabovelinewidth@length=\skip118
-\mdf@subsubtitlebelowlinewidth@length=\skip119
-\mdf@subsubtitleaboveskip@length=\skip120
-\mdf@subsubtitlebelowskip@length=\skip121
-\mdf@subsubtitleinneraboveskip@length=\skip122
-\mdf@subsubtitleinnerbelowskip@length=\skip123
+\mdf@skipabove@length=\skip86
+\mdf@skipbelow@length=\skip87
+\mdf@leftmargin@length=\skip88
+\mdf@rightmargin@length=\skip89
+\mdf@innerleftmargin@length=\skip90
+\mdf@innerrightmargin@length=\skip91
+\mdf@innertopmargin@length=\skip92
+\mdf@innerbottommargin@length=\skip93
+\mdf@splittopskip@length=\skip94
+\mdf@splitbottomskip@length=\skip95
+\mdf@outermargin@length=\skip96
+\mdf@innermargin@length=\skip97
+\mdf@linewidth@length=\skip98
+\mdf@innerlinewidth@length=\skip99
+\mdf@middlelinewidth@length=\skip100
+\mdf@outerlinewidth@length=\skip101
+\mdf@roundcorner@length=\skip102
+\mdf@footenotedistance@length=\skip103
+\mdf@userdefinedwidth@length=\skip104
+\mdf@needspace@length=\skip105
+\mdf@frametitleaboveskip@length=\skip106
+\mdf@frametitlebelowskip@length=\skip107
+\mdf@frametitlerulewidth@length=\skip108
+\mdf@frametitleleftmargin@length=\skip109
+\mdf@frametitlerightmargin@length=\skip110
+\mdf@shadowsize@length=\skip111
+\mdf@extratopheight@length=\skip112
+\mdf@subtitleabovelinewidth@length=\skip113
+\mdf@subtitlebelowlinewidth@length=\skip114
+\mdf@subtitleaboveskip@length=\skip115
+\mdf@subtitlebelowskip@length=\skip116
+\mdf@subtitleinneraboveskip@length=\skip117
+\mdf@subtitleinnerbelowskip@length=\skip118
+\mdf@subsubtitleabovelinewidth@length=\skip119
+\mdf@subsubtitlebelowlinewidth@length=\skip120
+\mdf@subsubtitleaboveskip@length=\skip121
+\mdf@subsubtitlebelowskip@length=\skip122
+\mdf@subsubtitleinneraboveskip@length=\skip123
+\mdf@subsubtitleinnerbelowskip@length=\skip124
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/mdframed/md-frame-0.mdf
 File: md-frame-0.mdf 2013/07/01\ 1.9b: md-frame-0
@@ -1686,33 +1690,33 @@ File: md-frame-0.mdf 2013/07/01\ 1.9b: md-frame-0
 \mdf@splitbox@one=\box60
 \mdf@splitbox@two=\box61
 \mdf@splitbox@save=\box62
-\mdfsplitboxwidth=\skip124
-\mdfsplitboxtotalwidth=\skip125
-\mdfsplitboxheight=\skip126
-\mdfsplitboxdepth=\skip127
-\mdfsplitboxtotalheight=\skip128
-\mdfframetitleboxwidth=\skip129
-\mdfframetitleboxtotalwidth=\skip130
-\mdfframetitleboxheight=\skip131
-\mdfframetitleboxdepth=\skip132
-\mdfframetitleboxtotalheight=\skip133
-\mdffootnoteboxwidth=\skip134
-\mdffootnoteboxtotalwidth=\skip135
-\mdffootnoteboxheight=\skip136
-\mdffootnoteboxdepth=\skip137
-\mdffootnoteboxtotalheight=\skip138
-\mdftotallinewidth=\skip139
-\mdfboundingboxwidth=\skip140
-\mdfboundingboxtotalwidth=\skip141
-\mdfboundingboxheight=\skip142
-\mdfboundingboxdepth=\skip143
-\mdfboundingboxtotalheight=\skip144
-\mdf@freevspace@length=\skip145
-\mdf@horizontalwidthofbox@length=\skip146
-\mdf@verticalmarginwhole@length=\skip147
-\mdf@horizontalspaceofbox=\skip148
-\mdfsubtitleheight=\skip149
-\mdfsubsubtitleheight=\skip150
+\mdfsplitboxwidth=\skip125
+\mdfsplitboxtotalwidth=\skip126
+\mdfsplitboxheight=\skip127
+\mdfsplitboxdepth=\skip128
+\mdfsplitboxtotalheight=\skip129
+\mdfframetitleboxwidth=\skip130
+\mdfframetitleboxtotalwidth=\skip131
+\mdfframetitleboxheight=\skip132
+\mdfframetitleboxdepth=\skip133
+\mdfframetitleboxtotalheight=\skip134
+\mdffootnoteboxwidth=\skip135
+\mdffootnoteboxtotalwidth=\skip136
+\mdffootnoteboxheight=\skip137
+\mdffootnoteboxdepth=\skip138
+\mdffootnoteboxtotalheight=\skip139
+\mdftotallinewidth=\skip140
+\mdfboundingboxwidth=\skip141
+\mdfboundingboxtotalwidth=\skip142
+\mdfboundingboxheight=\skip143
+\mdfboundingboxdepth=\skip144
+\mdfboundingboxtotalheight=\skip145
+\mdf@freevspace@length=\skip146
+\mdf@horizontalwidthofbox@length=\skip147
+\mdf@verticalmarginwhole@length=\skip148
+\mdf@horizontalspaceofbox=\skip149
+\mdfsubtitleheight=\skip150
+\mdfsubsubtitleheight=\skip151
 \c@mdfcountframes=\count233
 
 ****** mdframed patching \endmdf@trivlist
@@ -1735,8 +1739,8 @@ File: md-frame-0.mdf 2013/07/01\ 1.9b: md-frame-0
 \c@mdf@zref@counter=\count269
 Package zref Info: New property: mdf@pagevalue on input line 895.
 )
-\esp=\skip151
-\ecart=\skip152
+\esp=\skip152
+\ecart=\skip153
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/hyperref/hyperref.sty
 Package: hyperref 2012/11/06 v6.83m Hypertext links for LaTeX
@@ -1845,7 +1849,7 @@ Package rerunfilecheck Info: Feature \pdfmdfivesum is not available
 tly
 (rerunfilecheck)             and the loading of the package is aborted.
 )
-\Hy@SectionHShift=\skip153
+\Hy@SectionHShift=\skip154
 )
 
 Package hyperref Warning: Option `backref' has already been used,
@@ -1964,30 +1968,30 @@ Xy-pic Warning: `\stop' redefined.
 (./main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 36.
-LaTeX Font Info:    ... okay on input line 36.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 36.
-LaTeX Font Info:    ... okay on input line 36.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 36.
-LaTeX Font Info:    ... okay on input line 36.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 36.
-LaTeX Font Info:    ... okay on input line 36.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 36.
-LaTeX Font Info:    ... okay on input line 36.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 36.
-LaTeX Font Info:    ... okay on input line 36.
-LaTeX Font Info:    Checking defaults for EU1/lmr/m/n on input line 36.
-LaTeX Font Info:    ... okay on input line 36.
-LaTeX Font Info:    Checking defaults for T3/cmr/m/n on input line 36.
-LaTeX Font Info:    Try loading font information for T3+cmr on input line 36.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 41.
+LaTeX Font Info:    ... okay on input line 41.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 41.
+LaTeX Font Info:    ... okay on input line 41.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 41.
+LaTeX Font Info:    ... okay on input line 41.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 41.
+LaTeX Font Info:    ... okay on input line 41.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 41.
+LaTeX Font Info:    ... okay on input line 41.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 41.
+LaTeX Font Info:    ... okay on input line 41.
+LaTeX Font Info:    Checking defaults for EU1/lmr/m/n on input line 41.
+LaTeX Font Info:    ... okay on input line 41.
+LaTeX Font Info:    Checking defaults for T3/cmr/m/n on input line 41.
+LaTeX Font Info:    Try loading font information for T3+cmr on input line 41.
  (/usr/local/texlive/2015/texmf-dist/tex/latex/tipa/t3cmr.fd
 File: t3cmr.fd 2001/12/31 TIPA font definitions
 )
-LaTeX Font Info:    ... okay on input line 36.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 36.
-LaTeX Font Info:    ... okay on input line 36.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 36.
-LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    ... okay on input line 41.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 41.
+LaTeX Font Info:    ... okay on input line 41.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 41.
+LaTeX Font Info:    ... okay on input line 41.
 
 *** you should *not* be loading the inputenc package
 *** XeTeX expects the source to be in UTF8 encoding
@@ -1999,60 +2003,60 @@ LaTeX Font Info:    ... okay on input line 36.
 .................................................
 \symlegacymaths=\mathgroup10
 LaTeX Font Info:    Overwriting symbol font `legacymaths' in version `bold'
-(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 36.
-LaTeX Font Info:    Redeclaring math accent \acute on input line 36.
-LaTeX Font Info:    Redeclaring math accent \grave on input line 36.
-LaTeX Font Info:    Redeclaring math accent \ddot on input line 36.
-LaTeX Font Info:    Redeclaring math accent \tilde on input line 36.
-LaTeX Font Info:    Redeclaring math accent \bar on input line 36.
-LaTeX Font Info:    Redeclaring math accent \breve on input line 36.
-LaTeX Font Info:    Redeclaring math accent \check on input line 36.
-LaTeX Font Info:    Redeclaring math accent \hat on input line 36.
-LaTeX Font Info:    Redeclaring math accent \dot on input line 36.
-LaTeX Font Info:    Redeclaring math accent \mathring on input line 36.
-LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 36.
-LaTeX Font Info:    Redeclaring math symbol \Delta on input line 36.
-LaTeX Font Info:    Redeclaring math symbol \Theta on input line 36.
-LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 36.
-LaTeX Font Info:    Redeclaring math symbol \Xi on input line 36.
-LaTeX Font Info:    Redeclaring math symbol \Pi on input line 36.
-LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 36.
-LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 36.
-LaTeX Font Info:    Redeclaring math symbol \Phi on input line 36.
-LaTeX Font Info:    Redeclaring math symbol \Psi on input line 36.
-LaTeX Font Info:    Redeclaring math symbol \Omega on input line 36.
-LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 36.
-LaTeX Font Info:    Redeclaring symbol font `operators' on input line 36.
+(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 41.
+LaTeX Font Info:    Redeclaring math accent \acute on input line 41.
+LaTeX Font Info:    Redeclaring math accent \grave on input line 41.
+LaTeX Font Info:    Redeclaring math accent \ddot on input line 41.
+LaTeX Font Info:    Redeclaring math accent \tilde on input line 41.
+LaTeX Font Info:    Redeclaring math accent \bar on input line 41.
+LaTeX Font Info:    Redeclaring math accent \breve on input line 41.
+LaTeX Font Info:    Redeclaring math accent \check on input line 41.
+LaTeX Font Info:    Redeclaring math accent \hat on input line 41.
+LaTeX Font Info:    Redeclaring math accent \dot on input line 41.
+LaTeX Font Info:    Redeclaring math accent \mathring on input line 41.
+LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 41.
+LaTeX Font Info:    Redeclaring math symbol \Delta on input line 41.
+LaTeX Font Info:    Redeclaring math symbol \Theta on input line 41.
+LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 41.
+LaTeX Font Info:    Redeclaring math symbol \Xi on input line 41.
+LaTeX Font Info:    Redeclaring math symbol \Pi on input line 41.
+LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 41.
+LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 41.
+LaTeX Font Info:    Redeclaring math symbol \Phi on input line 41.
+LaTeX Font Info:    Redeclaring math symbol \Psi on input line 41.
+LaTeX Font Info:    Redeclaring math symbol \Omega on input line 41.
+LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 41.
+LaTeX Font Info:    Redeclaring symbol font `operators' on input line 41.
 LaTeX Font Info:    Encoding `OT1' has changed to `EU1' for symbol font
-(Font)              `operators' in the math version `normal' on input line 36.
+(Font)              `operators' in the math version `normal' on input line 41.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/cmr/m/n --> EU1/lmr/m/n on input line 36.
+(Font)                  OT1/cmr/m/n --> EU1/lmr/m/n on input line 41.
 LaTeX Font Info:    Encoding `OT1' has changed to `EU1' for symbol font
-(Font)              `operators' in the math version `bold' on input line 36.
+(Font)              `operators' in the math version `bold' on input line 41.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/cmr/bx/n --> EU1/lmr/m/n on input line 36.
+(Font)                  OT1/cmr/bx/n --> EU1/lmr/m/n on input line 41.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  EU1/lmr/m/n --> EU1/lmr/m/n on input line 36.
+(Font)                  EU1/lmr/m/n --> EU1/lmr/m/n on input line 41.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/cmr/m/it --> EU1/lmr/m/it on input line 36.
+(Font)                  OT1/cmr/m/it --> EU1/lmr/m/it on input line 41.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/cmr/bx/n --> EU1/lmr/bx/n on input line 36.
+(Font)                  OT1/cmr/bx/n --> EU1/lmr/bx/n on input line 41.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/cmss/m/n --> EU1/pag/m/n on input line 36.
+(Font)                  OT1/cmss/m/n --> EU1/pag/m/n on input line 41.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/cmtt/m/n --> EU1/lmtt/m/n on input line 36.
+(Font)                  OT1/cmtt/m/n --> EU1/lmtt/m/n on input line 41.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  EU1/lmr/m/n --> EU1/lmr/bx/n on input line 36.
+(Font)                  EU1/lmr/m/n --> EU1/lmr/bx/n on input line 41.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/cmr/bx/it --> EU1/lmr/bx/it on input line 36.
+(Font)                  OT1/cmr/bx/it --> EU1/lmr/bx/it on input line 41.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/bx/n --> EU1/pag/bx/n on input line 36.
+(Font)                  OT1/cmss/bx/n --> EU1/pag/bx/n on input line 41.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> EU1/lmtt/bx/n on input line 36.
+(Font)                  OT1/cmtt/m/n --> EU1/lmtt/bx/n on input line 41.
 .................................................
 . chemgreek info: "mapping-activated"
 . 
-. Activating mapping `fontspec' on line 36.
+. Activating mapping `fontspec' on line 41.
 .................................................
 *geometry* driver: auto-detecting
 *geometry* detected driver: xetex
@@ -2070,8 +2074,8 @@ LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
 * \textheight=674.33032pt
 * \oddsidemargin=13.08827pt
 * \evensidemargin=13.08827pt
-* \topmargin=-8.91173pt
-* \headheight=14.5pt
+* \topmargin=3.08827pt
+* \headheight=2.5pt
 * \headsep=10.0pt
 * \topskip=11.0pt
 * \footskip=27.46295pt
@@ -2096,7 +2100,7 @@ Package microtype Warning: Command \pickup@font is not defined as expected.
 (microtype)                applied to the document.
 (microtype)                (Hint: Turn on `verbose' mode).
 
-LaTeX Info: Redefining \microtypecontext on input line 36.
+LaTeX Info: Redefining \microtypecontext on input line 41.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
 Package microtype Info: No adjustment of tracking.
@@ -2112,7 +2116,7 @@ Package microtype Info: Loading generic settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 \AtBeginShipoutBox=\box67
-Package hyperref Info: Link coloring ON on input line 36.
+Package hyperref Info: Link coloring ON on input line 41.
  (/usr/local/texlive/2015/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 
@@ -2121,9 +2125,9 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
 \c@section@level=\count292
 )
-LaTeX Info: Redefining \ref on input line 36.
-LaTeX Info: Redefining \pageref on input line 36.
-LaTeX Info: Redefining \nameref on input line 36.
+LaTeX Info: Redefining \ref on input line 41.
+LaTeX Info: Redefining \pageref on input line 41.
+LaTeX Info: Redefining \nameref on input line 41.
 File: Pictures/background.pdf Graphic file (type QTm)
 
 <use  "Pictures/background.pdf" >
@@ -2134,28 +2138,28 @@ File: Pictures/background.pdf Graphic file (type QTm)
 * 
 * Try to use `\setCJKsansfont[...]{...}' to define it.
 *************************************************
-LaTeX Font Info:    Try loading font information for T1+pag on input line 51.
+LaTeX Font Info:    Try loading font information for T1+pag on input line 56.
 (/usr/local/texlive/2015/texmf-dist/tex/latex/psnfss/t1pag.fd
 File: t1pag.fd 2001/06/04 font definitions for T1/pag.
 )
 LaTeX Font Info:    Font shape `T1/pag/bx/n' in size <24.88> not available
-(Font)              Font shape `T1/pag/b/n' tried instead on input line 51.
+(Font)              Font shape `T1/pag/b/n' tried instead on input line 56.
 LaTeX Font Info:    Font shape `T1/pag/b/n' in size <24.88> not available
-(Font)              Font shape `T1/pag/db/n' tried instead on input line 51.
+(Font)              Font shape `T1/pag/db/n' tried instead on input line 56.
 Package microtype Info: Loading generic settings for font family
 (microtype)             `pag' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    Font shape `T1/pag/bx/n' in size <14.4> not available
-(Font)              Font shape `T1/pag/b/n' tried instead on input line 53.
+(Font)              Font shape `T1/pag/b/n' tried instead on input line 58.
 LaTeX Font Info:    Font shape `T1/pag/b/n' in size <14.4> not available
-(Font)              Font shape `T1/pag/db/n' tried instead on input line 53.
+(Font)              Font shape `T1/pag/db/n' tried instead on input line 58.
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/microtype/mt-cmr.cfg
 File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman 
 (RS)
 )
-LaTeX Font Info:    Try loading font information for U+msa on input line 53.
+LaTeX Font Info:    Try loading font information for U+msa on input line 58.
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
@@ -2163,7 +2167,7 @@ File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 (/usr/local/texlive/2015/texmf-dist/tex/latex/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 53.
+LaTeX Font Info:    Try loading font information for U+msb on input line 58.
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -2171,43 +2175,43 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 (/usr/local/texlive/2015/texmf-dist/tex/latex/microtype/mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
-LaTeX Font Info:    Try loading font information for U+rsfs on input line 53.
+LaTeX Font Info:    Try loading font information for U+rsfs on input line 58.
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/jknapltx/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
 LaTeX Font Info:    Font shape `T1/pag/bx/n' in size <20.74> not available
-(Font)              Font shape `T1/pag/b/n' tried instead on input line 53.
+(Font)              Font shape `T1/pag/b/n' tried instead on input line 58.
 LaTeX Font Info:    Font shape `T1/pag/b/n' in size <20.74> not available
-(Font)              Font shape `T1/pag/db/n' tried instead on input line 53.
+(Font)              Font shape `T1/pag/db/n' tried instead on input line 58.
  [1
 
 ]
-LaTeX Font Info:    Try loading font information for OMS+lmr on input line 67.
+LaTeX Font Info:    Try loading font information for OMS+lmr on input line 72.
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/lm/omslmr.fd
 File: omslmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 67.
+LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 72.
 
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 67.
+(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 72.
 
-Underfull \hbox (badness 10000) in paragraph at lines 67--68
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 69--70
+Underfull \hbox (badness 10000) in paragraph at lines 72--73
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 71--72
+Underfull \hbox (badness 10000) in paragraph at lines 74--75
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 76--77
 
  []
 
@@ -2218,7 +2222,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 71--72
 * 
 * Try to use `\setCJKmonofont[...]{...}' to define it.
 *************************************************
-LaTeX Font Info:    Try loading font information for T1+lmtt on input line 73.
+LaTeX Font Info:    Try loading font information for T1+lmtt on input line 78.
 (/usr/local/texlive/2015/texmf-dist/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
@@ -2227,7 +2231,7 @@ Package microtype Info: Loading generic settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 
-Underfull \hbox (badness 10000) in paragraph at lines 73--74
+Underfull \hbox (badness 10000) in paragraph at lines 78--79
 
  []
 
@@ -3399,6 +3403,126 @@ LaTeX Font Info:    Font shape `T1/pag/bx/n' in size <10.95> not available
 (Font)              Font shape `T1/pag/b/n' tried instead on input line 4.
 LaTeX Font Info:    Font shape `T1/pag/b/n' in size <10.95> not available
 (Font)              Font shape `T1/pag/db/n' tried instead on input line 4.
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\textendash '
+(microtype)                in font encoding `EU1' in protrusion list 
+(microtype)                `default'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\textemdash '
+(microtype)                in font encoding `EU1' in protrusion list 
+(microtype)                `default'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\textquoteleft '
+(microtype)                in font encoding `EU1' in protrusion list 
+(microtype)                `default'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\textquoteright '
+(microtype)                in font encoding `EU1' in protrusion list 
+(microtype)                `default'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\textquotedblleft '
+(microtype)                in font encoding `EU1' in protrusion list 
+(microtype)                `default'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\textquotedblright '
+(microtype)                in font encoding `EU1' in protrusion list 
+(microtype)                `default'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\AE '
+(microtype)                in font encoding `EU1' in protrusion list
+(microtype)                `T1-default'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\textbackslash '
+(microtype)                in font encoding `EU1' in protrusion list
+(microtype)                `T1-default'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\quotesinglbase '
+(microtype)                in font encoding `EU1' in protrusion list
+(microtype)                `T1-default'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\quotedblbase '
+(microtype)                in font encoding `EU1' in protrusion list
+(microtype)                `T1-default'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\guilsinglleft '
+(microtype)                in font encoding `EU1' in protrusion list
+(microtype)                `T1-default'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\guilsinglright '
+(microtype)                in font encoding `EU1' in protrusion list
+(microtype)                `T1-default'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\guillemotleft '
+(microtype)                in font encoding `EU1' in protrusion list
+(microtype)                `T1-default'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\guillemotright '
+(microtype)                in font encoding `EU1' in protrusion list
+(microtype)                `T1-default'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\textexclamdown '
+(microtype)                in font encoding `EU1' in protrusion list
+(microtype)                `T1-default'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\textquestiondown '
+(microtype)                in font encoding `EU1' in protrusion list
+(microtype)                `T1-default'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\textbraceleft '
+(microtype)                in font encoding `EU1' in protrusion list
+(microtype)                `T1-default'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\textbraceright '
+(microtype)                in font encoding `EU1' in protrusion list
+(microtype)                `T1-default'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\textless '
+(microtype)                in font encoding `EU1' in protrusion list
+(microtype)                `T1-default'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\textgreater '
+(microtype)                in font encoding `EU1' in protrusion list
+(microtype)                `T1-default'.
+
 )
 \tf@toc=\write6
 \openout6 = `main.toc'.
@@ -3410,14 +3534,14 @@ LaTeX Font Info:    Font shape `T1/pag/b/n' in size <10.95> not available
 ]
 \c@ttl@toc@default=\count293
 LaTeX Font Info:    Font shape `T1/pag/bx/n' in size <220> not available
-(Font)              Font shape `T1/pag/b/n' tried instead on input line 95.
+(Font)              Font shape `T1/pag/b/n' tried instead on input line 100.
 LaTeX Font Info:    Font shape `T1/pag/b/n' in size <220> not available
-(Font)              Font shape `T1/pag/db/n' tried instead on input line 95.
+(Font)              Font shape `T1/pag/db/n' tried instead on input line 100.
  (./main.ptc)
 LaTeX Font Info:    Font shape `T1/pag/bx/n' in size <30> not available
-(Font)              Font shape `T1/pag/b/n' tried instead on input line 95.
+(Font)              Font shape `T1/pag/b/n' tried instead on input line 100.
 LaTeX Font Info:    Font shape `T1/pag/b/n' in size <30> not available
-(Font)              Font shape `T1/pag/db/n' tried instead on input line 95.
+(Font)              Font shape `T1/pag/db/n' tried instead on input line 100.
  [5
 
 ] [6]
@@ -3425,7 +3549,128 @@ File: Pictures/chapter_head_1.pdf Graphic file (type QTm)
  <use  "Pictures/chapter_head_1.pdf" >
 (./Parts/Part1.tex [0
 
-] (./main.ptc)
+] (./main.ptc
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\textendash '
+(microtype)                in font encoding `EU1' in protrusion list 
+(microtype)                `default'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\textemdash '
+(microtype)                in font encoding `EU1' in protrusion list 
+(microtype)                `default'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\textquoteleft '
+(microtype)                in font encoding `EU1' in protrusion list 
+(microtype)                `default'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\textquoteright '
+(microtype)                in font encoding `EU1' in protrusion list 
+(microtype)                `default'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\textquotedblleft '
+(microtype)                in font encoding `EU1' in protrusion list 
+(microtype)                `default'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\textquotedblright '
+(microtype)                in font encoding `EU1' in protrusion list 
+(microtype)                `default'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\AE '
+(microtype)                in font encoding `EU1' in protrusion list
+(microtype)                `T1-default'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\textbackslash '
+(microtype)                in font encoding `EU1' in protrusion list
+(microtype)                `T1-default'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\quotesinglbase '
+(microtype)                in font encoding `EU1' in protrusion list
+(microtype)                `T1-default'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\quotedblbase '
+(microtype)                in font encoding `EU1' in protrusion list
+(microtype)                `T1-default'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\guilsinglleft '
+(microtype)                in font encoding `EU1' in protrusion list
+(microtype)                `T1-default'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\guilsinglright '
+(microtype)                in font encoding `EU1' in protrusion list
+(microtype)                `T1-default'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\guillemotleft '
+(microtype)                in font encoding `EU1' in protrusion list
+(microtype)                `T1-default'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\guillemotright '
+(microtype)                in font encoding `EU1' in protrusion list
+(microtype)                `T1-default'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\textexclamdown '
+(microtype)                in font encoding `EU1' in protrusion list
+(microtype)                `T1-default'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\textquestiondown '
+(microtype)                in font encoding `EU1' in protrusion list
+(microtype)                `T1-default'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\textbraceleft '
+(microtype)                in font encoding `EU1' in protrusion list
+(microtype)                `T1-default'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\textbraceright '
+(microtype)                in font encoding `EU1' in protrusion list
+(microtype)                `T1-default'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\textless '
+(microtype)                in font encoding `EU1' in protrusion list
+(microtype)                `T1-default'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\textgreater '
+(microtype)                in font encoding `EU1' in protrusion list
+(microtype)                `T1-default'.
+
+)
 
 Package microtype Warning: Unknown slot number of character
 (microtype)                `\textendash '
@@ -3548,9 +3793,7 @@ Package microtype Warning: Unknown slot number of character
 
 [1
 
-] [2]) (./Chaps/Chap1.tex [3] [4
-
-]
+] [2]) (./Chaps/Chap1.tex
 Chapter 1.
 File: Pictures/chapter_head_1.pdf Graphic file (type QTm)
 <use  "Pictures/chapter_head_1.pdf" >
@@ -3674,30 +3917,148 @@ Package microtype Warning: Unknown slot number of character
 (microtype)                in font encoding `EU1' in protrusion list
 (microtype)                `T1-default'.
 
-) [5] [6
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\textendash '
+(microtype)                in font encoding `EU1' in protrusion list 
+(microtype)                `default'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\textemdash '
+(microtype)                in font encoding `EU1' in protrusion list 
+(microtype)                `default'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\textquoteleft '
+(microtype)                in font encoding `EU1' in protrusion list 
+(microtype)                `default'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\textquoteright '
+(microtype)                in font encoding `EU1' in protrusion list 
+(microtype)                `default'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\textquotedblleft '
+(microtype)                in font encoding `EU1' in protrusion list 
+(microtype)                `default'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\textquotedblright '
+(microtype)                in font encoding `EU1' in protrusion list 
+(microtype)                `default'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\AE '
+(microtype)                in font encoding `EU1' in protrusion list
+(microtype)                `T1-default'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\textbackslash '
+(microtype)                in font encoding `EU1' in protrusion list
+(microtype)                `T1-default'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\quotesinglbase '
+(microtype)                in font encoding `EU1' in protrusion list
+(microtype)                `T1-default'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\quotedblbase '
+(microtype)                in font encoding `EU1' in protrusion list
+(microtype)                `T1-default'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\guilsinglleft '
+(microtype)                in font encoding `EU1' in protrusion list
+(microtype)                `T1-default'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\guilsinglright '
+(microtype)                in font encoding `EU1' in protrusion list
+(microtype)                `T1-default'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\guillemotleft '
+(microtype)                in font encoding `EU1' in protrusion list
+(microtype)                `T1-default'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\guillemotright '
+(microtype)                in font encoding `EU1' in protrusion list
+(microtype)                `T1-default'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\textexclamdown '
+(microtype)                in font encoding `EU1' in protrusion list
+(microtype)                `T1-default'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\textquestiondown '
+(microtype)                in font encoding `EU1' in protrusion list
+(microtype)                `T1-default'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\textbraceleft '
+(microtype)                in font encoding `EU1' in protrusion list
+(microtype)                `T1-default'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\textbraceright '
+(microtype)                in font encoding `EU1' in protrusion list
+(microtype)                `T1-default'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\textless '
+(microtype)                in font encoding `EU1' in protrusion list
+(microtype)                `T1-default'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\textgreater '
+(microtype)                in font encoding `EU1' in protrusion list
+(microtype)                `T1-default'.
+
+) [3
+
+] [4
 
 ]
 No file main.bbl.
 \tf@ptc=\write7
 \openout7 = `main.ptc'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 149.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 149.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 154.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 154.
 (./main.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 149.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 149.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 154.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 154.
  ) 
 Here is how much of TeX's memory you used:
- 42292 strings out of 493706
- 812829 string characters out of 6145769
- 1020087 words of memory out of 5000000
- 44963 multiletter control sequences out of 15000+600000
- 88903 words of font info for 163 fonts, out of 8000000 for 9000
+ 42502 strings out of 493706
+ 819794 string characters out of 6145769
+ 1030166 words of memory out of 5000000
+ 45147 multiletter control sequences out of 15000+600000
+ 107074 words of font info for 189 fonts, out of 8000000 for 9000
  1328 hyphenation exceptions out of 8191
- 57i,11n,69p,10473b,1206s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 57i,11n,69p,10473b,1261s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on main.pdf (13 pages).
+Output written on main.pdf (11 pages).
