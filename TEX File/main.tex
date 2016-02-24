@@ -33,7 +33,7 @@
 \usepackage{marginnote}
 
 \input{structure} 
-%\usepackage{xypic}
+\usepackage{xypic}
 \def\UrlBreaks{\do\A\do\B\do\C\do\D\do\E\do\F\do\G\do\H\do\I\do\J
 \do\K\do\L\do\M\do\N\do\O\do\P\do\Q\do\R\do\S\do\T\do\U\do\V
 \do\W\do\X\do\Y\do\Z\do\[\do\\\do\]\do\^\do\_\do\`\do\a\do\b
@@ -45,7 +45,7 @@
 
 \newcounter{mparcnt}
 \renewcommand\themparcnt{\textbf{\arabic{mparcnt}: }}
-\newcommand\mpar[1]{\refstepcounter{mparcnt}\marginpar{\themparcnt#1}}
+\newcommand\mpar[1]{\refstepcounter{mparcnt}{$^{\arabic{mparcnt}}$}\marginpar{\themparcnt\tiny#1}}
 
 
 
