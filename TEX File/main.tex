@@ -23,15 +23,31 @@
 \usepackage{bm}
 \usepackage{amssymb}
 \usepackage{mathrsfs}
+\usepackage{ulem}
 \usepackage[version=3]{mhchem}
 \usepackage{draftwatermark}
 \SetWatermarkText{\textsc{Draft Translation}}
 \SetWatermarkLightness{0.88}
 \SetWatermarkScale{0.4}
-
+\usepackage{setspace}
+\usepackage{marginnote}
 
 \input{structure} 
-\usepackage{xypic}
+%\usepackage{xypic}
+\def\UrlBreaks{\do\A\do\B\do\C\do\D\do\E\do\F\do\G\do\H\do\I\do\J
+\do\K\do\L\do\M\do\N\do\O\do\P\do\Q\do\R\do\S\do\T\do\U\do\V
+\do\W\do\X\do\Y\do\Z\do\[\do\\\do\]\do\^\do\_\do\`\do\a\do\b
+\do\c\do\d\do\e\do\f\do\g\do\h\do\i\do\j\do\k\do\l\do\m\do\n
+\do\o\do\p\do\q\do\r\do\s\do\t\do\u\do\v\do\w\do\x\do\y\do\z
+\do\.\do\@\do\\\do\/\do\!\do\_\do\|\do\;\do\>\do\]\do\)\do\,
+\do\?\do\'\do+\do\=\do\#} 
+
+
+\newcounter{mparcnt}
+\renewcommand\themparcnt{\textbf{\arabic{mparcnt}: }}
+\newcommand\mpar[1]{\refstepcounter{mparcnt}\marginpar{\themparcnt#1}}
+
+
 
 \begin{document}
 
@@ -77,12 +93,12 @@
 %----------------------------------------------------------------------------------------
 %	TABLE OF CONTENTS
 %----------------------------------------------------------------------------------------
+\begin{spacing}{1.4}
+\chapterimage{chapter_head_1.pdf} % Chapter heading image
 
-\chapterimage{chapter_head_1.pdf} % Table of contents heading image
 
 \pagestyle{empty} % No headers
 
-\tableofcontents % Print the table of contents itself
 
 \cleardoublepage % Forces the first chapter to start on an odd page so it's on the right
 
@@ -92,9 +108,11 @@
 %	PART
 %----------------------------------------------------------------------------------------
 
-\part{Preface}
-\chapter*{Preface}
+%\part*{Preface}
+\include{Preface}
+\include{Acknowledge}
 
+\tableofcontents % Print the table of contents itself
 
 
 \setcounter{page}{0}
@@ -140,10 +158,10 @@
 %\printindex
 
 %----------------------------------------------------------------------------------------
-\cleardoublepage
-\bibliographystyle{apsrev4-1}
-\bibliography{bibliography}
-
+%\cleardoublepage
+%\bibliographystyle{apsrev4-1}
+%\bibliography{bibliography}
+\end{spacing}
 
 
 

@@ -1,6 +1,15 @@
 # Physics-from-Symmetry
 Translation of `Physics from Symmetry'.
 
+人名（学术名词）翻译：
+
+    Lagrangian    拉格朗日量
+    
+    Hamiltonian    哈密顿量
+    
+    其它暂且都不翻译，以后统一更改
+    
+
 疑难名词
 
     covariant energy-impulse vector 协变能动矢量  四动量
