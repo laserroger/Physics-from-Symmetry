@@ -1,23 +1,13 @@
 \select@language {english}
 \contentsline {part}{\@mypartnumtocformat {I}{Foundations 基础}}{1}{part.1}
-<<<<<<< HEAD
-\contentsline {chapter}{\numberline {1}Introduction 简介}{3}{chapter.1}
-\contentsline {section}{\numberline {1.1}What we Cannot Derive 得不到的事情}{3}{section.1.1}
-\contentsline {part}{\@mypartnumtocformat {II}{Symmetry Tools 对称性工具}}{5}{part.2}
-\contentsline {chapter}{\numberline {2}The Framework (力学)框架/体系}{7}{chapter.2}
-\contentsline {section}{\numberline {2.1}Lagrangian Formalism 拉氏形式}{7}{section.2.1}
-\contentsline {subsection}{\numberline {2.1.1}Fermat 原理}{8}{subsection.2.1.1}
-\contentsline {subsection}{\numberline {2.1.2}变分法：基本思想}{8}{subsection.2.1.2}
-\contentsline {section}{\numberline {2.2}Restrictions 约束}{9}{section.2.2}
-=======
 \contentsline {chapter}{\numberline {1}简介}{3}{chapter.1}
 \contentsline {section}{\numberline {1.1}推不出来的事情}{3}{section.1.1}
 \contentsline {section}{\numberline {1.2}全书概览}{5}{section.1.2}
 \contentsline {section}{\numberline {1.3}基本粒子和基本相互作用力}{7}{section.1.3}
 \contentsline {part}{\@mypartnumtocformat {II}{Symmetry Tools 对称性工具}}{9}{part.2}
 \contentsline {chapter}{\numberline {2}The Framework (力学)框架/体系}{11}{chapter.2}
-\contentsline {section}{\numberline {2.1}Lagrangian Formalism 拉氏形式}{12}{section.2.1}
+\contentsline {section}{\numberline {2.1}Lagrangian Formalism 拉格朗日形式}{11}{section.2.1}
 \contentsline {subsection}{\numberline {2.1.1}Fermat 原理}{12}{subsection.2.1.1}
 \contentsline {subsection}{\numberline {2.1.2}变分法：基本思想}{12}{subsection.2.1.2}
->>>>>>> refs/remotes/upstream/master
+\contentsline {section}{\numberline {2.2}Restrictions 限制}{13}{section.2.2}
 \contentsfinish 

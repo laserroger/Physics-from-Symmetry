@@ -8,24 +8,22 @@
 
 \chapter{The Framework (力学)框架/体系}\label{chap4}
 这一章的基本思路是,我们要在尽可能少的使用{\it 某些东西}的前提下，得到正确的关于自然的方程。{\it 某些东西}是什么？有一件事是确定的：它不应该在 Lorentz 变换下改变，否则我们会在不同的参考系下得到不同的自然规律。在数学意义上，它意味着我们寻找的这个东西是个标量，依照洛伦兹群的 \( (0,0) \) 表示作变换。再考虑到自然总依简单而行，我们已经足够导出关于自然的方程了。
-%flag The equations of nature
-%( 0,0 ) representation  \( (0,0) \) 表示
-%the system in question
+
 从这个想法出发，我们将会引入{\bf 拉格朗日形式(Lagrangian formalism)}。通过极小化理论的中心对象，我们可以得到用以描述问题中的物理系统的运动方程。极小化过程的结果被称作 {\bf Euler-Lagrange 方程}。
 
-通过拉格朗日形式，我们可以得到物理中最重要的定理：Noether 定理。这个定理揭示了对称性和守恒量
-\mpar{守恒量指的是不随时间变化的物理量。例如一个给定体系的能量或动量。数学上意味着\(\partial_t Q = 0 \rightarrow Q = \text{常数}\)}。
+通过拉格朗日形式，我们可以得到物理中最重要的定理：Noether 定理。这个定理揭示了对称性和守恒量%
+\mpar{守恒量指的是不随时间变化的物理量。例如一个给定体系的能量或动量。数学上意味着\(\partial_t Q = 0 \rightarrow Q = \text{常数}\)。}%
 之间的深刻联系。我们将在下一章中利用它来理解,理论是如何来描述实验测量量的。
 
-\section{Lagrangian Formalism 拉格朗日形式}
+\section{Lagrangian Formalism 拉格朗日形式}\label{sec4.1}
 
-拉格朗日形式是在基础物理中被广泛运用的一个强有力的框架
-\mpar{物理中当然有其他框架，例如以{\bf 哈密顿量(Hamiltonian)}为中心对象的{\bf 哈密顿形式(Hamiltonian formalism)}。哈密顿量的问题在于它不是洛伦兹不变的，因为它所代表的能量，仅仅是{\bf 四动量(covariant energy-impulse vector)}的一个分量}
-。由于理论的基本对象--{\bf 拉格朗日量(Lagrangian)}是一个标量
-\mpar{标量指依照洛伦兹群的 \( (0,0) \) 表示作变换的对象。这意味着它不在洛伦兹变换下改变}
+拉格朗日形式是在基础物理中被广泛运用的一个强有力的框架%
+\mpar{物理中当然有其他框架，例如以{\bf 哈密顿量(Hamiltonian)}为中心对象的{\bf 哈密顿形式(Hamiltonian formalism)}。哈密顿量的问题在于它不是洛伦兹不变的，因为它所代表的能量，仅仅是{\bf 四动量(covariant energy-impulse vector)}的一个分量}%
+。由于理论的基本对象--{\bf 拉格朗日量(Lagrangian)}是一个标量%
+\mpar{标量指依照洛伦兹群的 \( (0,0) \) 表示作变换的对象。这意味着它不在洛伦兹变换下改变}%
 ，它相对简单。如果你希望从对称性的观点考虑问题，这种形式将会是非常有用的。如果我们要求拉格朗日量的积分，{\bf 作用量(action)}，在某些对称变换下不变，我们即要求体系的动力学遵从该对称性。
 
-\subsection{Fermat 原理}
+\subsection{Fermat 原理}\label{sec4.1.1}
 \begin{quote}
 Whenever any action occurs in nature, the quantity of action employed by this change is the least possible.\\
 - Pierre de Maupertius \mpar{Recherche des loix du mouvement (1746)}
@@ -35,41 +33,72 @@ Whenever any action occurs in nature, the quantity of action employed by this ch
 \begin{equation*}
 S_{\text{light}}[{\mathbf q}(t)] = \int ~{\mathrm d}t
 \end{equation*}
-而我们的任务便是找到一条特定的路径\(q(t)\)使作用量取极小值
-\mpar{此处的作用量仅仅是沿给定路径对时间的积分，但一般而言作用量会更加复杂，我们待会儿就能见到}
-为了得到一个给定{\bf 函数}的极小值
-\mpar{一般而言，我们希望找到{\bf 最值(extremums)}，即最小值和最大值。}
+而我们的任务便是找到一条特定的路径\(q(t)\)使作用量取极小值%
+\mpar{此处的作用量仅仅是沿给定路径对时间的积分，但一般而言作用量会更加复杂，我们待会儿就能见到}%
+为了得到一个给定{\bf 函数}的极小值%
+\mpar{一般而言，我们希望找到{\bf 最值(extremums)}，即最小值和最大值。}%
 ，我们可以求得其导函数并令其为零；而为了找到{\bf 泛函}\(S[q(t)]\)——函数\(q(t)\)的函数\(S\)——的极小值，就得要一个新的数学工具：{\bf 变分法}。
 
-\subsection{变分法：基本思想}
+\subsection{变分法：基本思想}\label{sec4.1.2}
 
 在思考如何发展一套能够找到泛函极值的新理论之前，我们需要倒回去想想什么给出一个数学上的极小点。变分法给出的答案是，极小点由极小点邻域的性质决定。例如，让我们尝试寻找一个寻常函数\(f(x)=3x^2+x\)的极小点\(x_{\min}\)。我们从一个特定点\(x=a\)出发，仔细考察其邻域。数学上它意味着\(a + \epsilon\)，其中\(\epsilon\)代表无穷小量（可正可负）。我们将\(a\)的变分代入函数\(f(x)\):
 \[
 f(a+\epsilon) = 3(a+\epsilon)^2+(a+\epsilon) = 3(a^2+2a\epsilon+\epsilon^2)+a+\epsilon \text{。}
 \]
-如果\(a\)是极小点，\(\epsilon\)的一阶变分必需为零，否则我们可以取\(\epsilon\)为负\(\epsilon < 0\)，这样\(f(a+\epsilon)\)就会比\(f(a)\)更小\footnote{\textcolor{red}{译注：此处讨论有误}}。因此，我们将线性依赖于\(\epsilon\)的项取出并令其为零。
+如果\(a\)是极小点，\(\epsilon\)的一阶变分必需为零，否则我们可以取\(\epsilon\)为负\(\epsilon < 0\)，这样\(f(a+\epsilon)\)就会比\(f(a)\)更小%
+\footnote{\textcolor{red}{译注：此处讨论有误}}%
+。因此，我们将线性依赖于\(\epsilon\)的项取出并令其为零。
 \[
-3 \cdot 2a\epsilon + \epsilon \overset{\text{!}}{=} 0 \leftarrow 6a+1\overset{\text{!}}{=}0\text{。}
+3 \cdot 2a\epsilon + \epsilon \overset{\text{!}}{=} 0 \rightarrow 6a+1\overset{\text{!}}{=}0\text{。}
 \]
 由此我们找到极小点
 \[
 x_{\min} = a = -\frac{1}{6} \text{，}
 \]
-它自然和我们求导\(f(x)=3x^2+x\leftarrow f'(x)=6x+1\)并令其为零的办法得到的结果一致。对于寻常函数而言，这只是一个用来干同一件事不同方法而已
-\footnote{译注：对于深受微元法毒害的物竞生而言，求导才是用来这件事的不同方法}，
-但是变分法却能找到泛函的极值点。我们马上就能看到，应当如何处理一个一般的作用量泛函。
+它自然和我们求导\(f(x)=3x^2+x\leftarrow f'(x)=6x+1\)并令其为零的办法得到的结果一致。对于寻常函数而言，这只是一个用来干同一件事不同方法而已%
+\footnote{译注：对于受微元法茶毒的物竞生而言，求导才是用来干这件事的不同方法。}%
+，但是变分法却能找到泛函的极值点。我们马上就能看到，应当如何处理一个一般的作用量泛函。
 
 拉格朗日形式的中心思想在于对于有质量的物体，也存在一个与对光的 Fermat 原理相类似的原理。当然，它不可能直接遵从费马原理，但是我们可以从一个更一般的形式出发
 \[
 S[q(t)]=\int {\mathcal L}~{\mathrm d}t
 \]
-其中\(\mathcal L\)一般是一个非常数的参量，被称为拉格朗日量。对于光而言，这个参量是个常数。一般的，拉格朗日量依赖于物体的坐标和速度\({\mathcal L}={\mathcal L}(q(t),\frac{\partial}{\partial t} q(t))\)。在下一节中我们将仔细讨论这件事
-\mpar{我们的任务是找到对于给定拉格朗日量和初始条件有着最小作用量的路径\(q(t\)。在此之前，我们得先找到正确的拉格朗日量，用以描述问题中的物理系统。这是我们在上一章中所讨论的对称性所能发挥作用的地方。通过要求拉格朗日量在洛伦兹群的所有变换下不变，我们就能找到正确的拉格朗日量}
+其中\(\mathcal L\)一般是一个非常数的参量，被称为拉格朗日量。对于光而言，这个参量是个常数。一般的，拉格朗日量依赖于物体的坐标和速度\({\mathcal L}={\mathcal L}(q(t),\frac{\partial}{\partial t} q(t))\)。在下一节中我们将仔细讨论这件事%
+\mpar{我们的任务是找到对于给定拉格朗日量和初始条件有着最小作用量的路径\(q(t)\)。在此之前，我们得先找到正确的拉格朗日量，用以描述问题中的物理系统。这是我们在上一章中所讨论的对称性所能发挥作用的地方。通过要求拉格朗日量在洛伦兹群的所有变换下不变，我们就能找到正确的拉格朗日量}%
 。在仔细讨论如何对这样一个泛函使用变分法之前，我们需要先讲讲两个小问题。
 
-\section{Restrictions 约束}
-正如我们在
+\section{Restrictions 限制}\label{sec4.2}
+正如我们在\ref{sec1.1}节中所提到的，现有理论中有一些限制条件是无法从第一性原理中得到的。我们所能知道是，如果想得到一个有意义的理论，我们必须加上这些限制。
 
-As already noted in Chap. 1.1 there are restrictions to our present
-theories we can’t motivate from first principles. We only know that
-we must respect these restrictions in order to get a sensible theory.
+一个重要的限制是，我们仅允许拉格朗日量中出现尽可能低阶的非平凡%
+\footnote{译注：Non-trival. Trival 这个词常包含简单、弱智、无意义之义。}%
+导数。这里平凡指的是对于系统的动力学，即运动方程，没有影响。某些理论会包含一阶导数，另外一些带二阶导数。一个给定理论所含的最低阶导数由该条件决定：拉格朗日量在 Lorentz 变换下不变%
+\mpar{实际上，作用量才应该是 Lorentz 不变的。但如果拉格朗日量满足这个条件，那作用量自然也是。}%
+，否则我们将在不同的参考系下导出不同的运动方程%
+\footnote{\textcolor{red}{译注：此处讨论疑有误，作者此前并没有说明积分中的时间是坐标时还是固有时}}%
+。对于某些理论，我们无法写出一个仅含一阶导数项的不变量，那么此时二阶导数便成了最低阶导数项。
+
+我们并不清楚如何处理包含高阶导数的理论，它们有一些根本的困难%
+\mpar{这些困难包括 Ostrogradski 不稳定性，即包含高阶导数的系统的能量没有下界，以至于系统中的所有态总会自发衰变到能量更低的态上去。这类系统中找不到稳定的状态。}%
+。另外，拉格朗日量中的高阶导数会使得运动方程中也包含高阶导数，这样我们必须知道更多的初始条件才能决定物体的运动。
+
+有些人会宣称对理论所包含导数阶数的限制源于我们希望得到一个局域%
+\mpar{局域性是狭义相对论的基本假定，\ref{sec2.4}已作阐述}%
+理论，但这个要求仅会排除掉那些无穷阶导数。一个非局域相互作用有如下形式%
+\mpar{我们将会讨论粒子的拉格朗日理论：寻求粒子的路径；也会讨论场的拉格朗日理论：寻求场函数\(\phi(x)\)。这将是下一节的主题。}
+\begin{equation}
+\Phi(x-h)\Phi(x)
+\end{equation}
+即，时空中距离为\(h\)的两个点的场相互作用。利用 Taylor 展开我们有%
+\footnote{\textcolor{red}{译注：此式有误}}
+\begin{equation}
+\Phi(x-h) = \sum\limits_{k=0}^{\inf}\left(\left(\frac{\partial}{\partial x}\right)^k\left.\Phi(x)\right|_{x=n}\right) \frac{(x-h)^k}{k!}
+\end{equation}
+即包含无穷阶导数会导致一个非局域的理论。
+
+另外一个限制是，要得到一个自由（无相互作用）场/粒子的理论，我们只能写到二次项。这意味着我们只会考虑%
+\mpar{从另外一个角度来看，这再次表示我们只引入最低阶的非平凡项。我们随后就会看到，含\(\Phi^0\)和\(\Phi^1\)的项是平凡的，因此我们这次用的是\(\Phi\)的最低阶非平凡项}
+\[
+\Phi^0, \Phi^1, \Phi^2
+\]
+这样的项。例如，形如\(\Phi^2 \partial_\mu \Phi\)的项是\(\Phi\)的三阶项，因而不会被包含在我们自由理论的拉格朗日量中。

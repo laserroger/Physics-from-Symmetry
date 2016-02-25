@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015/W32TeX) (preloaded format=xelatex 2016.1.22)  25 FEB 2016 10:56
-=======
-This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015) (preloaded format=xelatex 2015.5.24)  24 FEB 2016 20:08
->>>>>>> refs/remotes/upstream/master
+This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015/W32TeX) (preloaded format=xelatex 2016.1.22)  25 FEB 2016 14:00
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1827,68 +1823,62 @@ Package: bookmark 2011/12/02 v1.24 PDF bookmarks (HO)
 File: bkm-dvipdfm.def 2011/12/02 v1.24 bookmark driver for dvipdfm (HO)
 \BKM@id=\count316
 )))
-<<<<<<< HEAD
-\c@mparcnt=\count317
-
-(c:/texlive/texmf-dist/tex/xelatex/xecjk/xeCJKfntef.sty
-=======
-(/usr/local/texlive/2015/texmf-dist/tex/generic/xypic/xypic.sty
-(/usr/local/texlive/2015/texmf-dist/tex/generic/xypic/xy.sty
-(/usr/local/texlive/2015/texmf-dist/tex/generic/xypic/xy.tex Bootstrap'ing:
-catcodes, docmode,
-(/usr/local/texlive/2015/texmf-dist/tex/generic/xypic/xyrecat.tex)
-(/usr/local/texlive/2015/texmf-dist/tex/generic/xypic/xyidioms.tex)
+(c:/texlive/texmf-dist/tex/generic/xypic/xypic.sty
+(c:/texlive/texmf-dist/tex/generic/xypic/xy.sty
+(c:/texlive/texmf-dist/tex/generic/xypic/xy.tex Bootstrap'ing: catcodes,
+docmode, (c:/texlive/texmf-dist/tex/generic/xypic/xyrecat.tex)
+(c:/texlive/texmf-dist/tex/generic/xypic/xyidioms.tex)
 
  Xy-pic version 3.8.9 <2013/10/06>
  Copyright (c) 1991-2013 by Kristoffer H. Rose <krisrose@tug.org> and others
  Xy-pic is free software: see the User's Guide for details.
 
 Loading kernel: messages; fonts; allocations: state,
-\X@c=\dimen278
-\Y@c=\dimen279
-\U@c=\dimen280
-\D@c=\dimen281
-\L@c=\dimen282
-\R@c=\dimen283
-\Edge@c=\toks47
-\X@p=\dimen284
-\Y@p=\dimen285
-\U@p=\dimen286
-\D@p=\dimen287
-\L@p=\dimen288
-\R@p=\dimen289
-\Edge@p=\toks48
-\X@origin=\dimen290
-\Y@origin=\dimen291
-\X@xbase=\dimen292
-\Y@xbase=\dimen293
-\X@ybase=\dimen294
-\Y@ybase=\dimen295
-\X@min=\dimen296
-\Y@min=\dimen297
-\X@max=\dimen298
-\Y@max=\dimen299
+\X@c=\dimen312
+\Y@c=\dimen313
+\U@c=\dimen314
+\D@c=\dimen315
+\L@c=\dimen316
+\R@c=\dimen317
+\Edge@c=\toks46
+\X@p=\dimen318
+\Y@p=\dimen319
+\U@p=\dimen320
+\D@p=\dimen321
+\L@p=\dimen322
+\R@p=\dimen323
+\Edge@p=\toks47
+\X@origin=\dimen324
+\Y@origin=\dimen325
+\X@xbase=\dimen326
+\Y@xbase=\dimen327
+\X@ybase=\dimen328
+\Y@ybase=\dimen329
+\X@min=\dimen330
+\Y@min=\dimen331
+\X@max=\dimen332
+\Y@max=\dimen333
 \lastobjectbox@=\box67
 \zerodotbox@=\box68
-\almostz@=\dimen300
+\almostz@=\dimen334
  direction,
-\d@X=\dimen301
-\d@Y=\dimen302
-\K@=\count283
-\KK@=\count284
-\Direction=\count285
-\K@dXdY=\dimen303
-\K@dYdX=\dimen304
+\d@X=\dimen335
+\d@Y=\dimen336
+\K@=\count317
+\KK@=\count318
+\Direction=\count319
+\K@dXdY=\dimen337
+\K@dYdX=\dimen338
 \xyread@=\read3
 \xywrite@=\write5
-\csp@=\count286
-\quotPTK@=\dimen305
+\csp@=\count320
+\quotPTK@=\dimen339
 
 utility macros; pictures: \xy, positions,
-\swaptoks@@=\toks49
+\swaptoks@@=\toks48
 \connectobjectbox@@=\box69
  objects,
-\styletoks@=\toks50
+\styletoks@=\toks49
  decorations;
 kernel objects: directionals, circles, text; options; algorithms: directions,
 edges, connections;  Xy-pic loaded)
@@ -1897,24 +1887,24 @@ LaTeX Warning: You have requested package `xypic',
                but the package provides `xy'.
 
 Package: xy 2013/10/06 Xy-pic version 3.8.9
-) (/usr/local/texlive/2015/texmf-dist/tex/generic/xypic/xyv2.tex
+) (c:/texlive/texmf-dist/tex/generic/xypic/xyv2.tex
  Xy-pic option: Version 2 Compatibility v.3.8
 
 Xy-pic Warning: `\stop' redefined.
 
-(/usr/local/texlive/2015/texmf-dist/tex/generic/xypic/xyframe.tex
+(c:/texlive/texmf-dist/tex/generic/xypic/xyframe.tex
  Xy-pic option: Frame and Bracket extension v.3.14 loaded)
-(/usr/local/texlive/2015/texmf-dist/tex/generic/xypic/xymatrix.tex
+(c:/texlive/texmf-dist/tex/generic/xypic/xymatrix.tex
  Xy-pic option: Matrix feature v.3.14
-\Row=\count287
-\Col=\count288
-\queue@=\toks51
-\queue@@=\toks52
-\qcount@=\count289
-\qcount@@=\count290
-\matrixsize@=\count291
+\Row=\count321
+\Col=\count322
+\queue@=\toks50
+\queue@@=\toks51
+\qcount@=\count323
+\qcount@@=\count324
+\matrixsize@=\count325
  loaded)
-(/usr/local/texlive/2015/texmf-dist/tex/generic/xypic/xyarrow.tex
+(c:/texlive/texmf-dist/tex/generic/xypic/xyarrow.tex
  Xy-pic option: Arrow and Path feature v.3.9 path, \ar, loaded)
 
 Xy-pic Warning: `\uline' redefined [main:231].
@@ -1923,9 +1913,8 @@ Xy-pic Warning: `\uline' redefined [main:231].
 Xy-pic Warning: `\uuline' redefined [main:231].
 
 loaded))
-\c@mparcnt=\count292
- (/usr/local/texlive/2015/texmf-dist/tex/xelatex/xecjk/xeCJKfntef.sty
->>>>>>> refs/remotes/upstream/master
+\c@mparcnt=\count326
+ (c:/texlive/texmf-dist/tex/xelatex/xecjk/xeCJKfntef.sty
 Package: xeCJKfntef 2015/05/15 v3.3.2 xeCJK font effect
 
 (c:/texlive/texmf-dist/tex/latex/environ/environ.sty
@@ -1936,29 +1925,16 @@ Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
 ))
 (c:/texlive/texmf-dist/tex/latex/cjk/texinput/CJKfntef.sty
 Package: CJKfntef 2015/04/18 4.8.4
-<<<<<<< HEAD
 \CJK@fntefSkip=\skip157
-\CJK@nest=\count318
-\CJK@fntefDimen=\dimen312
-\CJK@underdotBox=\box67
-\CJK@ULbox=\box68
-\CJK@underanyskip=\dimen313
-)
-\l__xeCJK_space_skip=\skip158
-\c__xeCJK_ulem-left_node_dim=\dimen314
-\c__xeCJK_null_box=\box69
-=======
-\CJK@fntefSkip=\skip155
-\CJK@nest=\count293
-\CJK@fntefDimen=\dimen306
+\CJK@nest=\count327
+\CJK@fntefDimen=\dimen340
 \CJK@underdotBox=\box70
 \CJK@ULbox=\box71
-\CJK@underanyskip=\dimen307
+\CJK@underanyskip=\dimen341
 )
-\l__xeCJK_space_skip=\skip156
-\c__xeCJK_ulem-left_node_dim=\dimen308
+\l__xeCJK_space_skip=\skip158
+\c__xeCJK_ulem-left_node_dim=\dimen342
 \c__xeCJK_null_box=\box72
->>>>>>> refs/remotes/upstream/master
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
@@ -2021,31 +1997,31 @@ Package: CJKfntef 2015/04/18 4.8.4
 (./Preface.aux) (./Acknowledge.aux))
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 52.
-LaTeX Font Info:    ... okay on input line 52.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 52.
-LaTeX Font Info:    ... okay on input line 52.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 52.
-LaTeX Font Info:    ... okay on input line 52.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 52.
-LaTeX Font Info:    ... okay on input line 52.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 52.
-LaTeX Font Info:    ... okay on input line 52.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 52.
-LaTeX Font Info:    ... okay on input line 52.
-LaTeX Font Info:    Checking defaults for EU1/lmr/m/n on input line 52.
-LaTeX Font Info:    ... okay on input line 52.
-LaTeX Font Info:    Checking defaults for T3/cmr/m/n on input line 52.
-LaTeX Font Info:    Try loading font information for T3+cmr on input line 52.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 56.
+LaTeX Font Info:    ... okay on input line 56.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 56.
+LaTeX Font Info:    ... okay on input line 56.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 56.
+LaTeX Font Info:    ... okay on input line 56.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 56.
+LaTeX Font Info:    ... okay on input line 56.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 56.
+LaTeX Font Info:    ... okay on input line 56.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 56.
+LaTeX Font Info:    ... okay on input line 56.
+LaTeX Font Info:    Checking defaults for EU1/lmr/m/n on input line 56.
+LaTeX Font Info:    ... okay on input line 56.
+LaTeX Font Info:    Checking defaults for T3/cmr/m/n on input line 56.
+LaTeX Font Info:    Try loading font information for T3+cmr on input line 56.
 
 (c:/texlive/texmf-dist/tex/latex/tipa/t3cmr.fd
 File: t3cmr.fd 2001/12/31 TIPA font definitions
 )
-LaTeX Font Info:    ... okay on input line 52.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 52.
-LaTeX Font Info:    ... okay on input line 52.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 52.
-LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    ... okay on input line 56.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 56.
+LaTeX Font Info:    ... okay on input line 56.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 56.
+LaTeX Font Info:    ... okay on input line 56.
 
 *** you should *not* be loading the inputenc package
 *** XeTeX expects the source to be in UTF8 encoding
@@ -2057,60 +2033,60 @@ LaTeX Font Info:    ... okay on input line 52.
 .................................................
 \symlegacymaths=\mathgroup10
 LaTeX Font Info:    Overwriting symbol font `legacymaths' in version `bold'
-(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 52.
-LaTeX Font Info:    Redeclaring math accent \acute on input line 52.
-LaTeX Font Info:    Redeclaring math accent \grave on input line 52.
-LaTeX Font Info:    Redeclaring math accent \ddot on input line 52.
-LaTeX Font Info:    Redeclaring math accent \tilde on input line 52.
-LaTeX Font Info:    Redeclaring math accent \bar on input line 52.
-LaTeX Font Info:    Redeclaring math accent \breve on input line 52.
-LaTeX Font Info:    Redeclaring math accent \check on input line 52.
-LaTeX Font Info:    Redeclaring math accent \hat on input line 52.
-LaTeX Font Info:    Redeclaring math accent \dot on input line 52.
-LaTeX Font Info:    Redeclaring math accent \mathring on input line 52.
-LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 52.
-LaTeX Font Info:    Redeclaring math symbol \Delta on input line 52.
-LaTeX Font Info:    Redeclaring math symbol \Theta on input line 52.
-LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 52.
-LaTeX Font Info:    Redeclaring math symbol \Xi on input line 52.
-LaTeX Font Info:    Redeclaring math symbol \Pi on input line 52.
-LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 52.
-LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 52.
-LaTeX Font Info:    Redeclaring math symbol \Phi on input line 52.
-LaTeX Font Info:    Redeclaring math symbol \Psi on input line 52.
-LaTeX Font Info:    Redeclaring math symbol \Omega on input line 52.
-LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 52.
-LaTeX Font Info:    Redeclaring symbol font `operators' on input line 52.
+(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 56.
+LaTeX Font Info:    Redeclaring math accent \acute on input line 56.
+LaTeX Font Info:    Redeclaring math accent \grave on input line 56.
+LaTeX Font Info:    Redeclaring math accent \ddot on input line 56.
+LaTeX Font Info:    Redeclaring math accent \tilde on input line 56.
+LaTeX Font Info:    Redeclaring math accent \bar on input line 56.
+LaTeX Font Info:    Redeclaring math accent \breve on input line 56.
+LaTeX Font Info:    Redeclaring math accent \check on input line 56.
+LaTeX Font Info:    Redeclaring math accent \hat on input line 56.
+LaTeX Font Info:    Redeclaring math accent \dot on input line 56.
+LaTeX Font Info:    Redeclaring math accent \mathring on input line 56.
+LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 56.
+LaTeX Font Info:    Redeclaring math symbol \Delta on input line 56.
+LaTeX Font Info:    Redeclaring math symbol \Theta on input line 56.
+LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 56.
+LaTeX Font Info:    Redeclaring math symbol \Xi on input line 56.
+LaTeX Font Info:    Redeclaring math symbol \Pi on input line 56.
+LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 56.
+LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 56.
+LaTeX Font Info:    Redeclaring math symbol \Phi on input line 56.
+LaTeX Font Info:    Redeclaring math symbol \Psi on input line 56.
+LaTeX Font Info:    Redeclaring math symbol \Omega on input line 56.
+LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 56.
+LaTeX Font Info:    Redeclaring symbol font `operators' on input line 56.
 LaTeX Font Info:    Encoding `OT1' has changed to `EU1' for symbol font
-(Font)              `operators' in the math version `normal' on input line 52.
+(Font)              `operators' in the math version `normal' on input line 56.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/cmr/m/n --> EU1/lmr/m/n on input line 52.
+(Font)                  OT1/cmr/m/n --> EU1/lmr/m/n on input line 56.
 LaTeX Font Info:    Encoding `OT1' has changed to `EU1' for symbol font
-(Font)              `operators' in the math version `bold' on input line 52.
+(Font)              `operators' in the math version `bold' on input line 56.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/cmr/bx/n --> EU1/lmr/m/n on input line 52.
+(Font)                  OT1/cmr/bx/n --> EU1/lmr/m/n on input line 56.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  EU1/lmr/m/n --> EU1/lmr/m/n on input line 52.
+(Font)                  EU1/lmr/m/n --> EU1/lmr/m/n on input line 56.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/cmr/m/it --> EU1/lmr/m/it on input line 52.
+(Font)                  OT1/cmr/m/it --> EU1/lmr/m/it on input line 56.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/cmr/bx/n --> EU1/lmr/bx/n on input line 52.
+(Font)                  OT1/cmr/bx/n --> EU1/lmr/bx/n on input line 56.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/cmss/m/n --> EU1/pag/m/n on input line 52.
+(Font)                  OT1/cmss/m/n --> EU1/pag/m/n on input line 56.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/cmtt/m/n --> EU1/lmtt/m/n on input line 52.
+(Font)                  OT1/cmtt/m/n --> EU1/lmtt/m/n on input line 56.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  EU1/lmr/m/n --> EU1/lmr/bx/n on input line 52.
+(Font)                  EU1/lmr/m/n --> EU1/lmr/bx/n on input line 56.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/cmr/bx/it --> EU1/lmr/bx/it on input line 52.
+(Font)                  OT1/cmr/bx/it --> EU1/lmr/bx/it on input line 56.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/bx/n --> EU1/pag/bx/n on input line 52.
+(Font)                  OT1/cmss/bx/n --> EU1/pag/bx/n on input line 56.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> EU1/lmtt/bx/n on input line 52.
+(Font)                  OT1/cmtt/m/n --> EU1/lmtt/bx/n on input line 56.
 .................................................
 . chemgreek info: "mapping-activated"
 . 
-. Activating mapping `fontspec' on line 52.
+. Activating mapping `fontspec' on line 56.
 .................................................
 Package marginnote Info: \pdfoutput not 0 and \pdflastxpos available.
 (marginnote)             Extended position detection mode activated.
@@ -2150,7 +2126,7 @@ Package marginnote Info: \pdfoutput not 0 and \pdflastxpos available.
 
 ABD: EveryShipout initializing macros
 \AtBeginShipoutBox=\box75
-Package hyperref Info: Link coloring ON on input line 52.
+Package hyperref Info: Link coloring ON on input line 56.
 
 (c:/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
@@ -2158,15 +2134,11 @@ Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 (c:/texlive/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
-<<<<<<< HEAD
-\c@section@level=\count319
-=======
-\c@section@level=\count294
->>>>>>> refs/remotes/upstream/master
+\c@section@level=\count328
 )
-LaTeX Info: Redefining \ref on input line 52.
-LaTeX Info: Redefining \pageref on input line 52.
-LaTeX Info: Redefining \nameref on input line 52.
+LaTeX Info: Redefining \ref on input line 56.
+LaTeX Info: Redefining \pageref on input line 56.
+LaTeX Info: Redefining \nameref on input line 56.
 File: Pictures/background.pdf Graphic file (type QTm)
 
 <use  "Pictures/background.pdf" >
@@ -2177,70 +2149,70 @@ File: Pictures/background.pdf Graphic file (type QTm)
 * 
 * Try to use `\setCJKsansfont[...]{...}' to define it.
 *************************************************
-LaTeX Font Info:    Try loading font information for T1+pag on input line 67.
+LaTeX Font Info:    Try loading font information for T1+pag on input line 71.
 (c:/texlive/texmf-dist/tex/latex/psnfss/t1pag.fd
 File: t1pag.fd 2001/06/04 font definitions for T1/pag.
 )
 LaTeX Font Info:    Font shape `T1/pag/bx/n' in size <24.88> not available
-(Font)              Font shape `T1/pag/b/n' tried instead on input line 67.
+(Font)              Font shape `T1/pag/b/n' tried instead on input line 71.
 LaTeX Font Info:    Font shape `T1/pag/b/n' in size <24.88> not available
-(Font)              Font shape `T1/pag/db/n' tried instead on input line 67.
+(Font)              Font shape `T1/pag/db/n' tried instead on input line 71.
 LaTeX Font Info:    Font shape `T1/pag/bx/n' in size <14.4> not available
-(Font)              Font shape `T1/pag/b/n' tried instead on input line 69.
+(Font)              Font shape `T1/pag/b/n' tried instead on input line 73.
 LaTeX Font Info:    Font shape `T1/pag/b/n' in size <14.4> not available
-(Font)              Font shape `T1/pag/db/n' tried instead on input line 69.
-LaTeX Font Info:    Try loading font information for U+msa on input line 69.
+(Font)              Font shape `T1/pag/db/n' tried instead on input line 73.
+LaTeX Font Info:    Try loading font information for U+msa on input line 73.
 
 (c:/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 69.
+LaTeX Font Info:    Try loading font information for U+msb on input line 73.
 
 (c:/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Try loading font information for U+rsfs on input line 69.
+LaTeX Font Info:    Try loading font information for U+rsfs on input line 73.
 
 (c:/texlive/texmf-dist/tex/latex/jknapltx/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
 LaTeX Font Info:    Font shape `T1/pag/bx/n' in size <20.74> not available
-(Font)              Font shape `T1/pag/b/n' tried instead on input line 69.
+(Font)              Font shape `T1/pag/b/n' tried instead on input line 73.
 LaTeX Font Info:    Font shape `T1/pag/b/n' in size <20.74> not available
-(Font)              Font shape `T1/pag/db/n' tried instead on input line 69.
+(Font)              Font shape `T1/pag/db/n' tried instead on input line 73.
  [1
 
 ]
-LaTeX Font Info:    Try loading font information for OMS+lmr on input line 83.
+LaTeX Font Info:    Try loading font information for OMS+lmr on input line 87.
 
 (c:/texlive/texmf-dist/tex/latex/lm/omslmr.fd
 File: omslmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 83.
+LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 87.
 
 
 (c:/texlive/texmf-dist/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 83.
+(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 87.
 
-Underfull \hbox (badness 10000) in paragraph at lines 83--84
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 85--86
+Underfull \hbox (badness 10000) in paragraph at lines 87--88
 
  []
 
 
-Overfull \hbox (8.24062pt too wide) in paragraph at lines 87--88
+Underfull \hbox (badness 10000) in paragraph at lines 89--90
+
+ []
+
+
+Overfull \hbox (8.24062pt too wide) in paragraph at lines 91--92
 \T1/lmr/m/sc/10.95 https://github.com/laserroger/Physics-from-Symmetry/ 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 87--88
+Underfull \hbox (badness 10000) in paragraph at lines 91--92
 
  []
 
@@ -2251,17 +2223,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 87--88
 * 
 * Try to use `\setCJKmonofont[...]{...}' to define it.
 *************************************************
-LaTeX Font Info:    Try loading font information for T1+lmtt on input line 89.
+LaTeX Font Info:    Try loading font information for T1+lmtt on input line 93.
 (c:/texlive/texmf-dist/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-Overfull \hbox (5.87538pt too wide) in paragraph at lines 89--90
+Overfull \hbox (5.87538pt too wide) in paragraph at lines 93--94
 \T1/lmr/m/n/10.95 Licensed un-der the Cre-ative Com-mons Attribution-NonCommerc
 ial
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 89--90
+Underfull \hbox (badness 10000) in paragraph at lines 93--94
 
  []
 
@@ -2309,11 +2281,7 @@ LaTeX Font Info:    Font shape `T1/pag/b/n' in size <10.95> not available
 
  (./Parts/Part1.tex
 [0]
-<<<<<<< HEAD
-\c@ttl@toc@default=\count320
-=======
-\c@ttl@toc@default=\count295
->>>>>>> refs/remotes/upstream/master
+\c@ttl@toc@default=\count329
 LaTeX Font Info:    Font shape `T1/pag/bx/n' in size <220> not available
 (Font)              Font shape `T1/pag/b/n' tried instead on input line 3.
 LaTeX Font Info:    Font shape `T1/pag/b/n' in size <220> not available
@@ -2333,67 +2301,67 @@ File: Pictures/chapter_head_1.pdf Graphic file (type QTm)
 ] <xymatrix 3x6 642>
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [4])
-(./Parts/Part2.tex [5] [6
+ [4]
 
-] (./main.ptc) [7] [8]) (./Chaps/Chap4.tex
+LaTeX Warning: Reference `Sec3.3.1' on page 5 undefined on input line 53.
+
+[5]
+Underfull \hbox (badness 2261) in paragraph at lines 74--74
+[]$[]$\T1/lmr/m/n/6 Kelin-Gordan, Dirac, Proka \EU1/SimSun(0)/m/n/6 和
+ []
+
+[6]
+
+LaTeX Warning: Reference `chap6' on page 7 undefined on input line 91.
+
+) (./Parts/Part2.tex [7] [8
+
+] (./main.ptc) [9] [10]) (./Chaps/Chap4.tex
 Chapter 2.
 File: Pictures/chapter_head_1.pdf Graphic file (type QTm)
 <use  "Pictures/chapter_head_1.pdf" >
 
-<<<<<<< HEAD
-LaTeX Warning: Marginpar on page 7 moved.
+LaTeX Warning: Marginpar on page 11 moved.
 
-
-LaTeX Warning: Marginpar on page 7 moved.
-
-[7
+[11
 
 ]
-Underfull \hbox (badness 1221) in paragraph at lines 41--41
-\EU1/SimSun(0)/m/n/10.95 希 望 找 到 \EU1/SimSun(0)/bx/n/10.95 最 值 \T1/lmr/bx/n/10.
-95 (ex-
- []
+
+LaTeX Warning: Marginpar on page 12 moved.
 
 
-LaTeX Warning: Marginpar on page 8 moved.
+Underfull \vbox (badness 2564) has occurred while \output is active []
 
-[8])
-\tf@ptc=\write6
-\openout6 = `main.ptc'.
-=======
- [9
+ [12]
+[13]
 
-]
-[10])
+LaTeX Warning: Reference `sec2.4' on page 14 undefined on input line 86.
+
+
+LaTeX Warning: Marginpar on page 14 moved.
+
+)
 \tf@ptc=\write7
 \openout7 = `main.ptc'.
->>>>>>> refs/remotes/upstream/master
 
- [11]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 168.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 168.
+ [14]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 172.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 172.
  (./main.aux (./Preface.aux) (./Acknowledge.aux))
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 168.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 168.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 172.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 172.
+
+
+LaTeX Warning: There were undefined references.
+
  ) 
 Here is how much of TeX's memory you used:
-<<<<<<< HEAD
- 41176 strings out of 493668
- 803269 string characters out of 6150746
- 963987 words of memory out of 5000000
- 43879 multiletter control sequences out of 15000+600000
- 110642 words of font info for 195 fonts, out of 8000000 for 9000
+ 42971 strings out of 493668
+ 826275 string characters out of 6150746
+ 1020462 words of memory out of 5000000
+ 45635 multiletter control sequences out of 15000+600000
+ 120511 words of font info for 207 fonts, out of 8000000 for 9000
  1328 hyphenation exceptions out of 8191
- 57i,11n,72p,10474b,1327s stack positions out of 5000i,500n,10000p,200000b,80000s
-=======
- 41954 strings out of 493706
- 815401 string characters out of 6145769
- 1008226 words of memory out of 5000000
- 44578 multiletter control sequences out of 15000+600000
- 120508 words of font info for 206 fonts, out of 8000000 for 9000
- 1328 hyphenation exceptions out of 8191
- 57i,21n,69p,10472b,1341s stack positions out of 5000i,500n,10000p,200000b,80000s
->>>>>>> refs/remotes/upstream/master
+ 57i,21n,72p,10474b,1337s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on main.pdf (20 pages).
+Output written on main.pdf (23 pages).
