@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015/W32TeX) (preloaded format=xelatex 2016.1.22)  25 FEB 2016 10:56
+=======
+This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015) (preloaded format=xelatex 2015.5.24)  24 FEB 2016 20:08
+>>>>>>> refs/remotes/upstream/master
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1823,9 +1827,105 @@ Package: bookmark 2011/12/02 v1.24 PDF bookmarks (HO)
 File: bkm-dvipdfm.def 2011/12/02 v1.24 bookmark driver for dvipdfm (HO)
 \BKM@id=\count316
 )))
+<<<<<<< HEAD
 \c@mparcnt=\count317
 
 (c:/texlive/texmf-dist/tex/xelatex/xecjk/xeCJKfntef.sty
+=======
+(/usr/local/texlive/2015/texmf-dist/tex/generic/xypic/xypic.sty
+(/usr/local/texlive/2015/texmf-dist/tex/generic/xypic/xy.sty
+(/usr/local/texlive/2015/texmf-dist/tex/generic/xypic/xy.tex Bootstrap'ing:
+catcodes, docmode,
+(/usr/local/texlive/2015/texmf-dist/tex/generic/xypic/xyrecat.tex)
+(/usr/local/texlive/2015/texmf-dist/tex/generic/xypic/xyidioms.tex)
+
+ Xy-pic version 3.8.9 <2013/10/06>
+ Copyright (c) 1991-2013 by Kristoffer H. Rose <krisrose@tug.org> and others
+ Xy-pic is free software: see the User's Guide for details.
+
+Loading kernel: messages; fonts; allocations: state,
+\X@c=\dimen278
+\Y@c=\dimen279
+\U@c=\dimen280
+\D@c=\dimen281
+\L@c=\dimen282
+\R@c=\dimen283
+\Edge@c=\toks47
+\X@p=\dimen284
+\Y@p=\dimen285
+\U@p=\dimen286
+\D@p=\dimen287
+\L@p=\dimen288
+\R@p=\dimen289
+\Edge@p=\toks48
+\X@origin=\dimen290
+\Y@origin=\dimen291
+\X@xbase=\dimen292
+\Y@xbase=\dimen293
+\X@ybase=\dimen294
+\Y@ybase=\dimen295
+\X@min=\dimen296
+\Y@min=\dimen297
+\X@max=\dimen298
+\Y@max=\dimen299
+\lastobjectbox@=\box67
+\zerodotbox@=\box68
+\almostz@=\dimen300
+ direction,
+\d@X=\dimen301
+\d@Y=\dimen302
+\K@=\count283
+\KK@=\count284
+\Direction=\count285
+\K@dXdY=\dimen303
+\K@dYdX=\dimen304
+\xyread@=\read3
+\xywrite@=\write5
+\csp@=\count286
+\quotPTK@=\dimen305
+
+utility macros; pictures: \xy, positions,
+\swaptoks@@=\toks49
+\connectobjectbox@@=\box69
+ objects,
+\styletoks@=\toks50
+ decorations;
+kernel objects: directionals, circles, text; options; algorithms: directions,
+edges, connections;  Xy-pic loaded)
+
+LaTeX Warning: You have requested package `xypic',
+               but the package provides `xy'.
+
+Package: xy 2013/10/06 Xy-pic version 3.8.9
+) (/usr/local/texlive/2015/texmf-dist/tex/generic/xypic/xyv2.tex
+ Xy-pic option: Version 2 Compatibility v.3.8
+
+Xy-pic Warning: `\stop' redefined.
+
+(/usr/local/texlive/2015/texmf-dist/tex/generic/xypic/xyframe.tex
+ Xy-pic option: Frame and Bracket extension v.3.14 loaded)
+(/usr/local/texlive/2015/texmf-dist/tex/generic/xypic/xymatrix.tex
+ Xy-pic option: Matrix feature v.3.14
+\Row=\count287
+\Col=\count288
+\queue@=\toks51
+\queue@@=\toks52
+\qcount@=\count289
+\qcount@@=\count290
+\matrixsize@=\count291
+ loaded)
+(/usr/local/texlive/2015/texmf-dist/tex/generic/xypic/xyarrow.tex
+ Xy-pic option: Arrow and Path feature v.3.9 path, \ar, loaded)
+
+Xy-pic Warning: `\uline' redefined [main:231].
+
+
+Xy-pic Warning: `\uuline' redefined [main:231].
+
+loaded))
+\c@mparcnt=\count292
+ (/usr/local/texlive/2015/texmf-dist/tex/xelatex/xecjk/xeCJKfntef.sty
+>>>>>>> refs/remotes/upstream/master
 Package: xeCJKfntef 2015/05/15 v3.3.2 xeCJK font effect
 
 (c:/texlive/texmf-dist/tex/latex/environ/environ.sty
@@ -1836,6 +1936,7 @@ Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
 ))
 (c:/texlive/texmf-dist/tex/latex/cjk/texinput/CJKfntef.sty
 Package: CJKfntef 2015/04/18 4.8.4
+<<<<<<< HEAD
 \CJK@fntefSkip=\skip157
 \CJK@nest=\count318
 \CJK@fntefDimen=\dimen312
@@ -1846,6 +1947,18 @@ Package: CJKfntef 2015/04/18 4.8.4
 \l__xeCJK_space_skip=\skip158
 \c__xeCJK_ulem-left_node_dim=\dimen314
 \c__xeCJK_null_box=\box69
+=======
+\CJK@fntefSkip=\skip155
+\CJK@nest=\count293
+\CJK@fntefDimen=\dimen306
+\CJK@underdotBox=\box70
+\CJK@ULbox=\box71
+\CJK@underanyskip=\dimen307
+)
+\l__xeCJK_space_skip=\skip156
+\c__xeCJK_ulem-left_node_dim=\dimen308
+\c__xeCJK_null_box=\box72
+>>>>>>> refs/remotes/upstream/master
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
@@ -1886,7 +1999,7 @@ Package: CJKfntef 2015/04/18 4.8.4
 . 
 . Redefining command \CJKunderanyline with sig. 'st-somm' on line 702.
 .................................................
-\l__xeCJK_fntef_box=\box70
+\l__xeCJK_fntef_box=\box73
 .................................................
 . LaTeX info: "xparse/redefine-command"
 . 
@@ -1897,7 +2010,7 @@ Package: CJKfntef 2015/04/18 4.8.4
 . 
 . Redefining command \CJKunderdot with sig. 'om' on line 883.
 .................................................
-\l__xeCJK_under_symbol_box=\box71
+\l__xeCJK_under_symbol_box=\box74
 .................................................
 . LaTeX info: "xparse/redefine-environment"
 . 
@@ -2036,7 +2149,7 @@ Package marginnote Info: \pdfoutput not 0 and \pdflastxpos available.
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 ABD: EveryShipout initializing macros
-\AtBeginShipoutBox=\box72
+\AtBeginShipoutBox=\box75
 Package hyperref Info: Link coloring ON on input line 52.
 
 (c:/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
@@ -2045,7 +2158,11 @@ Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 (c:/texlive/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
+<<<<<<< HEAD
 \c@section@level=\count319
+=======
+\c@section@level=\count294
+>>>>>>> refs/remotes/upstream/master
 )
 LaTeX Info: Redefining \ref on input line 52.
 LaTeX Info: Redefining \pageref on input line 52.
@@ -2187,12 +2304,16 @@ LaTeX Font Info:    Font shape `T1/pag/bx/n' in size <10.95> not available
 LaTeX Font Info:    Font shape `T1/pag/b/n' in size <10.95> not available
 (Font)              Font shape `T1/pag/db/n' tried instead on input line 3.
 )
-\tf@toc=\write5
-\openout5 = `main.toc'.
+\tf@toc=\write6
+\openout6 = `main.toc'.
 
  (./Parts/Part1.tex
 [0]
+<<<<<<< HEAD
 \c@ttl@toc@default=\count320
+=======
+\c@ttl@toc@default=\count295
+>>>>>>> refs/remotes/upstream/master
 LaTeX Font Info:    Font shape `T1/pag/bx/n' in size <220> not available
 (Font)              Font shape `T1/pag/b/n' tried instead on input line 3.
 LaTeX Font Info:    Font shape `T1/pag/b/n' in size <220> not available
@@ -2207,19 +2328,20 @@ LaTeX Font Info:    Font shape `T1/pag/b/n' in size <30> not available
 ] [2]) (./Chaps/Chap1.tex
 Chapter 1.
 File: Pictures/chapter_head_1.pdf Graphic file (type QTm)
-<use  "Pictures/chapter_head_1.pdf" >
+<use  "Pictures/chapter_head_1.pdf" > [3
 
-LaTeX Warning: Marginpar on page 3 moved.
+] <xymatrix 3x6 642>
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[3
+ [4])
+(./Parts/Part2.tex [5] [6
 
-]) (./Parts/Part2.tex [4] (./main.ptc) [5
-
-] [6]) (./Chaps/Chap4.tex
+] (./main.ptc) [7] [8]) (./Chaps/Chap4.tex
 Chapter 2.
 File: Pictures/chapter_head_1.pdf Graphic file (type QTm)
 <use  "Pictures/chapter_head_1.pdf" >
 
+<<<<<<< HEAD
 LaTeX Warning: Marginpar on page 7 moved.
 
 
@@ -2239,8 +2361,16 @@ LaTeX Warning: Marginpar on page 8 moved.
 [8])
 \tf@ptc=\write6
 \openout6 = `main.ptc'.
+=======
+ [9
 
- [9]
+]
+[10])
+\tf@ptc=\write7
+\openout7 = `main.ptc'.
+>>>>>>> refs/remotes/upstream/master
+
+ [11]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 168.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 168.
  (./main.aux (./Preface.aux) (./Acknowledge.aux))
@@ -2248,6 +2378,7 @@ Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 168.
 Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 168.
  ) 
 Here is how much of TeX's memory you used:
+<<<<<<< HEAD
  41176 strings out of 493668
  803269 string characters out of 6150746
  963987 words of memory out of 5000000
@@ -2255,5 +2386,14 @@ Here is how much of TeX's memory you used:
  110642 words of font info for 195 fonts, out of 8000000 for 9000
  1328 hyphenation exceptions out of 8191
  57i,11n,72p,10474b,1327s stack positions out of 5000i,500n,10000p,200000b,80000s
+=======
+ 41954 strings out of 493706
+ 815401 string characters out of 6145769
+ 1008226 words of memory out of 5000000
+ 44578 multiletter control sequences out of 15000+600000
+ 120508 words of font info for 206 fonts, out of 8000000 for 9000
+ 1328 hyphenation exceptions out of 8191
+ 57i,21n,69p,10472b,1341s stack positions out of 5000i,500n,10000p,200000b,80000s
+>>>>>>> refs/remotes/upstream/master
 
-Output written on main.pdf (18 pages).
+Output written on main.pdf (20 pages).
