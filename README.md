@@ -11,6 +11,8 @@ Translation of `Physics from Symmetry'.
 
 >人名默认不翻译(就是Einstein也不翻)
 
+    Boost       推动
+    
     Euler-Lagrange equation     欧拉-拉格朗日方程
     
     Hamilton        哈密顿
