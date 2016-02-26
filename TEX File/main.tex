@@ -17,7 +17,8 @@
 % e.g. 920px width and 460px height.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\documentclass[11pt,fleqn]{book}
+\documentclass[11pt,fleqn,twoside]{book}
+\makeatletter
 \usepackage{indentfirst}
 \usepackage{xeCJK}
 \setCJKmainfont[BoldFont={SimHei},ItalicFont={KaiTi}]{SimSun}
@@ -47,12 +48,18 @@
 \newcounter{mparcnt}
 \renewcommand\themparcnt{\small{$^{\arabic{mparcnt}}$}}
 \newcommand\mpar[1]{\refstepcounter{mparcnt}{$^{\arabic{mparcnt}}$}\marginpar{\themparcnt\tiny#1}}
+\makeatother
 
-\newcommand{\lmarginpar}[1]{%
-  \vadjust{\smash{\llap{\parbox[t]{\marginparwidth}{\strut#1}\kern\marginparsep}}}}
-\newcommand{\rmarginpar}[1]{%
-  \vadjust{\smash{\rlap{\hspace*{\dimexpr\linewidth+\marginparsep}\parbox[t]{\marginparwidth}{\strut#1}}}}}
 
+
+%\makeatletter
+%\def\mpar#1{%
+%  {\refstepcounter{mparcnt}{$^{\arabic{mparcnt}}$}\marginpar{\themparcnt\tiny#1}}%
+%}
+%\def\mpar@macro#1[#2]{%
+%  {\refstepcounter{mparcnt}{$^{\arabic{mparcnt}}$}\marginnote[#2]{\themparcnt\tiny#1}}
+%}
+%\makeatother
 
 \begin{document}
 
@@ -126,6 +133,7 @@
 \input{./Chaps/Chap1}
 
 \input{./Parts/Part2}
+\input{./Chaps/Chap3}
 \input{./Chaps/Chap4}
 
 

@@ -8,9 +8,11 @@
 \contentsline {part}{\@mypartnumtocformat {II}{Symmetry Tools 对称性工具}}{9}{part.2}
 \ttl@stoptoc {default@1}
 \ttl@starttoc {default@2}
-\contentsline {chapter}{\numberline {2}The Framework (力学)框架/体系}{11}{chapter.2}
-\contentsline {section}{\numberline {2.1}Lagrangian Formalism 拉格朗日形式}{11}{section.2.1}
-\contentsline {subsection}{\numberline {2.1.1}Fermat 原理}{12}{subsection.2.1.1}
-\contentsline {subsection}{\numberline {2.1.2}变分法：基本思想}{12}{subsection.2.1.2}
-\contentsline {section}{\numberline {2.2}Restrictions 限制}{13}{section.2.2}
+\contentsline {chapter}{\numberline {2}Lie群}{11}{chapter.2}
+\contentsline {section}{\numberline {2.1}群}{12}{section.2.1}
+\contentsline {chapter}{\numberline {3}The Framework (力学)框架/体系}{15}{chapter.3}
+\contentsline {section}{\numberline {3.1}Lagrangian Formalism 拉格朗日形式}{15}{section.3.1}
+\contentsline {subsection}{\numberline {3.1.1}Fermat 原理}{16}{subsection.3.1.1}
+\contentsline {subsection}{\numberline {3.1.2}变分法：基本思想}{16}{subsection.3.1.2}
+\contentsline {section}{\numberline {3.2}Restrictions 限制}{17}{section.3.2}
 \contentsfinish 
