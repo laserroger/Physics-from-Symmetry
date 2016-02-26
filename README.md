@@ -17,8 +17,8 @@ Translation of `Physics from Symmetry'.
     Hamiltonian     哈密顿量
     
     Lagrange        拉格朗日
-    Lagrangian      拉格朗日量 拉氏量
-    Lagrangian formalism        拉格朗日形式 拉式形式
+    Lagrangian      拉格朗日量
+    Lagrangian formalism        拉格朗日形式
     
     Lie group       Lie群
     
