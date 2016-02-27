@@ -469,7 +469,7 @@ innerbottommargin=5pt]{cBox}
 %----------------------------------------------------------------------------------------
 
 \usepackage[colorlinks,linkcolor=red,anchorcolor=blue,citecolor=blue,urlcolor=black]{hyperref}
-\hypersetup{hidelinks,backref=true,pagebackref=true,hyperindex=true,colorlinks=true,breaklinks=true,urlcolor= ocre,bookmarks=true,bookmarksopen=false,pdftitle={Title},pdfauthor={Author}}
+\hypersetup{hidelinks,colorlinks=true,breaklinks=true,urlcolor= ocre,bookmarksopen=false,pdftitle={Title},pdfauthor={Author}}
 \usepackage{bookmark}
 \bookmarksetup{
 open,
@@ -483,3 +483,12 @@ addtohook={%
 \fi
 }
 }
+
+%----------------------------------------------------------------------------------------
+%	CHINESE SETTING
+%----------------------------------------------------------------------------------------
+\usepackage{caption}
+\captionsetup{font={scriptsize}}
+\captionsetup{figurename={图}, tablename={表}}
+%\addto{\captionsenglish}{\renewcommand{\contentsname}{目\quad录}}
+\def\chntoday{\the\year~年~\the\month~月~\the\day~日}
