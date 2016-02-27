@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015) (preloaded format=xelatex 2015.5.24)  27 FEB 2016 22:56
+This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015) (preloaded format=xelatex 2015.5.24)  27 FEB 2016 23:10
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -2553,28 +2553,34 @@ LaTeX Warning: Reference `appendix2.3' on page 26 undefined on input line 180.
 
 LaTeX Warning: Reference `appendix2.3' on page 26 undefined on input line 187.
 
-[26])
+[26]) (./Chaps/Chap5.tex [27] [28
+
+]
+Chapter 5.
+File: Pictures/chapter_head_1.pdf Graphic file (type QTm)
+<use  "Pictures/chapter_head_1.pdf" >)
 \tf@ptc=\write7
 \openout7 = `main.ptc'.
 
- [27]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 187.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 187.
- (./main.aux (./Preface.aux) (./Acknowledge.aux))
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 187.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 187.
+ [29]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 188.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 188.
+ (./main.aux (./Preface.aux)
+(./Acknowledge.aux))
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 188.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 188.
 
 
 LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 43359 strings out of 493706
- 844907 string characters out of 6145769
- 1024146 words of memory out of 5000000
- 45944 multiletter control sequences out of 15000+600000
+ 43368 strings out of 493706
+ 845029 string characters out of 6145769
+ 1024260 words of memory out of 5000000
+ 45950 multiletter control sequences out of 15000+600000
  122809 words of font info for 216 fonts, out of 8000000 for 9000
  1328 hyphenation exceptions out of 8191
- 57i,21n,69p,10431b,1354s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 57i,21n,69p,10431b,1355s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on main.pdf (37 pages).
+Output written on main.pdf (39 pages).

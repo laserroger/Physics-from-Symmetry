@@ -16,4 +16,6 @@
 \contentsline {section}{\numberline {4.2}限制}{23}{section.4.2}
 \contentsline {section}{\numberline {4.3}粒子理论与场论}{24}{section.4.3}
 \contentsline {section}{\numberline {4.4}欧拉-拉格朗日方程}{25}{section.4.4}
+\contentsline {chapter}{\numberline {5}测量}{29}{chapter.5}
+\contentsline {section}{\numberline {5.1}量子力学中的算符}{29}{section.5.1}
 \contentsfinish 
