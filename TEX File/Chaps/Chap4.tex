@@ -3,7 +3,7 @@
 %----------------------------------------------------------------------------------------
 %	CHAPTER 4
 %----------------------------------------------------------------------------------------
-\renewcommand\rd{\mathrm d}
+\newcommand\rd{\mathrm d}
 \chapterimage{chapter_head_1.pdf} % Chapter heading image
 
 \chapter[框架/体系]{The Framework 框架/体系}\label{chap4}
@@ -198,7 +198,7 @@ S = \int_{t_1}^{t_2} {\mathcal L}\left(q+\epsilon,\dot q + \dot \epsilon, t\righ
 \]
 因此，我们可以将\ref{eq:4.6}改写为
 \[
-\int_{t_1}^{t_2} \rd t ~\epsilon(t) \left[ \frac{\partial \mathcal{L}}{\partial q} - \frac{\rd}{\rd t} \left( \frac{\partial \mathcal{L}(q,\dot q,t)}{\partial \dot q} \right] \overset{\text{!}}{=} 0
+\int_{t_1}^{t_2} \rd t ~\epsilon(t) \left[ \frac{\partial \mathcal{L}}{\partial q} - \frac{\rd}{\rd t} \left( \frac{\partial \mathcal{L}(q,\dot q,t)}{\partial \dot q}\right) \right] \overset{\text{!}}{=} 0
 \]
 易见上式对于任意扰动\(\epsilon(t)\)为零仅当方括号\([~]\)内的表达式为零。故有%
 \mpar{可能你会对于两类不同的导数符号感到困惑。\(\frac{\rd}{\rd t}\)被称作对\(t\)的全导数，而\(\frac{\partial}{\partial t}\)被称为偏导数。全导数给出总改变量，函数\(f\)的变化率，即偏导数，乘以变量自身的改变，之和。

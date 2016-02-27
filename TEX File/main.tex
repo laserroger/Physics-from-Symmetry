@@ -21,6 +21,7 @@
 \makeatletter
 \usepackage{indentfirst}
 \usepackage{xeCJK}
+\usepackage{caption}
 \setCJKmainfont[BoldFont={SimHei},ItalicFont={KaiTi}]{SimSun}
 \usepackage{bm}
 \usepackage{amssymb}
@@ -43,6 +44,8 @@
 \do\o\do\p\do\q\do\r\do\s\do\t\do\u\do\v\do\w\do\x\do\y\do\z
 \do\.\do\@\do\\\do\/\do\!\do\_\do\|\do\;\do\>\do\]\do\)\do\,
 \do\?\do\'\do+\do\=\do\#} 
+
+\makeatletter \newcommand\figcaption{\def\@captype{figure}\caption} \newcommand\tabcaption{\def\@captype{table}\caption} \makeatother
 
 
 \newcounter{mparcnt}

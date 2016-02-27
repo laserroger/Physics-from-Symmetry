@@ -19,7 +19,7 @@
 
 
 
-\marginpar{
+\mpar{
 	
 下面的图表是本章结构的示意图。 当你迷失方向的时候记得回来看看， 初学的时候不太需要看它。\sout{反正也看不懂}
 
@@ -87,22 +87,21 @@
 	% flag1: This means they map every point of the set to a point that lies again in the set 没翻译， 因为觉得太啰嗦...
 	
 	\marginpar{
-		\includegraphics[scale=0.35]{fig3_1} 
+		\includegraphics[scale=0.35]{./Figure/fig3_1.eps} 
 		\figcaption{正方形}
 	}
 	
 	\marginpar{
-		\includegraphics[scale=0.35]{fig3_2.eps}
-		\figcaption{正方形绕中心顺时针旋转$5^\circ$}
-	}
+		\includegraphics[scale=0.35]{./Figure/fig3_2.eps}
+		\figcaption{正方形绕中心顺时针旋转$5^\circ$}}
 	
 	注意不是所有旋转变换都对称。 我们关注顶点的变化就能看出来， 比如绕中心顺时针旋转$5^\circ$， 这个变换将顶点映射到原来正方形点集之外， 顶点$A$映射到了原来正方形集合之外的点$A'$。 因此这个旋转变换对正方形不具有对称性。 当然， 变换后的点集仍然是个正方形， 但却是不同的正方形(即不同点的集合)。 绕中心转$90^\circ$是对称的， 如图\ref{fig3.3}， 顶点$A$变换到点$B$， 等等， 原来的正方形点集变换到相同的集合。
 	
 	{
-	\centering{
-	\includegraphics[scale=0.4]{fig3_3}
-	\figcaption{正方形绕中心旋转$90^\circ$}
-	\label{fig3.3}
+	\centering{\begin{figure}
+	\includegraphics[scale=0.4]{./Figure/fig3_3.eps}
+	\caption{正方形绕中心旋转$90^\circ$}
+	\label{fig3.3}\end{figure}
 	}}
 	
 	假如你看了一眼原来的正方形， 然后闭上眼睛， 这时有人把正方形做了一个变换。 如果你不能分辨这个正方形是否发生变化， 那么这个变换就是个对称变换。
@@ -113,9 +112,9 @@
 	
 	单位圆绕圆心旋转任意角度都不变。 换言之， 变换参数(这里就是旋转角度)可以取任意值， 因此这个群称为连续群。
 \end{enumerate}
-	\marginpar{
-		\includegraphics[scale=0.35]{fig3_4.eps}
-		\figcaption{单位圆绕圆心旋转任意角度都不变}
+	\marginpar{%\begin{figure}
+		\includegraphics[scale=0.35]{./Figure/fig3_4.eps}
+		\figcaption{单位圆绕圆心旋转任意角度都不变}%\end{figure}
 	}
 
 数学中除了几何图形之外还有好多别的都有对称性。 例如，对于向量， 我们可以考虑所有让向量长度不变的变换构成的集合。 看出本节开头对称性定义的普遍性了没? 对称性就是变换下的不变性。 非常幸运， 搞数学的早已建立了群论， 它可以研究所有类型的对称性\mpar{历史上数学家们建立群论最初是为了描述方程的对称性}。
