@@ -10,6 +10,8 @@ INPUT c:/texlive/texmf-dist/tex/latex/base/bk11.clo
 INPUT c:/texlive/texmf-dist/tex/latex/base/bk11.clo
 INPUT c:/texlive/texmf-dist/fonts/map/fontname/texfonts.map
 INPUT c:/texlive/texmf-dist/fonts/tfm/public/cm/cmr10.tfm
+INPUT c:/texlive/texmf-dist/tex/latex/tools/indentfirst.sty
+INPUT c:/texlive/texmf-dist/tex/latex/tools/indentfirst.sty
 INPUT c:/texlive/texmf-dist/tex/xelatex/xecjk/xeCJK.sty
 INPUT c:/texlive/texmf-dist/tex/xelatex/xecjk/xeCJK.sty
 INPUT c:/texlive/texmf-dist/tex/latex/l3kernel/expl3.sty
