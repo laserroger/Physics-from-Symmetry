@@ -23,6 +23,7 @@ Translation of `Physics from Symmetry'.
     Lagrangian formalism        拉格朗日形式
     
     Lie group       Lie群
+    Cartesian       笛卡尔
     
     其它暂且都不翻译，以后统一更改
 
