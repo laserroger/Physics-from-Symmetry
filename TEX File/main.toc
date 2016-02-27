@@ -7,9 +7,9 @@
 \contentsline {part}{\@mypartnumtocformat {II}{Symmetry Tools 对称性工具}}{9}{part.2}
 \contentsline {chapter}{\numberline {2}Lie群}{11}{chapter.2}
 \contentsline {section}{\numberline {2.1}群}{12}{section.2.1}
-\contentsline {chapter}{\numberline {3}The Framework (力学)框架/体系}{15}{chapter.3}
-\contentsline {section}{\numberline {3.1}Lagrangian Formalism 拉格朗日形式}{15}{section.3.1}
-\contentsline {subsection}{\numberline {3.1.1}Fermat 原理}{16}{subsection.3.1.1}
-\contentsline {subsection}{\numberline {3.1.2}变分法：基本思想}{16}{subsection.3.1.2}
-\contentsline {section}{\numberline {3.2}Restrictions 限制}{17}{section.3.2}
+\contentsline {chapter}{\numberline {3}The Framework (力学)框架/体系}{17}{chapter.3}
+\contentsline {section}{\numberline {3.1}Lagrangian Formalism 拉格朗日形式}{17}{section.3.1}
+\contentsline {subsection}{\numberline {3.1.1}Fermat 原理}{18}{subsection.3.1.1}
+\contentsline {subsection}{\numberline {3.1.2}变分法：基本思想}{18}{subsection.3.1.2}
+\contentsline {section}{\numberline {3.2}Restrictions 限制}{19}{section.3.2}
 \contentsfinish 

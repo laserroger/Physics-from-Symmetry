@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015) (preloaded format=xelatex 2015.5.24)  27 FEB 2016 01:59
+This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015) (preloaded format=xelatex 2015.5.24)  27 FEB 2016 10:43
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -2398,97 +2398,30 @@ LaTeX Warning: Marginpar on page 11 moved.
 [11
 
 ]
+File: ./Figure/fig3_1.eps Graphic file (type eps)
+ <./Figure/fig3_1.eps>
+Overfull \hbox (29.87828pt too wide) in paragraph at lines 95--95
+[][] 
+ []
 
-./Chaps/Chap3.tex:95: LaTeX Error: File `fig3_1' not found.
+File: ./Figure/fig3_2.eps Graphic file (type eps)
+<./Figure/fig3_2.eps>
+Overfull \hbox (27.41905pt too wide) in paragraph at lines 100--100
+[][] 
+ []
 
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.95 ^^I}
-         
-? s
-OK, entering \scrollmode...
-
-LaTeX Warning: File `fig3_2.eps' not found on input line 100.
-
-
-./Chaps/Chap3.tex:100: LaTeX Error: File `fig3_2.eps' not found.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.100 ^^I}
-          
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-./Chaps/Chap3.tex:100: LaTeX Error: Cannot determine size of graphic in fig3_2.
-eps (no BoundingBox).
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.100 ^^I}
-          
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-File: fig3_2.eps Graphic file (type eps)
-<fig3_2.eps>
 
 LaTeX Warning: Marginpar on page 12 moved.
 
-
-./Chaps/Chap3.tex:106: LaTeX Error: File `fig3_3' not found.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.106 ^^I\includegraphics[scale=0.4]{fig3_3}
-                                            
-I could not locate the file with any of these extensions:
-.pdf,.PDF,.eps,.EPS,.ps,.PS,.png,.PNG,.jpg,.JPG,.jpeg,.JPEG,.jp2,.JP2,.jpf,.JPF
-,.bmp,.BMP,.pict,.PICT,.psd,.PSD,.mac,.MAC,.TGA,.tga,.gif,.GIF,.tif,.TIF,.tiff,
-.TIFF,
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[12]
-
-LaTeX Warning: File `fig3_4.eps' not found on input line 122.
+File: ./Figure/fig3_3.eps Graphic file (type eps)
+<./Figure/fig3_3.eps> [12]
+File: ./Figure/fig3_4.eps Graphic file (type eps)
+ <./Figure/fig3_4.eps>
+Overfull \hbox (22.5006pt too wide) in paragraph at lines 122--122
+[][] 
+ []
 
 
-./Chaps/Chap3.tex:122: LaTeX Error: File `fig3_4.eps' not found.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.122 ^^I}
-          
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-./Chaps/Chap3.tex:122: LaTeX Error: Cannot determine size of graphic in fig3_4.
-eps (no BoundingBox).
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.122 ^^I}
-          
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-File: fig3_4.eps Graphic file (type eps)
-<fig3_4.eps>
 Overfull \hbox (15.16496pt too wide) detected at line 137
   $\OML/cmm/m/it/10.95 R\OT1/cmr/m/n/10.95 (110[])\OML/cmm/m/it/10.95 R\OT1/cmr
 /m/n/10.95 (40[])\OML/cmm/m/it/10.95 R\OT1/cmr/m/n/10.95 (90[]) = \OML/cmm/m/it
@@ -2507,41 +2440,40 @@ it/10.95 R\OT1/cmr/m/n/10.95 (110[])\OML/cmm/m/it/10.95 R\OT1/cmr/m/n/10.95 (40
  []
 
 
-LaTeX Warning: Reference `sec3.5' on page 13 undefined on input line 145.
-
-
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [13])
-(./Chaps/Chap4.tex [14]
+ [13]
+
+LaTeX Warning: Reference `sec3.5' on page 14 undefined on input line 145.
+
+[14]) (./Chaps/Chap4.tex [15] [16
+
+]
 Chapter 3.
 File: Pictures/chapter_head_1.pdf Graphic file (type QTm)
 <use  "Pictures/chapter_head_1.pdf" >
 
-LaTeX Warning: Marginpar on page 15 moved.
+LaTeX Warning: Marginpar on page 17 moved.
 
-[15
+[17]
 
-]
-
-LaTeX Warning: Marginpar on page 16 moved.
+LaTeX Warning: Marginpar on page 18 moved.
 
 
 Underfull \vbox (badness 2564) has occurred while \output is active []
 
- [16]
-[17]
+ [18]
+[19]
 
-LaTeX Warning: Reference `sec2.4' on page 18 undefined on input line 86.
+LaTeX Warning: Reference `sec2.4' on page 20 undefined on input line 86.
 
 
-LaTeX Warning: Marginpar on page 18 moved.
+LaTeX Warning: Marginpar on page 20 moved.
 
-)
+) [20] (./main.ind)
 \tf@ptc=\write7
 \openout7 = `main.ptc'.
 
- [18]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 181.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 181.
  (./main.aux (./Preface.aux) (./Acknowledge.aux))
@@ -2553,12 +2485,12 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 42110 strings out of 493706
- 819081 string characters out of 6145769
- 1009848 words of memory out of 5000000
- 44684 multiletter control sequences out of 15000+600000
+ 42089 strings out of 493706
+ 819080 string characters out of 6145769
+ 1009849 words of memory out of 5000000
+ 44687 multiletter control sequences out of 15000+600000
  122163 words of font info for 214 fonts, out of 8000000 for 9000
  1328 hyphenation exceptions out of 8191
  57i,21n,69p,10472b,1351s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on main.pdf (27 pages).
+Output written on main.pdf (29 pages).
