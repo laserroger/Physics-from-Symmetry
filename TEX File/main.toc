@@ -21,4 +21,5 @@
 \contentsline {part}{\@mypartnumtocformat {III}{The Equations of Nature 自然界的方程}}{29}{part.3}
 \contentsline {chapter}{\numberline {5}测量}{31}{chapter.5}
 \contentsline {section}{\numberline {5.1}量子力学中的算符}{31}{section.5.1}
+\contentsline {subsection}{\numberline {5.1.1}自旋与角动量}{32}{subsection.5.1.1}
 \contentsfinish 

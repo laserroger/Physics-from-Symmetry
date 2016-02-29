@@ -21,7 +21,7 @@
 \makeatletter
 \usepackage{indentfirst}
 \usepackage{xeCJK}
-\usepackage{caption}
+\usepackage{cancel}
 \setCJKmainfont[BoldFont={SimHei},ItalicFont={KaiTi}]{SimSun}
 \usepackage{bm}
 \usepackage{amssymb}
@@ -48,7 +48,7 @@
 \makeatletter \newcommand\figcaption{\def\@captype{figure}\caption} \newcommand\tabcaption{\def\@captype{table}\caption} \makeatother
 
 
-\newcounter{mparcnt}
+\newcounter{mparcnt}[chapter]
 \renewcommand\themparcnt{\small{$^{\arabic{mparcnt}}$}}
 \newcommand\mpar[1]{\refstepcounter{mparcnt}{$^{\arabic{mparcnt}}$}\marginpar{\themparcnt\scriptsize#1}}
 \makeatother
