@@ -44,3 +44,5 @@ Translation of `Physics from Symmetry'.
     The equations of nature     关于自然的方程
     
     The Framework       框架/体系
+    
+    production rule     莱布尼兹律

@@ -21,6 +21,7 @@
 \makeatletter
 \usepackage{indentfirst}
 \usepackage{xeCJK}
+\usepackage{cancel}
 \setCJKmainfont[BoldFont={SimHei},ItalicFont={KaiTi}]{SimSun}
 \usepackage{bm}
 \usepackage{amssymb}
@@ -32,8 +33,8 @@
 \SetWatermarkLightness{0.88}
 \SetWatermarkScale{0.4}
 \usepackage{setspace}
-\usepackage{marginnote}
-
+\usepackage{marginfix}
+%\include{marginpar}
 \input{structure} 
 \usepackage{xypic}
 \def\UrlBreaks{\do\A\do\B\do\C\do\D\do\E\do\F\do\G\do\H\do\I\do\J
@@ -44,10 +45,12 @@
 \do\.\do\@\do\\\do\/\do\!\do\_\do\|\do\;\do\>\do\]\do\)\do\,
 \do\?\do\'\do+\do\=\do\#} 
 
+\makeatletter \newcommand\figcaption{\def\@captype{figure}\caption} \newcommand\tabcaption{\def\@captype{table}\caption} \makeatother
 
-\newcounter{mparcnt}
+
+\newcounter{mparcnt}[chapter]
 \renewcommand\themparcnt{\small{$^{\arabic{mparcnt}}$}}
-\newcommand\mpar[1]{\refstepcounter{mparcnt}{$^{\arabic{mparcnt}}$}\marginpar{\themparcnt\tiny#1}}
+\newcommand\mpar[1]{\refstepcounter{mparcnt}{$^{\arabic{mparcnt}}$}\marginpar{\themparcnt\scriptsize#1}}
 \makeatother
 
 
@@ -78,7 +81,9 @@
 \node[anchor=north west,inner sep=0pt] at (0,0) {\includegraphics[width=\paperwidth]{background}}; % Background image
 \draw[anchor=north] (midpoint) node [fill=ocre!30!white,fill opacity=0.6,text opacity=1,inner sep=1cm]{\Huge\centering\bfseries\sffamily\parbox[c][][t]{\paperwidth}{\centering Physics from Symmetry \\[15pt] % Book title
 {\Large $1^{st}$ edition}\\[20pt] % Subtitle
-{\huge }}}; % Author name
+{\huge } % Author name
+{\huge Translate Version: \chntoday}
+}};
 \end{tikzpicture}};
 \end{tikzpicture}
 \vfill
@@ -131,10 +136,14 @@
 
 \input{./Parts/Part1}
 \input{./Chaps/Chap1}
+\input{./Chaps/Chap2}
 
 \input{./Parts/Part2}
 \input{./Chaps/Chap3}
 \input{./Chaps/Chap4}
+
+\input{./Parts/Part3}
+\input{./Chaps/Chap5}
 
 
 %\begin{table}[h]

@@ -3,10 +3,10 @@
 %----------------------------------------------------------------------------------------
 %	CHAPTER 4
 %----------------------------------------------------------------------------------------
-
+\newcommand\rd{\mathrm d}
 \chapterimage{chapter_head_1.pdf} % Chapter heading image
 
-\chapter{The Framework (力学)框架/体系}\label{chap4}
+\chapter[框架/体系]{The Framework 框架/体系}\label{chap4}
 这一章的基本思路是,我们要在尽可能少的使用{\it 某些东西}的前提下，得到正确的关于自然的方程。{\it 某些东西}是什么？有一件事是确定的：它不应该在 Lorentz 变换下改变，否则我们会在不同的参考系下得到不同的自然规律。在数学意义上，它意味着我们寻找的这个东西是个标量，依照洛伦兹群的 \( (0,0) \) 表示作变换。再考虑到自然总依简单而行，我们已经足够导出关于自然的方程了。
 
 从这个想法出发，我们将会引入{\bf 拉格朗日形式(Lagrangian formalism)}。通过极小化理论的中心对象，我们可以得到用以描述问题中的物理系统的运动方程。极小化过程的结果被称作 {\bf Euler-Lagrange 方程}。
@@ -15,7 +15,7 @@
 \mpar{守恒量指的是不随时间变化的物理量。例如一个给定体系的能量或动量。数学上意味着\(\partial_t Q = 0 \rightarrow Q = \text{常数}\)。}%
 之间的深刻联系。我们将在下一章中利用它来理解,理论是如何来描述实验测量量的。
 
-\section{Lagrangian Formalism 拉格朗日形式}\label{sec4.1}
+\section[拉格朗日形式]{Lagrangian Formalism 拉格朗日形式}\label{sec4.1}
 
 拉格朗日形式是在基础物理中被广泛运用的一个强有力的框架%
 \mpar{物理中当然有其他框架，例如以{\bf 哈密顿量(Hamiltonian)}为中心对象的{\bf 哈密顿形式(Hamiltonian formalism)}。哈密顿量的问题在于它不是洛伦兹不变的，因为它所代表的能量，仅仅是{\bf 四动量(covariant energy-impulse vector)}的一个分量}%
@@ -30,14 +30,19 @@ Whenever any action occurs in nature, the quantity of action employed by this ch
 \end{quote}
 
 拉格朗日形式的思想源于 Fermat 原理：光在两空间点间传播总依耗时最短的路径\(q(t)\)而行。数学上来讲，如果我们定义给定路径\(q(t)\)的作用量为
-\begin{equation*}
+\[
 S_{\text{light}}[{\mathbf q}(t)] = \int ~{\mathrm d}t
-\end{equation*}
+\]
 而我们的任务便是找到一条特定的路径\(q(t)\)使作用量取极小值%
 \mpar{此处的作用量仅仅是沿给定路径对时间的积分，但一般而言作用量会更加复杂，我们待会儿就能见到}%
 为了得到一个给定{\bf 函数}的极小值%
-\mpar{一般而言，我们希望找到{\bf 最值(extremums)}，即最小值和最大值。}%
+\mpar{一般而言，我们希望找到{\bf 极值(extremums)}，即极小值{\bf 和}极大值。下一节中的方法足以找到这两者。无论如何，我们将继续谈论极小值}%
 ，我们可以求得其导函数并令其为零；而为了找到{\bf 泛函}\(S[q(t)]\)——函数\(q(t)\)的函数\(S\)——的极小值，就得要一个新的数学工具：{\bf 变分法}。
+
+\marginpar{
+	\includegraphics[scale=0.35]{./Figure/fig4_1} 
+	\figcaption{对于给定初末端点的路径的扰动}
+}
 
 \subsection{变分法：基本思想}\label{sec4.1.2}
 
@@ -67,7 +72,7 @@ S[q(t)]=\int {\mathcal L}~{\mathrm d}t
 \mpar{我们的任务是找到对于给定拉格朗日量和初始条件有着最小作用量的路径\(q(t)\)。在此之前，我们得先找到正确的拉格朗日量，用以描述问题中的物理系统。这是我们在上一章中所讨论的对称性所能发挥作用的地方。通过要求拉格朗日量在洛伦兹群的所有变换下不变，我们就能找到正确的拉格朗日量}%
 。在仔细讨论如何对这样一个泛函使用变分法之前，我们需要先讲讲两个小问题。
 
-\section{Restrictions 限制}\label{sec4.2}
+\section[限制]{Restrictions 限制}\label{sec4.2}
 正如我们在\ref{sec1.1}节中所提到的，现有理论中有一些限制条件是无法从第一性原理中得到的。我们所能知道是，如果想得到一个有意义的理论，我们必须加上这些限制。
 
 一个重要的限制是，我们仅允许拉格朗日量中出现尽可能低阶的非平凡%
@@ -92,7 +97,7 @@ S[q(t)]=\int {\mathcal L}~{\mathrm d}t
 即，时空中距离为\(h\)的两个点的场相互作用。利用 Taylor 展开我们有%
 \footnote{\textcolor{red}{译注：此式有误}}
 \begin{equation}
-\Phi(x-h) = \sum\limits_{k=0}^{\inf}\left(\left(\frac{\partial}{\partial x}\right)^k\left.\Phi(x)\right|_{x=n}\right) \frac{(x-h)^k}{k!}
+\Phi(x-h) = \sum\limits_{k=0}^{\infty}\left(\left(\frac{\partial}{\partial x}\right)^k\left.\Phi(x)\right|_{x=h}\right) \frac{(x-h)^k}{k!}
 \end{equation}
 即包含无穷阶导数会导致一个非局域的理论。
 
@@ -102,3 +107,108 @@ S[q(t)]=\int {\mathcal L}~{\mathrm d}t
 \Phi^0, \Phi^1, \Phi^2
 \]
 这样的项。例如，形如\(\Phi^2 \partial_\mu \Phi\)的项是\(\Phi\)的三阶项，因而不会被包含在我们自由理论的拉格朗日量中。
+
+\section[粒子理论与场论]{Particle Theories vs. Field Theories 粒子理论与场论}\label{sec4.3}
+我们目前有两套用以描述自然的理论框架。一套是粒子理论，用依赖于时间的粒子位置描述物理系统，即\(\vec{q}=\vec{q}(t)\)。由于我们不是非得在使用笛卡尔坐标系%
+\mpar{例如，我们可以用球坐标系}%
+，所以用的是字母\(q\)而不是\(x\)。对于这样的理论，拉格朗日量依赖于坐标\(\vec{q}\)，速度\(\partial_t\vec{q}\)和时间\(t\)：%
+\footnote{译注：严格说来，依赖于坐标函数\(\vec{q}(t)\)，速度函数\(\partial_t\vec{q}(t)\)和时间\(t\)}
+\begin{equation}
+{\mathcal L} = {\mathcal L} (\vec{q},\partial_t\vec{q},t)
+\end{equation}
+
+一个著名的例子是这个能导出经典力学的牛顿运动方程的拉格朗日量\({\mathcal L} = \frac{1}{2}m\vec{q}^2\)。我们将在稍后进行相当详细的讨论。
+
+另一套是场论：使用场而不是独立粒子的坐标来描述自然%
+\mpar{量子场论有一个特别优美的性质是关于如何将粒子引进的。我们将在\ref{chap6}中看到场有能力产生和湮灭粒子}%
+。在这套理论中，时空构成了场\(\Phi(\vec{x},t)\)表演的舞台。利用前面提到过的限制，我们得到%
+\mpar{这里我故意使用了不同的符号\({\mathscr L}\)，因为在场论中大多数时候我们都在和拉格朗日量密度\({\mathscr L}\)打交道。两者之间满足关系式\({\mathcal L} = \int{\mathrm d}^3\vec{x}~{\mathscr L}\)}
+\begin{equation}
+{\mathscr L} = {\mathscr L} (\Phi(\vec{x},t), \partial_\mu \Phi(\vec{x},t), \vec{x})
+\end{equation}
+
+一个著名的例子是我们将用以导出 Klein-Gordon 方程的拉格朗日量\({\mathscr L} = \frac{1}{2}\left(\partial_\mu\Phi\partial^\mu\Phi-m^2\Phi^2\right)\)。
+
+场论的一大优点是它将时空等价的对待。在粒子理论中我们使用空间坐标\(\vec{q}(t)\)作为时间的函数来描述我们的粒子。尤其是，拉格朗日量中没有类似于\(\partial_{\vec{q}}t\)的项（如果出现了这类项，我们该怎样理解它呢？）当我们讨论粒子的坐标时，意义是清楚的，但对时间做类似的陈述时，却很难有明确的意义%
+\footnote{译注：利用不那么古老的相对论性语言，粒子理论下时空坐标是可以在形式上被同等对待的：用以求导的东西只能是曲线的参数，它可以取作粒子世界线的固有时、某一坐标系的坐标时、或者其他什么东西（只要性质合适，也可以是空间坐标）；而时空坐标则被同样的求导。}。
+
+讨论了这么多，我们终于可以回到这章开头所说的极小化问题上来了。我们希望找到某些泛函
+\[
+S[q(t)] = \int {\mathcal L}~{\mathrm d}t
+\]
+的极小值，以得到正确的运动方程。
+
+对于粒子而言，方程的解是使得泛函取极小值的正确路径；而对于场而言，解是正确的场函数。
+
+此刻请不用担心\(\mathcal L\)的具体形式，在下面数章中我们将详细讨论如何对问题中的系统导出正确的拉格朗日量\(L\)。现在，我们将使用之前所介绍过的变分法，对于一个一般的\(\mathcal L\)导出泛函\(S[q(t)]\)的极小值。极小化过程将给出系统的运动方程。
+
+\section[欧拉-拉格朗日方程]{Euler-Lagrange equation 欧拉-拉格朗日方程}\label{sec4.4}
+我们从粒子理论出发，它能让我们搞清楚，在给定初末点后，粒子是如何运动的。数学上，我们需要找到{\bf 函数}\(q(t)\)使得作用量\footnote{此处原文字体有误}
+\[
+S = \int_{t_1}^{t_2} {\mathcal L}\left(q(t),\frac{\rd q(t)}{\rd t},t\right)
+\]
+取得其极值（极大值或极小值）。
+
+我们使用记号
+\[
+\dot q(t) = \frac{\rd q(t)}{\rd t}\text{。}
+\]
+与之前的例子类似，取\(q(t)=a(t)\)并让对这个函数进行一个扰动
+\[
+a(t) + \epsilon(t)
+\]
+其中\(\epsilon\)依旧是一个无穷小量。对于一个粒子而言，我们必须同时改变其速度\(\dot a(t) + \dot\epsilon(t)\)，其中\(\dot\epsilon(t) = \frac{\rd \epsilon(t)}{\rd t}\)。
+
+在边界上，变换后的路径应与原路径相同：
+\begin{equation}
+0 = \epsilon(t_1) = \epsilon(t_2)
+\label{eq:4.5}
+\end{equation}
+这是因为我们寻找的是使作用量积分取极值的{\bf 给定初末端点}的路径。
+
+这个扰动使得泛函变为
+\[
+S = \int_{t_1}^{t_2} {\mathcal L}\left(q+\epsilon,\dot q + \dot \epsilon, t\right)~\rd t \text{。}
+\]
+与之前的例子类似，当我们寻求极小值时，我们要求线性依赖于扰动\(\epsilon\)的项为零。由于我们处理的是一个一般性的\(\mathcal L\)，故将其展开成泰勒级数%
+\mpar{我们正使用的是这个公式的多变量形式，参见附录\ref{appendix2.3}：
+\[
+\begin{aligned}
+{\mathcal L}\left(q+\epsilon,\dot q + \dot \epsilon, t\right) = {\mathcal L}(q,\dot q,t) + \\
+\epsilon\frac{\partial \mathcal{L}}{\partial q} + \dot\epsilon\frac{\partial \mathcal{L}}{\partial \dot q} + \dots
+\end{aligned}
+\]}%对原文公式有改动
+，并令一阶项为零
+\begin{equation}
+\int_{t_1}^{t_2} \rd t ~ \left[ \epsilon(t) \frac{\partial \mathcal{L}}{\partial q} + \left( \frac{\rd}{\rd t} \epsilon(t) \right)\frac{\partial \mathcal{L}}{\partial \dot q} \right] \overset{\text{!}}{=} 0 \text{。}
+\label{eq:4.6}
+\end{equation}
+对后一项做分部积分%
+\mpar{分部积分是莱布尼兹律的直接推论，详见附录\ref{appendix2.3}}%
+得到
+\[
+\begin{aligned}
+\int_{t_1}^{t_2} \rd t ~ \left( \frac{\rd}{\rd t} \epsilon(t) \right)\frac{\partial \mathcal{L}(q,\dot q,t)}{\partial \dot q} =\\
+\left.\epsilon(t)\frac{\partial \mathcal{L}(q,\dot q,t)}{\partial \dot q}\right|_{t_1}^{t_2} - \int_{t_1}^{t_2} \rd t ~  \epsilon(t) \frac{\rd}{\rd t} \left( \frac{\partial \mathcal{L}(q,\dot q,t)}{\partial \dot q} \right)
+\end{aligned}
+\]
+利用\ref{eq:4.5}式有
+\[
+\left.\epsilon(t)\frac{\partial \mathcal{L}(q,\dot q,t)}{\partial \dot q}\right|_{t_1}^{t_2} = 0
+\]
+因此，我们可以将\ref{eq:4.6}改写为
+\[
+\int_{t_1}^{t_2} \rd t ~\epsilon(t) \left[ \frac{\partial \mathcal{L}}{\partial q} - \frac{\rd}{\rd t} \left( \frac{\partial \mathcal{L}(q,\dot q,t)}{\partial \dot q}\right) \right] \overset{\text{!}}{=} 0
+\]
+易见上式对于任意扰动\(\epsilon(t)\)为零仅当方括号\([~]\)内的表达式为零。故有%
+\mpar{可能你会对于两类不同的导数符号感到困惑。\(\frac{\rd}{\rd t}\)被称作对\(t\)的全导数，而\(\frac{\partial}{\partial t}\)被称为偏导数。全导数给出总改变量，函数\(f\)的变化率，即偏导数，乘以变量自身的改变，之和。
+例如，三维空间中的函数\(f(x(t),y(t),z(t))\)的总变化率为\(\frac{\rd f}{\rd t} = \frac{\partial f}{\partial x}\frac{\partial x}{\partial t}+\frac{\partial f}{\partial y}\frac{\partial y}{\partial t}+\frac{\partial f}{\partial z}\frac{\partial z}{\partial t}\)。
+即变化率乘以自身的改变量。
+相对的，偏导数仅给出总改变量的一部分。对于一个不显式的依赖于\(t\)的函数，其偏导数为零。例如，对于\(f(x(t),y(t))=x^2y+y^3\)，我们有\(\frac{\partial f}{\partial t}=0\)，但\(\frac{\partial f}{\partial x}=2xy \ne 0, \frac{\partial f}{\partial y}=x^2+3y^2 \ne 0\)。
+因此\(\frac{\rd f}{\rd t}=2xy\frac{\partial x}{\partial t}+(x^2+3y^2)\frac{\partial y}{\partial t}\)。
+作为对比，对于另一个函数\(g(x(t),y(t),t)=x^2t+y\)我们有\(\frac{\partial g}{\partial t}=x^2\)
+}
+\begin{equation}
+\frac{\partial \mathcal{L}}{\partial q} - \frac{\rd}{\rd t} \left( \frac{\partial \mathcal{L}(q,\dot q,t)}{\partial \dot q} \right)= 0
+\end{equation}
+这就是著名的{\bf 欧拉-拉格朗日方程(Euler-Lagrange equation)}
