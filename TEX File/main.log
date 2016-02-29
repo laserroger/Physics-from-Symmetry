@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015) (preloaded format=xelatex 2015.5.24)  28 FEB 2016 15:35
+This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015) (preloaded format=xelatex 2015.5.24)  29 FEB 2016 14:51
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -2573,7 +2573,20 @@ LaTeX Warning: Reference `eq3.240' on page 32 undefined on input line 31.
 
 LaTeX Warning: Reference `sec8.3' on page 32 undefined on input line 36.
 
-) [32]
+
+LaTeX Warning: Reference `sec4.5.4' on page 32 undefined on input line 51.
+
+[32]
+
+LaTeX Warning: Reference `eq4.30' on page 33 undefined on input line 53.
+
+
+LaTeX Warning: Reference `sec3.7.5' on page 33 undefined on input line 55.
+
+
+LaTeX Warning: Reference `sec8.5.5' on page 33 undefined on input line 59.
+
+) [33]
 \tf@ptc=\write7
 \openout7 = `main.ptc'.
 
@@ -2586,14 +2599,17 @@ Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 190.
 
 LaTeX Warning: There were undefined references.
 
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
  ) 
 Here is how much of TeX's memory you used:
- 43410 strings out of 493706
- 845640 string characters out of 6145769
- 1038014 words of memory out of 5000000
- 45983 multiletter control sequences out of 15000+600000
+ 43434 strings out of 493706
+ 846557 string characters out of 6145769
+ 1043014 words of memory out of 5000000
+ 46007 multiletter control sequences out of 15000+600000
  122809 words of font info for 216 fonts, out of 8000000 for 9000
  1328 hyphenation exceptions out of 8191
  57i,24n,69p,10430b,1360s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on main.pdf (42 pages).
+Output written on main.pdf (43 pages).
