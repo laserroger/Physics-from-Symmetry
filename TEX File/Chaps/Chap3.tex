@@ -19,7 +19,7 @@
 
 
 
-\mpar{
+\marginpar{
 	
 下面的图表是本章结构的示意图。 当你迷失方向的时候记得回来看看， 初学的时候不太需要看它。\sout{反正也看不懂}
 
@@ -87,21 +87,22 @@
 	% flag1: This means they map every point of the set to a point that lies again in the set 没翻译， 因为觉得太啰嗦...
 	
 	\marginpar{
-		\includegraphics[scale=0.35]{./Figure/fig3_1.eps} 
+		\includegraphics[scale=0.35]{fig3_1} 
 		\figcaption{正方形}
 	}
 	
 	\marginpar{
-		\includegraphics[scale=0.35]{./Figure/fig3_2.eps}
-		\figcaption{正方形绕中心顺时针旋转$5^\circ$}}
+		\includegraphics[scale=0.35]{fig3_2.eps}
+		\figcaption{正方形绕中心顺时针旋转$5^\circ$}
+	}
 	
 	注意不是所有旋转变换都对称。 我们关注顶点的变化就能看出来， 比如绕中心顺时针旋转$5^\circ$， 这个变换将顶点映射到原来正方形点集之外， 顶点$A$映射到了原来正方形集合之外的点$A'$。 因此这个旋转变换对正方形不具有对称性。 当然， 变换后的点集仍然是个正方形， 但却是不同的正方形(即不同点的集合)。 绕中心转$90^\circ$是对称的， 如图\ref{fig3.3}， 顶点$A$变换到点$B$， 等等， 原来的正方形点集变换到相同的集合。
 	
 	{
-	\centering{\begin{figure}
-	\includegraphics[scale=0.4]{./Figure/fig3_3.eps}
-	\caption{正方形绕中心旋转$90^\circ$}
-	\label{fig3.3}\end{figure}
+	\centering{
+	\includegraphics[scale=0.4]{fig3_3}
+	\figcaption{正方形绕中心旋转$90^\circ$}
+	\label{fig3.3}
 	}}
 	
 	假如你看了一眼原来的正方形， 然后闭上眼睛， 这时有人把正方形做了一个变换。 如果你不能分辨这个正方形是否发生变化， 那么这个变换就是个对称变换。
@@ -112,9 +113,9 @@
 	
 	单位圆绕圆心旋转任意角度都不变。 换言之， 变换参数(这里就是旋转角度)可以取任意值， 因此这个群称为连续群。
 \end{enumerate}
-	\marginpar{%\begin{figure}
-		\includegraphics[scale=0.35]{./Figure/fig3_4.eps}
-		\figcaption{单位圆绕圆心旋转任意角度都不变}%\end{figure}
+	\marginpar{
+		\includegraphics[scale=0.35]{fig3_4.eps}
+		\figcaption{单位圆绕圆心旋转任意角度都不变}
 	}
 
 数学中除了几何图形之外还有好多别的都有对称性。 例如，对于向量， 我们可以考虑所有让向量长度不变的变换构成的集合。 看出本节开头对称性定义的普遍性了没? 对称性就是变换下的不变性。 非常幸运， 搞数学的早已建立了群论， 它可以研究所有类型的对称性\mpar{历史上数学家们建立群论最初是为了描述方程的对称性}。
@@ -165,7 +166,282 @@
 要注意群的定义完全与变换的物体是啥没有关系。 我们可以脱离特定物体而只研究对称变换本身， 群的定义将变换从物体中`提取'出来了。 这是非常有用的， 许多不同事物具有同样或同类的对称性。 群论让我们不用管变换的物体(圆还是正方形)， 只研究变换(例如旋转)的普遍性质。
 
 
+\section[二维旋转]{Rotations in two Dimensions\quad 二维旋转}
+\label{sec3.2}
+我们从一个简单而重要的例子开始学习群论。考虑那些让二维平面中的向量长度不变的对称变换。符合条件的有旋转和反射\mpar{当然还有平移。平移的数学描述与前两者有些不同，我们之后再讨论它。}。它们也是圆的对称变换，一个单位元旋转或反射之后还是单位圆。可见同一个群（对应一种变换）可以作用于不同类物体：圆（几何图形），或者向量。本节考虑向量，可以用旋转矩阵表示向量的旋转或反射，\mpar{旋转矩阵的推导见附录A.2.}，将起点位于原点的向量绕原点逆时针旋转$\theta$角度的旋转矩阵为：
+\begin{equation}
+\label{equ3.3}
+R_\theta = 
+	\begin{pmatrix}
+		\cos \theta & \sin \theta \\
+		-\sin \theta & \cos \theta
+	\end{pmatrix}
+\end{equation}
 
+关于$x$轴与$y$轴的反射变换用矩阵表示为：
+\begin{equation}
+\label{equ3.4}
+P_x = 	\begin{pmatrix}
+			-1 & 0 \\ 0 & 1
+		\end{pmatrix}
+\quad
+P_y = 	\begin{pmatrix}
+			1 & 0 \\ 0 & -1
+		\end{pmatrix}
+\end{equation}
+将矩阵乘法作为群乘法$\circ$, 可以验证$R(\theta), P_x, P_y$与矩阵乘法符合群公理，因而构成一个群，亦即旋转与反射变换构成一个群。
 
+可以用更抽象的方式表达‘所有让二维向量长度不变的变换’，向量长度就是向量与自身点乘的平方根($|a| = \sqrt{a \cdot a}$). 向量长度在变换$a \rightarrow a'$下不变意味着\footnote{等号上面的!只是起强调、提示作用 --- 译者(SI)}：
+\begin{equation}
+\label{equ3.5}
+a' \cdot a' \stackrel{!}{=} a \cdot a
+\end{equation}
 
+将变换矩阵记作$\mathcal{O}$，变换即为$a \rightarrow a' = \mathcal{O}a$.
+\begin{equation}
+\label{equ3.6}
+a \cdot a = a^{\mathrm{T}} a \rightarrow a'^{\mathrm{T}} a' = (\mathcal{O} a)^{\mathrm{T}} \mathcal{O} a = a^{\mathrm{T}} \mathcal{O}^{\mathrm{T}} \mathcal{O} a \stackrel{!}{=} a^{\mathrm{T}} a = a \cdot a
+\end{equation}
+由此可见，使向量长度不变的变换必须满足：
+\begin{equation}
+\label{equ3.7}
+\mathcal{O}^{\mathrm{T}} \mathcal{O} = I
+\end{equation}
+其中$I$表示单位矩阵\mpar{ I = 
+	\[\begin{pmatrix}
+		1 & 0 \\ 0 & 1
+	\end{pmatrix}\]}。前文的旋转和反射矩阵都满足此条件\mpar{例如\ref{equ3.3}式的矩阵，
+	$R_\theta^{\mathrm{T}} R = 
+	\begin{pmatrix}
+		\cos \theta & -\sin \theta \\
+		\sin \theta & \cos \theta
+	\end{pmatrix}
+	\begin{pmatrix}
+		\cos \theta & \sin \theta \\
+		-\sin \theta & \cos \theta
+	\end{pmatrix}
+	 = 
+	 \begin{pmatrix}
+		 \cos^2 \theta + \sin^2 \theta & 0 \\
+		 0 & \sin^2 \theta + \cos^2 \theta
+	 \end{pmatrix}
+	 =
+	 \begin{pmatrix}
+		 1 & 0 \\ 0 & 1
+	 \end{pmatrix}
+	$
+}%mpar
+$2 \times 2$矩阵中所有满足\ref{equ3.7}式的矩阵构成了$\mathcal{O}(2)$群，即所有$2 \times 2$正交矩阵构成的群\mpar{严谨地说，任意$2 \times 2$正交矩阵可以表示为\ref{equ3.3}、\ref{equ3.4}式，或者它们的乘积的形式。}。我们可以找出这个群中描述旋转变换的那一部分（构成一个子群）。根据\ref{equ3.7}式：
+\begin{align}
+\det(\mathcal{O}^{\mathrm{T}} O ) = \det(O^{\mathrm{T}}) \det(O) \stackrel{!}{=} \det(I) = 1 \nonumber\\
+\label{equ3.8}
+(\det(\mathcal{O}))^2 \stackrel{!}{=} 1 \rightarrow \det{(\mathcal{O})} \stackrel{!}{=} \pm 1
+\end{align}
 
+$\det \mathcal{O} = 1$的矩阵对应旋转变换\mpar{见\ref{equ3.3}与\ref{equ3.4}式。反射矩阵的行列式等于$-1$。}
+
+条件
+\begin{align}
+\label{equ3.9}
+\mathcal{O}^{\mathrm{T}} \mathcal{O} = I \\
+\label{equ3.10}
+\det \mathcal{O} = 1
+\end{align}
+定义了$\mathcal{SO}(2)$群，`$\mathcal{S}$'表示‘特殊’(special)，`$\mathcal{O}$'表示‘正交’(orthogonal)。
+
+$\mathcal{SO}(2)$包含的旋转变换保持了坐标系的取向，即一个右手坐标系\mpar{右手坐标系与左手坐标系见附录A.5.}经旋转变换后还是右手系，而反射变换会改变它的取向。用线性代数的概念来说，我们规定$\mathcal{SO}(2)$中的矩阵行列式必须为$+1$。
+
+\subsection[单位复数表示旋转变换]{Rotations with Unit Complex Numbers\quad 单位复数表示旋转变换}
+\label{sec3.2.1}
+还可以用单位复数来表示旋转变换：向量绕原点旋转$\theta$角可以表示为用单位复数$z$乘此向量（单位复数意为$z = a + ib$，$|z|^2 = z^* z = 1$）\mpar{上标$ ^*$表示复数的共轭复数：$z = a + ib \rightarrow z^* = a - ib$}。
+
+所有单位复数构成一个群，称为$\mathcal{U}(1)$，群乘法即为复数乘法，不难验证它符合群公理。为了看出它与之前引入的$\mathcal{O}(3), \mathcal{SO}(3)$群的关系，我们将$\mathcal{U}(1)$群的条件 --- 单位复数表示为\mpar{定义中包含复数乘法的群的普遍性质见\ref{sec3.10}节的附录。}， $\forall \mathcal{U} \in \mathcal{U}(1)$：
+\begin{equation}
+\label{equ3.11}
+\mathcal{U}^* \mathcal{U} = 1
+\end{equation}
+单位复数另一种形式是利用欧拉公式\mpar{附录B.4.2推导了传说中的欧拉公式。对任意复数$z = a + ib$, $a$称为$z$的实部，记为$\Re(z) = a$; $b$称为虚部，记为$\Im(z) = b$. 欧拉公式中$R_\theta$的实部为$\cos  \theta$, 虚部为$\sin \theta$.}：% Euler翻译为欧拉
+\begin{equation}
+\label{equ3.12}
+R_\theta = \mathrm{e}^{i\,\theta} = \cos \theta + i\sin \theta
+\end{equation}
+$R(\theta)$的模（长度）为:
+\begin{equation}
+\label{equ3.13}
+R_\theta^* R_\theta = \mathrm{e}^{-i\,\theta} \mathrm{e}^{i\,\theta} = \big( \cos \theta - i \sin \theta  \big) \big( \cos \theta + i \sin \theta \big) = 1
+\end{equation}
+
+\marginpar{
+	\includegraphics[scale=0.45]{fig3_5.eps} 
+	\figcaption{单位复数在复平面的单位圆上}
+	}
+
+例：将向量$(3,  5)$旋转$90^\circ$：
+\begin{equation}
+\label{equ3.14}
+z \rightarrow z' = \mathrm{e}^{i\, 90^\circ}z = \bigg( \underbrace{\cos 90^\circ}_{=0} + i\underbrace{\sin 90^\circ}_{=1} \bigg) (3 + 5i) = i(3 + 5i) = 3i - 5
+\end{equation}
+
+图3.6绘制了旋转前后的向量（复数），图中可见复数乘以$\mathrm{e}^{i\, 90^\circ}$旋转了$90^\circ$.
+\marginpar{
+	\includegraphics[scale=0.45]{fig3_6.eps} 
+	\figcaption{复数通过乘以单位复数进行旋转}
+	}
+需要注意$\mathrm{e}^{i\, 90^\circ}$作用于（乘以）向量对应的复数而非向量本身。描述二维旋转只需要一个参数：旋转角$\phi$. 而复数有两个自由度（实部和虚部），因此我们加上单位复数的限制：$|z| = \text{实部}^2 + \text{虚部}^2 = 1$，只剩一个自由度。
+
+描述二维旋转的两种方式 --- 单位复数与$2 \times 2$矩阵（矩阵元都是实数）通过如下方式关联。定义：
+\begin{equation}
+\label{equ3.15}
+\mathbf{1} = 
+	\begin{pmatrix}
+		1 & 0 \\ 0 & 1
+	\end{pmatrix}
+,\quad
+\mathbf{i} = 
+	\begin{pmatrix}
+		0 & -1 \\ 1 & 0
+	\end{pmatrix}
+\end{equation}
+不难验证这样定义的$\mathbf{1, i}$仍然满足：
+\begin{equation}
+\mathbf{1}^2 = \mathbf{1},\quad \mathbf{i}^2 = -\mathbf{1},\quad \mathbf{1i} = \mathbf{i1} = \mathbf{i}
+\end{equation}
+这样单位复数对应的$2 \times 2$实数矩阵为\footnote{原文此式有误，译文已参照勘误表修改。}
+\begin{equation}
+\label{equ3.17}
+R_\theta = \cos \theta + i\sin\theta = \cos \theta 
+\begin{pmatrix}
+	1 & 0 \\ 0 & 1
+\end{pmatrix}
++ \sin \theta
+\begin{pmatrix}
+	0 & -1 \\ 1 & 0
+\end{pmatrix}
+=
+\begin{pmatrix}
+	\cos \theta & -\sin \theta \\
+	\sin \theta & \cos \theta
+\end{pmatrix}
+\end{equation}
+可见，定义了复单位$i \rightarrow \text{实矩阵}$的对应关系后，单位复数就回到了熟悉的旋转矩阵。还有一点要注意：旋转矩阵作用于向量（列矩阵），而我们将$i$与$2 \times 2$矩阵相联系，因此被旋转的向量（与一个复数对应）也将变成一个$2 \times 2$矩阵。
+
+例：任意向量$(a, b)$对应的复数对应的$2 \times 2$矩阵为：
+\begin{equation}
+\label{equ3.18}
+z = a + ib = a
+\begin{pmatrix}
+	1 & 0 \\ 0 & 1
+\end{pmatrix}
++ b
+\begin{pmatrix}
+	0 & -1 \\ 1 & 0
+\end{pmatrix}
+=
+\begin{pmatrix}
+	a & -b \\ b & a
+\end{pmatrix}
+\end{equation}
+将旋转矩阵作用于$z$：
+\begin{eqnarray}
+\label{sec3.19}
+	z' &=& \begin{pmatrix}
+			a' & -b' \\ b' & a'
+		 \end{pmatrix}
+	= R_\theta z = 
+		\begin{pmatrix}
+			\cos \theta & -\sin \theta \\
+			\sin \theta & \cos \theta
+		\end{pmatrix}
+		\begin{pmatrix}
+			a & -b \\ b & a
+		\end{pmatrix}
+	\nonumber \\
+	&=& \begin{pmatrix}
+			a\cos\theta - b\sin \theta & - b\cos \theta - a \sin \theta \\
+			a\sin \theta + b\cos \theta & -b \sin \theta + a \cos \theta
+		\end{pmatrix}
+\end{eqnarray}
+由上式可得
+\begin{align}
+\label{equ3.20}
+a' &= a \cos \theta - b \sin \theta \\
+\label{equ3.21}
+b' &= a \sin \theta + b \cos \theta
+\end{align}
+这与旋转矩阵作用于向量（列矩阵形式）相同：
+\begin{equation}
+\label{equ3.22}
+	\begin{pmatrix}
+		\cos \theta & -\sin \theta \\
+		\sin \theta & \cos \theta
+	\end{pmatrix}
+	\begin{pmatrix}
+		a \\ b
+	\end{pmatrix}
+	=
+	\begin{pmatrix}
+		a \cos \theta - b \sin \theta \\
+		a \sin \theta + b \cos \theta
+	\end{pmatrix}
+	=
+	\begin{pmatrix}
+		a' \\ b'
+	\end{pmatrix}
+\end{equation}
+我们看到这两种表示方法是一回事儿，用数学术语来说，$\mathcal{SO}(2)$与$\mathcal{U}(1)$间有一个同构映射\mpar{如果映射$\Pi: G \rightarrow G'$是一一映射，并且满足：$\forall g_1, g_2 \in G, \Pi(g_1) \circ \Pi(g_2) = \Pi(g_1 \circ g_2)$, 则$\Pi$就是同构映射，并且称群$G, G'$是同构的。}。这一点太重要了，之后的篇幅会不断出现这种思想。
+
+下面研究三维旋转，尝试找出它的两种描述方法。
+
+\section[三维旋转]{Rotations in three Dimensions\quad 三维旋转}
+\label{sec3.3}
+三维空间向量旋转变换当然可以用$3 \times 3$旋转矩阵\footnote{原文公式有误，译文已按勘误表改正。}：
+\begin{align}
+R_x =
+	\begin{pmatrix}
+		1 & 0 & 0 \\
+		0 & \cos \theta & -\sin \theta \\
+		0 & \sin \theta & \cos \theta
+	\end{pmatrix}
+\quad
+R_y = 
+	\begin{pmatrix}
+		\cos \theta & 0 & \sin \theta \\
+		0 & 1 & 0 \\
+		-\sin \theta & 0 & \cos \theta
+	\end{pmatrix}
+\nonumber \\
+\label{equ3.23}
+R_z =
+	\begin{pmatrix}
+		\cos \theta & -\sin \theta & 0 \\
+		\sin \theta & \cos \theta & 0 \\
+		0 & 0 & 1
+	\end{pmatrix}
+\end{align}
+类比$\mathcal{SO}(2)$群，上面三个矩阵构成了$\mathcal{SO}(3)$群的一组基\mpar{基的概念见附录A.1.}。这意味着$\mathcal{SO}(3)$中的任意群元（矩阵）都可以写为$R_x, R_y, R_z$的线性组合，且系数唯一。
+将向量
+\begin{equation*}
+\vec{v} = \begin{pmatrix}
+			1 \\ 0 \\ 0
+		\end{pmatrix}
+\end{equation*}
+绕$z$轴旋转\mpar{三维向量旋转的一般情况的推导见附录A.2.}就是用旋转矩阵乘以向量：
+\begin{equation}
+\label{equ3.24}
+R_z(\theta) \vec{v} = 
+	\begin{pmatrix}
+		\cos \theta & -\sin \theta & 0 \\
+		\sin \theta & \cos \theta & 0 \\
+		0 & 0 & 1
+	\end{pmatrix}
+	\begin{pmatrix}
+		1 \\ 0 \\ 0
+	\end{pmatrix}
+=
+	\begin{pmatrix}
+		\cos \theta \\ \sin \theta \\ 0
+	\end{pmatrix}
+\end{equation}
+为找出描述三维旋转的第二法，我们尝试把复数的概念扩展到三维空间。首先试着把$2$维的复数（实部虚部两个自由度）扩展为$3$维复数，但前人探索发现没有$3$维的，但存在$4$维‘复数’，称为{\bf 四元数(quaternions)}。下面就会看到四元数正是描述三维旋转的第二法，并且它还能深刻揭示宇宙 --- 四维时空的规律。描述三维旋转需要三个参数（绕$x,y,z$轴的旋转角），而四元数有四个参数，这与二维旋转的情况类似\mpar{单位复数描述二维旋转。}。四元数加上单位长度的限制 ---单位四元数（三个自由参数）能够描述三维旋转。
+
+\subsection[四元数]{Quaternions\quad 四元数}
