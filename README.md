@@ -10,20 +10,34 @@ Translation of `Physics from Symmetry'.
 >经小组投票表决
 
 >人名默认不翻译(就是Einstein也不翻)
+    
+
+
+
+    binary operation 二元运算，群乘法
 
     Boost       推动
     
+    Cartesian       笛卡尔
+
     Euler-Lagrange equation     欧拉-拉格朗日方程
     
+    generator 生成元
+
     Hamilton        哈密顿
     Hamiltonian     哈密顿量
-    
+
+    homorphism 同胚
+
+    isomorphism 同构性
+
     Lagrange        拉格朗日
     Lagrangian      拉格朗日量
     Lagrangian formalism        拉格朗日形式
     
     Lie group       Lie群
-    Cartesian       笛卡尔
+    
+    unitary matrix 幺正矩阵
     
     其它暂且都不翻译，以后统一更改
 
