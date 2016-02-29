@@ -16,6 +16,8 @@
 \contentsline {section}{\numberline {4.2}限制}{23}{section.4.2}
 \contentsline {section}{\numberline {4.3}粒子理论与场论}{24}{section.4.3}
 \contentsline {section}{\numberline {4.4}欧拉-拉格朗日方程}{25}{section.4.4}
+\contentsline {section}{\numberline {4.5}诺特定理}{27}{section.4.5}
+\contentsline {subsection}{\numberline {4.5.1}粒子理论的Noether 定理}{27}{subsection.4.5.1}
 \contentsline {part}{\@mypartnumtocformat {III}{The Equations of Nature 自然界的方程}}{29}{part.3}
 \contentsline {chapter}{\numberline {5}测量}{31}{chapter.5}
 \contentsline {section}{\numberline {5.1}量子力学中的算符}{31}{section.5.1}
