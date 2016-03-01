@@ -41,13 +41,28 @@
 \end{split}
 \end{align}
 
-这个方程对任意的$\Psi$都成立，因为我们没有对$\Psi$做任何假设，因此我们可以直接的写出
+这个方程对任意的$\Psi$都成立，因为我们没有对$\Psi$做任何假设，因此我们可以不考虑它\mpar{如果这对你来说比较罕见，注意我们可以把{\bf 每}一个矢量方程都写成只包含数的形式。比如，牛顿第二定律$\vec{F} = m\vec{\ddot{x}}$，可以对于任意矢量$\vec{C}$写出$\vec{F}\vec{C} = m\vec{\ddot{x}}\vec{C}$。不仅如此，如果对于任意的$\vec{C}$都成立，那么一直把这个$\vec{C}$写着也就没什么意义了。}而直接的写出
 \begin{align}
 [\hat{p}_i,\hat{x}_j] = i\delta_{ij}
 \end{align}
 
 \subsection[自旋与角动量]{Spin and Angular Momentum 自旋与角动量}\label{sec5.1.1}
 
+上一章的第\ref{sec4.5.4}节中我们看到，只是对标量理论来说，旋转不变形带来的守恒量有两个部分，而这个第二部分则对应了轨道角动量，我们把它称为{\bf 无限}维的轨道角动量生成元的表示。$\hat{L}_i\to\text{转动生成元（无限维表示）}i\tfrac{1}{2}\epsilon_{ijk}(x^j\partial^k-x^k\partial^j)$。类似的我们 把第一部分称作自旋，对应{\bf 有限}维度的生成元\mpar{记得这就是从场的分量的混杂的不变性带来的守恒量，因此是有限维的表示。}的表示。
+\[\text{自旋}\hat{S}_i\to\text{转动生成元（有限维表示）}S_i \]
+如前面\eqref{eq4.30}解释过的那样，$S_{\mu\nu}$和转动算符生成元$S_i$的关系为$S_i = \tfrac{1}{2}\epsilon_{ijk}S_{jk}$。
+
+比如，当我们考虑自旋$\tfrac{1}{2}$场的时候，我们需要用到我们在节\ref{sec3.7.5}中得到的二维表示：
+\begin{align}
+\hat{S}_i = i\frac{\sigma_i}{2}
+\end{align}
+其中$\sigma_i$是Pauli矩阵。我们会在节\ref{sec8.5.5}学习了如何利用我们本章得到的这些算符之后回到这一有趣而奇怪的类型的角动量。时刻注意，只有这两部分的{\bf 和}是守恒的。
+
+\section[量子场论的算符]{The Operators of Quantum Field Theory 量子场论的算符}\label{sec5.2}
+
+场论的最重要的客体当然就是{\bf 作为时空位置的函数}\mpar{这里，$x = x_0,x_1,x_2,x_3$，包含时间$x_0=t$。}的场了$\Phi = \Phi(x)$。
+
+我们上一章发现了在奇异不变性下场自己$\Phi\to\Phi-i\epsilon$产生了一种新的守恒量，称为共轭动量$\Pi$。
 
 
 

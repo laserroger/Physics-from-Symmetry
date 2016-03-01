@@ -28,7 +28,14 @@
 \contentsline {part}{\@mypartnumtocformat {III}{The Equations of Nature 自然界的方程}}{33}{part.3}
 \ttl@stoptoc {default@2}
 \ttl@starttoc {default@3}
+<<<<<<< HEAD
 \contentsline {chapter}{\numberline {5}测量}{35}{chapter.5}
 \contentsline {section}{\numberline {5.1}量子力学中的算符}{35}{section.5.1}
 \contentsline {subsection}{\numberline {5.1.1}自旋与角动量}{36}{subsection.5.1.1}
+=======
+\contentsline {chapter}{\numberline {5}测量}{31}{chapter.5}
+\contentsline {section}{\numberline {5.1}量子力学中的算符}{31}{section.5.1}
+\contentsline {subsection}{\numberline {5.1.1}自旋与角动量}{32}{subsection.5.1.1}
+\contentsline {section}{\numberline {5.2}量子场论的算符}{33}{section.5.2}
+>>>>>>> upstream/master
 \contentsfinish 
