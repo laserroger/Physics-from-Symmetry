@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015) (preloaded format=xelatex 2015.5.24)  2 MAR 2016 17:30
+This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015) (preloaded format=xelatex 2015.5.24)  2 MAR 2016 22:17
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -2353,6 +2353,9 @@ LaTeX Font Info:    Font shape `T1/pag/bx/n' in size <10.95> not available
 (Font)              Font shape `T1/pag/b/n' tried instead on input line 3.
 LaTeX Font Info:    Font shape `T1/pag/b/n' in size <10.95> not available
 (Font)              Font shape `T1/pag/db/n' tried instead on input line 3.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
  [9])
 \tf@toc=\write6
 \openout6 = `main.toc'.
@@ -2380,9 +2383,6 @@ File: Pictures/chapter_head_1.pdf Graphic file (type QTm)
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [4]
-
-LaTeX Warning: Reference `sec3.3.1' on page 5 undefined on input line 53.
-
 [5] [6]
 
 LaTeX Warning: Reference `chap6' on page 7 undefined on input line 91.
@@ -2401,29 +2401,25 @@ LaTeX Warning: Reference `sec4.5.4' on page 8 undefined on input line 130.
 ) (./Chaps/Chap2.tex [8]
 Chapter 2.
 File: Pictures/chapter_head_1.pdf Graphic file (type QTm)
-<use  "Pictures/chapter_head_1.pdf" >
-Underfull \vbox (badness 2653) has occurred while \output is active []
-
- [9
+<use  "Pictures/chapter_head_1.pdf" > [9
 
 ]
 File: Pictures/fig2_1.eps Graphic file (type eps)
-
-<Pictures/fig2_1.eps>
+ <Pictures/fig2_1.eps>
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 40.
+(caption)                particular \caption on input line 36.
 See the caption package documentation for explanation.
 
 File: Pictures/fig2_2.eps Graphic file (type eps)
 <Pictures/fig2_2.eps>
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 61.
+(caption)                particular \caption on input line 56.
 See the caption package documentation for explanation.
 
 
-Overfull \hbox (31.63489pt too wide) in paragraph at lines 61--61
+Overfull \hbox (15.00923pt too wide) in paragraph at lines 56--56
  [][] 
  []
 
@@ -2431,20 +2427,81 @@ Overfull \hbox (31.63489pt too wide) in paragraph at lines 61--61
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [11]
-Overfull \hbox (12.68208pt too wide) detected at line 136
+Overfull \hbox (12.68208pt too wide) detected at line 131
  $[][] \OMS/cmsy/m/n/10.95 ^^@ [][] ^^@ [] ^^@ [] \OT1/cmr/m/n/10.95 = [][] \OM
 S/cmsy/m/n/10.95 ^^@ [] ^^@ [] ^^@ []$  
  []
 
 
-Overfull \hbox (10.95451pt too wide) detected at line 148
+Overfull \hbox (10.95451pt too wide) detected at line 143
  $[][] \OMS/cmsy/m/n/10.95 ^^@ [][] ^^@ [][] ^^@ [][] \OT1/cmr/m/n/10.95 = [][]
  \OMS/cmsy/m/n/10.95 ^^@ [][] ^^@ [][] ^^@ [][]$  
  []
 
-) (./Parts/Part2.tex [12] (./main.ptc) [13
 
-] [14]) (./Chaps/Chap3.tex
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [12]
+File: Pictures/fig2_3.eps Graphic file (type eps)
+
+<Pictures/fig2_3.eps>
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 162.
+See the caption package documentation for explanation.
+
+File: Pictures/fig2_4.eps Graphic file (type eps)
+<Pictures/fig2_4.eps>
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 168.
+See the caption package documentation for explanation.
+
+
+Overfull \hbox (20.744pt too wide) in paragraph at lines 168--168
+[][] 
+ []
+
+File: Pictures/fig2_5.eps Graphic file (type eps)
+<Pictures/fig2_5.eps>
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 175.
+See the caption package documentation for explanation.
+
+
+Overfull \hbox (13.71764pt too wide) in paragraph at lines 175--175
+[][] 
+ []
+
+[13] [14] [15]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [16]
+Overfull \hbox (56.28577pt too wide) detected at line 325
+ $\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 ds\OT1/cmr/m/n/10.95 )[] = \OML/cmm/m
+/it/10.95 dx[]^^Q[]dx[] \OT1/cmr/m/n/10.95 = []    []    []$ 
+ []
+
+[17]
+Underfull \vbox (badness 1158) has occurred while \output is active []
+
+ [18]
+Overfull \hbox (8.88782pt too wide) detected at line 420
+ $\OMS/cmsy/m/n/10.95 ! \OML/cmm/m/it/10.95 dx \OMS/cmsy/m/n/10.95 ^^A \OML/cmm
+/m/it/10.95 dx [] dx[] \OMS/cmsy/m/n/10.95 ^^A \OML/cmm/m/it/10.95 dx[] \OMS/cm
+sy/m/n/10.95 ! \OML/cmm/m/it/10.95 dx[]dx[]^^Q[] [] dx[]dx[]^^Q[]  []  \OT1/cmr
+/m/n/10.95 ^^C[]\OML/cmm/m/it/10.95 dx[]\OT1/cmr/m/n/10.95 ^^C[]\OML/cmm/m/it/1
+0.95 dx[]^^Q[]$ 
+ []
+
+[19]
+Underfull \vbox (badness 1077) has occurred while \output is active []
+
+ [20])
+(./Parts/Part2.tex [21] [22
+
+] (./main.ptc) [23] [24]) (./Chaps/Chap3.tex
 Chapter 3.
 File: Pictures/chapter_head_1.pdf Graphic file (type QTm)
 <use  "Pictures/chapter_head_1.pdf" >
@@ -2452,7 +2509,7 @@ LaTeX Font Info:    Try loading font information for U+euf on input line 60.
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/amsfonts/ueuf.fd
 File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
-) [15
+) [25
 
 ]
 File: Pictures/fig3_1.eps Graphic file (type eps)
@@ -2487,7 +2544,7 @@ Package caption Warning: The option `hypcap=true' will be ignored for this
 (caption)                particular \caption on input line 104.
 See the caption package documentation for explanation.
 
-[16]
+[26]
 File: Pictures/fig3_4.eps Graphic file (type eps)
  <Pictures/fig3_4.eps>
 
@@ -2521,11 +2578,11 @@ it/10.95 R\OT1/cmr/m/n/10.95 (110[])\OML/cmm/m/it/10.95 R\OT1/cmr/m/n/10.95 (40
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [17]
+ [27]
 
-LaTeX Warning: Reference `sec3.5' on page 18 undefined on input line 142.
+LaTeX Warning: Reference `sec3.5' on page 28 undefined on input line 142.
 
-[18]
+[28]
 Overfull \hbox (25.63936pt too wide) in paragraph at lines 233--233
 [] [] \OT1/cmr/m/n/8 =
  []
@@ -2535,14 +2592,14 @@ Overfull \hbox (22.15288pt too wide) in paragraph at lines 233--233
 [] \OT1/cmr/m/n/8 =
  []
 
-[19]
+[29]
 
-LaTeX Warning: Reference `sec3.10' on page 20 undefined on input line 258.
+LaTeX Warning: Reference `sec3.10' on page 30 undefined on input line 258.
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [20]
+ [30]
 File: Pictures/fig3_5.eps Graphic file (type eps)
 
 <Pictures/fig3_5.eps>
@@ -2579,16 +2636,30 @@ n/10.95 = []$
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [21]
+ [31]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [22])
-(./Chaps/Chap4.tex [23] [24
+ [32]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [33]
+Overfull \hbox (18.01276pt too wide) in paragraph at lines 477--477
+[] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [34]
+
+LaTeX Warning: Reference `sec3.10' on page 35 undefined on input line 519.
+
+) (./Chaps/Chap4.tex [35] [36
 
 ]
 Chapter 4.
 File: Pictures/chapter_head_1.pdf Graphic file (type QTm)
-<use  "Pictures/chapter_head_1.pdf" > [25]
+<use  "Pictures/chapter_head_1.pdf" > [37]
 Invalid UTF-8 byte or sequence at line 45 replaced by U+FFFD.
 Invalid UTF-8 byte or sequence at line 45 replaced by U+FFFD.
 Invalid UTF-8 byte or sequence at line 45 replaced by U+FFFD.
@@ -2605,52 +2676,52 @@ See the caption package documentation for explanation.
 
 Underfull \vbox (badness 2564) has occurred while \output is active []
 
- [26]
-[27]
+ [38]
+[39]
 
-LaTeX Warning: Reference `sec2.4' on page 28 undefined on input line 91.
+LaTeX Warning: Reference `chap6' on page 40 undefined on input line 123.
 
+[40] [41]
 
-LaTeX Warning: Reference `chap6' on page 28 undefined on input line 123.
-
-[28] [29]
-
-LaTeX Warning: Reference `appendix2.3' on page 30 undefined on input line 180.
+LaTeX Warning: Reference `appendix2.3' on page 42 undefined on input line 180.
 
 
-LaTeX Warning: Reference `appendix2.3' on page 30 undefined on input line 187.
+LaTeX Warning: Reference `appendix2.3' on page 42 undefined on input line 187.
 
-[30] [31]) (./Parts/Part3.tex [32] (./main.ptc) [33
+[42] [43]) (./Parts/Part3.tex [44] (./main.ptc) [45
 
-] [34]) (./Chaps/Chap5.tex
+] [46]) (./Chaps/Chap5.tex
 Chapter 5.
 File: Pictures/chapter_head_1.pdf Graphic file (type QTm)
-<use  "Pictures/chapter_head_1.pdf" > [35
+<use  "Pictures/chapter_head_1.pdf" > [47
 
 ]
 
-LaTeX Warning: Reference `sec4.6' on page 36 undefined on input line 31.
+LaTeX Warning: Reference `sec4.6' on page 48 undefined on input line 31.
 
 
-LaTeX Warning: Reference `eq3.240' on page 36 undefined on input line 31.
+LaTeX Warning: Reference `eq3.240' on page 48 undefined on input line 31.
 
 
-LaTeX Warning: Reference `sec8.3' on page 36 undefined on input line 36.
+LaTeX Warning: Reference `sec8.3' on page 48 undefined on input line 36.
 
 
-LaTeX Warning: Reference `sec4.5.4' on page 36 undefined on input line 51.
+LaTeX Warning: Reference `sec4.5.4' on page 48 undefined on input line 51.
 
-[36]
+[48]
 
-LaTeX Warning: Reference `eq4.30' on page 37 undefined on input line 53.
-
-
-LaTeX Warning: Reference `sec3.7.5' on page 37 undefined on input line 55.
+LaTeX Warning: Reference `eq4.30' on page 49 undefined on input line 53.
 
 
-LaTeX Warning: Reference `sec8.5.5' on page 37 undefined on input line 59.
+LaTeX Warning: Reference `sec3.7.5' on page 49 undefined on input line 55.
 
-) [37]
+
+LaTeX Warning: Reference `sec8.5.5' on page 49 undefined on input line 59.
+
+
+LaTeX Warning: Reference `eq4.59' on page 49 undefined on input line 65.
+
+) [49]
 \tf@ptc=\write7
 \openout7 = `main.ptc'.
 
@@ -2665,12 +2736,12 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 43521 strings out of 493706
- 849579 string characters out of 6145769
- 1043064 words of memory out of 5000000
- 46092 multiletter control sequences out of 15000+600000
- 122809 words of font info for 216 fonts, out of 8000000 for 9000
+ 43683 strings out of 493706
+ 855246 string characters out of 6145769
+ 1044769 words of memory out of 5000000
+ 46248 multiletter control sequences out of 15000+600000
+ 129442 words of font info for 218 fonts, out of 8000000 for 9000
  1328 hyphenation exceptions out of 8191
- 57i,24n,69p,10430b,1372s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 57i,24n,69p,10430b,1392s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on main.pdf (47 pages).
+Output written on main.pdf (59 pages).
