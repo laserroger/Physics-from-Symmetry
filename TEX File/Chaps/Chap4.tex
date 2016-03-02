@@ -15,7 +15,7 @@
 \mpar{守恒量指的是不随时间变化的物理量。例如一个给定体系的能量或动量。数学上意味着\(\partial_t Q = 0 \rightarrow Q = \text{常数}\)。}%
 之间的深刻联系。我们将在下一章中利用它来理解,理论是如何来描述实验测量量的。
 
-\section[拉格朗日形式]{Lagrangian Formalism 拉格朗日形式}\label{sec4.1}
+\section[拉格朗日形式]{Lagrangian Formalism \quad 拉格朗日形式}\label{sec4.1}
 
 拉格朗日形式是在基础物理中被广泛运用的一个强有力的框架%
 \mpar{物理中当然有其他框架，例如以{\bf 哈密顿量(Hamiltonian)}为中心对象的{\bf 哈密顿形式(Hamiltonian formalism)}。哈密顿量的问题在于它不是洛伦兹不变的，因为它所代表的能量，仅仅是{\bf 四动量(covariant energy-impulse vector)}的一个分量}%
@@ -72,7 +72,7 @@ S[q(t)]=\int {\mathcal L}~{\mathrm d}t
 \mpar{我们的任务是找到对于给定拉格朗日量和初始条件有着最小作用量的路径\(q(t)\)。在此之前，我们得先找到正确的拉格朗日量，用以描述问题中的物理系统。这是我们在上一章中所讨论的对称性所能发挥作用的地方。通过要求拉格朗日量在洛伦兹群的所有变换下不变，我们就能找到正确的拉格朗日量}%
 。在仔细讨论如何对这样一个泛函使用变分法之前，我们需要先讲讲两个小问题。
 
-\section[限制]{Restrictions 限制}\label{sec4.2}
+\section[限制]{Restrictions \quad 限制}\label{sec4.2}
 正如我们在\ref{sec1.1}节中所提到的，现有理论中有一些限制条件是无法从第一性原理中得到的。我们所能知道是，如果想得到一个有意义的理论，我们必须加上这些限制。
 
 一个重要的限制是，我们仅允许拉格朗日量中出现尽可能低阶的非平凡%
@@ -108,7 +108,7 @@ S[q(t)]=\int {\mathcal L}~{\mathrm d}t
 \]
 这样的项。例如，形如\(\Phi^2 \partial_\mu \Phi\)的项是\(\Phi\)的三阶项，因而不会被包含在我们自由理论的拉格朗日量中。
 
-\section[粒子理论与场论]{Particle Theories vs. Field Theories 粒子理论与场论}\label{sec4.3}
+\section[粒子理论与场论]{Particle Theories vs. Field Theories \quad 粒子理论与场论}\label{sec4.3}
 我们目前有两套用以描述自然的理论框架。一套是粒子理论，用依赖于时间的粒子位置描述物理系统，即\(\vec{q}=\vec{q}(t)\)。由于我们不是非得在使用笛卡尔坐标系%
 \mpar{例如，我们可以用球坐标系}%
 ，所以用的是字母\(q\)而不是\(x\)。对于这样的理论，拉格朗日量依赖于坐标\(\vec{q}\)，速度\(\partial_t\vec{q}\)和时间\(t\)：%
@@ -142,7 +142,7 @@ S[q(t)] = \int {\mathcal L}~{\mathrm d}t
 
 此刻请不用担心\(\mathcal L\)的具体形式，在下面数章中我们将详细讨论如何对问题中的系统导出正确的拉格朗日量\(L\)。现在，我们将使用之前所介绍过的变分法，对于一个一般的\(\mathcal L\)导出泛函\(S[q(t)]\)的极小值。极小化过程将给出系统的运动方程。
 
-\section[欧拉-拉格朗日方程]{Euler-Lagrange equation 欧拉-拉格朗日方程}\label{sec4.4}
+\section[欧拉-拉格朗日方程]{Euler-Lagrange equation \quad 欧拉-拉格朗日方程}\label{sec4.4}
 我们从粒子理论出发，它能让我们搞清楚，在给定初末点后，粒子是如何运动的。数学上，我们需要找到{\bf 函数}\(q(t)\)使得作用量\footnote{此处原文字体有误}
 \[
 S = \int_{t_1}^{t_2} {\mathcal L}\left(q(t),\frac{\rd q(t)}{\rd t},t\right)
@@ -210,6 +210,7 @@ S = \int_{t_1}^{t_2} {\mathcal L}\left(q+\epsilon,\dot q + \dot \epsilon, t\righ
 }
 \begin{equation}
 \frac{\partial \mathcal{L}}{\partial q} - \frac{\rd}{\rd t} \left( \frac{\partial \mathcal{L}(q,\dot q,t)}{\partial \dot q} \right)= 0
+\label{eq:4.7}
 \end{equation}
 这就是著名的{\bf 欧拉-拉格朗日方程(Euler-Lagrange equation)}
 
@@ -229,24 +230,79 @@ S = \int \rd t~{\mathcal L} = \int{\mathrm d}^4\bm{x}~{\mathscr L}(\Phi^i,\parti
 \end{equation}
 
 在下一章中我们将用拉格朗日形式导出近代物理学中重要的一个定理。借助其我们能看到对称性与守恒量之间的深刻联系。守恒量是描述自然的合适参量%
-\mpar{我们将其看做是这个极端复杂的世界的船锚。不论万事万物如何改变，守恒量依旧是守恒量。}%
+\mpar{我们将其视做锚定这个复杂的世界之物。不论万事万物如何改变，守恒量依旧是守恒量。}%
 ，从这个定理中我们将学会如何和它打交道。
 
-\section[诺特定理]{Noether’s Theorem Noether 定理}\label{sec4.5}
+\section[Noether 定理]{Noether's Theorem \quad Noether 定理}\label{sec4.5}
 Noether 定理表示，拉格朗日量的每一个对称性都对应于一个守恒量。换言之，物理学家用于描述自然（守恒量）的记号和对称性直接相关。这确实是科学史上最美的创见之一。
 
 \subsection{粒子理论的Noether 定理}\label{sec4.5.1}
 让我们先看看能对粒子理论中的守恒量做点什么。我们将局限于连续对称性，由此我们能使用无穷小变换。如同前面数章所言，我们可以通过重复无穷小变换来得到一个有限的变换。拉格朗日量在无穷小变换%
-\mpar{用来表述小扰动的符号\(\delta\)可能不会和用来表述偏导数的\(\partial\)}%
-\(q\rightarrow q'=q+\delta q\)下不变的性质用数学表述如下
+\mpar{用符号\(\delta\)来表述小扰动，大概不会和用来表述偏导数的\(\partial\)相混淆}%
+\(q\rightarrow q'=q+\delta q\)下不变的性质用数学表述如下%
+\footnote{译者注：该书中$\delta S$，$\delta {\mathcal L}$与平常的约定都差了一个负号。}
 \begin{equation}
 \begin{aligned}
 \delta {\mathcal L} &= {\mathcal L}(q,\frac{\rd q}{\rd t},t) - {\mathcal L}(q+\delta q,\frac{\rd (q+\delta q)}{\rd t},t) \\
-&= {\mathcal L}(q,\frac{\rd q}{\rd t},t) - {\mathcal L}(q+\delta q,\frac{\rd q}{\rd t}+\frac{\rd (\delta q)}{\rd t},t) \overset{\text{!}}{=} 0 
+&= {\mathcal L}(q,\frac{\rd q}{\rd t},t) - {\mathcal L}(q+\delta q,\frac{\rd q}{\rd t}+\frac{\rd \delta q}{\rd t},t) \overset{\text{!}}{=} 0 
 \end{aligned}
+\label{eq:4.11}
 \end{equation}
 
-要求拉格朗日量是变换不变的这个限制太强了。为了保证动力学一样，不变的应该是作用量而不是拉格朗日量。当然，如果拉格朗日量不变，作用量自然不变：
+要求拉格朗日量是变换不变的，这个条件太强了。为了保证动力学一样，不变的应该是作用量而不是拉格朗日量。当然，如果拉格朗日量不变，作用量自然不变：
 \begin{equation}
-\delta S = 
+\delta S = \int \rd t~{\mathcal L}(q,\frac{\rd q}{\rd t},t) -  \int \rd t~{\mathcal L}(q+\delta q,\frac{\rd q}{\rd t},t) = \int \rd t~\delta{\mathcal L}\underbrace{=}_{\mathclap{\text{若}~\delta{\mathcal L}=0}} 0
 \end{equation}
+在什么情况下，拉格朗日量改变而作用量不变呢？答案是，给拉格朗日量加上一个任意函数$G$对时间的全导数
+\[
+{\mathcal L}\rightarrow{\mathcal L}+\frac{\rd G}{\rd t}
+\]
+这时作用量不变%
+\mpar{用到了$\delta G =\frac{\partial G}{\partial q}\delta q$。这是因为$G=G(q)$而我们改变了$q$，故$G$的扰动等于改变率$\frac{\partial G}{\partial q}$乘上$q$的扰动}
+\[
+\delta S \rightarrow \delta S' = \delta S + \int_{t_1}^{t_2} {\rd t~\frac{\rd}{\rd t}\delta G} = \delta S + \underbrace{\left.\frac{\partial G}{\partial q} \delta q \right|_{t_1}^{t_2}}_{\mathclap{=0~\text{因为}~\delta q(t_1)=\delta q(t_2)=0}}.
+\]
+在最后一步中，我们用到了扰动$\delta q$在初末时刻$(t_1,t_2)$为零。由此我们可知，我们并不需要去强求拉格朗日量的扰动$\delta {\mathcal L}$为零，而仅需满足一个更弱的条件
+\begin{equation}
+\delta {\mathcal L} \overset{\text{!}}{=} \frac{\rd G}{\rd t}.
+\end{equation}
+
+这意味着拉格朗日量可以在不改变作用量和运动方程的情况下，加减某个函数的全微分$\frac{\rd G}{\rd t}$。将\ref{eq:4.11}式的右端由$0$改作$\frac{\rd G}{\rd t}$，我们有
+\begin{equation}
+\delta {\mathcal L} =  {\mathcal L}(q,\frac{\rd q}{\rd t},t) - {\mathcal L}(q+\delta q,\frac{\rd q}{\rd t}+\frac{\rd (\delta q)}{\rd t},t) \overset{\text{!}}{=} \frac{\rd G}{\rd t} 
+\end{equation}
+将第二项按 Taylor 级数展开到$\delta q$的一阶项，并使用记号$\frac{\rd q}{\rd t}=\dot q$
+\begin{equation}
+\begin{aligned}
+&\rightarrow \delta {\mathcal L} =  {\mathcal L} - {\mathcal L} -\frac{\partial \mathcal L}{\partial q} \delta q - \frac{\partial \mathcal L}{\partial \dot q} \delta \dot q \overset{\text{!}}{=} \frac{\rd G}{\rd t}  \\
+&\rightarrow \delta {\mathcal L} =  -\frac{\partial \mathcal L}{\partial q} \delta q - \frac{\partial \mathcal L}{\partial \dot q} \delta \dot q \overset{\text{!}}{=} \frac{\rd G}{\rd t}
+\end{aligned}
+\label{eq:4.15}
+\end{equation}
+利用欧拉-拉格朗日方程\mpar{\ref{eq:4.7}式：$\frac{\partial \mathcal L}{\partial q} = \frac{\rd}{\rd t} \left(\frac{\partial \mathcal L}{\partial \dot q}\right)$}重写\ref{eq:4.15}式，有
+\[
+\rightarrow \delta {\mathcal L} =  -\frac{\rd}{\rd t} \left(\frac{\partial \mathcal L}{\partial \dot q}\right) \delta q - \frac{\partial \mathcal L}{\partial \dot q} \delta \dot q \overset{\text{!}}{=} \frac{\rd G}{\rd t}
+\]
+利用莱布尼兹律\mpar{如果你对莱布尼兹律仍有疑问，请参考\ref{appendenix2.1}}，我们有
+\begin{equation}
+\begin{aligned}
+&\rightarrow \delta {\mathcal L} =  -\frac{\rd}{\rd t} \left(\frac{\partial \mathcal L}{\partial \dot q}\delta q\right) \overset{\text{!}}{=} \frac{\rd G}{\rd t} \\
+&\rightarrow\frac{\rd}{\rd t} \underbrace{\left(\frac{\partial \mathcal L}{\partial \dot q}\delta q + G\right)}_{\equiv J} \overset{\text{!}}{=} 0
+\end{aligned}
+\end{equation}
+由此我们得到了一个不随时间变化的物理量$J$：
+\begin{equation}
+J = \frac{\partial \mathcal L}{\partial \dot q}\delta q + G\text{，}
+\end{equation}
+这是因为
+\[
+\frac{\rd J}{\rd t} = 0 \rightarrow J = \text{常数。}
+\]
+
+为了看清楚这一点，我们先借用一下后面章节的结论：常质量自由粒子的牛顿第二定律是%
+\mpar{如果$q$代表某个物体的位置，则$\frac{\rd q}{\rd t}=\dot q$是这个物体的速度，$\frac{\rd}{\rd t}\frac{\rd q}{\rd t}=\frac{\rd^2 q}{\rd t^2}=\ddot q$是加速度。}
+\begin{equation}
+m{\ddot\vec{q}} = 0 \text{。}
+\end{equation}
+你可以将其代入欧拉-拉格朗日方程（\ref{eq:4.7}式）中去验证它。
+
