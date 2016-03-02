@@ -445,3 +445,77 @@ R_z(\theta) \vec{v} =
 为找出描述三维旋转的第二法，我们尝试把复数的概念扩展到三维空间。首先试着把$2$维的复数（实部虚部两个自由度）扩展为$3$维复数，但前人探索发现没有$3$维的，但存在$4$维‘复数’，称为{\bf 四元数(quaternions)}。下面就会看到四元数正是描述三维旋转的第二法，并且它还能深刻揭示宇宙 --- 四维时空的规律。描述三维旋转需要三个参数（绕$x,y,z$轴的旋转角），而四元数有四个参数，这与二维旋转的情况类似\mpar{单位复数描述二维旋转。}。四元数加上单位长度的限制 ---单位四元数（三个自由参数）能够描述三维旋转。
 
 \subsection[四元数]{Quaternions\quad 四元数}
+\label{sec3.3.1}
+我们类比复数来构造四元数，复数只有一个虚单位$i$，而四元数里定义三个虚单位，记作$\mathbf{i,j,k}$，它们仍然满足
+\begin{equation}
+\label{equ3.25}
+\mathbf{i}^2 = \mathbf{j}^2 = \mathbf{k}^2 = -1
+\end{equation}
+这样任意一个四元数$q$表示为
+\begin{equation}
+\label{equ3.26}
+q = a\mathbf{1} + b\mathbf{i} + c\mathbf{j} + d\mathbf{k}
+\end{equation}
+其中$a, b, c, d \in \mathbb{R}$, $\mathbf{1}$就是正常的实数1。\footnote{$\mathbf{1,i,j,k}$用黑体表示是为了强调它们是四元数的基。---译者(SI)}
+
+要想定义四元数间的乘法，必须定义虚单位间的乘法规则，比如$\mathbf{ij} = ?$. 为此再定义
+\begin{equation}
+\label{equ3.27}
+\mathbf{ijk} = -1
+\end{equation}
+这样虚单位间的乘法就没问题了，例如，为导出$\mathbf{ij} = \mathbf{k}$, 在\ref{equ3.27}式等号两侧右乘$\mathbf{k}$:
+\begin{equation}
+\label{equ3.28}
+\mathbf{ij} \underbrace{\mathbf{kk}}_{= -1} = -\mathbf{k} \rightarrow \mathbf{ij} = \mathbf{k}
+\end{equation}
+
+单位四元数$q = a\mathbf{1} + b\mathbf{i} + c\mathbf{j} + d\mathbf{k}$满足\mpar{符号$\dag$称为`dagger'，表示转置加取复共轭，即$a^\dag = (a^*)^T$。实数向量间的点乘定义为$a \cdot b = a^T b$, 向量用列矩阵表示，其转置为行矩阵，于是点乘的定义符合矩阵乘法规则。四元数对应的列矩阵含复数，为使四元数与它自身相乘结果为实数（实数结果可表示‘长度’），在转置之外还加上取复共轭。}：
+\begin{align}
+q^\dag q &\stackrel{!}{=} 1 \nonumber\\
+\label{equ3.29}
+\rightarrow (a\mathbf{1} - b\mathbf{i} - c\mathbf{j} - d\mathbf{k}) (a\mathbf{1} +& b\mathbf{i} + c\mathbf{j} + d\mathbf{k}) = a^2 + b^2 + c^2 + d^2 \stackrel{!}{=} 1
+\end{align}
+
+就像单位复数构成一个群（群乘法为复数乘法）那样，单位四元数也构成一个群（群乘法为四元数乘法）。
+
+类似于我们将二维复数与$2 \times 2$实数矩阵建立联系的做法，四元数也可如此 --- 将四个基$\mathbf{1,i,j,k}$与合适的矩阵一一对应。其中一种方法（还有别的方式）是将它们与$2 \times 2$复数矩阵对应：
+\begin{align}
+\mathbf{1} = \begin{pmatrix}
+				1 & 0 \\ 0 & 1
+			 \end{pmatrix}
+\quad &, \quad
+\mathbf{i} = \begin{pmatrix}
+				0 & 1 \\ -1 & 0 
+			 \end{pmatrix}
+\nonumber \\
+\label{equ3.30}
+\mathbf{j} = \begin{pmatrix}
+				0 & -i \\ -i & 0
+			 \end{pmatrix}
+\quad &, \quad
+\mathbf{k} = \begin{pmatrix}
+				i & 0 \\
+				0 & -i
+			 \end{pmatrix}
+\end{align}
+不难验证上式满足四元数乘法，比如\ref{equ3.25}、\ref{equ3.27}式。这样任意一个四元数都可用矩阵表示为：
+\begin{equation}
+\label{equ3.31}
+q = a\mathbf{1} + b\mathbf{i} + c\mathbf{j} + d\mathbf{k} = \begin{pmatrix}
+	a + di & -b - ci \\
+	b - ci & a - di
+	\end{pmatrix}
+\end{equation}
+由上式可见
+\begin{equation}
+\label{equ3.32}
+\det(q) = a^2 + b^2 + c^2 + d^2
+\end{equation}
+上式与\ref{equ3.29}式比较可以发现单位四元数对应的矩阵的行列式为$1$。因此单位四元数对应的$2 \times 2$复数矩阵$\mathcal{U}$满足：
+\begin{equation}
+\label{equ3.33}
+\mathcal{U}^\dag \mathcal{U} = 1, \quad \text{且} \det(\mathcal{U}) = 1
+\end{equation}
+注意\ref{equ3.30}式中的矩阵是线性独立的\mpar{线性独立的概念见附录A.1.}，它们构成群$\mathcal{SU}(2)$的基。与之前相同，$\mathcal{S}$表示特殊(special)，含义为$\det (\mathcal{U}) = 1$；$\mathcal{U}$表示幺正(unitary)\mpar{进一步介绍见本章附录 --- \ref{sec3.10}节。}，即$\mathcal{U}^\dag \mathcal{U} = 1$。任意单位四元数都唯一对应$\mathcal{SU}(2)$群中的一个群元。
+
+$\mathcal{SU}(2)$群如何与三维旋转联系？事情正在起变化，$\mathcal{SU}(2)$群与$\mathcal{SO}(3)$\mpar{$\mathcal{SO}(3)$群就是三维旋转矩阵构成的群。}之间的对应关系并不像二维旋转中$\mathcal{U}(1)$与$\mathcal{SO}(2)$那样简单。
