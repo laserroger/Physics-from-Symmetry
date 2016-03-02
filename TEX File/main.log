@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015/W32TeX) (preloaded format=xelatex 2016.1.22)  29 FEB 2016 23:02
-=======
-This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015) (preloaded format=xelatex 2015.5.24)  29 FEB 2016 14:51
->>>>>>> upstream/master
+This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015/W32TeX) (preloaded format=xelatex 2016.1.22)  2 MAR 2016 22:04
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1536,13 +1532,33 @@ Package: amsthm 2015/03/04 v2.20.2
 \thm@headsep=\skip86
 \dth@everypar=\toks45
 )
-\c@notation=\count290
-\c@dummy=\count291
-\c@problem=\count292
-\c@exerciseT=\count293
-\c@exampleT=\count294
-\c@vocabulary=\count295
-\c@definitionT=\count296
+(c:/texlive/texmf-dist/tex/latex/mathtools/mathtools.sty
+Package: mathtools 2015/11/12 v1.18 mathematical typesetting tools
+
+(c:/texlive/texmf-dist/tex/latex/mathtools/mhsetup.sty
+Package: mhsetup 2010/01/21 v1.2a programming setup (MH)
+)
+LaTeX Info: Thecontrolsequence`\('isalreadyrobust on input line 129.
+LaTeX Info: Thecontrolsequence`\)'isalreadyrobust on input line 129.
+LaTeX Info: Thecontrolsequence`\['isalreadyrobust on input line 129.
+LaTeX Info: Thecontrolsequence`\]'isalreadyrobust on input line 129.
+\g_MT_multlinerow_int=\count290
+\l_MT_multwidth_dim=\dimen317
+\origjot=\skip87
+\l_MT_shortvdotswithinadjustabove_dim=\dimen318
+\l_MT_shortvdotswithinadjustbelow_dim=\dimen319
+\l_MT_above_intertext_sep=\dimen320
+\l_MT_below_intertext_sep=\dimen321
+\l_MT_above_shortintertext_sep=\dimen322
+\l_MT_below_shortintertext_sep=\dimen323
+)
+\c@notation=\count291
+\c@dummy=\count292
+\c@problem=\count293
+\c@exerciseT=\count294
+\c@exampleT=\count295
+\c@vocabulary=\count296
+\c@definitionT=\count297
 
 (c:/texlive/texmf-dist/tex/latex/mdframed/mdframed.sty
 Package: mdframed 2013/07/01 1.9b: mdframed
@@ -1567,7 +1583,7 @@ Package etexcmds Info: Could not find \expanded.
 )))
 (c:/texlive/texmf-dist/tex/latex/etoolbox/etoolbox.sty
 Package: etoolbox 2015/08/02 v2.2a e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count297
+\etb@tempcnta=\count298
 )
 (c:/texlive/texmf-dist/tex/latex/oberdiek/zref-abspage.sty
 Package: zref-abspage 2012/04/04 v2.24 Module abspage for zref (HO)
@@ -1597,53 +1613,53 @@ Package zref Info: New property: page on input line 761.
 (c:/texlive/texmf-dist/tex/generic/oberdiek/atbegshi.sty
 Package: atbegshi 2011/10/05 v1.16 At begin shipout hook (HO)
 )
-\c@abspage=\count298
+\c@abspage=\count299
 Package zref Info: New property: abspage on input line 62.
 )
 (c:/texlive/texmf-dist/tex/latex/needspace/needspace.sty
 Package: needspace 2010/09/12 v1.3d reserve vertical space
 )
-\mdf@templength=\skip87
-\c@mdf@globalstyle@cnt=\count299
-\mdf@skipabove@length=\skip88
-\mdf@skipbelow@length=\skip89
-\mdf@leftmargin@length=\skip90
-\mdf@rightmargin@length=\skip91
-\mdf@innerleftmargin@length=\skip92
-\mdf@innerrightmargin@length=\skip93
-\mdf@innertopmargin@length=\skip94
-\mdf@innerbottommargin@length=\skip95
-\mdf@splittopskip@length=\skip96
-\mdf@splitbottomskip@length=\skip97
-\mdf@outermargin@length=\skip98
-\mdf@innermargin@length=\skip99
-\mdf@linewidth@length=\skip100
-\mdf@innerlinewidth@length=\skip101
-\mdf@middlelinewidth@length=\skip102
-\mdf@outerlinewidth@length=\skip103
-\mdf@roundcorner@length=\skip104
-\mdf@footenotedistance@length=\skip105
-\mdf@userdefinedwidth@length=\skip106
-\mdf@needspace@length=\skip107
-\mdf@frametitleaboveskip@length=\skip108
-\mdf@frametitlebelowskip@length=\skip109
-\mdf@frametitlerulewidth@length=\skip110
-\mdf@frametitleleftmargin@length=\skip111
-\mdf@frametitlerightmargin@length=\skip112
-\mdf@shadowsize@length=\skip113
-\mdf@extratopheight@length=\skip114
-\mdf@subtitleabovelinewidth@length=\skip115
-\mdf@subtitlebelowlinewidth@length=\skip116
-\mdf@subtitleaboveskip@length=\skip117
-\mdf@subtitlebelowskip@length=\skip118
-\mdf@subtitleinneraboveskip@length=\skip119
-\mdf@subtitleinnerbelowskip@length=\skip120
-\mdf@subsubtitleabovelinewidth@length=\skip121
-\mdf@subsubtitlebelowlinewidth@length=\skip122
-\mdf@subsubtitleaboveskip@length=\skip123
-\mdf@subsubtitlebelowskip@length=\skip124
-\mdf@subsubtitleinneraboveskip@length=\skip125
-\mdf@subsubtitleinnerbelowskip@length=\skip126
+\mdf@templength=\skip88
+\c@mdf@globalstyle@cnt=\count300
+\mdf@skipabove@length=\skip89
+\mdf@skipbelow@length=\skip90
+\mdf@leftmargin@length=\skip91
+\mdf@rightmargin@length=\skip92
+\mdf@innerleftmargin@length=\skip93
+\mdf@innerrightmargin@length=\skip94
+\mdf@innertopmargin@length=\skip95
+\mdf@innerbottommargin@length=\skip96
+\mdf@splittopskip@length=\skip97
+\mdf@splitbottomskip@length=\skip98
+\mdf@outermargin@length=\skip99
+\mdf@innermargin@length=\skip100
+\mdf@linewidth@length=\skip101
+\mdf@innerlinewidth@length=\skip102
+\mdf@middlelinewidth@length=\skip103
+\mdf@outerlinewidth@length=\skip104
+\mdf@roundcorner@length=\skip105
+\mdf@footenotedistance@length=\skip106
+\mdf@userdefinedwidth@length=\skip107
+\mdf@needspace@length=\skip108
+\mdf@frametitleaboveskip@length=\skip109
+\mdf@frametitlebelowskip@length=\skip110
+\mdf@frametitlerulewidth@length=\skip111
+\mdf@frametitleleftmargin@length=\skip112
+\mdf@frametitlerightmargin@length=\skip113
+\mdf@shadowsize@length=\skip114
+\mdf@extratopheight@length=\skip115
+\mdf@subtitleabovelinewidth@length=\skip116
+\mdf@subtitlebelowlinewidth@length=\skip117
+\mdf@subtitleaboveskip@length=\skip118
+\mdf@subtitlebelowskip@length=\skip119
+\mdf@subtitleinneraboveskip@length=\skip120
+\mdf@subtitleinnerbelowskip@length=\skip121
+\mdf@subsubtitleabovelinewidth@length=\skip122
+\mdf@subsubtitlebelowlinewidth@length=\skip123
+\mdf@subsubtitleaboveskip@length=\skip124
+\mdf@subsubtitlebelowskip@length=\skip125
+\mdf@subsubtitleinneraboveskip@length=\skip126
+\mdf@subsubtitleinnerbelowskip@length=\skip127
 
 (c:/texlive/texmf-dist/tex/latex/mdframed/md-frame-0.mdf
 File: md-frame-0.mdf 2013/07/01\ 1.9b: md-frame-0
@@ -1653,34 +1669,34 @@ File: md-frame-0.mdf 2013/07/01\ 1.9b: md-frame-0
 \mdf@splitbox@one=\box65
 \mdf@splitbox@two=\box66
 \mdf@splitbox@save=\box67
-\mdfsplitboxwidth=\skip127
-\mdfsplitboxtotalwidth=\skip128
-\mdfsplitboxheight=\skip129
-\mdfsplitboxdepth=\skip130
-\mdfsplitboxtotalheight=\skip131
-\mdfframetitleboxwidth=\skip132
-\mdfframetitleboxtotalwidth=\skip133
-\mdfframetitleboxheight=\skip134
-\mdfframetitleboxdepth=\skip135
-\mdfframetitleboxtotalheight=\skip136
-\mdffootnoteboxwidth=\skip137
-\mdffootnoteboxtotalwidth=\skip138
-\mdffootnoteboxheight=\skip139
-\mdffootnoteboxdepth=\skip140
-\mdffootnoteboxtotalheight=\skip141
-\mdftotallinewidth=\skip142
-\mdfboundingboxwidth=\skip143
-\mdfboundingboxtotalwidth=\skip144
-\mdfboundingboxheight=\skip145
-\mdfboundingboxdepth=\skip146
-\mdfboundingboxtotalheight=\skip147
-\mdf@freevspace@length=\skip148
-\mdf@horizontalwidthofbox@length=\skip149
-\mdf@verticalmarginwhole@length=\skip150
-\mdf@horizontalspaceofbox=\skip151
-\mdfsubtitleheight=\skip152
-\mdfsubsubtitleheight=\skip153
-\c@mdfcountframes=\count300
+\mdfsplitboxwidth=\skip128
+\mdfsplitboxtotalwidth=\skip129
+\mdfsplitboxheight=\skip130
+\mdfsplitboxdepth=\skip131
+\mdfsplitboxtotalheight=\skip132
+\mdfframetitleboxwidth=\skip133
+\mdfframetitleboxtotalwidth=\skip134
+\mdfframetitleboxheight=\skip135
+\mdfframetitleboxdepth=\skip136
+\mdfframetitleboxtotalheight=\skip137
+\mdffootnoteboxwidth=\skip138
+\mdffootnoteboxtotalwidth=\skip139
+\mdffootnoteboxheight=\skip140
+\mdffootnoteboxdepth=\skip141
+\mdffootnoteboxtotalheight=\skip142
+\mdftotallinewidth=\skip143
+\mdfboundingboxwidth=\skip144
+\mdfboundingboxtotalwidth=\skip145
+\mdfboundingboxheight=\skip146
+\mdfboundingboxdepth=\skip147
+\mdfboundingboxtotalheight=\skip148
+\mdf@freevspace@length=\skip149
+\mdf@horizontalwidthofbox@length=\skip150
+\mdf@verticalmarginwhole@length=\skip151
+\mdf@horizontalspaceofbox=\skip152
+\mdfsubtitleheight=\skip153
+\mdfsubsubtitleheight=\skip154
+\c@mdfcountframes=\count301
 
 ****** mdframed patching \endmdf@trivlist
 
@@ -1696,14 +1712,14 @@ File: md-frame-0.mdf 2013/07/01\ 1.9b: md-frame-0
 . 
 . Defining command \mdtheorem with sig. ' O{} m o m o ' on line 701.
 .................................................
-\mdf@envdepth=\count301
-\c@mdf@env@i=\count302
-\c@mdf@env@ii=\count303
-\c@mdf@zref@counter=\count304
+\mdf@envdepth=\count302
+\c@mdf@env@i=\count303
+\c@mdf@env@ii=\count304
+\c@mdf@zref@counter=\count305
 Package zref Info: New property: mdf@pagevalue on input line 895.
 )
-\esp=\skip154
-\ecart=\skip155
+\esp=\skip155
+\ecart=\skip156
 
 (c:/texlive/texmf-dist/tex/latex/hyperref/hyperref.sty
 Package: hyperref 2012/11/06 v6.83m Hypertext links for LaTeX
@@ -1740,14 +1756,14 @@ Package hobsub Info: Skipping package `atbegshi' (already loaded).
 Package: refcount 2011/10/16 v3.4 Data extraction from label references (HO)
 Package: hycolor 2011/01/30 v1.7 Color options for hyperref/bookmark (HO)
 )
-\@linkdim=\dimen317
-\Hy@linkcounter=\count305
-\Hy@pagecounter=\count306
+\@linkdim=\dimen324
+\Hy@linkcounter=\count306
+\Hy@pagecounter=\count307
 
 (c:/texlive/texmf-dist/tex/latex/hyperref/pd1enc.def
 File: pd1enc.def 2012/11/06 v6.83m Hyperref: PDFDocEncoding definition (HO)
 )
-\Hy@SavedSpaceFactor=\count307
+\Hy@SavedSpaceFactor=\count308
 
 (c:/texlive/texmf-dist/tex/latex/latexconfig/hyperref.cfg
 File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
@@ -1760,17 +1776,17 @@ Package hyperref Info: Plain pages OFF on input line 4458.
 Package hyperref Info: Backreferencing OFF on input line 4463.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4688.
-\c@Hy@tempcnt=\count308
+\c@Hy@tempcnt=\count309
 
 (c:/texlive/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip18
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
 LaTeX Info: Redefining \url on input line 5041.
-\XeTeXLinkMargin=\dimen318
-\Fld@menulength=\count309
-\Field@Width=\dimen319
-\Fld@charsize=\dimen320
+\XeTeXLinkMargin=\dimen325
+\Fld@menulength=\count310
+\Field@Width=\dimen326
+\Fld@charsize=\dimen327
 Package hyperref Info: Hyper figures OFF on input line 6295.
 Package hyperref Info: Link nesting OFF on input line 6300.
 Package hyperref Info: Hyper index ON on input line 6303.
@@ -1780,9 +1796,9 @@ Package hyperref Info: Link coloring with OCG OFF on input line 6320.
 Package hyperref Info: PDF/A mode OFF on input line 6325.
 LaTeX Info: Redefining \ref on input line 6365.
 LaTeX Info: Redefining \pageref on input line 6369.
-\Hy@abspage=\count310
-\c@Item=\count311
-\c@Hfootnote=\count312
+\Hy@abspage=\count311
+\c@Item=\count312
+\c@Hfootnote=\count313
 )
 
 Package hyperref Message: Driver (autodetected): hxetex.
@@ -1798,10 +1814,10 @@ Package: stringenc 2011/12/02 v1.10 Convert strings between diff. encodings (HO
 )
 )
 \pdfm@box=\box68
-\c@Hy@AnnotLevel=\count313
-\HyField@AnnotCount=\count314
-\Fld@listcount=\count315
-\c@bookmark@seq@number=\count316
+\c@Hy@AnnotLevel=\count314
+\HyField@AnnotCount=\count315
+\Fld@listcount=\count316
+\c@bookmark@seq@number=\count317
 
 (c:/texlive/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty
 Package: rerunfilecheck 2011/04/15 v1.7 Rerun checks for auxiliary files (HO)
@@ -1812,7 +1828,7 @@ Package rerunfilecheck Info: Feature \pdfmdfivesum is not available
 tly
 (rerunfilecheck)             and the loading of the package is aborted.
 )
-\Hy@SectionHShift=\skip156
+\Hy@SectionHShift=\skip157
 )
 Package hyperref Info: Option `colorlinks' set `true' on input line 472.
 Package hyperref Info: Option `breaklinks' set `true' on input line 472.
@@ -1827,7 +1843,7 @@ Package: bookmark 2011/12/02 v1.24 PDF bookmarks (HO)
 
 (c:/texlive/texmf-dist/tex/latex/oberdiek/bkm-dvipdfm.def
 File: bkm-dvipdfm.def 2011/12/02 v1.24 bookmark driver for dvipdfm (HO)
-\BKM@id=\count317
+\BKM@id=\count318
 ))
 (c:/texlive/texmf-dist/tex/latex/caption/caption.sty
 Package: caption 2015/09/17 v3.3-111 Customizing captions (AR)
@@ -1835,15 +1851,15 @@ Package: caption 2015/09/17 v3.3-111 Customizing captions (AR)
 (c:/texlive/texmf-dist/tex/latex/caption/caption3.sty
 Package: caption3 2015/09/20 v1.7-115 caption3 kernel (AR)
 Package caption3 Info: TeX engine: e-TeX on input line 57.
-\captionmargin=\dimen321
-\captionmargin@=\dimen322
-\captionwidth=\dimen323
-\caption@tempdima=\dimen324
-\caption@indent=\dimen325
-\caption@parindent=\dimen326
-\caption@hangindent=\dimen327
+\captionmargin=\dimen328
+\captionmargin@=\dimen329
+\captionwidth=\dimen330
+\caption@tempdima=\dimen331
+\caption@indent=\dimen332
+\caption@parindent=\dimen333
+\caption@hangindent=\dimen334
 )
-\c@ContinuedFloat=\count318
+\c@ContinuedFloat=\count319
 Package caption Info: hyperref package is loaded.
 )
 Package caption Info: We need package `newfloat' on input line 492.
@@ -1862,45 +1878,45 @@ docmode, (c:/texlive/texmf-dist/tex/generic/xypic/xyrecat.tex)
  Xy-pic is free software: see the User's Guide for details.
 
 Loading kernel: messages; fonts; allocations: state,
-\X@c=\dimen328
-\Y@c=\dimen329
-\U@c=\dimen330
-\D@c=\dimen331
-\L@c=\dimen332
-\R@c=\dimen333
+\X@c=\dimen335
+\Y@c=\dimen336
+\U@c=\dimen337
+\D@c=\dimen338
+\L@c=\dimen339
+\R@c=\dimen340
 \Edge@c=\toks46
-\X@p=\dimen334
-\Y@p=\dimen335
-\U@p=\dimen336
-\D@p=\dimen337
-\L@p=\dimen338
-\R@p=\dimen339
+\X@p=\dimen341
+\Y@p=\dimen342
+\U@p=\dimen343
+\D@p=\dimen344
+\L@p=\dimen345
+\R@p=\dimen346
 \Edge@p=\toks47
-\X@origin=\dimen340
-\Y@origin=\dimen341
-\X@xbase=\dimen342
-\Y@xbase=\dimen343
-\X@ybase=\dimen344
-\Y@ybase=\dimen345
-\X@min=\dimen346
-\Y@min=\dimen347
-\X@max=\dimen348
-\Y@max=\dimen349
+\X@origin=\dimen347
+\Y@origin=\dimen348
+\X@xbase=\dimen349
+\Y@xbase=\dimen350
+\X@ybase=\dimen351
+\Y@ybase=\dimen352
+\X@min=\dimen353
+\Y@min=\dimen354
+\X@max=\dimen355
+\Y@max=\dimen356
 \lastobjectbox@=\box69
 \zerodotbox@=\box70
-\almostz@=\dimen350
+\almostz@=\dimen357
  direction,
-\d@X=\dimen351
-\d@Y=\dimen352
-\K@=\count319
-\KK@=\count320
-\Direction=\count321
-\K@dXdY=\dimen353
-\K@dYdX=\dimen354
+\d@X=\dimen358
+\d@Y=\dimen359
+\K@=\count320
+\KK@=\count321
+\Direction=\count322
+\K@dXdY=\dimen360
+\K@dYdX=\dimen361
 \xyread@=\read3
 \xywrite@=\write5
-\csp@=\count322
-\quotPTK@=\dimen355
+\csp@=\count323
+\quotPTK@=\dimen362
 
 utility macros; pictures: \xy, positions,
 \swaptoks@@=\toks48
@@ -1924,13 +1940,13 @@ Xy-pic Warning: `\stop' redefined.
  Xy-pic option: Frame and Bracket extension v.3.14 loaded)
 (c:/texlive/texmf-dist/tex/generic/xypic/xymatrix.tex
  Xy-pic option: Matrix feature v.3.14
-\Row=\count323
-\Col=\count324
+\Row=\count324
+\Col=\count325
 \queue@=\toks50
 \queue@@=\toks51
-\qcount@=\count325
-\qcount@@=\count326
-\matrixsize@=\count327
+\qcount@=\count326
+\qcount@@=\count327
+\matrixsize@=\count328
  loaded)
 (c:/texlive/texmf-dist/tex/generic/xypic/xyarrow.tex
  Xy-pic option: Arrow and Path feature v.3.9 path, \ar, loaded)
@@ -1941,7 +1957,7 @@ Xy-pic Warning: `\uline' redefined [main:231].
 Xy-pic Warning: `\uuline' redefined [main:231].
 
 loaded))
-\c@mparcnt=\count328
+\c@mparcnt=\count329
  (c:/texlive/texmf-dist/tex/xelatex/xecjk/xeCJKfntef.sty
 Package: xeCJKfntef 2015/05/15 v3.3.2 xeCJK font effect
 
@@ -1953,15 +1969,15 @@ Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
 ))
 (c:/texlive/texmf-dist/tex/latex/cjk/texinput/CJKfntef.sty
 Package: CJKfntef 2015/04/18 4.8.4
-\CJK@fntefSkip=\skip157
-\CJK@nest=\count329
-\CJK@fntefDimen=\dimen356
+\CJK@fntefSkip=\skip158
+\CJK@nest=\count330
+\CJK@fntefDimen=\dimen363
 \CJK@underdotBox=\box72
 \CJK@ULbox=\box73
-\CJK@underanyskip=\dimen357
+\CJK@underanyskip=\dimen364
 )
-\l__xeCJK_space_skip=\skip158
-\c__xeCJK_ulem-left_node_dim=\dimen358
+\l__xeCJK_space_skip=\skip159
+\c__xeCJK_ulem-left_node_dim=\dimen365
 \c__xeCJK_null_box=\box74
 .................................................
 . LaTeX info: "xparse/define-command"
@@ -2020,7 +2036,7 @@ Package: CJKfntef 2015/04/18 4.8.4
 . 
 . Redefining environment 'CJKfilltwosides' with sig. 'O{c}m' on line 977.
 .................................................
-\c__xeCJK_filll_skip=\skip159
+\c__xeCJK_filll_skip=\skip160
 ) (./main.aux
 (./Preface.aux) (./Acknowledge.aux))
 \openout1 = `main.aux'.
@@ -2160,7 +2176,7 @@ Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 (c:/texlive/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
-\c@section@level=\count330
+\c@section@level=\count331
 )
 LaTeX Info: Redefining \ref on input line 67.
 LaTeX Info: Redefining \pageref on input line 67.
@@ -2311,7 +2327,7 @@ LaTeX Font Info:    Font shape `T1/pag/b/n' in size <10.95> not available
 
 
 (./Parts/Part1.tex [0]
-\c@ttl@toc@default=\count331
+\c@ttl@toc@default=\count332
 LaTeX Font Info:    Font shape `T1/pag/bx/n' in size <220> not available
 (Font)              Font shape `T1/pag/b/n' tried instead on input line 3.
 LaTeX Font Info:    Font shape `T1/pag/b/n' in size <220> not available
@@ -2571,41 +2587,45 @@ LaTeX Warning: Reference `appendix2.3' on page 30 undefined on input line 180.
 
 LaTeX Warning: Reference `appendix2.3' on page 30 undefined on input line 187.
 
-[30] [31]) (./Parts/Part3.tex [32] (./main.ptc) [33
+[30] [31]
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-] [34]) (./Chaps/Chap5.tex
+ [32]
+
+LaTeX Warning: Reference `appendenix2.1' on page 33 undefined on input line 286
+.
+
+) (./Parts/Part3.tex [33] [34
+
+] (./main.ptc) [35] [36]) (./Chaps/Chap5.tex
 Chapter 5.
 File: Pictures/chapter_head_1.pdf Graphic file (type QTm)
-<use  "Pictures/chapter_head_1.pdf" > [35
+<use  "Pictures/chapter_head_1.pdf" > [37
 
 ]
 
-LaTeX Warning: Reference `sec4.6' on page 36 undefined on input line 31.
+LaTeX Warning: Reference `sec4.6' on page 38 undefined on input line 31.
 
 
-LaTeX Warning: Reference `eq3.240' on page 36 undefined on input line 31.
+LaTeX Warning: Reference `eq3.240' on page 38 undefined on input line 31.
 
 
-LaTeX Warning: Reference `sec8.3' on page 36 undefined on input line 36.
-
-<<<<<<< HEAD
-) [36]
-=======
-
-LaTeX Warning: Reference `sec4.5.4' on page 32 undefined on input line 51.
-
-[32]
-
-LaTeX Warning: Reference `eq4.30' on page 33 undefined on input line 53.
+LaTeX Warning: Reference `sec8.3' on page 38 undefined on input line 36.
 
 
-LaTeX Warning: Reference `sec3.7.5' on page 33 undefined on input line 55.
+LaTeX Warning: Reference `sec4.5.4' on page 38 undefined on input line 51.
+
+[38]
+
+LaTeX Warning: Reference `eq4.30' on page 39 undefined on input line 53.
 
 
-LaTeX Warning: Reference `sec8.5.5' on page 33 undefined on input line 59.
+LaTeX Warning: Reference `sec3.7.5' on page 39 undefined on input line 55.
 
-) [33]
->>>>>>> upstream/master
+
+LaTeX Warning: Reference `sec8.5.5' on page 39 undefined on input line 59.
+
+) [39]
 \tf@ptc=\write7
 \openout7 = `main.ptc'.
 
@@ -2618,28 +2638,14 @@ Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 190.
 
 LaTeX Warning: There were undefined references.
 
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
  ) 
 Here is how much of TeX's memory you used:
-<<<<<<< HEAD
- 44465 strings out of 493668
- 857039 string characters out of 6150746
- 1062267 words of memory out of 5000000
- 47078 multiletter control sequences out of 15000+600000
-=======
- 43434 strings out of 493706
- 846557 string characters out of 6145769
- 1043014 words of memory out of 5000000
- 46007 multiletter control sequences out of 15000+600000
->>>>>>> upstream/master
- 122809 words of font info for 216 fonts, out of 8000000 for 9000
+ 44948 strings out of 493668
+ 865879 string characters out of 6150746
+ 1079565 words of memory out of 5000000
+ 47554 multiletter control sequences out of 15000+600000
+ 124620 words of font info for 217 fonts, out of 8000000 for 9000
  1328 hyphenation exceptions out of 8191
- 57i,24n,72p,10432b,1358s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 57i,24n,72p,10432b,1395s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-<<<<<<< HEAD
-Output written on main.pdf (46 pages).
-=======
-Output written on main.pdf (43 pages).
->>>>>>> upstream/master
+Output written on main.pdf (49 pages).

@@ -259,6 +259,10 @@ INPUT c:/texlive/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
 INPUT c:/texlive/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
 INPUT c:/texlive/texmf-dist/tex/latex/amscls/amsthm.sty
 INPUT c:/texlive/texmf-dist/tex/latex/amscls/amsthm.sty
+INPUT c:/texlive/texmf-dist/tex/latex/mathtools/mathtools.sty
+INPUT c:/texlive/texmf-dist/tex/latex/mathtools/mathtools.sty
+INPUT c:/texlive/texmf-dist/tex/latex/mathtools/mhsetup.sty
+INPUT c:/texlive/texmf-dist/tex/latex/mathtools/mhsetup.sty
 INPUT c:/texlive/texmf-dist/tex/latex/mdframed/mdframed.sty
 INPUT c:/texlive/texmf-dist/tex/latex/mdframed/mdframed.sty
 INPUT c:/texlive/texmf-dist/tex/latex/oberdiek/kvoptions.sty
@@ -555,6 +559,7 @@ INPUT ./Parts/Part2.tex
 INPUT ./Parts/Part2.tex
 INPUT main.ptc
 INPUT main.ptc
+INPUT c:/texlive/texmf-dist/fonts/tfm/adobe/avantgar/pagk8t.tfm
 INPUT ./Chaps/Chap3.tex
 INPUT ./Chaps/Chap3.tex
 INPUT Pictures/chapter_head_1.pdf
