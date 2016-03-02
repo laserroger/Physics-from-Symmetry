@@ -122,7 +122,7 @@ S[q(t)]=\int {\mathcal L}~{\mathrm d}t
 另一套是场论：使用场而不是独立粒子的坐标来描述自然%
 \mpar{量子场论有一个特别优美的性质是关于如何将粒子引进的。我们将在\ref{chap6}中看到场有能力产生和湮灭粒子}%
 。在这套理论中，时空构成了场\(\Phi(\vec{x},t)\)表演的舞台。利用前面提到过的限制，我们得到%
-\mpar{这里我故意使用了不同的符号\({\mathscr L}\)，因为在场论中大多数时候我们都在和拉格朗日量密度\({\mathscr L}\)打交道。两者之间满足关系式\({\mathcal L} = \int{\mathrm d}^3\vec{x}~{\mathscr L}\)}
+\mpar{这里我故意使用了不同的符号\({\mathscr L}\)，因为在场论中大多数时候我们都在和拉格朗日量密度\({\mathscr L}\)打交道。两者之间满足关系式\({\mathcal L} = \int{\mathrm d}^3\bm{x}~{\mathscr L}\)}
 \begin{equation}
 {\mathscr L} = {\mathscr L} (\Phi(\vec{x},t), \partial_\mu \Phi(\vec{x},t), \vec{x})
 \end{equation}
@@ -212,3 +212,41 @@ S = \int_{t_1}^{t_2} {\mathcal L}\left(q+\epsilon,\dot q + \dot \epsilon, t\righ
 \frac{\partial \mathcal{L}}{\partial q} - \frac{\rd}{\rd t} \left( \frac{\partial \mathcal{L}(q,\dot q,t)}{\partial \dot q} \right)= 0
 \end{equation}
 这就是著名的{\bf 欧拉-拉格朗日方程(Euler-Lagrange equation)}
+
+我们可以用类似的办法处理场论。首先，注意到我们需要将时空同等对待。因此我们引入拉格朗日量密度：
+\begin{equation}
+{\mathcal L} = \int{\mathrm d}^3\bm{x}~{\mathscr L}(\Phi^i,\partial_\mu \Phi^i) 
+\end{equation}
+并用拉格朗日量密度来表示作用量
+\begin{equation}
+S = \int \rd t~{\mathcal L} = \int{\mathrm d}^4\bm{x}~{\mathscr L}(\Phi^i,\partial_\mu \Phi^i) 
+\end{equation}
+依照上面讲过的步骤，我们可以得到场的运动方程组%
+\mpar{在这里用“组”字是因为对于每一个场分量\(\Phi_1,\Phi_2,\dots\)我们都可以得到一个方程}%
+：
+\begin{equation}
+\frac{\partial \mathcal{L}}{\partial \Phi} - \partial_\mu \left( \frac{\partial \mathcal{L}}{\partial (\partial_\mu \Phi)} \right)= 0
+\end{equation}
+
+在下一章中我们将用拉格朗日形式导出近代物理学中重要的一个定理。借助其我们能看到对称性与守恒量之间的深刻联系。守恒量是描述自然的合适参量%
+\mpar{我们将其看做是这个极端复杂的世界的船锚。不论万事万物如何改变，守恒量依旧是守恒量。}%
+，从这个定理中我们将学会如何和它打交道。
+
+\section[诺特定理]{Noether’s Theorem Noether 定理}\label{sec4.5}
+Noether 定理表示，拉格朗日量的每一个对称性都对应于一个守恒量。换言之，物理学家用于描述自然（守恒量）的记号和对称性直接相关。这确实是科学史上最美的创见之一。
+
+\subsection{粒子理论的Noether 定理}\label{sec4.5.1}
+让我们先看看能对粒子理论中的守恒量做点什么。我们将局限于连续对称性，由此我们能使用无穷小变换。如同前面数章所言，我们可以通过重复无穷小变换来得到一个有限的变换。拉格朗日量在无穷小变换%
+\mpar{用来表述小扰动的符号\(\delta\)可能不会和用来表述偏导数的\(\partial\)}%
+\(q\rightarrow q'=q+\delta q\)下不变的性质用数学表述如下
+\begin{equation}
+\begin{aligned}
+\delta {\mathcal L} &= {\mathcal L}(q,\frac{\rd q}{\rd t},t) - {\mathcal L}(q+\delta q,\frac{\rd (q+\delta q)}{\rd t},t) \\
+&= {\mathcal L}(q,\frac{\rd q}{\rd t},t) - {\mathcal L}(q+\delta q,\frac{\rd q}{\rd t}+\frac{\rd (\delta q)}{\rd t},t) \overset{\text{!}}{=} 0 
+\end{aligned}
+\end{equation}
+
+要求拉格朗日量是变换不变的这个限制太强了。为了保证动力学一样，不变的应该是作用量而不是拉格朗日量。当然，如果拉格朗日量不变，作用量自然不变：
+\begin{equation}
+\delta S = 
+\end{equation}
