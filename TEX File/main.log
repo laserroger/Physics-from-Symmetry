@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015) (preloaded format=xelatex 2015.5.24)  2 MAR 2016 22:20
+This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015) (preloaded format=xelatex 2015.5.24)  3 MAR 2016 18:22
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -2749,10 +2749,20 @@ LaTeX Warning: Reference `sec8.5.5' on page 51 undefined on input line 59.
 
 LaTeX Warning: Reference `eq4.59' on page 51 undefined on input line 65.
 
-) [51]
+
+Overfull \hbox (31.21866pt too wide) in paragraph at lines 76--76
+[] 
+ []
+
+
+Underfull \vbox (badness 1527) has occurred while \output is active []
+
+ [51])
 \tf@ptc=\write7
 \openout7 = `main.ptc'.
 
+
+[52]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 190.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 190.
  (./main.aux (./Preface.aux) (./Acknowledge.aux))
@@ -2764,12 +2774,12 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 44141 strings out of 493706
- 863221 string characters out of 6145769
- 1051909 words of memory out of 5000000
- 46699 multiletter control sequences out of 15000+600000
+ 44148 strings out of 493706
+ 863270 string characters out of 6145769
+ 1052170 words of memory out of 5000000
+ 46706 multiletter control sequences out of 15000+600000
  131253 words of font info for 219 fonts, out of 8000000 for 9000
  1328 hyphenation exceptions out of 8191
  57i,24n,69p,10430b,1392s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on main.pdf (61 pages).
+Output written on main.pdf (62 pages).
