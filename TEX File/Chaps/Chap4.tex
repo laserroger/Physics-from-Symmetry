@@ -1,8 +1,8 @@
 %!TEX encoding = UTF-8 Unicode
 
-%----------------------------------------------------------------------------------------
+%——————————————————————————————————————————————————————————-
 %	CHAPTER 4
-%----------------------------------------------------------------------------------------
+%——————————————————————————————————————————————————————————-
 \newcommand\rd{\mathrm d}
 \chapterimage{chapter_head_1.pdf} % Chapter heading image
 
@@ -117,7 +117,7 @@ S[q(t)]=\int {\mathcal L}~{\mathrm d}t
 {\mathcal L} = {\mathcal L} (\vec{q},\partial_t\vec{q},t)
 \end{equation}
 
-一个著名的例子是这个能导出经典力学的牛顿运动方程的拉格朗日量\({\mathcal L} = \frac{1}{2}m\vec{q}^2\)。我们将在稍后进行相当详细的讨论。
+一个著名的例子是这个能导出经典力学的 Newton 运动方程的拉格朗日量\({\mathcal L} = \frac{1}{2}m\vec{q}^2\)。我们将在稍后进行相当详细的讨论。
 
 另一套是场论：使用场而不是独立粒子的坐标来描述自然%
 \mpar{量子场论有一个特别优美的性质是关于如何将粒子引进的。我们将在\ref{chap6}中看到场有能力产生和湮灭粒子}%
@@ -264,7 +264,8 @@ Noether 定理表示，拉格朗日量的每一个对称性都对应于一个守
 \]
 在最后一步中，我们用到了扰动$\delta q$在初末时刻$(t_1,t_2)$为零。由此我们可知，我们并不需要去强求拉格朗日量的扰动$\delta {\mathcal L}$为零，而仅需满足一个更弱的条件
 \begin{equation}
-\delta {\mathcal L} \overset{\text{!}}{=} \frac{\rd G}{\rd t}.
+\delta {\mathcal L} \overset{\text{!}}{=} \frac{\rd G}{\rd t}\text{。}
+\label{eq:4.13}
 \end{equation}
 
 这意味着拉格朗日量可以在不改变作用量和运动方程的情况下，加减某个函数的全微分$\frac{\rd G}{\rd t}$。将\ref{eq:4.11}式的右端由$0$改作$\frac{\rd G}{\rd t}$，我们有
@@ -289,6 +290,7 @@ Noether 定理表示，拉格朗日量的每一个对称性都对应于一个守
 &\rightarrow \delta {\mathcal L} =  -\frac{\rd}{\rd t} \left(\frac{\partial \mathcal L}{\partial \dot q}\delta q\right) \overset{\text{!}}{=} \frac{\rd G}{\rd t} \\
 &\rightarrow\frac{\rd}{\rd t} \underbrace{\left(\frac{\partial \mathcal L}{\partial \dot q}\delta q + G\right)}_{\equiv J} \overset{\text{!}}{=} 0
 \end{aligned}
+\label{eq:4.16}
 \end{equation}
 由此我们得到了一个不随时间变化的物理量$J$：
 \begin{equation}
@@ -299,10 +301,95 @@ J = \frac{\partial \mathcal L}{\partial \dot q}\delta q + G\text{，}
 \frac{\rd J}{\rd t} = 0 \rightarrow J = \text{常数。}
 \]
 
-为了看清楚这一点，我们先借用一下后面章节的结论：常质量自由粒子的牛顿第二定律是%
+为了看清楚这一点，我们先借用一下后面章节的结论：常质量自由粒子的 Newton 第二定律是%
 \mpar{如果$q$代表某个物体的位置，则$\frac{\rd q}{\rd t}=\dot q$是这个物体的速度，$\frac{\rd}{\rd t}\frac{\rd q}{\rd t}=\frac{\rd^2 q}{\rd t^2}=\ddot q$是加速度。}
 \begin{equation}
 m{\ddot\vec{q}} = 0 \text{。}
 \end{equation}
 你可以将其代入欧拉-拉格朗日方程（\ref{eq:4.7}式）中去验证它。
 
+让我们从这个拉格朗日量出发，计算不同对称性所分别对应的守恒量。
+
+由于${\mathcal L}=\frac{1}{2}m{\dot\vec q}^2$不依赖于$\vec q$，故我们的拉格朗日量在空间平移变换$\vec{q}\rightarrow\vec{q}+\vec{a}$不变($\delta{\mathcal L}=0$)。这个对应的守恒量满足条件\ref{eq:4.13}，即$G=0$的情形\footnote{\textcolor{red}{译注：下式缺少点乘符号}}
+\begin{equation}
+J_\text{trans} = \frac{\partial\mathcal L}{\partial \dot\vec q} \vec a = m {\dot\vec q} {\vec a} = \vec{p}\vec{a} \text{，}
+\end{equation}
+其中$\vec{p}=m{\dot\vec q}$是经典力学中的{\bf 动量(momentum)}。由于等式$\frac{\rd J}{\rd t}$对于任意$\vec a$都成立，所以说：{\bf 拉格朗日量在空间平移下不变导致了动量守恒。}
+
+我们现在把视线转到转动上来，由此我们需要大于一的维度，这是因为一维上的旋转是没有意义的。我们在这里将不会使用类似$\vec q$的矢量符号，而是更方便的指标记号。我们能将所有方程简单的用$\vec{q}\rightarrow q_i$改写。让我们来看看无穷小转动%
+\mpar{这里我们用 Levi-Civita 符号来写转动生成元。参见\ref{eq:3.63}式下的文字。}%
+$q_i \rightarrow q_i + \epsilon_{ijk} q_j a_k$，由此$\delta q_i=\epsilon_{ijk}q_j a_k$。仍然是因为由于${\mathcal L}=\frac{1}{2}m{\dot\vec q}^2$不依赖于$\vec q$，我们的拉格朗日量在这样的变换下也不改变，其对应的守恒量是%
+\mpar{下式由\ref{eq:4.16}式导出，这里对应的依旧是$G=0$的情况}
+\begin{equation}
+\begin{aligned}
+J_\text{rot} =& \frac{\partial {\mathcal L}(q_i, \dot q_i, t)}{\partial \dot q_i}\delta q_i  = \frac{\partial \mathcal L}{\partial \dot q_i} \epsilon_{ijk} q_j a_k \\
+  =& m {\dot q_i} \epsilon_{ijk} q_j a_k = m p_i\epsilon_{ijk} q_j a_k \\
+  \rightarrow J_\text{rot} =& (\vec{p}\times\vec{q})\cdot\vec{a} \equiv \vec{L}\cdot\vec{a}
+\end{aligned}
+\end{equation}
+在最后一步中我们将表达式用矢量记号重新写出，其中$\times$称作叉乘，而$\vec L$是经典力学中{\bf 角动量(angular momentum)}。即：{\bf 转动下不变导致了角动量守恒。}
+
+接下来让我们看看时间平移不变性%
+\mpar{这意味着物理不会管我们是在昨天、今天还是五十年前做的实验，给定相同的初始条件，物理定律不会变化。}%
+。一个无穷小的时间平移$t\rightarrow t'=t+\epsilon$会导致
+\begin{equation}
+\begin{aligned}
+\delta {\mathcal L} &= {\mathcal L}\left(q(t),\frac{\rd q(t)}{\rd t},t\right) - {\mathcal L}\left(q(t+\epsilon),\frac{\rd q(t+\epsilon)}{\rd t},t+\epsilon\right) \\
+&= -\frac{\partial \mathcal L}{\partial q}\frac{\partial q}{\partial t}\epsilon -\frac{\partial \mathcal L}{\partial\dot q}\frac{\partial\dot q}{\partial t}\epsilon -\frac{\partial\mathcal L}{\partial t}\epsilon \underbrace{=}_{\mathclap{\text{等式左端正好为全导数}}} -\frac{\rd \mathcal L}{\rd t}\epsilon \text{，} 
+\end{aligned}
+\end{equation}
+这告诉我们一般而言$\delta{\mathcal L} \ne 0$，但有$G=-{\mathcal L}$。
+
+将其代入\ref{eq:4.16}式，有\footnote{译注：原文有字体混乱} 
+\begin{equation} 
+\frac{\rd}{\rd t}\underbrace{\left(\frac{\partial\mathcal L}{\partial\dot q}\dot q-{\mathcal L}\right)}_{\equiv\mathcal H} = 0 
+\end{equation} 
+守恒量$\mathcal H$被称为{\bf 哈密顿量(Hamiltonian)}，代表了系统的总能量。对于这个例子，我们有
+\begin{equation}
+\begin{aligned}
+\mathcal H =& \frac{\partial\mathcal L}{\partial\dot q}\dot q-{\mathcal L} = \underbrace{\left(\frac{\partial}{\partial\dot q}\frac{1}{2}m{\dot q}^2\right)}_{\mathclap{=m{\dot q}}}\dot q - \frac{1}{2}m{\dot q}^2 \\
+ =& m{\dot q}^2 - \frac{1}{2}m{\dot q}^2 = \frac{1}{2}m{\dot q}^2 \text{，}
+\end{aligned}
+\end{equation}
+正好是系统的动能。由于这里没有势场或外力，故动能就是总能量。能导出在外势场中运动的粒子的 Newton 第二定律$m\ddot q=-\frac{\partial V}{\partial q}$\footnote{\textcolor{red}{原文有误}}的拉格朗日量是
+\[
+{\mathcal L} = \frac{1}{2}m{\dot q}^2 - V(q)\text{。}
+\]
+其哈密顿量为
+\[
+{\mathcal H} = \frac{1}{2}m{\dot q}^2 + V
+\]
+的确是正确的总能量（等于动能加势能）。
+
+由{\bf 推动不变性(boost invariance)}导致的守恒量略有些奇怪，相应的计算放在了这一章的附录\ref{sec4.6}中。其结果为
+\begin{equation}
+\tilde{J}_\text{boost} = \underbrace{pt-\frac{1}{2}mvt}_{\mathclap{\equiv \tilde{p}t}}-mq=\tilde{p}t-mq
+\end{equation}
+我们可以看到这个量依赖于时间零点，可以通过恰当的选取时间零点使其为零。由于这个量是守恒量，这个守恒律告诉我们零始终都是零。\footnote{译注：这个守恒率没有说的那么平庸，事实上，它等价于质心运动定理；\textcolor{red}{又注：该结果以及\ref{sec4.6}的推导有误}}
+
+作为粒子理论的总结，我们得到了如下关系：
+\begin{itemize}
+\item 空间平移不变性$\Rightarrow$动量守恒
+\item 推动不变性\mpar{推动的另一个叫法是动量空间的平移，因为变换$q\rightarrow q+vt$使动量$m\dot q\rightarrow m(\dot q+v)$}$\Rightarrow~\tilde{p}t-mq$守恒
+\item 旋转不变性$\Rightarrow$角动量守恒
+\item 时间平移不变性$\Rightarrow$能量守恒
+\end{itemize}
+Noether 定理向我们展示了，为什么这些记号%
+\mpar{除了推动不变性导致的守恒量}%
+会以这个或那个形式出现在每一个物理理论中。只要我们依旧有通常的时空对称性，动量、能量和角动量就是守恒量。在场论中，我们有两类对称性：一方面，拉格朗日量会在时空的变换，如转动，下不变；另一方面，我们也会有在场自身的变换下的不变性，被称为{\bf 内禀对称性(internal symmetries)。}
+
+\subsection{场论中的 Neother 定理——时空对称性}\label{sec4.5.2}
+
+\subsection{转动和推动}\label{sec4.5.3}
+
+\subsection{自旋}\label{sec4.5.4}
+
+\subsection{场论中的 Neother 定理——内禀对称性}\label{sec4.5.5}
+
+\section*{Further Reading Tips\quad 阅读建议}
+
+\section[附录：粒子理论中的推动不变性与其守恒量]{4.6 Appendix: Conserved Quantity from Boost
+Invariance for Particle Theories\quad 附录：粒子理论中的推动不变性与其守恒量}\label{sec4.6}
+
+\section[附录：场论中的推动不变性与其守恒量]{Appendix: Conserved Quantity from Boost
+Invariance for Field Theories\quad 附录：场论中的推动不变性与其守恒量}\label{sec4.7}
