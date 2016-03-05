@@ -519,3 +519,226 @@ q = a\mathbf{1} + b\mathbf{i} + c\mathbf{j} + d\mathbf{k} = \begin{pmatrix}
 注意\ref{equ3.30}式中的矩阵是线性独立的\mpar{线性独立的概念见附录A.1.}，它们构成群$\mathcal{SU}(2)$的基。与之前相同，$\mathcal{S}$表示特殊(special)，含义为$\det (\mathcal{U}) = 1$；$\mathcal{U}$表示幺正(unitary)\mpar{进一步介绍见本章附录 --- \ref{sec3.10}节。}，即$\mathcal{U}^\dag \mathcal{U} = 1$。任意单位四元数都唯一对应$\mathcal{SU}(2)$群中的一个群元。
 
 $\mathcal{SU}(2)$群如何与三维旋转联系？事情正在起变化，$\mathcal{SU}(2)$群与$\mathcal{SO}(3)$\mpar{$\mathcal{SO}(3)$群就是三维旋转矩阵构成的群。}之间的对应关系并不像二维旋转中$\mathcal{U}(1)$与$\mathcal{SO}(2)$那样简单。
+
+2维虚数$z = a + ib$与2维向量很容易对应。单位复数保证了矢量长度在旋转变换下不变\mpar{注意这里的$R$表示一个单位复数，即$R^* R = 1$, $R$与复数$z$相乘就将$z$进行旋转变换。}：$(Rz)^* Rz = z^* R^* Rz = z^* z$。四元数有$4$个参数，它与三维向量的对应关系是并不明显。我们尝试将三维向量$\vec{v} = (x, y, z)$定义为如下四元数\footnote{注意下式中的$\mathbf{ijk}$是四元数的‘基’而非三维直角坐标系的基矢。 --- 译者}：
+\begin{equation}
+\label{equ3.34}
+v \equiv x\mathbf{i} + y\mathbf{j} + z\mathbf{k}
+\end{equation}
+利用前述四元数的矩阵表示可得：
+\begin{equation}
+\label{equ3.35}
+\det(v) = x^2 + y^2 + z^2
+\end{equation}
+于是保持向量$(x, y, z)$长度不变的变换就对应于保持矩阵行列式不变的矩阵变换。而{\bf 单位}四元数对应矩阵都具有{\bf 单位}行列式，它与任意矩阵相乘不改变该矩阵的行列式\footnote{利用$\det(AB) = \det(A)\det(B)$， --- 译者}。进展很顺利，但现在有个微妙的状况：继续猜想下去，我们会认为用单位四元数$u$旋转向量（对应的四元数）$v$直接用$u$乘以$v$就可以了（按照四元数乘法规则）。但细想起来这却不行，因为根据\ref{equ3.34}式，我们把任意三维向量对应的四元数定义在$\mathbb{R}\mathbf{i} + \mathbb{R}\mathbf{j} + \mathbb{R}\mathbf{k}$的范围内，$u$与$v$的四元数乘积会超出这个范围，这样向量旋转后可能不是个向量！这当然不行。
+
+事实上，旋转变换表示为：
+\begin{equation}
+\label{equ3.36}
+v' = q^{-1} v q
+\end{equation}
+其中$v$, $v'$分别为旋转前后的向量，$q$为表示旋转的单位四元数。
+
+这样我们终于实现了描述三维旋转的第二法 --- 单位四元数。
+
+例：定义$u$是$\mathbb{R}\mathbf{i} + \mathbb{R}\mathbf{j} + \mathbb{R}\mathbf{k}$中的某一单位向量，则任意单位四元数$t$可表示为：
+\begin{equation}
+\label{equ3.37}
+t = \cos \theta +  u\sin \theta
+\end{equation}
+利用\ref{equ3.34}式，任意三维向量$\vec{v}$可表示为：
+\begin{equation}
+\label{equ3.38}
+\vec{v} = (v_x, v_y, v_z)^T = v_x \mathbf{i} + v_y \mathbf{j} + v_z \mathbf{k} \underbrace{=}_{\ref{equ3.31}\text{式}} \begin{pmatrix}
+		iv_z & -v_x - iv_y \\
+		v_x - iv_y & -iv_z
+	\end{pmatrix}
+\end{equation}
+
+简明起见我们举个特例，把向量$\vec{v} = (1, 0, 0)^T$绕$z$轴旋转。
+\begin{align}
+\label{equ3.39}
+\vec{v} &= (1, 0, 0)^T \rightarrow v = 1\mathbf{i} + 0\mathbf{j} + 0\mathbf{k} = 
+	\begin{pmatrix}
+		0 & -1 \\ 1 & 0
+	\end{pmatrix}
+\\
+\label{equ3.40}
+R_z(\theta) &= \cos \theta \mathbf{1} + \sin \theta \mathbf{k} =
+	\begin{pmatrix}
+		\cos \theta + i\sin \theta & 0 \\
+		0 & \cos \theta - i\sin \theta
+	\end{pmatrix}
+\end{align}
+上式也可用欧拉公式写出\mpar{欧拉公式的推导见附录B.4.2}：
+\begin{equation}
+\label{equ3.41}
+\mathrm{e}^{ix} = \cos x + i\sin x
+\Rightarrow
+R_z(\theta) = \begin{pmatrix}
+				\mathrm{e}^{i\theta} & 0 \\
+				0 & \mathrm{e}^{-i\theta}
+			  \end{pmatrix}
+\end{equation}
+四元数旋转矩阵的逆矩阵为：
+\begin{equation}
+\label{equ3.42}
+R_z^{-1} (\theta) = 
+	\begin{pmatrix}
+		\cos \theta - i\sin \theta & 0 \\
+		0 & \cos \theta + i\sin \theta
+	\end{pmatrix}
+=
+	\begin{pmatrix}
+		\mathrm{e}^{-i\theta} & 0 \\
+		0 & \mathrm{e}^{i\theta}
+	\end{pmatrix}
+\end{equation}
+根据\ref{equ3.36}式旋转向量$v$；
+\begin{align}
+v' &= R_z^{-1} (\theta) v R_z(\theta) =
+	\begin{pmatrix}
+		\mathrm{e}^{-i\theta} & 0 \\
+		0 & \mathrm{e}^{i\theta}
+	\end{pmatrix}
+	\begin{pmatrix}
+	0 & -1 \\ 1 & 0
+	\end{pmatrix}
+	\begin{pmatrix}
+		\mathrm{e}^{i\theta} & 0 \\
+		0 & \mathrm{e}^{-i\theta}
+	\end{pmatrix}
+\nonumber \\
+\label{equ3.43}
+&= \begin{pmatrix}
+		0 & -\mathrm{e}^{-i 2\theta} \\
+		\mathrm{e}^{i 2\theta} & 0
+	\end{pmatrix}
+= \begin{pmatrix}
+		0 & -\cos (2\theta) + i\sin (2\theta) \\
+		\cos (2\theta) + i\sin (2\theta) & 0
+  \end{pmatrix}
+\end{align}
+另一方面，向量$v'$用四元数表示为：
+\begin{equation}
+\label{equ3.44}
+v' = 
+	\begin{pmatrix}
+		iv'_z & -v'_x - iv'_y \\
+		v'_x - iv'_y & -iv'_z
+	\end{pmatrix}
+\end{equation}
+上式与\ref{equ3.43}式比较可得：
+\begin{equation}
+\label{equ3.45}
+v'_x = \cos(2\theta),\quad v'_y = -\sin (2\theta),\quad v'_z = 0
+\end{equation}
+所以
+\begin{equation}
+\label{equ3.46}
+\rightarrow \vec{v'} = \big( \cos(2\theta), -\sin (2\theta), 0 \big)^T
+\end{equation}
+由上式可见从$\vec{v}$到$\vec{v}'$确实进行了旋转\mpar{见\ref{equ3.24}式，那里我们用三维旋转矩阵旋转向量。}，但是要注意，上式表示我们没有把$\vec{v}$旋转$\theta$角度，而是旋转了$2\theta$！因此我们定义$\phi \equiv 2 \theta$, 这样$\phi$表示真正的旋转角，$\ref{equ3.37}$重写为：
+\begin{equation}
+\label{equ3.47}
+t = \cos \left( \frac{\phi}{2} \right) + \sin \left(\frac{\phi}{2} \right) u
+\end{equation}
+
+这样定义的单位四元数与三维旋转矩阵之间的关系并非一一对应的，而是两个单位四元数描述同一个旋转，例如\mpar{将向量旋转$\pi$与旋转$3\pi = \pi + 2\pi$相同。换言之：两个单位四元数$u$与$-u$对应同一变换：旋转$\pi$.}：
+
+{
+\centering
+\setlength{\unitlength}{0.8cm}
+\begin{picture}(6, 4.5)\thicklines
+\put(0.5, 3){\makebox(2.5, 1.2){\text{$t_{\phi = \pi} = u$}}}
+\put(5.5, 3){\makebox(2.5, 1.2){\text{$t_{\phi = 3\pi} = -u$}}}
+
+\put(1.7, 3.2){\vector(1, -1){1.4}}
+\put(6.0, 3.2){\vector(-1, -1){1.4}}
+\put(2.8, 0.8){\makebox(2.5, 1.2){\text{将向量旋转$\pi$}}}
+\end{picture}
+}
+
+因此$\mathcal{SU}(2)$群称为$\mathcal{SO}(3)$群的{\bf 双覆盖}。一个$\mathcal{SU}(2)$中的群元对应$\mathcal{SO}(3)$的哪个群元是很明确的，反过来就不行，因为$\mathcal{SO}(3)$中的一个群元对应$\mathcal{SU}(2)$中的两个。这并非仅有数学意义，稍后就会看到，在物理上，一个能覆盖别的群的群往往更加深刻\mpar{剧透：Lorentz群的双覆盖蕴含{\bf 自旋}概念，而Lorentz群自身并不具有。自旋是指粒子的某种内禀角动量，它是粒子最重要的特征之一。自旋在小节\ref{sec4.5.4}和\ref{sec8.5.5}详述。}。
+
+给定某个群，为了找出能覆盖这个群的群，我们需要学习Lie代数 --- Lie理论的利器，下一节就讲Lie代数。
+
+注意我们把三维向量对应到四元数集$\mathbb{R}\mathbf{i} + \mathbb{R}\mathbf{j} + \mathbb{R}\mathbf{k}$中，因此四元数的一个参数没有用到，这是相对论的伏笔。比如将时间$t$考虑进来后，四维‘向量’与四元数对应的十分自然，就像二维复数与二维向量之间那样：$v = t\mathbf{1} + x\mathbf{i} + y\mathbf{j} + z\mathbf{k}$。纯数学的观点鼓励我们使用4维向量。如果我们想描述四维旋转（因为我们目前认为宇宙是$3+1$四维时空），应该怎么办？有两个选择：
+\begin{itemize}
+	\item 再去找更高维的‘复数’，或者：
+	\item 再用四元数试试看。
+\end{itemize}
+从刚才的遐想可以看出四元数与四维旋转有着暧昧的联系。任意四维旋转需要$6$个参数表示\mpar{四维旋转矩阵$\mathcal{O}$($4 \times 4$)有$16$个参数，条件$\mathcal{O}^T \mathcal{O} = 1$与$\det(\mathcal{O}) = 1$将$16$个参数限制为$6$个自由参数。}，没有$7$维复数，这样‘单位7维复数描述6个参数的四维旋转’就行不通了。我们注意到{\bf 两个}单位四元数正好有$6$个自由参数。因此两个单位四元数很可能可以描述四维旋转。之后会看到，两个$\mathcal{SU}(2)$群与四维旋转群确实存在千丝万缕的联系。
+
+\section[Lie代数]{Lie Algebras\quad Lie代数}
+\label{sec3.4}
+Lie理论是研究连续对称的理论。连续对称的例子可见本章开头讨论的单位圆的旋转对称性。连续性意味着存在无限接近于恒等变换（恒等变换：什么都不干）的群元。相对的，离散群的群元个数是可数的，不存在无限接近于恒等元的群元。例如把正方形绕中心转$0.000001^\circ$，这与恒等变换（转$0^\circ$）非常接近，但它不是正方形的恒等变换。而把圆绕圆心转$0.000001^\circ$就是对称的。圆的对称群（对称变换组成的群）是连续的，因为变换参数（旋转角）可以取任意（连续）的值。用数学符号来表示：把恒等元记作$I$，无限接近恒等元的群元$g$可表示为：
+\begin{equation}
+\label{equ3.48}
+g(\epsilon) = I + \epsilon X
+\end{equation}
+其中$\epsilon$表示小量（数学总是用$\epsilon$表示小量），$X$称为生成元，稍后就讨论它。这样一个轻微的小变换作用在物体上几乎啥也不变，有时称$g(\epsilon)$为无穷小变换。把无穷小变换重复许多次就能得到一个有限大小的变换。以旋转为例：许多朝同一方向小旋转等效于一次有限大的旋转。用数学语言来说，我们可以将无穷小变换重复许多次：
+\begin{equation}
+\label{equ3.49}
+h(\theta) = \underbrace{(I + \epsilon X)(I + \epsilon X) \dots (I + \epsilon X)}_{k\text{个}(I + \epsilon X)} = (I + \epsilon X)^k
+\end{equation}
+其中$k$表示无穷小变换重复的次数。如果$\theta$表示有限大的旋转角，比如$50^\circ$什么的，然后$N$表示超大的数，则无限接近于恒等变换的旋转变换可表示为：
+\begin{equation}
+\label{equ3.50}
+g(\frac{\theta}{N}) = I + \frac{\theta}{N} X
+\end{equation}
+要使上式表示的变换尽可能小，则让$N$尽可能大，令$N \rightarrow \infty$。为了从这样一个无穷小变换得到一个有限变换，需要把无穷小变换重复无限多次，即：
+\begin{equation}
+\label{equ3.51}
+h(\theta) = \lim_{N \rightarrow \infty} \left( I + \frac{\theta}{N}X \right)^N
+\end{equation}
+微积分告诉我们这个极限就是指数函数\mpar{\ref{equ3.51}式经常用作指数函数的定义。指数的级数表示与\ref{equ3.51}式等价性的证明见附录B.4.1. 这在几乎所有的数学分析课本中都能找到。}：
+\begin{equation}
+\label{equ3.52}
+h(\theta) = \lim_{N \rightarrow \infty} \left( I + \frac{\theta}{N}X \right)^N = \mathrm{e}^{\theta X}
+\end{equation}
+上式有$X$产生了有限变换$h(\theta)$的感觉，因此$X$成为{\bf 生成元}。生成元的定义之后详述，下面先从另一个角度看这个问题。
+
+考虑某个用矩阵表示的连续变换群，对任意群元，在恒等元$I$处做Taylor展开\mpar{如果你从未听说过Taylor展开或Taylor级数，作者推荐你看一看附录B.3. \sout{而译者建议你学了微积分再来}}。
+\begin{equation}
+\label{equ3.53}
+h(\theta) = I + \frac{dh}{d\theta} \Bigg|_{\theta = 0} \theta + \frac{1}{2} \frac{d^2 h}{d \theta^2} \Bigg|_{\theta = 0} \theta^2 + \dots = \sum_n \frac{1}{n!} \frac{d^n h}{d \theta^n} \Bigg|_{\theta = 0} \theta^n
+\end{equation}
+
+利用指数函数的级数展开可将上式的级数表示为更紧凑的形式\mpar{附录B.4.1中有推导}：
+\begin{equation}
+\label{equ3.54}
+h(\theta) = \exp \left( \frac{dh}{d\theta}\Big|_{\theta = 0} \theta \right) \equiv \sum_n \frac{1}{n!} \frac{d^n h}{d \theta^n}\Bigg|_{\theta = 0} \theta^n
+\end{equation}
+这与之前的描述有联系。比较上式与\ref{equ3.52}式可得：
+\begin{equation}
+\label{equ3.55}
+X = \frac{dh}{d\theta}\Bigg|_{\theta = 0}
+\end{equation}
+
+蕴含在上述推导中的思想是：通过研究群中重要的无穷小元素 --- {\bf 生成元}（上面的$X$）就能获得群的许多重要信息。
+
+矩阵Lie群（记作$G$）的Lie代数就是下面的集合：
+\[ 
+\Big\{X \Big| \text{若}\mathrm{e}^X \in G \Big\}
+\]
+即如果$X$满足$\mathrm{e}^X$是$G$的群元，则$X$就是$G$的Lie代数（它是一个集合！）中的元素。这个简单定义只对矩阵Lie群管用。之后我们引入Lie代数的一般定义。
+
+上面的矩阵Lie群的Lie代数的定义用数学语言表述为\mpar{群$G$的Lie代数通常用哥特体活字（Fraktur）字母$\mathfrak{g}$表示。}：
+
+{ \it
+$n \times n$矩阵Lie群$G$的Lie代数$\mathfrak{g}$是满足如下条件的$n \times n$矩阵$X$的集合：
+
+	{\begin{center}
+		$\mathrm{e}^{tX} \in G, t \in \mathbb{R}$
+	\end{center}
+	}
+}
+
+根据群的定义，群无非是一些变换的集合。群乘法$\circ$告诉我们群元之间怎样合体。矩阵Lie群的群乘法就是矩阵乘法，我们可能naive地认为Lie代数的元素之间采用相同的方式合体（$\circ$），但这并不正确！诚然，（矩阵Lie群的）Lie代数的元素都是矩阵\mpar{Lie群理论的著名定理 --- Ado定理（Ado's Theorem）告诉我们任意Lie代数与矩阵Lie代数同构。}，但两个Lie代数的矩阵乘法的结果往往不再是Lie代数的元素。Lie代数元素间有另外的合体规则，当然它与原来群的群乘法直接有关。
+
+Lie群乘法与Lie代数合体法则之间的关系由著名的Baker-Campbell-Hausdorff公式（以下简称BCH公式）给出\mpar{我们不讲这个公式的证明，在大多数关于Lie理论的教材都能找到，比如 William Fulton and Joe Harris. Representation Theory: A First Course. Springer, 1st corrected edition, 8 1999. ISBN 9780387974958}：
+\begin{equation}
+\label{equ3.56}
+\mathrm{e}^X \circ \mathrm{e}^Y = \mathrm{e}^{X + Y + \frac{1}{2}[X, Y] + \frac{1}{12} \big[X, [X, Y]\big] - \frac{1}{12} \big[Y, [X, Y]\big] + \dots  }
+\end{equation}
