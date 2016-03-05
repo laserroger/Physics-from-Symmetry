@@ -5,26 +5,37 @@
 \contentsline {section}{\numberline {1.2}全书概览}{5}{section.1.2}
 \contentsline {section}{\numberline {1.3}基本粒子和基本相互作用力}{7}{section.1.3}
 \contentsline {chapter}{\numberline {2}狭义相对论}{9}{chapter.2}
-\contentsline {section}{\numberline {2.1}狭义相对论的不变量}{10}{section.2.1}
-\contentsline {part}{\@mypartnumtocformat {II}{Symmetry Tools 对称性工具}}{13}{part.2}
-\contentsline {chapter}{\numberline {3}Lie群}{15}{chapter.3}
-\contentsline {section}{\numberline {3.1}群}{16}{section.3.1}
-\contentsline {section}{\numberline {3.2}二维旋转}{19}{section.3.2}
-\contentsline {subsection}{\numberline {3.2.1}单位复数表示旋转变换}{20}{subsection.3.2.1}
-\contentsline {section}{\numberline {3.3}三维旋转}{23}{section.3.3}
-\contentsline {subsection}{\numberline {3.3.1}四元数}{23}{subsection.3.3.1}
-\contentsline {chapter}{\numberline {4}框架/体系}{25}{chapter.4}
-\contentsline {section}{\numberline {4.1}拉格朗日形式}{25}{section.4.1}
-\contentsline {subsection}{\numberline {4.1.1}Fermat 原理}{26}{subsection.4.1.1}
-\contentsline {subsection}{\numberline {4.1.2}变分法：基本思想}{26}{subsection.4.1.2}
-\contentsline {section}{\numberline {4.2}限制}{27}{section.4.2}
-\contentsline {section}{\numberline {4.3}粒子理论与场论}{28}{section.4.3}
-\contentsline {section}{\numberline {4.4}欧拉-拉格朗日方程}{29}{section.4.4}
-\contentsline {section}{\numberline {4.5}诺特定理}{31}{section.4.5}
-\contentsline {subsection}{\numberline {4.5.1}粒子理论的Noether 定理}{31}{subsection.4.5.1}
-\contentsline {part}{\@mypartnumtocformat {III}{The Equations of Nature 自然界的方程}}{33}{part.3}
-\contentsline {chapter}{\numberline {5}测量}{35}{chapter.5}
-\contentsline {section}{\numberline {5.1}量子力学中的算符}{35}{section.5.1}
-\contentsline {subsection}{\numberline {5.1.1}自旋与角动量}{36}{subsection.5.1.1}
-\contentsline {section}{\numberline {5.2}量子场论的算符}{37}{section.5.2}
+\contentsline {section}{\numberline {2.1}狭义相对论的中的不变量}{10}{section.2.1}
+\contentsline {section}{\numberline {2.2}固有时}{13}{section.2.2}
+\contentsline {section}{\numberline {2.3}速度上限}{14}{section.2.3}
+\contentsline {section}{\numberline {2.4}Minkowski记法}{15}{section.2.4}
+\contentsline {section}{\numberline {2.5}Lorentz变换}{18}{section.2.5}
+\contentsline {section}{\numberline {2.6}不变性，对称性，协变性}{20}{section.2.6}
+\contentsline {part}{\@mypartnumtocformat {II}{Symmetry Tools 对称性工具}}{23}{part.2}
+\contentsline {chapter}{\numberline {3}Lie群}{25}{chapter.3}
+\contentsline {section}{\numberline {3.1}群}{26}{section.3.1}
+\contentsline {section}{\numberline {3.2}二维旋转}{29}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}单位复数表示旋转变换}{30}{subsection.3.2.1}
+\contentsline {section}{\numberline {3.3}三维旋转}{33}{section.3.3}
+\contentsline {subsection}{\numberline {3.3.1}四元数}{34}{subsection.3.3.1}
+\contentsline {chapter}{\numberline {4}框架/体系}{37}{chapter.4}
+\contentsline {section}{\numberline {4.1}拉格朗日形式}{37}{section.4.1}
+\contentsline {subsection}{\numberline {4.1.1}Fermat 原理}{38}{subsection.4.1.1}
+\contentsline {subsection}{\numberline {4.1.2}变分法：基本思想}{38}{subsection.4.1.2}
+\contentsline {section}{\numberline {4.2}限制}{39}{section.4.2}
+\contentsline {section}{\numberline {4.3}粒子理论与场论}{40}{section.4.3}
+\contentsline {section}{\numberline {4.4}欧拉-拉格朗日方程}{41}{section.4.4}
+\contentsline {section}{\numberline {4.5}Noether 定理}{43}{section.4.5}
+\contentsline {subsection}{\numberline {4.5.1}粒子理论的Noether 定理}{43}{subsection.4.5.1}
+\contentsline {subsection}{\numberline {4.5.2}场论中的 Neother 定理——时空对称性}{48}{subsection.4.5.2}
+\contentsline {subsection}{\numberline {4.5.3}转动和推动}{48}{subsection.4.5.3}
+\contentsline {subsection}{\numberline {4.5.4}自旋}{48}{subsection.4.5.4}
+\contentsline {subsection}{\numberline {4.5.5}场论中的 Neother 定理——内禀对称性}{48}{subsection.4.5.5}
+\contentsline {section}{\numberline {4.6}附录：粒子理论中的推动不变性与其守恒量}{48}{section.4.6}
+\contentsline {section}{\numberline {4.7}附录：场论中的推动不变性与其守恒量}{48}{section.4.7}
+\contentsline {part}{\@mypartnumtocformat {III}{The Equations of Nature 自然界的方程}}{49}{part.3}
+\contentsline {chapter}{\numberline {5}测量}{51}{chapter.5}
+\contentsline {section}{\numberline {5.1}量子力学中的算符}{51}{section.5.1}
+\contentsline {subsection}{\numberline {5.1.1}自旋与角动量}{52}{subsection.5.1.1}
+\contentsline {section}{\numberline {5.2}量子场论的算符}{53}{section.5.2}
 \contentsfinish 
