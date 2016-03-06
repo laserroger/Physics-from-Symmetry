@@ -27,15 +27,15 @@
 \contentsline {section}{\numberline {4.4}欧拉-拉格朗日方程}{41}{section.4.4}
 \contentsline {section}{\numberline {4.5}Noether 定理}{43}{section.4.5}
 \contentsline {subsection}{\numberline {4.5.1}粒子理论的Noether 定理}{43}{subsection.4.5.1}
-\contentsline {subsection}{\numberline {4.5.2}场论中的 Neother 定理——时空对称性}{48}{subsection.4.5.2}
-\contentsline {subsection}{\numberline {4.5.3}转动和推动}{48}{subsection.4.5.3}
-\contentsline {subsection}{\numberline {4.5.4}自旋}{48}{subsection.4.5.4}
-\contentsline {subsection}{\numberline {4.5.5}场论中的 Neother 定理——内禀对称性}{48}{subsection.4.5.5}
-\contentsline {section}{\numberline {4.6}附录：粒子理论中的推动不变性与其守恒量}{48}{section.4.6}
-\contentsline {section}{\numberline {4.7}附录：场论中的推动不变性与其守恒量}{48}{section.4.7}
-\contentsline {part}{\@mypartnumtocformat {III}{The Equations of Nature 自然界的方程}}{49}{part.3}
-\contentsline {chapter}{\numberline {5}测量}{51}{chapter.5}
-\contentsline {section}{\numberline {5.1}量子力学中的算符}{51}{section.5.1}
-\contentsline {subsection}{\numberline {5.1.1}自旋与角动量}{52}{subsection.5.1.1}
-\contentsline {section}{\numberline {5.2}量子场论的算符}{53}{section.5.2}
+\contentsline {subsection}{\numberline {4.5.2}场论中的 Neother 定理——时空对称性}{47}{subsection.4.5.2}
+\contentsline {subsection}{\numberline {4.5.3}转动和推动}{50}{subsection.4.5.3}
+\contentsline {subsection}{\numberline {4.5.4}自旋}{50}{subsection.4.5.4}
+\contentsline {subsection}{\numberline {4.5.5}场论中的 Neother 定理——内禀对称性}{50}{subsection.4.5.5}
+\contentsline {section}{\numberline {4.6}附录：粒子理论中的推动不变性与其守恒量}{50}{section.4.6}
+\contentsline {section}{\numberline {4.7}附录：场论中的推动不变性与其守恒量}{50}{section.4.7}
+\contentsline {part}{\@mypartnumtocformat {III}{The Equations of Nature 自然界的方程}}{51}{part.3}
+\contentsline {chapter}{\numberline {5}测量}{53}{chapter.5}
+\contentsline {section}{\numberline {5.1}量子力学中的算符}{53}{section.5.1}
+\contentsline {subsection}{\numberline {5.1.1}自旋与角动量}{54}{subsection.5.1.1}
+\contentsline {section}{\numberline {5.2}量子场论的算符}{55}{section.5.2}
 \contentsfinish 
