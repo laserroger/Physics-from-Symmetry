@@ -376,9 +376,97 @@ J_\text{rot} =& \frac{\partial {\mathcal L}(q_i, \dot q_i, t)}{\partial \dot q_i
 \end{itemize}
 Noether 定理向我们展示了，为什么这些记号%
 \mpar{除了推动不变性导致的守恒量}%
-会以这个或那个形式出现在每一个物理理论中。只要我们依旧有通常的时空对称性，动量、能量和角动量就是守恒量。在场论中，我们有两类对称性：一方面，拉格朗日量会在时空的变换，如转动，下不变；另一方面，我们也会有在场自身的变换下的不变性，被称为{\bf 内禀对称性(internal symmetries)。}
+会以这个或那个形式出现在每一个物理理论中。只要我们依旧有通常的时空对称性，动量、能量和角动量就是守恒量。在场论中，我们有两类对称性：一方面，拉格朗日量会在时空变换，如转动，下不变；另一方面，我们也会有在场自身的变换下的不变性，被称为{\bf 内禀对称性(internal symmetries)。}
 
 \subsection{场论中的 Neother 定理——时空对称性}\label{sec4.5.2}
+对于场，我们得区分在时空变换下两类不同的改变。当观测者$S$看到场$\Psi(x)$时，观测者$S'$看到的则是场$\Psi'(x')$。这是同一个场，只是从不同的视角来看，会有不同的分量值。这两类描述之间由 Lorentz 群中的一个合适的变换相联系。我们现在将会使用在\ref{sec3.7.11}中介绍过的场表示%the field representation
+。（无穷维）微分算符表示$x$变换到$x'$。这意味着利用这个表示我们能在不同的时空点或者在一个转动参考系中计算场分量。Lorentz 群的有限维变换使$\Psi$映射到$\Psi'$，即，混合场分量%
+\mpar{请回忆这个例子，Weyl 旋量有两个分量而矢量场有四个分量。如果我们从一个不同的视角来考察矢量场$A_\mu=\begin{pmatrix} A_0\\ A_1\\ A_2\\ A_3 \end{pmatrix}$，即，从转动系看，它会形如$A'_\mu=\begin{pmatrix} A'_0\\ A'_1\\ A'_2\\ A'_3 \end{pmatrix}=\begin{pmatrix}{c} A_0\\ -A_2\\ A_1\\ A_3 \end{pmatrix}$。$A'_\mu$和$A_\mu$描述了从两个相差了绕$z$轴转动$\unit{90}{\degree}$的坐标系分别观察到的同一个场。}
+
+对于一个依赖于时空的场的具体变换，需要同时考虑两个部分。我们将分别处理它们，首先来看$x$到$x'$的这一项。对于旋转来说，单由这一个部分推出的守恒量并不会真的守恒，这是因为我们忽略了变换的第二项。仅当将变换的两项$x\rightarrow x'$和$\Psi\rightarrow\Psi'$分别导致的守恒量加起来之后得到的，才是真正守恒的。
+
+为了使上面这段论证更有说服力，我们考虑一个一般的拉格朗日量密度${\mathscr L}\left(\Phi(x_\mu),\partial_\mu \Phi(x_\mu),x_\mu\right)$\footnote{译注：原文多出一左括号}。对称性意味着
+\begin{equation}
+{\mathscr L}\left(\Phi(x_\mu),\partial_\mu \Phi(x_\mu),x_\mu\right) = {\mathscr L}\left(\Phi'(x'_\mu),\partial_\mu \Phi'(x'_\mu),x'_\mu\right)\text{。}
+\end{equation}
+一般的，当函数自身发生改变且其计算的点也发生改变时，函数的函数的总改变量由下式给出%
+\mpar{如果你对此不熟悉：这常被称为全导数。总改变量等于变化率，即偏导数，乘以变量自身的改变，之和。例如，三维空间中的函数\(f(x,y,z)\)的总该变量为\(\frac{\partial f}{\partial x}\delta x+\frac{\partial f}{\partial y}\delta y+\frac{\partial f}{\partial z}\delta z\),即变化率乘以自身改变的距离。我们考察的是无穷小变化，故我们可以略去 Taylor 展开的高阶项仅考虑第一项。}
+\begin{equation}
+\delta f(g(x),h(x),\dots)=\frac{\partial f}{\partial g}\delta g + \frac{\partial f}{\partial h}\delta h + \dots +\frac{\partial f}{\partial x}\text{。}
+\end{equation}
+运用到拉格朗日量上有
+\begin{equation}
+\delta {\mathscr L} = \frac{\partial\mathscr L}{\partial \Phi}\delta\Phi + \frac{\partial\mathscr L}{\partial(\partial_\mu \Phi)}\delta(\partial_\mu\Phi) + \frac{\partial\mathscr L}{\partial x_\mu}\delta x_\mu\text{，}
+\end{equation}
+用欧拉-拉格朗日方程将其改写为
+\begin{equation}
+\begin{aligned}
+\delta {\mathscr L} &= \partial_\mu\left(\frac{\partial\mathscr L}{\partial(\partial_\mu \Phi)}\right)\delta\Phi + \frac{\partial\mathscr L}{\partial(\partial_\mu \Phi)}\underbrace{\delta(\partial_\mu\Phi)}_{\mathclap{=\partial_\mu\delta\Phi}} + \frac{\partial\mathscr L}{\partial x_\mu}\delta x_\mu \\
+&\underbrace{=}_{\mathclap{\text{莱布尼兹律}}} \partial_\mu\left(\frac{\partial\mathscr L}{\partial(\partial_\mu \Phi)}\delta\Phi\right) + \frac{\partial\mathscr L}{\partial x_\mu}\delta x_\mu
+\end{aligned}
+\label{eq:4.29}
+\end{equation}
+其中$\delta\Phi$有两项
+\begin{equation}
+\delta\Phi = \epsilon_{\mu\nu}S^{\mu\nu}\Phi(x)-\frac{\partial\Phi(x)}{\partial x_\mu}\delta x_\mu \text{，}
+\label{eq:4.30}
+\end{equation}
+其中$\epsilon_{\mu\nu}$为转动参数，$S_{\mu\nu}$为相应的有限维群表示中的转动算符，额外的负号仅为了方便。$S_{\mu\nu}$是由转动生成元$S_{i}=\frac{1}{2}\epsilon_{ijk}S_{jk}$和推动生成元$K_i=S_{i0}$构成，类似于\ref{eq:3.165}式中$M_{\mu\nu}$的定义。$S_{\mu\nu}$的这个定义使得我们同时进行旋转和推动。
+
+第一项仅在旋转和推动时较重要，因为平移不会导致场分量的混合。推动所对应的守恒量依旧不是特别有意思，就像在粒子理论中得到的那样。所以实际上这一项只和转动相关。
+
+让我们从最简单的场变换出发：时空平移，即
+\begin{equation}
+x_\mu \rightarrow x'_\mu = x_\mu + \delta x_\mu = x_\mu + a_\mu
+\label{eq:4.31}
+\end{equation}
+将$\epsilon_{\mu\nu}=0$（在平移下场分量不会混合）代入方程\ref{eq:4.30}
+\begin{equation}
+\delta\Phi = -\frac{\partial\Phi(x)}{\partial x_\mu}\delta x_\mu
+\end{equation}
+再由\ref{eq:4.29}式，考察不变性($\delta{\mathscr L}=0$)所导致的守恒量
+\begin{eqnarray}
+-\partial_\nu\left(\frac{\partial\mathscr L}{\partial(\partial_\nu \Phi)}\frac{\partial\Phi(x)}{\partial x_\mu}\delta x_\mu\right) + \frac{\partial\mathscr L}{\partial x_\mu}\delta x_\mu &= 0 \\
+\rightarrow -\partial_\nu\left(\frac{\partial\mathscr L}{\partial(\partial_\nu \Phi)}\frac{\partial\Phi(x)}{\partial x^\mu} - \delta_\mu^\nu{\mathscr L}\right) \delta x_\mu &= 0 \label{eq:4.33}
+\end{eqnarray}
+
+由\ref{eq:4.31}式我们有$\delta x_\mu = a_\mu$，代入\ref{eq:4.33}式中可得\footnote{\textcolor{red}{原文上下数式的指标不平衡}}
+\begin{equation}
+-\partial_\nu\left(\frac{\partial\mathscr L}{\partial(\partial_\nu \Phi)}\frac{\partial\Phi(x)}{\partial x^\mu} - \delta_\mu^\nu{\mathscr L}\right) \delta x_\mu = 0 \text{，}
+\label{eq:4.34}
+\end{equation}
+我们定义能动张量
+\begin{equation}
+T_\mu^\nu : = \frac{\partial\mathscr L}{\partial(\partial_\nu \Phi)}\frac{\partial\Phi(x)}{\partial x^\mu} - \delta_\mu^\nu{\mathscr L} \text{。}
+\end{equation}
+由于$a_\mu$是任意的，\ref{eq:4.34}式告诉我们$T_\mu^\nu$满足连续性方程
+\begin{eqnarray}
+\partial_\nu T_\mu^\nu = 0 \\
+\rightarrow \partial_\nu T_\mu^\nu = \partial_0 T_\mu^0 - \partial_i T_\mu^i = 0
+\end{eqnarray}
+对于所有$\mu$成立。这直接告诉我们有守恒量的存在，例如取$\mu=0$我们有%
+\mpar{使用了$\partial_0 = \partial_t$和$\partial^i T_i^0=\nabla\cdot\vec{T}$，以及著名的散度定理$\int_V \rd^3 \bm{x}~\nabla A = \int_{\delta V} \rd^2 x~A$，即能让体积分化作面积分。对于散度定理，在那儿叫 Gauss 定理，有一个非常有启发性的证明，可以在\url{http://www.feynmanlectures.caltech.edu/II_03.html}上的第三章找到。Richard P. Feynman, Robert B. Leighton, and Matthew Sands. The Feynman Lectures on Physics: Volume 2. Addison-Wesley, 1st edition, 2 1977. ISBN 9780201021172（译注：中译本：《费恩曼物理学讲义》）}%求谁帮忙加一下再改一下格式
+\begin{equation*}
+\begin{aligned}
+\partial_0 T_0^0 + \partial_i T_0^i = 0 \rightarrow \partial_0 T_0^0 = - \partial_i T_0^i \\
+\partial_t T_0^0 = - \nabla\cdot\vec{T} \underbrace{\rightarrow}_{\mathclap{\text{在某个无限的空间域$V$上积分}}} \int_V \rd^3 \bm{x}~\partial_t T_0^0 = - \int_V \rd^3 \bm{x}~\nabla\cdot\vec{T} %
+\end{aligned}
+\end{equation*}
+\begin{eqnarray}
+\partial_t \int_V \rd^3 \bm{x}~T_0^0 = - \int_V \rd^3 \bm{x}~\nabla\cdot\vec{T}\overbrace{\rightarrow}^{\mathclap{\text{散度定理；$\delta V$代表$V$的表面}}} = -\int_{\delta V}\rd^2 \bm{x}~\vec{T} \underbrace{=}_{\mathclap{\text{场在无穷远处为零}}} 0 \\
+\rightarrow \partial_t \int_V \rd^3 \bm{x}~T_0^0 = 0 \label{eq:4.39}
+\end{eqnarray}
+
+最后一步中我们是这样处理的：考虑一个无限大的空间域，如一个有着无限大半径$r$的球体，我们需要在其表面计算积分，即在$r=\infty$处计算场值。在\ref{sec2.3}节中，我们发现了物理中任何东西都有一个速度上界。由此无穷远处的场不可能对有限远$x$处的物理有任何影响，故我们说场在无穷远处为零\footnote{译注：这段讨论怪怪的}。
+
+最终的结论是：时空平移不变性导致四个守恒量%
+\mpar{因为对于任意$a_\mu$有$\partial_0 T_\mu^0 a_\mu = \partial_0 T_0^0 a_0 -\partial_0 T_i^0 a^i = 0$成立，所以我们对于每一个分量都能得到一个连续性方程。}%
+，\ref{eq:4.39}式告诉我们它们是
+\begin{eqnarray}
+E &=& \int\rd^3\bm{x}~T_0^0 \\
+P_i &=& \int\rd^3\bm{x}~T_i^0
+\end{eqnarray}
+其中$i=1,2,3$。它们分别被称为系统的总能量：因时间平移$x_0\rightarrow x_0+a_0$不变性而守恒；场的总动量：因空间平移$x_0\rightarrow x_0+a_0$不变性而守恒。
 
 \subsection{转动和推动}\label{sec4.5.3}
 

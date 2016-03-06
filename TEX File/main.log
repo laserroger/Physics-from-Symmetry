@@ -1,4 +1,8 @@
+<<<<<<< HEAD
+This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015/W32TeX) (preloaded format=xelatex 2016.1.22)  6 MAR 2016 18:29
+=======
 This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015) (preloaded format=xelatex 2015.5.24)  4 MAR 2016 18:34
+>>>>>>> upstream/master
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -885,17 +889,38 @@ LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 Package: mathrsfs 1996/01/01 Math RSFS package v1.0 (jk)
 \symrsfs=\mathgroup9
 )
+<<<<<<< HEAD
+(c:/texlive/texmf-dist/tex/latex/siunits/SIunits.sty
+Package: SIunits 2007/12/02 v1.36 Support for the International System of units
+ (MH)
+
+
+\@qskwidth=\skip54
+\symgreek=\mathgroup10
+(c:/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01
+
+(c:/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0
+\@emptytoks=\toks18
+\ex@=\dimen164
+))
+(c:/texlive/texmf-dist/tex/latex/siunits/SIunits.cfg)
+Option `squaren' provided!
+) (c:/texlive/texmf-dist/tex/generic/ulem/ulem.sty
+=======
 (/usr/local/texlive/2015/texmf-dist/tex/generic/ulem/ulem.sty
+>>>>>>> upstream/master
 \UL@box=\box44
 \UL@hyphenbox=\box45
-\UL@skip=\skip54
-\UL@hook=\toks18
-\UL@height=\dimen164
+\UL@skip=\skip55
+\UL@hook=\toks19
+\UL@height=\dimen165
 \UL@pe=\count130
-\UL@pixel=\dimen165
+\UL@pixel=\dimen166
 \ULC@box=\box46
 Package: ulem 2012/05/18
-\ULdepth=\dimen166
+\ULdepth=\dimen167
 )
 (/usr/local/texlive/2015/texmf-dist/tex/latex/mhchem/mhchem.sty
 Package: mhchem 2015/04/23 v4.01 for typesetting chemical formulae
@@ -969,20 +994,23 @@ ions
 Package: calc 2014/10/28 v4.3 Infix arithmetic (KKT,FJ)
 \calc@Acount=\count173
 \calc@Bcount=\count174
-\calc@Adimen=\dimen167
-\calc@Bdimen=\dimen168
-\calc@Askip=\skip55
-\calc@Bskip=\skip56
+\calc@Adimen=\dimen168
+\calc@Bdimen=\dimen169
+\calc@Askip=\skip56
+\calc@Bskip=\skip57
 LaTeX Info: Redefining \setlength on input line 80.
 LaTeX Info: Redefining \addtolength on input line 81.
 \calc@Ccount=\count175
-\calc@Cskip=\skip57
+\calc@Cskip=\skip58
 )
 (/usr/local/texlive/2015/texmf-dist/tex/latex/amsmath/amsmath.sty
 Package: amsmath 2013/01/14 v2.14 AMS math features
-\@mathmargin=\skip58
+\@mathmargin=\skip59
 
 For additional information on amsmath, use the `?' option.
+<<<<<<< HEAD
+(c:/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty
+=======
 (/usr/local/texlive/2015/texmf-dist/tex/latex/amsmath/amstext.sty
 Package: amstext 2000/06/29 v2.01
 
@@ -992,6 +1020,7 @@ File: amsgen.sty 1999/11/30 v2.0
 \ex@=\dimen169
 ))
 (/usr/local/texlive/2015/texmf-dist/tex/latex/amsmath/amsbsy.sty
+>>>>>>> upstream/master
 Package: amsbsy 1999/11/29 v1.2d
 LaTeX Info: Redefining \boldsymbol on input line 39.
 \pmbraise@=\dimen170
@@ -1031,8 +1060,8 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
 \totwidth@=\dimen176
 \lineht@=\dimen177
 \@envbody=\toks22
-\multlinegap=\skip59
-\multlinetaggap=\skip60
+\multlinegap=\skip60
+\multlinetaggap=\skip61
 \mathdisplay@stack=\toks23
 LaTeX Info: Redefining \[ on input line 2665.
 LaTeX Info: Redefining \] on input line 2666.
@@ -1098,6 +1127,18 @@ Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
 )
 Variant \str_if_eq:VnTF already defined; not changing it on line 57
 \l__mhchem_ce_distanceFromLastComma_int=\count190
+<<<<<<< HEAD
+\__mhchem_arrow_extPgfLength_skip=\skip62
+\mhchem@bondwidth=\skip63
+\mhchem@bondheight=\skip64
+\mhchem@smallbondwidth@tmpA=\skip65
+\mhchem@smallbondwidth@tmpB=\skip66
+\mhchem@smallbondwidth=\skip67
+\mhchem@bondtmp@minussidebearingleft=\skip68
+\mhchem@bondtmp@minussidebearingright=\skip69
+\mhchem@minispace@tmp=\skip70
+\mhchem@minibackspace@tmp=\skip71
+=======
 \mhchem@arrow@params=\toks24
 \mhchem@arrowlength@pgf=\skip61
 \mhchem@bondwidth=\skip62
@@ -1109,6 +1150,7 @@ Variant \str_if_eq:VnTF already defined; not changing it on line 57
 \mhchem@bondtmp@minussidebearingright=\skip68
 \mhchem@minispace@tmp=\skip69
 \mhchem@minibackspace@tmp=\skip70
+>>>>>>> upstream/master
 \l__mhchem_option_version_int=\count191
 \mhchem@option@minusmathsidebearingleft=\dimen178
 \mhchem@option@minusmathsidebearingright=\dimen179
@@ -1129,7 +1171,13 @@ File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
 )
 Package color Info: Driver file: xetex.def on input line 142.
 )
+<<<<<<< HEAD
+\sc@wm@hcenter=\skip72
+\sc@wm@vcenter=\skip73
+\sc@wm@fontsize=\skip74
+=======
 \sc@wm@fontsize=\skip71
+>>>>>>> upstream/master
 )
 (/usr/local/texlive/2015/texmf-dist/tex/latex/setspace/setspace.sty
 Package: setspace 2011/12/19 v6.7a set line spacing
@@ -1493,9 +1541,15 @@ File: babel.def 2014/09/25 3.9l Babel common definitions
 ))
 (/usr/local/texlive/2015/texmf-dist/tex/latex/enumitem/enumitem.sty
 Package: enumitem 2011/09/28 v3.5.2 Customized lists
+<<<<<<< HEAD
+\labelindent=\skip75
+\enit@outerparindent=\dimen302
+\enit@toks=\toks37
+=======
 \labelindent=\skip72
 \enit@outerparindent=\dimen268
 \enit@toks=\toks38
+>>>>>>> upstream/master
 \enit@inbox=\box62
 \enitdp@description=\count218
 )
@@ -1552,6 +1606,37 @@ Package: makeidx 2014/09/29 v1.0m Standard LaTeX package
 Writing index file main.idx
 (/usr/local/texlive/2015/texmf-dist/tex/latex/titlesec/titletoc.sty
 Package: titletoc 2011/12/15 v1.6 TOC entries
+<<<<<<< HEAD
+\ttl@leftsep=\dimen316
+)
+(c:/texlive/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
+\fancy@headwidth=\skip76
+\f@ncyO@elh=\skip77
+\f@ncyO@erh=\skip78
+\f@ncyO@olh=\skip79
+\f@ncyO@orh=\skip80
+\f@ncyO@elf=\skip81
+\f@ncyO@erf=\skip82
+\f@ncyO@olf=\skip83
+\f@ncyO@orf=\skip84
+)
+(c:/texlive/texmf-dist/tex/latex/amscls/amsthm.sty
+Package: amsthm 2015/03/04 v2.20.2
+\thm@style=\toks40
+\thm@bodyfont=\toks41
+\thm@headfont=\toks42
+\thm@notefont=\toks43
+\thm@headpunct=\toks44
+\thm@preskip=\skip85
+\thm@postskip=\skip86
+\thm@headsep=\skip87
+\dth@everypar=\toks45
+)
+(c:/texlive/texmf-dist/tex/latex/mathtools/mathtools.sty
+Package: mathtools 2015/11/12 v1.18 mathematical typesetting tools
+
+(c:/texlive/texmf-dist/tex/latex/mathtools/mhsetup.sty
+=======
 \ttl@leftsep=\dimen282
 )
 (/usr/local/texlive/2015/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
@@ -1581,12 +1666,34 @@ Package: amsthm 2015/03/04 v2.20.2
 Package: mathtools 2015/05/11 v1.16 mathematical typesetting tools
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/mathtools/mhsetup.sty
+>>>>>>> upstream/master
 Package: mhsetup 2010/01/21 v1.2a programming setup (MH)
 )
 LaTeX Info: Thecontrolsequence`\('isalreadyrobust on input line 129.
 LaTeX Info: Thecontrolsequence`\)'isalreadyrobust on input line 129.
 LaTeX Info: Thecontrolsequence`\['isalreadyrobust on input line 129.
 LaTeX Info: Thecontrolsequence`\]'isalreadyrobust on input line 129.
+<<<<<<< HEAD
+\g_MT_multlinerow_int=\count290
+\l_MT_multwidth_dim=\dimen317
+\origjot=\skip88
+\l_MT_shortvdotswithinadjustabove_dim=\dimen318
+\l_MT_shortvdotswithinadjustbelow_dim=\dimen319
+\l_MT_above_intertext_sep=\dimen320
+\l_MT_below_intertext_sep=\dimen321
+\l_MT_above_shortintertext_sep=\dimen322
+\l_MT_below_shortintertext_sep=\dimen323
+)
+\c@notation=\count291
+\c@dummy=\count292
+\c@problem=\count293
+\c@exerciseT=\count294
+\c@exampleT=\count295
+\c@vocabulary=\count296
+\c@definitionT=\count297
+
+(c:/texlive/texmf-dist/tex/latex/mdframed/mdframed.sty
+=======
 \g_MT_multlinerow_int=\count223
 \l_MT_multwidth_dim=\dimen283
 \origjot=\skip85
@@ -1606,6 +1713,7 @@ LaTeX Info: Thecontrolsequence`\]'isalreadyrobust on input line 129.
 \c@definitionT=\count230
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/mdframed/mdframed.sty
+>>>>>>> upstream/master
 Package: mdframed 2013/07/01 1.9b: mdframed
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/oberdiek/kvoptions.sty
@@ -1670,6 +1778,51 @@ Package zref Info: New property: abspage on input line 62.
 (/usr/local/texlive/2015/texmf-dist/tex/latex/needspace/needspace.sty
 Package: needspace 2010/09/12 v1.3d reserve vertical space
 )
+<<<<<<< HEAD
+\mdf@templength=\skip89
+\c@mdf@globalstyle@cnt=\count300
+\mdf@skipabove@length=\skip90
+\mdf@skipbelow@length=\skip91
+\mdf@leftmargin@length=\skip92
+\mdf@rightmargin@length=\skip93
+\mdf@innerleftmargin@length=\skip94
+\mdf@innerrightmargin@length=\skip95
+\mdf@innertopmargin@length=\skip96
+\mdf@innerbottommargin@length=\skip97
+\mdf@splittopskip@length=\skip98
+\mdf@splitbottomskip@length=\skip99
+\mdf@outermargin@length=\skip100
+\mdf@innermargin@length=\skip101
+\mdf@linewidth@length=\skip102
+\mdf@innerlinewidth@length=\skip103
+\mdf@middlelinewidth@length=\skip104
+\mdf@outerlinewidth@length=\skip105
+\mdf@roundcorner@length=\skip106
+\mdf@footenotedistance@length=\skip107
+\mdf@userdefinedwidth@length=\skip108
+\mdf@needspace@length=\skip109
+\mdf@frametitleaboveskip@length=\skip110
+\mdf@frametitlebelowskip@length=\skip111
+\mdf@frametitlerulewidth@length=\skip112
+\mdf@frametitleleftmargin@length=\skip113
+\mdf@frametitlerightmargin@length=\skip114
+\mdf@shadowsize@length=\skip115
+\mdf@extratopheight@length=\skip116
+\mdf@subtitleabovelinewidth@length=\skip117
+\mdf@subtitlebelowlinewidth@length=\skip118
+\mdf@subtitleaboveskip@length=\skip119
+\mdf@subtitlebelowskip@length=\skip120
+\mdf@subtitleinneraboveskip@length=\skip121
+\mdf@subtitleinnerbelowskip@length=\skip122
+\mdf@subsubtitleabovelinewidth@length=\skip123
+\mdf@subsubtitlebelowlinewidth@length=\skip124
+\mdf@subsubtitleaboveskip@length=\skip125
+\mdf@subsubtitlebelowskip@length=\skip126
+\mdf@subsubtitleinneraboveskip@length=\skip127
+\mdf@subsubtitleinnerbelowskip@length=\skip128
+
+(c:/texlive/texmf-dist/tex/latex/mdframed/md-frame-0.mdf
+=======
 \mdf@templength=\skip86
 \c@mdf@globalstyle@cnt=\count266
 \mdf@skipabove@length=\skip87
@@ -1713,6 +1866,7 @@ Package: needspace 2010/09/12 v1.3d reserve vertical space
 \mdf@subsubtitleinnerbelowskip@length=\skip125
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/mdframed/md-frame-0.mdf
+>>>>>>> upstream/master
 File: md-frame-0.mdf 2013/07/01\ 1.9b: md-frame-0
 )
 \mdf@frametitlebox=\box63
@@ -1720,6 +1874,36 @@ File: md-frame-0.mdf 2013/07/01\ 1.9b: md-frame-0
 \mdf@splitbox@one=\box65
 \mdf@splitbox@two=\box66
 \mdf@splitbox@save=\box67
+<<<<<<< HEAD
+\mdfsplitboxwidth=\skip129
+\mdfsplitboxtotalwidth=\skip130
+\mdfsplitboxheight=\skip131
+\mdfsplitboxdepth=\skip132
+\mdfsplitboxtotalheight=\skip133
+\mdfframetitleboxwidth=\skip134
+\mdfframetitleboxtotalwidth=\skip135
+\mdfframetitleboxheight=\skip136
+\mdfframetitleboxdepth=\skip137
+\mdfframetitleboxtotalheight=\skip138
+\mdffootnoteboxwidth=\skip139
+\mdffootnoteboxtotalwidth=\skip140
+\mdffootnoteboxheight=\skip141
+\mdffootnoteboxdepth=\skip142
+\mdffootnoteboxtotalheight=\skip143
+\mdftotallinewidth=\skip144
+\mdfboundingboxwidth=\skip145
+\mdfboundingboxtotalwidth=\skip146
+\mdfboundingboxheight=\skip147
+\mdfboundingboxdepth=\skip148
+\mdfboundingboxtotalheight=\skip149
+\mdf@freevspace@length=\skip150
+\mdf@horizontalwidthofbox@length=\skip151
+\mdf@verticalmarginwhole@length=\skip152
+\mdf@horizontalspaceofbox=\skip153
+\mdfsubtitleheight=\skip154
+\mdfsubsubtitleheight=\skip155
+\c@mdfcountframes=\count301
+=======
 \mdfsplitboxwidth=\skip126
 \mdfsplitboxtotalwidth=\skip127
 \mdfsplitboxheight=\skip128
@@ -1748,6 +1932,7 @@ File: md-frame-0.mdf 2013/07/01\ 1.9b: md-frame-0
 \mdfsubtitleheight=\skip151
 \mdfsubsubtitleheight=\skip152
 \c@mdfcountframes=\count267
+>>>>>>> upstream/master
 
 ****** mdframed patching \endmdf@trivlist
 
@@ -1769,8 +1954,13 @@ File: md-frame-0.mdf 2013/07/01\ 1.9b: md-frame-0
 \c@mdf@zref@counter=\count271
 Package zref Info: New property: mdf@pagevalue on input line 895.
 )
+<<<<<<< HEAD
+\esp=\skip156
+\ecart=\skip157
+=======
 \esp=\skip153
 \ecart=\skip154
+>>>>>>> upstream/master
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/hyperref/hyperref.sty
 Package: hyperref 2012/11/06 v6.83m Hypertext links for LaTeX
@@ -1879,7 +2069,11 @@ Package rerunfilecheck Info: Feature \pdfmdfivesum is not available
 tly
 (rerunfilecheck)             and the loading of the package is aborted.
 )
+<<<<<<< HEAD
+\Hy@SectionHShift=\skip158
+=======
 \Hy@SectionHShift=\skip155
+>>>>>>> upstream/master
 )
 Package hyperref Info: Option `colorlinks' set `true' on input line 472.
 Package hyperref Info: Option `breaklinks' set `true' on input line 472.
@@ -2021,15 +2215,26 @@ Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
 ))
 (/usr/local/texlive/2015/texmf-dist/tex/latex/cjk/texinput/CJKfntef.sty
 Package: CJKfntef 2015/04/18 4.8.4
+<<<<<<< HEAD
+\CJK@fntefSkip=\skip159
+\CJK@nest=\count330
+\CJK@fntefDimen=\dimen363
+=======
 \CJK@fntefSkip=\skip156
 \CJK@nest=\count296
 \CJK@fntefDimen=\dimen329
+>>>>>>> upstream/master
 \CJK@underdotBox=\box72
 \CJK@ULbox=\box73
 \CJK@underanyskip=\dimen330
 )
+<<<<<<< HEAD
+\l__xeCJK_space_skip=\skip160
+\c__xeCJK_ulem-left_node_dim=\dimen365
+=======
 \l__xeCJK_space_skip=\skip157
 \c__xeCJK_ulem-left_node_dim=\dimen331
+>>>>>>> upstream/master
 \c__xeCJK_null_box=\box74
 .................................................
 . LaTeX info: "xparse/define-command"
@@ -2088,36 +2293,49 @@ Package: CJKfntef 2015/04/18 4.8.4
 . 
 . Redefining environment 'CJKfilltwosides' with sig. 'O{c}m' on line 977.
 .................................................
+<<<<<<< HEAD
+\c__xeCJK_filll_skip=\skip161
+) (./main.aux
+(./Preface.aux) (./Acknowledge.aux))
+=======
 \c__xeCJK_filll_skip=\skip158
 )
 (./main.aux (./Preface.aux) (./Acknowledge.aux))
+>>>>>>> upstream/master
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 67.
-LaTeX Font Info:    ... okay on input line 67.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 67.
-LaTeX Font Info:    ... okay on input line 67.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 67.
-LaTeX Font Info:    ... okay on input line 67.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 67.
-LaTeX Font Info:    ... okay on input line 67.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 67.
-LaTeX Font Info:    ... okay on input line 67.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 67.
-LaTeX Font Info:    ... okay on input line 67.
-LaTeX Font Info:    Checking defaults for EU1/lmr/m/n on input line 67.
-LaTeX Font Info:    ... okay on input line 67.
-LaTeX Font Info:    Checking defaults for T3/cmr/m/n on input line 67.
-LaTeX Font Info:    Try loading font information for T3+cmr on input line 67.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 68.
+LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 68.
+LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 68.
+LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 68.
+LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 68.
+LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 68.
+LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Checking defaults for EU1/lmr/m/n on input line 68.
+LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Checking defaults for T3/cmr/m/n on input line 68.
+LaTeX Font Info:    Try loading font information for T3+cmr on input line 68.
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/tipa/t3cmr.fd
 File: t3cmr.fd 2001/12/31 TIPA font definitions
 )
-LaTeX Font Info:    ... okay on input line 67.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 67.
-LaTeX Font Info:    ... okay on input line 67.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 67.
-LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 68.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 68.
+
+(c:/texlive/texmf-dist/tex/latex/base/ts1cmr.fd
+File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 68.
+LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 68.
+LaTeX Font Info:    ... okay on input line 68.
 
 *** you should *not* be loading the inputenc package
 *** XeTeX expects the source to be in UTF8 encoding
@@ -2127,62 +2345,65 @@ LaTeX Font Info:    ... okay on input line 67.
 . 
 . Adjusting the maths setup (use [no-math] to avoid this).
 .................................................
-\symlegacymaths=\mathgroup10
+\symlegacymaths=\mathgroup11
 LaTeX Font Info:    Overwriting symbol font `legacymaths' in version `bold'
-(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 67.
-LaTeX Font Info:    Redeclaring math accent \acute on input line 67.
-LaTeX Font Info:    Redeclaring math accent \grave on input line 67.
-LaTeX Font Info:    Redeclaring math accent \ddot on input line 67.
-LaTeX Font Info:    Redeclaring math accent \tilde on input line 67.
-LaTeX Font Info:    Redeclaring math accent \bar on input line 67.
-LaTeX Font Info:    Redeclaring math accent \breve on input line 67.
-LaTeX Font Info:    Redeclaring math accent \check on input line 67.
-LaTeX Font Info:    Redeclaring math accent \hat on input line 67.
-LaTeX Font Info:    Redeclaring math accent \dot on input line 67.
-LaTeX Font Info:    Redeclaring math accent \mathring on input line 67.
-LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 67.
-LaTeX Font Info:    Redeclaring math symbol \Delta on input line 67.
-LaTeX Font Info:    Redeclaring math symbol \Theta on input line 67.
-LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 67.
-LaTeX Font Info:    Redeclaring math symbol \Xi on input line 67.
-LaTeX Font Info:    Redeclaring math symbol \Pi on input line 67.
-LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 67.
-LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 67.
-LaTeX Font Info:    Redeclaring math symbol \Phi on input line 67.
-LaTeX Font Info:    Redeclaring math symbol \Psi on input line 67.
-LaTeX Font Info:    Redeclaring math symbol \Omega on input line 67.
-LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 67.
-LaTeX Font Info:    Redeclaring symbol font `operators' on input line 67.
+(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 68.
+LaTeX Font Info:    Redeclaring math accent \acute on input line 68.
+LaTeX Font Info:    Redeclaring math accent \grave on input line 68.
+LaTeX Font Info:    Redeclaring math accent \ddot on input line 68.
+LaTeX Font Info:    Redeclaring math accent \tilde on input line 68.
+LaTeX Font Info:    Redeclaring math accent \bar on input line 68.
+LaTeX Font Info:    Redeclaring math accent \breve on input line 68.
+LaTeX Font Info:    Redeclaring math accent \check on input line 68.
+LaTeX Font Info:    Redeclaring math accent \hat on input line 68.
+LaTeX Font Info:    Redeclaring math accent \dot on input line 68.
+LaTeX Font Info:    Redeclaring math accent \mathring on input line 68.
+LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 68.
+LaTeX Font Info:    Redeclaring math symbol \Delta on input line 68.
+LaTeX Font Info:    Redeclaring math symbol \Theta on input line 68.
+LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 68.
+LaTeX Font Info:    Redeclaring math symbol \Xi on input line 68.
+LaTeX Font Info:    Redeclaring math symbol \Pi on input line 68.
+LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 68.
+LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 68.
+LaTeX Font Info:    Redeclaring math symbol \Phi on input line 68.
+LaTeX Font Info:    Redeclaring math symbol \Psi on input line 68.
+LaTeX Font Info:    Redeclaring math symbol \Omega on input line 68.
+LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 68.
+LaTeX Font Info:    Redeclaring symbol font `operators' on input line 68.
 LaTeX Font Info:    Encoding `OT1' has changed to `EU1' for symbol font
-(Font)              `operators' in the math version `normal' on input line 67.
+(Font)              `operators' in the math version `normal' on input line 68.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/cmr/m/n --> EU1/lmr/m/n on input line 67.
+(Font)                  OT1/cmr/m/n --> EU1/lmr/m/n on input line 68.
 LaTeX Font Info:    Encoding `OT1' has changed to `EU1' for symbol font
-(Font)              `operators' in the math version `bold' on input line 67.
+(Font)              `operators' in the math version `bold' on input line 68.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/cmr/bx/n --> EU1/lmr/m/n on input line 67.
+(Font)                  OT1/cmr/bx/n --> EU1/lmr/m/n on input line 68.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  EU1/lmr/m/n --> EU1/lmr/m/n on input line 67.
+(Font)                  EU1/lmr/m/n --> EU1/lmr/m/n on input line 68.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/cmr/m/it --> EU1/lmr/m/it on input line 67.
+(Font)                  OT1/cmr/m/it --> EU1/lmr/m/it on input line 68.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/cmr/bx/n --> EU1/lmr/bx/n on input line 67.
+(Font)                  OT1/cmr/bx/n --> EU1/lmr/bx/n on input line 68.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/cmss/m/n --> EU1/pag/m/n on input line 67.
+(Font)                  OT1/cmss/m/n --> EU1/pag/m/n on input line 68.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/cmtt/m/n --> EU1/lmtt/m/n on input line 67.
+(Font)                  OT1/cmtt/m/n --> EU1/lmtt/m/n on input line 68.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  EU1/lmr/m/n --> EU1/lmr/bx/n on input line 67.
+(Font)                  EU1/lmr/m/n --> EU1/lmr/bx/n on input line 68.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/cmr/bx/it --> EU1/lmr/bx/it on input line 67.
+(Font)                  OT1/cmr/bx/it --> EU1/lmr/bx/it on input line 68.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/bx/n --> EU1/pag/bx/n on input line 67.
+(Font)                  OT1/cmss/bx/n --> EU1/pag/bx/n on input line 68.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> EU1/lmtt/bx/n on input line 67.
+(Font)                  OT1/cmtt/m/n --> EU1/lmtt/bx/n on input line 68.
+Option `squaren' provided! 
+ Command \squaren defined by SIunits package!
+
 .................................................
 . chemgreek info: "mapping-activated"
 . 
-. Activating mapping `fontspec' on line 67.
+. Activating mapping `fontspec' on line 68.
 .................................................
 *geometry* driver: auto-detecting
 *geometry* detected driver: xetex
@@ -2220,7 +2441,7 @@ LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
 
 ABD: EveryShipout initializing macros
 \AtBeginShipoutBox=\box77
-Package hyperref Info: Link coloring ON on input line 67.
+Package hyperref Info: Link coloring ON on input line 68.
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
@@ -2230,9 +2451,9 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
 \c@section@level=\count297
 )
-LaTeX Info: Redefining \ref on input line 67.
-LaTeX Info: Redefining \pageref on input line 67.
-LaTeX Info: Redefining \nameref on input line 67.
+LaTeX Info: Redefining \ref on input line 68.
+LaTeX Info: Redefining \pageref on input line 68.
+LaTeX Info: Redefining \nameref on input line 68.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
 File: Pictures/background.pdf Graphic file (type QTm)
@@ -2245,71 +2466,76 @@ File: Pictures/background.pdf Graphic file (type QTm)
 * 
 * Try to use `\setCJKsansfont[...]{...}' to define it.
 *************************************************
+<<<<<<< HEAD
+LaTeX Font Info:    Try loading font information for T1+pag on input line 83.
+(c:/texlive/texmf-dist/tex/latex/psnfss/t1pag.fd
+=======
 LaTeX Font Info:    Try loading font information for T1+pag on input line 82.
 (/usr/local/texlive/2015/texmf-dist/tex/latex/psnfss/t1pag.fd
+>>>>>>> upstream/master
 File: t1pag.fd 2001/06/04 font definitions for T1/pag.
 )
 LaTeX Font Info:    Font shape `T1/pag/bx/n' in size <24.88> not available
-(Font)              Font shape `T1/pag/b/n' tried instead on input line 82.
+(Font)              Font shape `T1/pag/b/n' tried instead on input line 83.
 LaTeX Font Info:    Font shape `T1/pag/b/n' in size <24.88> not available
-(Font)              Font shape `T1/pag/db/n' tried instead on input line 82.
+(Font)              Font shape `T1/pag/db/n' tried instead on input line 83.
 LaTeX Font Info:    Font shape `T1/pag/bx/n' in size <14.4> not available
-(Font)              Font shape `T1/pag/b/n' tried instead on input line 86.
+(Font)              Font shape `T1/pag/b/n' tried instead on input line 87.
 LaTeX Font Info:    Font shape `T1/pag/b/n' in size <14.4> not available
-(Font)              Font shape `T1/pag/db/n' tried instead on input line 86.
-LaTeX Font Info:    Try loading font information for U+msa on input line 86.
+(Font)              Font shape `T1/pag/db/n' tried instead on input line 87.
+LaTeX Font Info:    Try loading font information for U+msa on input line 87.
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 86.
+LaTeX Font Info:    Try loading font information for U+msb on input line 87.
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Try loading font information for U+rsfs on input line 86.
+LaTeX Font Info:    Try loading font information for U+rsfs on input line 87.
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/jknapltx/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
 LaTeX Font Info:    Font shape `T1/pag/bx/n' in size <20.74> not available
-(Font)              Font shape `T1/pag/b/n' tried instead on input line 86.
+(Font)              Font shape `T1/pag/b/n' tried instead on input line 87.
 LaTeX Font Info:    Font shape `T1/pag/b/n' in size <20.74> not available
-(Font)              Font shape `T1/pag/db/n' tried instead on input line 86.
+(Font)              Font shape `T1/pag/db/n' tried instead on input line 87.
  [1
 
 ]
-LaTeX Font Info:    Try loading font information for OMS+lmr on input line 100.
+LaTeX Font Info:    Try loading font information for OMS+lmr on input line 101.
 
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/lm/omslmr.fd
 File: omslmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 100
+LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 101
 .
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 100.
+(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 101.
 
-Underfull \hbox (badness 10000) in paragraph at lines 100--101
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 102--103
+Underfull \hbox (badness 10000) in paragraph at lines 101--102
 
  []
 
 
-Overfull \hbox (8.24062pt too wide) in paragraph at lines 104--105
+Underfull \hbox (badness 10000) in paragraph at lines 103--104
+
+ []
+
+
+Overfull \hbox (8.24062pt too wide) in paragraph at lines 105--106
 \T1/lmr/m/sc/10.95 https://github.com/laserroger/Physics-from-Symmetry/ 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 104--105
+Underfull \hbox (badness 10000) in paragraph at lines 105--106
 
  []
 
@@ -2320,18 +2546,18 @@ Underfull \hbox (badness 10000) in paragraph at lines 104--105
 * 
 * Try to use `\setCJKmonofont[...]{...}' to define it.
 *************************************************
-LaTeX Font Info:    Try loading font information for T1+lmtt on input line 106.
+LaTeX Font Info:    Try loading font information for T1+lmtt on input line 107.
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-Overfull \hbox (5.87538pt too wide) in paragraph at lines 106--107
+Overfull \hbox (5.87538pt too wide) in paragraph at lines 107--108
 \T1/lmr/m/n/10.95 Licensed un-der the Cre-ative Com-mons Attribution-NonCommerc
 ial
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 106--107
+Underfull \hbox (badness 10000) in paragraph at lines 107--108
 
  []
 
@@ -2500,16 +2726,17 @@ Overfull \hbox (56.28577pt too wide) detected at line 325
 /it/10.95 dx[]^^Q[]dx[] \OT1/cmr/m/n/10.95 = []    []    []$ 
  []
 
+LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <9> not available
+(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 367.
 [17]
 Underfull \vbox (badness 1199) has occurred while \output is active []
 
  [18]
-Overfull \hbox (8.88782pt too wide) detected at line 420
- $\OMS/cmsy/m/n/10.95 ! \OML/cmm/m/it/10.95 dx \OMS/cmsy/m/n/10.95 ^^A \OML/cmm
-/m/it/10.95 dx [] dx[] \OMS/cmsy/m/n/10.95 ^^A \OML/cmm/m/it/10.95 dx[] \OMS/cm
-sy/m/n/10.95 ! \OML/cmm/m/it/10.95 dx[]dx[]^^Q[] [] dx[]dx[]^^Q[]  []  \OT1/cmr
-/m/n/10.95 ^^C[]\OML/cmm/m/it/10.95 dx[]\OT1/cmr/m/n/10.95 ^^C[]\OML/cmm/m/it/1
-0.95 dx[]^^Q[]$ 
+Overfull \hbox (16.18768pt too wide) detected at line 420
+ $\OMS/cmsy/m/n/10.95 ! \OML/cmm/m/it/10.95 dx [] dx [] dx[] [] dx[] \OMS/cmsy/
+m/n/10.95 ! \OML/cmm/m/it/10.95 dx[]dx[]^^Q[] [] dx[]dx[]^^Q[]  []  \OT1/cmr/m/
+n/10.95 ^^C[]\OML/cmm/m/it/10.95 dx[]\OT1/cmr/m/n/10.95 ^^C[]\OML/cmm/m/it/10.9
+5 dx[]^^Q[]$ 
  []
 
 [19]
@@ -2660,6 +2887,9 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [33]
+LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <8> not available
+(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 472.
+
 Overfull \hbox (18.01276pt too wide) in paragraph at lines 477--477
 [] 
  []
@@ -2722,36 +2952,114 @@ Underfull \vbox (badness 1314) has occurred while \output is active []
  [45]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [46])
-(./Parts/Part3.tex
-Underfull \vbox (badness 10000) has occurred while \output is active []
+ [46]
 
- [47]
-[48] (./main.ptc) [49
+LaTeX Warning: Reference `sec3.7.11' on page 47 undefined on input line 382.
 
-] [50]) (./Chaps/Chap5.tex
+[47]
+
+LaTeX Warning: Reference `eq:3.165' on page 48 undefined on input line 414.
+
+[48]
+Underfull \hbox (badness 3701) in paragraph at lines 448--448
+[]$[]$ \EU1/SimSun(0)/m/n/8 使 用 了 $\OML/cmm/m/it/8 @[] \OT1/cmr/m/n/8 = \OML/cm
+m/m/it/8 @[]$ \EU1/SimSun(0)/m/n/8 和
+ []
+
+
+Underfull \hbox (badness 1005) in paragraph at lines 448--448
+\EU1/SimSun(0)/m/n/8 即 能 让 体 积 分 化 作 面 积 分。|
+ []
+
+
+Underfull \hbox (badness 1953) in paragraph at lines 448--448
+\EU1/SimSun(0)/m/n/8 对 于 散 度 定 理，|  在 那 儿 叫
+ []
+
+
+Underfull \hbox (badness 3138) in paragraph at lines 448--448
+\T1/lmr/m/n/8 Gauss \EU1/SimSun(0)/m/n/8 定 理，|  有 一 个 非 常
+ []
+
+
+Underfull \hbox (badness 1953) in paragraph at lines 448--448
+\EU1/SimSun(0)/m/n/8 有 启 发 性 的 证 明，|  可 以 在[][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 448--448
+\T1/lmtt/m/n/8 h t tp : / / w w w . f e y n m a n l e c t u r e
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 448--448
+\T1/lmtt/m/n/8 s . c a l t e c h . e d u / I I _03 . h t ml$[][]\EU1/SimSun(0)/
+m/n/8 上
+ []
+
+
+Underfull \hbox (badness 2027) in paragraph at lines 448--448
+\EU1/SimSun(0)/m/n/8 的 第 三 章 找 到。| \T1/lmr/m/n/8 Richard P.
+ []
+
+
+Underfull \hbox (badness 1810) in paragraph at lines 448--448
+\T1/lmr/m/n/8 and Matthew Sands. The
+ []
+
+
+Underfull \hbox (badness 3612) in paragraph at lines 448--448
+\T1/lmr/m/n/8 9780201021172 |\EU1/SimSun(0)/m/n/8 （译 注：|  中 译
+ []
+
+
+Underfull \vbox (badness 1237) has occurred while \output is active []
+
+ [49]
+Underfull \hbox (badness 3503) in paragraph at lines 463--463
+[]$[]$ \EU1/SimSun(0)/m/n/8 因 为 对 于 任 意 $\OML/cmm/m/it/8 a[]$ \EU1/SimSun(0)/m/
+n/8 有
+ []
+
+) (./Parts/Part3.tex [50] (./main.ptc) [51
+
+] [52]) (./Chaps/Chap5.tex
 Chapter 5.
 File: Pictures/chapter_head_1.pdf Graphic file (type QTm)
-<use  "Pictures/chapter_head_1.pdf" > [51
+<use  "Pictures/chapter_head_1.pdf" > [53
 
 ]
 
-LaTeX Warning: Reference `eq3.240' on page 52 undefined on input line 31.
+LaTeX Warning: Reference `eq3.240' on page 54 undefined on input line 31.
 
 
-LaTeX Warning: Reference `sec8.3' on page 52 undefined on input line 36.
+LaTeX Warning: Reference `sec8.3' on page 54 undefined on input line 36.
 
-[52]
+[54]
 
+<<<<<<< HEAD
+LaTeX Warning: Reference `eq4.30' on page 55 undefined on input line 53.
+=======
 LaTeX Warning: Reference `eq:4.30' on page 53 undefined on input line 53.
+>>>>>>> upstream/master
 
 
-LaTeX Warning: Reference `sec3.7.5' on page 53 undefined on input line 55.
+LaTeX Warning: Reference `sec3.7.5' on page 55 undefined on input line 55.
 
 
-LaTeX Warning: Reference `sec8.5.5' on page 53 undefined on input line 59.
+LaTeX Warning: Reference `sec8.5.5' on page 55 undefined on input line 59.
 
 
+<<<<<<< HEAD
+LaTeX Warning: Reference `eq4.59' on page 55 undefined on input line 65.
+
+) [55]
+\tf@ptc=\write7
+\openout7 = `main.ptc'.
+
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 191.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 191.
+=======
 LaTeX Warning: Reference `eq:4.59' on page 53 undefined on input line 65.
 
 
@@ -2770,15 +3078,27 @@ Underfull \vbox (badness 1527) has occurred while \output is active []
 [54]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 190.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 190.
+>>>>>>> upstream/master
  (./main.aux (./Preface.aux) (./Acknowledge.aux))
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 190.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 190.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 191.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 191.
 
 
 LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
+<<<<<<< HEAD
+ 45689 strings out of 493668
+ 881636 string characters out of 6150746
+ 1092842 words of memory out of 5000000
+ 48271 multiletter control sequences out of 15000+600000
+ 135573 words of font info for 234 fonts, out of 8000000 for 9000
+ 1328 hyphenation exceptions out of 8191
+ 57i,24n,72p,10432b,1400s stack positions out of 5000i,500n,10000p,200000b,80000s
+
+Output written on main.pdf (65 pages).
+=======
  44200 strings out of 493706
  865326 string characters out of 6145769
  1051549 words of memory out of 5000000
@@ -2788,3 +3108,4 @@ Here is how much of TeX's memory you used:
  57i,24n,69p,10430b,1418s stack positions out of 5000i,500n,10000p,200000b,80000s
 
 Output written on main.pdf (64 pages).
+>>>>>>> upstream/master
