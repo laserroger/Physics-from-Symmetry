@@ -742,3 +742,362 @@ Lie群乘法与Lie代数合体法则之间的关系由著名的Baker-Campbell-Ha
 \label{equ3.56}
 \mathrm{e}^X \circ \mathrm{e}^Y = \mathrm{e}^{X + Y + \frac{1}{2}[X, Y] + \frac{1}{12} \big[X, [X, Y]\big] - \frac{1}{12} \big[Y, [X, Y]\big] + \dots  }
 \end{equation}
+
+其中\mpar{重复一下，群$G$的Lie代数通常用哥特体字母$\mathfrak{g}$表示。}$X, Y \in \mathfrak{g}$, 即$X, Y$是群$G$的生成元。$\mathrm{e}^X, \mathrm{e}^Y$是$G$的群元，把它们分别记作$g, h$，这样上式写成：
+\begin{equation}
+\label{sec3.57}
+\underbrace{g}_{\in G} \circ \underbrace{h}_{\in G} = \mathrm{e}^X \circ \mathrm{e}^Y = \underbrace{\mathrm{e}^{ X + Y + \frac{1}{2} [X, Y] + \frac{1}{12}\big[X, [X, Y]\big] - \frac{1}{12} \big[Y, [X, Y]\big] + \dots }}_{\in G}
+\end{equation}
+
+上式等号右侧是群的一个群元，可见两个群元（$g,h$）相乘可表示为一些Lie代数元素的和（再取指数）。上两式出现的新运算$[,]$称为{\bf Lie括号}，对于矩阵Lie群，$[X, Y] = XY - YX$，$[X, Y]$称为$X, Y$的对易子。注意$XY$和$YX$一般不是Lie代数的元素，但它们的差一定是\mpar{John Stillwell. Naive Lie Theory. Springer, 1st edition, August 2008a. ISBN 978-0387782140 里面有漂亮的证明。}！
+
+由BCH公式可知Lie代数元素间的乘法规则是Lie括号$[,]$，而非最初认为的矩阵乘法。就像群在群乘法$\circ$运算（矩阵群的$\circ$就是矩阵乘法）下封闭那样，我们称Lie代数在Lie括号运算下封闭。集合在某运算下封闭的含义是集合的任意两个元素进行该运算所得结果仍在此集合内\mpar{用数学语言表示封闭性：$\forall g, h \in G$, $g \circ h \in G$。 对于$X, Y \in \mathfrak{g}, [X, Y] \in \mathfrak{g}, X \circ Y \notin \mathfrak{g}$}。
+
+在学习一个Lie代数的例子之后，我们将讨论Lie代数的现代定义。现代定义是从群的生成元在Lie括号运算下的行为来定义的。利用更广泛的现代定义就能看出哪些不同的群具有{\bf 相同的}Lie代数，只从上面的Lie代数定义出发看不出这一点来。因此Lie代数的新定义能让我们更深刻地认识一种变换的基本特征。同一Lie代数可对应许多Lie群，Lie理论的一条重要定理告诉我们这其中有一个{\bf 特别的}Lie群。引入Lie群的现代定义之后上面所说的就具体起来了。
+
+下面我们就举一个从给定的群导出相应Lie代数的例子。
+
+\subsection[$\mathcal{SO}(3)$群的生成元与Lie代数]{The Generators and Lie Algebra of $\mathcal{SO}(3)$\quad $\mathcal{SO}(3)$群的生成元与Lie代数}
+\label{sec3.4.1}
+$\mathcal{SO}(3)$群的定义为（\ref{equ3.10}式）：
+\begin{equation}
+\label{equ3.58}
+\mathcal{O}^T \mathcal{O} \stackrel{!}{=} I , \quad \det(\mathcal{O}) \stackrel{!}{=} 1
+\end{equation}
+
+任意群元$\mathcal{O}$用相应的生成元$J$表示为：
+\begin{equation}
+\label{equ3.59}
+\mathcal{O} = \mathrm{e}^{\phi J} % 这里似乎应该用\phi(原文为\Phi)，因为（3.69）式是用\phi表示的
+\end{equation}
+
+上式带入群的第一个定义条件得：
+\begin{equation}
+\label{equ3.60}
+\mathcal{O}^T \mathcal{O} = \mathrm{e}^{\phi J^T} \mathrm{e}^{\phi J} \stackrel{!}{=} 1 \quad \rightarrow \quad J^T + J \stackrel{!}{=} 0
+\end{equation}
+带入第二个定义条件，再利用等式\mpar{$\tr(A)$表示矩阵$A$的迹，也就是$A$的主对角线上所有元素的和。例如\[A = \begin{pmatrix} A_{11} & A_{12} \\ A_{21} & A_{22} \end{pmatrix}\]的迹为$\tr(A) = A_{11} + A_{22}$。}$\det(\mathrm{e}^A) = \mathrm{e}^{\tr(A)}$得：
+\begin{align}
+\det(\mathcal{O}) \stackrel{!}{=} 1 \quad &\rightarrow \quad \det(\mathrm{e}^{\phi J}) = \mathrm{e}^{\phi \tr (J)} \stackrel{!}{=} 1
+\nonumber \\
+\label{equ3.61}
+& \rightarrow \tr(J) \stackrel{!}{=} 0
+\end{align}
+
+满足\ref{equ3.60}、\ref{equ3.61}式的三个线性无关的矩阵为：
+\begin{equation}
+\label{equ3.62}
+J_1 = 	\begin{pmatrix}
+		0 & 0 & 0 \\
+		0 & 0 & -1 \\
+		0 & 1 & 0
+	  	\end{pmatrix}
+, \quad
+J_2 =	\begin{pmatrix}
+			0 & 0 & 1 \\
+			0 & 0 & 0 \\
+			-1 & 0 & 0
+		\end{pmatrix}
+, \quad
+J_3 = 	\begin{pmatrix}
+			0 & -1 & 0 \\
+			1 & 0 & 0 \\
+			0 & 0 & 0 
+		\end{pmatrix}
+\end{equation}
+这三个矩阵构成$\mathcal{SO}(3)$群的生成元的{\bf 基}。 即群的任意生成元$J$可惟一表示为这三者的线性组合：$J = aJ_1 + bJ_2 + cJ_3$，其中$a, b, c$表示实常数。$J_1, J_2, J_3$可用Levi-Civita符号更紧凑地表示\mpar{Levi-Civita符号的含义见附录B.5.5.}：
+\begin{equation}
+\label{equ3.63}
+(J_i)_{jk} = -\epsilon_{ijk}, \quad i,j,k = 1, 2, 3.
+\end{equation}
+其中$j, k$表示生成元$J_i$的分量。例：
+\begin{multline}
+\label{equ3.64}
+(J_1)_{jk} = -\epsilon_{1jk} \Longleftrightarrow 
+	\begin{pmatrix}
+		(J_1)_{11} & (J_1)_{12} & (J_1)_{13} \\
+		(J_1)_{21} & (J_1)_{22} & (J_1)_{23} \\
+		(J_1)_{31} & (J_1)_{32} & (J_1)_{33}
+	\end{pmatrix}
+\\
+=
+-	\begin{pmatrix}
+		\epsilon_{111} & \epsilon_{112} & \epsilon_{113} \\
+		\epsilon_{121} & \epsilon_{122} & \epsilon_{123} \\
+		\epsilon_{131} & \epsilon_{132} & \epsilon_{133}
+	\end{pmatrix}
+=
+	\begin{pmatrix}
+		0 & 0 & 0 \\
+		0 & 0 & -1 \\
+		0 & 1 & 0
+	\end{pmatrix}
+\end{multline}
+
+这些生成元可以生成有限大小的变换矩阵。以$J_1$为例，我们可以只关注非零部分 --- 右下角的$2 \times 2$矩阵，把它记作$j_1$\mpar{其实小矩阵$j_1$也可用二维Levi-Civita符号表示，$(j_1)_{ij} = \epsilon_{ij}$。见附录B.5.5. $j_1$是二维旋转群$\mathcal{SO}(2)$的生成元。}。
+\begin{equation}
+\label{equ3.65}
+J_1 = 
+	\begin{pmatrix}
+		0 & \\
+		  &	\underbrace{
+		  	\begin{pmatrix}
+		  		0 & -1 \\
+		  		1 & 0
+		  	\end{pmatrix}
+		  	}_{\equiv j_1}
+	\end{pmatrix}
+\end{equation}
+计算可得\footnote{以下符号$\mathbf{1}$、$I$均表示单位矩阵。--- 译者}
+\begin{equation}
+\label{equ3.66}
+j_1^2 = -\mathbf{1}
+\end{equation}
+接着：
+\begin{equation}
+\label{equ3.67}
+j_1^3 = \underbrace{j_1^2}_{= -1} j_1 = -j_1, \quad j_1^4 = + \mathbf{1}, \quad j_1^5 = +j_1
+\end{equation}
+一般情况为：
+\begin{equation}
+\label{equ3.68}
+j_1^{2n} = (-1)^n I, \quad j_1^{2n + 1} = (-1)^n j_1
+\end{equation}
+利用上式可计算$j_1$的指数函数的级数展开\mpar{推导见附录B.4.1。相关技巧在B.4.2.中进一步解释。正弦和余弦函数的级数展开也在B.4.1中。}：
+\begin{align}
+R_1 &= \mathrm{e}^{\phi j_1} = \sum_{n = 0}^{\infty} \frac{\phi^n j_1^n}{n!} \nonumber \\
+    &= \sum_{n = 0}^{\infty} \frac{\phi^{2n}}{(2n)!} \underbrace{j_1^{2n}}_{(-1)^n I} + \sum_{n = 0}^{\infty} \frac{\phi^{2n + 1}}{ (2n + 1)!} \underbrace{j_1^{2n + 1}}_{(-1)^n j_1} \nonumber \\
+    &= \underbrace{\left( \sum_{n = 0}^{\infty} \frac{\phi^{2n}}{(2n)!} (-1)^n  \right)}_{ = \cos \phi} I + \underbrace{\left( \sum_{n = 0}^{\infty} \frac{\phi^{2n + 1}}{(2n + 1)!} (-1)^n  \right)}_{ = \sin \phi} j_1 \nonumber \\
+    &= \cos \phi \begin{pmatrix}
+    				1 & 0 \\ 0 & 1
+    			 \end{pmatrix}
+       + \sin \phi 	\begin{pmatrix}
+       					0 & -1 \\ 1 & 0
+       				\end{pmatrix} \nonumber \\
+    &=	\begin{pmatrix}
+    		\cos \phi & -\sin \phi \\
+    		\sin \phi & \cos \phi
+    	\end{pmatrix}
+\end{align}
+再利用$\mathrm{e}^0 = 1$计算左上角的$0$对应的元素，得到完整的有限变换矩阵：
+\begin{equation}
+\label{equ3.70}
+R_1 = 
+	\begin{pmatrix}
+		1 & 0 & 0 \\
+		0 & \cos \theta & -\sin \theta \\
+		0 & \sin \theta & \cos \theta
+	\end{pmatrix}
+\end{equation}
+
+我们已经得出$\mathcal{SO}(3)$群的生成元显式的矩阵形式（\ref{equ3.62}式），这样就能直接计算生成元之间的Lie括号了\mpar{前面说过，Lie代数元素间的‘乘法’是Lie括号。直接计算生成元的基之间的Lie括号，就可得到所有生成元之间的Lie括号（任意生成元都是基的线性组合）。之后会看到生成元的基在Lie括号运算下的行为极其重要。Lie代数的所有重要信息都蕴含在生成元的基的Lie括号中。}，不难得到\mpar{例如：\begin{multline*}
+	[J_1, J_2] = J_1 J_2 - J_2 J_1 \\
+	= 	\begin{pmatrix}
+			0 & 0 & 0 \\
+			0 & 0 & -1 \\
+			0 & 1 & 0
+		\end{pmatrix}
+		\begin{pmatrix}
+			0 & 0 & 1 \\
+			0 & 0 & 0 \\
+			-1 & 0 & 0
+		\end{pmatrix} -\\
+		\begin{pmatrix}
+			0 & 0 & 1 \\
+			0 & 0 & 0 \\
+			-1 & 0 & 0
+		\end{pmatrix}
+		\begin{pmatrix}
+			0 & 0 & 0 \\
+			0 & 0 & -1 \\
+			0 & 1 & 0
+		\end{pmatrix} =\\
+		\begin{pmatrix}
+			0 & 0 & 0 \\
+			1 & 0 & 0 \\
+			0 & 0 & 0
+		\end{pmatrix}
+		-
+		\begin{pmatrix}
+			0 & 1 & 0 \\
+			0 & 0 & 0 \\
+			0 & 0 & 0
+		\end{pmatrix}
+		= \\
+		\begin{pmatrix}
+			0 & -1 & 0 \\
+			1 & 0 & 0 \\
+			0 & 0 & 0
+		\end{pmatrix}
+		= \underbrace{\epsilon_{12k}}_{=0, \text{除了}k=3} J_k \\
+		= \epsilon_{123} J_3 = J_3
+\end{multline*}
+}：
+\begin{equation}
+\label{equ3.71}
+[J_i, J_j] = \epsilon_{ijk} J_k
+\end{equation}
+其中$\epsilon_{ijk}$是Levi-Civita符号。
+
+出于物理层面的考虑，在$\mathcal{SO}(3)$生成元$\mathrm{e}^{\phi J}$的幂附加一个虚单位$i$，即$\mathrm{e}^{i\phi J}$，生成元的基变成：
+\begin{equation}
+\label{equ3.72}
+J_1 = i
+	\begin{pmatrix}
+		0 & 0 & 0 \\
+		0 & 0 & 1 \\
+		0 & -1 & 0
+	\end{pmatrix}
+,\quad
+J_2 = i
+	\begin{pmatrix}
+		0 & 0 & -1 \\
+		0 & 0 & 0 \\
+		1 & 0 & 0
+	\end{pmatrix}
+,\quad
+J_3 = i
+	\begin{pmatrix}
+		0 & 1 & 0 \\
+		-1 & 0 & 0 \\
+		0 & 0 & 0
+	\end{pmatrix}
+\end{equation}
+于是Lie代数\mpar{重复一下，我们把生成元的基的Lie括号运算结果{\bf 等同为}Lie代数，因为Lie代数的所有重要信息都蕴含在那里面。}为：
+\begin{equation}
+\label{equ3.73}
+[J_i, J_j] = i\epsilon_{ijk} J_k
+\end{equation}
+
+将生成元加$i$是为了让它们是Hermitian生成元\mpar{例如$J_1^* = -i\begin{pmatrix} 0 & 0 & 0 \\ 0 & 0 & 1 \\ 0 & -1 & 0 \end{pmatrix}$，而$J_1^\dag = (J_1^*)^T = i \begin{pmatrix} 0 & 0 & 0 \\ 0 & 0 & 1 \\ 0 & -1 & 0 \end{pmatrix} = J_1$。}，Hermitian生成元的含义是$J^\dag \equiv (J^*)^T \stackrel{!}{=} J$。加$i$是从物理意义考虑的：Hermitian矩阵的本征值都是实数，这在量子力学里面极其重要，因为生成元的本征值是实验的可观测量，\ref{sec8.3}对此详细讨论。如果不加$i$，生成元就是反Hermitian的了：$J^\dag = (J^*)^T = -J$，反Hermitian矩阵的本征值是虚数。
+
+还有另一种导出生成元的方法，利用$\ref{equ3.55}$式 --- $X = \frac{dh}{d\theta}\big|_{\theta = 0}$，以及三维旋转矩阵的形式（\ref{equ3.23}、\ref{equ3.70}式）可得： 
+\begin{multline}
+\label{equ3.74}
+J_1 = \frac{dR_1}{d\theta} \bigg|_{\theta = 0} = \frac{d}{d\theta}
+	\begin{pmatrix}
+		1 & 0 & 0 \\
+		0 & \cos \theta & -\sin \theta \\
+		0 & \sin \theta & \cos \theta
+	\end{pmatrix}
+\Bigg|_{\theta = 0} \\
+= 	\begin{pmatrix}
+		0 & 0 & 0 \\
+		0 & -\sin \theta & -cos \theta \\
+		0 & \cos \theta & \sin \theta
+	\end{pmatrix}
+\Bigg|_{\theta = 0}
+=	\begin{pmatrix}
+		0 & 0 & 0 \\
+		0 & 0 & -1 \\
+		0 & 1 & 0
+	\end{pmatrix}
+\end{multline}
+这正是\ref{equ3.26}式导出的第一个生成元。第一种方法更加普遍，因为像这样已知有限变换矩阵具体形式的好事不太常见。对于之后的Lorentz群，我们先根据群的定义导出其生成元的基，然后才得出Lorentz变换的显式形式。当然如果已知变换矩阵形式那么利用\ref{equ3.55}式就能最简便地导出生成元。
+
+下面开始填作者之前挖的坑吧：我们看看Lie代数的现代定义到底是啥。
+
+\subsection[Lie代数的抽象定义]{The Abstract Definition of a Lie Algebra \quad Lie代数的抽象定义}
+\label{sec3.4.2}
+前面介绍了简化版的Lie代数定义。群$G$的Lie代数是满足如下条件的$X$的集合：$\mathrm{e}^{X} \in G$。下面我们会看到\footnote{作者似乎很喜欢挖这种坑然后慢慢填。 --- 译者}，群的重要部分 --- 群乘法（规定群元之间怎样合体），可以从Lie代数元素的Lie括号运算中导出。
+
+就像定义Lie群那样，我们把Lie代数的关键特征表示为公理，这就形成了Lie代数的抽象定义：
+
+{\it
+Lie代数是一个向量空间$\mathfrak{g}$配备一个二元运算$[,]: \mathfrak{g} \times \mathfrak{g} \rightarrow \mathfrak{g}$，且二元运算$[,]$满足如下公理：
+\begin{itemize}
+	\item 双线性：$\forall a, b \in \mathbb{R} \text{以及} \forall X, Y, Z \in \mathfrak{g}, [aX + bY, Z] = a[X, Z] + b[Y, Z]$，$[Z, aX + bY] = a[Z, X] + b[Z, Y]$。
+	\item 反交换律：$\forall X, Y \in \mathfrak{g}, [X, Y] = -[Y, X]$。
+	\item Jacobi恒等式：$\forall X, Y, Z \in \mathfrak{g}, [X, [Y, Z]] + [Z, [X, Y]] + [Y, [Z, X]] = 0$。
+\end{itemize}
+}
+
+之前我们把矩阵的对易子作为Lie代数的二元运算$[,]$，不难验证对易子满足上面的要求。其实有许多和对易子丝毫不同的二元运算照样满足这些公理，比如经典力学中著名的Poisson括号\footnote{Poisson括号可见朗道，力学，高等教育出版社，2007，\S42，泊松括号。ISBN：9787040208498。 --- 译者}。
+
+注意Lie代数的抽象定义完全不依赖群，这十分重要哟。
+
+在下一小节我们推导$\mathcal{SU}(2)$群的生成元的基（再通过线性组合就能得到所有生成元），并且我们会看到它与$\mathcal{SO}(3)$的生成元满足同样的Lie括号关系（\ref{equ3.73}式）。这就是$\mathcal{SU}(2)$与$\mathcal{SO}(3)$群有{\bf 相同}Lie代数的含义。这个超级重要的结论将揭示$\mathcal{SU}(2)$与$\mathcal{SO}(3)$间许多不为人知的关系。
+
+
+
+\subsection[$\mathcal{SU}(2)$的生成元与Lie代数]{The Generators and Lie Algebra of $\mathcal{SU}(2)$ \quad $\mathcal{SU}(2)$的生成元与Lie代数}
+\label{sec3.4.3}
+前面我们历经磨难终于找到描述三维旋转的第二法 --- $\mathcal{SU}(2)$群，并且发现$\mathcal{SU}(2)$是$\mathcal{SO}(3)$的双覆盖\mpar{复习一下，这意味着两个$\mathcal{SU}(2)$中的两个群元对应$\mathcal{SO}(3)$群的同一元素。}。
+
+$\mathcal{SU}(2)$群的群元是具有单位行列式的幺正的$2 \times 2$矩阵，即：
+\begin{align}
+\label{equ3.75}
+\mathcal{U}^\dag \mathcal{U} = \mathcal{U} \mathcal{U}^\dag = \mathbf{1} \\
+\label{equ3.76}
+\det (\mathcal{U}) = 1
+\end{align}
+
+从群元满足的条件可导出其生成元满足的条件。设生成元为$J_i, i = 1, 2, \dots$\footnote{在下面的式子中请注意区分虚数单位$i$和表示数字指标的下标$i$，我们对作者采用这样的符号很抱歉。 --- 译者}，将群元用生成元表示，带入上两式\mpar{前面说过，为了让生成元是Hermitian矩阵，我们在$\mathrm{e}$指数幂上加了$i$，这样保证量子力学预言的实验值为实数。}：
+\begin{align}
+\label{equ3.77}
+\mathcal{U}^\dag \mathcal{U} = (\mathrm{e}^{iJ_i})^\dag \mathrm{e}^{iJ_i} \stackrel{!}{=} \mathbf{1} \\
+\label{equ3.78}
+\det (\mathcal{U}) = \det (\mathrm{e}^{iJ_i}) \stackrel{!}{=} 1
+\end{align}
+
+结合\ref{equ3.77}式、BCH公式（\ref{equ3.56}式）和$[J_i, J_i] = 0$\footnote{这由Lie括号的反对称性导出：$[J_i, J_i] = -[J_i, J_i] \rightarrow [J_i, J_i] = 0$， --- 译者}：
+\begin{align}
+(\mathrm{e}^{i J_i})^\dag \mathrm{e}^{i J_i} = \mathrm{e}^{-i J_i^\dag} \mathrm{e}^{i J_i} \stackrel{!}{=} \mathbf{1} \nonumber \\
+\rightarrow \mathrm{e}^{-i J_i^\dag + i J_i + \frac{1}{2}[J_i^\dag, J_i] + \dots } \stackrel{!}{=} \mathbf{1} \nonumber \\
+\label{equ3.79}
+\underbrace{\rightarrow}_{\mathrm{e}^0 = 1} J_i^\dag \stackrel{!}{=} J_i
+\end{align}
+
+满足$J_i^\dag = J_i$的矩阵称为Hermitian矩阵，由上可见$\mathcal{SU}(2)$的生成元必须是Hermitian的。
+
+利用恒等式$\det (\mathrm{e}^A) = \mathrm{e}^{\tr (A)}$与\ref{equ3.78}式可得：
+\begin{equation}
+\label{equ3.80}
+\det (\mathrm{e}^{i J_i}) = \mathrm{e}^{i \tr(J_i)} = 1 \underbrace{\rightarrow}_{\mathrm{e}^0 = 1} \tr (J_i) \stackrel{!}{=} 0
+\end{equation}
+
+综上，$\mathcal{SU}(2)$的生成元一定是无迹的Hermitian矩阵。$2 \times 2$\ Hermitian无迹矩阵的一组基为\mpar{$2 \times 2$复数矩阵有$4$个复数元素，因此有$8$个自由度。无迹、Hermitian性的条件限制了只剩$3$个自由度。}：
+\begin{equation}
+\label{equ3.81}
+\sigma_1 =	\begin{pmatrix}
+				0 & 1 \\ 1 & 0
+			\end{pmatrix}
+, \quad
+\sigma_2 = 	\begin{pmatrix}
+				0 & -i \\ i & 0
+			\end{pmatrix}
+, \quad
+\sigma_3 =	\begin{pmatrix}
+				1 & 0 \\ 0 & -1
+			\end{pmatrix}
+\end{equation}
+也就是说任意$2 \times 2$\ Hermitian无迹矩阵都可唯一表示为上面三个矩阵的线性组合。这三个矩阵称为{\bf Pauli 矩阵}。
+
+把Pauli矩阵扔进Lie括号中进行计算可得：
+\begin{equation}
+\label{equ3.82}
+[\sigma_i, \sigma_j] = 2i \epsilon_{ijk} \sigma_{k}
+\end{equation}
+其中$\epsilon_{ijk}$是Levi-Civita符号。上式右侧的$2$很多余，因此通常将$\mathcal{SU}(2)$的生成元的基定义为$J_i \equiv \frac{1}{2} \sigma_i$，这样Lie括号计算结果为：
+\begin{equation}
+\label{equ3.83}
+[J_i, J_j] = i \epsilon_{ijk} J_k
+\end{equation}
+注意这与$\mathcal{SO}(3)$的生成元形式（\ref{equ3.73}式）相同！因此我们说$\mathcal{SU}(2)$与$\mathcal{SO}(3)$有相同的Lie代数，因为Lie代数是通过Lie括号定义的！利用Lie代数的抽象定义可以用不同的方式描述$\mathcal{SU}(2)$群对应的变换，即，$\mathcal{SU}(2)$群对应的变换可以不用$2 \times 2$矩阵表示。为了做到这一点，我们还需要知道Lie群的抽象定义。因为一直以来就是用$2 \times 2$矩阵定义$\mathcal{SU}(2)$的,（$\mathcal{SU}$‘$2$’嘛!）换一种表示方法（例如用$3 \times 3$矩阵表示）则不知所云。Lie群的抽象定义能够让我们发现同一变换的不同表示之间的关系。抽象定义将Lie群与一种几何结构 --- 流形相等同，利用这种抽象结构来定义一个群。这一想法初看十分怪异，但在学习两个例子之后就会发现它是超级有意义的。
+
+
+\subsection[Lie群的抽象定义]{The Abstract Definition of a Lie Group \quad Lie群的抽象定义}
+\label{sec3.4.4}
+我们讨论过纯良的$\mathcal{U}(1)$群，它由全体单位复数构成。定义为$z^* z = 1$，设$z = a + ib$，则：
+\begin{equation}
+\label{equ3.84}
+z^* z = (a + ib)^* (a + ib) = (a - ib)(a + ib) = a^2 + b^2 = 1
+\end{equation}
+这也是单位圆的定义条件\mpar{单位圆记作$S^1$，它是二维空间中到原点的距离为$1$的所有点构成的集合。用数学语言就是$S^1 = \{(x_1, x_2) | x_1^2 + x_2^2 = 1 \}。$}。可见单位复数的集合{\bf 正是}复平面上的单位圆。此外，我们知道$\mathcal{U}(1)$与$\mathcal{SO}(2)$群间存在一一映射\mpar{严谨的说法是：同构映射。数学上把两个物体‘相同’称为它们‘同构’。如果两个物体之间存在一个同构映射，那么它们就是同构的。}。因此这两个群可以与几何物体 --- 单位圆 --- 视为等同。群的抽象定义并非将这个群用$\mathcal{SO}(2)$，或着是不同的$\mathcal{U}(1)$体现，因为它们都是由特定维数的物体定义的。可以将该群直接利用单位圆定义。即二维旋转变换（对应的Lie群）等同于单位圆，然后我们可以用$\mathcal{SO}(2)$群{\it 表示}这个变换（$2 \times 2$矩阵），也可用$\mathcal{U}(1)$群来{\it 表示}（单位复数）。
+
+下面讨论升级版 --- $\mathcal{SO}(3)$与$\mathcal{SU}(2)$。前面讲过在$\mathcal{SU}(2)$与单位四元数之间有一一映射。单位四元数就是满足下列条件的一般四元数$q = a\mathbf{1} + b\mathbf{i} +c\mathbf{j} + d\mathbf{k}$：
+\begin{equation}
+\label{equ3.85}
+a^2 + b^2 + c^2 + d^2 \stackrel{!}{=} 1
+\end{equation}
+这与三维超球面$S^3$的定义\mpar{}相同！
