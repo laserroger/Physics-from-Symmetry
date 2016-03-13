@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015/W32TeX) (preloaded format=xelatex 2016.1.22)  12 MAR 2016 12:00
+This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015/W32TeX) (preloaded format=xelatex 2016.1.22)  13 MAR 2016 11:00
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2666,12 +2666,244 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [39]
-[40]) (./Chaps/Chap4.tex [41] [42
+[40]
+Underfull \hbox (badness 1383) in paragraph at lines 752--752
+\T1/lmr/m/n/8 The-ory. Springer, 1st edi-
+ []
 
-]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 760.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 760.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [41]
+! Undefined control sequence.
+<recently read> \tr 
+                    
+l.779 ...\]的迹为$\tr(A) = A_{11} + A_{22}$。}
+                                                  $\det(\mathrm{e}^A) = \mat...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<recently read> \tr 
+                    
+l.779 ...\]的迹为$\tr(A) = A_{11} + A_{22}$。}
+                                                  $\det(\mathrm{e}^A) = \mat...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.779 ...。}$\det(\mathrm{e}^A) = \mathrm{e}^{\tr
+                                                  (A)}$得：
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> ...}^{\phi J}) = \mathrm {e}^{\phi \tr 
+                                                  (J)} \stackrel {!}{=} 1 \n...
+l.785 \end{align}
+                 
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> ... \label {equ3.61} & \rightarrow \tr 
+                                                  (J) \stackrel {!}{=} 0 
+l.785 \end{align}
+                 
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> ...}^{\phi J}) = \mathrm {e}^{\phi \tr 
+                                                  (J)} \stackrel {!}{=} 1 \n...
+l.785 \end{align}
+                 
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> ... \label {equ3.61} & \rightarrow \tr 
+                                                  (J) \stackrel {!}{=} 0 
+l.785 \end{align}
+                 
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+LaTeX Warning: Reference `equ3.60' on page 42 undefined on input line 787.
+
+
+LaTeX Warning: Reference `equ3.61' on page 42 undefined on input line 787.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [42]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [43]
+
+LaTeX Warning: Reference `equ3.62' on page 44 undefined on input line 893.
+
+
+Overfull \hbox (42.81532pt too wide) detected at line 935
+ []$[] \OT1/cmr/m/n/8 = [] [] \OMS/cmsy/m/n/8 ^^@$ 
+ []
+
+
+Overfull \hbox (33.84297pt too wide) detected at line 935
+ []$[] [] [] \OT1/cmr/m/n/8 =$ 
+ []
+
+
+Overfull \hbox (25.81508pt too wide) detected at line 935
+ []$[] [] \OMS/cmsy/m/n/8 ^^@ [] \OT1/cmr/m/n/8 =$ 
+ []
+
+
+Overfull \hbox (28.12419pt too wide) detected at line 935
+ []$[] [] \OT1/cmr/m/n/8 = [] \OML/cmm/m/it/8 J[]$ 
+ []
+
+
+Overfull \hbox (7.67343pt too wide) detected at line 965
+ $\OML/cmm/m/it/10.95 J[] \OT1/cmr/m/n/10.95 = \OML/cmm/m/it/10.95 i [] ;  J[] 
+\OT1/cmr/m/n/10.95 = \OML/cmm/m/it/10.95 i [] ;  J[] \OT1/cmr/m/n/10.95 = \OML/
+cmm/m/it/10.95 i []$  
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 972--972
+[]$[]$ \EU1/SimSun(0)/m/n/8 例 如 $\OML/cmm/m/it/8 J[] \OT1/cmr/m/n/8 =
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 972--972
+\OMS/cmsy/m/n/8 ^^@\OML/cmm/m/it/8 i []$\EU1/SimSun(0)/m/n/8 ，|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 972--972
+\EU1/SimSun(0)/m/n/8 而 $\OML/cmm/m/it/8 J[] \OT1/cmr/m/n/8 = (\OML/cmm/m/it/8 J
+[]\OT1/cmr/m/n/8 )[] =
+ []
+
+
+LaTeX Warning: Reference `sec8.3' on page 44 undefined on input line 972.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [44]
+
+LaTeX Warning: Reference `equ3.70' on page 45 undefined on input line 974.
+
+LaTeX Font Info:    Font shape `OMS/lmr/m/it' in size <10.95> not available
+(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 1009.
+
+[45]
+Overfull \hbox (18.47897pt too wide) in paragraph at lines 1011--1012
+[]\T1/lmr/m/it/10.95 Jacobi \EU1/SimSun(0)/m/it/10.95 恒 等 式：| $\OMS/cmsy/m/n/10
+.95 8\OML/cmm/m/it/10.95 X; Y; Z \OMS/cmsy/m/n/10.95 2 \U/euf/m/n/10.95 g\OML/c
+mm/m/it/10.95 ; \OT1/cmr/m/n/10.95 [\OML/cmm/m/it/10.95 X; \OT1/cmr/m/n/10.95 [
+\OML/cmm/m/it/10.95 Y; Z\OT1/cmr/m/n/10.95 ]] + [\OML/cmm/m/it/10.95 Z; \OT1/cm
+r/m/n/10.95 [\OML/cmm/m/it/10.95 X; Y\OT1/cmr/m/n/10.95 ]] + [\OML/cmm/m/it/10.
+95 Y; \OT1/cmr/m/n/10.95 [\OML/cmm/m/it/10.95 Z; X\OT1/cmr/m/n/10.95 ]] =
+ []
+
+
+LaTeX Warning: Reference `equ3.73' on page 46 undefined on input line 1019.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 1023.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 1023.
+
+
+Underfull \hbox (badness 1163) in paragraph at lines 1025--1025
+[]$[]$ \EU1/SimSun(0)/m/n/8 复 习 一 下，|  这 意 味 着 两
+ []
+
+
+LaTeX Warning: Reference `equ3.77' on page 46 undefined on input line 1043.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [46]
+! Undefined control sequence.
+l.1053 ...��$\det (\mathrm{e}^A) = \mathrm{e}^{\tr
+                                                   (A)}$与\ref{equ3.78}式�...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+LaTeX Warning: Reference `equ3.78' on page 47 undefined on input line 1053.
+
+! Undefined control sequence.
+l.1056 ...(\mathrm{e}^{i J_i}) = \mathrm{e}^{i \tr
+                                                  (J_i)} = 1 \underbrace{\ri...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.1056 ...race{\rightarrow}_{\mathrm{e}^0 = 1} \tr
+                                                   (J_i) \stackrel{!}{=} 0
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+LaTeX Warning: Reference `equ3.73' on page 47 undefined on input line 1086.
+
+[47]
+Missing character: There is no 。 in font [lmroman8-regular]:mapping=tex-text!
+) (./Chaps/Chap4.tex [48]
 Chapter 4.
 File: Pictures/chapter_head_1.pdf Graphic file (type QTm)
-<use  "Pictures/chapter_head_1.pdf" > [43]
+<use  "Pictures/chapter_head_1.pdf" > [49
+
+]
 Invalid UTF-8 byte or sequence at line 46 replaced by U+FFFD.
 Invalid UTF-8 byte or sequence at line 46 replaced by U+FFFD.
 Invalid UTF-8 byte or sequence at line 46 replaced by U+FFFD.
@@ -2688,42 +2920,42 @@ See the caption package documentation for explanation.
 
 Underfull \vbox (badness 2564) has occurred while \output is active []
 
- [44]
-[45]
-
-LaTeX Warning: Reference `chap6' on page 46 undefined on input line 124.
-
-[46] [47]
-
-LaTeX Warning: Reference `appendix2.3' on page 48 undefined on input line 181.
-
-
-LaTeX Warning: Reference `appendix2.3' on page 48 undefined on input line 188.
-
-[48] [49]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
  [50]
-
-LaTeX Warning: Reference `appendenix2.1' on page 51 undefined on input line 289
-.
-
 [51]
 
-LaTeX Warning: Reference `eq:3.63' on page 52 undefined on input line 327.
+LaTeX Warning: Reference `chap6' on page 52 undefined on input line 124.
+
+[52] [53]
+
+LaTeX Warning: Reference `appendix2.3' on page 54 undefined on input line 181.
+
+
+LaTeX Warning: Reference `appendix2.3' on page 54 undefined on input line 188.
+
+[54] [55]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [56]
+
+LaTeX Warning: Reference `appendenix2.1' on page 57 undefined on input line 289
+.
+
+[57]
+
+LaTeX Warning: Reference `eq:3.63' on page 58 undefined on input line 327.
 
 
 Underfull \vbox (badness 5203) has occurred while \output is active []
 
- [52]
+ [58]
 
-LaTeX Warning: Reference `sec3.7.11' on page 53 undefined on input line 389.
+LaTeX Warning: Reference `sec3.7.11' on page 59 undefined on input line 389.
 
-[53]
+[59]
 
-LaTeX Warning: Reference `eq:3.165' on page 54 undefined on input line 421.
+LaTeX Warning: Reference `eq:3.165' on page 60 undefined on input line 421.
 
-[54]
+[60]
 Underfull \hbox (badness 3701) in paragraph at lines 456--456
 []$[]$ \EU1/SimSun(0)/m/n/8 使 用 了 $\OML/cmm/m/it/8 @[] \OT1/cmr/m/n/8 = \OML/cm
 m/m/it/8 @[]$ \EU1/SimSun(0)/m/n/8 和
@@ -2778,21 +3010,21 @@ Underfull \hbox (badness 3612) in paragraph at lines 456--456
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [55]
+ [61]
 Underfull \hbox (badness 1052) in paragraph at lines 473--473
 []$[]$ \EU1/SimSun(0)/m/n/8 因 为 对 于 任 意 $\OML/cmm/m/it/8 a[]$ \EU1/SimSun(0)/m/
 n/8 都 有
  []
 
 
-LaTeX Warning: Reference `sec3.7.4' on page 56 undefined on input line 482.
+LaTeX Warning: Reference `sec3.7.4' on page 62 undefined on input line 482.
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [56]
+ [62]
 
-LaTeX Warning: Reference `eq:3.240' on page 57 undefined on input line 488.
+LaTeX Warning: Reference `eq:3.240' on page 63 undefined on input line 488.
 
 
 Overfull \hbox (51.67348pt too wide) in alignment at lines 496--501
@@ -2800,12 +3032,12 @@ Overfull \hbox (51.67348pt too wide) in alignment at lines 496--501
  []
 
 
-LaTeX Warning: Reference `eq:3.165' on page 57 undefined on input line 502.
+LaTeX Warning: Reference `eq:3.165' on page 63 undefined on input line 502.
 
 
-LaTeX Warning: Reference `eq:3.165' on page 57 undefined on input line 508.
+LaTeX Warning: Reference `eq:3.165' on page 63 undefined on input line 508.
 
-[57]
+[63]
 Overfull \hbox (12.3866pt too wide) detected at line 536
  $\OML/cmm/m/it/10.95 L[] \OT1/cmr/m/n/10.95 = []\OML/cmm/m/it/10.95 ^^O[]Q[] \
 OT1/cmr/m/n/10.95 = []\OML/cmm/m/it/10.95 ^^O[] [] [][]\OML/cmm/b/it/10.95 x  [
@@ -2813,17 +3045,17 @@ OT1/cmr/m/n/10.95 = []\OML/cmm/m/it/10.95 ^^O[] [] [][]\OML/cmm/b/it/10.95 x  [
  []
 
 
-LaTeX Warning: Reference `sec8.5.5' on page 58 undefined on input line 545.
+LaTeX Warning: Reference `sec8.5.5' on page 64 undefined on input line 545.
 
 
 Underfull \vbox (badness 4132) has occurred while \output is active []
 
- [58]
+ [64]
 Underfull \vbox (badness 7451) has occurred while \output is active []
 
- [59]
+ [65]
 
-LaTeX Warning: Reference `chap6' on page 60 undefined on input line 600.
+LaTeX Warning: Reference `chap6' on page 66 undefined on input line 600.
 
 
 Underfull \hbox (badness 2837) in paragraph at lines 624--624
@@ -2833,30 +3065,30 @@ Underfull \hbox (badness 2837) in paragraph at lines 624--624
 ) (./Parts/Part3.tex
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [60]
-[61] [62
+ [66]
+[67] [68
 
-] (./main.ptc) [63] [64]) (./Chaps/Chap5.tex
+] (./main.ptc) [69] [70]) (./Chaps/Chap5.tex
 Chapter 5.
 File: Pictures/chapter_head_1.pdf Graphic file (type QTm)
-<use  "Pictures/chapter_head_1.pdf" > [65
+<use  "Pictures/chapter_head_1.pdf" > [71
 
 ]
 
-LaTeX Warning: Reference `eq3.240' on page 66 undefined on input line 31.
+LaTeX Warning: Reference `eq3.240' on page 72 undefined on input line 31.
 
 
-LaTeX Warning: Reference `sec8.3' on page 66 undefined on input line 36.
+LaTeX Warning: Reference `sec8.3' on page 72 undefined on input line 36.
 
-[66]
+[72]
 
-LaTeX Warning: Reference `sec3.7.5' on page 67 undefined on input line 55.
-
-
-LaTeX Warning: Reference `sec8.5.5' on page 67 undefined on input line 59.
+LaTeX Warning: Reference `sec3.7.5' on page 73 undefined on input line 55.
 
 
-LaTeX Warning: Reference `eq:4.59' on page 67 undefined on input line 65.
+LaTeX Warning: Reference `sec8.5.5' on page 73 undefined on input line 59.
+
+
+LaTeX Warning: Reference `eq:4.59' on page 73 undefined on input line 65.
 
 
 Overfull \hbox (31.21866pt too wide) in paragraph at lines 76--76
@@ -2866,12 +3098,12 @@ Overfull \hbox (31.21866pt too wide) in paragraph at lines 76--76
 
 Underfull \vbox (badness 1527) has occurred while \output is active []
 
- [67])
+ [73])
 \tf@ptc=\write7
 \openout7 = `main.ptc'.
 
 
-[68]
+[74]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 191.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 191.
  (./main.aux (./Preface.aux) (./Acknowledge.aux))
@@ -2881,14 +3113,17 @@ Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 191.
 
 LaTeX Warning: There were undefined references.
 
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
  ) 
 Here is how much of TeX's memory you used:
- 45761 strings out of 493668
- 883405 string characters out of 6150746
+ 45812 strings out of 493668
+ 884076 string characters out of 6150746
  1091486 words of memory out of 5000000
- 48343 multiletter control sequences out of 15000+600000
- 135573 words of font info for 234 fonts, out of 8000000 for 9000
+ 48390 multiletter control sequences out of 15000+600000
+ 144121 words of font info for 238 fonts, out of 8000000 for 9000
  1328 hyphenation exceptions out of 8191
  57i,24n,72p,10432b,1400s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on main.pdf (78 pages).
+Output written on main.pdf (84 pages).
