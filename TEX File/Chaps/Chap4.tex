@@ -658,7 +658,7 @@ G \equiv -mqv -\frac{1}{2}mv^2 t\text{。}
 J_\text{boost} = \underbrace{\frac{\partial \mathcal L}{\partial \dot q}}_{\mathclap{\equiv p} }\underbrace{\delta q}_{\mathclap{=vt} } + G = pvt-mvq-\frac{1}{2}mv^2t\text{，}
 \end{equation*}
 由于$\ref{eq:4.16}$式右端为零，故我们能除去一个$v$的公因子%
-\footnote{\textcolor{red}{译注：由于之前关于守恒量的诸多推导都使用了变换是无穷小变换这一条件，故这里$v$必须取无穷小量，即略去$J_\text{boost}$中$v$的二阶项，最后得到的才能是守恒量。否则再利用其它条件我们会得到$t\equiv 0$的荒谬结论。\label{note:boost}}%
+\footnote{\textcolor{red}{译注：由于之前关于守恒量的诸多推导都使用了变换是无穷小变换这一条件，故这里$v$必须取无穷小量，即略去$J_\text{boost}$中$v$的二阶项，最后得到的才能是守恒量。否则再利用其它条件我们会得到$t\equiv 0$的荒谬结论。}}\label{note:boost}%
 。由此有
 \begin{equation}
 \tilde{J}_\text{boost} = \underbrace{pt-\frac{1}{2}mvt}_{\mathclap{\equiv \tilde{p}t} }-mq=\tilde{p}t - mq
@@ -675,8 +675,8 @@ Q^{0i}=\int \rd^3 \bm{x}~ \left(T^{i 0} x^0- T^{0 0}x^i\right)\text{，}
 我们怎样诠释这个守恒量呢？$Q^{0i}$是守恒的，意味着
 \begin{equation*}
 \begin{aligned}
-0= \frac{\partial Q^{0i}}{\partial t} &=& \underbrace{\int \rd^3 \bm{x}~ \frac{\partial T^{i 0}}{\partial t} x^0}_{\mathclap{=x^0\frac{\partial}{\partial t}} \int \rd^3 \bm{x}~ \left(T^{i0}} + \int \rd^3 \bm{x}~ T^{i 0} \underbrace{\frac{\partail x^0}{\partial t}}_{\mathclap{=0\text{因为}x^0=t} }  - \frac{\partial}{\partial t}\int \rd^3\bm{x}~T^{00}x^i \\
-&=& t\frac{\partial P^i}{\partial t} - \frac{\partial}{\partial t}\int \rd^3\bm{x}~T^{00}x^i
+0= \frac{\partial Q^{0i}}{\partial t} &= \underbrace{\int \rd^3 \bm{x}~ \frac{\partial T^{i0}}{\partial t} x^0}_{\mathclap{=x^0\frac{\partial}{\partial t}}} + \int \rd^3 \bm{x}~ T^{i 0} \underbrace{\frac{\partial x^0}{\partial t}}_{\mathclap{=1~\text{因为}~x^0=t} }  - \frac{\partial}{\partial t}\int \rd^3\bm{x}~T^{00}x^i \\
+&= t\frac{\partial P^i}{\partial t} + P^i - \frac{\partial}{\partial t}\int \rd^3\bm{x}~T^{00}x^i
 \end{aligned}
 \end{equation*}
 由\ref{eq:4.41}式\footnote{\textcolor{red}{译注：原文公式引用有误} }可知$P^i$是守恒的$\frac{\partial P^i}{\partial t}=0\rightarrow P^i=\text{常量}$，故我们断言
