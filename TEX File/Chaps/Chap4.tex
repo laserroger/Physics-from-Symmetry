@@ -1,3 +1,4 @@
+%!TEX root = ..\main.tex
 %!TEX encoding = UTF-8 Unicode
 
 %——————————————————————————————————————————————————————————-
@@ -41,7 +42,7 @@ S_{\text{light}}[{\mathbf q}(t)] = \int ~{\mathrm d}t
 ，我们可以求得其导函数并令其为零；而为了找到{\bf 泛函}\(S[q(t)]\)——函数\(q(t)\)的函数\(S\)——的极小值，就得要一个新的数学工具：{\bf 变分法}。
 
 \marginpar{
-	\includegraphics[scale=0.35]{./Figure/fig4_1} 
+	\includegraphics[scale=0.35]{./Figure/fig4_1}
 	\figcaption{对于给定初末端点的路径的扰动}
 }
 
@@ -217,11 +218,11 @@ S = \int_{t_1}^{t_2} {\mathcal L}\left(q+\epsilon,\dot q + \dot \epsilon, t\righ
 
 我们可以用类似的办法处理场论。首先，注意到我们需要将时空同等对待。因此我们引入拉格朗日量密度：
 \begin{equation}
-{\mathcal L} = \int{\mathrm d}^3\bm{x}~{\mathscr L}(\Phi^i,\partial_\mu \Phi^i) 
+{\mathcal L} = \int{\mathrm d}^3\bm{x}~{\mathscr L}(\Phi^i,\partial_\mu \Phi^i)
 \end{equation}
 并用拉格朗日量密度来表示作用量
 \begin{equation}
-S = \int \rd t~{\mathcal L} = \int{\mathrm d}^4\bm{x}~{\mathscr L}(\Phi^i,\partial_\mu \Phi^i) 
+S = \int \rd t~{\mathcal L} = \int{\mathrm d}^4\bm{x}~{\mathscr L}(\Phi^i,\partial_\mu \Phi^i)
 \end{equation}
 依照上面讲过的步骤，我们可以得到场的运动方程组%
 \mpar{在这里用“组”字是因为对于每一个场分量\(\Phi_1,\Phi_2,\dots\)我们都可以得到一个方程}%
@@ -246,7 +247,7 @@ Noether 定理表示，拉格朗日量的每一个对称性都对应于一个守
 \begin{equation}
 \begin{aligned}
 \delta {\mathcal L} &= {\mathcal L}(q,\frac{\rd q}{\rd t},t) - {\mathcal L}(q+\delta q,\frac{\rd (q+\delta q)}{\rd t},t) \\
-&= {\mathcal L}(q,\frac{\rd q}{\rd t},t) - {\mathcal L}(q+\delta q,\frac{\rd q}{\rd t}+\frac{\rd \delta q}{\rd t},t) \overset{\text{!}}{=} 0 
+&= {\mathcal L}(q,\frac{\rd q}{\rd t},t) - {\mathcal L}(q+\delta q,\frac{\rd q}{\rd t}+\frac{\rd \delta q}{\rd t},t) \overset{\text{!}}{=} 0
 \end{aligned}
 \label{eq:4.11}
 \end{equation}
@@ -272,7 +273,7 @@ Noether 定理表示，拉格朗日量的每一个对称性都对应于一个守
 
 这意味着拉格朗日量可以在不改变作用量和运动方程的情况下，加减某个函数的全微分$\frac{\rd G}{\rd t}$。将\ref{eq:4.11}式的右端由$0$改作$\frac{\rd G}{\rd t}$，我们有
 \begin{equation}
-\delta {\mathcal L} =  {\mathcal L}(q,\frac{\rd q}{\rd t},t) - {\mathcal L}(q+\delta q,\frac{\rd q}{\rd t}+\frac{\rd (\delta q)}{\rd t},t) \overset{\text{!}}{=} \frac{\rd G}{\rd t} 
+\delta {\mathcal L} =  {\mathcal L}(q,\frac{\rd q}{\rd t},t) - {\mathcal L}(q+\delta q,\frac{\rd q}{\rd t}+\frac{\rd (\delta q)}{\rd t},t) \overset{\text{!}}{=} \frac{\rd G}{\rd t}
 \end{equation}
 将第二项按 Taylor 级数展开到$\delta q$的一阶项，并使用记号$\frac{\rd q}{\rd t}=\dot q$
 \begin{equation}
@@ -342,15 +343,15 @@ J_\text{rot} =& \frac{\partial {\mathcal L}(q_i, \dot q_i, t)}{\partial \dot q_i
 \begin{equation}
 \begin{aligned}
 \delta {\mathcal L} &= {\mathcal L}\left(q(t),\frac{\rd q(t)}{\rd t},t\right) - {\mathcal L}\left(q(t+\epsilon),\frac{\rd q(t+\epsilon)}{\rd t},t+\epsilon\right) \\
-&= -\frac{\partial \mathcal L}{\partial q}\frac{\partial q}{\partial t}\epsilon -\frac{\partial \mathcal L}{\partial\dot q}\frac{\partial\dot q}{\partial t}\epsilon -\frac{\partial\mathcal L}{\partial t}\epsilon \underbrace{=}_{\mathclap{\text{等式左端正好为全导数}}} -\frac{\rd \mathcal L}{\rd t}\epsilon \text{，} 
+&= -\frac{\partial \mathcal L}{\partial q}\frac{\partial q}{\partial t}\epsilon -\frac{\partial \mathcal L}{\partial\dot q}\frac{\partial\dot q}{\partial t}\epsilon -\frac{\partial\mathcal L}{\partial t}\epsilon \underbrace{=}_{\mathclap{\text{等式左端正好为全导数}}} -\frac{\rd \mathcal L}{\rd t}\epsilon \text{，}
 \end{aligned}
 \end{equation}
 这告诉我们一般而言$\delta{\mathcal L} \ne 0$，但有$G=-{\mathcal L}$。
 
-将其代入\ref{eq:4.16}式，有\footnote{译注：原文有字体混乱} 
-\begin{equation} 
-\frac{\rd}{\rd t}\underbrace{\left(\frac{\partial\mathcal L}{\partial\dot q}\dot q-{\mathcal L}\right)}_{\equiv\mathcal H} = 0 
-\end{equation} 
+将其代入\ref{eq:4.16}式，有\footnote{译注：原文有字体混乱}
+\begin{equation}
+\frac{\rd}{\rd t}\underbrace{\left(\frac{\partial\mathcal L}{\partial\dot q}\dot q-{\mathcal L}\right)}_{\equiv\mathcal H} = 0
+\end{equation}
 守恒量$\mathcal H$被称为{\bf 哈密顿量(Hamiltonian)}，代表了系统的总能量。对于这个例子，我们有
 \begin{equation}
 \begin{aligned}
@@ -372,7 +373,7 @@ J_\text{rot} =& \frac{\partial {\mathcal L}(q_i, \dot q_i, t)}{\partial \dot q_i
 \begin{equation}
 \tilde{J}_\text{boost} = \underbrace{pt-\frac{1}{2}mvt}_{\mathclap{\equiv \tilde{p}t}}-mq=\tilde{p}t-mq
 \end{equation}
-我们可以看到这个量依赖于时间零点，可以通过恰当的选取时间零点使其为零。由于这个量是守恒量，这个守恒律告诉我们零始终都是零。\footnote{译注：这个守恒率没有说的那么平庸，事实上，它等价于质心运动定理；\textcolor{red}{又注：该结果以及\ref{sec4.6}的推导有误}}
+我们可以看到这个量依赖于时间零点，可以通过恰当的选取时间零点使其为零。由于这个量是守恒量，这个守恒律告诉我们零始终都是零。\footnote{译注：这个守恒率没有说的那么平庸，事实上，它等价于质心运动定理；\textcolor{red}{又注：该结果以及\ref{sec4.6}的推导有误，参见译注\ref{note:boost}}}
 
 作为粒子理论的总结，我们得到了如下关系：
 \begin{itemize}
@@ -461,7 +462,7 @@ T_\mu^\nu : = \frac{\partial\mathscr L}{\partial(\partial_\nu \Phi)}\frac{\parti
 \end{aligned}
 \end{equation*}
 \begin{equation}
-\partial_t \int_V \rd^3 \bm{x}~T_0^0 = - \int_V \rd^3 \bm{x}~\nabla\cdot\vec{T}\overbrace{\rightarrow}^{\mathclap{\text{散度定理；$\delta V$代表$V$的表面}}} = -\int_{\delta V}\rd^2 \bm{x}~\vec{T} \underbrace{=}_{\mathclap{\text{场在无穷远处为零}}} 0 
+\partial_t \int_V \rd^3 \bm{x}~T_0^0 = - \int_V \rd^3 \bm{x}~\nabla\cdot\vec{T}\overbrace{\rightarrow}^{\mathclap{\text{散度定理；$\delta V$代表$V$的表面}}} = -\int_{\delta V}\rd^2 \bm{x}~\vec{T} \underbrace{=}_{\mathclap{\text{场在无穷远处为零}}} 0
 \end{equation}
 \begin{equation}
 \rightarrow \partial_t \int_V \rd^3 \bm{x}~T_0^0 = 0 \label{eq:4.39}
@@ -487,17 +488,17 @@ x_\mu \rightarrow {x'}_\mu = x_\mu + \delta x_\mu = x_\mu + M_\mu^\sigma x_\sigm
 \]
 其中$M_\mu^\sigma$是转动和推动的在无穷维表示下的生成元，即在\ref{eq:3.240}式中所定义的微分算符。
 
-将$\delta x_\mu = M_\mu^\sigma x_\sigma$代入\ref{eq:4.33}中得 
+将$\delta x_\mu = M_\mu^\sigma x_\sigma$代入\ref{eq:4.33}中得
 \begin{eqnarray}
 \partial_\nu\left(\frac{\partial\mathscr L}{\partial(\partial_\nu\Phi)}\frac{\partial\Phi(x)}{\partial x^\mu} - \delta_\mu^\nu{\mathscr L}\right) M^{\mu\sigma} x_\sigma = 0 \label{eq:4.42} \\
-\underbrace{\rightarrow}_{\mathclap{\ref{eq:4.35}\text{式}}} \partial_\nu T_\mu^\nu M^{\mu\sigma} x_\sigma =0 \nonumber 
-\end{eqnarray} 
+\underbrace{\rightarrow}_{\mathclap{\ref{eq:4.35}\text{式}}} \partial_\nu T_\mu^\nu M^{\mu\sigma} x_\sigma =0 \nonumber
+\end{eqnarray}
 我们能将它改写成更常见的形式
 \begin{eqnarray}
  &=& \frac{1}{2} (\partial^\nu T^\mu_\nu M_{\mu\sigma} x^\sigma + \partial^\nu T^\mu_\nu \underbrace{M_{\mu\sigma}}_{\mathclap{=-M_{\sigma\mu} }} x^\sigma) = \frac{1}{2} (\partial^\nu T^\mu_\nu M_{\mu\sigma}x^\sigma+\partial^\nu T^\mu_\nu - M_{\sigma\mu}x^\sigma) \nonumber\\
- &\underbrace{=}_{\mathclap{\text{替换哑指标}}}& \frac{1}{2}(\partial^\nu T^\mu_\nu M_{\mu\sigma}x^\sigma+\partial^\nu T^\sigma_\nu-M_{\mu\sigma}x^\mu) = \frac{1}{2}(\partial^\nu T^\mu_\nu x^\sigma+\partial^\nu T^\sigma_\nu x^\mu) M_{\mu\sigma} \nonumber\\ 
+ &\underbrace{=}_{\mathclap{\text{替换哑指标}}}& \frac{1}{2}(\partial^\nu T^\mu_\nu M_{\mu\sigma}x^\sigma+\partial^\nu T^\sigma_\nu-M_{\mu\sigma}x^\mu) = \frac{1}{2}(\partial^\nu T^\mu_\nu x^\sigma+\partial^\nu T^\sigma_\nu x^\mu) M_{\mu\sigma} \nonumber\\
  &=&\frac{1}{2}\partial_\nu ( T^{\mu\nu} x^\sigma+\partial^\nu T^{\sigma\nu}x^\mu) M_{\mu\sigma} = 0 \nonumber\\
- &\rightarrow& \text{引入}(J^\nu)^{\sigma\mu} \equiv T^{\mu\nu} x^\sigma-\partial^\nu T^{\sigma\nu}x^\mu \rightarrow \partial_\nu (J^\nu)^{\sigma\mu} = 0 \text{。} 
+ &\rightarrow& \text{引入}(J^\nu)^{\sigma\mu} \equiv T^{\mu\nu} x^\sigma-\partial^\nu T^{\sigma\nu}x^\mu \rightarrow \partial_\nu (J^\nu)^{\sigma\mu} = 0 \text{。}
 \end{eqnarray}
 我们在最后一步引入的$J^\nu$被称为{\bf Noether 流(Noether current)}。注意到，由于在\ref{eq:3.165}式定义$
 M$时引入的反对称性$M_{\mu\sigma}=M_{\sigma\mu}$，我们有$M_{\mu\mu}=0$。由此我们找到了六个不同的连续性方程$\partial_\nu (J^\nu) = 0$，分别对应于每一个非零的$M_{\mu\sigma}$\footnote{译注：排除了零元的同时，也将始终互为相反数的一对元视作一个}。使用与\ref{eq:4.39}式一样的方式，我们可以论证如下的量不随时间改变
@@ -515,7 +516,8 @@ L_\text{orbit}^i = \frac{1}{2}\epsilon_{ijk}Q_{jk} = \frac{1}{2}\epsilon_{ijk} \
 
 同样的，我们也有所对应的守恒量\mpar{请回忆推动生成元$K_i$和$M_{\mu\nu}$之间的关系：$K_i=M_{0i}$}
 \begin{equation}
-Q^{0i}=\int \rd^3 \bm{x}~ \left(T^{i 0} x^0-\partial^\nu T^{0 0}x^i\right)
+Q^{0i}=\int \rd^3 \bm{x}~ \left(T^{i 0} x^0- T^{0 0}x^i\right)
+\label{eq:4.46}
 \end{equation}
 将会在附录\ref{sec4.7}节中详细讨论。
 
@@ -626,8 +628,63 @@ p^i = T^{0i} = \frac{\partial \mathscr{L}}{\partial (\partial_0 \Phi)} \frac{\pa
 \item {\bf Herbert Goldstein - Classical Mechanics}%
 \mpar{Herbert Goldstein, Charles P. Poole Jr., and John L. Safko. Classical Mechanics. Addison-Wesley, 3rd edition, 6 2001. ISBN 9780201657029}%
 是经典力学的标准教材，其中有许多对拉格朗日体系非常好的解释。
-
 \end{itemize}
-\section[附录：粒子理论中的推动不变性与其守恒量]{4.6 Appendix: Conserved Quantity from Boost Invariance for Particle Theories\quad 附录：粒子理论中的推动不变性与其守恒量}\label{sec4.6}
+\section[附录：粒子理论中的推动不变性与其守恒量]{Appendix: Conserved Quantity from Boost Invariance for Particle Theories\quad 附录：粒子理论中的推动不变性与其守恒量}\label{sec4.6}
+此附录中我们想找到对于示例拉格朗日量${\mathcal L}=\frac{1}{2}m \dot\vec{q}^2 $其来自于推动不变性的守恒量。一个推动变换即$q\rightarrow q'=q+\delta q=q+vt$，其中$v$代表一个常值速率。我们的拉格朗日量在推动下并不是不变的，但正如我们之前就看到过的，这并不是一个问题：\\
+为了使运动方程在变换下不变，拉格朗日量至多允许变化一个任意函数的全导数。这个条件在推动变换$q\rightarrow q'=q+vt \underbrace{\Rightarrow}_{\mathclap{v=\text{常数!}}} \dot q'=\dot q+v$下是显然满足的，即我们的拉格朗日量
+\begin{equation*}
+{\mathcal L}=\frac{1}{2}m \dot q^2
+\end{equation*}
+的改变量为
+\begin{equation}
+\begin{aligned}
+\delta {\mathcal L} &=& {\mathcal L}(q,\dot q,t)-{\mathcal L}(q',\dot q',t) =\frac{1}{2}m \dot q^2 - \frac{1}{2}m \dot q'^2\\
+&=& \frac{1}{2}m \dot q^2 - \frac{1}{2}m (\dot q+v)^2 = -mq\dot v - \frac{1}{2}mv^2\text{，}
+\end{aligned}
+\end{equation}
+等于下面这个函数的全导数%
+\mpar{$\frac{\rd G}{\rd t} =\frac{\rd}{\rd t}(-mqv -\frac{1}{2}mv^2 t)=-mq\dot v - \frac{1}{2}mv^2$，因为$v$和$m$都是常数。}
+\begin{equation*}
+G \equiv -mqv -\frac{1}{2}mv^2 t\text{。}
+\end{equation*}
+我们断言运动方程%
+\mpar{看到这一点的另一个方法是直接看运动方程：$m\ddot q=0$。我们有变换$q\rightarrow q'=q+\delta q=q+vt$，其中$v$是常数，且有$\dot q\rightarrow \dot q'=\dot q+v$以及$\ddot q\rightarrow \ddot q'=\ddot q$。}%
+不变%
+\mpar{拉格朗日量改变了，即$\delta {\mathcal L}\ne 0$，但是作用量值最多改变一个全导数，故我们得到了相同的运动方程。}%
+，故我们找到了一个守恒量。
+
+对于推动，守恒量是（\ref{eq:4.16}式）\footnote{\textcolor{red}{译注：原文中下式有符号错误} }
+\begin{equation*}
+J_\text{boost} = \underbrace{\frac{\partial \mathcal L}{\partial \dot q}}_{\mathclap{\equiv p} }\underbrace{\delta q}_{\mathclap{=vt} } + G = pvt-mvq-\frac{1}{2}mv^2t\text{，}
+\end{equation*}
+由于$\ref{eq:4.16}$式右端为零，故我们能除去一个$v$的公因子%
+\footnote{\textcolor{red}{译注：由于之前关于守恒量的诸多推导都使用了变换是无穷小变换这一条件，故这里$v$必须取无穷小量，即略去$J_\text{boost}$中$v$的二阶项，最后得到的才能是守恒量。否则再利用其它条件我们会得到$t\equiv 0$的荒谬结论。}}\label{note:boost}%
+。由此有
+\begin{equation}
+\tilde{J}_\text{boost} = \underbrace{pt-\frac{1}{2}mvt}_{\mathclap{\equiv \tilde{p}t} }-mq=\tilde{p}t - mq
+\end{equation}
+这是一个奇怪的守恒量，因为它的值依赖于时间零点的选取。我们能选择一个合适的时间零点使得这个量为零。由于它是守恒量，故这个零始终是零。
 
 \section[附录：场论中的推动不变性与其守恒量]{Appendix: Conserved Quantity from Boost Invariance for Field Theories\quad 附录：场论中的推动不变性与其守恒量}\label{sec4.7}
+由场论中的推动不变性，我们有如下守恒量
+\begin{equation}
+Q^{0i}=\int \rd^3 \bm{x}~ \left(T^{i 0} x^0- T^{0 0}x^i\right)\text{，}
+\end{equation}
+即在\ref{eq:4.46}式中所导出的，利用了$K_i=M_{0i}$。
+
+我们怎样诠释这个守恒量呢？$Q^{0i}$是守恒的，意味着
+\begin{equation*}
+\begin{aligned}
+0= \frac{\partial Q^{0i}}{\partial t} &= \underbrace{\int \rd^3 \bm{x}~ \frac{\partial T^{i0}}{\partial t} x^0}_{\mathclap{=x^0\frac{\partial}{\partial t}}} + \int \rd^3 \bm{x}~ T^{i 0} \underbrace{\frac{\partial x^0}{\partial t}}_{\mathclap{=1~\text{因为}~x^0=t} }  - \frac{\partial}{\partial t}\int \rd^3\bm{x}~T^{00}x^i \\
+&= t\frac{\partial P^i}{\partial t} + P^i - \frac{\partial}{\partial t}\int \rd^3\bm{x}~T^{00}x^i
+\end{aligned}
+\end{equation*}
+由\ref{eq:4.41}式\footnote{\textcolor{red}{译注：原文公式引用有误} }可知$P^i$是守恒的$\frac{\partial P^i}{\partial t}=0\rightarrow P^i=\text{常量}$，故我们断言
+\begin{equation}
+\frac{\partial}{\partial t}\int \rd^3\bm{x}~T^{00}x^i = P^i = \text{常数。}
+\end{equation}
+故这个守恒率告诉我们%
+\mpar{不要太在意这一项的意义，因为它并不像其他守恒量那样有用。}%
+能量中心以一个恒定的速度运动。或者从另一个视角来看：动量等于总能量乘以质心速度。
+
+不论如何，\ref{eq:4.46}式中导出的守恒量还是显得很奇怪。它能通过恰当选取起始时刻而取作零。我们能选择一个合适的时间零点使得这个量为零。由于它是守恒量，故这个零始终是零。\footnote{译注：很是不能理解作者的意思。毕竟我们可以选取合适的能量零点使能量为零、合适的惯性系使动量为零、以及合适的匀速转动系使角动量为零。}
