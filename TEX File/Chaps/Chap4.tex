@@ -4,6 +4,7 @@
 %	CHAPTER 4
 %——————————————————————————————————————————————————————————-
 \newcommand\rd{\mathrm d}
+\newcommand\ri{\mathrm i}
 \chapterimage{chapter_head_1.pdf} % Chapter heading image
 
 \chapter[框架/体系]{The Framework 框架/体系}\label{chap4}
@@ -226,7 +227,8 @@ S = \int \rd t~{\mathcal L} = \int{\mathrm d}^4\bm{x}~{\mathscr L}(\Phi^i,\parti
 \mpar{在这里用“组”字是因为对于每一个场分量\(\Phi_1,\Phi_2,\dots\)我们都可以得到一个方程}%
 ：
 \begin{equation}
-\frac{\partial \mathcal{L}}{\partial \Phi} - \partial_\mu \left( \frac{\partial \mathcal{L}}{\partial (\partial_\mu \Phi)} \right)= 0
+\frac{\partial \mathscr{L}}{\partial \Phi} - \partial_\mu \left( \frac{\partial \mathscr{L}}{\partial (\partial_\mu \Phi)} \right)= 0
+\label{eq:4.10}
 \end{equation}
 
 在下一章中我们将用拉格朗日形式导出近代物理学中重要的一个定理。借助其我们能看到对称性与守恒量之间的深刻联系。守恒量是描述自然的合适参量%
@@ -306,6 +308,11 @@ J = \frac{\partial \mathcal L}{\partial \dot q}\delta q + G\text{，}
 \begin{equation}
 m{\ddot\vec{q}} = 0 \text{。}
 \end{equation}
+用以导出这个著名的运动方程的拉格朗日量是%
+\mpar{我们现在处理的是高于一维的问题，所以使用矢量$\vec q$和$\vec a$而不是$q$和$a$。}
+\begin{equation}
+{\mathcal L}=\frac{1}{2}m\dot\vec{q}^2
+\end{equation}
 你可以将其代入欧拉-拉格朗日方程（\ref{eq:4.7}式）中去验证它。
 
 让我们从这个拉格朗日量出发，计算不同对称性所分别对应的守恒量。
@@ -316,8 +323,8 @@ J_\text{trans} = \frac{\partial\mathcal L}{\partial \dot\vec q} \vec a = m {\dot
 \end{equation}
 其中$\vec{p}=m{\dot\vec q}$是经典力学中的{\bf 动量(momentum)}。由于等式$\frac{\rd J}{\rd t}$对于任意$\vec a$都成立，所以说：{\bf 拉格朗日量在空间平移下不变导致了动量守恒。}
 
-我们现在把视线转到转动上来，由此我们需要大于一的维度，这是因为一维上的旋转是没有意义的。我们在这里将不会使用类似$\vec q$的矢量符号，而是更方便的指标记号。我们能将所有方程简单的用$\vec{q}\rightarrow q_i$改写。让我们来看看无穷小转动%
-\mpar{这里我们用 Levi-Civita 符号来写转动生成元。参见\ref{eq:3.63}式下的文字。}%
+我们现在把视线转到旋转上来，由此我们需要大于一的维度，这是因为一维上的旋转是没有意义的。我们在这里将不会使用类似$\vec q$的矢量符号，而是更方便的指标记号。我们能将所有方程简单的用$\vec{q}\rightarrow q_i$改写。让我们来看看无穷小旋转%
+\mpar{这里我们用 Levi-Civita 符号来写旋转生成元。参见\ref{eq:3.63}式下的文字。}%
 $q_i \rightarrow q_i + \epsilon_{ijk} q_j a_k$，由此$\delta q_i=\epsilon_{ijk}q_j a_k$。仍然是因为由于${\mathcal L}=\frac{1}{2}m{\dot\vec q}^2$不依赖于$\vec q$，我们的拉格朗日量在这样的变换下也不改变，其对应的守恒量是%
 \mpar{下式由\ref{eq:4.16}式导出，这里对应的依旧是$G=0$的情况}
 \begin{equation}
@@ -327,7 +334,7 @@ J_\text{rot} =& \frac{\partial {\mathcal L}(q_i, \dot q_i, t)}{\partial \dot q_i
   \rightarrow J_\text{rot} =& (\vec{p}\times\vec{q})\cdot\vec{a} \equiv \vec{L}\cdot\vec{a}
 \end{aligned}
 \end{equation}
-在最后一步中我们将表达式用矢量记号重新写出，其中$\times$称作叉乘，而$\vec L$是经典力学中{\bf 角动量(angular momentum)}。即：{\bf 转动下不变导致了角动量守恒。}
+在最后一步中我们将表达式用矢量记号重新写出，其中$\times$称作叉乘，而$\vec L$是经典力学中{\bf 角动量(angular momentum)}。即：{\bf 旋转下不变导致了角动量守恒。}
 
 接下来让我们看看时间平移不变性%
 \mpar{这意味着物理不会管我们是在昨天、今天还是五十年前做的实验，给定相同的初始条件，物理定律不会变化。}%
@@ -376,20 +383,251 @@ J_\text{rot} =& \frac{\partial {\mathcal L}(q_i, \dot q_i, t)}{\partial \dot q_i
 \end{itemize}
 Noether 定理向我们展示了，为什么这些记号%
 \mpar{除了推动不变性导致的守恒量}%
-会以这个或那个形式出现在每一个物理理论中。只要我们依旧有通常的时空对称性，动量、能量和角动量就是守恒量。在场论中，我们有两类对称性：一方面，拉格朗日量会在时空的变换，如转动，下不变；另一方面，我们也会有在场自身的变换下的不变性，被称为{\bf 内禀对称性(internal symmetries)。}
+会以这个或那个形式出现在每一个物理理论中。只要我们依旧有通常的时空对称性，动量、能量和角动量就是守恒量。在场论中，我们有两类对称性：一方面，拉格朗日量会在时空变换，如旋转，下不变；另一方面，我们也会有在场自身的变换下的不变性，被称为{\bf 内禀对称性(internal symmetries)。}
 
 \subsection{场论中的 Neother 定理——时空对称性}\label{sec4.5.2}
+对于场，我们得区分在时空变换下两类不同的改变。当观测者$S$看到场$\Psi(x)$时，观测者$S'$看到的则是场$\Psi'(x')$。这是同一个场，只是从不同的视角来看，会有不同的分量值。这两类描述之间由 Lorentz 群中的一个合适的变换相联系。我们现在将会使用在\ref{sec3.7.11}中介绍过的场表示%the field representation
+。（无穷维）微分算符表示$x$变换到$x'$。这意味着利用这个表示我们能在不同的时空点或者在一个旋转参考系中计算场分量。Lorentz 群的有限维变换使$\Psi$映射到$\Psi'$，即，混合场分量%
+\mpar{请回忆这个例子，Weyl 旋量有两个分量而矢量场有四个分量。如果我们从一个不同的视角来考察矢量场$A_\mu=\begin{pmatrix} A_0\\ A_1\\ A_2\\ A_3 \end{pmatrix}$，即，从旋转系看，它会形如$A'_\mu=\begin{pmatrix} A'_0\\ A'_1\\ A'_2\\ A'_3 \end{pmatrix}=\begin{pmatrix}{c} A_0\\ -A_2\\ A_1\\ A_3 \end{pmatrix}$。$A'_\mu$和$A_\mu$描述了从两个相差了绕$z$轴旋转$\unit{90}{\degree}$的坐标系分别观察到的同一个场。}
 
-\subsection{转动和推动}\label{sec4.5.3}
+对于一个依赖于时空的场的具体变换，需要同时考虑两个部分。我们将分别处理它们，首先来看$x$到$x'$的这一项。对于旋转来说，单由这一个部分推出的守恒量并不会真的守恒，这是因为我们忽略了变换的第二项。仅当将变换的两项$x\rightarrow x'$和$\Psi\rightarrow\Psi'$分别导致的守恒量加起来之后得到的，才是真正守恒的。
+
+为了使上面这段论证更有说服力，我们考虑一个一般的拉格朗日量密度${\mathscr L}\left(\Phi(x_\mu),\partial_\mu \Phi(x_\mu),x_\mu\right)$\footnote{译注：原文多出一左括号}。对称性意味着
+\begin{equation}
+{\mathscr L}\left(\Phi(x_\mu),\partial_\mu \Phi(x_\mu),x_\mu\right) = {\mathscr L}\left(\Phi'(x'_\mu),\partial_\mu \Phi'(x'_\mu),x'_\mu\right)\text{。}
+\end{equation}
+一般的，当函数自身发生改变且其计算的点也发生改变时，函数的函数的总改变量由下式给出%
+\mpar{如果你对此不熟悉：这常被称为全导数。总改变量等于变化率，即偏导数，乘以变量自身的改变，之和。例如，三维空间中的函数\(f(x,y,z)\)的总该变量为\(\frac{\partial f}{\partial x}\delta x+\frac{\partial f}{\partial y}\delta y+\frac{\partial f}{\partial z}\delta z\),即变化率乘以自身改变的距离。我们考察的是无穷小变化，故我们可以略去 Taylor 展开的高阶项仅考虑第一项。}
+\begin{equation}
+\delta f(g(x),h(x),\dots)=\frac{\partial f}{\partial g}\delta g + \frac{\partial f}{\partial h}\delta h + \dots +\frac{\partial f}{\partial x}\text{。}
+\end{equation}
+运用到拉格朗日量上有
+\begin{equation}
+\delta {\mathscr L} = \frac{\partial\mathscr L}{\partial \Phi}\delta\Phi + \frac{\partial\mathscr L}{\partial(\partial_\mu \Phi)}\delta(\partial_\mu\Phi) + \frac{\partial\mathscr L}{\partial x_\mu}\delta x_\mu\text{，}
+\end{equation}
+用欧拉-拉格朗日方程\mpar{\ref{eq:4.10}式：$\frac{\partial \mathscr{L}}{\partial \Phi} = \partial_\mu \left( \frac{\partial \mathscr{L}}{\partial (\partial_\mu \Phi)} \right)$}将其改写为
+\begin{equation}
+\begin{aligned}
+\delta {\mathscr L} &= \partial_\mu\left(\frac{\partial\mathscr L}{\partial(\partial_\mu \Phi)}\right)\delta\Phi + \frac{\partial\mathscr L}{\partial(\partial_\mu \Phi)}\underbrace{\delta(\partial_\mu\Phi)}_{\mathclap{=\partial_\mu\delta\Phi}} + \frac{\partial\mathscr L}{\partial x_\mu}\delta x_\mu \\
+&\underbrace{=}_{\mathclap{\text{莱布尼兹律}}} \partial_\mu\left(\frac{\partial\mathscr L}{\partial(\partial_\mu \Phi)}\delta\Phi\right) + \frac{\partial\mathscr L}{\partial x_\mu}\delta x_\mu
+\end{aligned}
+\label{eq:4.29}
+\end{equation}
+其中$\delta\Phi$有两项
+\begin{equation}
+\delta\Phi = \epsilon_{\mu\nu}S^{\mu\nu}\Phi(x)-\frac{\partial\Phi(x)}{\partial x_\mu}\delta x_\mu \text{，}
+\label{eq:4.30}
+\end{equation}
+其中$\epsilon_{\mu\nu}$为旋转参数，$S_{\mu\nu}$为相应的有限维群表示中的旋转算符，额外的负号仅为了方便。$S_{\mu\nu}$是由旋转生成元$S_{i}=\frac{1}{2}\epsilon_{ijk}S_{jk}$和推动生成元$K_i=S_{i0}$构成，类似于\ref{eq:3.165}式中$M_{\mu\nu}$的定义。$S_{\mu\nu}$的这个定义使得我们同时进行旋转和推动。
+
+第一项仅在旋转和推动时较重要，因为平移不会导致场分量的混合。推动所对应的守恒量依旧不是特别有意思，就像在粒子理论中得到的那样。所以实际上这一项只和旋转相关。
+
+让我们从最简单的场变换出发：时空平移，即
+\begin{equation}
+x_\mu \rightarrow x'_\mu = x_\mu + \delta x_\mu = x_\mu + a_\mu
+\label{eq:4.31}
+\end{equation}
+将$\epsilon_{\mu\nu}=0$（在平移下场分量不会混合）代入方程\ref{eq:4.30}
+\[
+\delta\Phi = -\frac{\partial\Phi(x)}{\partial x_\mu}\delta x_\mu
+\]
+再由\ref{eq:4.29}式，考察不变性($\delta{\mathscr L}=0$)所导致的守恒量
+\begin{eqnarray}
+-\partial_\nu\left(\frac{\partial\mathscr L}{\partial(\partial_\nu \Phi)}\frac{\partial\Phi(x)}{\partial x_\mu}\delta x_\mu\right) + \frac{\partial\mathscr L}{\partial x_\mu}\delta x_\mu &= 0 \\
+\rightarrow -\partial_\nu\left(\frac{\partial\mathscr L}{\partial(\partial_\nu \Phi)}\frac{\partial\Phi(x)}{\partial x^\mu} - \delta_\mu^\nu{\mathscr L}\right) \delta x^\mu &= 0 \label{eq:4.33}
+\end{eqnarray}
+
+由\ref{eq:4.31}式我们有$\delta x_\mu = a_\mu$，代入\ref{eq:4.33}式中可得\footnote{\textcolor{red}{原文上下数式的指标不平衡}}
+\begin{equation}
+-\partial_\nu\left(\frac{\partial\mathscr L}{\partial(\partial_\nu \Phi)}\frac{\partial\Phi(x)}{\partial x^\mu} - \delta_\mu^\nu{\mathscr L}\right) \delta x^\mu = 0 \text{，}
+\label{eq:4.34}
+\end{equation}
+我们定义能动张量
+\begin{equation}
+T_\mu^\nu : = \frac{\partial\mathscr L}{\partial(\partial_\nu \Phi)}\frac{\partial\Phi(x)}{\partial x^\mu} - \delta_\mu^\nu{\mathscr L} \text{。}
+\label{eq:4.35}
+\end{equation}
+由于$a_\mu$是任意的，\ref{eq:4.34}式告诉我们$T_\mu^\nu$满足连续性方程
+\begin{eqnarray}
+\partial_\nu T_\mu^\nu = 0 \\
+\rightarrow \partial_\nu T_\mu^\nu = \partial_0 T_\mu^0 - \partial_i T_\mu^i = 0
+\end{eqnarray}
+对于所有$\mu$成立。这直接告诉我们有守恒量的存在，例如取$\mu=0$我们有%
+\mpar{使用了$\partial_0 = \partial_t$和$\partial^i T_i^0=\nabla\cdot\vec{T}$，以及著名的散度定理$\int_V \rd^3 \bm{x}~\nabla A = \int_{\delta V} \rd^2 \bm{x}~A$，即能让体积分化作面积分。对于散度定理，在那儿叫 Gauss 定理，有一个非常有启发性的证明，可以在\url{http://www.feynmanlectures.caltech.edu/II_03.html}上的第三章找到。Richard P. Feynman, Robert B. Leighton, and Matthew Sands. The Feynman Lectures on Physics: Volume 2. Addison-Wesley, 1st edition, 2 1977. ISBN 9780201021172（译注：中译本：《费恩曼物理学讲义》）}%求谁帮忙加一下再改一下格式
+\begin{equation*}
+\begin{aligned}
+\partial_0 T_0^0 - \partial_i T_0^i = 0 \rightarrow \partial_0 T_0^0 = \partial_i T_0^i \\
+\partial_t T_0^0 = - \nabla\cdot\vec{T} \underbrace{\rightarrow}_{\mathclap{\text{在某个无限的空间域$V$上积分}}} \int_V \rd^3 \bm{x}~\partial_t T_0^0 = - \int_V \rd^3 \bm{x}~\nabla\cdot\vec{T} %
+\end{aligned}
+\end{equation*}
+\begin{equation}
+\partial_t \int_V \rd^3 \bm{x}~T_0^0 = - \int_V \rd^3 \bm{x}~\nabla\cdot\vec{T}\overbrace{\rightarrow}^{\mathclap{\text{散度定理；$\delta V$代表$V$的表面}}} = -\int_{\delta V}\rd^2 \bm{x}~\vec{T} \underbrace{=}_{\mathclap{\text{场在无穷远处为零}}} 0 
+\end{equation}
+\begin{equation}
+\rightarrow \partial_t \int_V \rd^3 \bm{x}~T_0^0 = 0 \label{eq:4.39}
+\end{equation}
+
+最后一步中我们是这样处理的：考虑一个无限大的空间域，如一个有着无限大半径$r$的球体，我们需要在其表面计算积分，即在$r=\infty$处计算场值。在\ref{sec2.3}节中，我们发现了物理中任何东西都有一个速度上界。由此无穷远处的场不可能对有限远$x$处的物理有任何影响，故我们说场在无穷远处为零\footnote{译注：这段讨论怪怪的}。
+
+最终的结论是：时空平移不变性导致四个守恒量%
+\mpar{因为对于任意$a_\mu$都有$\partial_0 T_\mu^0 a_\mu = \partial_0 T_0^0 a_0 -\partial_0 T_i^0 a^i = 0$成立，所以对于每一个分量我们都能得到一个连续性方程。}%
+，\ref{eq:4.39}式告诉我们它们是
+\begin{eqnarray}
+E &=& \int\rd^3\bm{x}~T_0^0 \\
+P_i &=& \int\rd^3\bm{x}~T_i^0 \label{eq:4.41}
+\end{eqnarray}
+其中$i=1,2,3$。它们分别被称为系统的总能量——因时间平移$x_0\rightarrow x_0+a_0$不变性而守恒；场的总动量——因空间平移$x_i\rightarrow x_i+a_i$不变性而守恒。
+
+\subsection{旋转和推动}\label{sec4.5.3}
+接下来，我们会仔细研究旋转和推动下的不变性。我们将先从\ref{eq:4.30}式的第二项出发，随后讨论第一项的含义。我们将从第一项和第二项分别得到一个量，两项之和是守恒的。标量场没有可以混合的分量，故对于它而言第一项始终为零，即$S_{\mu\nu}=0$；也可以用\ref{sec3.7.4}节的结论解释：我们用标量作为 Lorentz 群一维表示的生成元。故我们在第一部分中导出的将会是对应于标量场真实守恒量。
+
+变换的第二项由下式给出
+\[
+x_\mu \rightarrow {x'}_\mu = x_\mu + \delta x_\mu = x_\mu + M_\mu^\sigma x_\sigma
+\]
+其中$M_\mu^\sigma$是转动和推动的在无穷维表示下的生成元，即在\ref{eq:3.240}式中所定义的微分算符。
+
+将$\delta x_\mu = M_\mu^\sigma x_\sigma$代入\ref{eq:4.33}中得 
+\begin{eqnarray}
+\partial_\nu\left(\frac{\partial\mathscr L}{\partial(\partial_\nu\Phi)}\frac{\partial\Phi(x)}{\partial x^\mu} - \delta_\mu^\nu{\mathscr L}\right) M^{\mu\sigma} x_\sigma = 0 \label{eq:4.42} \\
+\underbrace{\rightarrow}_{\mathclap{\ref{eq:4.35}\text{式}}} \partial_\nu T_\mu^\nu M^{\mu\sigma} x_\sigma =0 \nonumber 
+\end{eqnarray} 
+我们能将它改写成更常见的形式
+\begin{eqnarray}
+ &=& \frac{1}{2} (\partial^\nu T^\mu_\nu M_{\mu\sigma} x^\sigma + \partial^\nu T^\mu_\nu \underbrace{M_{\mu\sigma}}_{\mathclap{=-M_{\sigma\mu} }} x^\sigma) = \frac{1}{2} (\partial^\nu T^\mu_\nu M_{\mu\sigma}x^\sigma+\partial^\nu T^\mu_\nu - M_{\sigma\mu}x^\sigma) \nonumber\\
+ &\underbrace{=}_{\mathclap{\text{替换哑指标}}}& \frac{1}{2}(\partial^\nu T^\mu_\nu M_{\mu\sigma}x^\sigma+\partial^\nu T^\sigma_\nu-M_{\mu\sigma}x^\mu) = \frac{1}{2}(\partial^\nu T^\mu_\nu x^\sigma+\partial^\nu T^\sigma_\nu x^\mu) M_{\mu\sigma} \nonumber\\ 
+ &=&\frac{1}{2}\partial_\nu ( T^{\mu\nu} x^\sigma+\partial^\nu T^{\sigma\nu}x^\mu) M_{\mu\sigma} = 0 \nonumber\\
+ &\rightarrow& \text{引入}(J^\nu)^{\sigma\mu} \equiv T^{\mu\nu} x^\sigma-\partial^\nu T^{\sigma\nu}x^\mu \rightarrow \partial_\nu (J^\nu)^{\sigma\mu} = 0 \text{。} 
+\end{eqnarray}
+我们在最后一步引入的$J^\nu$被称为{\bf Noether 流(Noether current)}。注意到，由于在\ref{eq:3.165}式定义$
+M$时引入的反对称性$M_{\mu\sigma}=M_{\sigma\mu}$，我们有$M_{\mu\mu}=0$。由此我们找到了六个不同的连续性方程$\partial_\nu (J^\nu) = 0$，分别对应于每一个非零的$M_{\mu\sigma}$\footnote{译注：排除了零元的同时，也将始终互为相反数的一对元视作一个}。使用与\ref{eq:4.39}式一样的方式，我们可以论证如下的量不随时间改变
+\begin{equation}
+Q^{\mu\sigma} = \int \rd^3 \bm{x}~ \left(T^{\mu 0} x^\sigma- T^{\sigma 0}x^\mu\right)
+\end{equation}
+由此我们得到了对应于转动%
+\mpar{回忆一下\ref{eq:3.165}式中提到的转动生成元$J_i$和$M_{\mu\nu}$之间的关系：$J_i = \frac{1}{2}\epsilon_{ijk}M_{jk}$，这里我们使用拉丁字母$i,j\in \{1,2,3\}$而不是希腊字母$\mu,\nu\in\{0,1,2,3\}$，将其限制在空间分量上。}%
+不变性的守恒量
+\begin{equation}
+L_\text{orbit}^i = \frac{1}{2}\epsilon_{ijk}Q_{jk} = \frac{1}{2}\epsilon_{ijk} \int \rd^3 \bm{x}~ \left(T^{\mu 0} x^\sigma-\partial^\nu T^{\sigma 0}x^\mu\right) \text{，}
+\label{eq:4.45}
+\end{equation}
+其被称为场的轨道角动量\mpar{下标 orbit （轨道）的含义马上就会清楚，因为它实际上只是守恒量的一部分，我们马上就会去考察第二项。}。
+
+同样的，我们也有所对应的守恒量\mpar{请回忆推动生成元$K_i$和$M_{\mu\nu}$之间的关系：$K_i=M_{0i}$}
+\begin{equation}
+Q^{0i}=\int \rd^3 \bm{x}~ \left(T^{i 0} x^0-\partial^\nu T^{0 0}x^i\right)
+\end{equation}
+将会在附录\ref{sec4.7}节中详细讨论。
 
 \subsection{自旋}\label{sec4.5.4}
+接下来我们希望捡回原先在导出守恒量时所丢掉的\ref{eq:4.30}中的第一项。我们现在考察
+\begin{equation}
+\delta\Phi = \epsilon_{\mu\nu} S^{\mu\nu}\Phi(x) \text{，}
+\end{equation}
+其中$S^{\mu\nu}$是问题中的变换%
+\mpar{场分量的混合是由有限维表示来进行的。例如转动生成元的二维表示$J_i = \frac{1}{2}\sigma_i$混合了外尔旋量的分量。}%
+的恰当{\bf 有限维表示}表示。这使\ref{eq:4.29}式多了一项
+\begin{equation}
+\partial_\rho \left(\frac{\partial\mathscr L}{\partial (\partial_\rho \Phi)}\epsilon_{\mu\nu}S^{\mu\nu}\Phi(x)\right)
+\end{equation}
+同时也使\ref{eq:4.45}式多了一项。完整的守恒量是
+\begin{equation}
+L^i = \frac{1}{2}\epsilon_{ijk}Q^{jk} = \frac{1}{2}\epsilon_{ijk} \int \rd^3 \bm{x}~ \left(\frac{\partial\mathscr L}{\partial (\partial_0 \Phi)}S^{jk}\Phi(x) + (T^{k 0} x^j-T^{j 0}x^k)\right)
+\end{equation}
+据此写出
+\begin{equation}
+L^i = L_\text{spin}^i + L_\text{orbit}^i \text{。}
+\end{equation}
+第一项是个新东西，但和我们之前考虑的轨道角动量有类似之处，因为这是当我们讨论同一个不变性时出现而加在一起的。标准的观点是这个守恒量是某种内禀%
+\mpar{我们随后将会看到场产生湮灭粒子。一个自旋$\frac{1}{2}$场产生自旋$\frac{1}{2}$粒子，这是基本粒子的固有属性。所以说我们用“内禀”这个词。轨道角动量是用来描述两个或更多粒子如何相互旋转的一个量。}%
+角动量。
+
+回忆我们曾用某种也叫做自旋(spin)的东西来给 Poincare 群的表示作标签。现在这个记号再一次出现了。我们将在下一章，并在\ref{sec8.5.5}节中相当仔细地，学习我们如何能测量这类新的角动量，自旋，以及认识到它和我们用以给 Poincare 群的表示作标签的东西，确实是相一致的。
 
 \subsection{场论中的 Neother 定理——内禀对称性}\label{sec4.5.5}
+我们现在来仔细研究内禀对称性%
+\mpar{毋庸置疑，对于相互作用场论，内禀对称性是相当重要的。除此之外，我们将从最简单的内禀对称性出发开始学习量子场论}%
+。在某些场{\bf 自身}的无穷小变换
+\begin{equation}
+\Phi_i \rightarrow \Phi'_i = \Phi_i + \delta\Phi_i
+\label{eq:4.51}
+\end{equation}
+下拉格朗日量的不变性$({\delta \mathscr L}=0 )$，数学上表达为\footnote{\textcolor{red}{译注：原文上下标混乱}}
+\begin{eqnarray}
+\delta {\mathscr L} &=& {\mathscr L}( \Phi_i,\partial_\mu\Phi_i) - {\mathscr L}(\Phi_i+\delta\Phi_i,\partial_\mu(\Phi_i+\delta\Phi_i) ) \nonumber\\
+&=& - \frac{\partial\mathscr L}{\partial \Phi_i}\delta\Phi_i - \frac{\partial\mathscr L}{\partial(\partial_\mu \Phi_i)}\partial_\mu\delta\Phi_i \overset{\text{!}}{=} 0 \text{，} \label{eq:4.52}
+\end{eqnarray}
+即因变换是无穷小的，故 Taylor 展开到$\delta\Phi_i$第一项。依场的欧拉-拉格朗日方程\ref{eq:4.10}可知
+\[
+\frac{\partial \mathscr{L}}{\partial \Phi} = \partial_\mu \left( \frac{\partial \mathscr{L}}{\partial (\partial_\mu \Phi)} \right) \text{。}
+\]
+代入\ref{eq:4.42}式，我们得到
+\begin{equation}
+\delta {\mathscr L} = - \partial_\mu \left( \frac{\partial \mathscr{L}}{\partial (\partial_\mu \Phi_i)} \right)\delta\Phi_i - \frac{\partial\mathscr L}{\partial(\partial_\mu \Phi_i)}\partial_\mu\delta\Phi_i = 0
+\end{equation}
+再用上莱布尼兹律，得到
+\begin{equation}
+\partial_\mu \left( \frac{\partial \mathscr{L}}{\partial (\partial_\mu \Phi_i)} \delta\Phi_i \right) = 0
+\label{eq:4.53}
+\end{equation}
+
+这意味着，如果拉格朗日量在变换$\Phi_i \rightarrow \Phi'_i = \Phi_i + \delta\Phi_i$下不变，那我们又得到一个被称为了 Noether 流的量
+\begin{equation}
+J^\mu \equiv \frac{\partial \mathscr{L}}{\partial (\partial_\mu \Phi)} \delta\Phi_i \text{，}
+\label{eq:4.54}
+\end{equation}
+其满足连续性方程
+\begin{equation}
+\ref{eq:4.53}\text{式}\rightarrow \partial_\mu J^\mu=0 \text{。}
+\end{equation}
+更进一步，用导出\ref{eq:4.39}式同样的办法，我们能得到一个对时间的守恒量
+\begin{equation}
+\partial_t \int \rd^3 \bm{x}~J^0 = 0 \text{。}
+\label{eq:4.56}
+\end{equation}
+
+我们再来看一个重要的例子：在场自身的平移下不变性%
+\mpar{注意此时我们并没有假定场是实的还是复的。常数$\epsilon$是任取的，若我们想让场平移量是实的，我们当然可以令它是虚数。这里用$\ri$是为了使生成元是厄米的（现在来看还没什么意义），这样其本征值就是实的。现在不要太困扰，把这个额外的$\ri$当做是一个约定就好，只要通过定义$\epsilon':=\ri\epsilon$，就能把它吸收到常数里去。}%
+，即在\ref{eq:4.51}式中的$\delta\Phi = -\ri\epsilon$：
+\begin{equation}
+\Phi \rightarrow \Phi' = \Phi -\ri\epsilon \text{。}
+\end{equation}
+或者对于不止一个分量的场
+\begin{equation}
+\Phi_i \rightarrow \Phi'_i = \Phi_i -\ri\epsilon_i \text{。}
+\end{equation}
+对应的守恒量被称为{\bf 共轭(conjugate)}动量$\Pi$。方便起见，引入共轭动量密度%
+\mpar{这个相当概括的量是量子场论最重要的记号，我们将在第\ref{chap6}章中看到这一点}%
+$\pi \equiv J_0$，通过\ref{eq:4.53}、\ref{eq:4.56}式，并利用守恒量中不需要包含$\delta\Phi = -\ri\epsilon$这件事。我们得到%
+\mpar{\ref{eq:4.54}式中的$\delta\Phi$成为一个常数$\epsilon$，因为这个量对于任何$\epsilon$都守恒，所以我们在定义守恒量时不需要它。}
+\begin{eqnarray}
+\partial_t \Pi = 0 ~\rightarrow~ \partial_t \Pi = \partial_t\int\rd^3\bm{x}~J_0 = \partial_t\int\rd^3\bm{x}~\pi = 0 \nonumber \\
+\text{用到了}~J_0 = \pi = \frac{\partial \mathscr{L}}{\partial (\partial_0 \Phi)}
+\end{eqnarray}
+
+注意这和源于{\bf 空间}平移不变性$\Phi(x)\rightarrow\Phi(x')=\Phi(x+\epsilon)${\bf 物理的}场动量密度不同，那东西长这样
+\[
+p^i = T^{0i} = \frac{\partial \mathscr{L}}{\partial (\partial_0 \Phi)} \frac{\partial\Phi}{\partial x_i} \text{，}
+\]
+即之前在\ref{eq:4.41}式中导出的东西。下面数章中我们将会看到更多不同的内禀对称性，它们在发展相互作用理论时是无价的。现在来总结一下我们学过的场论中的对称性和守恒量：
+\begin{itemize}
+\item 空间平移不变性$\Rightarrow$ 物理动量$P_i = \int\rd^3\bm{x}~T_i^0$守恒
+\item 推动不变性\mpar{推动又被称为在动量的空间平移}$\Rightarrow$ 能量中心的速度是常数
+\item 转动不变性$\Rightarrow$ 总角动量$L^i = \frac{1}{2}\epsilon_{ijk} \int \rd^3 \bm{x}$ \\ $ \left(\frac{\partial\mathscr L}{\partial (\partial_0 \Phi)}S^{ij}\Phi(x) + (T^{k0} x^j-T^{j0}x^k)\right) = L_\text{spin}^i + L_\text{orbit}^i $，包含自旋和轨道角动量，守恒
+\item 时间平移不变性$\Rightarrow$ 能量$E = \int\rd^3\bm{x}~T_0^0$守恒
+\item 场自身的平移不变性$\Rightarrow$ 共轭动量$\Pi = \int\rd^3\bm{x}~\frac{\partial \mathscr{L}}{\partial (\partial_0 \Phi)} = \int\rd^3\bm{x}~\pi$守恒
+\end{itemize}
 
 \section*{Further Reading Tips\quad 阅读建议}
+\begin{itemize}
+\item {\bf Cornelius Lanczos - The Variational Principles of Mechanics}%
+\mpar{Cornelius Lanczos. The Variational Principles of Mechanics. Dover Publications, 4th edition, 3 1986. ISBN 9780486650678}%
+是一本关于拉格朗日体系在经典力学中的应用的绝妙的书。
+\item {\bf Herbert Goldstein - Classical Mechanics}%
+\mpar{Herbert Goldstein, Charles P. Poole Jr., and John L. Safko. Classical Mechanics. Addison-Wesley, 3rd edition, 6 2001. ISBN 9780201657029}%
+是经典力学的标准教材，其中有许多对拉格朗日体系非常好的解释。
 
-\section[附录：粒子理论中的推动不变性与其守恒量]{4.6 Appendix: Conserved Quantity from Boost
-Invariance for Particle Theories\quad 附录：粒子理论中的推动不变性与其守恒量}\label{sec4.6}
+\end{itemize}
+\section[附录：粒子理论中的推动不变性与其守恒量]{4.6 Appendix: Conserved Quantity from Boost Invariance for Particle Theories\quad 附录：粒子理论中的推动不变性与其守恒量}\label{sec4.6}
 
-\section[附录：场论中的推动不变性与其守恒量]{Appendix: Conserved Quantity from Boost
-Invariance for Field Theories\quad 附录：场论中的推动不变性与其守恒量}\label{sec4.7}
+\section[附录：场论中的推动不变性与其守恒量]{Appendix: Conserved Quantity from Boost Invariance for Field Theories\quad 附录：场论中的推动不变性与其守恒量}\label{sec4.7}

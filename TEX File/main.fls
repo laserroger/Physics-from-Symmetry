@@ -82,6 +82,14 @@ INPUT c:/texlive/texmf-dist/tex/latex/amsfonts/amsfonts.sty
 INPUT c:/texlive/texmf-dist/tex/latex/amsfonts/amsfonts.sty
 INPUT c:/texlive/texmf-dist/tex/latex/jknapltx/mathrsfs.sty
 INPUT c:/texlive/texmf-dist/tex/latex/jknapltx/mathrsfs.sty
+INPUT c:/texlive/texmf-dist/tex/latex/siunits/SIunits.sty
+INPUT c:/texlive/texmf-dist/tex/latex/siunits/SIunits.sty
+INPUT c:/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
+INPUT c:/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
+INPUT c:/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty
+INPUT c:/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty
+INPUT c:/texlive/texmf-dist/tex/latex/siunits/SIunits.cfg
+INPUT c:/texlive/texmf-dist/tex/latex/siunits/SIunits.cfg
 INPUT c:/texlive/texmf-dist/tex/generic/ulem/ulem.sty
 INPUT c:/texlive/texmf-dist/tex/generic/ulem/ulem.sty
 INPUT c:/texlive/texmf-dist/fonts/tfm/public/latex-fonts/lasy6.tfm
@@ -101,10 +109,6 @@ INPUT c:/texlive/texmf-dist/tex/latex/tools/calc.sty
 INPUT c:/texlive/texmf-dist/tex/latex/tools/calc.sty
 INPUT c:/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
 INPUT c:/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
-INPUT c:/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
-INPUT c:/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
-INPUT c:/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty
-INPUT c:/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty
 INPUT c:/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty
 INPUT c:/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty
 INPUT c:/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty
@@ -364,6 +368,8 @@ INPUT Acknowledge.aux
 OUTPUT main.aux
 INPUT c:/texlive/texmf-dist/tex/latex/tipa/t3cmr.fd
 INPUT c:/texlive/texmf-dist/tex/latex/tipa/t3cmr.fd
+INPUT c:/texlive/texmf-dist/tex/latex/base/ts1cmr.fd
+INPUT c:/texlive/texmf-dist/tex/latex/base/ts1cmr.fd
 INPUT c:/texlive/texmf-dist/fonts/tfm/public/lm/ec-lmr10.tfm
 INPUT c:/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 INPUT c:/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
@@ -404,6 +410,9 @@ INPUT c:/texlive/texmf-dist/tex/latex/jknapltx/ursfs.fd
 INPUT c:/texlive/texmf-dist/fonts/tfm/public/rsfs/rsfs10.tfm
 INPUT c:/texlive/texmf-dist/fonts/tfm/public/rsfs/rsfs10.tfm
 INPUT c:/texlive/texmf-dist/fonts/tfm/public/rsfs/rsfs7.tfm
+INPUT c:/texlive/texmf-dist/fonts/tfm/public/amsfonts/euler/eurm10.tfm
+INPUT c:/texlive/texmf-dist/fonts/tfm/public/amsfonts/euler/eurm10.tfm
+INPUT c:/texlive/texmf-dist/fonts/tfm/public/amsfonts/euler/eurm7.tfm
 INPUT c:/texlive/texmf-dist/fonts/tfm/public/cm/cmr12.tfm
 INPUT c:/texlive/texmf-dist/fonts/tfm/adobe/avantgar/pagd8t.tfm
 INPUT c:/texlive/texmf-dist/fonts/tfm/public/cm/cmmi12.tfm
@@ -433,6 +442,9 @@ INPUT c:/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
 INPUT c:/texlive/texmf-dist/fonts/tfm/public/rsfs/rsfs10.tfm
 INPUT c:/texlive/texmf-dist/fonts/tfm/public/rsfs/rsfs10.tfm
 INPUT c:/texlive/texmf-dist/fonts/tfm/public/rsfs/rsfs10.tfm
+INPUT c:/texlive/texmf-dist/fonts/tfm/public/amsfonts/euler/eurm10.tfm
+INPUT c:/texlive/texmf-dist/fonts/tfm/public/amsfonts/euler/eurm10.tfm
+INPUT c:/texlive/texmf-dist/fonts/tfm/public/amsfonts/euler/eurm10.tfm
 INPUT c:/texlive/texmf-dist/fonts/tfm/public/cm/cmr17.tfm
 INPUT c:/texlive/texmf-dist/fonts/tfm/public/cm/cmr17.tfm
 INPUT c:/texlive/texmf-dist/fonts/tfm/public/cm/cmr17.tfm
@@ -474,6 +486,9 @@ INPUT c:/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7.tfm
 INPUT c:/texlive/texmf-dist/fonts/tfm/public/rsfs/rsfs10.tfm
 INPUT c:/texlive/texmf-dist/fonts/tfm/public/rsfs/rsfs10.tfm
 INPUT c:/texlive/texmf-dist/fonts/tfm/public/rsfs/rsfs5.tfm
+INPUT c:/texlive/texmf-dist/fonts/tfm/public/amsfonts/euler/eurm10.tfm
+INPUT c:/texlive/texmf-dist/fonts/tfm/public/amsfonts/euler/eurm8.tfm
+INPUT c:/texlive/texmf-dist/fonts/tfm/public/amsfonts/euler/eurm6.tfm
 INPUT c:/texlive/texmf-dist/fonts/tfm/public/cm/cmr8.tfm
 INPUT c:/texlive/texmf-dist/fonts/tfm/public/cm/cmr6.tfm
 OUTPUT Preface.aux
@@ -502,6 +517,8 @@ INPUT c:/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
 INPUT c:/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm5.tfm
 INPUT c:/texlive/texmf-dist/fonts/tfm/public/rsfs/rsfs10.tfm
 INPUT c:/texlive/texmf-dist/fonts/tfm/public/rsfs/rsfs5.tfm
+INPUT c:/texlive/texmf-dist/fonts/tfm/public/amsfonts/euler/eurm9.tfm
+INPUT c:/texlive/texmf-dist/fonts/tfm/public/amsfonts/euler/eurm5.tfm
 INPUT c:/texlive/texmf-dist/fonts/tfm/public/cm/cmr9.tfm
 INPUT c:/texlive/texmf-dist/fonts/tfm/public/lm/ec-lmr6.tfm
 INPUT c:/texlive/texmf-dist/fonts/tfm/adobe/avantgar/pagk8t.tfm
@@ -526,6 +543,7 @@ INPUT c:/texlive/texmf-dist/fonts/tfm/public/cm/cmbsy10.tfm
 INPUT c:/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm
 INPUT c:/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
 INPUT c:/texlive/texmf-dist/fonts/tfm/public/rsfs/rsfs10.tfm
+INPUT c:/texlive/texmf-dist/fonts/tfm/public/amsfonts/euler/eurm10.tfm
 INPUT c:/texlive/texmf-dist/fonts/tfm/public/cm/cmr12.tfm
 INPUT c:/texlive/texmf-dist/fonts/tfm/adobe/avantgar/pagk8t.tfm
 INPUT c:/texlive/texmf-dist/fonts/tfm/adobe/avantgar/pagd8t.tfm
@@ -561,6 +579,7 @@ INPUT Pictures/fig2_4.eps
 INPUT Pictures/fig2_4.eps
 INPUT Pictures/fig2_5.eps
 INPUT Pictures/fig2_5.eps
+INPUT c:/texlive/texmf-dist/fonts/tfm/public/lm/lmsy9.tfm
 INPUT ./Parts/Part2.tex
 INPUT ./Parts/Part2.tex
 INPUT main.ptc
@@ -590,11 +609,15 @@ INPUT Pictures/fig3_5.eps
 INPUT Pictures/fig3_5.eps
 INPUT Pictures/fig3_6.eps
 INPUT Pictures/fig3_6.eps
+INPUT c:/texlive/texmf-dist/fonts/tfm/public/lm/lmsy8.tfm
+INPUT c:/texlive/texmf-dist/fonts/tfm/public/lm/ec-lmri8.tfm
+INPUT c:/texlive/texmf-dist/fonts/tfm/public/lm/ec-lmri7.tfm
 INPUT ./Chaps/Chap4.tex
 INPUT ./Chaps/Chap4.tex
 INPUT Pictures/chapter_head_1.pdf
 INPUT ./Figure/fig4_1.eps
 INPUT ./Figure/fig4_1.eps
+INPUT c:/texlive/texmf-dist/fonts/tfm/public/lm/ec-lmtt8.tfm
 INPUT ./Parts/Part3.tex
 INPUT ./Parts/Part3.tex
 INPUT main.ptc

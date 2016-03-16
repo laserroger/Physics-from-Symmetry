@@ -18,24 +18,30 @@
 \contentsline {subsection}{\numberline {3.2.1}单位复数表示旋转变换}{30}{subsection.3.2.1}
 \contentsline {section}{\numberline {3.3}三维旋转}{33}{section.3.3}
 \contentsline {subsection}{\numberline {3.3.1}四元数}{34}{subsection.3.3.1}
-\contentsline {chapter}{\numberline {4}框架/体系}{37}{chapter.4}
-\contentsline {section}{\numberline {4.1}拉格朗日形式}{37}{section.4.1}
-\contentsline {subsection}{\numberline {4.1.1}Fermat 原理}{38}{subsection.4.1.1}
-\contentsline {subsection}{\numberline {4.1.2}变分法：基本思想}{38}{subsection.4.1.2}
-\contentsline {section}{\numberline {4.2}限制}{39}{section.4.2}
-\contentsline {section}{\numberline {4.3}粒子理论与场论}{40}{section.4.3}
-\contentsline {section}{\numberline {4.4}欧拉-拉格朗日方程}{41}{section.4.4}
-\contentsline {section}{\numberline {4.5}Noether 定理}{43}{section.4.5}
-\contentsline {subsection}{\numberline {4.5.1}粒子理论的Noether 定理}{43}{subsection.4.5.1}
-\contentsline {subsection}{\numberline {4.5.2}场论中的 Neother 定理——时空对称性}{48}{subsection.4.5.2}
-\contentsline {subsection}{\numberline {4.5.3}转动和推动}{48}{subsection.4.5.3}
-\contentsline {subsection}{\numberline {4.5.4}自旋}{48}{subsection.4.5.4}
-\contentsline {subsection}{\numberline {4.5.5}场论中的 Neother 定理——内禀对称性}{48}{subsection.4.5.5}
-\contentsline {section}{\numberline {4.6}附录：粒子理论中的推动不变性与其守恒量}{48}{section.4.6}
-\contentsline {section}{\numberline {4.7}附录：场论中的推动不变性与其守恒量}{48}{section.4.7}
-\contentsline {part}{\@mypartnumtocformat {III}{The Equations of Nature 自然界的方程}}{49}{part.3}
-\contentsline {chapter}{\numberline {5}测量}{51}{chapter.5}
-\contentsline {section}{\numberline {5.1}量子力学中的算符}{51}{section.5.1}
-\contentsline {subsection}{\numberline {5.1.1}自旋与角动量}{52}{subsection.5.1.1}
-\contentsline {section}{\numberline {5.2}量子场论的算符}{53}{section.5.2}
+\contentsline {section}{\numberline {3.4}Lie代数}{39}{section.3.4}
+\contentsline {subsection}{\numberline {3.4.1}$\mathcal {SO}(3)$群的生成元与Lie代数}{42}{subsection.3.4.1}
+\contentsline {subsection}{\numberline {3.4.2}Lie代数的抽象定义}{45}{subsection.3.4.2}
+\contentsline {subsection}{\numberline {3.4.3}$\mathcal {SU}(2)$的生成元与Lie代数}{46}{subsection.3.4.3}
+\contentsline {subsection}{\numberline {3.4.4}Lie群的抽象定义}{48}{subsection.3.4.4}
+\contentsline {chapter}{\numberline {4}框架/体系}{49}{chapter.4}
+\contentsline {section}{\numberline {4.1}拉格朗日形式}{49}{section.4.1}
+\contentsline {subsection}{\numberline {4.1.1}Fermat 原理}{50}{subsection.4.1.1}
+\contentsline {subsection}{\numberline {4.1.2}变分法：基本思想}{50}{subsection.4.1.2}
+\contentsline {section}{\numberline {4.2}限制}{51}{section.4.2}
+\contentsline {section}{\numberline {4.3}粒子理论与场论}{52}{section.4.3}
+\contentsline {section}{\numberline {4.4}欧拉-拉格朗日方程}{53}{section.4.4}
+\contentsline {section}{\numberline {4.5}Noether 定理}{55}{section.4.5}
+\contentsline {subsection}{\numberline {4.5.1}粒子理论的Noether 定理}{55}{subsection.4.5.1}
+\contentsline {subsection}{\numberline {4.5.2}场论中的 Neother 定理——时空对称性}{59}{subsection.4.5.2}
+\contentsline {subsection}{\numberline {4.5.3}旋转和推动}{62}{subsection.4.5.3}
+\contentsline {subsection}{\numberline {4.5.4}自旋}{64}{subsection.4.5.4}
+\contentsline {subsection}{\numberline {4.5.5}场论中的 Neother 定理——内禀对称性}{64}{subsection.4.5.5}
+\contentsline {section}{\numberline {4.6}附录：粒子理论中的推动不变性与其守恒量}{67}{section.4.6}
+\contentsline {section}{\numberline {4.7}附录：场论中的推动不变性与其守恒量}{67}{section.4.7}
+\contentsline {part}{\@mypartnumtocformat {III}{The Equations of Nature 自然界的方程}}{69}{part.3}
+\contentsline {chapter}{\numberline {5}测量}{71}{chapter.5}
+\contentsline {section}{\numberline {5.1}量子力学中的算符}{71}{section.5.1}
+\contentsline {subsection}{\numberline {5.1.1}自旋与角动量}{72}{subsection.5.1.1}
+\contentsline {section}{\numberline {5.2}量子场论的算符}{73}{section.5.2}
+\contentsline {chapter}{\numberline {6}自由场理论}{75}{chapter.6}
 \contentsfinish 
