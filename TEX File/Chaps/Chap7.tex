@@ -6,10 +6,113 @@
 %——————————————————————————————————————————————————————————-
 \newcommand\rd{\mathrm d}
 \newcommand\ri{\mathrm i}
+\newcommand\ue{\mathrm e}
+\newcommand\sutw{$\mathcal{SU}(2)$}
+\newcommand\suth{$\mathcal{SU}(3)$}
+\newcommand\uo{$\mathcal{U}(1)$}
+\newcommand\spint{自旋$\frac{1}{2}$}
 \chapterimage{chapter_head_1.pdf} % Chapter heading image
 
-\chapter[相互作用理论]{Interaction Theory 相互作用理论}\label{chap7}
+\chapter[相互作用理论]{Interaction Theory\quad 相互作用理论}\label{chap7}
 
-\section*{Summary 总结}
+\section*{Summary\quad 总结}
+在这一章中我们将导出不同的场之间的相互作用。这使得我们能够，例如，描述电子是如何和光子作用的%
+\mpar{从另外一个视角看：电子（\spint 且有质量）场如何和光子（自旋为$1$）场作用。}。
 
-\section[U(1)相互作用]{$\mathcal{U}(1)$ Interaction $\mathcal{U}(1)$相互作用}
+内禀对称性，或者这里叫做规范%
+\mpar{马上就会解释这个奇怪的名字}
+对称性，能指引我们得到拉格朗日量的正确形式。我们将从局域%
+\mpar{这意味着不仅仅是一个$\ue^{\ri\alpha}$，而是在每一个时空点上作用一个不同的因子，数学上写作$\ue^{\ri\alpha(x)}$。或者这样说：变换参数$\alpha=\alpha(x)$现在是$x$的函数，在不同的时空点上有不同的值。}%
+$\mathcal{U}(1)$对称性出发来得到拉格朗日量
+\[
+{\mathscr L} = -m\bar\Psi\Psi+\ri\bar\Psi\gamma_\mu\partial^\mu\Psi + A_\mu\bar\Psi\gamma^\mu\Psi + \partial^\mu A^\nu\partial_\mu A_\nu - \partial^\mu A^\nu \partial_\nu A_\mu \text{，}
+\]
+即{\bf 量子电动力学(quantum electrodynamics)}的拉格朗日量。这个拉格朗日量描述了有电荷有质量的场和无质量自旋为$1$的场（光子场）之间的相互作用。在排除了形如$mA_\mu A^\mu$的“质量项”后（这和用$A_\mu$来描述的光子是无质量的实验事实相符），拉格朗日量只有这样才是局域$\mathcal{U}(1)$不变的%
+\mpar{译注：应该为“只有这样才是且仅是”。}%
+。利用 Noether 定理，我们能从\uo 对称性中导出一个新的守恒量，它常被解释为{\bf 电荷(electric charge)}。
+
+接下来是$\mathcal{SU}(2)$对称性。引入一个二分量的{\bf 二重态(doublet)}
+\[
+\bar\Psi : = \begin{pmatrix}
+\bar\psi_1 & \bar\psi_2
+\end{pmatrix}\text{，}
+\]
+这样一个二重态场中包含了两个\spint 场，例如，电子和电子中微子场在$\mathcal{SU}(2)$的“旋转”下相互转换。
+
+我们可以使用二重态记号写下局域$\mathcal{SU}(2)$不变的拉格朗日量%
+\mpar{$W_j^{\mu\nu}$这玩意会通过三个$W_j^\mu$定义，就像从\uo 规范场$A^\mu$定义$F_{\mu\nu}$一样。}
+\[
+{\mathscr L} = \ri\bar\Psi\gamma_\mu\partial^\mu\Psi + \bar\Psi\gamma_\mu\sigma_j W_j^\mu\Psi - \frac{1}{2}(W_{\mu\nu})_i(W^{\mu\nu})_i \text{，}
+\]
+其中包含了三个自旋为$1$的场$W_j^\mu$。由于\sutw 群的生成元有三个基$J_i=\sigma_i/2$，所以我们需要三个场来保证拉格朗日量是局域\sutw 不变的。我们将看到局域\sutw 对称性仅当形如$m\bar\Psi\Psi$、$mW_\mu W^\mu$的质量项（其中质量$m$是任意给定{\bf 矩阵}）不存在时才有可能实现，这是因为$\Psi$现在是二分量对象了。所以此时不仅自旋为$1$的场$W_j^\mu$得是无质量的了，\spint 场也一样。另外一种可能是两个\spint 等质量场，但是它被实验否决了：电子质量远大于电子中微子质量。除此之外，我们从实验知道三个自旋为$1$的场$W_j^\mu$不是无质量的。这常解释成\sutw 对称性被破缺了。
+
+这是随后被引入的{\bf Higgs 机制(Higgs formalism)}的想法来源。这个机制能使我们得到一个包含质量项的\sutw 不变的拉格朗日量。它通过引入一个与零自旋场，即 Higgs 场，的相互作用来达成目标。相同的机制使我们能给\spint 场加上任意的质量项以与实验相符。最后的相互作用拉格朗日量描述了一种新的相互作用：{\bf 弱相互作用(weak interaction)}，由三个%
+\mpar{准确的讲：我们从${\mathcal U}(1)\otimes{\mathcal SU}(2)$对称破缺到\uo 。这个过程产生了三个有质量矢量 bosons：$W^+$、$W^-$、$Z$，和一个无质量矢量 bosons：$\gamma$光子。所以说为什么常讲电磁学（来自\uo 对称性）和弱相互作用理论（来自\sutw ）是统一的。一开始的\uo 对称性和最后留下来的\uo 对称性不是一个东西。光子和$Z$Bosons可以看做是两个矢量Bosons的线性组合，常记做$B$和$W^3$，用以使拉格朗日量具有局域\uo （$B$波色子）和\sutw （$W^1$、$W^2$、$W^3$-bosons）不变性。}%
+有质量自旋为$1$的场：$W^+$、$W^-$和$Z$,作为传播媒介。利用 Noether 定理，我们能从\sutw 对称性得到一个新的守恒量：{\bf 同位旋(isospin)}，它相当于于电磁相互作用中的电荷，是弱相互作用中的荷。
+
+最后，我们将考虑内禀\suth 对称，它将会将我们能描述一类新的相互作用，{\bf 强相互作用(strong interaction)}，的拉格朗日量。为此我们将引入一个三重态
+\[
+Q = \begin{pmatrix}
+q_1 \\
+q_2 \\
+q_3
+\end{pmatrix}\text{，}
+\]
+在\suth 下变换，包含三个\spint 场。这三个\spint 场被解释为有不同{\bf 颜色(color)}的{\bf 夸克(quarks)}，这是电磁作用中的电荷、或者弱作用中的同位旋在强相互作用中的对应物。一样，质量项是被禁止的，但这次和实验结论一致：8个相应的 bosons%
+\mpar{数字8源于\suth 的生成元有8个基。}%
+，称为胶子，是无质量的%
+\mpar{作为补充，我们从实验知道\suth 的三重态中的场有相同的质量。这是个好消息，因为局域\suth 对称性禁止形如$m\bar QQ$这样带有任意质量矩阵$m$的项存在，但允许$\bar Q \begin{pmatrix}m&0\\ m&0\end{pmatrix} Q$这样一项，这代表三重态里的项有相同的质量。由此局域\suth 不变性不会在拉格朗日量的质量项上造成新的障碍，\suth 对称也不没有被破缺。}%
+。根据实验我们知道只有夸克（\spint ）和胶子（自旋为$1$）携带颜色。最后，拉格朗日量的结果是
+\[
+{\mathscr L} = -\frac{1}{4}F_{\alpha\beta}^A F_A^{\alpha\beta} + \bar Q(\ri D_\mu\gamma^\mu - m)Q \text{，}
+\]
+咱仅仅引用一下\sout{装个逼}，因为推导太繁琐了，并且和我们之前做过的完全类似。
+
+给总结来总结一下：
+\begin{table}[htbp]
+\begin{tabular}{ccccccc}
+ \uo & $\rightarrow$ & 1个规范场 & $\rightarrow$ & {\bf 无质量}光子 & $\rightarrow$ & 电荷 \\
+ \sutw & $\rightarrow$ & 3个规范场 & $\rightarrow$ & {\bf 有质量}W- 和 Z-bosons （需要 Higgs ） & $\rightarrow$ & 同位旋 \\
+ \suth & $\rightarrow$ & 8个规范场 & $\rightarrow$ & {\bf 无质量}胶子 & $\rightarrow$ & 色荷
+\end{tabular}
+\end{table}
+
+\section[$\mathcal{U}(1)$相互作用]{$\mathcal{U}(1)$ Interaction\quad $\mathcal{U}(1)$相互作用}\label{sec7.1}
+
+\subsection{\spint 自由场的内禀对称性}\label{sec7.1.1}
+
+\subsection{自旋为$1$自由场的内禀对称性}\label{sec7.1.2}
+
+\subsection{把奇怪的东西堆一起}\label{sec7.1.3}
+
+\subsection{非齐次麦克斯韦方程和最小耦合}\label{sec7.1.4}
+
+\subsection{再一次电荷共轭变换}\label{sec7.1.5}
+
+\subsection{内禀${\mathcal U}(1)$对称性的 Noether 定理}\label{sec7.1.6}
+
+\subsection{零自旋有质量场的相互作用}\label{sec7.1.7}
+
+\subsection{自旋为$1$有质量场的相互作用}\label{sec7.1.8}
+
+\section[$\mathcal{SU}(2)$相互作用]{$\mathcal{SU}(2)$ Interaction\quad $\mathcal{SU}(2)$相互作用}\label{sec7.2}
+
+\section[质量项、${\mathcal U}(1)$和$\mathcal{SU}(2)$的统一]{Mass Terms and Unification of ${\mathcal U}(1)$ and $\mathcal{SU}(2)$ \quad 质量项、${\mathcal U}(1)$和$\mathcal{SU}(2)$的统一}\label{sec7.3}
+
+\section[宇称破坏]{Parity Violation\quad 宇称破坏}\label{sec7.4}
+
+\section[轻子质量项]{Lepton Mass Terms\quad 轻子质量项}\label{sec7.5}
+
+\section[夸克质量项]{Quark Mass Terms\quad 夸克质量项}\label{sec7.6}
+
+\section[同位旋]{Isospin \quad 同位旋}\label{sec7.7}
+
+\subsection[Labelling 态]{Labelling States\quad Labelling 态}\label{sec7.7.1}
+
+\section[$\mathcal{SU}(3)$相互作用]{$\mathcal{SU}(2)$ Interactions \quad $\mathcal{SU}(2)$相互作用}\label{sec7.8}
+
+\subsection[色]{Color\quad 色}\label{sec7.8.1}
+
+\subsection[夸克描述]{Quark Description \quad 夸克描述}\label{sec7.8.2}
+
+\section[Bosons 和 Fermions 间的相互影响]{The Interplay Between Fermions and Bosons\quad Bosons 和 Fermions间的相互影响}\label{sec7.9}
