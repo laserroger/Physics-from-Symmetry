@@ -1,0 +1,74 @@
+\select@language {english}
+\contentsline {part}{\@mypartnumtocformat {I}{Foundations 基础}}{1}{part.1}
+\ttl@starttoc {default@1}
+\contentsline {chapter}{\numberline {1}简介}{3}{chapter.1}
+\contentsline {section}{\numberline {1.1}推不出来的事情}{3}{section.1.1}
+\contentsline {section}{\numberline {1.2}全书概览}{5}{section.1.2}
+\contentsline {section}{\numberline {1.3}基本粒子和基本相互作用力}{7}{section.1.3}
+\contentsline {chapter}{\numberline {2}狭义相对论}{9}{chapter.2}
+\contentsline {section}{\numberline {2.1}狭义相对论的中的不变量}{10}{section.2.1}
+\contentsline {section}{\numberline {2.2}固有时}{13}{section.2.2}
+\contentsline {section}{\numberline {2.3}速度上限}{14}{section.2.3}
+\contentsline {section}{\numberline {2.4}Minkowski记法}{15}{section.2.4}
+\contentsline {section}{\numberline {2.5}Lorentz变换}{18}{section.2.5}
+\contentsline {section}{\numberline {2.6}不变性，对称性，协变性}{20}{section.2.6}
+\contentsline {part}{\@mypartnumtocformat {II}{Symmetry Tools 对称性工具}}{23}{part.2}
+\ttl@stoptoc {default@1}
+\ttl@starttoc {default@2}
+\contentsline {chapter}{\numberline {3}Lie群}{25}{chapter.3}
+\contentsline {section}{\numberline {3.1}群}{26}{section.3.1}
+\contentsline {section}{\numberline {3.2}二维旋转}{29}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}单位复数表示旋转变换}{30}{subsection.3.2.1}
+\contentsline {section}{\numberline {3.3}三维旋转}{33}{section.3.3}
+\contentsline {subsection}{\numberline {3.3.1}四元数}{34}{subsection.3.3.1}
+\contentsline {section}{\numberline {3.4}Lie代数}{39}{section.3.4}
+\contentsline {subsection}{\numberline {3.4.1}$\mathcal {SO}(3)$群的生成元与Lie代数}{42}{subsection.3.4.1}
+\contentsline {subsection}{\numberline {3.4.2}Lie代数的抽象定义}{45}{subsection.3.4.2}
+\contentsline {subsection}{\numberline {3.4.3}$\mathcal {SU}(2)$的生成元与Lie代数}{46}{subsection.3.4.3}
+\contentsline {subsection}{\numberline {3.4.4}Lie群的抽象定义}{48}{subsection.3.4.4}
+\contentsline {section}{\numberline {3.5}表示论}{50}{section.3.5}
+\contentsline {chapter}{\numberline {4}框架/体系}{55}{chapter.4}
+\contentsline {section}{\numberline {4.1}拉格朗日形式}{55}{section.4.1}
+\contentsline {subsection}{\numberline {4.1.1}Fermat 原理}{56}{subsection.4.1.1}
+\contentsline {subsection}{\numberline {4.1.2}变分法：基本思想}{56}{subsection.4.1.2}
+\contentsline {section}{\numberline {4.2}限制}{57}{section.4.2}
+\contentsline {section}{\numberline {4.3}粒子理论与场论}{58}{section.4.3}
+\contentsline {section}{\numberline {4.4}欧拉-拉格朗日方程}{59}{section.4.4}
+\contentsline {section}{\numberline {4.5}Noether 定理}{61}{section.4.5}
+\contentsline {subsection}{\numberline {4.5.1}粒子理论的Noether 定理}{61}{subsection.4.5.1}
+\contentsline {subsection}{\numberline {4.5.2}场论中的 Neother 定理——时空对称性}{65}{subsection.4.5.2}
+\contentsline {subsection}{\numberline {4.5.3}旋转和推动}{68}{subsection.4.5.3}
+\contentsline {subsection}{\numberline {4.5.4}自旋}{70}{subsection.4.5.4}
+\contentsline {subsection}{\numberline {4.5.5}场论中的 Neother 定理——内禀对称性}{70}{subsection.4.5.5}
+\contentsline {section}{\numberline {4.6}附录：粒子理论中的推动不变性与其守恒量}{73}{section.4.6}
+\contentsline {section}{\numberline {4.7}附录：场论中的推动不变性与其守恒量}{74}{section.4.7}
+\contentsline {part}{\@mypartnumtocformat {III}{The Equations of Nature 自然界的方程}}{75}{part.3}
+\ttl@stoptoc {default@2}
+\ttl@starttoc {default@3}
+\contentsline {chapter}{\numberline {5}测量}{77}{chapter.5}
+\contentsline {section}{\numberline {5.1}量子力学中的算符}{77}{section.5.1}
+\contentsline {subsection}{\numberline {5.1.1}自旋与角动量}{78}{subsection.5.1.1}
+\contentsline {section}{\numberline {5.2}量子场论的算符}{79}{section.5.2}
+\contentsline {chapter}{\numberline {6}自由场理论}{81}{chapter.6}
+\contentsline {chapter}{\numberline {7}相互作用理论}{83}{chapter.7}
+\contentsline {section}{\numberline {7.1}$\mathcal {U}(1)$相互作用}{86}{section.7.1}
+\contentsline {subsection}{\numberline {7.1.1}自旋$\frac {1}{2}$自由场的内禀对称性}{86}{subsection.7.1.1}
+\contentsline {subsection}{\numberline {7.1.2}自旋为$1$自由场的内禀对称性}{86}{subsection.7.1.2}
+\contentsline {subsection}{\numberline {7.1.3}把奇怪的东西堆一起}{86}{subsection.7.1.3}
+\contentsline {subsection}{\numberline {7.1.4}非齐次麦克斯韦方程和最小耦合}{86}{subsection.7.1.4}
+\contentsline {subsection}{\numberline {7.1.5}再一次电荷共轭变换}{86}{subsection.7.1.5}
+\contentsline {subsection}{\numberline {7.1.6}内禀${\mathcal U}(1)$对称性的 Noether 定理}{86}{subsection.7.1.6}
+\contentsline {subsection}{\numberline {7.1.7}零自旋有质量场的相互作用}{86}{subsection.7.1.7}
+\contentsline {subsection}{\numberline {7.1.8}自旋为$1$有质量场的相互作用}{86}{subsection.7.1.8}
+\contentsline {section}{\numberline {7.2}$\mathcal {SU}(2)$相互作用}{86}{section.7.2}
+\contentsline {section}{\numberline {7.3}质量项、${\mathcal U}(1)$和$\mathcal {SU}(2)$的统一}{86}{section.7.3}
+\contentsline {section}{\numberline {7.4}宇称破坏}{86}{section.7.4}
+\contentsline {section}{\numberline {7.5}轻子质量项}{86}{section.7.5}
+\contentsline {section}{\numberline {7.6}夸克质量项}{86}{section.7.6}
+\contentsline {section}{\numberline {7.7}同位旋}{86}{section.7.7}
+\contentsline {subsection}{\numberline {7.7.1}Labelling 态}{86}{subsection.7.7.1}
+\contentsline {section}{\numberline {7.8}$\mathcal {SU}(3)$相互作用}{86}{section.7.8}
+\contentsline {subsection}{\numberline {7.8.1}色}{86}{subsection.7.8.1}
+\contentsline {subsection}{\numberline {7.8.2}夸克描述}{86}{subsection.7.8.2}
+\contentsline {section}{\numberline {7.9}Bosons 和 Fermions 间的相互影响}{86}{section.7.9}
+\contentsfinish 
