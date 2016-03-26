@@ -4,8 +4,6 @@
 %——————————————————————————————————————————————————————————-
 %	CHAPTER 7
 %——————————————————————————————————————————————————————————-
-\newcommand\rd{\mathrm d}
-\newcommand\ri{\mathrm i}
 \newcommand\ue{\mathrm e}
 \newcommand\sutw{$\mathcal{SU}(2)$}
 \newcommand\suth{$\mathcal{SU}(3)$}
@@ -61,7 +59,7 @@ q_3
 在\suth 下变换，包含三个\spint 场。这三个\spint 场被解释为有不同{\bf 颜色(color)}的{\bf 夸克(quarks)}，这是电磁作用中的电荷、或者弱作用中的同位旋在强相互作用中的对应物。一样，质量项是被禁止的，但这次和实验结论一致：8个相应的 bosons%
 \mpar{数字8源于\suth 的生成元有8个基。}%
 ，称为胶子，是无质量的%
-\mpar{作为补充，我们从实验知道\suth 的三重态中的场有相同的质量。这是个好消息，因为局域\suth 对称性禁止形如$m\bar QQ$这样带有任意质量矩阵$m$的项存在，但允许$\bar Q \begin{pmatrix}m&0\\ m&0\end{pmatrix} Q$这样一项，这代表三重态里的项有相同的质量。由此局域\suth 不变性不会在拉格朗日量的质量项上造成新的障碍，\suth 对称也不没有被破缺。}%
+\mpar{作为补充，我们从实验知道\suth 的三重态中的场有相同的质量。这是个好消息，因为局域\suth 对称性禁止形如$m\bar QQ$这样带有任意质量矩阵$m$的项存在，但允许$\bar Q \begin{pmatrix}m&0\\ 0&m\end{pmatrix} Q$这样一项，这代表三重态里的项有相同的质量。由此局域\suth 不变性不会在拉格朗日量的质量项上造成新的障碍，\suth 对称也不没有被破缺。}%
 。根据实验我们知道只有夸克（\spint ）和胶子（自旋为$1$）携带颜色。最后，拉格朗日量的结果是
 \[
 {\mathscr L} = -\frac{1}{4}F_{\alpha\beta}^A F_A^{\alpha\beta} + \bar Q(\ri D_\mu\gamma^\mu - m)Q \text{，}
@@ -78,9 +76,55 @@ q_3
 \end{table}
 
 \section[$\mathcal{U}(1)$相互作用]{$\mathcal{U}(1)$ Interaction\quad $\mathcal{U}(1)$相互作用}\label{sec7.1}
+为了得到拉格朗日量中正确的相互作用项，我们得使用内禀对称性，或者称作{\bf 规范对称性(gauge symmetries)}。规范对称这个叫法有一些历史上的原因，和我们现在要讨论的东西之间关系不是太大。Weyl 曾尝试将电磁学%
+\mpar{Frank Wilczek. Riemann-einstein structure from volume and gauge symmetry. Phys. Rev. Lett., 80:4851–4854, Jun 1998. doi: 10.1103/PhysRevLett.80.4851}%
+“作为时空对称性的结果，特别是在局域尺度变换下的对称性”。将其称作规范对称性是有原因的，因为它意味着，例如，我们能任意改变用于定义长度标准的铂金尺（用来规范\footnote{译注：没有规矩，不成方圆。线长是某个线性空间中的某种范数，将改变线长的定义的变换，称作规范变换，应当是一个合理的称呼。关于 gauge 这个词的命名以及为何翻译成“规范”，可以参见 曹则贤 . Norm and Gauge[J]. 物理, 2013, 42(11): 815-819. }实验中测长的仪器），而不改变物理。这个尝试没有成功，但稍晚些时候，Weyl 找到了能正确导出电磁学的对称性，并仍用这个词来命名。
 
 \subsection{\spint 自由场的内禀对称性}\label{sec7.1.1}
+再来看一眼用来导出自由\spint 理论的拉格朗日量（\ref{eq:6.16}式）
+\begin{equation}
+{\mathscr L}_\text{Dirac} = -m\bar\Psi\Psi +\ri\bar\Psi\gamma_\mu\partial^\mu\Psi = \bar\Psi(\ri\gamma_\mu\partial^\mu-m)\Psi
+\end{equation}
+它是在 Lorentz 对称性的要求下导出的，但如果我们仔细观察它，能发现这个拉格朗日量中蕴含着另一个对称性。拉格朗日量在场$\Psi$的如下变换下不变
+\begin{eqnarray}
+\Psi &\rightarrow& \Psi' = \ue^{\ri a}\Psi \nonumber \\
+\Rightarrow \bar\Psi &\rightarrow& \bar\Psi' = \Psi'^\dag \gamma_0 = (\ue^{\ri a}\Psi)^\dag \gamma_0 =\bar\Psi \ue^{-\ri a} \text{，}
+\end{eqnarray}
+其中负号来源于复共轭\mpar{别忘了$\bar\Psi=\Psi^\dag \gamma_0 $}%
+，而$a$是一个任给实数。为了看清这一点，我们将变换后的场的拉格朗日量明确写出
+\begin{eqnarray}
+{\mathscr L}_\text{Dirac}' &=& -m\bar\Psi'\Psi' +\ri\bar\Psi'\gamma_\mu\partial^\mu\Psi' \nonumber\\
+&=& -m(\bar\Psi \ue^{-\ri a})(\ue^{\ri a}\Psi)+\ri(\bar\Psi \ue^{-\ri a})\gamma_\mu\partial^\mu\Psi(\ue^{\ri a}\Psi) \nonumber\\
+&=& -m\bar\Psi\Psi \underbrace{\ue^{-\ri a}\ue^{\ri a}}_{\mathclap{=1}} + \ri\bar\Psi\gamma_\mu\partial^\mu\Psi \underbrace{\ue^{-\ri a}\ue^{\ri a}}_{\mathclap{=1}} \nonumber\\
+&=& -m\bar\Psi\Psi +\ri\bar\Psi\gamma_\mu\partial^\mu\Psi ={\mathscr L}_\text{Dirac}
+\end{eqnarray}
+其中我们利用了$\ue^{\ri a}$仅是一个复数这一点来将它自由前后挪动%
+\mpar{技术上讲：一个复数和所有矩阵对易，例如$\gamma_\mu$。}%
+。回忆我们在第\ref{chap3}章中曾讲过的，任何单位复数（能写作$\ue^{\ri a}$的形式）构成了一个\uo 群，由此可以将我们刚才发现的事实用数学语言表达出来：拉格朗日量是\uo 不变的。由于它丝毫不涉及时空的变换而只改变场自身，所以说这是一个内禀对称性。猛地一看，这玩意还挺萌的，但好像没什么用。不要走开，稍后的节目会告诉你它有多精彩！
 
+现在咱再来钻深一点。我们刚展示了，给我们的场乘一个任意单位复数什么都不会改变。这个对称变换$\Psi \rightarrow \Psi' = \ue^{\ri a}\Psi$叫做{\bf 全局(global)}变换，因为我们在每一个点$x$给场$\Psi=\Psi(x)$乘上了一个相同的因子$\ue^{\ri a}$。
+
+所以说，为什么一个时空点的相位因子会和另一个时空点的相关呢？一个点的选取不应该瞬间改变整个宇宙的情况。这是挺奇怪的，因为正如\ref{sec2.4}节中所述，狭义相对论告诉我们没有信息能比光传播得更快。而全局对称性选择会瞬间应用到在整个宇宙中的每一个点上%
+\footnote{译注：引入局域规范的另一种讲法是，我们不能保证外星人里物理学家和我们选取同一套规范（这里的$a$是可以随意选取的，但是必须要选取一个才能得到完整的理论。$a$的选取被称为规范的选取），但是物理定律不应该有区别。}%
+。
+
+让我们来检查一下，如果给每一个时空点变换一个不同的因子$a=a(x)$，拉格朗日量是不是还是不变的。这叫做{\bf 局域(local)}变换。
+
+我们作变换
+\begin{eqnarray}
+\Psi &\rightarrow& \Psi' = \ue^{\ri a(x)}\Psi \nonumber \\
+\Rightarrow \bar\Psi &\rightarrow& \bar\Psi' = \Psi'^\dag \gamma_0 = (\ue^{\ri a(x)}\Psi)^\dag \gamma_0 =\bar\Psi \ue^{-\ri a(x)} \text{，}
+\end{eqnarray}
+现在$a=a(x)$依赖于坐标了，我们得到变换后的拉格朗日量%
+\mpar{可能你会好奇包含全部可能导数项的拉格朗日量（由简洁性的要求被忽略）是不是局域\uo 不变的：${\mathscr L} = -m\bar\Psi\Psi +\ri\bar\Psi\gamma_\mu\partial^\mu\Psi+\ri(\partial^\mu\Psi)\gamma_\mu\Psi$。你可以检查一下，这个拉格朗日量自然是局域\uo 不变的，但注意第二项和第三项之和为零：$\ri\bar\Psi\gamma_\mu\partial^\mu\Psi+\ri(\partial^\mu\Psi)\gamma_\mu\Psi \underbrace{=}_{\mathclap{\text{分部积分}}} \ri(\partial^\mu\Psi)\gamma_\mu\Psi-\ri(\partial^\mu\Psi)\gamma_\mu\Psi = 0 $。包含了全部可能导数的正确拉格朗日量的两导数项间必须有一个相对负号：${\mathscr L_\text{Dirac}} = -m\bar\Psi\Psi +\ri\bar\Psi\gamma_\mu\partial^\mu\Psi-\ri(\partial^\mu\Psi)\gamma_\mu\Psi$，故它并{\bf 不}是局域\uo 不变的。
+}
+\begin{eqnarray}
+{\mathscr L}_\text{Dirac}' &=& -m\bar\Psi'\Psi' +\ri\bar\Psi'\gamma_\mu\partial^\mu\Psi' \nonumber\\
+&=& -m(\bar\Psi \underbrace{\ue^{-\ri a})(\ue^{\ri a}}_{\mathclap{=1}}\Psi)+\ri(\bar\Psi \ue^{-\ri a(x)})\gamma_\mu\partial^\mu\Psi(\ue^{\ri a(x)}\Psi) \nonumber\\
+&=& -m\bar\Psi\Psi + \ri\bar\Psi\gamma_\mu\partial^\mu\Psi \underbrace{\ue^{-\ri a}\ue^{\ri a}}_{\mathclap{=1}} \underbrace{+}_{\mathclap{\text{莱布尼兹律}}} \ri(\ue^{-\ri a(x)}\bar\Psi)\gamma_\mu\Psi(\partial^\mu\ue^{\ri a(x)}) \nonumber\\
+&=& -m\bar\Psi\Psi +\ri\bar\Psi\gamma_\mu\partial^\mu\Psi + \ri^2(\partial^\mu a(x))\bar\Psi\gamma_\mu\Psi \ne {\mathscr L}_\text{Dirac}
+\end{eqnarray}
+由于莱布尼兹律导致了一个额外的项，所以说我们的拉格朗日量在局域\uo 对称变换下不是不变的。但按照上面所讨论的，拉格朗日量应该是局域不变的，在这里却不是。这里有一些事情可做，但我们得先研究另一种对称性。
 \subsection{自旋为$1$自由场的内禀对称性}\label{sec7.1.2}
 
 \subsection{把奇怪的东西堆一起}\label{sec7.1.3}

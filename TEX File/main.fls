@@ -612,6 +612,8 @@ INPUT Pictures/fig3_6.eps
 INPUT c:/texlive/texmf-dist/fonts/tfm/public/lm/lmsy8.tfm
 INPUT c:/texlive/texmf-dist/fonts/tfm/public/lm/ec-lmri8.tfm
 INPUT c:/texlive/texmf-dist/fonts/tfm/public/lm/ec-lmri7.tfm
+INPUT Pictures/fig3_7.eps
+INPUT Pictures/fig3_7.eps
 INPUT ./Chaps/Chap4.tex
 INPUT ./Chaps/Chap4.tex
 INPUT Pictures/chapter_head_1.pdf
