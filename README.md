@@ -38,6 +38,9 @@ Translation of `Physics from Symmetry'.
     Lie group       Lie群
     
     unitary matrix 幺正矩阵
+    spin 0          零自旋
+    spin 1/2        自旋1/2
+    spin 1          自旋为1
     
     其它暂且都不翻译，以后统一更改
 
