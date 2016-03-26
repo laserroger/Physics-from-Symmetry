@@ -2,7 +2,8 @@
 
 %----------------------------------------------------------------------------------------
 %	CHAPTER 3
-%	Translator: SI(= Surgam Identidem)
+%	Translator: SI(= Surgam Identidem), InSight
+%	Proofreader: lh(= lh1962)
 %----------------------------------------------------------------------------------------
 
 \chapterimage{chapter_head_1.pdf} % Chapter heading image
@@ -20,7 +21,7 @@
 
 
 \marginpar{
-
+	
 下面的图表是本章结构的示意图。 当你迷失方向的时候记得回来看看， 初学的时候不太需要看它。\sout{反正也看不懂}
 
 \setlength{\unitlength}{0.8cm}
@@ -64,17 +65,17 @@
 我们从两个简单例子引出{\bf{群}}的定义， 然后作为学习Lie群理论的第一步， 我们讨论描述二维旋转变换的两种方式:
 \begin{itemize}
 	\item $2 \times 2$旋转矩阵。
-	\item 单位复数。
+	\item 单位复数\footnote{指模长为$1$的复数。}。
 \end{itemize}
 
-接着我们尝试找出描述三维旋转的第二种方法(像复数那样， 当然第一种方法是$3\times3$矩阵)， 第二法与一种超级重要的群 --- {\bf{$\mathcal{SU}(2)$}}。\mpar{$S$表示特殊(special)， 它的含义为$\det (M) = 1$。 U表示幺正: $M^\dagger M = 1$， 数字$2$表示这个群起初是用$2 \times 2$矩阵定义的。}有关。 之后我们研究{\bf{Lie代数}}， 使用简便的Lie代数能够深入研究复杂的Lie群。 不同的群可以有相同的Lie代数， 但只有其中的一部分是基本的。
-从上述基础出发就能准确揭示自然的基本对称性群 --- Poincare群的双覆盖。
+接着我们尝试找出描述三维旋转的第二种方法(像复数那样， 当然第一种方法是$3\times3$矩阵)， 第二法与一种超级重要的群 --- {\bf{$\mathcal{SU}(2)$}}\mpar{$S$表示特殊(special)， 它的含义为$\det (M) = 1$。 U表示幺正: $M^\dagger M = 1$， 数字$2$表示这个群起初是用$2 \times 2$矩阵定义的。}有关。 之后我们研究{\bf{Lie代数}}， 使用相对简单的Lie代数就能深入研究复杂的Lie群。 不同的群可以有相同的Lie代数， 但只有其中的一部分是基本的。 
+从上述基础出发就能准确揭示自然的基本对称性群 --- Poincare群的双覆盖。 
 %flag1:  double covers the Poincare group。 (Poincare 群的双覆盖) 翻译是否正确?
-我们将利用已知的变换操作导出Lie代数， 并利用Lie代数得出不同的对称变换表示。 这样就能看出我们开始时使用的表示其实只是一种特殊情况。 这样我们又能研究Poincare群的重要部分 --- {\bf{Lorentz群}}， 我们会看到Lorentz群双覆盖的Lie代数由两份$\mathcal{SU}(2)$\, Lie代数所组成， 因此我们可以直接利用熟悉的$\mathcal{SU}(2)$群的结论。 最后我们将平移变换考虑进来， 这就是Poincare群， Poincare群就是Lorentz群加上平移。 完成上述所有之后我们终于可以将Poincare群双覆盖的基本表示进行分类， 这些在后面的章节中会大用特用， 我们将从中导出物理学的基本定律。
+我们将利用已知的变换操作导出Lie代数， 并利用Lie代数得出对称变换的不同表示。 这样就能看出开始时使用的表示其实只是一种特殊情况。 于是又能研究Poincare群的重要部分 --- {\bf{Lorentz群}}， 我们会看到Lorentz群双覆盖的Lie代数由两份$\mathcal{SU}(2)$\, Lie代数所组成， 因此可以直接利用熟悉的$\mathcal{SU}(2)$群的结论。 最后将平移变换考虑进来， 就得到了Poincare群， Poincare群就是Lorentz群加上平移。 完成上述所有之后我们终于可以将Poincare群双覆盖的基本表示进行分类， 这些在后面的章节中会大用特用， 我们将从中导出物理学的基本定律。
 
 \section[群]{Groups\quad 群}
 \label{sec3.1}
-我们需要合适的数学工具描述对称性\sout{以和民科(贬义的)区分开}。 描述对称的数学分支称为{\bf{群论}}。 群论的一个分支{\bf{Lie理论}}\sout{谎言理论}描述连续的对称性， 物理中经常遇到这种情况。
+我们需要合适的数学工具描述对称性\sout{以和民科(贬义的)区分开}。 描述对称的数学分支称为{\bf{群论}}。 群论的一个分支{\bf{Lie理论}}\sout{谎言理论}描述连续的对称性， 物理中经常遇到这类对称性。
 
 我们把对称性定义为变换下的不变性， 而描述对称的群就定义为某些变换的集合。 让我们从两个简单例子开始体会群到底该怎么定义吧。
 
@@ -82,35 +83,35 @@
 
 \begin{enumerate}
 	\item 正方形是一些点的集合(例如四个顶点是该集合的一部分)， 正方形的对称性是在某些变换下(变换: 将一个点映射到另一个点)保持不变的性质。
-
+		
 	符合条件的变换有绕中心旋转$90^\circ, 180^\circ, 270^\circ, 0^\circ$等等。 这些旋转操作将正方形映射到它自身。 我们称这个集合(正方形点集)在这样的变换下具有不变性。
 	% flag1: This means they map every point of the set to a point that lies again in the set 没翻译， 因为觉得太啰嗦...
-
+	
 	\marginpar{
-		\includegraphics[scale=0.35]{fig3_1}
+		\includegraphics[scale=0.35]{fig3_1} 
 		\figcaption{正方形}
 	}
-
+	
 	\marginpar{
 		\includegraphics[scale=0.35]{fig3_2.eps}
 		\figcaption{正方形绕中心顺时针旋转$5^\circ$}
 	}
-
+	
 	注意不是所有旋转变换都对称。 我们关注顶点的变化就能看出来， 比如绕中心顺时针旋转$5^\circ$， 这个变换将顶点映射到原来正方形点集之外， 顶点$A$映射到了原来正方形集合之外的点$A'$。 因此这个旋转变换对正方形不具有对称性。 当然， 变换后的点集仍然是个正方形， 但却是不同的正方形(即不同点的集合)。 绕中心转$90^\circ$是对称的， 如图\ref{fig3.3}， 顶点$A$变换到点$B$， 等等， 原来的正方形点集变换到相同的集合。
-
+	
 	{
 	\centering{
 	\includegraphics[scale=0.4]{fig3_3}
 	\figcaption{正方形绕中心旋转$90^\circ$}
 	\label{fig3.3}
 	}}
-
+	
 	假如你看了一眼原来的正方形， 然后闭上眼睛， 这时有人把正方形做了一个变换。 如果你不能分辨这个正方形是否发生变化， 那么这个变换就是个对称变换。
-
+	
 	我们把所有使正方形不变的变换构成的集合称为群。 变换参数(本例中就是旋转角度)不能任意取值(而是取分立的数)， 这个群称为离散群。
-
+	
 	\item 另一个例子是使单位圆不变的变换构成的集合。 类似地， 单位圆还是一些点构成的集合， 对称变换把这个集合映射到它自身。
-
+	
 	单位圆绕圆心旋转任意角度都不变。 换言之， 变换参数(这里就是旋转角度)可以取任意值， 因此这个群称为连续群。
 \end{enumerate}
 	\marginpar{
@@ -120,15 +121,15 @@
 
 数学中除了几何图形之外还有好多别的都有对称性。 例如，对于向量， 我们可以考虑所有让向量长度不变的变换构成的集合。 看出本节开头对称性定义的普遍性了没? 对称性就是变换下的不变性。 非常幸运， 搞数学的早已建立了群论， 它可以研究所有类型的对称性\mpar{历史上数学家们建立群论最初是为了描述方程的对称性}。
 
-为了让精确描述对称性的工具 --- 群的定义来的自然一点， 我们把对称性的定义用数学语言精炼一下:
+为了让描述对称的工具 --- 群 --- 有确切的含义， 我们把对称性的定义用数学语言精炼一下:
 \begin{itemize}
 	\item 对某物什么也不做(比如转个$0^\circ$)当然也是对称变换(按照我们的对称性定义)， 因此任何群都需要包含一个恒等变换(恒等元)。 在上面的例子里， 恒等元就是旋转$0^\circ$。
-
+	
 	\item 对某物先做变换再做逆变换的结果必须等于啥也不做。 因此对于群中的任意元素(简称群元)， 必须有相应的逆元素。 按定义， 先做变换再做逆变换等于恒等变换。 例如先转$90^\circ$再转$-90^\circ$(先逆针再顺针转)与旋转$0^\circ$相同。
-
+	
 	\item 先做一个对称变换再做一个对称变换， 总体效果必须还是对称变换。 例如先旋转$90^\circ$再转$180^\circ$等于直接转$270^\circ$， 后者也是对称变换。 对称变换的这个性质称为封闭性。
-
-	\item 对称变换之间必须满足结合律。 例如先转$90^\circ$再转$40^\circ$再转$110^\circ$与先转$130^\circ$再转$110^\circ$相同， 先转$90^\circ$再转$150^\circ$也一样。 用符号表示更加清楚:
+	
+	\item 对称变换之间必须满足结合律\mpar{它们不一定满足交换律！例如绕不同轴的旋转变换之间不能交换顺序，比如$R_x(\theta) R_z(\phi) \neq R_z(\phi) R_x(\theta)$}。 例如先转$90^\circ$再转$40^\circ$再转$110^\circ$与先转$130^\circ$再转$110^\circ$相同， 先转$90^\circ$再转$150^\circ$也一样。 用符号表示更加清楚:
 	\begin{equation}\label{equ3.1}
 	R(110^\circ) R(40^\circ) R(90^\circ) = R(110^\circ)\bigg( R(40^\circ)R(90^\circ) \bigg) = R(110^\circ) R(130^\circ)
 	\end{equation}
@@ -136,29 +137,29 @@
 	R(110^\circ) R(40^\circ) R(90^\circ) = \bigg( R(110^\circ) R(40^\circ) \bigg) R(90^\circ) = R(150^\circ) R(90^\circ)
 	\end{equation}
 	这个性质称为{\bf 结合律}。
+	
+	\item 我们要有关于两个群元(对称变换)怎样结合的规则， 它是个{\bf 二元运算}\footnote{两个群元结合成一个}， 我们称它为{\bf 群乘法}。
+\end{itemize} 
+	
+	在上面的例子里， 旋转变换的标准表示方法是用旋转矩阵\mpar{旋转矩阵见附录A.2.}， 两个群元(两个旋转矩阵， 或两个旋转操作)结合的规则是线性代数里的矩阵乘法。 同样的变换经常有不同的表示方法\mpar{例如， 二维平面旋转还可以用单位复数描述， 相应的群乘法是复数乘法。 稍后就讨论这一点。}， 群论非常系统性地概括了所有形式。 群论的分支 --- {\bf 表示论}就是研究相同变换的不同描述方式的， 我们在\ref{sec3.5}节学习表示论。
 
-	\item 我们要有规定两个群元(对称变换)怎样合体的规则， 它是个{\bf 二元运算}(两个群元合体成一个)， 我们称它为{\bf 群乘法}。
+\ 
 
-	在上面的例子里， 旋转变换的标准表示方法是用旋转矩阵\mpar{旋转矩阵见附录A.2.}， 两个群元(两个旋转矩阵， 或两个旋转操作)合体的规则是线性代数里的矩阵乘法。 同样的变换经常有不同的表示方法\mpar{例如， 二维平面旋转还可以用单位复数描述， 相应的群乘法是复数乘法。 稍后就讨论这一点。}， 群论非常系统性地概括了所有形式。 群论的分支 --- {\bf 表示论}就是研究相同变换的不同描述方式的， 我们在\ref{sec3.5}节学习表示论。
-\end{itemize}
+我们把上述群与对称变换的特征用严谨的数学语言表达， 再将它们提升为公理， 满足这些公理的数学结构就是一个群。必须指出满足群公理的结构可能是超级抽象的， 但我们现在只关注上面例子里的旋转变换那样的群。 \sout{因为我们是物理系的， 而且这是本物理书}
 
-\
+\ 
 
-我们把上述群与对称变换的特征用严谨的数学语言表达， 再将它们提升为公理， 满足这些公理的数学结构就是一个群。 数学系的群论书可能更喜欢在开头就从天上掉下来这些公理。 必须指出满足群公理的结构可能是超级抽象的， 但我们现在只关注上面例子里的旋转变换那样的群。 \sout{因为我们是物理系的， 而且这是本物理书}
+(我们通过对称变换的性质导出的)群公理\mpar{别担心怎么才能根据这些公理凑出一个群来。 搞物理的往往是从某个变换出发， 考察它是否符合群公理， 如果是\sout{经常是}那么就可以应用群论来解决问题。}: 
 
-\
-
-(我们通过对称变换的性质导出的)群公理\mpar{别担心怎么才能根据这些公理凑出一个群来。 搞物理的往往是从某个变换出发， 考察它是否符合群公理， 如果是\sout{经常是}那么就可以应用群论来解决问题。}:
-
-一个群就是一个集合$G$加上一个定义在$G$上的二元运算(群乘法)$\circ$， 当然$(G, \circ)$还要满足以下公理:
+一个群是一个集合$G$加上一个定义在$G$上的二元运算(群乘法)$\circ$， 若$(G, \circ)$满足以下公理: 
 \begin{itemize}
 	\item 封闭性: 对于任意$g_1, g_2 \in G, g_1 \circ g_2 \in G$
-
+	
 	\item 单位元: 存在单位元$e \in G$使得对于所有$g \in G, g\circ e = g = e \circ g$
-
+	
 	\item 逆元: 对于任意$g \in G$， 存在相应的逆元$g^{-1} \in G$使得$g \circ g^{-1} = e = g^{-1} \circ g$
-
-	\item 结合律:　对于任意$g_1, g_2, g_3 \in G, g_1 \circ (g_2 \circ g_3) = (g_1 \circ g_2) \circ g_3$
+	
+	\item 结合律:　对于任意$g_1, g_2, g_3 \in G, g_1 \circ (g_2 \circ g_3) = (g_1 \circ g_2) \circ g_3$ 
 \end{itemize}
 
 总结: 某物体在一些变换下保持不变， 这些变换组成\footnote{我在想这里该用`构成'还是`组成'， 后来我觉得无所谓， 因为这不是初中化学...(分子构成物质， 元素组成物质...) --- 译者(SI)}的集合叫做对称群。 对于Minkowski时空， Minkowski度规\mpar{复习一下， Minkowski度规就是在Minkowski空间中用来计算距离和长度的工具， 见第二章。}在变换下保持不变， 相应的对称群称为Poincare群。
@@ -168,10 +169,10 @@
 
 \section[二维旋转]{Rotations in two Dimensions\quad 二维旋转}
 \label{sec3.2}
-我们从一个简单而重要的例子开始学习群论。考虑那些让二维平面中的向量长度不变的对称变换。符合条件的有旋转和反射\mpar{当然还有平移。平移的数学描述与前两者有些不同，我们之后再讨论它。}。它们也是圆的对称变换，一个单位元旋转或反射之后还是单位圆。可见同一个群（对应一种变换）可以作用于不同类物体：圆（几何图形），或者向量。本节考虑向量，可以用旋转矩阵表示向量的旋转或反射，\mpar{旋转矩阵的推导见附录A.2.}，将起点位于原点的向量绕原点逆时针旋转$\theta$角度的旋转矩阵为：
+我们从一个简单而重要的例子开始学习群论。考虑那些让二维平面中的向量长度不变的对称变换。符合条件的有旋转和反射\mpar{当然还有平移。平移的数学描述与前两者有些不同，我们之后再讨论它。}。它们也是圆的对称变换，一个单位元旋转或反射之后还是单位圆。可见同一个群（对应一种变换）可以作用于不同类物体：圆（几何图形），或者向量。本节考虑向量，可以用旋转矩阵表示向量的旋转或反射\mpar{旋转矩阵的推导见附录A.2.}，将起点位于原点的向量绕原点逆时针旋转$\theta$角度的旋转矩阵为：
 \begin{equation}
 \label{equ3.3}
-R_\theta =
+R_\theta = 
 	\begin{pmatrix}
 		\cos \theta & \sin \theta \\
 		-\sin \theta & \cos \theta
@@ -200,18 +201,18 @@ a' \cdot a' \stackrel{!}{=} a \cdot a
 将变换矩阵记作$\mathcal{O}$，变换即为$a \rightarrow a' = \mathcal{O}a$.
 \begin{equation}
 \label{equ3.6}
-a \cdot a = a^{\mathrm{T}} a \rightarrow a'^{\mathrm{T}} a' = (\mathcal{O} a)^{\mathrm{T}} \mathcal{O} a = a^{\mathrm{T}} \mathcal{O}^{\mathrm{T}} \mathcal{O} a \stackrel{!}{=} a^{\mathrm{T}} a = a \cdot a
+a \cdot a = a^{{T}} a \rightarrow a'^{{T}} a' = (\mathcal{O} a)^{{T}} \mathcal{O} a = a^{{T}} \mathcal{O}^{{T}} \mathcal{O} a \stackrel{!}{=} a^{{T}} a = a \cdot a
 \end{equation}
 由此可见，使向量长度不变的变换必须满足：
 \begin{equation}
 \label{equ3.7}
-\mathcal{O}^{\mathrm{T}} \mathcal{O} = I
+\mathcal{O}^{{T}} \mathcal{O} = I
 \end{equation}
-其中$I$表示单位矩阵\mpar{ I =
-	\[\begin{pmatrix}
+其中$I$表示单位矩阵\mpar{ \[I = 
+	\begin{pmatrix}
 		1 & 0 \\ 0 & 1
 	\end{pmatrix}\]}。前文的旋转和反射矩阵都满足此条件\mpar{例如\ref{equ3.3}式的矩阵，
-	$R_\theta^{\mathrm{T}} R =
+	$R_\theta^{{T}} R = 
 	\begin{pmatrix}
 		\cos \theta & -\sin \theta \\
 		\sin \theta & \cos \theta
@@ -220,7 +221,7 @@ a \cdot a = a^{\mathrm{T}} a \rightarrow a'^{\mathrm{T}} a' = (\mathcal{O} a)^{\
 		\cos \theta & \sin \theta \\
 		-\sin \theta & \cos \theta
 	\end{pmatrix}
-	 =
+	 = 
 	 \begin{pmatrix}
 		 \cos^2 \theta + \sin^2 \theta & 0 \\
 		 0 & \sin^2 \theta + \cos^2 \theta
@@ -233,34 +234,34 @@ a \cdot a = a^{\mathrm{T}} a \rightarrow a'^{\mathrm{T}} a' = (\mathcal{O} a)^{\
 }%mpar
 $2 \times 2$矩阵中所有满足\ref{equ3.7}式的矩阵构成了$\mathcal{O}(2)$群，即所有$2 \times 2$正交矩阵构成的群\mpar{严谨地说，任意$2 \times 2$正交矩阵可以表示为\ref{equ3.3}、\ref{equ3.4}式，或者它们的乘积的形式。}。我们可以找出这个群中描述旋转变换的那一部分（构成一个子群）。根据\ref{equ3.7}式：
 \begin{align}
-\det(\mathcal{O}^{\mathrm{T}} O ) = \det(O^{\mathrm{T}}) \det(O) \stackrel{!}{=} \det(I) = 1 \nonumber\\
+\det(\mathcal{O}^{{T}} O ) = \det(O^{{T}}) \det(O) \stackrel{!}{=} \det(I) = 1 \nonumber\\
 \label{equ3.8}
 (\det(\mathcal{O}))^2 \stackrel{!}{=} 1 \rightarrow \det{(\mathcal{O})} \stackrel{!}{=} \pm 1
 \end{align}
 
-$\det \mathcal{O} = 1$的矩阵对应旋转变换\mpar{见\ref{equ3.3}与\ref{equ3.4}式。反射矩阵的行列式等于$-1$。}
+$\det \mathcal{O} = 1$的矩阵对应旋转变换\mpar{见\ref{equ3.3}与\ref{equ3.4}式。反射矩阵的行列式等于$-1$。}。
 
 条件
 \begin{align}
 \label{equ3.9}
-\mathcal{O}^{\mathrm{T}} \mathcal{O} = I \\
+\mathcal{O}^{{T}} \mathcal{O} = I \\
 \label{equ3.10}
 \det \mathcal{O} = 1
 \end{align}
-定义了$\mathcal{SO}(2)$群，`$\mathcal{S}$'表示‘特殊’(special)，`$\mathcal{O}$'表示‘正交’(orthogonal)。
+定义了$\mathcal{SO}(2)$群，$\mathcal{S}$表示‘特殊’(special)，$\mathcal{O}$表示‘正交’(orthogonal)。
 
 $\mathcal{SO}(2)$包含的旋转变换保持了坐标系的取向，即一个右手坐标系\mpar{右手坐标系与左手坐标系见附录A.5.}经旋转变换后还是右手系，而反射变换会改变它的取向。用线性代数的概念来说，我们规定$\mathcal{SO}(2)$中的矩阵行列式必须为$+1$。
 
 \subsection[单位复数表示旋转变换]{Rotations with Unit Complex Numbers\quad 单位复数表示旋转变换}
 \label{sec3.2.1}
-还可以用单位复数来表示旋转变换：向量绕原点旋转$\theta$角可以表示为用单位复数$z$乘此向量（单位复数意为$z = a + ib$，$|z|^2 = z^* z = 1$）\mpar{上标$ ^*$表示复数的共轭复数：$z = a + ib \rightarrow z^* = a - ib$}。
+还可以用单位复数来表示旋转变换：绕原点旋转$\theta$角可以表示为乘以单位复数$z$（单位复数意为$z = a + ib$，$|z|^2 = z^* z = 1$）\mpar{上标$ ^*$表示复数的共轭复数：$z = a + ib \rightarrow z^* = a - ib$}。
 
 所有单位复数构成一个群，称为$\mathcal{U}(1)$，群乘法即为复数乘法，不难验证它符合群公理。为了看出它与之前引入的$\mathcal{O}(3), \mathcal{SO}(3)$群的关系，我们将$\mathcal{U}(1)$群的条件 --- 单位复数表示为\mpar{定义中包含复数乘法的群的普遍性质见\ref{sec3.10}节的附录。}， $\forall \mathcal{U} \in \mathcal{U}(1)$：
 \begin{equation}
 \label{equ3.11}
 \mathcal{U}^* \mathcal{U} = 1
 \end{equation}
-单位复数另一种形式是利用欧拉公式\mpar{附录B.4.2推导了传说中的欧拉公式。对任意复数$z = a + ib$, $a$称为$z$的实部，记为$\Re(z) = a$; $b$称为虚部，记为$\Im(z) = b$. 欧拉公式中$R_\theta$的实部为$\cos  \theta$, 虚部为$\sin \theta$.}：% Euler翻译为欧拉
+单位复数另一种写法是\mpar{附录B.4.2推导了传说中的欧拉公式。对任意复数$z = a + ib$, $a$称为$z$的实部，记为$\Re(z) = a$; $b$称为虚部，记为$\Im(z) = b$. 欧拉公式中$R_\theta$的实部为$\cos  \theta$, 虚部为$\sin \theta$.}：% Euler翻译为欧拉
 \begin{equation}
 \label{equ3.12}
 R_\theta = \mathrm{e}^{i\,\theta} = \cos \theta + i\sin \theta
@@ -272,11 +273,11 @@ R_\theta^* R_\theta = \mathrm{e}^{-i\,\theta} \mathrm{e}^{i\,\theta} = \big( \co
 \end{equation}
 
 \marginpar{
-	\includegraphics[scale=0.45]{fig3_5.eps}
+	\includegraphics[scale=0.45]{fig3_5.eps} 
 	\figcaption{单位复数在复平面的单位圆上}
 	}
 
-例：将向量$(3,  5)$旋转$90^\circ$：
+例：将向量$(3,  5)$对应的复数$z = 3 + 5i$旋转$90^\circ$：
 \begin{equation}
 \label{equ3.14}
 z \rightarrow z' = \mathrm{e}^{i\, 90^\circ}z = \bigg( \underbrace{\cos 90^\circ}_{=0} + i\underbrace{\sin 90^\circ}_{=1} \bigg) (3 + 5i) = i(3 + 5i) = 3i - 5
@@ -284,20 +285,20 @@ z \rightarrow z' = \mathrm{e}^{i\, 90^\circ}z = \bigg( \underbrace{\cos 90^\circ
 
 图3.6绘制了旋转前后的向量（复数），图中可见复数乘以$\mathrm{e}^{i\, 90^\circ}$旋转了$90^\circ$.
 \marginpar{
-	\includegraphics[scale=0.45]{fig3_6.eps}
+	\includegraphics[scale=0.45]{fig3_6.eps} 
 	\figcaption{复数通过乘以单位复数进行旋转}
 	}
-需要注意$\mathrm{e}^{i\, 90^\circ}$作用于（乘以）向量对应的复数而非向量本身。描述二维旋转只需要一个参数：旋转角$\phi$. 而复数有两个自由度（实部和虚部），因此我们加上单位复数的限制：$|z| = \text{实部}^2 + \text{虚部}^2 = 1$，只剩一个自由度。
+需要注意$\mathrm{e}^{i\, 90^\circ}$作用于（乘以）向量对应的复数而非向量本身。描述二维旋转只需要一个参数：旋转角$\phi$. 而复数有两个自由度（实部和虚部），因此我们加上单位复数的限制：$|z| = \text{实部}^2 + \text{虚部}^2 = 1$，刚好只剩一个自由度。
 
-描述二维旋转的两种方式 --- 单位复数与$2 \times 2$矩阵（矩阵元都是实数）通过如下方式关联。定义：
+描述二维旋转的两种方式 --- 单位复数与$2 \times 2$矩阵（矩阵元都是实数）通过如下方式相联系。定义：
 \begin{equation}
 \label{equ3.15}
-\mathbf{1} =
+\mathbf{1} = 
 	\begin{pmatrix}
 		1 & 0 \\ 0 & 1
 	\end{pmatrix}
 ,\quad
-\mathbf{i} =
+\mathbf{i} = 
 	\begin{pmatrix}
 		0 & -1 \\ 1 & 0
 	\end{pmatrix}
@@ -309,7 +310,7 @@ z \rightarrow z' = \mathrm{e}^{i\, 90^\circ}z = \bigg( \underbrace{\cos 90^\circ
 这样单位复数对应的$2 \times 2$实数矩阵为\footnote{原文此式有误，译文已参照勘误表修改。}
 \begin{equation}
 \label{equ3.17}
-R_\theta = \cos \theta + i\sin\theta = \cos \theta
+R_\theta = \cos \theta + i\sin\theta = \cos \theta 
 \begin{pmatrix}
 	1 & 0 \\ 0 & 1
 \end{pmatrix}
@@ -347,7 +348,7 @@ z = a + ib = a
 	z' &=& \begin{pmatrix}
 			a' & -b' \\ b' & a'
 		 \end{pmatrix}
-	= R_\theta z =
+	= R_\theta z = 
 		\begin{pmatrix}
 			\cos \theta & -\sin \theta \\
 			\sin \theta & \cos \theta
@@ -394,7 +395,7 @@ b' &= a \sin \theta + b \cos \theta
 
 \section[三维旋转]{Rotations in three Dimensions\quad 三维旋转}
 \label{sec3.3}
-三维空间向量旋转变换当然可以用$3 \times 3$旋转矩阵\footnote{原文公式有误，译文已按勘误表改正。}：
+三维向量旋转变换当然可以用$3 \times 3$旋转矩阵\footnote{原文公式有误，译文已按勘误表改正。}：
 \begin{align}
 R_x =
 	\begin{pmatrix}
@@ -403,7 +404,7 @@ R_x =
 		0 & \sin \theta & \cos \theta
 	\end{pmatrix}
 \quad
-R_y =
+R_y = 
 	\begin{pmatrix}
 		\cos \theta & 0 & \sin \theta \\
 		0 & 1 & 0 \\
@@ -428,7 +429,7 @@ R_z =
 绕$z$轴旋转\mpar{三维向量旋转的一般情况的推导见附录A.2.}就是用旋转矩阵乘以向量：
 \begin{equation}
 \label{equ3.24}
-R_z(\theta) \vec{v} =
+R_z(\theta) \vec{v} = 
 	\begin{pmatrix}
 		\cos \theta & -\sin \theta & 0 \\
 		\sin \theta & \cos \theta & 0 \\
@@ -442,7 +443,7 @@ R_z(\theta) \vec{v} =
 		\cos \theta \\ \sin \theta \\ 0
 	\end{pmatrix}
 \end{equation}
-为找出描述三维旋转的第二法，我们尝试把复数的概念扩展到三维空间。首先试着把$2$维的复数（实部虚部两个自由度）扩展为$3$维复数，但前人探索发现没有$3$维的，但存在$4$维‘复数’，称为{\bf 四元数(quaternions)}。下面就会看到四元数正是描述三维旋转的第二法，并且它还能深刻揭示宇宙 --- 四维时空的规律。描述三维旋转需要三个参数（绕$x,y,z$轴的旋转角），而四元数有四个参数，这与二维旋转的情况类似\mpar{单位复数描述二维旋转。}。四元数加上单位长度的限制 ---单位四元数（三个自由参数）能够描述三维旋转。
+为找出描述三维旋转的第二法，我们尝试把复数的概念扩展到三维空间。首先试着把$2$维的复数\footnote{实部虚部两个自由度}扩展为$3$维复数，但前人探索发现没有$3$维的，但存在$4$维‘复数’，称为{\bf 四元数(quaternions)}。下面就会看到四元数正是描述三维旋转的第二法，并且它还能深刻揭示宇宙 --- 四维时空的规律。描述三维旋转需要三个参数（绕$x,y,z$轴的旋转角），而四元数有四个参数，这与二维旋转的情况类似\mpar{单位复数描述二维旋转。}。四元数加上单位长度的限制 --- 单位四元数（三个自由参数）能够描述三维旋转。
 
 \subsection[四元数]{Quaternions\quad 四元数}
 \label{sec3.3.1}
@@ -478,14 +479,14 @@ q^\dag q &\stackrel{!}{=} 1 \nonumber\\
 
 就像单位复数构成一个群（群乘法为复数乘法）那样，单位四元数也构成一个群（群乘法为四元数乘法）。
 
-类似于我们将二维复数与$2 \times 2$实数矩阵建立联系的做法，四元数也可如此 --- 将四个基$\mathbf{1,i,j,k}$与合适的矩阵一一对应。其中一种方法（还有别的方式）是将它们与$2 \times 2$复数矩阵对应：
+类似于我们将二维复数与$2 \times 2$实数矩阵建立联系的做法，四元数也可如此 --- 将四个基$\mathbf{1,i,j,k}$与合适的矩阵一一对应。其中一种方式（还有别的方式）是将它们与$2 \times 2$复数矩阵对应：
 \begin{align}
 \mathbf{1} = \begin{pmatrix}
 				1 & 0 \\ 0 & 1
 			 \end{pmatrix}
 \quad &, \quad
 \mathbf{i} = \begin{pmatrix}
-				0 & 1 \\ -1 & 0
+				0 & 1 \\ -1 & 0 
 			 \end{pmatrix}
 \nonumber \\
 \label{equ3.30}
@@ -558,7 +559,7 @@ t = \cos \theta +  u\sin \theta
 简明起见我们举个特例，把向量$\vec{v} = (1, 0, 0)^T$绕$z$轴旋转。
 \begin{align}
 \label{equ3.39}
-\vec{v} &= (1, 0, 0)^T \rightarrow v = 1\mathbf{i} + 0\mathbf{j} + 0\mathbf{k} =
+\vec{v} &= (1, 0, 0)^T \rightarrow v = 1\mathbf{i} + 0\mathbf{j} + 0\mathbf{k} = 
 	\begin{pmatrix}
 		0 & -1 \\ 1 & 0
 	\end{pmatrix}
@@ -583,7 +584,7 @@ R_z(\theta) = \begin{pmatrix}
 四元数旋转矩阵的逆矩阵为：
 \begin{equation}
 \label{equ3.42}
-R_z^{-1} (\theta) =
+R_z^{-1} (\theta) = 
 	\begin{pmatrix}
 		\cos \theta - i\sin \theta & 0 \\
 		0 & \cos \theta + i\sin \theta
@@ -622,7 +623,7 @@ v' &= R_z^{-1} (\theta) v R_z(\theta) =
 另一方面，向量$v'$用四元数表示为：
 \begin{equation}
 \label{equ3.44}
-v' =
+v' = 
 	\begin{pmatrix}
 		iv'_z & -v'_x - iv'_y \\
 		v'_x - iv'_y & -iv'_z
@@ -697,9 +698,9 @@ h(\theta) = \lim_{N \rightarrow \infty} \left( I + \frac{\theta}{N}X \right)^N
 \label{equ3.52}
 h(\theta) = \lim_{N \rightarrow \infty} \left( I + \frac{\theta}{N}X \right)^N = \mathrm{e}^{\theta X}
 \end{equation}
-上式有$X$产生了有限变换$h(\theta)$的感觉，因此$X$成为{\bf 生成元}。生成元的定义之后详述，下面先从另一个角度看这个问题。
+上式有$X$生成了有限变换$h(\theta)$的感觉，因此$X$成为{\bf 生成元}。生成元的严格定义之后详述，下面先从另一个角度看这个问题。
 
-考虑某个用矩阵表示的连续变换群，对任意群元，在恒等元$I$处做Taylor展开\mpar{如果你从未听说过Taylor展开或Taylor级数，作者推荐你看一看附录B.3. \sout{而译者建议你学了微积分再来}}。
+考虑某个用矩阵表示的连续变换群，对任意群元，在恒等元$I$处做Taylor展开\mpar{如果你从未听说过Taylor展开或Taylor级数，作者推荐你看一看附录B.3. }。
 \begin{equation}
 \label{equ3.53}
 h(\theta) = I + \frac{dh}{d\theta} \Bigg|_{\theta = 0} \theta + \frac{1}{2} \frac{d^2 h}{d \theta^2} \Bigg|_{\theta = 0} \theta^2 + \dots = \sum_n \frac{1}{n!} \frac{d^n h}{d \theta^n} \Bigg|_{\theta = 0} \theta^n
@@ -716,10 +717,10 @@ h(\theta) = \exp \left( \frac{dh}{d\theta}\Big|_{\theta = 0} \theta \right) \equ
 X = \frac{dh}{d\theta}\Bigg|_{\theta = 0}
 \end{equation}
 
-蕴含在上述推导中的思想是：通过研究群中重要的无穷小元素 --- {\bf 生成元}（上面的$X$）就能获得群的许多重要信息。
+蕴含在上述推导中的思想是：通过研究群中重要的无穷小元素 --- {\bf 生成元}\footnote{注意生成元$X$并非群元，$I + \epsilon X$才是。}（上面的$X$）就能获得群的许多重要信息。
 
 矩阵Lie群（记作$G$）的Lie代数就是下面的集合：
-\[
+\[ 
 \Big\{X \Big| \text{若}\mathrm{e}^X \in G \Big\}
 \]
 即如果$X$满足$\mathrm{e}^X$是$G$的群元，则$X$就是$G$的Lie代数（它是一个集合！）中的元素。这个简单定义只对矩阵Lie群管用。之后我们引入Lie代数的一般定义。
@@ -735,14 +736,14 @@ $n \times n$矩阵Lie群$G$的Lie代数$\mathfrak{g}$是满足如下条件的$n 
 	}
 }
 
-根据群的定义，群无非是一些变换的集合。群乘法$\circ$告诉我们群元之间怎样合体。矩阵Lie群的群乘法就是矩阵乘法，我们可能naive地认为Lie代数的元素之间采用相同的方式合体（$\circ$），但这并不正确！诚然，（矩阵Lie群的）Lie代数的元素都是矩阵\mpar{Lie群理论的著名定理 --- Ado定理（Ado's Theorem）告诉我们任意Lie代数与矩阵Lie代数同构。}，但两个Lie代数的矩阵乘法的结果往往不再是Lie代数的元素。Lie代数元素间有另外的合体规则，当然它与原来群的群乘法直接有关。
+根据群的定义，群无非是一些变换的集合。群乘法$\circ$告诉我们群元之间怎样结合。矩阵Lie群的群乘法就是矩阵乘法，我们可能naive地认为Lie代数的元素之间采用相同的方式结合（$\circ$），但这并不正确！诚然，（矩阵Lie群的）Lie代数的元素都是矩阵\mpar{Lie群理论的著名定理 --- Ado定理（Ado's Theorem）告诉我们任意Lie代数与矩阵Lie代数同构。
+}，但两个Lie代数的矩阵乘法的结果往往不再是Lie代数的元素。Lie代数元素间有另外的结合规则，当然它与原来群的群乘法直接有关。
 
-Lie群乘法与Lie代数合体法则之间的关系由著名的Baker-Campbell-Hausdorff公式（以下简称BCH公式）给出\mpar{我们不讲这个公式的证明，在大多数关于Lie理论的教材都能找到，比如 William Fulton and Joe Harris. Representation Theory: A First Course. Springer, 1st corrected edition, 8 1999. ISBN 9780387974958}：
+Lie群乘法与Lie代数结合法则之间的关系由著名的Baker-Campbell-Hausdorff公式（以下简称BCH公式）给出\mpar{我们不讲这个公式的证明，在大多数关于Lie理论的教材都能找到，比如 William Fulton and Joe Harris. Representation Theory: A First Course. Springer, 1st corrected edition, 8 1999. ISBN 9780387974958}：
 \begin{equation}
 \label{equ3.56}
 \mathrm{e}^X \circ \mathrm{e}^Y = \mathrm{e}^{X + Y + \frac{1}{2}[X, Y] + \frac{1}{12} \big[X, [X, Y]\big] - \frac{1}{12} \big[Y, [X, Y]\big] + \dots  }
 \end{equation}
-
 其中\mpar{重复一下，群$G$的Lie代数通常用哥特体字母$\mathfrak{g}$表示。}$X, Y \in \mathfrak{g}$, 即$X, Y$是群$G$的生成元。$\mathrm{e}^X, \mathrm{e}^Y$是$G$的群元，把它们分别记作$g, h$，这样上式写成：
 \begin{equation}
 \label{sec3.57}
@@ -802,7 +803,7 @@ J_2 =	\begin{pmatrix}
 J_3 = 	\begin{pmatrix}
 			0 & -1 & 0 \\
 			1 & 0 & 0 \\
-			0 & 0 & 0
+			0 & 0 & 0 
 		\end{pmatrix}
 \end{equation}
 这三个矩阵构成$\mathcal{SO}(3)$群的生成元的{\bf 基}。 即群的任意生成元$J$可惟一表示为这三者的线性组合：$J = aJ_1 + bJ_2 + cJ_3$，其中$a, b, c$表示实常数。$J_1, J_2, J_3$可用Levi-Civita符号更紧凑地表示\mpar{Levi-Civita符号的含义见附录B.5.5.}：
@@ -813,7 +814,7 @@ J_3 = 	\begin{pmatrix}
 其中$j, k$表示生成元$J_i$的分量。例：
 \begin{multline}
 \label{equ3.64}
-(J_1)_{jk} = -\epsilon_{1jk} \Longleftrightarrow
+(J_1)_{jk} = -\epsilon_{1jk} \longleftrightarrow 
 	\begin{pmatrix}
 		(J_1)_{11} & (J_1)_{12} & (J_1)_{13} \\
 		(J_1)_{21} & (J_1)_{22} & (J_1)_{23} \\
@@ -837,7 +838,7 @@ J_3 = 	\begin{pmatrix}
 这些生成元可以生成有限大小的变换矩阵。以$J_1$为例，我们可以只关注非零部分 --- 右下角的$2 \times 2$矩阵，把它记作$j_1$\mpar{其实小矩阵$j_1$也可用二维Levi-Civita符号表示，$(j_1)_{ij} = \epsilon_{ij}$。见附录B.5.5. $j_1$是二维旋转群$\mathcal{SO}(2)$的生成元。}。
 \begin{equation}
 \label{equ3.65}
-J_1 =
+J_1 = 
 	\begin{pmatrix}
 		0 & \\
 		  &	\underbrace{
@@ -882,7 +883,7 @@ R_1 &= \mathrm{e}^{\phi j_1} = \sum_{n = 0}^{\infty} \frac{\phi^n j_1^n}{n!} \no
 再利用$\mathrm{e}^0 = 1$计算左上角的$0$对应的元素，得到完整的有限变换矩阵：
 \begin{equation}
 \label{equ3.70}
-R_1 =
+R_1 = 
 	\begin{pmatrix}
 		1 & 0 & 0 \\
 		0 & \cos \theta & -\sin \theta \\
@@ -971,7 +972,7 @@ J_3 = i
 
 将生成元加$i$是为了让它们是Hermitian生成元\mpar{例如$J_1^* = -i\begin{pmatrix} 0 & 0 & 0 \\ 0 & 0 & 1 \\ 0 & -1 & 0 \end{pmatrix}$，而$J_1^\dag = (J_1^*)^T = i \begin{pmatrix} 0 & 0 & 0 \\ 0 & 0 & 1 \\ 0 & -1 & 0 \end{pmatrix} = J_1$。}，Hermitian生成元的含义是$J^\dag \equiv (J^*)^T \stackrel{!}{=} J$。加$i$是从物理意义考虑的：Hermitian矩阵的本征值都是实数，这在量子力学里面极其重要，因为生成元的本征值是实验的可观测量，\ref{sec8.3}对此详细讨论。如果不加$i$，生成元就是反Hermitian的了：$J^\dag = (J^*)^T = -J$，反Hermitian矩阵的本征值是虚数。
 
-还有另一种导出生成元的方法，利用$\ref{equ3.55}$式 --- $X = \frac{dh}{d\theta}\big|_{\theta = 0}$，以及三维旋转矩阵的形式（\ref{equ3.23}、\ref{equ3.70}式）可得：
+还有另一种导出生成元的方法，利用$\ref{equ3.55}$式 --- $X = \frac{dh}{d\theta}\big|_{\theta = 0}$，以及三维旋转矩阵的形式（\ref{equ3.23}、\ref{equ3.70}式）可得： 
 \begin{multline}
 \label{equ3.74}
 J_1 = \frac{dR_1}{d\theta} \bigg|_{\theta = 0} = \frac{d}{d\theta}
@@ -999,7 +1000,7 @@ J_1 = \frac{dR_1}{d\theta} \bigg|_{\theta = 0} = \frac{d}{d\theta}
 
 \subsection[Lie代数的抽象定义]{The Abstract Definition of a Lie Algebra \quad Lie代数的抽象定义}
 \label{sec3.4.2}
-前面介绍了简化版的Lie代数定义。群$G$的Lie代数是满足如下条件的$X$的集合：$\mathrm{e}^{X} \in G$。下面我们会看到\footnote{作者似乎很喜欢挖这种坑然后慢慢填。 --- 译者}，群的重要部分 --- 群乘法（规定群元之间怎样合体），可以从Lie代数元素的Lie括号运算中导出。
+前面介绍了简化版的Lie代数定义。群$G$的Lie代数是满足如下条件的$X$的集合：$\mathrm{e}^{X} \in G$。下面我们会看到\footnote{作者似乎很喜欢挖这种坑然后慢慢填。 --- 译者}，群的重要部分 --- 群乘法（规定群元之间怎样结合），可以从Lie代数元素的Lie括号运算中导出。
 
 就像定义Lie群那样，我们把Lie代数的关键特征表示为公理，这就形成了Lie代数的抽象定义：
 
@@ -1134,7 +1135,7 @@ $\mathcal{SU}(2)$就是三维超球面，它正是一个单连通流形。因此
 $\mathcal{SO}(3)$是什么流形？已知$\mathcal{SU}(2)$到$\mathcal{SO}(3)$的映射将$\mathcal{SU}(2)$的{\bf 两个}点映射为$\mathcal{SO}(3)$中的{\bf 一个}。因此$\mathcal{SO}(3)$是单位超球面的一半。
 
 	\marginpar{
-		\includegraphics[scale=0.3]{Pictures/fig3_7.eps}
+		\includegraphics[scale=0.3]{fig3_7.eps} 
 		\figcaption{三维超球面$S^3$（$S^3$自身是四维超球的‘表面’，愚蠢的人类没法直接把它画出来）的一个二维切面，图中可见球面的上半部分对应$\mathcal{SO}(3)$，因为从$\mathcal{SU}(2)$到$\mathcal{SO}(3)$的映射将前者中的$p$点与$p + 2\pi$映射到后者中的同一点。}
 	}
 
@@ -1142,7 +1143,7 @@ $\mathcal{SO}(3)$是什么流形？已知$\mathcal{SU}(2)$到$\mathcal{SO}(3)$�
 
 本书的指导思想之一就是用最基本的群描述大自然最基本的对称性。具体到三维旋转的情况，我们采用$\mathcal{SU}(2)$而非$\mathcal{SO}(3)$。之后其他的对称性我们都这么处理。
 
-世界似乎就是这么设计的！（先不管设计者有没有、到底是谁吧）比如必须用Poincare群的双覆盖表示来描述基本粒子，而常用却不完整的4-向量表示就不行。要从最深刻的层面描述自然，必须使用覆盖群，而非从覆盖群导出的其他群。
+世界似乎就是这么设计的！\footnote{先不管设计者有没有、到底是谁吧}比如必须用Poincare群的双覆盖表示来描述基本粒子，而常用却不完整的4-向量表示就不行。要从最深刻的层面描述自然，必须使用覆盖群，而非从覆盖群导出的其他群。
 
 给定一个Lie代数，我们可以通过Lie代数的表示来导出它的覆盖群的表示\mpar{‘表示’的具体含义下一节就讲。}，然后把Lie代数元素（生成元）的矩阵表示扔进$\mathrm{e}$指数里面就能得到任意群元的矩阵表示。
 
@@ -1153,7 +1154,7 @@ $\mathcal{SO}(3)$是什么流形？已知$\mathcal{SU}(2)$到$\mathcal{SO}(3)$�
 \begin{itemize}
 	\item $S^1 \hat{=} \mathcal{U}(1) \underbrace{\longleftrightarrow}_{\text{一一对应}} \mathcal{SO}(2)$
 	\item $S^3 \hat{=} \mathcal{SU}(2) \underbrace{\longrightarrow}_{\text{二对一}} \mathcal{SO}(3) \hat{=} S^3$的一半
-
+		
 		$\Rightarrow \mathcal{SU}(2)$是Lie代数$[J_i, J_j] = i\epsilon_{ijk} J_k$ \, (\ref{equ3.83}\text{式})的覆盖群，因为$S^3$是单连通流形。
 \end{itemize}
 
@@ -1165,7 +1166,7 @@ $\mathcal{SO}(3)$是什么流形？已知$\mathcal{SU}(2)$到$\mathcal{SO}(3)$�
 \label{sec3.5}
 群论可以描述变换本身而不必联系现实中的特定物体，这是群论的重要特征。
 
-理论上经常从抽象观点来考虑一个群。这意味着用流形结构与群乘法定义群。例如$\mathcal{SU}(2)$就是$S^3$(超球面)，群元就是流形中的点，群乘法规定两个群元$a,b$怎样合体，且满足群公理。搞物理的更关心一个群到底能做什么，即{\it 群作用}。
+理论上经常从抽象观点来考虑一个群。这意味着用流形结构与群乘法定义群。例如$\mathcal{SU}(2)$就是$S^3$(超球面)，群元就是流形中的点，群乘法规定两个群元$a,b$怎样结合，且满足群公理。搞物理的更关心一个群到底能做什么，即{\it 群作用}。
 
 {\bf 同一个}群能作用于{\bf 许多}不同种类的东西\mpar{这话的含义稍后会更加清楚。}，这一重要事实使我们定义了{\bf 表示}的概念：群$G$的一个表示就是从$G$到{\it 某个向量空间$V$上全体线性变换组成的集合}\mpar{本书中$V$上的线性变换其实就是指矩阵，即表示$R$把群元映射为矩阵，矩阵通过矩阵乘法作用于向量空间中的向量。}的映射，将表示记作$R$, 映射
 \begin{equation}
@@ -1176,7 +1177,7 @@ R: \underbrace{g}_{\in G} \mapsto R(g)
 \begin{itemize}
 	\item $R(e) = I$, 恒等元对应的线性变换是恒等变换。
 	\item $R(g^{-1}) = \big( R(g) \big)^{-1}$, 逆元对应的变换是逆变换。
-	\item $R(g) \circ R(h) = R(g \circ h)$, 群元$g,h$合体对应的变换等于他们分别对应变换的合体。
+	\item $R(g) \circ R(h) = R(g \circ h)$, 群元$g,h$结合对应的变换等于他们分别对应变换的结合。
 \end{itemize}
 
 群的表示\mpar{表示的定义可以进行推广，不一定非得是向量空间（别的空间也行）上的线性变换（非线性也可能），拓展后的映射叫{\bf realization}。物理主要考虑向量空间中的线性变换（例如量子力学的Heilbert空间、狭义相对论的Minkowski空间），因此对物理而言表示比更广泛的realization更重要。}将抽象的群元（群流形上的点）与向量空间中的线性变换相联系。尽管按定义来讲，表示是个映射，但大多数情况把表示看做许多矩阵的集合就行了。例如，向量空间\mpar{$\mathbb{R}^3$表示三维Euclidean空间，它的元素就是三维向量，附录A.1里面有很多例子。}$\mathbb{R}^3$中的旋转矩阵组成的集合就是$\mathcal{SO}(3)$群的一个表示，旋转矩阵就是$\mathbb{R}^3$上的线性变换。注意$\mathcal{SO}(3)$群对应的变换也可以作用到其他向量空间。
@@ -1263,8 +1264,881 @@ R'(g) v = R(g) v,\quad \forall v \in V', g \in G
 \label{equ3.93}
 [C, X] = 0
 \end{equation}
-著名的Schur引理\mpar{Schur引理是群论的基本结论之一，它在任何一本群论书都有。}告诉我们，如果一个不可约群$R: \mathfrak{g} \rightarrow GL(V)$\footnote{$GL(V)$表示向量空间$V$上所有线性变换组成的集合。}，如果某个线性变换$T: V \rightarrow V$（即$T \in GL(V)$）与所有$R(g), \forall g \in G$对易\footnote{即$\forall g \in G, [R(g), T] = 0$。}，则$T$必为恒等变换的常数倍。因此Casimir元是群表示的‘常数’，这些‘常数’的值自然地为群表示‘编号’\mpar{具体内容见下一节的例子。}。之后我们就从Casimir元数值最低的不可约表示开始。
+著名的Schur引理\mpar{Schur引理是群论的基本结论之一，它在任何一本群论书都有。}告诉我们，给定一个不可约群$R: \mathfrak{g} \rightarrow GL(V)$\footnote{$GL(V)$表示向量空间$V$上所有线性变换组成的集合。}，如果某个线性变换$T: V \rightarrow V$（即$T \in GL(V)$）与所有$R(g), \forall g \in G$对易\footnote{即$\forall g \in G, [R(g), T] = 0$。}，则$T$必为恒等变换的常数倍。因此Casimir元是群表示的‘常数’，这些‘常数’的值自然地为群表示‘编号’\mpar{具体内容见下一节的例子。}。之后我们就从Casimir元数值最低的不可约表示开始。
 
 群表示的定义与向量空间$V$有关。一个表示就是将抽象群到$V$的线性变换的映射。线性代数告诉我们以任意矩阵的本征向量为基可以张成一个向量空间。任意Lie群的生成元至少有一个可以通过相似变成对角矩阵\mpar{对角生成元的集合称为Cartan子代数，相应的集合元素称为Cartan生成元。它们在量子场论中大放异彩，因为Cartan生成元的本征值可以给基本粒子‘编号’。例如量子色动力学使用$\mathcal{SU}(3)$群，它有两个Cartan生成元。因此色动力学描述的粒子都有两个‘编号’。通常不用数字表示编号，而是用‘色’（红、蓝、绿…）来标注。再比如描述弱相互作用的$\mathcal{SU}(2)$群只有一个Cartan生成元，因此每个粒子只有一个标签 --- Cartan生成元的本征值。}，然后这个对角生成元的本征向量就可作为向量空间的基。
 
 下一节导出$\mathcal{SU}(2)$群的不可约表示。研究$\mathcal{SU}(2)$是因为Lorentz群的Lie代数是两份$\mathcal{SU}(2)$的Lie代数。Lorentz群是Poincare群的一部分，本章由浅入深对他们逐一讨论。
+
+
+
+%%%%%%%%%%%%%%%%
+
+\section[$\mathcal{SU}$(2)]{$\mathcal{SU}$(2)  特殊幺正群$\mathcal{SU}$(2)}\label{sec3.6}
+
+我们在3.4.3小节中用具体的矩阵形式进行计算得到了$\mathcal{SU}$(2)生成元的Lie括号\mpar{想当年我们就是用这东西抽象地定义了群的Lie代数。具体结果见
+\ref{equ3.83}式}。通过这一点便能得到$\mathcal{SU}(2)$群的进一步表示。回到开头我们对$\mathcal{SU}(2)$群的表示，即$2\times 2$ 的幺正矩阵，其行列式的值为1，但这只是一个特例罢了。在进一步处理这个问题之前，我们可以想一想大概能得到什么样的表示。
+
+\subsection{The Finite-dimensional Irreducible Representations
+of $\mathcal{SU}$(2) $\mathcal{SU}$(2)群的有限维不可约表示}
+\label{sec3.6.1}
+
+为了知道$\mathcal{SU}$(2)群有限维不可约表示的一些东西，我们用在3.4.3小节中出现的算符的线性组合来定义一个新的算符
+\mpar{我们总是能让{\bf{一个}}生成元对角化。遵从惯例，我们选$J_3$为对角阵，由此也生出了矢量空间的基矢。此外，人们一般都是按书上的这种方法引入$J_\pm$的。}：
+\begin{align}\label{equ3.94}
+  J_+=\frac{1}{\sqrt{2}}(J_1+iJ_2) \\
+\label{equ3.95}
+  J_-=\frac{1}{\sqrt{2}}(J_1-iJ_2)
+\end{align}
+用\ref{equ3.83}式可以验证新定义的算符满足如下对易关系：
+\begin{align}\label{equ3.96}
+  [J_3,J_\pm]=\pm J_\pm \\
+\label{equ3.70}
+   [J_+,J_-]=J_3
+\end{align}
+若$v$为$J_3$本征矢，本征值为$b$，用新的算符作用在$v$上会得到很有意思的结果：
+\begin{eqnarray}\label{equ3.98}
+% \nonumber to remove numbering (before each equation)
+\nonumber  J_3(J_\pm v) &=& J_3(J_\pm v)+\underbrace{J_\pm J_3 v -J_\pm J_3 v}_{=0} \\
+\nonumber               &=& \underbrace{J_\pm J_3 v}_{=J\pm bv} +\underbrace{J_3J_\pm v -J_\pm J_3 v}_{=[J_3,J_\pm]v}\\
+                        &\underbrace{=}_{\ref{equ3.96}\text{式}}& (b\pm 1)J_\pm v
+\end{eqnarray}
+可见$J_\pm v$也是$J_3$的本征矢，本征值为$(b\pm 1)$\mpar{即$J_3 v=bv$，详见附录C.4。}，记该本征矢为$w$，则:
+\begin{equation}\label{equ3.99}
+  J_3 w=(b\pm 1)w \quad \text{以及} \quad w=J_\pm v
+\end{equation}
+
+算符$J_-$和$J_+$通常称为下降算符和上升算符，也称{\bf{阶梯算符(ladder operators)}}。我们可以通过重复利用阶梯算符$J_\pm$来得到关于$J_3$的本征矢，但这个过程不能无休止地进行，因为不同本征值的本征矢之间是线性独立的，而我们处理的是有限维的表示。这意味着相应的矢量空间是有限维的，我们只能得到有限个独立的矢量。
+
+%此处书上的符号比较混乱，译者对此进行了调整
+我们推断一定有一本征矢对应着最大的本征值{\sout{$v_{max}$}}。 若将$J_+$作用到$v$ \  N次以后，得到本征值最大的本征矢$v_{max}$
+\begin{equation}\label{equ3.100}
+  v_{max}=J_+^N v
+\end{equation}
+我们有
+\begin{equation}\label{equ3.101}
+  J_+v_{max}=0
+\end{equation}
+因为$v_{max}$已经是有最大本征值的本征矢了。称最大本征值为$j:=b+N$。相应有对应着最小本征值的本征矢$v_{min}$，满足
+\begin{equation}\label{equ3.102}
+  J_-v_{min}=0
+\end{equation}
+将$J_-$作用到$v_{\color{red}max}$\ M次以后，得到本征值最小的本征矢$v_{min}$
+\begin{equation}\label{equ3.103}
+  v_{min}=J_-^M v_{max}
+\end{equation}
+因此，$v_{min}$对应的本征值为$j-M$。为进一步讨论，我们需要知道$J_\pm$作用到本征矢上的具体形式。上述的计算说明，$J_- v_k$应等于$v_{k-1}$乘上一常数：
+\begin{equation}\label{equ3.104}
+  J_- v_k=\alpha_k v_{k-1}
+\end{equation}
+如果非要深究$J_-$作用到$v_{max}$上的细节的话，那我只能告诉你
+\mpar{见Matthew Robinson. Symmetry and the Standard Model. 第90页,Springer, 1st edition, August
+2011. ISBN 978-1-4419-8267-4.} $\alpha$满足
+\begin{equation}\label{equ3.105}
+  \alpha_{j-k}=\frac{1}{\sqrt{2}}\sqrt{(2j-k)(k+1)}
+\end{equation}
+注意到当$k=2j$时$\alpha$为0，因此，经过$2j$步之后，我们从梯子的顶端到达了底端。$v_{min}$的本征值即是$j-2j=-j$。 总的来说，我们得到了$2j+1$个本征态的本征值
+\begin{equation}\label{equ3.106}
+  {-j,-j+1,\dots,j-1,j}
+\end{equation}
+此式仅当$j$为整数或半整数\mpar{不信的话你就用分数试试看！}时成立。因为我们有$2j+1$个线性独立的本征矢，故矢量空间应为$2j+1$维
+\mpar{见此书 189页： Nadir
+Jeevanjee. An Introduction to Tensors and
+Group Theory for Physicists. Birkhaeuser,
+1st edition, August 2011. ISBN 978-
+0817647148}。{\it{这些$J_3$的本征矢构成了完备的矢量空间，因为$J_1$和$J_2$ 能够被$J_+$和$J_-$线性表示，就算是一个任意的线性组合$\sum_i a_i v_i$也能变换成另一种线性组合$\sum_i b_i v_i$，其中$a_i ,b_i$是常数。因此，$J_3$ 的本征矢构成了$V$的一个非平庸不变子空间，而我们也在寻找能构成完备矢量空间$V$的不可约表示}}。
+
+我们可以利用上面定义的$2j+1$维的矢量空间及$J_3$的本征矢$v_k$来给出$\mathcal{SU}$(2)的一个表示。进一步说，我们能证明$\mathcal{SU}$(2)的每一种不可约表示都等价于这一种\mpar{例如此书 190页： Nadir
+Jeevanjee. An Introduction to Tensors and
+Group Theory for Physicists. Birkhaeuser,
+1st edition, August 2011. ISBN 978-
+0817647148}。
+
+\subsection[$\mathcal{SU}$(2)的 Casimir算符]{The Casimir Operator of $\mathcal{SU}$(2)  $\mathcal{SU}$(2) 的 Casimir算符}
+\label{sec3.6.2}
+如3.5节所述，我们可以用Casimir算符来标记不同的群表示。$\mathcal{SU}$(2)恰好有一个Casimir算符\mpar{回想一下，Casimir算符指的是那些与群中每个生成元都对易的群元，即$[C,X]=0$。}：
+\begin{equation}\label{equ3.107}
+  J^2:=(J_1)^2+(J_2)^2+(J_3)^2
+\end{equation}
+满足定义的条件：
+\begin{equation}\label{equ3.108}
+  [J^2,J_i]=0
+\end{equation}
+我们可以用\ref{equ3.95}式和\ref{equ3.94}式定义的$J_\pm$ 来重新表示$J^2$：
+\begin{eqnarray}
+% \nonumber to remove numbering (before each equation)
+\nonumber  J^2 &=&J_+J_- + J_-J_+ +(J_3)^2\\
+\nonumber      &=& \frac{1}{2}(J_1+iJ_2)(J_1-iJ_2)+\frac{1}{2}(J_1-iJ_2)(J_1+iJ_2)+(J_3)^2   \\
+\nonumber      &=& \frac{1}{2}((J_1)^2-iJ_1J_2+iJ_2J_1+(J_2)^2)+\frac{1}{2}((J_1)^2+iJ_1J_2-iJ_2J_1+(J_2)^2)\\
+\nonumber      &&+(J_3)^2 \\
+\label{equ3.109}
+               &=& (J_1)^2+(J_2)^2+(J_3)^2
+\end{eqnarray}
+带入\mpar{这些东西只是一些归一化常数，如果我们将$J_\pm$作用到归一态上，得到的结果一般都不是归一化的。然而，学物理的都喜欢用归一态，详细的原因以后再谈。这些常数的推导有些无聊，大体思路是先假设c是个归一化常数， 然后从$J_\pm v_k= c v_{k\pm 1}$开始。计算过程能在大多数的量子力学教材中找到(讲角动量和角动量算符那块儿)。如果你不知道也没关系，因为这节讲的对接下来要讲的东西不是太重要。}
+\begin{equation}\label{equ3.110}
+  J_+v_k=\frac{1}{\sqrt{2}}\sqrt{(j+k+1)(j-k)} v_{k+1}
+\end{equation}
+以及
+\begin{equation}\label{equ3.111}
+  J_-v_k=\frac{1}{\sqrt{2}}\sqrt{(j+k)(j-k+1)} v_{k-1}
+\end{equation}
+我们就能计算对于每个表示都成立的系数：
+\begin{eqnarray}
+% \nonumber to remove numbering (before each equation)
+  \nonumber  J^2 v_k&=&(J_+J_- + J_-J_+ +(J_3)^2)v_k \\
+  \nonumber         &=&J_+J_-v_k + J_-J_+v_k +(J_3)^2v_k \\
+  \nonumber         &=& J_+ \frac{1}{\sqrt{2}}\sqrt{(j+k)(j-k+1)} v_{k-1}+J_-\frac{1}{\sqrt{2}}\sqrt{(j+k+1)(j-k)} v_{k+1} +k^2v_k  \\
+  \nonumber         &=& \frac{1}{\sqrt{2}}\sqrt{(j+k)(j-k+1)} J_+v_{k-1}+\frac{1}{\sqrt{2}}\sqrt{(j+k+1)(j-k)}J_- v_{k+1} +k^2v_k  \\
+  \nonumber         &=& \frac{1}{\sqrt{2}}\sqrt{(j+k)(j-k+1)}   \frac{1}{\sqrt{2}}  \sqrt{(j+(k-1)+1)(j-(k-1))}v_{k}   \\
+  \nonumber          && +\frac{1}{\sqrt{2}}\sqrt{(j+k+1)(j-k)} \frac{1}{\sqrt{2}} \sqrt{(j+(k+1))(j-(k+1)+1)} v_{k} +k^2v_k  \\
+   \nonumber        &=&\frac{1}{2}(j+k)(j-k+1)v_k +\frac{1}{2}(j-k)(j+k+1)v_k+k^2v_k\\
+\label{equ3.112}
+                    &=&(j^2+j)v_k=j(j+1)v_k
+\end{eqnarray}
+现在会看这种表示下的几个特例，当然，从最简单的低维数情况开始。
+
+\subsection[$\mathcal{SU}$(2)的一维表示]{The Representation of $\mathcal{SU}$(2) in one Dimension $\mathcal{SU}$(2)的一维表示}
+\label{sec3.6.3}
+$j$的最小可能值为0，这样群的表示是一$\,2j+1=2 \cdot 0+1=1$ 维矢量空间。可以看出这个表示是平庸的，因为只有$1 \times 1$矩阵满足$\mathcal{SU}$(2)李代数的对易关系$[J_l,J_m]=i\varepsilon_{lmn} J_n=0$。而生成元0的指数映射得到的是变换$\mathcal{U}=e^0=1$，即群的恒等元。
+
+\subsection[$\mathcal{SU}$(2)的二维表示]{The Representation of $\mathcal{SU}$(2) in two Dimension $\mathcal{SU}$(2)的二维表示}
+\label{sec3.6.4}
+接下来我们讨论$j=\frac{1}{2}$的情况，这个表示是$\,2j+1=2 \cdot \frac{1}{2}+1=2$ 维的。群的生成元$J_3$的本征值为$\frac{1}{2}$和$\frac{1}{2}-1=-\frac{1}{2}$，正如从\ref{equ3.106} 式中所见，因此$J_3$可表示为
+\begin{equation}\label{3.113}
+  J_3=\frac{1}{2}\left(
+                   \begin{array}{cc}
+                     1 & 0 \\
+                     0 & -1 \\
+                   \end{array}
+                 \right)
+\end{equation}
+此处我们选择$J_3$为对角化的生成元\mpar{由于对易关系， $\mathcal{SU}$(2)群仅有一个对角化的生成元。还有就是记住我们可以用相似变换把一个不对角的生成元变成对角的。}。对应其本征值$+\frac{1}{2}$和$-\frac{1}{2}$的本征矢为：
+\begin{equation}\label{equ3.114}
+  v_\frac{1}{2}=\left(
+                  \begin{array}{c}
+                    1 \\
+                    0 \\
+                  \end{array}
+                \right)
+                \quad \text{以及} \quad
+     v_{-\frac{1}{2}}=\left(
+                  \begin{array}{c}
+                    0\\
+                    1\\
+                  \end{array}
+                \right)
+\end{equation}
+
+可以用在这一基矢下的阶梯算符来得到$\mathcal{SU}$(2)另外两个生成元的矩阵形式
+\begin{align}\label{equ3.115}
+  J_1=\frac{1}{\sqrt{2}}(J_-+J_+) \\
+\label{equ3.116}
+  J_2=\frac{i}{\sqrt{2}}(J_--J_+)
+\end{align}
+这一点可以直接从\ref{equ3.95}式和\ref{equ3.94}式关于$J_\pm$的定义的得到。回忆一下，表示空间中的基矢是由$J_3$ 的本征矢给出的，而我们也基矢给出 用$J_1J_2$。换句话说，$J_1J_2$是由它们作用在$J_3$ 的本征矢上的效果来定义的。例如
+\begin{equation}\label{equ3.117}
+  J_1v_\frac{1}{2}
+  =\frac{1}{\sqrt{2}}
+  (J_-+J_+)v_\frac{1}{2}
+  =\frac{1}{\sqrt{2}}
+  (J_-v_\frac{1}{2}
+  +\underbrace{J_+v_\frac{1}{2}}_{=0})
+  =\frac{1}{\sqrt{2}}J_-v_\frac{1}{2}
+  =\frac{1}{2}v_{-\frac{1}{2}}
+\end{equation}
+式中用到$J_+v_\frac{1}{2}=0$，因为$\frac{1}{2}$是最大的本征值。最后结果的系数$\frac{1}{2}$是从\ref{equ3.105}式得到的。同理可得
+\begin{equation}\label{equ3.118}
+  J_1 v_{-\frac{1}{2}}=\frac{1}{\sqrt{2}}(J_-+J_+)v_{-\frac{1}{2}}=\frac{1}{2}v_{-\frac{1}{2}}
+\end{equation}
+而我们之前得到的基矢是$v_\frac{1}{2}=(1,0)^{{T}}$ 和$v_{-\frac{1}{2}}=(0,1)^{{T}}$，因此$J_1$的矩阵为：
+\begin{equation}\label{equ3.119}
+  J_1=\frac{1}{2}\left(
+                   \begin{array}{cc}
+                     0 & 1 \\
+                     1 & 0 \\
+                   \end{array}
+                 \right)
+\end{equation}
+可以验证上式满足我们所说的$J_1$作用到基矢上的效果
+\mpar{推导出的\ref{equ3.117}式为$J_1v_\frac{1}{2}=\frac{1}{2}v_{-\frac{1}{2}}$。带入这里具体的矩阵形式可得
+$J_1 v_\frac{1}{2}=\frac{1}{2}
+\left(
+\begin{array}{cc}
+0 & 1 \\
+1 & 0 \\
+\end{array}
+\right)
+\left(
+\begin{array}{c}
+      1 \\
+      0 \\
+\end{array}
+\right)
+=\frac{1}{2}
+\left(
+\begin{array}{c}
+      0 \\
+      1\\
+\end{array}
+\right)=\frac{1}{2}v_{-\frac{1}{2}}\surd$。}。 同理可得
+\begin{equation}\label{equ3.120}
+    J_2=\frac{1}{2}\left(
+                   \begin{array}{cc}
+                     0 & -i \\
+                     i & 0 \\
+                   \end{array}
+                 \right)
+\end{equation}
+正如我们在这一章开头寻找$\mathcal{SU}(2)$群Lie代数时所发现的一样(\ref{equ3.81}式)，这些生成元$J_i=\frac{1}{2}\sigma_i$正是Pauli 矩阵。可以看出，现在使用表示的是二维表示。当然除此之外还有其他的表示形式，例如我们下节会看到的三维空间中的表示\mpar{再次说明，$\mathcal{SU}(2)$最开始的定义是全体行列式值为1的$2\times 2$幺正矩阵的集合，而在这儿我们采用抽象的定义，即其对应的流形$S^3$，接下来还要讨论这个群的更高维表示，比如$3\times 3$ 矩阵的表示。其实叫成别的名字可能更合适(比如说对应的流形$S^3$)，但按照传统，它就叫$\mathcal{SU}(2)$.}。
+\subsection[$\mathcal{SU}$(2)的三维表示]{The Representation of $\mathcal{SU}$(2) in two Dimension $\mathcal{SU}$(2)的三维表示}
+\label{equ3.6.5}
+重复与二维情况相似的操作\mpar{仍然是从对角化的生成元$J_3$出发。{\sout{学过的人都知道}}$J_3$的本征值为(1,0,-1)，因此立刻就能得到其矩阵形式。对于$J_1J_2$而言，仍然是从其作用结果出发，即把他们写成$J_\pm$的线性组合然后作用到$J_3$的本征矢上。} 可以得到：
+\begin{equation}\label{equ3.121}
+J_1=\frac{1}{\sqrt{2}}\left(
+\begin{array}{ccc}
+0& 1 & 0 \\
+1 & 0 & 1 \\
+0 & 1 & 0 \\
+  \end{array}
+\right)
+J_2=\frac{1}{\sqrt{2}}\left(
+\begin{array}{ccc}
+0& -i & 0 \\
+i & 0 & -i \\
+0 & i & 0 \\
+\end{array}
+\right)
+J_3=\frac{1}{\sqrt{2}}\left(
+\begin{array}{ccc}
+1& 0 & 0 \\
+0 & -1 & 0 \\
+0 & 0 & 0 \\
+\end{array}
+\right)
+\end{equation}
+这就是$\mathcal{SU}(2)$的三维表示。如果你有兴趣的话，还可以推出三维表示下$\mathcal{SU}(2)$群元的形式(把生成元扔进$\mathrm{e}$指数里。)。介于现在所学已足够理解最重要的Lorentz 群的表示，我们将不会推导更高维的$\mathcal{SU}(2)$表示。
+%%%%%%%%%%%%%%%
+
+
+
+\section[Lorentz群]{The Lorentz Group $\mathcal{O}(1, 3)$ \quad Lorentz群$\mathcal{O}(1, 3)$}
+\label{sec3.7}
+
+\begin{quote}
+抽象总是从具体的现实中产生的$\dots$ 你必须从某件事物出发，最后再把所有现实的痕迹抹除掉。
+\end{quote}
+
+\begin{flushright}
+{\bf  --- Pablo Picasso}\mpar{引用自 Robert S. Root-Bernstein and Michele M. Root-Bernstein. Sparks of Genius. Mariner Books, 1st edition, 8\, 2001. ISBN 9780618127450}
+\end{flushright}
+
+本节从Lorentz群已知的{\bf 一种}表示出发导出相应的Lie代数。推导过程与之前$\mathcal{SU}(2)$的情形相同 --- 用$\mathcal{SU}(2)$的$2 \times 2$矩阵表示导出了Lie代数。我们会发现Lorentz群的Lie代数可以用两份$\mathcal{SU}(2)$Lie代数表示，这会导出Lorentz群的更多表示，著名的向量表示 --- 即Lorentz群群元为$4 \times 4$矩阵，作用于$4$维向量 --- 仅仅是众多表示中的{\bf 一种}。新表示让我们能发现物理系统中向量表示不能描述的许多现象。这就是Lie理论的威力所在，它使我们找出对称性隐藏的抽象结构，从而可以描述自然最基本的层面。
+
+首先导出Lorentz群及其子群的特性。Lorentz群定义为Minkowski空间中{\it 所有保证内积不变的变换}组成的集合\mpar{下式的推导在第2章。重复一下，Lorentz群的定义借鉴了Euclidean空间中旋转、反射变换保证Euclidean空间中内积不变的特性。}：
+\begin{equation}
+\label{equ3.122}
+x^\mu x_\mu = x^\mu \eta_{\mu \nu} x^\nu = (x^0)^2 - (x^1)^2 - (x^2)^2 - (x^3)^2
+\end{equation}
+其中$\eta_{\mu \nu}$表示Minkowski度规：
+\begin{equation}
+\label{equ3.123}
+\eta_{\mu \nu} =
+	\begin{pmatrix}
+		1 & 0 & 0 & 0 \\
+		0 & -1 & 0 & 0 \\
+		0 & 0 & -1 & 0 \\
+		0 & 0 & 0 & -1
+	\end{pmatrix}
+\end{equation}
+
+这个定义的条件对变换（矩阵）有什么限制？Lorentz群的群元 --- Lorentz变换通常记作$\Lambda$，考虑变换$x^\mu \rightarrow x'^\mu = \Lambda^\mu_\nu x^\nu$，变换前后的内积为：
+\begin{equation}
+\label{equ3.124}
+x^\mu \eta_{\mu \nu} x^\nu \rightarrow x'^\sigma \eta_{\sigma \rho} x'^\rho = (x^\mu \Lambda^\sigma_\mu) \eta_{\sigma \rho} (\Lambda^\rho_\nu x^\nu) \stackrel{!}{=} x^\mu \eta_{\mu \nu} x^\nu
+\end{equation}
+由$x^{\mu}$的任意性可得：
+\begin{equation}
+\label{equ3.125}
+\Lambda^\sigma_\mu \eta_{\sigma \rho} \Lambda^\rho_\nu \stackrel{!}{=} \eta_{\mu \nu}
+\end{equation}
+上式写成矩阵形式\mpar{复习：两个向量的内积用矩阵乘法表示是，左侧的向量转置成行矩阵。因此下式左侧有$\Lambda^T$。}：
+\begin{equation}
+\label{equ3.126}
+\Lambda^T \eta \Lambda \stackrel{!}{=} \eta
+\end{equation}
+{\bf 上式就是Lorentz变换$\Lambda$定义的数学形式！} 对上式取行列式，利用$\det(AB) = \det(A) \det(B)$可得：
+\begin{align}
+\label{equ3.127}
+\det(\Lambda) \underbrace{\det(\eta)}_{= -1} \det(\Lambda) = \underbrace{\det(\eta)}_{= -1} \rightarrow \det(\Lambda)^2 \stackrel{!}{=} 1 \\
+\label{equ3.128}
+\rightarrow \det(\Lambda) \stackrel{!}{=} \pm 1
+\end{align}
+
+取\ref{equ3.125}式的$\mu = \nu = 0$分量\mpar{稍后就会看到这有什么用。}：
+\begin{align}
+	\Lambda_0^\sigma \eta_{\sigma \rho} \Lambda_0^\rho \stackrel{!}{=} \underbrace{\eta_{00}}_{=1} \nonumber \\
+	\label{equ3.129}
+	\rightarrow \Lambda_0^\sigma \eta_{\sigma \rho} \Lambda_0^\rho = (\Lambda_0^0)^2 - \sum_i (\Lambda_0^i)^2 \stackrel{!}{=} 1
+\end{align}
+由此可得：
+\begin{equation}
+	\label{equ3.130}
+	\Lambda_0^0 \stackrel{!}{=} \pm \sqrt{1 + \sum_i (\Lambda_0^i)^2}
+\end{equation}
+
+根据\ref{equ3.128}与\ref{equ3.130}式的正负可以把Lorentz群分成4部分。保证坐标系取向不变的部分满足$\det (\Lambda) = +1$. 如果想保证时间轴的方向，则需要条件$\Lambda_0^0 \geq 0$，因为
+\begin{equation}
+	\label{equ3.131}
+	x^0 = t \rightarrow x'^0 = t' = \Lambda_\nu^0 x^\nu = \Lambda_0^0 t + \Lambda_1^0 x^1 + \Lambda_2^0 x^2 + \Lambda_3^0 x^3
+\end{equation}
+如果$\Lambda_0^0 \geq 0$, 则$t'$与$t$同号。
+
+满足$\det(\Lambda) \geq 0$与$\Lambda_0^0 \geq 0$的部分称为$\mathcal{SO}(1, 3)^{\uparrow}$。我们主要研究这个子群，它有漂亮的名字 --- 正常\mpar{‘正常’(proper)意思是$\mathcal{SO}(1, 3)^{\uparrow}$子群的群元都是保证坐标系取向和宇称不变的变换。}Lorentz群或正时\mpar{‘正时’(orthochronous)是指子群的群元保持时间轴的方向不变。}Lorentz群。Lorentz群的这四部分是分离的，因为从一部分出发，仅用该部分的Lorentz变换无法得到其他任何部分的元素。但引入两个新变换之后就可以从$\mathcal{SO}(1, 3)^\uparrow$出发得到其他部分\mpar{在现在的群表示下这两个算符的矩阵长这样。后面换用不同的表示，它们会大不一样。}：
+\begin{align}
+	\label{equ3.132}
+	\Lambda_P = 
+		\begin{pmatrix}
+			1 & 0 & 0 & 0 \\
+			0 & -1 & 0 & 0 \\
+			0 & 0 & -1 & 0 \\
+			0 & 0 & 0 & -1
+		\end{pmatrix}
+\\
+	\label{equ3.133}
+	\Lambda_T = 
+		\begin{pmatrix}
+			-1 & 0 & 0 & 0 \\
+			0 & 1 & 0 & 0 \\
+			0 & 0 & 1 & 0 \\
+			0 & 0 & 0 & 1
+		\end{pmatrix}
+\end{align}
+$\Lambda_P$称为宇称算符，相应的宇称变换其实就是镜面反射。$\Lambda_T$称为时间反演算符。
+
+于是完整的Lorentz群$\mathcal{O}(1, 3)$可以表示为如下集合：
+\begin{equation}
+	\label{equ3.134}
+	\mathcal{O}(1, 3) = \{ \mathcal{SO}(1, 3)^\uparrow, \Lambda_P \mathcal{SO}(1, 3)^\uparrow, \Lambda_T \mathcal{SO}(1, 3)^\uparrow, \Lambda_P \Lambda_T \mathcal{SO}(1, 3)^\uparrow \}
+\end{equation}
+
+这样，研究Lorentz群的表示就可简化为研究$\mathcal{SO}(1, 3)^\uparrow$的表示，因为只要再找出$\Lambda_P$、$\Lambda_T$的表示，Lorentz群的其他部分就都有啦。
+
+\subsection[Lorentz群的$1$表示]{One Representation of the Lorentz Group \quad Lorentz群的$1$表示}
+\label{sec3.7.1}
+下面利用Lorentz群的定义（\ref{equ3.125}式）构造Lorentz变换的显式矩阵表示。首先考虑矩阵的形式。对Lorentz群，它的群元作用于$4$向量\mpar{通常狭义相对论涉及的向量空间是四维实数Minkowski空间$R^{(1, 3)}$。Lorentz群就是定义在这个空间的（Lorentz变换就是保证$4 \times 4$度规不变的变换），因此首先研究群在间$R^{(1, 3)}$上的表示。 类似地，$\mathcal{SU}(2)$群起初是用$2 \times 2$复数矩阵表示的，从那里出发可以得到$\mathcal{SU}(2)$好多其他的表示。}，因此群元的形式为$4 \times 4$实数矩阵。矩阵元必须是实数，因为Minkowski空间$R^{(1, 3)}$是实数空间。一般的$4 \times 4$实数矩阵有$16$个参数，而Lorentz群的定义规定了$10$个条件\mpar{自行验证$\Lambda^T \eta \Lambda = \eta$对$\Lambda$的限制条件是$10$个。\sout{留做习题}}，这样还剩$6$个自由参数。也就是说描述最一般的Lorentz变换需要$6$个参数。因此只要集齐$6$个线性无关的生成元，就可以召唤Lorentz群的Lie代数。这$6$个生成元\sout{$6$个基}构成Lie代数的一组基，即任意生成元可唯一地表示为它们的线性组合。然后就能计算这些基在Lie括号下的运算结果，从而导出Lie代数的抽象定义。
+
+注意三维Euclidean空间中的旋转矩阵（它们只变换空间坐标而不管时间）满足定义\ref{equ3.125}式。这是因为Minkowski度规的空间部分\mpar{空间部分是指分量$\mu = 1, 2, 3$对应的部分。空间部分通常记作$\eta_{ij}$, 人们习惯用拉丁字母（例如$i,j$）表示从$1$到$3$, 而希腊字母（例如$\mu,\nu$）表示从$0$到$3$。}与$3 \times 3$单位矩阵成比例\mpar{$\eta_{11} = \eta_{22} = \eta_{33} = -1, \eta_{ij}=0, \text{若}i \neq j$}。因此对于只涉及空间坐标的变换，由\ref{equ3.125}可得：
+\begin{align*}
+	-R^T I_{3 \times 3} R = - R^T R \stackrel{!}{=} -I_{3 \times 3} \\
+	\rightarrow R^T I_{3 \times 3} R = R^T R \stackrel{!}{=} I_{3 \times 3}
+\end{align*}
+上式正是$\mathcal{O}(3)$群的定义式。再加上条件
+\begin{equation*}
+	\det(\Lambda) \stackrel{!}{=} 1
+\end{equation*}
+就是$\mathcal{SO}(3)$群的定义。只涉及空间坐标的Lorentz变换的形式为：
+\begin{equation*}
+	\Lambda_{\mathrm{rot}} =
+		\begin{pmatrix}
+			1 & \\
+			  & R_{3 \times 3}
+		\end{pmatrix}
+\end{equation*}
+其中旋转矩阵$R_{3 \times 3}$的形式见\ref{equ3.23}式，相关推导见\ref{sec3.4.1}节。相应的生成元的推导与\ref{sec3.4.1}节相似，结果为：
+\begin{equation}
+	\label{equ3.135}
+	J_i = 
+		\begin{pmatrix}
+			0 & \\
+			  & J_i^{3\mathrm{dim}}
+		\end{pmatrix}
+	,\quad 
+	i = 1, 2, 3.
+\end{equation}
+比如，由\ref{equ3.65}式可得：
+\begin{equation}
+	\label{equ3.136}
+	J_1 = 
+		\begin{pmatrix}
+			0 & \\
+			  & J_1^{3 \mathrm{dim}}
+		\end{pmatrix}
+	=
+		\begin{pmatrix}
+			0 & 0 & 0 & 0 \\
+			0 & 0 & 0 & 0 \\
+			0 & 0 & 0 & -1 \\
+			0 & 0 & 1 & 0
+		\end{pmatrix}
+\end{equation}
+
+下面包含时空坐标的变换。按Lie理论的套路，考虑无穷小变换\mpar{Kronecker $\delta$符号定义为
+\[\delta^\mu_\rho =
+\begin{cases}
+	1, & \mu = \rho \\
+	0, & \mu \neq \rho
+\end{cases}
+\]
+将Kronecker $\delta$符号写成矩阵形式就是恒等矩阵$I$.
+}：
+\begin{equation}
+\label{equ3.137}
+\Lambda^\mu_\rho \approx \delta^\mu_\rho + \epsilon K^\mu_\rho
+\end{equation}
+将上式带入$\Lambda$的定义条件\ref{equ3.125}式：
+\begin{align}
+	\Lambda^\mu_\rho \eta_{\mu \nu} \Lambda^\nu_\sigma \stackrel{!}{=} \eta_{\rho \sigma} \nonumber \\
+	\rightarrow (\delta^\mu_\rho + \epsilon K^\mu_\rho) \eta_{\mu \nu} (\delta^\nu_\sigma + \epsilon K^\nu_\sigma) \stackrel{!}{=} \eta_{\rho \sigma} \nonumber \\
+	\rightarrow \cancel{\eta_{\rho \sigma}} + \epsilon K^\mu_\rho \eta_{\mu \sigma} + \epsilon K^\nu_\sigma \eta_{\rho \nu} + \underbrace{\epsilon^2 K^\mu_\rho \eta_{\mu \nu} K^\nu_\sigma}_{\text{略去高阶小量} \epsilon^2 \text{项}} = \cancel{\eta_{\rho \sigma}} \nonumber \\
+	\rightarrow K^\mu_\rho \eta_{\mu \sigma} + K^\nu_\sigma \eta_{\rho \nu} = 0
+\end{align}
+写成矩阵形式\mpar{第一个下标表示行指标，第二个是列指标。不过指标为一上一下的时候会混淆，这时我们把上下标错开表示，比如$K^\mu_\rho \equiv K^\mu_{\ \rho} \rightarrow (K^T)^\mu_{\  \rho} = K_\rho^{\ \mu}$。矩阵乘法的定义是用行乘以列，因此$K^\nu_{\ \sigma} \eta_{\rho \nu} = \eta_{\rho \nu} K^\nu_{\ \sigma}$的含义为，矩阵$\eta$的第$\rho$行乘以$K$的第$\sigma$列，用矩阵表示为$\eta K$。此外，$K^\mu_\rho \eta_{\mu \sigma} = K^\mu_{\ \rho} \eta_{\mu \sigma} = (K^T)_\rho^{\ \mu} \eta_{\mu \sigma}$，为将上式表示为矩阵乘法而引入矩阵$K$的转置，只有这样才能表示为行乘以列的形式：$K^T$的第$\rho$行乘以$\eta$的第$\sigma$列，上式用矩阵表示为$K^T \eta$。用指标记号可以自由移项，比如$K^\mu_\rho$只是矩阵$K$得一个元素，即一个数。 }：
+\begin{equation}
+	\label{equ3.139}
+	K^T \eta = -\eta K
+\end{equation}
+
+上面导出了时空变换的生成元$K$需满足的条件。这些生成元生成的变换称为{\bf 推动}。推动意味着变换到相对于初始坐标系匀速直线运动的另一坐标系。比如从一个相对于观者静止的坐标系变换到相对于观者匀速直线运动的坐标系。下面考虑\ref{sec2.1}节中的例子：沿$x$轴的推动变换。已知$y' = y, z' = z$， 因此生成元的形式为：
+\begin{equation}
+	\label{equ3.140}
+	K_x = 
+		\begin{pmatrix}
+			\underbrace{
+				\begin{pmatrix}
+					a & b \\
+					c & d
+				\end{pmatrix}
+			}_{\equiv k_x}
+			& \\
+			&	\begin{pmatrix}
+					0 & 0 \\
+					0 & 0
+				\end{pmatrix}
+		\end{pmatrix}
+\end{equation}
+			
+只需要考虑非零的$2 \times 2$矩阵部分就行了，\ref{equ3.139}式简化为：
+\[
+	\begin{pmatrix}
+		a & c \\
+		b & d 
+	\end{pmatrix}
+	\begin{pmatrix}
+		-1 & 0 \\
+		0 & 1 
+	\end{pmatrix}
+	= -
+	\begin{pmatrix}
+		-1 & 0 \\
+		0 & 1 
+	\end{pmatrix}
+	\begin{pmatrix}
+		a & b \\
+		c & d
+	\end{pmatrix}
+\]
+不难解得\mpar{$\begin{pmatrix}0 & 1 \\ 1 & 0 \end{pmatrix} \begin{pmatrix}-1 & 0 \\ 0 & 1 \end{pmatrix} = \begin{pmatrix} 0 & 1 \\ -1 & 0 \end{pmatrix}$，以及$- \begin{pmatrix} -1 & 0 \\ 0 & 1 \end{pmatrix} \begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix} = -\begin{pmatrix} 0 & -1 \\ 1 & 0 \end{pmatrix}$.}：
+\[
+	k_x =
+		\begin{pmatrix}
+			a & b \\
+			c & d
+		\end{pmatrix}
+	=
+		\begin{pmatrix}
+			0 & 1 \\
+			1 & 0 
+		\end{pmatrix}
+\]
+
+因此沿$x$轴的推动变换的生成元为：
+\begin{equation}
+\label{equ3.141}
+	K_x = 
+		\begin{pmatrix}
+			0 & 1 & 0 & 0 \\
+			1 & 0 & 0 & 0 \\
+			0 & 0 & 0 & 0 \\
+			0 & 0 & 0 & 0
+		\end{pmatrix}
+\end{equation}
+
+同理可以求出沿$y$、$z$轴推动变换的生成元：
+\begin{equation}
+\label{equ3.142}
+	K_y = 
+		\begin{pmatrix}
+			0 & 0 & 1 & 0 \\
+			0 & 0 & 0 & 0 \\
+			1 & 0 & 0 & 0 \\
+			0 & 0 & 0 & 0
+		\end{pmatrix}
+	, \quad
+	K_z =
+		\begin{pmatrix}
+			0 & 0 & 0 & 1 \\
+			0 & 0 & 0 & 0 \\
+			0 & 0 & 0 & 0 \\
+			1 & 0 & 0 & 0 
+		\end{pmatrix}
+\end{equation}
+
+根据Lie理论，把生成元扔进$\mathrm{e}$指数里就能得到有限大小的变换\mpar{生成元$K_x, K_y, K_z$都是厄米的，即$K_i^\dag = K_i$。因此$\mathrm{e}$指数里不加虚数单位$i$，因为加了之后就变成反厄米的了。}：
+\[
+	\Lambda_x(\phi) = \mathrm{e}^{\phi K_x}
+\]
+还以$K_x$为例，简明起见，只考虑其中exciting的部分 --- $2 \times 2$矩阵$k_x$（见\ref{equ3.140}式）。将它的指数函数用级数展开式计算，并利用\mpar{不难算出$k_x^2 = \begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix} \begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix} = \begin{pmatrix} 1 & 0 \\ 0 & 1 \end{pmatrix}$，然后$k_x^4 = \mathbf{1}$等等等等。对于奇次幂有$k_x^3 = k_x, k_x^5 = k_x, \dots$}$k_x^2 = \mathbf{1}$：
+\begin{align}
+	\Lambda_x(\phi) &= \mathrm{e}^{\phi k_x} = \sum_{n = 0}^{\infty} \frac{\phi^n k_x^n}{n!} = \sum_{n = 0}^{\infty} \frac{\phi^{2n}}{(2n)!} \underbrace{k_x^{2n}}_{=1} + \sum_{n = 0}^{\infty} \frac{\phi^{2n + 1}}{(2n + 1)!} \underbrace{k_x^{2n + 1}}_{=k_x} \nonumber \\
+	&= \left( \sum_{n = 0}^{\infty} \frac{\phi^{2n}}{(2n)!} \right) I + \left( \sum_{n = 0}^{\infty} \frac{\phi^{2n + 1}}{(2n + 1)!} \right) k_x = \cosh(\phi) I + \sinh(\phi) k_x \nonumber \\
+	\label{equ3.143}
+	&= 
+		\begin{pmatrix}
+			\cosh(\phi) & 0 \\
+			0 & \cosh(\phi) 
+		\end{pmatrix}
+	+
+		\begin{pmatrix}
+			0 & \sinh(\phi) \\
+			\sinh(\phi) & 0
+		\end{pmatrix}
+	=
+		\begin{pmatrix}
+			\cosh(\phi) & \sinh(\phi) \\
+			\sinh(\phi) & \cosh(\phi) 
+		\end{pmatrix}
+\end{align}
+计算过程与\ref{sec3.4.1}的内容相似。这里的求和式里没出现$(-1)^n$，因此结果不是$\sin(\phi)$和$\cos (\phi)$，而是双曲正弦$\sinh(\phi)$和双曲余弦$\cosh(\phi)$。沿$x$轴推动变换的完整$4 \times 4$矩阵为：
+\begin{equation}
+\label{equ3.144}
+	\Lambda_x = 
+		\begin{pmatrix}
+			\cosh(\phi) & \sinh(\phi) & 0 & 0 \\
+			\sinh(\phi) & \cosh(\phi) & 0 & 0 \\
+			0 & 0 & 1 & 0 \\
+			0 & 0 & 0 & 1
+		\end{pmatrix}
+\end{equation}
+同理可导出沿$y, z$轴的推动变换矩阵：
+\begin{align}
+\label{equ3.145}
+	\Lambda_y = 
+		\begin{pmatrix}
+			\cosh(\phi) & 0 & \sinh(\phi) & 0 \\
+			0 & 1 & 0 & 0 \\
+			\sinh(\phi) & 0 & \cosh(\phi) & 0 \\
+			0 & 0 & 0 & 1
+		\end{pmatrix}
+	, \\
+\label{equ3.146}
+	\Lambda_z = 
+		\begin{pmatrix}
+			\cosh(\phi) & 0 & 0 & \sinh(\phi) \\
+			0 & 1 & 0 & 0 \\
+			0 & 0 & 1 & 0 \\
+			\sinh(\phi) & 0 & 0 & \cosh(\phi)
+		\end{pmatrix}
+\end{align}
+任意的推动变换都可以分解为上述三个变换矩阵的乘积。
+
+\subsection[Lorentz群其他部分的生成元]{Generators of the Other Components of the Lorentz Group \quad Lorentz群其他部分的生成元}
+\label{sec3.7.2}
+为得到Lorentz群其他部分\mpar{复习：Lorentz群可以分成$\mathcal{O}(1, 3) = \{ \mathcal{SO}(1, 3)^\uparrow, \Lambda_P \mathcal{SO}(1, 3)^\uparrow, $
+$\Lambda_T \mathcal{SO}(1, 3)^\uparrow, \Lambda_P \Lambda_T \mathcal{SO}(1, 3)^\uparrow \}$，上一节导出了$\mathcal{SO}(1, 3)^\uparrow$的生成元。}生成元的形式，只需将宇称算符$\Lambda_P$和时间反演算符$\Lambda_T$作用于刚刚导出的生成元$J_i, K_i$上，用矩阵指标记法写为\mpar{对$J, K$变换需要两个$\Lambda_P$, 因为$J, K$都是二维矩阵，一维一个$\Lambda_P$。这就是算符矩阵在坐标变换下的一般形式，喵。}：
+\begin{align}
+\label{equ3.147}
+	(\Lambda_P)_{\alpha'}^\alpha (\Lambda_P)_{\beta'}^\beta (J_i)^{\alpha' \beta'} \underbrace{\hat{=}}_{\text{变成矩阵形式}}  \Lambda_P J_i (\Lambda_P)^T = J_i \hat{=} (J_i)^{\alpha \beta} \\
+\label{equ3.148}
+	(\Lambda_P)_{\alpha'}^\alpha (\Lambda_P)_{\beta'}^\beta (K_i)^{\alpha' \beta'} \underbrace{\hat{=}}_{\text{变成矩阵形式}} \Lambda_P K_i (\Lambda_P)^T = -K_i \hat{=} -(K_i)^{\alpha \beta}
+\end{align}
+上两式可以用上节导出的$J, K$显式矩阵形式暴力计算，例如：
+\begin{align}
+\label{equ3.149}
+	J_x = 
+		\begin{pmatrix}
+			1 & 0 & 0 & 0 \\
+			0 & 0 & 0 & 0 \\
+			0 & 0 & 0 & -1 \\
+			0 & 0 & 1 & 0
+		\end{pmatrix}
+	\rightarrow
+	J_x' = \Lambda_P J_x (\Lambda_P)^T = J_x 
+	\\
+	\Lambda_P J_x (\Lambda_P)^T = 
+		\begin{pmatrix}
+			1 & 0 & 0 & 0 \\
+			0 & -1 & 0 & 0 \\
+			0 & 0 & -1 & 0 \\
+			0 & 0 & 0 & -1
+		\end{pmatrix}
+		\begin{pmatrix}
+			1 & 0 & 0 & 0 \\
+			0 & 0 & 0 & 0 \\
+			0 & 0 & 0 & -1 \\
+			0 & 0 & 1 & 0
+		\end{pmatrix}
+		{
+		\begin{pmatrix}
+			1 & 0 & 0 & 0 \\
+			0 & -1 & 0 & 0 \\
+			0 & 0 & -1 & 0 \\
+			0 & 0 & 0 & -1
+		\end{pmatrix}
+		}^T 
+	\nonumber \\
+\label{equ3.150}
+	=
+		\begin{pmatrix}
+			1 & 0 & 0 & 0 \\
+			0 & 0 & 0 & 0 \\
+			0 & 0 & 0 & -1 \\
+			0 & 0 & 1 & 0
+		\end{pmatrix}
+\end{align}
+同理，
+\begin{align}
+\label{equ3.151}
+	K_x = 
+		\begin{pmatrix}
+			0 & 1 & 0 & 0 \\
+			1 & 0 & 0 & 0 \\
+			0 & 0 & 0 & 0 \\
+			0 & 0 & 0 & 0
+		\end{pmatrix}
+	\rightarrow K'_x = \Lambda_P K_x (\Lambda_P)^T = -K_x
+\\
+	\Lambda_P K_x (\Lambda_P)^T = 
+		\begin{pmatrix}
+			1 & 0 & 0 & 0 \\
+			0 & -1 & 0 & 0 \\
+			0 & 0 & -1 & 0 \\
+			0 & 0 & 0 & -1
+		\end{pmatrix}
+		\begin{pmatrix}
+			0 & 1 & 0 & 0 \\
+			1 & 0 & 0 & 0 \\
+			0 & 0 & 0 & 0 \\
+			0 & 0 & 0 & 0 
+		\end{pmatrix}
+		{
+		\begin{pmatrix}
+			1 & 0 & 0 & 0 \\
+			0 & -1 & 0 & 0 \\
+			0 & 0 & -1 & 0 \\
+			0 & 0 & 0 & -1
+		\end{pmatrix}
+		}^T
+\nonumber \\
+\label{equ3.152}
+	= -
+		\begin{pmatrix}
+			0 & 1 & 0 & 0 \\
+			1 & 0 & 0 & 0 \\
+			0 & 0 & 0 & 0 \\
+			0 & 0 & 0 & 0
+		\end{pmatrix}
+\end{align}
+
+综上，在宇称变换下：
+\begin{equation}
+\label{equ3.153}
+	J_i \underbrace{\longrightarrow}_{\Lambda_P} J_i, \quad K_i \underbrace{\longrightarrow}_{\Lambda_P} -K_i
+\end{equation}
+之后会用得到它们，因为宇称算符在其他表示之下的形式可能不向现在的向量表示这样简单。时间反演算符$\Lambda_T$的推导过程相似，由于$\Lambda_T$只变换第一个分量（时间分量），因此它对$J_i$无影响，而只使得$K_i$有变化：
+\begin{align}
+\label{equ3.154}
+	(\Lambda_T)_{\alpha'}^\alpha (\Lambda_T)_{\beta'}^\beta (J_i)^{\alpha' \beta'} \underbrace{\hat{=}}_{\text{变成矩阵形式}}  \Lambda_T J_i (\Lambda_T)^T = J_i \hat{=} (J_i)^{\alpha \beta} \\
+\label{equ3.155}
+	(\Lambda_T)_{\alpha'}^\alpha (\Lambda_T)_{\beta'}^\beta (K_i)^{\alpha' \beta'} \underbrace{\hat{=}}_{\text{变成矩阵形式}} \Lambda_T K_i (\Lambda_T)^T = -K_i \hat{=} -(K_i)^{\alpha \beta}
+\end{align}
+或者简写为：
+\begin{equation}
+\label{equ3.156}
+	J_i \underbrace{\rightarrow}_{\Lambda_T} J_i, \quad K_i \underbrace{\rightarrow}_{\Lambda_T} -K_i
+\end{equation}
+
+\subsection[$\mathcal{O}(1, 3)^\uparrow$群的Lie代数]{The Lie Algebra of the Proper Orthochronous Lorentz Group \quad $\mathcal{O}(1, 3)^\uparrow$群的Lie代数}
+\label{equ3.7.3}
+利用上节导出的$\mathcal{O}(1, 3)^\uparrow$生成元的矩阵形式\mpar{推动变换的生成元见\ref{equ3.141}式，旋转变换的生成元见\ref{equ3.62}式。}可以直接计算相应的Lie代数\mpar{Levi-Civita符号$\epsilon_{ijk}$的定义见附录B.5.5.}：
+\begin{align}
+\label{equ3.157}
+	[J_i, J_j] = i \epsilon_{ijk} J_k \\
+\label{equ3.158}
+	[J_i, K_j] = i \epsilon_{ijk} K_k \\
+\label{equ3.159}
+	[K_i, K_j] = -i \epsilon_{ijk} J_k
+\end{align}
+其中$J_i$是旋转变换的生成元，$K_i$是推动的生成元。一般形式的Lorentz变换可以表示为：
+\begin{equation}
+\label{equ3.160}
+	\Lambda = \mathrm{e}^{i J \theta + i K \Phi}
+\end{equation}
+
+\ref{equ3.158}式表明两种生成元($J_i$与$K_i$)之间不对易。旋转生成元在对易运算下封闭\mpar{在对易运算下封闭意味着对易子$[J_i, J_j] = J_i J_j - J_j J_i$还是一个旋转变换的生成元。\ref{equ3.157}体现了这一点。}，而推动生成元则不是这样\mpar{\ref{equ3.159}表明两个推动生成元$K_i, K_j$的对易子并非推动生成元，而是个转动生成元。}。从$J_i, K_i$出发可以定义在对易运算下封闭并且相互对易的新生成元\footnote{注意区分之后式子中的虚数单位$i$与指标$i$，我们对作者采用这样的符号很抱歉。}：
+\begin{equation}
+\label{equ3.161}
+	N_i^\pm \equiv \frac{1}{2} (J_i \pm i K_i)
+\end{equation}
+不难算出对易关系为：
+\begin{align}
+\label{equ3.162}
+	[N_i^+, N_j^+] &= i \epsilon_{ijk} N_k^+ \\
+\label{equ3.163}
+	[N_i^-, N_j^-] &= i \epsilon_{ijk} N_k^- \\
+\label{equ3.164}
+	[N_i^+, N_j^-] &= 0
+\end{align}
+这正是$\mathcal{SU}(2)$\, Lie代数的形式！我们发现了$\mathcal{SO}(1, 3)^\uparrow$群的Lie代数包含两份$\mathcal{SU}(2)$的Lie代数。
+
+我们搞了个大新闻，因为前面已经构造了$\mathcal{SU}(2)$的所有不可约表示。然而就像$\mathcal{SO}(3)$那样，Lorentz群不是单连通群\mpar{本书不证明这个命题，证明过程很复杂并且与物理关系不大。}，Lie理论告诉我们，对于非单连通群，不存在{\it Lie代数的不可约表示}和{\it 群的表示}之间的一一映射\mpar{这话理解起来有点难。前面提过，一个Lie代数{\bf 总}对应一个特殊的群，这个群的特殊之处在于它是单连通的。导出一个Lie代数的不可约表示之后，再将Lie代数的元素（即生成元）扔进$\mathrm{e}$指数里就能得到单连通群（覆盖群）的表示。只有对于单连通群，前面说的一一映射才存在。 }。{\bf 通过推导Lorentz群Lie代数的不可约表示，可以导出Lorentz群的覆盖群的不可约表示}，只要把相应的生成元扔进$\mathrm{e}$指数里就行了。这样导出的一部分表示是Lorentz群的表示，还有一些不是。这些额外的表示很有用处，它们可以用来描述某些基本粒子。
+
+{\it 简明起见，我们把之后要推导的Lorentz群Lie代数的表示，或者Lorentz群双覆盖的表示，全部简称为Lorentz群的表示。 }
+
+$\mathcal{SU}(2)$的每一不可约表示都可以用$\mathcal{SU}(2)$的Casimir算符对应的标量$j$来标记。因此Lorentz群覆盖群\mpar{Lorentz群的覆盖群记作$\mathcal{SL}(2, C)$，它是具有单位行列式（行列式为$1$）的$2 \times 2$复数矩阵的集合。$\mathcal{SL}(2, C) \rightarrow \mathcal{SO}(1, 3)$之间的关系与之前讨论的$\mathcal{SU}(2) \rightarrow \mathcal{SO}(3)$之间的关系类似。}的不可约表示可以用两个数$j_1, j_2$（它们都是整数或半整数）来标记。下面依次研究Lorentz群的$(j_1, j_2)$表示，并利用前面导出的$\mathcal{SU}(2)$群的$ j_1,j_2 = 0, \frac{1}{2}, 1, \dots$表示的形式。
+
+Lorentz群的Lie代数可以用$M_{\mu \nu}$表示为更紧凑的形式，$M_{\mu \nu}$的定义为：
+\begin{align}
+\label{equ3.165}
+	J_i &= \frac{1}{2} \epsilon_{ijk} M_{jk} \\
+\label{equ3.166}
+	K_i &= M_{0i}
+\end{align}
+这样Lie代数可表示为：
+\begin{equation}
+\label{equ3.167}
+	[M_{\mu \nu}, M_{\rho \sigma}] = i(\eta_{\mu \rho} M_{\nu \sigma} - \eta_{\mu \sigma} M_{\nu \rho} - \eta_{\nu \rho} M_{\mu \sigma} + \sigma_{\nu \sigma} M_{\mu \rho})
+\end{equation}
+下面从Lorentz群的Lie代数构造不可约表示，さ、いくぞ！
+
+\subsection[$(0, 0)$表示]{The $(0, 0)$ Representation \quad $(0, 0)$表示}
+\label{sec3.7.4}
+$\mathcal{SU}(2)$的最低阶表示是平凡的，因为Lie代数对应是$1$维的向量空间，因此生成元必须是$1 \times 1$矩阵，满足对易关系的只有平凡的$0$:
+\begin{equation}
+\label{equ3.168}
+	N_i^+ = N_i^- = 0 \rightarrow \mathrm{e}^{N_i^+} = \mathrm{e}^{N_i^-} = \mathrm{e}^0 = 1
+\end{equation}
+因此Lorentz群的$(0, 0)$表示作用于{\bf 在Lorentz变换下不变的}物体。$(0, 0)$表示又称为Lorentz{\bf 标量表示}。
+
+\subsection[$(\frac{1}{2}, 0)$表示]{The $(\frac{1}{2}, 0)$ Representation \quad $(\frac{1}{2}, 0)$表示}
+\label{sec3.7.5}
+$(\frac{1}{2}, 0)$表示就是对$\mathcal{SU}(2)$的一份Lie代数$N_i^+$使用$2$维表示\mpar{复习：表示对应的向量空间的维数是$2j + 1$，因此$j=1/2$表示对应$2\frac{1}{2} + 1 = 2$维向量空间。}，另一份Lie代数$N_i^-$使用$1$维表示，即$N_i^- = 0$。由$N_i^-$的定义式\ref{equ3.161}可得：
+\begin{align}
+\label{equ3.169}
+	N_i^- = \frac{1}{2} (J_i - i K_i) = 0 \\
+\label{equ3.170}
+	\rightarrow J_i = i K_i
+\end{align}
+此外，根据\ref{sec3.6.4}节中导出的$\mathcal{SU}(2)$的$2$维表示的形式：
+\begin{equation}
+\label{equ3.171}
+	N_i^+ = \frac{\sigma_i}{2}
+\end{equation}
+其中$\sigma_i$表示Pauli矩阵，其定义见\ref{equ3.81}式。
+
+另一方面：
+\begin{equation}
+\label{equ3.172}
+	N_i^+ \underbrace{=}_{\ref{equ3.161} \text{式}} \frac{1}{2} (J_i + i K_i) \underbrace{=}_{\ref{equ3.170} \text{式}} \frac{1}{2} (i K_i + i K_i) = i K_i
+\end{equation}
+比较\ref{equ3.171}与\ref{equ3.172}式可得：
+\begin{align}
+\label{equ3.173}
+	i K_i = \frac{\sigma_i}{2} \rightarrow K_i = \frac{\sigma_i}{2i} = \frac{i \sigma_i}{2i^2} = -\frac{i}{2} \sigma_i \\
+\label{equ3.174}
+	\ref{equ3.170}\text{式} \rightarrow J_i = i K_i = -\frac{i^2}{2} \sigma_i = \frac{1}{2} \sigma_i
+\end{align}
+于是在这一表示下，Lorentz旋转变换为：
+\begin{equation}
+\label{equ3.175}
+	R_\theta = \mathrm{e}^{i \vec{\theta} \vec{J}} = \mathrm{e}^{j \vec{\theta} \frac{\vec{\sigma}}{2}}
+\end{equation}
+Lorentz推动变换为：
+\begin{equation}
+\label{equ3.176}
+	B_\theta = \mathrm{e}^{i \vec{\phi} \vec{K}} = \mathrm{e}^{\vec{\phi} \frac{\vec{\sigma}}{2}}
+\end{equation}
+将生成元扔进$\mathrm{e}$指数函数里，再将$\mathrm{e}$指数函数用级数展开，就可以算出Lorentz群元的表示。例如，绕$x$轴的旋转变换为：
+\begin{equation}
+\label{equ3.177}
+	R_x(\theta) = \mathrm{e}^{i \theta J_1} = \mathrm{e}^{i \theta \frac{1}{2} \sigma_1} = 1 + \frac{i}{2} \theta \sigma_1 + \frac{1}{2!} \left( \frac{i}{2} \theta \sigma_1 \right)^2 + \dots + \frac{1}{n!} \left( \frac{i}{2} \theta \sigma_1 \right)^n + \dots
+\end{equation}
+将$\sigma_1$的显式形式（\ref{equ3.81}式）代入，并利用$\sigma_1^2 = \mathbf{1}$可得\mpar{具体过程与\ref{sec3.4.1}中的推导十分相似。}：
+\begin{align}
+	R_x (\theta) &=
+		\begin{pmatrix}
+			1 & 0 \\
+			0 & 1
+		\end{pmatrix}
+	+ \frac{i}{2} \theta
+		\begin{pmatrix}
+			0 & 1 \\
+			1 & 0
+		\end{pmatrix}
+	- \frac{1}{2} \left( \frac{\theta}{2} \right)^2
+		\begin{pmatrix}
+			1 & 0 \\
+			0 & 1
+		\end{pmatrix}
+	+ \dots 
+\nonumber \\
+\label{equ3.178}
+	&=
+		\begin{pmatrix}
+			\cos \frac{\theta}{2} & i \sin \frac{\theta}{2} \\
+			i \sin  \frac{\theta}{2} & \cos  \frac{\theta}{2}
+		\end{pmatrix}
+\end{align}
+关于其他轴的旋转及推动变换可类似地导出。注意Lorentz变换在这儿用$2 \times 2$虚数矩阵表示，它们当然不是作用在Minkowski空间的（Minkowski空间的元素是$4$维向量）。Lorentz变换在$(\frac{1}{2}, 0)$表示下作用的{\bf $2$分量}\mpar{之后会看到这些二分量物体与{\bf 自旋向上}和{\bf 自旋向下}的状态有关。}物体称为{\bf 左手旋量}\mpar{这个名字在引入右手旋量之后的含义会更清楚。我们会看到宇称变换将左手旋量变换为右手旋量，反之亦然。旋量通常分为左手和右手的，它们的起源与螺旋性有关 --- 螺旋性与手性不完全相同。重复一遍宇称算符的效果：将左手坐标系变换为右手坐标系，反之亦然。左手、右手旋量的名字就是从那儿来的。}：
+\begin{equation}
+\label{equ3.179}
+	\chi_L = 
+		\begin{pmatrix}
+			(\chi_L)_1 \\
+			(\chi_L)_2
+		\end{pmatrix}
+\end{equation}
+
+旋量在这里指的是$2$分量物体。左手旋量的另一种定义是在Lorentz变换下根据Lorentz群的$(\frac{1}{2}, 0)$表示变换的物体。注意旋量并不只是$2$分量的向量，旋量有很多新的性质。比如$\mathrm{e}$指数中的$\frac{1}{2}$因子，这个因子使得旋量\mpar{旋量的更多性质可见, chapter 3.2 in J. J. Sakurai. Modern Quantum
+Mechanics. Addison Wesley, 1st edition, 9 1993. ISBN 9780201539295}在旋转$2\pi$之后不再和原来相同，而多了一个负号。这个性质十分奇特，因为日常遇到的物体在转$2\pi$之后总是和原来一样。
+
+\begin{quote}
+	“旋量可以说是能进行Lorentz变换的物体中最基本的数学对象。”
+\end{quote}
+
+\begin{flushright}
+{\bf  ---  A. M. Steane}\mpar{ Andrew M. Steane. An introduction
+to spinors. ArXiv e-prints, December 2013}
+\end{flushright}
+
+\subsection[$(0, \frac{1}{2})$表示]{The $(0, \frac{1}{2})$ Representation \quad $(0, \frac{1}{2})$表示}
+\label{sec3.7.6}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
