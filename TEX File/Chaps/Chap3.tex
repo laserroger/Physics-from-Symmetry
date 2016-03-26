@@ -2,7 +2,7 @@
 
 %----------------------------------------------------------------------------------------
 %	CHAPTER 3
-%	Translator: SI(= Surgam Identidem)
+%	Translator: SI(= Surgam Identidem), InSight
 %	Proofreader: lh(= lh1962)
 %----------------------------------------------------------------------------------------
 
@@ -1959,7 +1959,159 @@ $\Lambda_T \mathcal{SO}(1, 3)^\uparrow, \Lambda_P \Lambda_T \mathcal{SO}(1, 3)^\
 
 \subsection[$\mathcal{O}(1, 3)^\uparrow$群的Lie代数]{The Lie Algebra of the Proper Orthochronous Lorentz Group \quad $\mathcal{O}(1, 3)^\uparrow$群的Lie代数}
 \label{equ3.7.3}
+利用上节导出的$\mathcal{O}(1, 3)^\uparrow$生成元的矩阵形式\mpar{推动变换的生成元见\ref{equ3.141}式，旋转变换的生成元见\ref{equ3.62}式。}可以直接计算相应的Lie代数\mpar{Levi-Civita符号$\epsilon_{ijk}$的定义见附录B.5.5.}：
+\begin{align}
+\label{equ3.157}
+	[J_i, J_j] = i \epsilon_{ijk} J_k \\
+\label{equ3.158}
+	[J_i, K_j] = i \epsilon_{ijk} K_k \\
+\label{equ3.159}
+	[K_i, K_j] = -i \epsilon_{ijk} J_k
+\end{align}
+其中$J_i$是旋转变换的生成元，$K_i$是推动的生成元。一般形式的Lorentz变换可以表示为：
+\begin{equation}
+\label{equ3.160}
+	\Lambda = \mathrm{e}^{i J \theta + i K \Phi}
+\end{equation}
 
+\ref{equ3.158}式表明两种生成元($J_i$与$K_i$)之间不对易。旋转生成元在对易运算下封闭\mpar{在对易运算下封闭意味着对易子$[J_i, J_j] = J_i J_j - J_j J_i$还是一个旋转变换的生成元。\ref{equ3.157}体现了这一点。}，而推动生成元则不是这样\mpar{\ref{equ3.159}表明两个推动生成元$K_i, K_j$的对易子并非推动生成元，而是个转动生成元。}。从$J_i, K_i$出发可以定义在对易运算下封闭并且相互对易的新生成元\footnote{注意区分之后式子中的虚数单位$i$与指标$i$，我们对作者采用这样的符号很抱歉。}：
+\begin{equation}
+\label{equ3.161}
+	N_i^\pm \equiv \frac{1}{2} (J_i \pm i K_i)
+\end{equation}
+不难算出对易关系为：
+\begin{align}
+\label{equ3.162}
+	[N_i^+, N_j^+] &= i \epsilon_{ijk} N_k^+ \\
+\label{equ3.163}
+	[N_i^-, N_j^-] &= i \epsilon_{ijk} N_k^- \\
+\label{equ3.164}
+	[N_i^+, N_j^-] &= 0
+\end{align}
+这正是$\mathcal{SU}(2)$\, Lie代数的形式！我们发现了$\mathcal{SO}(1, 3)^\uparrow$群的Lie代数包含两份$\mathcal{SU}(2)$的Lie代数。
+
+我们搞了个大新闻，因为前面已经构造了$\mathcal{SU}(2)$的所有不可约表示。然而就像$\mathcal{SO}(3)$那样，Lorentz群不是单连通群\mpar{本书不证明这个命题，证明过程很复杂并且与物理关系不大。}，Lie理论告诉我们，对于非单连通群，不存在{\it Lie代数的不可约表示}和{\it 群的表示}之间的一一映射\mpar{这话理解起来有点难。前面提过，一个Lie代数{\bf 总}对应一个特殊的群，这个群的特殊之处在于它是单连通的。导出一个Lie代数的不可约表示之后，再将Lie代数的元素（即生成元）扔进$\mathrm{e}$指数里就能得到单连通群（覆盖群）的表示。只有对于单连通群，前面说的一一映射才存在。 }。{\bf 通过推导Lorentz群Lie代数的不可约表示，可以导出Lorentz群的覆盖群的不可约表示}，只要把相应的生成元扔进$\mathrm{e}$指数里就行了。这样导出的一部分表示是Lorentz群的表示，还有一些不是。这些额外的表示很有用处，它们可以用来描述某些基本粒子。
+
+{\it 简明起见，我们把之后要推导的Lorentz群Lie代数的表示，或者Lorentz群双覆盖的表示，全部简称为Lorentz群的表示。 }
+
+$\mathcal{SU}(2)$的每一不可约表示都可以用$\mathcal{SU}(2)$的Casimir算符对应的标量$j$来标记。因此Lorentz群覆盖群\mpar{Lorentz群的覆盖群记作$\mathcal{SL}(2, C)$，它是具有单位行列式（行列式为$1$）的$2 \times 2$复数矩阵的集合。$\mathcal{SL}(2, C) \rightarrow \mathcal{SO}(1, 3)$之间的关系与之前讨论的$\mathcal{SU}(2) \rightarrow \mathcal{SO}(3)$之间的关系类似。}的不可约表示可以用两个数$j_1, j_2$（它们都是整数或半整数）来标记。下面依次研究Lorentz群的$(j_1, j_2)$表示，并利用前面导出的$\mathcal{SU}(2)$群的$ j_1,j_2 = 0, \frac{1}{2}, 1, \dots$表示的形式。
+
+Lorentz群的Lie代数可以用$M_{\mu \nu}$表示为更紧凑的形式，$M_{\mu \nu}$的定义为：
+\begin{align}
+\label{equ3.165}
+	J_i &= \frac{1}{2} \epsilon_{ijk} M_{jk} \\
+\label{equ3.166}
+	K_i &= M_{0i}
+\end{align}
+这样Lie代数可表示为：
+\begin{equation}
+\label{equ3.167}
+	[M_{\mu \nu}, M_{\rho \sigma}] = i(\eta_{\mu \rho} M_{\nu \sigma} - \eta_{\mu \sigma} M_{\nu \rho} - \eta_{\nu \rho} M_{\mu \sigma} + \sigma_{\nu \sigma} M_{\mu \rho})
+\end{equation}
+下面从Lorentz群的Lie代数构造不可约表示，さ、いくぞ！
+
+\subsection[$(0, 0)$表示]{The $(0, 0)$ Representation \quad $(0, 0)$表示}
+\label{sec3.7.4}
+$\mathcal{SU}(2)$的最低阶表示是平凡的，因为Lie代数对应是$1$维的向量空间，因此生成元必须是$1 \times 1$矩阵，满足对易关系的只有平凡的$0$:
+\begin{equation}
+\label{equ3.168}
+	N_i^+ = N_i^- = 0 \rightarrow \mathrm{e}^{N_i^+} = \mathrm{e}^{N_i^-} = \mathrm{e}^0 = 1
+\end{equation}
+因此Lorentz群的$(0, 0)$表示作用于{\bf 在Lorentz变换下不变的}物体。$(0, 0)$表示又称为Lorentz{\bf 标量表示}。
+
+\subsection[$(\frac{1}{2}, 0)$表示]{The $(\frac{1}{2}, 0)$ Representation \quad $(\frac{1}{2}, 0)$表示}
+\label{sec3.7.5}
+$(\frac{1}{2}, 0)$表示就是对$\mathcal{SU}(2)$的一份Lie代数$N_i^+$使用$2$维表示\mpar{复习：表示对应的向量空间的维数是$2j + 1$，因此$j=1/2$表示对应$2\frac{1}{2} + 1 = 2$维向量空间。}，另一份Lie代数$N_i^-$使用$1$维表示，即$N_i^- = 0$。由$N_i^-$的定义式\ref{equ3.161}可得：
+\begin{align}
+\label{equ3.169}
+	N_i^- = \frac{1}{2} (J_i - i K_i) = 0 \\
+\label{equ3.170}
+	\rightarrow J_i = i K_i
+\end{align}
+此外，根据\ref{sec3.6.4}节中导出的$\mathcal{SU}(2)$的$2$维表示的形式：
+\begin{equation}
+\label{equ3.171}
+	N_i^+ = \frac{\sigma_i}{2}
+\end{equation}
+其中$\sigma_i$表示Pauli矩阵，其定义见\ref{equ3.81}式。
+
+另一方面：
+\begin{equation}
+\label{equ3.172}
+	N_i^+ \underbrace{=}_{\ref{equ3.161} \text{式}} \frac{1}{2} (J_i + i K_i) \underbrace{=}_{\ref{equ3.170} \text{式}} \frac{1}{2} (i K_i + i K_i) = i K_i
+\end{equation}
+比较\ref{equ3.171}与\ref{equ3.172}式可得：
+\begin{align}
+\label{equ3.173}
+	i K_i = \frac{\sigma_i}{2} \rightarrow K_i = \frac{\sigma_i}{2i} = \frac{i \sigma_i}{2i^2} = -\frac{i}{2} \sigma_i \\
+\label{equ3.174}
+	\ref{equ3.170}\text{式} \rightarrow J_i = i K_i = -\frac{i^2}{2} \sigma_i = \frac{1}{2} \sigma_i
+\end{align}
+于是在这一表示下，Lorentz旋转变换为：
+\begin{equation}
+\label{equ3.175}
+	R_\theta = \mathrm{e}^{i \vec{\theta} \vec{J}} = \mathrm{e}^{j \vec{\theta} \frac{\vec{\sigma}}{2}}
+\end{equation}
+Lorentz推动变换为：
+\begin{equation}
+\label{equ3.176}
+	B_\theta = \mathrm{e}^{i \vec{\phi} \vec{K}} = \mathrm{e}^{\vec{\phi} \frac{\vec{\sigma}}{2}}
+\end{equation}
+将生成元扔进$\mathrm{e}$指数函数里，再将$\mathrm{e}$指数函数用级数展开，就可以算出Lorentz群元的表示。例如，绕$x$轴的旋转变换为：
+\begin{equation}
+\label{equ3.177}
+	R_x(\theta) = \mathrm{e}^{i \theta J_1} = \mathrm{e}^{i \theta \frac{1}{2} \sigma_1} = 1 + \frac{i}{2} \theta \sigma_1 + \frac{1}{2!} \left( \frac{i}{2} \theta \sigma_1 \right)^2 + \dots + \frac{1}{n!} \left( \frac{i}{2} \theta \sigma_1 \right)^n + \dots
+\end{equation}
+将$\sigma_1$的显式形式（\ref{equ3.81}式）代入，并利用$\sigma_1^2 = \mathbf{1}$可得\mpar{具体过程与\ref{sec3.4.1}中的推导十分相似。}：
+\begin{align}
+	R_x (\theta) &=
+		\begin{pmatrix}
+			1 & 0 \\
+			0 & 1
+		\end{pmatrix}
+	+ \frac{i}{2} \theta
+		\begin{pmatrix}
+			0 & 1 \\
+			1 & 0
+		\end{pmatrix}
+	- \frac{1}{2} \left( \frac{\theta}{2} \right)^2
+		\begin{pmatrix}
+			1 & 0 \\
+			0 & 1
+		\end{pmatrix}
+	+ \dots 
+\nonumber \\
+\label{equ3.178}
+	&=
+		\begin{pmatrix}
+			\cos \frac{\theta}{2} & i \sin \frac{\theta}{2} \\
+			i \sin  \frac{\theta}{2} & \cos  \frac{\theta}{2}
+		\end{pmatrix}
+\end{align}
+关于其他轴的旋转及推动变换可类似地导出。注意Lorentz变换在这儿用$2 \times 2$虚数矩阵表示，它们当然不是作用在Minkowski空间的（Minkowski空间的元素是$4$维向量）。Lorentz变换在$(\frac{1}{2}, 0)$表示下作用的{\bf $2$分量}\mpar{之后会看到这些二分量物体与{\bf 自旋向上}和{\bf 自旋向下}的状态有关。}物体称为{\bf 左手旋量}\mpar{这个名字在引入右手旋量之后的含义会更清楚。我们会看到宇称变换将左手旋量变换为右手旋量，反之亦然。旋量通常分为左手和右手的，它们的起源与螺旋性有关 --- 螺旋性与手性不完全相同。重复一遍宇称算符的效果：将左手坐标系变换为右手坐标系，反之亦然。左手、右手旋量的名字就是从那儿来的。}：
+\begin{equation}
+\label{equ3.179}
+	\chi_L = 
+		\begin{pmatrix}
+			(\chi_L)_1 \\
+			(\chi_L)_2
+		\end{pmatrix}
+\end{equation}
+
+旋量在这里指的是$2$分量物体。左手旋量的另一种定义是在Lorentz变换下根据Lorentz群的$(\frac{1}{2}, 0)$表示变换的物体。注意旋量并不只是$2$分量的向量，旋量有很多新的性质。比如$\mathrm{e}$指数中的$\frac{1}{2}$因子，这个因子使得旋量\mpar{旋量的更多性质可见, chapter 3.2 in J. J. Sakurai. Modern Quantum
+Mechanics. Addison Wesley, 1st edition, 9 1993. ISBN 9780201539295}在旋转$2\pi$之后不再和原来相同，而多了一个负号。这个性质十分奇特，因为日常遇到的物体在转$2\pi$之后总是和原来一样。
+
+\begin{quote}
+	“旋量可以说是能进行Lorentz变换的物体中最基本的数学对象。”
+\end{quote}
+
+\begin{flushright}
+{\bf  ---  A. M. Steane}\mpar{ Andrew M. Steane. An introduction
+to spinors. ArXiv e-prints, December 2013}
+\end{flushright}
+
+\subsection[$(0, \frac{1}{2})$表示]{The $(0, \frac{1}{2})$ Representation \quad $(0, \frac{1}{2})$表示}
+\label{sec3.7.6}
 
 
 
