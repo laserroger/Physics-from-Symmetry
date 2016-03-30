@@ -123,12 +123,112 @@ q_3
 &=& -m(\bar\Psi \underbrace{\ue^{-\ri a})(\ue^{\ri a}}_{\mathclap{=1}}\Psi)+\ri(\bar\Psi \ue^{-\ri a(x)})\gamma_\mu\partial^\mu\Psi(\ue^{\ri a(x)}\Psi) \nonumber\\
 &=& -m\bar\Psi\Psi + \ri\bar\Psi\gamma_\mu\partial^\mu\Psi \underbrace{\ue^{-\ri a}\ue^{\ri a}}_{\mathclap{=1}} \underbrace{+}_{\mathclap{\text{莱布尼兹律}}} \ri(\ue^{-\ri a(x)}\bar\Psi)\gamma_\mu\Psi(\partial^\mu\ue^{\ri a(x)}) \nonumber\\
 &=& -m\bar\Psi\Psi +\ri\bar\Psi\gamma_\mu\partial^\mu\Psi + \ri^2(\partial^\mu a(x))\bar\Psi\gamma_\mu\Psi \ne {\mathscr L}_\text{Dirac}
+\label{eq:7.5}
 \end{eqnarray}
 由于莱布尼兹律导致了一个额外的项，所以说我们的拉格朗日量在局域\uo 对称变换下不是不变的。但按照上面所讨论的，拉格朗日量应该是局域不变的，在这里却不是。这里有一些事情可做，但我们得先研究另一种对称性。
 \subsection{自旋为$1$自由场的内禀对称性}\label{sec7.1.2}
+接下来，来看看自旋为一的粒子\mpar{对比\ref{eq:6.25}式，注意我们为了简明起见而丢掉的$\frac{1}{2}$因子}
+\begin{equation}
+{\mathscr L}_\text{Proca} = \partial^\mu A^\nu\partial_\mu A_\nu - \partial^\mu A^\nu \partial_\nu A_\mu + m^2A_\mu A^\mu \text{。}
+\end{equation}
+这儿也能找到一个全局内禀对称性。如果我们作变换
+\begin{equation}
+A_\mu \rightarrow A_\mu' = A_\mu+a_\mu
+\end{equation}
+其中$a_\mu$为任意常数，拉格朗日量变为
+\begin{eqnarray}
+{\mathscr L}_\text{Proca}' &=& \partial^\mu A^\nu'\partial_\mu A_\nu' - \partial^\mu A^\nu' \partial_\nu A_\mu' + m^2A_\mu' A^\mu' \nonumber\\
+&=& \partial^\mu (A^\mu+a^\nu)\partial_\mu (A_\nu+a_\nu) - \partial^\mu (A^\nu+a^\nu) \partial_\nu ( A_\mu+a_\mu) + m^2( A_\mu+a_\mu) ( A^\mu+a^\mu) \nonumber\\
+&=& \partial^\mu A^\nu\partial_\mu A_\nu - \partial^\mu A^\nu \partial_\nu A_\mu + m^2( A_\mu+a_\mu) ( A^\mu+a^\mu)
+\end{eqnarray}
+由此我们作出结论，对于{\bf 无质量}场（$m=0$），这个变换是个{\bf 全局}对称的变换。
 
+那{\bf 局域}对称性又会怎么样呢？作变换
+\begin{equation}
+A_\mu \rightarrow A_\mu' = A_\mu+a_\mu(x)
+\end{equation}
+{\bf 无质量}的拉格朗日量变成
+\begin{eqnarray}
+{\mathscr L}_\text{Maxwell}' &=& \partial^\mu A^\nu'\partial_\mu A_\nu' - \partial^\mu A^\nu' \partial_\nu A_\mu' \nonumber\\
+&=& \partial^\mu (A^\mu+a^\nu(x))\partial_\mu (A_\nu+a_\nu(x)) - \partial^\mu (A^\nu+a^\nu(x)) \partial_\nu ( A_\mu+a_\mu(x))  \nonumber\\
+&=& \partial^\mu A^\nu\partial_\mu A_\nu+\partial^\mu a^\nu(x)\partial_\mu A_\nu+\partial^\mu A^\nu\partial_\mu a_\nu(x) +\partial^\mu a^\nu(x)\partial_\mu a_\nu(x) \nonumber\\
+& &\quad - \partial^\mu A^\nu \partial_\nu A_\mu - \partial^\mu A^\nu \partial_\nu a_\mu(x)-\partial^\mu a^\nu(x) \partial_\nu A_\mu - \partial^\mu a^\nu(x) \partial_\nu a_\mu(x)
+\end{eqnarray}
+即没有内禀对称性。
+
+然而，如果我们这样作变换$A_\mu\rightarrow A_\mu'+\partial_\mu a(x)$，我们能弄出一个局域内禀对称性来。这意味着我们加的是一个任意函数的导数，而不是一个任意函数。这会导致\footnote{\textcolor{red}{译注：原文缺少一个$(x)$}}
+\begin{eqnarray}
+{\mathscr L}_\text{Maxwell}' &=& \partial^\mu A^\nu'\partial_\mu A_\nu' - \partial^\mu A^\nu' \partial_\nu A_\mu' \nonumber\\
+&=& \partial^\mu (A^\mu+\partial^\nu a(x))\partial_\mu (A_\nu+\partial_\nu a(x)) - \partial^\mu (A^\nu+\partial^\nu a(x)) \partial_\nu ( A_\mu+\partial_\mu a(x))  \nonumber\\
+&=& \partial^\mu A^\nu\partial_\mu A_\nu+\partial^\mu \partial^\nu a(x)\partial_\mu A_\nu+\partial^\mu A^\nu\partial_\mu \partial_\nu a(x) +\partial^\mu \partial^\nu a(x)\partial_\mu \partial_\nu a(x) \nonumber\\
+& & - \partial^\mu A^\nu \partial_\nu A_\mu - \partial^\mu A^\nu \partial_\nu \partial_\mu a(x)-\partial^\mu \partial^\nu a(x) \partial_\nu A_\mu - \partial^\mu \partial^\nu a(x) \partial_\nu \partial_\mu a(x) \nonumber \\
+&\underbrace{=}_{\mathclap{\partial_\nu\partial_\mu=\partial_\mu\partial_\nu\text{以及重命名哑指标}}}& \partial^\mu A^\nu\partial_\mu A_\nu - \partial^\mu A^\nu \partial_\nu A_\mu = {\mathscr L}_\text{Maxwell}
+\end{eqnarray}
+所以说这里的确有一个局域内禀对称变换。这看上去也像是一个技术细节。好的，我们找到了一些局域的、内禀的对称性，然后呢？
 \subsection{把奇怪的东西堆一起}\label{sec7.1.3}
+总结一下咱现在都干了啥
+\begin{itemize}
+\item 我们发现\spint 自由场的拉格朗日量有一个全局的内禀对称性$\Psi\rightarrow\Psi' = \ue^{\ri a}\Psi$。或者这样说：\spint 自由场的拉格朗日量在全局\uo 变换下不变。
+\item 这个对称性不是局域的（尽管它应当是），因为在$a=a(x)$的情况下，我们在拉格朗日量中得到如下形式的额外项（\ref{eq:7.5}式）
+\begin{equation}
+-(\partial_\mu a(x))\bar\Psi\gamma^\mu\Psi \text{。}
+\label{eq:7.12}
+\end{equation}
+换言之：拉格朗日量不是局域\uo 不变的。
+\item 上一节中我们发现了无质量自旋为一的场的一个局域内禀对称性
+\begin{equation}
+A_\mu \rightarrow A_\mu' = A_\mu +\partial_\mu a(x) \text{，}
+\end{equation}
+它仅当我们加上的是一个任意函数的导数$\partial_\mu a(x)$，而不是一个任意函数$a_\mu(x)$时,才是一个局域对称性。
+\end{itemize}
+这两坨奇怪的东西看上去真该加在一起：拉格朗日量中的一个额外项$A_\mu\bar\Psi\gamma^\mu\Psi$会变换作
+\begin{equation}
+A_\mu\bar\Psi\gamma^\mu\Psi \rightarrow (A_\mu+\partial_\mu a(x))\bar\Psi\gamma^\mu\Psi = A_\mu\bar\Psi\gamma^\mu\Psi + \partial_\mu a(x)\bar\Psi\gamma^\mu\Psi
+\end{equation}
+比较$\ref{eq:7.12}$式中的第二项\footnote{\textcolor{red}{译注：此处疑引用有误}}。拉格朗日量中这个将$\Psi$、$\bar\Psi$和$A_\mu$耦合在一起的新项，正好能干掉那个\sout{自不量力}阻挡\spint 自由场拥有局域\uo 不变性的家伙。换言之：{\bf 通过添加这个新项使得拉格朗日量局域\uo 不变。}
 
+再来仔细研究一下这件事。首先习惯上都会在局域\uo 变换的指数上添一个常数因子$g$：$\ue^{\ri ga(x)}$。这样额外项变成
+\begin{equation}
+-(\partial_\mu a(x))\bar\Psi\gamma^\mu\Psi \rightarrow -g(\partial_\mu a(x))\bar\Psi\gamma^\mu\Psi \text{。}
+\end{equation}
+正如我们下面将看到的，这个额外的因子$g$代表一个任意的耦合常数%
+\mpar{耦合常数总能告诉我们相互作用的强度是多少。这里讨论的是电磁相互作用，$g$代表着它的强度。}%
+$g$。将这个新项
+\[
+g A_\mu\bar\Psi\gamma^\mu\Psi
+\]
+加到\spint 自由场的拉格朗日量上，其中$\gamma_^\mu$用来保证这一项的 Lorentz 不变性，否则带有一个自由指标$\mu$的$A_\mu$和拉格朗日量密度这个标量无法匹配，另外也插入了{\bf 耦合常数(coupling constant)}%
+\mpar{我们能看到这里$g$决定了$\Psi$、$\bar\Psi$和$A_\mu$耦合在一起的强度。}%
+$g$。这样拉格朗日量
+\[
+{\mathscr L}_\text{Dirac+额外项} = -m\bar\Psi\Psi +\ri\bar\Psi\gamma_\mu\partial^\mu\Psi + g A_\mu\bar\Psi\gamma^\mu\Psi \text{。}
+\]
+依据$\Psi$、$\bar\Psi$和$A_\mu$局域变换的规则来变换这个拉格朗日量，得到%
+\mpar{$\Psi$、$\bar\Psi$和$A_\mu$的联合变换被称作\uo 规范变换。}
+\begin{eqnarray}
+{\mathscr L}_\text{Dirac+额外项}' &=& -m\bar\Psi'\Psi' +\ri\bar\Psi'\gamma_\mu\partial^\mu\Psi' + g A_\mu'\bar\Psi'\gamma^\mu\Psi' \nonumber\\
+&\underbrace{=}_{\mathclap{\text{见\ref{eq:7.5}式}}}&  -m\bar\Psi\Psi +\ri\bar\Psi\gamma_\mu\partial^\mu\Psi - g (\partial_\mu a(x))\bar\Psi\gamma^\mu\Psi + g A_\mu'\bar\Psi'\gamma^\mu\Psi' \nonumber \\
+&=& -m\bar\Psi\Psi +\ri\bar\Psi\gamma_\mu\partial^\mu\Psi - g (\partial_\mu a(x))\bar\Psi\gamma^\mu\Psi + g (A_\mu+\partial_\mu a(x))(\ue^{-\ri ga(x)}\bar\Psi)\gamma^\mu(\ue^{\ri ga(x)}\Psi) \nonumber \\
+&=& -m\bar\Psi\Psi +\ri\bar\Psi\gamma_\mu\partial^\mu\Psi - \cancel{g (\partial_\mu a(x))\bar\Psi\gamma^\mu\Psi} + g A_\mu\bar\Psi\gamma^\mu\Psi + \cancel{g (\partial_\mu a(x))\bar\Psi\gamma^\mu\Psi}\nonumber \\
+&=& -m\bar\Psi\Psi +\ri\bar\Psi\gamma_\mu\partial^\mu\Psi + g A_\mu\bar\Psi\gamma^\mu\Psi = {\mathscr L}_\text{Dirac+额外项} \text{。}
+\end{eqnarray}
+
+由此，在加上一个额外项后，我们得到了，正如所期待的，一个局域\uo 不变的拉格朗日量。为了描述一个包含了包含有质量\spint 场和无质量自旋为一的场的系统，我们必须将无质量自旋为一的自由场的拉格朗日量也加到拉格朗日量中来。这样就得到了完整的拉格朗日量
+\begin{equation}
+{\mathscr L}_\text{Dirac+额外项+Maxwell} = -m\bar\Psi\Psi +\ri\bar\Psi\gamma_\mu\partial^\mu\Psi + g A_\mu\bar\Psi\gamma^\mu\Psi + \partial^\mu A^\nu\partial_\mu A_\nu - \partial^\mu A^\nu \partial_\nu A_\mu \text{。}
+\end{equation}
+为了方便起见，引入记号
+\begin{equation}
+D_\mu \equiv \ri \partial_\mu + gA_\mu\text{，}
+\end{equation}
+称作{\bf 协变导数(covariant derivative)}\footnote{译注：常见的记号似乎与其差了一个虚数单位}。这样拉格朗日量写作
+\begin{eqnarray}
+{\mathscr L}_\text{Dirac+额外项+Maxwell} &=& -m\bar\Psi\Psi +\bar\Psi\gamma_\mu(\ri\partial^\mu+ g A^\mu)\Psi  + \partial^\mu A^\nu\partial_\mu A_\nu - \partial^\mu A^\nu \partial_\nu A_\mu \nonumber\\
+&=& -m\bar\Psi\Psi +\bar\Psi\gamma_\mu D^\mu\Psi  + \partial^\mu A^\nu\partial_\mu A_\nu - \partial^\mu A^\nu \partial_\nu A_\mu
+\end{eqnarray}
+{\bf 这即为电磁场的量子场论，常被称为量子电动力学，的正确拉格朗日量}。我们通过观察\spint 自由场和自旋为一的自由场的内禀对称性，简单的得到了它。
+
+我们将要回答的下一个问题是：这个拉格朗日量会导致什么样的运动方程？
 \subsection{非齐次麦克斯韦方程和最小耦合}\label{sec7.1.4}
 
 \subsection{再一次电荷共轭变换}\label{sec7.1.5}
