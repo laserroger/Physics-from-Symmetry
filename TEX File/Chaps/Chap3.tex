@@ -2112,6 +2112,235 @@ to spinors. ArXiv e-prints, December 2013}
 
 \subsection[$(0, \frac{1}{2})$表示]{The $(0, \frac{1}{2})$ Representation \quad $(0, \frac{1}{2})$表示}
 \label{sec3.7.6}
+$(0, \frac{1}{2})$表示的构造过程与之前的$(\frac{1}{2}, 0)$相似。这里$N_i^+$采用$1$维表示，即$N_i^+ = 0$，$N_i^-$采用$2$维表示，即$N_i^- = \frac{1}{2} \sigma_i$。容易认为$(0, \frac{1}{2})$表示和$(\frac{1}{2}, 0)$表示差不多，但并非如此！根据$\ref{equ3.161}$式可得：
+\begin{align}
+\label{equ3.180}
+	N_i^+ = \frac{1}{2} (J_i + iK_i) = 0 \\
+\label{equ3.181}
+	\rightarrow J_i = -iK_i
+\end{align}
+注意上面的负号。$N_i^-$采用$\mathcal{SU}(2)$的二维表示（在\ref{sec3.6.4}节推导）：
+\begin{equation}
+\label{equ3.182}
+	N_i^- = \frac{1}{2} \sigma_i = \frac{1}{2} (J_i - iK_i) \underbrace{=}_{\ref{equ3.181} \text{式}} \frac{1}{2} (-iK_i - iK_i) = -iK_i
+\end{equation}
+可以得到$(0, \frac{1}{2})$表示的生成元为：
+\begin{equation}
+\label{equ3.183}
+	-iK_i = \frac{1}{2} \sigma_i \rightarrow K_i = -\frac{1}{2i} \sigma_i = \frac{i}{2} \sigma_i
+\end{equation}
+再结合\ref{equ3.181}式：
+\begin{equation}
+\label{equ3.184}
+	J_i = -iK_i = \frac{1}{2} \sigma_i
+\end{equation}
+于是，在这一表示之下，Lorentz旋转变换为：
+\begin{equation}
+\label{equ3.185}
+	R_\theta = \mathrm{e}^{i \vec{\theta} \vec{J}} = \mathrm{e}^{i \vec{\theta} \frac{\vec{\sigma}}{2}}
+\end{equation}
+Lorentz推动变换为\footnote{原文$B_\theta$在译文中修改为$B_{\vec{\phi}}$ --- 译者}：
+\begin{equation}
+\label{equ3.186}
+	B_{\vec{\phi}} = \mathrm{e}^{i \vec{\phi} \vec{K}} = \mathrm{e}^{-\vec{\phi} \frac{\vec{\sigma}}{2}}
+\end{equation}
+可见$(0, \frac{1}{2})$表示的旋转变换与$(\frac{1}{2}, 0)$一样，但推动变换的$\mathrm{e}$指数幂差一个负号。我们推测这两个表示作用的物体{\bf 相似但不完全相同}。 Lorentz群的$(0, \frac{1}{2})$表示作用的物体称为{\bf 右手旋量}：
+\begin{equation}
+\label{equ3.187}
+	\chi_R = 
+		\begin{pmatrix}
+			(\chi_R)^1 \\
+			(\chi_R)^2
+		\end{pmatrix}
+\end{equation}
+左手/右手旋量统称为{Weyl 旋量}。
+
+
+\subsection[Van der Waerden 符号]{Van der Waerden Notation \quad Van der Waerden 符号}
+\label{sec3.7.7}
+本节引入便于处理旋量的标记法。上面导出了按不同方式变换的两种旋量，如何将它们区分？它们确实不同，但也并非毫无关系。实际上左手旋量（按$(\frac{1}{2}, 0)$表示变换）与右手旋量（按$(0, \frac{1}{2})$表示变换）之间存在联系。引入带点与不带点的指标来表示不同旋量 --- 这一记法以发明者命名，称为Van der Waerden符号。这能清楚地表示何种物体按何种方式变换。在完整的体系建立起来之后Van der Waerden符号的优点会更清楚。
+
+左手旋量$\chi_L$用不带点的下指标表示:
+\begin{equation}
+\label{equ3.188}
+	\chi_L = \chi_a
+\end{equation}
+右手旋量用带点的上指标：
+\begin{equation}
+\label{equ3.189}
+	\chi_R = \chi^{\dot{a}}
+\end{equation}
+
+下面引入“旋量度规”的概念。旋量度规使得右手旋量可以变换为左手旋量，反之亦然。% but not alone as we will see.
+旋量度规定义为\mpar{注意下式就是二维Levi-Civita符号，其定义见附录B.5.5.}：
+\begin{equation}
+\label{equ3.190}
+	\epsilon^{ab} =
+		\begin{pmatrix}
+			0 & 1 \\
+			-1 & 0
+		\end{pmatrix}
+\end{equation}
+不难验证它满足上述性质。再定义\mpar{这里对$\chi_L^C$做一简介。上标$C$表示电荷共轭性，\ref{sec3.7.10}节具体说明它的含义。我们看到$\epsilon$的作用结果是把物体的‘标签’翻转 --- 将左手旋量变换为右手旋量。之后会发现$\epsilon$可以翻转所有‘标签’，比如，电荷的正负。}：
+\begin{equation}
+\label{equ3.191}
+	\chi_L^C \equiv \epsilon \chi_L^*
+\end{equation}
+其中$*$表示取复共轭。下面考虑变换得到的$\chi_L^C$怎样在Lorentz变换下变换，之后会发现它正是一个右手旋量。右手旋量的主要特征是它在Lorentz变换下怎样变换，因此认为$\chi_L^C${\bf 正是}一个右手旋量。下面让推动变换作用到$\chi_L^C$，利用：
+\begin{align}
+\label{equ3.192}
+	(-\epsilon)(\epsilon) = \mathbf{1} \\
+\label{equ3.193}
+	(\epsilon) \sigma_i^* (-\epsilon) = -\sigma_i
+\end{align}
+上式不难用Pauli矩阵$\sigma_i$的显式形式直接验证。变换过程为\mpar{下面$\vec{\phi} \vec{\sigma} \equiv \sum_i \sigma_i \phi_i \underbrace{=}_{\text{求和约定}} \sigma_i \phi_i$，$\vec{\sigma}$并非表示“向量”，而只是为了方便而采用的缩写。}：
+\begin{eqnarray}
+	\chi_L^C \rightarrow (\chi')_L^C &=& \epsilon (\chi')_L^* \nonumber \\
+	&=& \epsilon (\mathrm{e}^{\frac{\vec{\phi}}{2} \vec{\sigma} } \chi_L)^* \nonumber \nonumber \\
+	&=& \epsilon ( \mathrm{e}^{\frac{\vec{\phi}}{2} \vec{\sigma}} \underbrace{(-\epsilon) (\epsilon)}_{=1, \text{见}\ref{equ3.192}\text{式}} \chi_L )^* \nonumber \nonumber \\
+	&=& \underbrace{\epsilon ( \mathrm{e}^{\frac{\vec{\phi}}{2} \vec{\sigma}^*} (-\epsilon) }_{\ref{equ3.193} \text{式} \rightarrow =\mathrm{e}^{ -\frac{\vec{\phi}}{2} \vec{\sigma} }} (\epsilon) \chi_L^* ) \nonumber \\
+	&=& \mathrm{e}^{ -\frac{\vec{\phi}}{2} \vec{\sigma} } \underbrace{\epsilon \chi_L^*}_{= \chi_L^C} \nonumber \\
+	&=& \mathrm{e}^{-\frac{\vec{\phi}}{2} \vec{\sigma}} \chi_L^C
+\end{eqnarray}
+由此可见$\chi_L^C$按右手旋量的形式变换\mpar{右手旋量在推动变换下的形式见\ref{equ3.186}式：$B_{\vec{\phi}} = \mathrm{e}^{i \vec{\phi}\vec{K}} = \mathrm{e}^{-\vec{\phi} \frac{\vec{\sigma}}{2}}$。注意它与左手旋量的变换（\ref{equ3.176}式）的不同：$B_{\vec{\phi}} = \mathrm{e}^{i \vec{\phi} \vec{K}} = \mathrm{e}^{\vec{\phi} \frac{\vec{\sigma}}{2}}$ }。上式第$5$行利用了$\mathrm{e}^{\frac{\vec{\phi}}{2} \vec{\sigma} }$的Taylor级数展开，并对每一项利用了\ref{equ3.193}式。不难验证$\epsilon (\chi_L^*)$在旋转变换下仍与原来的变换方式相同，理应如此，因此$\chi_L$与$\chi_R$在旋转变换形式相同：
+\begin{equation}
+\label{equ3.195}
+	\chi_L^C \rightarrow (\chi')_L^C = \epsilon (\chi')_L^* = \epsilon ( \mathrm{e}^{ \frac{i\vec{\theta}}{2} \vec{\sigma} } \chi)_L^* = \mathrm{e}^{ \frac{i\vec{\theta}}{2} \vec{\sigma} } \epsilon (\chi_L)^*
+\end{equation}
+还可以验证以下结果：$\epsilon$在任意Lorentz变换下不变；将右手旋量变换为左手旋量需要用$(-\epsilon)$。
+
+仿照狭义相对论中的张量记号，定义“旋量度规”可以升降旋量的指标：
+\begin{equation}
+\label{equ3.196}
+	\epsilon \chi_L \underbrace{=}_{\text{用指标记号表示}} \epsilon^{ac} \chi_c = \chi^a
+\end{equation}
+其中重复的上下标表示求和（即Einstein求和约定）。此外，从上面可知如果想把$\chi_R$变换为$\chi_L$还需要取复共轭：
+\begin{equation}
+\label{equ3.197}
+	\chi_R = \epsilon \chi_L^*
+\end{equation}
+用Van der Waerden符号，$\epsilon + \text{取复共轭}$得到的右手旋量用带点的上指标表示：
+\begin{equation}
+\label{equ3.198}
+	\chi_R = \epsilon \chi_L^* = \chi^{\dot{a}}
+\end{equation}
+再与指标记号相比较，可以发现$\chi_L$的复共轭可以用带点的下指标表示：
+\begin{equation}
+\label{equ3.199}
+	\chi_L^* = \chi_a^* = \chi_{\dot{a}}
+\end{equation}
+同理，右手旋量$\chi_R$的复共轭可用不带点的上指标表示：
+\begin{equation}
+\label{equ3.200}
+	\chi_R^* = (\chi^{\dot{a}})^* = \chi^a
+\end{equation}
+
+下面考虑$\chi_{\dot{a}}$与$\chi^a$在Lorentz变换下如何改变，这非常重要，$\chi_{\dot{a}}$与$\chi^a$可以构造在Lorentz变换下不变的某种旋量的组合形式\mpar{这些旋量构造出的不变量极为重要，因为我们要导出在所有惯性系下都成立的物理定律。这些不变量的重要性之后会不断体现。}。
+
+从左手旋量在Lorentz变换下的行为出发：
+\begin{equation}
+\label{equ3.201}
+	\chi_L = \chi_a \stackrel{\text{Lorentz 变换}}{\longrightarrow} \chi_a' = \Big( \mathrm{e}^{ i\vec{\theta} \frac{\vec{\sigma}}{2} + \vec{\phi} \frac{\vec{\sigma}}{2}  } \Big)^b_a \chi_b
+\end{equation}
+考虑旋量$\chi_{\dot{a}}$的变换：
+\begin{align}
+	\chi_L^* = \chi_a^* = \chi_{\dot{a}} \stackrel{\text{Lorentz 变换}}{\longrightarrow} \chi_{\dot{a}}' = (\chi_a')^* &= \bigg( \Big( \mathrm{e}^{ i\vec{\theta} \frac{\vec{\sigma}}{2} + \vec{\phi} \frac{\vec{\sigma}}{2}  } \big)^b_a \Bigg)^* \chi_b^* \nonumber \\
+\label{equ3.202}
+	&= \bigg( \mathrm{e}^{-i \vec{\theta} \frac{\vec{\sigma}^*}{2} + \vec{\phi} \frac{\vec{\sigma}^*}{2} } \bigg)^{\dot{b}}_{\dot{a}} \chi_{\dot{b}}
+\end{align}
+类似地，利用右手旋量的变换形式：
+\begin{equation}
+\label{equ3.203}
+	\chi_R \stackrel{\text{Lorentz 变换}}{\longrightarrow} \chi_R' = \chi'^{\dot{a}} = \Big( \mathrm{e}^{ i\vec{\theta} \frac{\vec{\sigma}}{2} } \Big)^{\dot{a}}_{\dot{b}} \chi^{\dot{b}}
+\end{equation}
+可以导出旋量$\chi^a$的变换：
+\begin{align}
+	\chi_R^* = (\chi^{\dot{a}})^* = \chi^a \stackrel{\text{Lorentz 变换}}{\longrightarrow} \chi'^a = (\chi'^{\dot{a}})^* &= \bigg( \Big( \mathrm{e}^{ i\vec{\theta} \frac{\vec{\sigma}}{2} - \vec{\phi} \frac{\vec{\sigma}}{2} } \Big)^{\dot{a}}_{\dot{b}} \bigg)^* (\chi^{\dot{b}})^* \nonumber \\
+\label{equ3.204}
+	&= \bigg( \mathrm{e}^{-i \vec{\theta} \frac{\vec{\sigma}}{2} - \vec{\phi} \frac{\sigma}{2} } \bigg)^{a}_{b} \chi^b
+\end{align}
+为了组合出神秘的Lorentz不变量，还需要一件事：考虑两个向量标量积的定义：$\vec{a} \cdot \vec{b} = \vec{a}^T \vec{b}$。仿照这个我们在旋量的标量积定义里也引入转置操作。注意上面新旋量变换式的$\mathrm{e}$指数中出\, 现了Pauli矩阵的复共轭$\sigma_i^*$（例如$\mathrm{e}^{ -i \vec{\theta} \frac{\vec{\sigma}^*}{2} }$），再加上转置操作就变成取厄米共轭的形式：$\sigma_i^\dag = (\sigma_i^*)^T$，其中前面已经解释过符号$\dag$（称为dagger）的含义。所有Pauli矩阵的厄米共轭仍是Pauli矩阵自身，即：
+\begin{equation}
+\label{equ3.205}
+	\sigma_i^\dag = (\sigma_i^*)^T = \sigma_i
+\end{equation}
+这从Pauli矩阵的形式$\ref{equ3.81}$式容易导出。
+
+比较\ref{equ3.201}与\ref{equ3.204}式，再结合\ref{equ3.205}式，可以看出旋量$\chi_a$的转置与旋量$\chi^{a}$分别对应的变换形式正好抵消，这意味着$(\chi^a)^T \chi_a$是Lorentz变换下的不变量（即在Lorentz变换下不变），因为：
+\begin{align}
+	(\chi^a)^T \chi_a & \stackrel{\text{Lorentz 变换}}{\longrightarrow} \nonumber \\
+	(\chi'^a)^T \chi'_a &= \bigg( \Big( \mathrm{e}^{ -i\vec{\theta} \frac{\vec{\sigma}^*}{2} - \vec{\phi} \frac{\vec{\sigma}^*}{2} } \Big)^a_b \chi^b  \bigg)^T \Big( \mathrm{e}^{i\vec{\theta} \frac{\vec{\sigma}}{2} + \vec{\phi}\frac{\vec{\sigma}}{2} }  \Big)^c_a \chi_c \nonumber \\
+	&= (\chi^b)^T \Bigg( \exp\bigg( -i\vec{\theta} \frac{(\vec{\sigma}^*)^T}{2} - \vec{\phi} \frac{(\vec{\sigma}^*)^T}{2}  \bigg) \Bigg)^a_b \big(\mathrm{e}^{ i \vec{\theta} \frac{\vec{\sigma}}{2} + \vec{\phi} \frac{\vec{\sigma}}{2} } \big)^c_a \chi_c \nonumber \\
+	&\underbrace{=}_{\ref{equ3.205} \text{式}} (\chi^b)^T  \underbrace{ \Big( \mathrm{e}^{-i \vec{\theta} \frac{\vec{\sigma}}{2} - \vec{\phi} \frac{\vec{\sigma}}{2} } \Big)^a_b \Big( \mathrm{e}^{ i\vec{\theta} \frac{\vec{\sigma}}{2} + \vec{\phi} \frac{\vec{\sigma}}{2} } \Big)_a^c }_{= \delta_b^c} \chi_c \nonumber \\
+\label{equ3.206}
+	&= (\chi^c)^T \chi_c
+\end{align}
+类似地，将$\chi_{\dot{a}}$与$\chi^{\dot{a}}$适当组合，利用\ref{equ3.202}、\ref{equ3.203}式可以得出另一个不变量$(\chi_{\dot{a}})^T \chi^{\dot{a}}$。但是形如$(\chi^{\dot{a}})^T \hat{=} \chi_R^T \chi_L$的项不是Lorentz变换下的不变量，因为：
+\begin{equation}
+\label{equ3.207}
+	\chi_R^T \chi_L = (\chi^{\dot{a}})^T \chi_a \rightarrow (\chi'^{\dot{a}})^T \chi'_a = \chi^{\dot{b}} \underbrace{ \Big( \mathrm{e}^{i\vec{\theta} \frac{\vec{\sigma}^T}{2} - \vec{\phi} \frac{\vec{\sigma}^T}{2}}  \Big)^{\dot{a}}_{\dot{b}} \big( \mathrm{e}^{ i \vec{\theta} \frac{\vec{\sigma}}{2} + \vec{\phi} \frac{\vec{\sigma}}{2}} \big)^c_a}_{\neq \delta_b^c} \chi_c
+\end{equation}
+可见这样的左手旋量与右手旋量结合的项{\bf 并非}Lorentz不变量。综上，Lorentz不变量必须是一对同类上下标组合成的量\mpar{即上下标都带点$\ ^{\dot{a}}_{\dot{a}}$或都不带点$\ ^a_a$}。或者，不变量必须是右手旋量的厄米共轭左乘左手旋量：$\chi_R^\dag \chi_L = (\chi_R^*)^T \chi_L \hat{=} (\chi^a)^T \chi_a$，或者左手旋量的厄米共轭左乘右手旋量：$\chi_L^\dag \chi_R = (\chi_L^*)^T \chi_R \hat{=} (\chi_{\dot{a}})^T \chi^{\dot{a}}$。Lorentz不变量是之后推导的自然界的普适定律的关键。
+
+在上述基础上，$\epsilon^{ab}$的名字“旋量度规”就变得合情合理了，因为旋量间的内积（在Lorentz变换下不变，见\ref{equ3.206}式）可以写为：
+\begin{equation}
+\label{equ3.208}
+	\chi_a^T \chi^a \underbrace{=}_{\ref{equ3.196} \text{式}} \chi_a^T \epsilon^{ab} \chi_b
+\end{equation}
+与第二章Minkowski空间的内积（它是Lorentz变换的不变量）的定义式\ref{equ2.31}相对比：
+\begin{equation}
+\label{equ3.209}
+	x_\mu y^\mu = x_\mu \eta^{\mu \nu} y_\nu
+\end{equation}
+其中$\eta^{\mu \nu}$是Minkowski度规。 可见旋量度规与四维向量的Minkowski度规地位相同\mpar{为啥上式 --- 四维向量的内积的定义式当中没有转置操作？其实上式既可以看做向量方程也可视为分量方程，符号$x_\mu$既代表向量本身又代表向量的分量，不幸的是这有时会造成混乱，比如现在。将上式看做分量方程，则无需转置，这对旋量内积也一样。然而转置运算不可或缺，为了避免遗忘，我们在旋量内积的定义式中加上上标$\ ^T$表示强调。对于常用的三维向量有更好的符号避免上述混乱：向量自身用$\vec{a}$，向量分量用$a_i$表示。}。
+
+在定义了上述符号之后，不难写出旋量度规的下标形式：
+\begin{equation}
+\label{equ3.210}
+	\epsilon_{ab} = 
+		\begin{pmatrix}
+			0 & -1 \\
+			1 & 0
+		\end{pmatrix}
+\end{equation}
+因为$(-\epsilon)\big(  \mathrm{e}^{i \vec{\theta} \frac{\vec{\sigma}}{2} - \vec{\phi} \frac{\vec{\sigma}}{2}} \big)^b_a \chi_R = \chi_L$。\mpar{读者可自行检验，但这对之后的内容关系不大。} 一般的Lorentz变换（转动+推动）通常用$\Lambda$表示，当$\Lambda$的指标带点，说明它作用于右手旋量，并由此推断相应的具体形式：
+\begin{equation}
+\label{equ3.211}
+\chi_R \rightarrow \chi'_R = \chi'^{\dot{a}} = \Lambda^{\dot{a}}_{\dot{b}} \chi^{\dot{b}} = \big( \mathrm{e}^{i \vec{\theta} \frac{\vec{\sigma}}{2} - \vec{\phi} \frac{\vec{\sigma}}{2}} \big)^{\dot{a}}_{\dot{b}} \chi^{\dot{b}}
+\end{equation}
+同理，左手旋量情形：
+\begin{equation}
+\label{equ3.212}
+	\chi_L \rightarrow \chi'_L = \chi'_a = \Lambda^b_a \chi_b = \big(  \mathrm{e}^{i \vec{\theta} \frac{\vec{\sigma}}{2} + \vec{\phi} \frac{\vec{\sigma}}{2}} \big)^b_a \chi_b
+\end{equation}
+这样$(\frac{1}{2}, 0)$与$(0, \frac{1}{2})$表示下的Lorentz变换记作：
+\begin{align}
+\label{equ3.213}
+	\Lambda_{(\frac{1}{2}, 0)} = \big(  \mathrm{e}^{i \vec{\theta} \frac{\vec{\sigma}}{2} + \vec{\phi} \frac{\vec{\sigma}}{2}} \big)^b_a \hat{=} \Lambda^b_a \\
+\label{equ3.214}
+	\Lambda_{(0, \frac{1}{2})} = \big(  \mathrm{e}^{i \vec{\theta} \frac{\vec{\sigma}}{2} - \vec{\phi} \frac{\vec{\sigma}}{2}} \big)^b_a \hat{=} \Lambda^{\dot{a}}_{\dot{b}}
+\end{align}
+Van der Waerden符号非常便捷，它有效地体现了$\chi_L$与$\chi_R$之间的联系。左右旋量之间可以互相变换，因此必然需要一套能将它们联系起来的符号体系。
+
+之后考虑下一个不可约表示，有一位故人正在那里久候。
+
+\subsection[$(\frac{1}{2}, \frac{1}{2})$表示]{ The $( \frac{1}{2}, \frac{1}{2})$ Representation \quad $(\frac{1}{2}, \frac{1}{2})$表示}
+\label{sec3.7.8}
+在$(\frac{1}{2},  \frac{1}{2})$表示之下，两份$\mathcal{SU}(2)$Lie代数$N_i^+, N_i^-$都采用$2$维表示。首先考虑此表示下的Lorentz变换作用的对象是什么。两份Lie代数之间无相互作用，因为$N_i^+, N_i^-$是对易的，即$[N_i^+, N_i^-] = 0$。因此作用的对象（记作$v$）在两份Lie代数下各自独立变换。$v$有两个指标$v_a^{\dot{b}}$，每个指标在独立的$\mathcal{SU}(2)$Lie代数下变换。$v_a^{\dot{b}}$即采用了上节介绍的Van der Waerden符号。
+
+$v_a^{\dot{b}}$的每个指标有两个取值（$\frac{1}{2}$和$-\frac{1}{2}$），\footnote{似乎指标应该为$1, 2$? --- 译者} 因为每个表示都是$2$维的，$v$共有$4$个分量。因此$v$可表示为$2 \times 2$矩阵，但$v$也可以表示为四维向量，稍后会看到\mpar{在之前的二维旋转中遇到过类似情况，二维旋转操作可以用单位复数作用到向量对应的复数表示，在定义了复数与实数矩阵间的映射后，旋转也可以用实矩阵作用于列向量来表示。}。
+
+首先考虑复数矩阵，一个一般的$2 \times 2$复数矩阵有$4$个复数元素，因此有$8$个自由参数。从上述可见只需要$4$个自由参数。任意复矩阵$M$可表示为厄米矩阵$H$$(H^\dag = H)$与反厄米矩阵$A$ ($A^\dag = -A$)之和：$M = H + A$。$2 \times 2$厄米矩阵和反厄米矩阵都有$4$个自由参数。此外，下面会证明厄米矩阵经$(\frac{1}{2}, \frac{1}{2})$表示下的Lorentz变换后仍为厄米矩阵，反厄米矩阵也一样。这意味着厄米矩阵与反厄米矩阵分别组成的集合都是不变子空间（见\ref{sec3.5}节），亦即，一般的$2 \times 2$复矩阵上的表示是可约的。综上所述，下面研究$2 \times 2$ 厄米矩阵（组成的向量空间）上的不可约表示。
+
+$2 \times 2$ 厄米矩阵的一组基\mpar{它的含义是任意$2 \times 2$ 厄米矩阵可以唯一地表示为基的线性组合： $a_0 \mathbf{1} + a_i \sigma_i$。}是Pauli矩阵$\sigma_i, i = 1, 2, 3$加上单位矩阵。
+
+首先考虑$v_{a\dot{b}}$，而非$v_a^{\dot{b}}$，这样可以利用\ref{equ3.81}式的Pauli矩阵的显式形式。注意$v_a^{\dot{b}}, v_{a \dot{b}}$之间可用旋量度规$\epsilon^{\dot{bc}}$相互变换，因此容易从$v_a^{\dot{b}}$回到$v_{a \dot{b}}$。
+
+记$\sigma^0 = I_{2 \times 2} = \begin{pmatrix} 1 & 0 \\ 0 & 1 \end{pmatrix}$，
+\begin{equation}
+\label{equ3.215}
+	v_{a\dot{b}} = v_\nu \sigma^\nu_{a\dot{b}} = v_0 \begin{pmatrix} 1 & 0 \\ 0 & 1 \end{pmatrix} + v_1 \begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix} + v_2 \begin{pmatrix} 0 & -i \\ i & 0 \end{pmatrix} + v_3 \begin{pmatrix} 1 & 0 \\ 0 & -1 \end{pmatrix}
+\end{equation}
 
 
 
