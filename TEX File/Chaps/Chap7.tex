@@ -137,7 +137,7 @@ A_\mu \rightarrow A_\mu' = A_\mu+a_\mu
 \end{equation}
 其中$a_\mu$为任意常数，拉格朗日量变为
 \begin{eqnarray}
-{\mathscr L}_\text{Proca}' &=& \partial^\mu A^\nu'\partial_\mu A_\nu' - \partial^\mu A^\nu' \partial_\nu A_\mu' + m^2A_\mu' A^\mu' \nonumber\\
+{\mathscr L}_\text{Proca}' &=& \partial^\mu A'\nu\partial_\mu A_\nu' - \partial^\mu A'\nu \partial_\nu A_\mu' + m^2A_\mu' A^\mu' \nonumber\\
 &=& \partial^\mu (A^\mu+a^\nu)\partial_\mu (A_\nu+a_\nu) - \partial^\mu (A^\nu+a^\nu) \partial_\nu ( A_\mu+a_\mu) + m^2( A_\mu+a_\mu) ( A^\mu+a^\mu) \nonumber\\
 &=& \partial^\mu A^\nu\partial_\mu A_\nu - \partial^\mu A^\nu \partial_\nu A_\mu + m^2( A_\mu+a_\mu) ( A^\mu+a^\mu)
 \end{eqnarray}
@@ -149,7 +149,7 @@ A_\mu \rightarrow A_\mu' = A_\mu+a_\mu(x)
 \end{equation}
 {\bf 无质量}的拉格朗日量变成
 \begin{eqnarray}
-{\mathscr L}_\text{Maxwell}' &=& \partial^\mu A^\nu'\partial_\mu A_\nu' - \partial^\mu A^\nu' \partial_\nu A_\mu' \nonumber\\
+{\mathscr L}_\text{Maxwell}' &=& \partial^\mu A'\nu\partial_\mu A_\nu' - \partial^\mu A'\nu \partial_\nu A_\mu' \nonumber\\
 &=& \partial^\mu (A^\mu+a^\nu(x))\partial_\mu (A_\nu+a_\nu(x)) - \partial^\mu (A^\nu+a^\nu(x)) \partial_\nu ( A_\mu+a_\mu(x))  \nonumber\\
 &=& \partial^\mu A^\nu\partial_\mu A_\nu+\partial^\mu a^\nu(x)\partial_\mu A_\nu+\partial^\mu A^\nu\partial_\mu a_\nu(x) +\partial^\mu a^\nu(x)\partial_\mu a_\nu(x) \nonumber\\
 & &\quad - \partial^\mu A^\nu \partial_\nu A_\mu - \partial^\mu A^\nu \partial_\nu a_\mu(x)-\partial^\mu a^\nu(x) \partial_\nu A_\mu - \partial^\mu a^\nu(x) \partial_\nu a_\mu(x)
@@ -158,7 +158,7 @@ A_\mu \rightarrow A_\mu' = A_\mu+a_\mu(x)
 
 然而，如果我们这样作变换$A_\mu\rightarrow A_\mu'+\partial_\mu a(x)$，我们能弄出一个局域内禀对称性来。这意味着我们加的是一个任意函数的导数，而不是一个任意函数。这会导致\footnote{\textcolor{red}{译注：原文缺少一个$(x)$}}
 \begin{eqnarray}
-{\mathscr L}_\text{Maxwell}' &=& \partial^\mu A^\nu'\partial_\mu A_\nu' - \partial^\mu A^\nu' \partial_\nu A_\mu' \nonumber\\
+{\mathscr L}_\text{Maxwell}' &=& \partial^\mu A'\nu\partial_\mu A_\nu' - \partial^\mu A'\nu \partial_\nu A_\mu' \nonumber\\
 &=& \partial^\mu (A^\mu+\partial^\nu a(x))\partial_\mu (A_\nu+\partial_\nu a(x)) - \partial^\mu (A^\nu+\partial^\nu a(x)) \partial_\nu ( A_\mu+\partial_\mu a(x))  \nonumber\\
 &=& \partial^\mu A^\nu\partial_\mu A_\nu+\partial^\mu \partial^\nu a(x)\partial_\mu A_\nu+\partial^\mu A^\nu\partial_\mu \partial_\nu a(x) +\partial^\mu \partial^\nu a(x)\partial_\mu \partial_\nu a(x) \nonumber\\
 & & - \partial^\mu A^\nu \partial_\nu A_\mu - \partial^\mu A^\nu \partial_\nu \partial_\mu a(x)-\partial^\mu \partial^\nu a(x) \partial_\nu A_\mu - \partial^\mu \partial^\nu a(x) \partial_\nu \partial_\mu a(x) \nonumber \\
@@ -185,7 +185,7 @@ A_\mu \rightarrow A_\mu' = A_\mu +\partial_\mu a(x) \text{，}
 \begin{equation}
 A_\mu\bar\Psi\gamma^\mu\Psi \rightarrow (A_\mu+\partial_\mu a(x))\bar\Psi\gamma^\mu\Psi = A_\mu\bar\Psi\gamma^\mu\Psi + \partial_\mu a(x)\bar\Psi\gamma^\mu\Psi
 \end{equation}
-比较$\ref{eq:7.12}$式中的第二项\footnote{\textcolor{red}{译注：此处疑引用有误}}。拉格朗日量中这个将$\Psi$、$\bar\Psi$和$A_\mu$耦合在一起的新项，正好能干掉那个\sout{自不量力}阻挡\spint 自由场拥有局域\uo 不变性的家伙。换言之：{\bf 通过添加这个新项使得拉格朗日量局域\uo 不变。}
+比较$\ref{eq:7.12}$式中的第二项\footnote{\textcolor{red}{译注：此处疑引用有误}}。拉格朗日量中这个将$\Psi$、$\bar\Psi$和$A_\mu$耦合在一起的新项，正好能干掉那个\sout{不自量力}阻挡\spint 自由场拥有局域\uo 不变性的家伙。换言之：{\bf 通过添加这个新项使得拉格朗日量局域\uo 不变。}
 
 再来仔细研究一下这件事。首先习惯上都会在局域\uo 变换的指数上添一个常数因子$g$：$\ue^{\ri ga(x)}$。这样额外项变成
 \begin{equation}
@@ -248,26 +248,176 @@ D_\mu \equiv \ri \partial_\mu + gA_\mu\text{，}
 \begin{eqnarray}
 \bar\Psi(\ri\gamma_\mu\partial^\mu + m)+gA_\mu\bar\Psi\gamma^\mu &=& 0 \\
 (\ri\gamma_\mu\partial^\mu - m)\Psi-gA_\mu\gamma^\mu\Psi &=& 0 \label{eq:7.21} \\
-\partial_\sigma(\partial^\sigma A^\rho - \partial^\rho A^\sigma) + g\bar\Psi\gamma^\mu\Psi &=& 0 \label{eq:7.22}
+\partial_\sigma(\partial^\sigma A^\rho - \partial^\rho A^\sigma) + g\bar\Psi\gamma^\rho\Psi &=& 0 \label{eq:7.22}
 \end{eqnarray}
-头两个方程描述了\spint 粒子/场在外加电磁场下的行为。在许多书里这些方程是利用一个叫做{\bf 最小耦合(minimal coupling)}的办法得到的，即当外场存在时，导数$\partial_\mu$应当换成协变导数
+头两个方程描述了\spint 粒子/场在外加电磁场下的行为。在许多书里这些方程是利用一个叫做{\bf 最小耦合(minimal coupling)}的办法得到的，即当外场存在时，导数$\partial_\mu$应当换成协变导数%
+\footnote{\textcolor{red}{译注：此处虚单位$\ri$的位置似有不妥，同后文}}
 \begin{equation}
-\partial_\mu \rigtharrow D_\mu = \ri \partial_\mu + A_\mu
+\partial_\mu \rightarrow D_\mu = \ri \partial_\mu + A_\mu
 \end{equation}
 来导出正确的方程。“最小”这个词的意思是，这里只用了一个规范场$A_\mu$的四个分量\footnote{译注：否则，我们可以使用张量场$\bar\Psi\sigma_{\mu\nu}F^{\mu\nu}\Psi$}。
 
 现在我们有了用来描述 Dirac 旋量在外加电磁场中的行为的方程(\ref{eq:7.21}式)，所以说可以来兑现在\ref{sec3.7.10}节中许下的承诺了。在那儿我们宣称电荷共轭变换，带有一个暗示性的名字，改变其描述对象的电荷。换言之，如果$\Psi$描述带电荷$+e$的某些东西，而电荷共轭旋量$\Psi^C$描述带电荷$-e$的某些东西。电荷决定了\spint 粒子/场和外加自旋为一的场的耦合强度，我们将考虑$\Psi^C$的运动方程是什么。之后我们将谈谈第三个方程，\ref{eq:7.22}式。
 \subsection{再一次电荷共轭变换}\label{sec7.1.5}
+为了得到对应的方程，我们需要找到 Dirac 旋量的电荷共轭变换算符确切的形式。我们在\ref{sec3.7.10}节中得到了变换（\ref{eq3.236}式）
+\begin{equation}
+\Psi = \begin{pmatrix}
+\chi_L \\ \tilde\xi_R
+\end{pmatrix} \rightarrow \Psi^C = \begin{pmatrix}
+\tilde\xi_L \\ \chi_R
+\end{pmatrix}\text{。}
+\end{equation}
+这个变换可以简单地用一个$\gamma_\mu$矩阵来描述。利用\ref{eq:6.13}式中$\gamma_2$的定义，我们有
+\begin{equation}
+\Psi^C = \ri\gamma_2 \Psi^* = \ri \begin{pmatrix}
+0 & \sigma_2 \\
+-\sigma_2 & 0\\
+\end{pmatrix}\begin{pmatrix}
+\chi_L^* \\ \tilde\xi_R^*
+\end{pmatrix}\text{，}\label{eq:7.25}
+\end{equation}
+利用$\ri\sigma_2=\epsilon$正好就是旋量度规，改写作
+\begin{equation}
+\begin{pmatrix}
+0 & \epsilon \\
+-\epsilon & 0\\
+\end{pmatrix}\begin{pmatrix}
+\chi_L^* \\ \tilde\xi_R^*
+\end{pmatrix}= \begin{pmatrix}
+\epsilon\tilde\xi_R^* \\\epsilon\chi_L^*
+\end{pmatrix} \text{。}
+\end{equation}
+等价于
+\begin{equation}
+= \begin{pmatrix}
+\tilde\xi_L \\ \chi_R
+\end{pmatrix}\text{，}
+\end{equation}
+正如\ref{sec3.7.7}节，特别是\ref{equ3.194}式中展示的一样。故我们从\ref{eq:7.21}式开始：
+\begin{equation}
+(\ri\gamma_\mu\partial^\mu - m)\Psi-gA_\mu\gamma^\mu\Psi = \left(\gamma_\mu(\ri\partial^\mu-gA^\mu) - m\right)\Psi = 0 \text{，}
+\end{equation}
+并取其复共轭，作为得到$\Psi^C$的方程的第一步：
+\begin{equation}
+\rightarrow \left(\gamma_\mu^*(-\ri\partial^\mu-gA^\mu) - m\right)\Psi^* = 0 \text{。}
+\end{equation}
+然后左乘一个$\gamma_2$，并在$\Psi$前插入一个$1=\gamma_2^{-1}\gamma_2$：
+\begin{eqnarray}
+& \rightarrow & \gamma_2\left(\gamma_\mu^*(-\ri\partial^\mu-gA^\mu) - m\right)\underbrace{\gamma_2^{-1}\gamma_2}_{=1}\Psi^* = 0 \text{。}\\
+& \rightarrow & (\underbrace{\gamma_2\gamma_\mu^*\gamma_2^{-1}}_{=-\gamma_\mu}(-\ri\partial^\mu-gA^\mu) - m\gamma_2\gamma_2^{-1})\gamma_2\Psi^* = 0 \text{。}\\
+& \underbrace{\rightarrow}_{\mathclap{\text{方程乘上}\ri}} & \left(-\gamma_\mu(-\ri\partial^\mu-gA^\mu) - m\right)\underbrace{\ri\gamma_2\Psi^*}_{\mathclap{=\Psi^C\text{见\ref{eq:7.25}式}}} = 0 \text{。}\\
+& \rightarrow & \left(-\gamma_\mu(-\ri\partial^\mu-gA^\mu) - m\right)\Psi^C = 0 \text{，}
+\end{eqnarray}
+这和$\Psi$的运动方程只在耦合常数上差了个负号$g\rightarrow -g$。这与其名字，电荷共轭，相符%
+\mpar{注意$\Psi^C\ne \bar\Psi$。$\Psi^C=\ri\gamma_2\Psi$而$\bar\Psi=\Psi^\dag\gamma_0=(\Psi^*)^T\gamma_0$。电荷共轭变换让我们能用反粒子来解释一些东西，稍后便会详细讨论。}。
 
-Before we can derive the corresponding equation, we need to find an
-explicit form of the charge conjugation operator for Dirac spinors. We
-derived in Sec. 3.7.10 the transformation (Eq. 3.236)
+接下来，我们转向上一节中的第三个式子，\ref{eq:7.22}式，称为{\bf 有电流情况下的非齐次麦克斯韦方程(inhomogeneous Maxwell equation in the presence of an electric current)}。为了讲清楚这个名字，我们又需要 Noether 定理了。
 \subsection{内禀${\mathcal U}(1)$对称性的 Noether 定理}\label{sec7.1.6}
+在\ref{sec4.5.5}节中我们得知 Noether 定理将所有内禀对称性和一个守恒量联系了起来。和我们刚才发现的\uo 对称性相联系的守恒量是什么？Neother 定理告诉我们，有如下形式的变换
+\[
+\Psi \rightarrow \Psi' = \Psi+\delta\Psi
+\]
+能导出 Noether 流
+\[
+J^\mu = \frac{\partial \mathscr L}{\partial(\partial_\mu\Psi)}\delta\Psi
+\]
+其满足连续性方程
+\begin{equation}
+\partial_\mu J^\mu =0\text{。}
+\end{equation}
+一个全局%
+\mpar{记住，\spint 自由场的拉格朗日量仅仅是全局\uo 不变的。而上一节最终得到的拉格朗日量是全局\uo 不变的。全局对称性是局域对称性在$a=$常数时的特殊情况。所以说，如果我们有一个局域\uo 不变的拉格朗日量，它自动是全局\uo 不变的。这里考虑的全局\uo 对称性将导出一个对自由场和相互作用场都守恒的量}%
+\uo 变换是
+\[
+\Psi \rightarrow \Psi' = \ue^{\ri ga} = (1+\ri ga+\dots)\Psi
+\]
+如通常所做的那样，我们仅将指数函数展开到第一项，因为\uo 是一个 Lie 群，而任意变换都可以由无穷小的来生成。一个无穷小的变换写作
+\[
+\Psi \rightarrow \Psi' = \Psi+\ri ga\Psi
+\]
+故我们有$\delta\Psi = \ri ga\Psi$。就如\ref{sec4.5.5}节中所做的一样，导出 Noether 流
+\begin{eqnarray}
+J^\mu &=& \frac{\partial \mathscr L}{\partial(\partial_\mu\Psi)}\delta\Psi \nonumber\\
+&=& \frac{\partial( -m\bar\Psi\Psi +\ri\bar\Psi\gamma_\mu\partial^\mu\Psi)}{\partial(\partial_\mu\Psi)}\ri ga\Psi \nonumber\\
+&=& -\bar\Psi\gamma^\mu ga\Psi =-ga \bar\Psi\gamma^\mu\Psi\text{。}
+\end{eqnarray}
+由于连续性方程对于任意$a$都成立，故略去%
+\mpar{保留常数$g$，它的值由实验决定，而不是任意选取的。}%
+任意的常数因子$a$。故，我们定义
+\begin{equation}
+J^\mu = -g\bar\Psi\gamma^\mu\Psi\label{eq:7.36}
+\end{equation}
+这常被称作{\bf 四电流(electric four-current)}。零分量正是电荷密度，其空间积分对时间守恒\mpar{类似的推导参见\ref{eq:4.39}式。}
+\begin{equation}
+Q = \int\rd^3\bm{x}\underbrace{\rho}_{\text{电荷密度}} = \int\rd^3\bm{x}~J^0 = -g\int\rd^3\bm{x} \bar\Psi\gamma^0\Psi
+\end{equation}
+在量子框架下，$\Psi$和概率幅相关，有要求$\int\rd^3\bm{x}~\bar\Psi\gamma^0\Psi=1$，即总概率必须为$100\%=1$。所以说守恒量实际就是耦合强度$g$，在电磁作用意义下正比于电荷。所以，全局\uo 对称性导致了电荷守恒。
 
+注意\ref{eq:7.22}式，我们可以借助\ref{eq:7.36}式将其改写成
+\begin{eqnarray}
+\partial_\sigma(\partial^\sigma A^\rho - \partial^\rho A^\sigma) + \underbrace{g\bar\Psi\gamma^\rho\Psi}_{=-J^\rho} &=& 0 \nonumber\\
+\rightarrow \partial_\sigma(\partial^\sigma A^\rho - \partial^\rho A^\sigma) &=& J^\rho\text{。}
+\end{eqnarray}
+借助\ref{eq:6.22}式中定义的电磁张量，改写作
+\begin{equation}
+\partial_\sigma F^{\rho\sigma} = J^\rho \text{。}
+\end{equation}
+
+这即是在有电流情况下的非齐次 Maxwell 方程组。这些方程组%
+\mpar{“组”，因为对于每一个分量都有一个方程}%
+，和非齐次 Maxwell 方程组（可以由$F^{\rho\sigma}$的定义直接得到%
+\mpar{在\ref{chap11}章中将会见到}%
+）一起，是经典电动力学的基础。
+
+接下来我们将快速的过一遍有质量自旋为一的场和零自旋场的相互作用。
 \subsection{零自旋有质量场的相互作用}\label{sec7.1.7}
+注意我们导出的零自旋场的拉格朗日量
+\[
+{\mathscr L}= \frac{1}{2}(\partial_\mu\Phi\partial^\mu\Phi-m^2\Phi^2)
+\]
+不是\uo 不变的，做变换$\Phi\rightarrow\Phi'=\ue^{\ri a}\Phi$看一下就知道了。
 
+但是，复标量理论
+\begin{equation}
+{\mathscr L}= \frac{1}{2}(\partial_\mu\Phi^*\partial^\mu\Phi-m^2\Phi^*\Phi)
+\end{equation}
+具有\uo 对称性，因为有$\Phi\rightarrow\Phi'=\ue^{\ri a}\Phi$及$\Phi^*\rightarrow(\Phi^*)'=\ue^{-\ri a}\Phi^*$。所以我们有机会像\ref{sec7.1}节中对\spint 理论所做的那样，导出一个相互作用理论。推导完全是类似的%
+\mpar{正确的拉格朗日量可以仅通过做替换$\partial_\mu \rightarrow D_\mu = \ri \partial_\mu + A_\mu$来得到}%
+，结果是
+\begin{equation}
+{\mathscr L}= \frac{1}{2}\left(\left((\partial_\mu-\ri qA)\Phi^*\right)\left((\partial^\mu+\ri qA^\mu)\Phi\right)-m^2\Phi^*\Phi\right)
+\end{equation}
+代入拉格朗日方程
+\[
+\begin{aligned}
+\frac{\partial \mathscr{L}}{\partial \Phi} - \partial_\mu \left( \frac{\partial \mathscr{L}}{\partial (\partial_\mu \Phi)} \right) &=& 0 \\
+\frac{\partial \mathscr{L}}{\partial \Phi^*} - \partial_\mu \left( \frac{\partial \mathscr{L}}{\partial (\partial_\mu \Phi^*)} \right) &=& 0\text{，}
+\end{aligned}
+\]
+最终得到相应的运动方程\footnote{\textcolor{red}{译注：下式符号有误，已更正}}
+\begin{eqnarray}
+(\partial_\mu+\ri qA_\mu)(\partial^\mu-\ri qA^\mu)\Phi^*-m^2\Phi^*&=&0 \\
+(\partial_\mu-\ri qA_\mu)(\partial^\mu+\ri qA^\mu)\Phi-m^2\Phi&=&0 \text{，}
+\end{eqnarray}
+描述了每一个零自旋场和自旋为一的无质量场相耦合。
 \subsection{自旋为$1$有质量场的相互作用}\label{sec7.1.8}
-
+自旋为$1${\bf 有质量}场和自旋为$1${\bf 无质量}场的相互作用也可以简单的由对称性得到。自旋为$1$无质量场的拉格朗日量为
+\[
+{\mathsrc L}_\text{Maxwell} = \frac{1}{4}F^{\mu\nu}F_{\mu\nu} \text{。}
+\]
+为了区分有质量场和无质量场，我们将有质量场命名为$B^\mu$，并定义
+\[
+G^{\mu\nu} := \partial^\mu B^\nu - \partial^\nu B^\mu
+\]
+自旋为$1$的有质量场的拉格朗日量写作（\ref{eq:6.19}式）
+\[
+G_\text{Proca} = \frac{1}{2}G^{\mu\nu}G_{\mu\nu}+m^2 B^\mu B_\mu
+\]
+Lorentz 对称性说拉格朗日量中的相互作用项一定具有形式
+\[
+{\mathscr L}_\text{Procal-相互作用}=CG_{\mu\nu}F^{\mu\nu}
+\]
+其中耦合常数$C$需要由实验来定。感兴趣的读者可以借助欧拉-拉格朗日方程自行推导相应的运动方程。
 \section[$\mathcal{SU}(2)$相互作用]{$\mathcal{SU}(2)$ Interaction\quad $\mathcal{SU}(2)$相互作用}\label{sec7.2}
 
 \section[质量项、${\mathcal U}(1)$和$\mathcal{SU}(2)$的统一]{Mass Terms and Unification of ${\mathcal U}(1)$ and $\mathcal{SU}(2)$ \quad 质量项、${\mathcal U}(1)$和$\mathcal{SU}(2)$的统一}\label{sec7.3}
