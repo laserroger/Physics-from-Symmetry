@@ -197,7 +197,7 @@ $g$。将这个新项
 \[
 g A_\mu\bar\Psi\gamma^\mu\Psi
 \]
-加到\spint 自由场的拉格朗日量上，其中$\gamma_^\mu$用来保证这一项的 Lorentz 不变性，否则带有一个自由指标$\mu$的$A_\mu$和拉格朗日量密度这个标量无法匹配，另外也插入了{\bf 耦合常数(coupling constant)}%
+加到\spint 自由场的拉格朗日量上，其中$\gamma^\mu$用来保证这一项的 Lorentz 不变性，否则带有一个自由指标$\mu$的$A_\mu$和拉格朗日量密度这个标量无法匹配，另外也插入了{\bf 耦合常数(coupling constant)}%
 \mpar{我们能看到这里$g$决定了$\Psi$、$\bar\Psi$和$A_\mu$耦合在一起的强度。}%
 $g$。这样拉格朗日量
 \[
@@ -230,9 +230,38 @@ D_\mu \equiv \ri \partial_\mu + gA_\mu\text{，}
 
 我们将要回答的下一个问题是：这个拉格朗日量会导致什么样的运动方程？
 \subsection{非齐次麦克斯韦方程和最小耦合}\label{sec7.1.4}
+谜底揭晓：这个拉格朗日量给出有电流情况下的非齐次 Maxwell 方程组。
 
+推导是很直白的：将拉格朗日量\footnote{\textcolor{red}{译注：原文下式标记有误，已更正。}}
+\[
+{\mathscr L}_\text{Dirac+额外项+Maxwell} = -m\bar\Psi\Psi +\ri\bar\Psi\gamma_\mu\partial^\mu\Psi + g A^\mu\bar\Psi\gamma_\mu\Psi + \partial^\mu A^\nu\partial_\mu A_\nu - \partial^\mu A^\nu \partial_\nu A_\mu
+\]
+代入每一个场的拉格朗日方程中
+\[
+\begin{aligned}
+\frac{\partial \mathscr{L}}{\partial \Psi} - \partial_\mu \left( \frac{\partial \mathscr{L}}{\partial (\partial_\mu \Psi)} \right) &=& 0 &\\
+\frac{\partial \mathscr{L}}{\partial \bar\Psi} - \partial_\mu \left( \frac{\partial \mathscr{L}}{\partial (\partial_\mu \bar\Psi)} \right) &=& 0 &\\
+\frac{\partial \mathscr{L}}{\partial A_\rho} - \partial_\sigma \left( \frac{\partial \mathscr{L}}{\partial (\partial_\sigma A_\rho)} \right) &=& 0 &\text{。}
+\end{aligned}
+\]
+得到
+\begin{eqnarray}
+\bar\Psi(\ri\gamma_\mu\partial^\mu + m)+gA_\mu\bar\Psi\gamma^\mu &=& 0 \\
+(\ri\gamma_\mu\partial^\mu - m)\Psi-gA_\mu\gamma^\mu\Psi &=& 0 \label{eq:7.21} \\
+\partial_\sigma(\partial^\sigma A^\rho - \partial^\rho A^\sigma) + g\bar\Psi\gamma^\mu\Psi &=& 0 \label{eq:7.22}
+\end{eqnarray}
+头两个方程描述了\spint 粒子/场在外加电磁场下的行为。在许多书里这些方程是利用一个叫做{\bf 最小耦合(minimal coupling)}的办法得到的，即当外场存在时，导数$\partial_\mu$应当换成协变导数
+\begin{equation}
+\partial_\mu \rigtharrow D_\mu = \ri \partial_\mu + A_\mu
+\end{equation}
+来导出正确的方程。“最小”这个词的意思是，这里只用了一个规范场$A_\mu$的四个分量\footnote{译注：否则，我们可以使用张量场$\bar\Psi\sigma_{\mu\nu}F^{\mu\nu}\Psi$}。
+
+现在我们有了用来描述 Dirac 旋量在外加电磁场中的行为的方程(\ref{eq:7.21}式)，所以说可以来兑现在\ref{sec3.7.10}节中许下的承诺了。在那儿我们宣称电荷共轭变换，带有一个暗示性的名字，改变其描述对象的电荷。换言之，如果$\Psi$描述带电荷$+e$的某些东西，而电荷共轭旋量$\Psi^C$描述带电荷$-e$的某些东西。电荷决定了\spint 粒子/场和外加自旋为一的场的耦合强度，我们将考虑$\Psi^C$的运动方程是什么。之后我们将谈谈第三个方程，\ref{eq:7.22}式。
 \subsection{再一次电荷共轭变换}\label{sec7.1.5}
 
+Before we can derive the corresponding equation, we need to find an
+explicit form of the charge conjugation operator for Dirac spinors. We
+derived in Sec. 3.7.10 the transformation (Eq. 3.236)
 \subsection{内禀${\mathcal U}(1)$对称性的 Noether 定理}\label{sec7.1.6}
 
 \subsection{零自旋有质量场的相互作用}\label{sec7.1.7}
