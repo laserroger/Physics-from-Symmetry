@@ -265,7 +265,7 @@ Noether 定理表示，拉格朗日量的每一个对称性都直接对应一个
 \[
 \delta S \rightarrow \delta S' = \delta S + \int_{t_1}^{t_2} {\rd t~\frac{\rd}{\rd t}\delta G} = \delta S + \underbrace{\left.\frac{\partial G}{\partial q} \delta q \right|_{t_1}^{t_2}}_{\mathclap{=0~\text{因为}~\delta q(t_1)=\delta q(t_2)=0}}.
 \]
-在最后一步中，我们用到了扰动$\delta q$在初末时刻\footnote{译注：右侧删去了原文的一对括号}$t_1,t_2$为零。由此可知，拉格朗日量的扰动$\delta {\mathcal L}$不必非要为零，而仅需满足一个更弱的条件
+最后一步中用到了扰动$\delta q$在初末时刻\footnote{译注：右侧删去了原文的一对括号}$t_1,t_2$为零。由此可知，拉格朗日量的扰动$\delta {\mathcal L}$不必非要为零，而仅需满足一个更弱的条件
 \begin{equation}
 \delta {\mathcal L} \overset{\text{!}}{=} \frac{\rd G}{\rd t}\text{。}
 \label{eq:4.13}
@@ -318,7 +318,7 @@ m{\ddot\vec{q}} = 0 \text{。}
 
 让我们从这个拉格朗日量出发，计算不同对称性所分别对应的守恒量。
 
-由于${\mathcal L}=\frac{1}{2}m{\dot\vec q}^2$不依赖于$\vec q$，故我们的拉格朗日量在空间平移变换$\vec{q}\rightarrow\vec{q}+\vec{a}$不变($\delta{\mathcal L}=0$)。这个对应的守恒量满足条件\ref{eq:4.13}，即$G=0$的情形\footnote{译注：求和约定，见第\ref{chap3}章边注129}
+由于${\mathcal L}=\frac{1}{2}m{\dot\vec q}^2$不依赖于$\vec q$，故此拉格朗日量在空间平移变换$\vec{q}\rightarrow\vec{q}+\vec{a}$不变($\delta{\mathcal L}=0$)。这个对应的守恒量满足条件\ref{eq:4.13}，即$G=0$的情形\footnote{译注：求和约定，见第\ref{chap3}章边注129}
 \begin{equation}
 J_\text{trans} = \frac{\partial\mathcal L}{\partial \dot\vec q} \vec a = m {\dot\vec q} {\vec a} = \vec{p}\vec{a} \text{，}
 \end{equation}
@@ -338,7 +338,7 @@ J_\text{rot} =& \frac{\partial {\mathcal L}(q_i, \dot q_i, t)}{\partial \dot q_i
 在最后一步中我们将表达式用矢量记号重新写出，其中$\times$称作叉乘，而$\vec L$是经典力学中{\bf 角动量(angular momentum)}。即：{\bf 旋转不变性导致了角动量守恒。}
 
 接下来让我们看看时间平移不变性%
-\mpar{这意味着物理不会管我们是在昨天、今天还是五十年前做的实验，给定相同的初始条件，物理定律不会变化。}%
+\mpar{这意味着物理不会管我们是在昨天、今天还是五十年后做的实验，给定相同的初始条件，物理定律不会变化。}%
 。一个无穷小的时间平移$t\rightarrow t'=t+\epsilon$会导致
 \begin{equation}
 \begin{aligned}
@@ -373,7 +373,7 @@ J_\text{rot} =& \frac{\partial {\mathcal L}(q_i, \dot q_i, t)}{\partial \dot q_i
 \begin{equation}
 \tilde{J}_\text{boost} = \underbrace{pt-\frac{1}{2}mvt}_{\mathclap{\equiv \tilde{p}t}}-mq=\tilde{p}t-mq
 \end{equation}
-我们可以看到这个量依赖于时间零点，可以通过恰当的选取时间零点使其为零。由于这个量是守恒量，这个守恒律告诉我们零始终都是零。\footnote{译注：这个守恒率没有说的那么平庸，事实上，它等价于质心运动定理；\textcolor{red}{又注：该结果以及\ref{sec4.6}的推导有误，参见译注\ref{note:boost}}}
+我们可以看到这个量依赖于时间零点，可以通过恰当的选取时间零点使其为零。由于这个量是守恒量，这个守恒律告诉我们零始终都是零。\footnote{译注：这个守恒率没有说的那么平庸，事实上，它等价于质心运动定理；\textcolor{red}{又注：该结果以及\ref{sec4.6}的推导有误，参见译注\hyperref[note:boost]{21}}}
 
 作为粒子理论的总结，我们得到了如下关系：
 \begin{itemize}
@@ -389,7 +389,7 @@ Noether 定理向我们展示了，为什么这些记号%
 \subsection{场论中的 Neother 定理——时空对称性}\label{sec4.5.2}
 对于场，我们得区分在时空变换下两类不同的改变。当观测者$S$看到场$\Psi(x)$时，观测者$S'$看到的则是场$\Psi'(x')$。这是同一个场，只是从不同的视角来看，会有不同的分量值。这两类描述之间由 Lorentz 群中的一个合适的变换相联系。我们现在将会使用在\ref{sec3.7.11}中介绍过的场表示%the field representation
 。（无穷维）微分算符表示$x$变换到$x'$。这意味着利用这个表示我们能在不同的时空点或者在一个旋转参考系中计算场分量。Lorentz 群的有限维变换使$\Psi$映射到$\Psi'$，即，混合场分量%
-\mpar{请回忆这个例子，Weyl 旋量有两个分量而矢量场有四个分量。如果我们从一个不同的视角来考察矢量场$A_\mu=\begin{pmatrix} A_0\\ A_1\\ A_2\\ A_3 \end{pmatrix}$，即，从旋转系看，它会形如$A'_\mu=\begin{pmatrix} A'_0\\ A'_1\\ A'_2\\ A'_3 \end{pmatrix}=\begin{pmatrix}{c} A_0\\ -A_2\\ A_1\\ A_3 \end{pmatrix}$。$A'_\mu$和$A_\mu$描述了从两个相差了绕$z$轴旋转$\unit{90}{\degree}$的坐标系分别观察到的同一个场。}
+\mpar{请回忆这个例子，Weyl 旋量有两个分量而矢量场有四个分量。如果我们从一个不同的视角来考察矢量场$A_\mu=\begin{pmatrix} A_0\\ A_1\\ A_2\\ A_3 \end{pmatrix}$，即，从旋转系看，它会形如$A'_\mu=\begin{pmatrix} A'_0\\ A'_1\\ A'_2\\ A'_3 \end{pmatrix}=\begin{pmatrix} A_0\\ -A_2\\ A_1\\ A_3 \end{pmatrix}$。$A'_\mu$和$A_\mu$描述了从两个相差了绕$z$轴旋转$\unit{90}{\degree}$的坐标系分别观察到的同一个场。}。
 
 对于一个依赖于时空的场的具体变换，需要同时考虑两个部分。我们将分别处理它们，首先来看$x$到$x'$的这一项。对于旋转来说，单由这一个部分推出的守恒量并不会真的守恒，这是因为我们忽略了变换的第二项。仅当将变换的两项$x\rightarrow x'$和$\Psi\rightarrow\Psi'$分别导致的守恒量加起来之后得到的，才是真正守恒的。
 
@@ -468,7 +468,7 @@ T_\mu^\nu : = \frac{\partial\mathscr L}{\partial(\partial_\nu \Phi)}\frac{\parti
 \rightarrow \partial_t \int_V \rd^3 \bm{x}~T_0^0 = 0 \label{eq:4.39}
 \end{equation}
 
-最后一步中我们是这样处理的：考虑一个无限大的空间域，如一个有着无限大半径$r$的球体，我们需要在其表面计算积分，即在$r=\infty$处计算场值。在\ref{sec2.3}节中，我们发现了物理中任何东西都有一个速度上界。由此无穷远处的场不可能对有限远$x$处的物理有任何影响，故我们说场在无穷远处为零\footnote{译注：这段讨论怪怪的}。
+最后一步中是这样处理的：考虑一个无限大的空间域，如一个有着无限大半径$r$的球体，我们需要在其表面计算积分，即在$r=\infty$处计算场值。在\ref{sec2.3}节中，我们发现了物理中任何东西都有一个速度上界。由此无穷远处的场不可能对有限远$x$处的物理有任何影响，故我们说场在无穷远处为零\footnote{译注：这段讨论怪怪的}。
 
 最终的结论是：时空平移不变性导致四个守恒量%
 \mpar{因为对于任意$a_\mu$都有$\partial_0 T_\mu^0 a_\mu = \partial_0 T_0^0 a_0 -\partial_0 T_i^0 a^i = 0$成立，所以对于每一个分量我们都能得到一个连续性方程。}%
@@ -480,7 +480,7 @@ P_i &=& \int\rd^3\bm{x}~T_i^0 \label{eq:4.41}
 其中$i=1,2,3$。它们分别被称为系统的总能量——因时间平移$x_0\rightarrow x_0+a_0$不变性而守恒；场的总动量——因空间平移$x_i\rightarrow x_i+a_i$不变性而守恒。
 
 \subsection{旋转和推动}\label{sec4.5.3}
-接下来，我们会仔细研究旋转和推动下的不变性。我们将先从\ref{eq:4.30}式的第二项出发，随后讨论第一项的含义。我们将从第一项和第二项分别得到一个量，两项之和是守恒的。标量场没有可以混合的分量，故对于它而言第一项始终为零，即$S_{\mu\nu}=0$；也可以用\ref{sec3.7.4}节的结论解释：我们用标量作为 Lorentz 群一维表示的生成元。故我们在第一部分中导出的将会是对应于标量场真实守恒量。
+接下来，我们会仔细研究旋转和推动下的不变性。先从\ref{eq:4.30}式的第二项出发，随后讨论第一项的含义。我们将从第一项和第二项分别得到一个量，两项之和是守恒的。标量场没有可以混合的分量，故对于它而言第一项始终为零，即$S_{\mu\nu}=0$；也可以用\ref{sec3.7.4}节的结论解释：我们用标量作为 Lorentz 群一维表示的生成元。故在第一部分中导出的将会是对应于标量场真实守恒量。
 
 变换的第二项由下式给出
 \[
@@ -500,8 +500,8 @@ x_\mu \rightarrow {x'}_\mu = x_\mu + \delta x_\mu = x_\mu + M_\mu^\sigma x_\sigm
  &=&\frac{1}{2}\partial_\nu ( T^{\mu\nu} x^\sigma+\partial^\nu T^{\sigma\nu}x^\mu) M_{\mu\sigma} = 0 \nonumber\\
  &\rightarrow& \text{引入}(J^\nu)^{\sigma\mu} \equiv T^{\mu\nu} x^\sigma-\partial^\nu T^{\sigma\nu}x^\mu \rightarrow \partial_\nu (J^\nu)^{\sigma\mu} = 0 \text{。}
 \end{eqnarray}
-我们在最后一步引入的$J^\nu$被称为{\bf Noether 流(Noether current)}。注意到，由于在\ref{eq:3.165}式定义$
-M$时引入的反对称性$M_{\mu\sigma}=M_{\sigma\mu}$，我们有$M_{\mu\mu}=0$。由此我们找到了六个不同的连续性方程$\partial_\nu (J^\nu) = 0$，分别对应于每一个非零的$M_{\mu\sigma}$\footnote{译注：排除了零元的同时，也将始终互为相反数的一对元视作一个}。使用与\ref{eq:4.39}式一样的方式，我们可以论证如下的量不随时间改变
+在最后一步引入的$J^\nu$被称为{\bf Noether 流(Noether current)}。注意到，由于在\ref{eq:3.165}式定义$
+M$时引入的反对称性$M_{\mu\sigma}=-M_{\sigma\mu}$，有$M_{\mu\mu}=0$。由此我们找到了六个不同的连续性方程$\partial_\nu (J^\nu) = 0$，分别对应于每一个非零的$M_{\mu\sigma}$\footnote{译注：排除了零元的同时，也将始终互为相反数的一对元视作一个}。使用与\ref{eq:4.39}式一样的方式，我们可以论证如下的量不随时间改变
 \begin{equation}
 Q^{\mu\sigma} = \int \rd^3 \bm{x}~ \left(T^{\mu 0} x^\sigma- T^{\sigma 0}x^\mu\right)
 \end{equation}
@@ -522,7 +522,7 @@ Q^{0i}=\int \rd^3 \bm{x}~ \left(T^{i 0} x^0- T^{0 0}x^i\right)
 将会在附录\ref{sec4.7}节中详细讨论。
 
 \subsection{自旋}\label{sec4.5.4}
-接下来我们希望捡回原先在导出守恒量时所丢掉的\ref{eq:4.30}中的第一项。我们现在考察
+接下来我们希望捡回原先在导出守恒量时所丢掉的\ref{eq:4.30}中的第一项。现在考察
 \begin{equation}
 \delta\Phi = \epsilon_{\mu\nu} S^{\mu\nu}\Phi(x) \text{，}
 \end{equation}
@@ -544,7 +544,7 @@ L^i = L_\text{spin}^i + L_\text{orbit}^i \text{。}
 \mpar{我们随后将会看到场产生湮灭粒子。一个自旋$\frac{1}{2}$场产生自旋$\frac{1}{2}$粒子，这是基本粒子的固有属性。所以说我们用“内禀”这个词。轨道角动量是用来描述两个或更多粒子如何相互旋转的一个量。}%
 角动量。
 
-回忆我们曾用某种也叫做自旋(spin)的东西来给 Poincare 群的表示作标签。现在这个记号再一次出现了。我们将在下一章，并在\ref{sec8.5.5}节中相当仔细地，学习我们如何能测量这类新的角动量，自旋，以及认识到它和我们用以给 Poincare 群的表示作标签的东西，确实是相一致的。
+回忆我们曾用某种也叫做自旋(spin)的东西来给 Poincare 群的表示作标签。现在这个记号再一次出现了。我们将在下一章，并在\ref{sec8.5.5}节中相当仔细地，学习如何能测量这类新的角动量，自旋，以及认识到它和我们用以给 Poincare 群的表示作标签的东西，确实是相一致的。
 
 \subsection{场论中的 Neother 定理——内禀对称性}\label{sec4.5.5}
 我们现在来仔细研究内禀对称性%
@@ -564,9 +564,9 @@ L^i = L_\text{spin}^i + L_\text{orbit}^i \text{。}
 \frac{\partial \mathscr{L}}{\partial \Phi} = \partial_\mu \left( \frac{\partial \mathscr{L}}{\partial (\partial_\mu \Phi)} \right) \text{。}
 \]
 代入\ref{eq:4.42}式，我们得到
-\begin{equation}
+\begin{equation*}
 \delta {\mathscr L} = - \partial_\mu \left( \frac{\partial \mathscr{L}}{\partial (\partial_\mu \Phi_i)} \right)\delta\Phi_i - \frac{\partial\mathscr L}{\partial(\partial_\mu \Phi_i)}\partial_\mu\delta\Phi_i = 0
-\end{equation}
+\end{equation*}
 再用上莱布尼兹律，得到
 \begin{equation}
 \partial_\mu \left( \frac{\partial \mathscr{L}}{\partial (\partial_\mu \Phi_i)} \delta\Phi_i \right) = 0
@@ -582,7 +582,7 @@ J^\mu \equiv \frac{\partial \mathscr{L}}{\partial (\partial_\mu \Phi)} \delta\Ph
 \begin{equation}
 \ref{eq:4.53}\text{式}\rightarrow \partial_\mu J^\mu=0 \text{。}
 \end{equation}
-更进一步，用导出\ref{eq:4.39}式同样的办法，我们能得到一个对时间的守恒量
+更进一步，用导出\ref{eq:4.39}式同样的办法，能得到一个对时间的守恒量
 \begin{equation}
 \partial_t \int \rd^3 \bm{x}~J^0 = 0 \text{。}
 \label{eq:4.56}
@@ -615,7 +615,7 @@ p^i = T^{0i} = \frac{\partial \mathscr{L}}{\partial (\partial_0 \Phi)} \frac{\pa
 \begin{itemize}
 \item 空间平移不变性$\Rightarrow$ 物理动量$P_i = \int\rd^3\bm{x}~T_i^0$守恒
 \item 推动不变性\mpar{推动又被称为在动量的空间平移}$\Rightarrow$ 能量中心的速度是常数
-\item 转动不变性$\Rightarrow$ 总角动量$L^i = \frac{1}{2}\epsilon_{ijk} \int \rd^3 \bm{x}$ \\ $ \left(\frac{\partial\mathscr L}{\partial (\partial_0 \Phi)}S^{ij}\Phi(x) + (T^{k0} x^j-T^{j0}x^k)\right) = L_\text{spin}^i + L_\text{orbit}^i $，包含自旋和轨道角动量，守恒
+\item 转动不变性$\Rightarrow$ 总角动量$L^i = \frac{1}{2}\epsilon_{ijk} \int \rd^3 \bm{x}$ \\ $ \left(\frac{\partial\mathscr L}{\partial (\partial_0 \Phi)}S^{jk}\Phi(x) + (T^{k0} x^j-T^{j0}x^k)\right) = L_\text{spin}^i + L_\text{orbit}^i $，包含自旋和轨道角动量，守恒
 \item 时间平移不变性$\Rightarrow$ 能量$E = \int\rd^3\bm{x}~T_0^0$守恒
 \item 场自身的平移不变性$\Rightarrow$ 共轭动量$\Pi = \int\rd^3\bm{x}~\frac{\partial \mathscr{L}}{\partial (\partial_0 \Phi)} = \int\rd^3\bm{x}~\pi$守恒
 \end{itemize}
@@ -630,7 +630,7 @@ p^i = T^{0i} = \frac{\partial \mathscr{L}}{\partial (\partial_0 \Phi)} \frac{\pa
 是经典力学的标准教材，其中有许多对拉格朗日体系非常好的解释。
 \end{itemize}
 \section[附录：粒子理论中的推动不变性与其守恒量]{Appendix: Conserved Quantity from Boost Invariance for Particle Theories\quad 附录：粒子理论中的推动不变性与其守恒量}\label{sec4.6}
-此附录中我们想找到对于示例拉格朗日量${\mathcal L}=\frac{1}{2}m \dot\vec{q}^2 $其来自于推动不变性的守恒量。一个推动变换即$q\rightarrow q'=q+\delta q=q+vt$，其中$v$代表一个常值速率。我们的拉格朗日量在推动下并不是不变的，但正如我们之前就看到过的，这并不是一个问题：\\
+此附录中我们想找到对于示例拉格朗日量${\mathcal L}=\frac{1}{2}m \dot\vec{q}^2 $其来自于推动不变性的守恒量。一个推动变换即$q\rightarrow q'=q+\delta q=q+vt$，其中$v$代表一个常值速率。该拉格朗日量在推动下并不是不变的，但正如之前就看到过的，这并不是一个问题：\\
 为了使运动方程在变换下不变，拉格朗日量至多允许变化一个任意函数的全导数。这个条件在推动变换$q\rightarrow q'=q+vt \underbrace{\Rightarrow}_{\mathclap{v=\text{常数!}}} \dot q'=\dot q+v$下是显然满足的，即我们的拉格朗日量
 \begin{equation*}
 {\mathcal L}=\frac{1}{2}m \dot q^2
@@ -658,7 +658,7 @@ G \equiv -mqv -\frac{1}{2}mv^2 t\text{。}
 J_\text{boost} = \underbrace{\frac{\partial \mathcal L}{\partial \dot q}}_{\mathclap{\equiv p} }\underbrace{\delta q}_{\mathclap{=vt} } + G = pvt-mvq-\frac{1}{2}mv^2t\text{，}
 \end{equation*}
 由于$\ref{eq:4.16}$式右端为零，故我们能除去一个$v$的公因子%
-\footnote{\textcolor{red}{译注：由于之前关于守恒量的诸多推导都使用了变换是无穷小变换这一条件，故这里$v$必须取无穷小量，即略去$J_\text{boost}$中$v$的二阶项，最后得到的才能是守恒量。否则再利用其它条件我们会得到$t\equiv 0$的荒谬结论。}}\label{note:boost}%
+\footnote{\textcolor{red}{译注：由于之前关于守恒量的诸多推导都使用了变换是无穷小变换这一条件，故这里$v$必须取无穷小量，即略去$J_\text{boost}$中$v$的二阶项，最后得到的才能是守恒量。否则再利用其它条件我们会得到$t\equiv 0$的荒谬结论。}\label{note:boost}}%
 。由此有
 \begin{equation}
 \tilde{J}_\text{boost} = \underbrace{pt-\frac{1}{2}mvt}_{\mathclap{\equiv \tilde{p}t} }-mq=\tilde{p}t - mq
