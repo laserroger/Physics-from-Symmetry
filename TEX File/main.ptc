@@ -67,25 +67,26 @@
 \contentsline {section}{\numberline {5.2}量子场论的算符}{105}{section.5.2}
 \contentsline {chapter}{\numberline {6}自由场理论}{107}{chapter.6}
 \contentsline {section}{\numberline {6.1}Lorentz协变性与不变量}{107}{section.6.1}
-\contentsline {chapter}{\numberline {7}相互作用理论}{109}{chapter.7}
-\contentsline {section}{\numberline {7.1}$\mathcal {U}(1)$相互作用}{111}{section.7.1}
-\contentsline {subsection}{\numberline {7.1.1}自旋$\frac {1}{2}$自由场的内禀对称性}{111}{subsection.7.1.1}
-\contentsline {subsection}{\numberline {7.1.2}自旋为$1$自由场的内禀对称性}{113}{subsection.7.1.2}
-\contentsline {subsection}{\numberline {7.1.3}把奇怪的东西堆一起}{114}{subsection.7.1.3}
-\contentsline {subsection}{\numberline {7.1.4}非齐次麦克斯韦方程和最小耦合}{116}{subsection.7.1.4}
-\contentsline {subsection}{\numberline {7.1.5}再一次电荷共轭变换}{118}{subsection.7.1.5}
-\contentsline {subsection}{\numberline {7.1.6}内禀${\mathcal U}(1)$对称性的 Noether 定理}{119}{subsection.7.1.6}
-\contentsline {subsection}{\numberline {7.1.7}零自旋有质量场的相互作用}{121}{subsection.7.1.7}
-\contentsline {subsection}{\numberline {7.1.8}自旋为$1$有质量场的相互作用}{121}{subsection.7.1.8}
-\contentsline {section}{\numberline {7.2}$\mathcal {SU}(2)$相互作用}{122}{section.7.2}
-\contentsline {section}{\numberline {7.3}质量项、${\mathcal U}(1)$和$\mathcal {SU}(2)$的统一}{122}{section.7.3}
-\contentsline {section}{\numberline {7.4}宇称破坏}{122}{section.7.4}
-\contentsline {section}{\numberline {7.5}轻子质量项}{122}{section.7.5}
-\contentsline {section}{\numberline {7.6}夸克质量项}{122}{section.7.6}
-\contentsline {section}{\numberline {7.7}同位旋}{122}{section.7.7}
-\contentsline {subsection}{\numberline {7.7.1}Labelling 态}{122}{subsection.7.7.1}
-\contentsline {section}{\numberline {7.8}$\mathcal {SU}(3)$相互作用}{122}{section.7.8}
-\contentsline {subsection}{\numberline {7.8.1}色}{122}{subsection.7.8.1}
-\contentsline {subsection}{\numberline {7.8.2}夸克描述}{122}{subsection.7.8.2}
-\contentsline {section}{\numberline {7.9}Bosons 和 Fermions 间的相互影响}{122}{section.7.9}
+\contentsline {section}{\numberline {6.2}Kelin-Gordon 方程}{108}{section.6.2}
+\contentsline {chapter}{\numberline {7}相互作用理论}{111}{chapter.7}
+\contentsline {section}{\numberline {7.1}$\mathcal {U}(1)$相互作用}{113}{section.7.1}
+\contentsline {subsection}{\numberline {7.1.1}自旋$\frac {1}{2}$自由场的内禀对称性}{113}{subsection.7.1.1}
+\contentsline {subsection}{\numberline {7.1.2}自旋为$1$自由场的内禀对称性}{115}{subsection.7.1.2}
+\contentsline {subsection}{\numberline {7.1.3}把奇怪的东西堆一起}{116}{subsection.7.1.3}
+\contentsline {subsection}{\numberline {7.1.4}非齐次麦克斯韦方程和最小耦合}{118}{subsection.7.1.4}
+\contentsline {subsection}{\numberline {7.1.5}再一次电荷共轭变换}{120}{subsection.7.1.5}
+\contentsline {subsection}{\numberline {7.1.6}内禀${\mathcal U}(1)$对称性的 Noether 定理}{121}{subsection.7.1.6}
+\contentsline {subsection}{\numberline {7.1.7}零自旋有质量场的相互作用}{123}{subsection.7.1.7}
+\contentsline {subsection}{\numberline {7.1.8}自旋为$1$有质量场的相互作用}{123}{subsection.7.1.8}
+\contentsline {section}{\numberline {7.2}$\mathcal {SU}(2)$相互作用}{124}{section.7.2}
+\contentsline {section}{\numberline {7.3}质量项、${\mathcal U}(1)$和$\mathcal {SU}(2)$的统一}{124}{section.7.3}
+\contentsline {section}{\numberline {7.4}宇称破坏}{124}{section.7.4}
+\contentsline {section}{\numberline {7.5}轻子质量项}{124}{section.7.5}
+\contentsline {section}{\numberline {7.6}夸克质量项}{124}{section.7.6}
+\contentsline {section}{\numberline {7.7}同位旋}{124}{section.7.7}
+\contentsline {subsection}{\numberline {7.7.1}Labelling 态}{124}{subsection.7.7.1}
+\contentsline {section}{\numberline {7.8}$\mathcal {SU}(3)$相互作用}{124}{section.7.8}
+\contentsline {subsection}{\numberline {7.8.1}色}{124}{subsection.7.8.1}
+\contentsline {subsection}{\numberline {7.8.2}夸克描述}{124}{subsection.7.8.2}
+\contentsline {section}{\numberline {7.9}Bosons 和 Fermions 间的相互影响}{124}{section.7.9}
 \contentsfinish 
