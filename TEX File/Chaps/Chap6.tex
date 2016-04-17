@@ -21,3 +21,37 @@
 \[A_\mu+7B_\mu+C_\nu A^\nu D_\mu = 0 \]
 就是一个Lorentz协变方程，因为在另一个参考系中，它看起来就是
 \[A_\mu+7B_\mu+\underbrace{C_\nu A^\nu}_{\mathclap{=\text{一个Lorentz标量，根据$(0,0)$表示来进行变换}}} D_\mu = A'_\mu+7B'_\mu+C_\nu A^\nu D'_\mu = 0 \]
+我们看到它看起来是一样的。一个只有部分是这样的东西的方程，一般来说并不是Lorentz协变的，从而在另一个惯性系里面就会不一样。
+
+为了确定我们只使用Lorentz{\bf 协变}的方程，我们需要要求作用量$S$是Lorentz{\bf 不变}的。这是说它只能包含那些在参考系变换下保持不变的成分。换句话说，作用量里面只可以包含Lorentz变换下不变的部分。从作用量$S$中我们可以得到运动方程\mpar{回忆一下我们保持作用量最小以及得来的欧拉-拉格朗日方程，就是对系统的运动方程}。如果现在$S$依赖于参考系，也就是说得到的运动方程不再是Lorentz协变的了。
+
+就像我们之前一章讨论的那样，我们可以用更严格的约束条件来要求拉格朗日量应该是不变的，因为这样的话作用量也就肯定是不变的了。
+
+\section[Kelin-Gordon 方程]{Kelin-Gordon Equation Kelin-Gordon 方程}\label{sec6.2}
+
+我们现在开始考虑最简单的情况：标量，其按照Lorentz群的$(0,0)$表示变化。我们需要找一个对应的拉格朗日量来确定标量的运动方程。一个符合我们限制的一般的拉格朗日量第\mpar{在\ref{sec4.2}节中有所讨论：我们只考虑$0, 1$和$2$阶的$\Phi$。只考虑最低可能的导数项的原因在后面就会说明。}是：
+
+\begin{align}
+\mathcal{L} = A\Phi^0+V\Phi+C\Phi^2+D\partial_\mu\Phi+E\partial_\mu\Phi\partial^\mu\Phi+F\Phi\partial_\mu\Phi
+\end{align}
+首先，需要注意我们考虑的是拉格朗日量密度$\mathcal{L}$而不是$L$本身，然后我们的物理理论可以从作用量
+\begin{align}
+S = \int dx\mathcal{L}
+\end{align}
+得出，其中$dx$可以理解为对时间和空间的积分。因此，诸如$\Phi\partial_\mu\partial^\mu\Phi$的项实际是没必要的，因为它等效于$\partial_\mu\Phi\partial^\mu\Phi$，从分部积分就可以直接地看到这一点\mpar{很直接的，边界项会被小区，因为在远处场很小。值得注意的是，这是由于我们物理里面的速度是有上限的（第\ref{sec2.3}节）。因此，很远处的场对于有限远的$x$位置的场不会有影响}。
+
+不仅如此，Lorentz{\bf 不变形}要求拉格朗日量必须是一个标量。因此，所有奇数阶的$\partial_\mu$，比如$\partial_\mu\Phi$是禁止的。值得一提的是，如果常数，比如$a, c$，有一个Lorentz指标的话，这说明这些常数是一个$4$-矢量，标定了时空的方向从二破坏了空间的各向同性的要求。我们实际上可以忽略常数项，也就是$A=0$，因为我们的物理理论需要从欧拉-拉格朗日方程中得到，因此一个常数项对运动方程没有影响\mpar{考虑\eqref{eq4.10}：$\frac{\partial{\mathcal{L}}}{\partial\Phi}-\partial_\mu\left(\frac{\partial{\mathcal{L}}}{\partial(\partial_\mu\Phi)}\right)$，因此$\mathcal{L}\to\mathcal{L}+A$中的常数项$A$并不改变任何东西：$\frac{\partial({\mathcal{L}}+A)}{\partial\Phi}-\partial_\mu\left(\frac{\partial({\mathcal{L}}+A)}{\partial(\partial_\mu\Phi)}\right) = \frac{\partial{\mathcal{L}}}{\partial\Phi}-\partial_\mu\left(\frac{\partial{\mathcal{L}}}{\partial(\partial_\mu\Phi)}\right)$}。
+
+\subsection[复Kelin-Gordon场]{Complex Kelin-Gordon Field 复Kelin-Gordon场}\label{sec6.2.1}
+
+\section[Dirac方程]{Dirac Equation Dirac 方程}\label{sec6.3}
+
+
+\section[Proca方程]{Proca Equation Proca 方程}\label{sec6.4}
+
+
+
+
+
+
+
