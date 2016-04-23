@@ -2606,4 +2606,192 @@ $\tilde{\Psi}$按下式变换：
             \xi_L \\ \chi_R
         \end{pmatrix}
 \end{equation}
-上式的变换是刚才的变换+Dirac旋量的Lorentz变换。这个新变换通常称为{\bf 电荷共轭(charge conjugation)}变换，这个名字有点误导性。由上式可知该变换将左手旋量变为右手旋量，也就是把描述基本粒子的一个标签翻转一下\mpar{}。
+上式的变换是刚才的变换+Dirac旋量的Lorentz变换。这个新变换通常称为{\bf 电荷共轭(charge conjugation)}变换，这个名字有点误导性。由上式可知该变换将左手旋量变为右手旋量，也就是把描述基本粒子的一个标签翻转一下\mpar{选读：注意Weyl旋量实际上是个二分量对象，稍后我们会定义称为‘自旋’的可观测量，它由$\frac{1}{2} \sigma_3$描述。矩阵$\epsilon$可以将自旋算符$\frac{1}{2} \sigma_3$本征值$+\frac{1}{2}$的本征向量变换为本征值$-\frac{1}{2}$对应的本征向量。这称为自旋反转，即一个自旋$\frac{1}{2}$的对象变换为自旋$-\frac{1}{2}$的对象。}。之后会看到该算符不止能翻转这一个标签，而是对基本粒子的所有标签都有效。其中一个标签是电荷，因此该变换称为电荷共轭，在推导如何翻转电荷之前，先要学习电荷到底是啥。有一点是很重要的：不止电荷能翻，别的标签都可以。
+
+我们可以接着推导Lorentz群的更高维表示，但到现在为止所有物理中常用的有限维不可约表示都已导出。物理上还要用到无限维表示，用它来变换物理场。
+
+\subsection[无限维表示]{Infinite-Dimensional Representations \quad 无限维表示}
+\label{sec3.7.11}
+上面几节讨论了Lorentz群的有限维表示及其分类，这些有限维表示下的群元作用于$1$-, $2$-或$4$-分量的对象。物理中经常处理在时空中动力学演化的对象，下面考虑它们如何变换。前面处理的Lorentz变换可以写成如下形式：
+\begin{equation}
+\label{equ3.237}
+    \Phi_a \rightarrow \Phi'_a = M_{ab}(\Lambda) \Phi_b
+\end{equation}
+其中$M_{ab} (\Lambda)$是Lorentz变换$\Lambda$在某个有限维表示之下的矩阵形式。例如$M_{ab} (\Lambda)$是个作用于Weyl旋量的$2 \times 2$矩阵,作用的结果无非是新对象的分量为旧对象分量的线性组合。如果$\Phi$分布在四维时空，即\mpar{$\mathbf{x}$是时空坐标$t, x, y, z$的缩写。}$\Phi = \Phi(\mathbf{x})$，则Lorentz变换（除了变换$\Phi$之外）还将变换时空坐标，一般情况下：
+\begin{equation}
+\label{equ3.238}
+    x^\mu \rightarrow \Lambda^\mu_\nu x^\nu
+\end{equation}
+其中$\Lambda^\mu_\nu$是向量表示（即$(\frac{1}{2}, \frac{1}{2})$表示）下的Lorentz变换。场的Lorentz变换为\mpar{大部分文献采用对称操作的Wigner惯例形式：$\Phi_a (\mathbf{x}) \rightarrow M_{ab} (\Lambda) \Phi_b (\Lambda^{-1} \mathbf{x})$，但我们没有什么理由在这里这么写。}：
+\begin{equation}
+\label{equ3.239}
+    \Phi_a (\mathbf{x})  \rightarrow M_{ab} (\Lambda) \Phi_b (\Lambda \mathbf{x}) 
+\end{equation}
+上式的变换包含两部分。一部分变换作用于$\Phi_a$，对应于有限维表示；另一部分变换作用于坐标。第二变换作用于无限维\mpar{$\Phi$的每个分量都是坐标$\mathbf{x}$的函数。作用于$\Phi_a (\mathbf{x})$（即时空坐标的函数）The corresponding operators act on $\Phi_a ( \mathbf{x} )$ , i.e. functions of the coordinates and the space of functions is in this context infinite- dimensional. 函数空间之所以是无限维是由于基函数的个数是无穷多的。任意函数用无穷多的基函数展开在附录D.1的Fourier展开中讲述。}向量空间，因此需要用无限维表示。Lorentz群的无限维表示由如下微分算符\mpar{下式的符号$\partial^\nu$ 是偏导数符号$\frac{\partial}{\partial x_\nu}$的简写。}给出：
+\begin{equation}
+\label{equ3.240}
+    M^{\mathrm{inf}}_{\mu \nu} = i (x^\mu \partial^\nu - x^\nu \partial^\mu)
+\end{equation}
+读者可自行验证$M^{\mathrm{inf}}_{\mu \nu}$满足Lorentz Lie代数\ref{equ3.167}式，并且可以变换坐标。
+
+这样坐标变换的形式为\mpar{$M^{\mu \nu}$在\ref{equ3.165}式定义。分量$\omega_{\mu \nu}$与通常的转动角度$\theta_i$的关系为$\theta_i = \frac{1}{2} \epsilon_{ijk} \omega_{jk}$，与推动参数$\phi_i$的关系为$\phi_i = \omega_{0i}$。}：
+\begin{equation}
+\label{equ3.241}
+    \Phi (\Lambda \mathbf{x}) = \mathrm{e}^{ -i \frac{\omega^{\mu \nu}}{2} M^{\mathrm{inf}}_{\mu \nu} \Phi (\mathbf{x}) }
+\end{equation}
+其中$\mathrm{e}$指数函数定义为它的级数展开，前面已经讲过。完整的Lorentz变换是有限维表示$M^{\mathrm{fin}}_{\mu \nu}$与无限维表示$M^{\mathrm{inf}}_{\mu \nu}$变换的组合：
+\begin{equation}
+\label{equ3.242}
+    \Phi_a (\mathbf{x}) \stackrel{\mathrm{Lorentz\text{变换}}}{\longrightarrow} \bigg( \mathrm{e}^{ -i \frac{\omega^{\mu \nu}}{2} M^{\mathrm{fin}}_{\mu \nu} }\bigg)^b_a \mathrm{e}^{ -i \frac{\omega^{\mu \nu}}{2} M^{\mathrm{inf}}_{\mu \nu} } \Phi_b (\mathbf{x}) 
+\end{equation}
+矩阵$M^{\mathrm{fin}}_{\mu \nu}$是有限维的，它可以并入无限维矩阵中：
+\begin{equation}
+\label{equ3.243}
+    \Phi_a (\mathbf{x}) \stackrel{\mathrm{Lorentz\text{变换}}}{\longrightarrow} \bigg( \mathrm{e}^{ -i \frac{\omega^{\mu \nu}}{2} M_{\mu \nu} } \bigg)^b_a \Phi_b (\mathbf{x})
+\end{equation}
+其中$M_{\mu \nu} = M_{\mu \nu}^{\mathrm{fin}} + M^{\mathrm{inf}}_{\mu \nu}$。上式对应的Lorentz群表示称为{\bf 场表示}。
+
+现在可以讨论{\bf 平移}变换，即时空中某点的对象变换到另一点的变换。平移变换的结果并非各分量的组合，因此不需要有限维表示描述平移，而很容易地找到相应的无限维表示。这不再是Lorentz群的部分，但是自然定律应该在时空各点都相同。Lorentz群（推动+转动）加上平移变换称为Poincare群，下一节具体讲述。这里首先引入平移的无限维表示。简明起见，考虑一维情形，一个函数沿$x$轴的{\bf 无穷小}平移变换为：
+\begin{equation*}
+    \Phi (x) \rightarrow \Phi (x + \epsilon) = \Phi (x) + \underbrace{ \partial_x \Phi (x) }_{\text{沿x轴的‘变化率’}} \epsilon
+\end{equation*}
+上式就是Taylor级数展开的前两项。按照惯例，相应的生成元额外乘以$-i$：
+\begin{equation}
+\label{equ3.244}
+    P_i \equiv -i \partial_i
+\end{equation}
+这样，任意的有限大小的平移变换为：
+\begin{equation*}
+    \Phi (x) \rightarrow \Phi (x + a) = \mathrm{e}^{-i a^i P_i} \Phi (x) = \mathrm{e}^{a^i \partial_i} \Phi (x)
+\end{equation*}
+其中$a^i$表示沿各个方向的平移数量。把$\mathrm{e}$指数函数展开为Taylor级数\mpar{这在附录B.4.1中推导。}就能看出上式就是$\Phi (x + a)$的Taylor展开\mpar{这在附录B.3中推导。}。平移到另一个时间点使用$P_0 = i \partial_0$，平移到另一空间点使用$P_i = -i \partial_i$。
+
+\section[Poincare群]{The Poincare group \quad Poincare群}
+\label{sec3.8}
+现在考虑自然界完整的时空对称群：Poincare群。Lorentz群包含转动和推动变换，而保证光速不变的还有时空中的平移变换，因为在不同时空点测量的光速是相同的。等价地说，光速与所用坐标系原点的位置无关。将这一对称性加入Lorentz群之后就得到Poincare群\mpar{Poincare群并非Lorentz群与平移变换的直和(direct sum)，而是半直和(semi-direct sum)，但现在可以忽略此数学细节。}：
+\begin{align}
+    \text{Poincare群} &= \text{Lorentz群 {\bf +} 平移} \nonumber \\
+\label{equ3.245}
+    &= \text{旋转 {\bf +} 推动 {\bf +} 平移}
+\end{align}
+Poincare群的生成元是Lorentz群的生成元$J_i, K_i$加上平移变换的在Minkowski空间的生成元$P_\mu$。
+
+用$J_i, K_i, P_\mu$表示的Lie代数为\mpar{这些不是很有用... 这里列出只是为了完整。}：
+\begin{align}
+\label{equ3.246}
+    [J_i, J_j] &= i \epsilon_{ijk} J_k \\
+\label{equ3.247}
+    [J_i, K_j] &= i \epsilon_{ijk} K_k \\
+\label{equ3.248}
+    [K_i, K_j] &= -i \epsilon_{ijk} J_k \\
+\label{equ3.249}
+    [J_i, P_j] &= i \epsilon_{ijk} P_k \\
+\label{equ3.250}
+    [J_i, P_0] &= 0 \\
+\label{equ3.251}
+    [K_i, P_j] &= i \delta_{ij} P_0 \\
+\label{equ3.252}
+    [K_i, P_0] &= -i P_i
+\end{align}
+上面的形式比较凌乱，定义$M_{\mu \nu}$来表述会整洁的多，$M_{\mu \nu}$的定义为：
+\begin{align}
+\label{equ3.253}
+    J_i &= \frac{1}{2} \epsilon_{ijk} M_{jk} \\
+\label{equ3.254}
+    K_i &= M_{0i} 
+\end{align}
+用$M_{\mu \nu}$表示的Poincare Lie代数为：
+\begin{align}
+\label{equ3.255}
+    [P_\mu, P_\nu] = 0 \\
+\label{equ3.256}
+    [M_{\mu \nu}, P_\rho] = i (\eta_{\mu \rho} P_\nu - \eta_{\nu \rho} P_\mu)
+\end{align}
+由定义式可得
+\begin{equation}
+\label{equ3.257}
+    [M_{\mu \nu}, M_{\rho \sigma}] = i (\eta_{\mu \rho} M_{\nu \sigma} - \eta_{\mu \sigma} M_{\nu \rho} - \eta_{\nu \rho} M_{\mu \sigma} + \eta_{\nu \sigma} M_{\mu \rho}
+\end{equation}
+
+
+Poincare群是相当复杂的，有必要将它的表示用Casimir算符固有的标量值加以标记。Poincare群有两个Casimir算符\mpar{复习：Casimir算符是从生成元构造的、与所有生成元都对易的算符。}，第一个是：
+\begin{equation}
+\label{equ3.258}
+    P_\mu P^\mu =: m^2
+\end{equation}
+这个标量值记作$m^2$，它的含义你懂的。稍后我们就看到它就是粒子质量\mpar{别担心，后面会详谈。}。
+
+第二个Casimir算符为$W_\mu W^\mu$，其中\mpar{$\epsilon^{\mu \nu \rho \sigma}$是四维Levi-Civita符号，在附录B.5.5中定义。}：
+\begin{equation}
+\label{equ3.259}
+    W^\mu = \frac{1}{2} \epsilon^{\mu \nu \rho \sigma} P_{\nu} M_{\rho \sigma}
+\end{equation}
+$W^\mu$称为{\bf Pauli-Lubanski 四维向量}。经过超级繁琐的计算之后可以证明。相应的标量值记作$j \equiv j_1 + j_2$，它通常称为{\bf 自旋}。现在`自旋'只是个名字，稍后会看到它有什么含义。对于Lorentz群，它的两个\mpar{复习：Lorentz群的Lie代数可以视为两份$\mathcal{SU}(2)$Lie代数$\mathcal{SU}(2)$群的表示可以用一个数$j$标记，于是Lorentz群双覆盖的表示可以用两个数$(j_1, j_2)$标记。}$\mathcal{SU}(2)$ Lie代数每个都对应一个$j_i$。
+
+例如，$(j_1, j_2) = (0, 0)$表示称为自旋$0$表示\mpar{$j_1 + j_2 = 0 + 0 = 0$.}，$(j_1, j_2) = (\frac{1}{2}, 0)$与$(j_1, j_2) = (0, \frac{1}{2})$都称为自旋$\frac{1}{2}$表示\mpar{$j_1 + j_2 = \frac{1}{2} + 0 = 0 + \frac{1}{2} = \frac{1}{2}$.}，然后$(j_1, j_2) = (\frac{1}{2}, \frac{1}{2})$表示称为自旋$1$表示\mpar{$j_1 + j_2 = \frac{1}{2} + \frac{1}{2} = 1$.}。
+
+综上，Poincare群的表示用两个标量来标记：$m, j$。其中$m$可以取任意值，$j$只能取整数或半整数。
+
+\section[基本粒子]{Elementary Particles \quad 基本粒子}
+\label{equ3.9}
+Poincare群不可约表示的标记就是物理学{\bf 对基本粒子的标记}\mpar{其他说法：基本粒子{\bf 是}Poincare群的不可约表示。}：{\bf 质量}$m$与{\bf 自旋}（这里就是$j$）。给定质量$m$与自旋（例如$j = \frac{1}{2}$）的基本粒子由这样一种对象描述：该对象按Poincare群的$m$, 自旋$\frac{1}{2}$表示变换。
+
+粒子的更多标签（例如电荷）将从内禀对称性导出，这些标签用来定义一种基本粒子。例如，电子的定义为：
+\begin{itemize}
+    \item 质量： $9.109 \times 10^{-31}$kg
+    \item 自旋： $\frac{1}{2}$
+    \item 电子电荷：$1.602 \times 10^{-19}$C
+    \item 弱荷，称为弱同位旋：$-\frac{1}{2}$
+    \item 强荷，称为色荷：$0$
+\end{itemize}
+这些标签决定了一种基本粒子在实验中的观测值。本章导出的各种表示使我们能在数学上描述它们。基本粒子可分为如下几种\mpar{第一章导论介绍不能推导的内容说过，没有理由只有三个表示对应基本粒子。我们可以继续考虑更高维的表示，但没发现对应的粒子，比如自旋$\frac{3}{2}$的粒子。然而这些表示可以描述复合对象。此外，许多物理学家认为传递引力作用的基本粒子 --- 引力子的自旋为$2$，因此必须用相应的高维表示来描述它。}：
+\begin{itemize}
+    \item 自旋$0$，由{\bf 标量}（记作$\Phi$）描述，标量按Poincare群的$(0, 0)$表示（称为{\bf 自旋$0$表示}或标量表示）变换。例如Higgs粒子由一个标量场描述。
+    \item 自旋$\frac{1}{2}$，由{\bf 旋量}（记作$\Psi$）描述。旋量按$(\frac{1}{2}, 0) \oplus (0, \frac{1}{2})$表示（称为{\bf 自旋$\frac{1}{2}$表示} 或旋量表示）变换。例如电子和夸克由旋量描述。
+    \item 自旋$1$，由{\bf 向量}（记作$A$）描述。向量按照$(\frac{1}{2}, \frac{1}{2})$表示（称为{\bf 自旋$1$表示} 或向量表示）变换。例如光子由向量描述。
+\end{itemize}
+
+上面的结论是物理学重要、深刻而优美的创见，因此再重复一遍：
+
+Poincare群的不可约表示是{\bf 描述所有基本粒子的数学工具}。描述{\bf 标量}粒子（例如Higgs Boson）的数学对象称为{\bf 标量}，它根据自旋$0$表示变换。描述{\bf 自旋$\frac{1}{2}$ 粒子}（例如电子、中微子、夸克等等）的数学对象称为{\bf 旋量}，它根据自旋$\frac{1}{2}$表示变换。描述光子或其它{\bf 自旋$1$}的粒子所用的对象称为{\bf 向量}，它根据自旋$1$表示变换。
+
+关于自旋这个充满暗示的名字的详细解释在讨论完实验观测之后的\ref{sec8.5.5}节讲述。弄清楚自旋的含义，我们必须要知道如何通过实验观测某物是否自旋。现在把自旋仅仅当做一个名词就好。
+
+\section*{Further Reading Tips \quad 阅读建议}
+\begin{itemize}
+    \item  {\bf John Stillwell -} \sout{你们啊}{\bf Naive Lie Theory}\mpar{ John Stillwell. {\it Naive Lie Theory}. Springer, 1st edition, 8 2008b. ISBN
+9780387782140}是一本非常易读的、介绍Lie理论的数学教材。
+    \item {\bf N. Jeevanjee - An Introduction to Tensors and Group Theory for Physicists}\mpar{Nadir Jeevanjee. {\it An Introduction to Tensors and Group Theory for Physicists}. Birkhaeuser, 1st edition, August 2011. ISBN 978-0817647148}
+是一本非常出色的导论教材，重点关注群论在物理学中的应用。
+\end{itemize}
+
+\section[附录：复向量空间中的旋转]{Appendix: Rotations in a Complex Vector Space \quad 附录：复向量空间中的旋转}
+\label{sec3.10}
+在复向量空间也可定义保证内积不变的变换。我们希望一个向量与其自身的内积为实数，这样才能让它等于向量的模的平方，模长为复数没有物理意义。因此复向量内积的定义（除了转置以外还）附加了取复共轭的操作\mpar{$z = a + ib, z^* = a - ib$，因此$z^* z = (a + ib)(a - ib) = a^2 + b^2 \in \mathbb{R}$.}：
+\begin{equation}
+\label{sec3.260}
+    a \cdot a = (a^T)^* a = a^\dag a
+\end{equation}
+符号$\dag$称为dagger，表示厄米共轭操作，即取复共轭+转置。保证内积不变的变换$\mathcal{U}$必须满足$\mathcal{U}^\dag \mathcal{U} = \mathbf{1}$：
+\begin{equation}
+\label{equ3.261}
+    (\mathcal{U} a)^\dag \cdot (\mathcal{U} a) = a^\dag \mathcal{U}^\dag \mathcal{U} a = a^\dag a
+\end{equation}
+这种形式的变换记作$\mathcal{U} (n)$，其中$n$表示复向量空间的维数，``$\mathcal{U}$''表示幺正性。复习一下，$\mathcal{SU}(n)$群称为特殊(special)幺正群，因为它的群元还满足$\det (\mathcal{U}) = 1$。
+
+\section[附录：流形]{Appendix: Manifolds \quad 附录：流形}
+\label{sec3.11} 
+流形$M$是满足如下条件的点的集合：对于$M$的任意开邻域，存在将开邻域映射到$\mathbb{R}^n$开子集的一一映射。简单地说，该定义意味着流形$M${\bf 局部}地与$\mathbb{R}^n$类似。$M$的开邻域到$\mathbb{R}^n$的映射将$M$中的点$P$对应到一个$n$元数组$\big( x_1(P), \dots, x_n(P) \big)$，其中$x_1(P), \dots, x_n(P)$称为$P$点的坐标。因此$n$维流形可以看做这样的点集：任意点的邻域都可对应$n$个独立坐标。
+
+流形的典型例子是球面，三维球体的表面称为2-球面(two-sphere)，记作$S^2$，定义为$\mathbb{R}^3$当中满足$x^2 + y^2 + z^2 = r^2$的点的集合，其中$r$为球半径。注意三维球体的表面是二维的，因为它的定义有三个坐标与一个限制条件，这样减少了一个自由度。这也是数学上称之为2-球面的原因。为了表明球面是个流形，我们需要找出从球面到$\mathbb{R}^2$的映射，这个映射可以由通常的球坐标给出。
+
+{
+\centering
+    \includegraphics[scale=0.35]{fig3_8.eps}
+    \figcaption{从球面的一个邻域到$\mathbb{R}^2$映射的图示}
+}
+球面上几乎所有的点都可明确地对应于坐标$(\varphi, \theta)$，几乎所有... 但是极点$\varphi = 0$映射到哪儿？不可能有一对一的点，因为极点对应的是一整条线，在上图已经画出。因此球坐标映射不能覆盖整个球面，还需要一个映射将极点及其邻域映射到$\mathbb{R}^2$。相似的问题还出现在$\theta = 0$对应的半圆处，Each point can be mapped in the $\mathbb{R}^2$ to $\theta = 0$ and $\theta = 2\pi$, which is again not a one-to-one map. 这说明对流形而言，一般不存在一个覆盖流形所有点的全局坐标系，而只有局域坐标系，即仅覆盖某一邻域的坐标系。不过这没关系，因为流形的特征是局部像$\mathbb{R}^n$。
+
+上面说到，球坐标系映射只对开邻域$0 < \varphi < \pi, 0 < \theta < 2\pi$有效，还需要另外的映射来覆盖整个球面。可以使用第二个球坐标系 --- 坐标轴的指向不同，使得有问题的极点不再对应$\varphi = 0$，在第二个映射补充下，球面上所有的点都可映射到$\mathbb{R}^2$，于是2-球面确实是个流形。
+
+流形的平凡例子是$\mathbb{R}^n$，根据定义容易看出。
