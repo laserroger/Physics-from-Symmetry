@@ -137,7 +137,7 @@ A_\mu \rightarrow A_\mu' = A_\mu+a_\mu
 \end{equation}
 其中$a_\mu$为任意常数，拉格朗日量变为
 \begin{eqnarray}
-{\mathscr L}_\text{Proca}' &=& \partial^\mu A^\nu'\partial_\mu A_\nu' - \partial^\mu A^\nu' \partial_\nu A_\mu' + m^2A_\mu' A^\mu' \nonumber\\
+{\mathscr L}_\text{Proca}' &=& \partial^\mu A'^\nu\partial_\mu A_\nu' - \partial^\mu A'^\nu \partial_\nu A_\mu' + m^2A_\mu' A'^\mu \nonumber\\
 &=& \partial^\mu (A^\mu+a^\nu)\partial_\mu (A_\nu+a_\nu) - \partial^\mu (A^\nu+a^\nu) \partial_\nu ( A_\mu+a_\mu) + m^2( A_\mu+a_\mu) ( A^\mu+a^\mu) \nonumber\\
 &=& \partial^\mu A^\nu\partial_\mu A_\nu - \partial^\mu A^\nu \partial_\nu A_\mu + m^2( A_\mu+a_\mu) ( A^\mu+a^\mu)
 \end{eqnarray}
@@ -149,7 +149,7 @@ A_\mu \rightarrow A_\mu' = A_\mu+a_\mu(x)
 \end{equation}
 {\bf 无质量}的拉格朗日量变成
 \begin{eqnarray}
-{\mathscr L}_\text{Maxwell}' &=& \partial^\mu A^\nu'\partial_\mu A_\nu' - \partial^\mu A^\nu' \partial_\nu A_\mu' \nonumber\\
+{\mathscr L}_\text{Maxwell}' &=& \partial^\mu A'\nu\partial_\mu A_\nu' - \partial^\mu A'\nu \partial_\nu A_\mu' \nonumber\\
 &=& \partial^\mu (A^\mu+a^\nu(x))\partial_\mu (A_\nu+a_\nu(x)) - \partial^\mu (A^\nu+a^\nu(x)) \partial_\nu ( A_\mu+a_\mu(x))  \nonumber\\
 &=& \partial^\mu A^\nu\partial_\mu A_\nu+\partial^\mu a^\nu(x)\partial_\mu A_\nu+\partial^\mu A^\nu\partial_\mu a_\nu(x) +\partial^\mu a^\nu(x)\partial_\mu a_\nu(x) \nonumber\\
 & &\quad - \partial^\mu A^\nu \partial_\nu A_\mu - \partial^\mu A^\nu \partial_\nu a_\mu(x)-\partial^\mu a^\nu(x) \partial_\nu A_\mu - \partial^\mu a^\nu(x) \partial_\nu a_\mu(x)
@@ -158,11 +158,11 @@ A_\mu \rightarrow A_\mu' = A_\mu+a_\mu(x)
 
 然而，如果我们这样作变换$A_\mu\rightarrow A_\mu'+\partial_\mu a(x)$，我们能弄出一个局域内禀对称性来。这意味着我们加的是一个任意函数的导数，而不是一个任意函数。这会导致\footnote{\textcolor{red}{译注：原文缺少一个$(x)$}}
 \begin{eqnarray}
-{\mathscr L}_\text{Maxwell}' &=& \partial^\mu A^\nu'\partial_\mu A_\nu' - \partial^\mu A^\nu' \partial_\nu A_\mu' \nonumber\\
+{\mathscr L}_\text{Maxwell}' &=& \partial^\mu A'\nu\partial_\mu A_\nu' - \partial^\mu A'\nu \partial_\nu A_\mu' \nonumber\\
 &=& \partial^\mu (A^\mu+\partial^\nu a(x))\partial_\mu (A_\nu+\partial_\nu a(x)) - \partial^\mu (A^\nu+\partial^\nu a(x)) \partial_\nu ( A_\mu+\partial_\mu a(x))  \nonumber\\
 &=& \partial^\mu A^\nu\partial_\mu A_\nu+\partial^\mu \partial^\nu a(x)\partial_\mu A_\nu+\partial^\mu A^\nu\partial_\mu \partial_\nu a(x) +\partial^\mu \partial^\nu a(x)\partial_\mu \partial_\nu a(x) \nonumber\\
 & & - \partial^\mu A^\nu \partial_\nu A_\mu - \partial^\mu A^\nu \partial_\nu \partial_\mu a(x)-\partial^\mu \partial^\nu a(x) \partial_\nu A_\mu - \partial^\mu \partial^\nu a(x) \partial_\nu \partial_\mu a(x) \nonumber \\
-&\underbrace{=}_{\mathclap{\partial_\nu\partial_\mu=\partial_\mu\partial_\nu\text{以及重命名哑指标}}}& \partial^\mu A^\nu\partial_\mu A_\nu - \partial^\mu A^\nu \partial_\nu A_\mu = {\mathscr L}_\text{Maxwell}
+&\underbrace{=}_{\mathclap{\partial_\nu\partial_\mu=\partial_\mu\partial_\nu\text{以及重命名哑指标}}}& \partial^\mu A^\nu\partial_\mu A_\nu - \partial^\mu A^\nu \partial_\nu A_\mu = {\mathscr L}_\text{Maxwell}\label{eq:7.11}
 \end{eqnarray}
 所以说这里的确有一个局域内禀对称变换。这看上去也像是一个技术细节。好的，我们找到了一些局域的、内禀的对称性，然后呢？
 \subsection{把奇怪的东西堆一起}\label{sec7.1.3}
@@ -185,7 +185,7 @@ A_\mu \rightarrow A_\mu' = A_\mu +\partial_\mu a(x) \text{，}
 \begin{equation}
 A_\mu\bar\Psi\gamma^\mu\Psi \rightarrow (A_\mu+\partial_\mu a(x))\bar\Psi\gamma^\mu\Psi = A_\mu\bar\Psi\gamma^\mu\Psi + \partial_\mu a(x)\bar\Psi\gamma^\mu\Psi
 \end{equation}
-比较$\ref{eq:7.12}$式中的第二项\footnote{\textcolor{red}{译注：此处疑引用有误}}。拉格朗日量中这个将$\Psi$、$\bar\Psi$和$A_\mu$耦合在一起的新项，正好能干掉那个\sout{自不量力}阻挡\spint 自由场拥有局域\uo 不变性的家伙。换言之：{\bf 通过添加这个新项使得拉格朗日量局域\uo 不变。}
+比较$\ref{eq:7.12}$式中的第二项\footnote{\textcolor{red}{译注：此处疑引用有误}}。拉格朗日量中这个将$\Psi$、$\bar\Psi$和$A_\mu$耦合在一起的新项，正好能干掉那个\sout{不自量力}阻挡\spint 自由场拥有局域\uo 不变性的家伙。换言之：{\bf 通过添加这个新项使得拉格朗日量局域\uo 不变。}
 
 再来仔细研究一下这件事。首先习惯上都会在局域\uo 变换的指数上添一个常数因子$g$：$\ue^{\ri ga(x)}$。这样额外项变成
 \begin{equation}
@@ -239,36 +239,375 @@ D_\mu \equiv \ri \partial_\mu + gA_\mu\text{，}
 代入每一个场的拉格朗日方程中
 \[
 \begin{aligned}
-\frac{\partial \mathscr{L}}{\partial \Psi} - \partial_\mu \left( \frac{\partial \mathscr{L}}{\partial (\partial_\mu \Psi)} \right) &=& 0 &\\
-\frac{\partial \mathscr{L}}{\partial \bar\Psi} - \partial_\mu \left( \frac{\partial \mathscr{L}}{\partial (\partial_\mu \bar\Psi)} \right) &=& 0 &\\
-\frac{\partial \mathscr{L}}{\partial A_\rho} - \partial_\sigma \left( \frac{\partial \mathscr{L}}{\partial (\partial_\sigma A_\rho)} \right) &=& 0 &\text{。}
+\frac{\partial \mathscr{L}}{\partial \Psi} - \partial_\mu \left( \frac{\partial \mathscr{L}}{\partial (\partial_\mu \Psi)} \right) &= 0 \\
+\frac{\partial \mathscr{L}}{\partial \bar\Psi} - \partial_\mu \left( \frac{\partial \mathscr{L}}{\partial (\partial_\mu \bar\Psi)} \right) &= 0 \\
+\frac{\partial \mathscr{L}}{\partial A_\rho} - \partial_\sigma \left( \frac{\partial \mathscr{L}}{\partial (\partial_\sigma A_\rho)} \right) &= 0 \text{。}
 \end{aligned}
 \]
 得到
 \begin{eqnarray}
 \bar\Psi(\ri\gamma_\mu\partial^\mu + m)+gA_\mu\bar\Psi\gamma^\mu &=& 0 \\
 (\ri\gamma_\mu\partial^\mu - m)\Psi-gA_\mu\gamma^\mu\Psi &=& 0 \label{eq:7.21} \\
-\partial_\sigma(\partial^\sigma A^\rho - \partial^\rho A^\sigma) + g\bar\Psi\gamma^\mu\Psi &=& 0 \label{eq:7.22}
+\partial_\sigma(\partial^\sigma A^\rho - \partial^\rho A^\sigma) + g\bar\Psi\gamma^\rho\Psi &=& 0 \label{eq:7.22}
 \end{eqnarray}
-头两个方程描述了\spint 粒子/场在外加电磁场下的行为。在许多书里这些方程是利用一个叫做{\bf 最小耦合(minimal coupling)}的办法得到的，即当外场存在时，导数$\partial_\mu$应当换成协变导数
+头两个方程描述了\spint 粒子/场在外加电磁场下的行为。在许多书里这些方程是利用一个叫做{\bf 最小耦合(minimal coupling)}的办法得到的，即当外场存在时，导数$\partial_\mu$应当换成协变导数%
+\footnote{\textcolor{red}{译注：此处虚单位$\ri$的位置似有不妥，同后文}}
 \begin{equation}
-\partial_\mu \rigtharrow D_\mu = \ri \partial_\mu + A_\mu
+\partial_\mu \rightarrow D_\mu = \ri \partial_\mu + A_\mu
 \end{equation}
 来导出正确的方程。“最小”这个词的意思是，这里只用了一个规范场$A_\mu$的四个分量\footnote{译注：否则，我们可以使用张量场$\bar\Psi\sigma_{\mu\nu}F^{\mu\nu}\Psi$}。
 
 现在我们有了用来描述 Dirac 旋量在外加电磁场中的行为的方程(\ref{eq:7.21}式)，所以说可以来兑现在\ref{sec3.7.10}节中许下的承诺了。在那儿我们宣称电荷共轭变换，带有一个暗示性的名字，改变其描述对象的电荷。换言之，如果$\Psi$描述带电荷$+e$的某些东西，而电荷共轭旋量$\Psi^C$描述带电荷$-e$的某些东西。电荷决定了\spint 粒子/场和外加自旋为一的场的耦合强度，我们将考虑$\Psi^C$的运动方程是什么。之后我们将谈谈第三个方程，\ref{eq:7.22}式。
 \subsection{再一次电荷共轭变换}\label{sec7.1.5}
+为了得到对应的方程，我们需要找到 Dirac 旋量的电荷共轭变换算符确切的形式。我们在\ref{sec3.7.10}节中得到了变换（\ref{eq3.236}式）
+\begin{equation}
+\Psi = \begin{pmatrix}
+\chi_L \\ \tilde\xi_R
+\end{pmatrix} \rightarrow \Psi^C = \begin{pmatrix}
+\tilde\xi_L \\ \chi_R
+\end{pmatrix}\text{。}
+\end{equation}
+这个变换可以简单地用一个$\gamma_\mu$矩阵来描述。利用\ref{eq:6.13}式中$\gamma_2$的定义，我们有
+\begin{equation}
+\Psi^C = \ri\gamma_2 \Psi^* = \ri \begin{pmatrix}
+0 & \sigma_2 \\
+-\sigma_2 & 0\\
+\end{pmatrix}\begin{pmatrix}
+\chi_L^* \\ \tilde\xi_R^*
+\end{pmatrix}\text{，}\label{eq:7.25}
+\end{equation}
+利用$\ri\sigma_2=\epsilon$正好就是旋量度规，改写作
+\begin{equation}
+\begin{pmatrix}
+0 & \epsilon \\
+-\epsilon & 0\\
+\end{pmatrix}\begin{pmatrix}
+\chi_L^* \\ \tilde\xi_R^*
+\end{pmatrix}= \begin{pmatrix}
+\epsilon\tilde\xi_R^* \\\epsilon\chi_L^*
+\end{pmatrix} \text{。}
+\end{equation}
+等价于
+\begin{equation}
+= \begin{pmatrix}
+\tilde\xi_L \\ \chi_R
+\end{pmatrix}\text{，}
+\end{equation}
+正如\ref{sec3.7.7}节，特别是\ref{equ3.194}式中展示的一样。故我们从\ref{eq:7.21}式开始：
+\begin{equation}
+(\ri\gamma_\mu\partial^\mu - m)\Psi-gA_\mu\gamma^\mu\Psi = \left(\gamma_\mu(\ri\partial^\mu-gA^\mu) - m\right)\Psi = 0 \text{，}
+\end{equation}
+并取其复共轭，作为得到$\Psi^C$的方程的第一步：
+\begin{equation}
+\rightarrow \left(\gamma_\mu^*(-\ri\partial^\mu-gA^\mu) - m\right)\Psi^* = 0 \text{。}
+\end{equation}
+然后左乘一个$\gamma_2$，并在$\Psi$前插入一个$1=\gamma_2^{-1}\gamma_2$：
+\begin{eqnarray}
+& \rightarrow & \gamma_2\left(\gamma_\mu^*(-\ri\partial^\mu-gA^\mu) - m\right)\underbrace{\gamma_2^{-1}\gamma_2}_{=1}\Psi^* = 0 \text{。}\\
+& \rightarrow & (\underbrace{\gamma_2\gamma_\mu^*\gamma_2^{-1}}_{=-\gamma_\mu}(-\ri\partial^\mu-gA^\mu) - m\gamma_2\gamma_2^{-1})\gamma_2\Psi^* = 0 \text{。}\\
+& \underbrace{\rightarrow}_{\mathclap{\text{方程乘上}\ri}} & \left(-\gamma_\mu(-\ri\partial^\mu-gA^\mu) - m\right)\underbrace{\ri\gamma_2\Psi^*}_{\mathclap{=\Psi^C\text{见\ref{eq:7.25}式}}} = 0 \text{。}\\
+& \rightarrow & \left(-\gamma_\mu(-\ri\partial^\mu-gA^\mu) - m\right)\Psi^C = 0 \text{，}
+\end{eqnarray}
+这和$\Psi$的运动方程只在耦合常数上差了个负号$g\rightarrow -g$。这与其名字，电荷共轭，相符%
+\mpar{注意$\Psi^C\ne \bar\Psi$。$\Psi^C=\ri\gamma_2\Psi$而$\bar\Psi=\Psi^\dag\gamma_0=(\Psi^*)^T\gamma_0$。电荷共轭变换让我们能用反粒子来解释一些东西，稍后便会详细讨论。}。
 
-Before we can derive the corresponding equation, we need to find an
-explicit form of the charge conjugation operator for Dirac spinors. We
-derived in Sec. 3.7.10 the transformation (Eq. 3.236)
+接下来，我们转向上一节中的第三个式子，\ref{eq:7.22}式，称为{\bf 有电流情况下的非齐次麦克斯韦方程(inhomogeneous Maxwell equation in the presence of an electric current)}。为了讲清楚这个名字，我们又需要 Noether 定理了。
 \subsection{内禀${\mathcal U}(1)$对称性的 Noether 定理}\label{sec7.1.6}
+在\ref{sec4.5.5}节中我们得知 Noether 定理将所有内禀对称性和一个守恒量联系了起来。和我们刚才发现的\uo 对称性相联系的守恒量是什么？Neother 定理告诉我们，有如下形式的变换
+\[
+\Psi \rightarrow \Psi' = \Psi+\delta\Psi
+\]
+能导出 Noether 流
+\[
+J^\mu = \frac{\partial \mathscr L}{\partial(\partial_\mu\Psi)}\delta\Psi
+\]
+其满足连续性方程
+\begin{equation}
+\partial_\mu J^\mu =0\text{。}
+\end{equation}
+一个全局%
+\mpar{记住，\spint 自由场的拉格朗日量仅仅是全局\uo 不变的。而上一节最终得到的拉格朗日量是全局\uo 不变的。全局对称性是局域对称性在$a=$常数时的特殊情况。所以说，如果我们有一个局域\uo 不变的拉格朗日量，它自动是全局\uo 不变的。这里考虑的全局\uo 对称性将导出一个对自由场和相互作用场都守恒的量}%
+\uo 变换是
+\[
+\Psi \rightarrow \Psi' = \ue^{\ri ga} = (1+\ri ga+\dots)\Psi
+\]
+如通常所做的那样，我们仅将指数函数展开到第一项，因为\uo 是一个 Lie 群，而任意变换都可以由无穷小的来生成。一个无穷小的变换写作
+\[
+\Psi \rightarrow \Psi' = \Psi+\ri ga\Psi
+\]
+故我们有$\delta\Psi = \ri ga\Psi$。就如\ref{sec4.5.5}节中所做的一样，导出 Noether 流
+\begin{eqnarray}
+J^\mu &=& \frac{\partial \mathscr L}{\partial(\partial_\mu\Psi)}\delta\Psi \nonumber\\
+&=& \frac{\partial( -m\bar\Psi\Psi +\ri\bar\Psi\gamma_\mu\partial^\mu\Psi)}{\partial(\partial_\mu\Psi)}\ri ga\Psi \nonumber\\
+&=& -\bar\Psi\gamma^\mu ga\Psi =-ga \bar\Psi\gamma^\mu\Psi\text{。}
+\end{eqnarray}
+由于连续性方程对于任意$a$都成立，故略去%
+\mpar{保留常数$g$，它的值由实验决定，而不是任意选取的。}%
+任意的常数因子$a$。故，我们定义
+\begin{equation}
+J^\mu = -g\bar\Psi\gamma^\mu\Psi\label{eq:7.36}
+\end{equation}
+这常被称作{\bf 四电流(electric four-current)}。零分量正是电荷密度，其空间积分对时间守恒\mpar{类似的推导参见\ref{eq:4.39}式。}
+\begin{equation}
+Q = \int\rd^3\bm{x}\underbrace{\rho}_{\text{电荷密度}} = \int\rd^3\bm{x}~J^0 = -g\int\rd^3\bm{x} \bar\Psi\gamma^0\Psi
+\end{equation}
+在量子框架下，$\Psi$和概率幅相关，有要求$\int\rd^3\bm{x}~\bar\Psi\gamma^0\Psi=1$，即总概率必须为$100\%=1$。所以说守恒量实际就是耦合强度$g$，在电磁作用意义下正比于电荷。所以，全局\uo 对称性导致了电荷守恒。
 
+注意\ref{eq:7.22}式，我们可以借助\ref{eq:7.36}式将其改写成
+\begin{eqnarray}
+\partial_\sigma(\partial^\sigma A^\rho - \partial^\rho A^\sigma) + \underbrace{g\bar\Psi\gamma^\rho\Psi}_{=-J^\rho} &=& 0 \nonumber\\
+\rightarrow \partial_\sigma(\partial^\sigma A^\rho - \partial^\rho A^\sigma) &=& J^\rho\text{。}
+\end{eqnarray}
+借助\ref{eq:6.22}式中定义的电磁张量，改写作
+\begin{equation}
+\partial_\sigma F^{\rho\sigma} = J^\rho \text{。}
+\end{equation}
+
+这即是在有电流情况下的非齐次 Maxwell 方程组。这些方程组%
+\mpar{“组”，因为对于每一个分量都有一个方程}%
+，和非齐次 Maxwell 方程组（可以由$F^{\rho\sigma}$的定义直接得到%
+\mpar{在\ref{chap11}章中将会见到}%
+）一起，是经典电动力学的基础。
+
+接下来我们将快速的过一遍有质量自旋为一的场和零自旋场的相互作用。
 \subsection{零自旋有质量场的相互作用}\label{sec7.1.7}
+注意我们导出的零自旋场的拉格朗日量
+\[
+{\mathscr L}= \frac{1}{2}(\partial_\mu\Phi\partial^\mu\Phi-m^2\Phi^2)
+\]
+不是\uo 不变的，做变换$\Phi\rightarrow\Phi'=\ue^{\ri a}\Phi$看一下就知道了。
 
+但是，复标量理论
+\begin{equation}
+{\mathscr L}= \frac{1}{2}(\partial_\mu\Phi^*\partial^\mu\Phi-m^2\Phi^*\Phi)
+\end{equation}
+具有\uo 对称性，因为有$\Phi\rightarrow\Phi'=\ue^{\ri a}\Phi$及$\Phi^*\rightarrow(\Phi^*)'=\ue^{-\ri a}\Phi^*$。所以我们有机会像\ref{sec7.1}节中对\spint 理论所做的那样，导出一个相互作用理论。推导完全是类似的%
+\mpar{正确的拉格朗日量可以仅通过做替换$\partial_\mu \rightarrow D_\mu = \ri \partial_\mu + A_\mu$来得到}%
+，结果是
+\begin{equation}
+{\mathscr L}= \frac{1}{2}\left(\left((\partial_\mu-\ri qA)\Phi^*\right)\left((\partial^\mu+\ri qA^\mu)\Phi\right)-m^2\Phi^*\Phi\right)
+\end{equation}
+代入拉格朗日方程
+\[
+\begin{aligned}
+\frac{\partial \mathscr{L}}{\partial \Phi} - \partial_\mu \left( \frac{\partial \mathscr{L}}{\partial (\partial_\mu \Phi)} \right) &= 0 \\
+\frac{\partial \mathscr{L}}{\partial \Phi^*} - \partial_\mu \left( \frac{\partial \mathscr{L}}{\partial (\partial_\mu \Phi^*)} \right) &= 0\text{，}
+\end{aligned}
+\]
+最终得到相应的运动方程\footnote{\textcolor{red}{译注：下式符号有误，已更正}}
+\begin{eqnarray}
+(\partial_\mu+\ri qA_\mu)(\partial^\mu-\ri qA^\mu)\Phi^*-m^2\Phi^*&=&0 \\
+(\partial_\mu-\ri qA_\mu)(\partial^\mu+\ri qA^\mu)\Phi-m^2\Phi&=&0 \text{，}
+\end{eqnarray}
+描述了每一个零自旋场和自旋为一的无质量场相耦合。
 \subsection{自旋为$1$有质量场的相互作用}\label{sec7.1.8}
-
+自旋为$1${\bf 有质量}场和自旋为$1${\bf 无质量}场的相互作用也可以简单的由对称性得到。自旋为$1$无质量场的拉格朗日量为
+\[
+{\mathscr L}_\text{Maxwell} = \frac{1}{4}F^{\mu\nu}F_{\mu\nu} \text{。}
+\]
+为了区分有质量场和无质量场，我们将有质量场命名为$B^\mu$，并定义
+\[
+G^{\mu\nu} := \partial^\mu B^\nu - \partial^\nu B^\mu
+\]
+自旋为$1$的有质量场的拉格朗日量写作（\ref{eq:6.19}式）
+\[
+G_\text{Proca} = \frac{1}{2}G^{\mu\nu}G_{\mu\nu}+m^2 B^\mu B_\mu
+\]
+Lorentz 对称性说拉格朗日量中的相互作用项一定具有形式
+\[
+{\mathscr L}_\text{Procal-相互作用}=CG_{\mu\nu}F^{\mu\nu}
+\]
+其中耦合常数$C$需要由实验来定。感兴趣的读者可以借助欧拉-拉格朗日方程自行推导相应的运动方程。
 \section[$\mathcal{SU}(2)$相互作用]{$\mathcal{SU}(2)$ Interaction\quad $\mathcal{SU}(2)$相互作用}\label{sec7.2}
+\uo 对称性的成功激励着我们提出这个问题：\uo 对称性是我们的拉格朗日量唯一的内禀对称性吗？
+
+事实上，我们能够在两个无质量\spint 粒子上找到另一个内禀对称性。我们将\ref{sec6.3}节中得到的拉格朗日量作两份加在一起，就是两个无质量\spint 粒子的拉格朗日量了。最后的结果即\ref{eq:6.16}式：
+\[
+{\mathscr L}_\text{Dirac} = \bar\psi(\ri\gamma_\mu\partial^\mu-m)\psi\text{。}
+\]
+这里我们将质量项略去，即$m=0$，否则马上就能看到拉格朗日量将不是变换不变的。再之后将看到我们是怎么在不破坏对称性的情况下把质量项捡回来的。“作两份加在一起”指的是
+\begin{equation}
+{\mathscr L}_{\text{D}_1+\text{D}_2} = \ri\bar\psi_1\gamma_\mu\partial^\mu\psi_1+\ri\bar\psi_2\gamma_\mu\partial^\mu\psi_2
+\end{equation}
+通过新定义{\bf 二重态(doublet)}$\Psi$
+\[
+\begin{aligned}
+\Psi &:= \begin{pmatrix}
+\psi_1 \\ \psi_2
+\end{pmatrix} \\
+\rightarrow \bar\Psi &:= \begin{pmatrix}
+\bar\psi_1 & \bar\psi_2
+\end{pmatrix}
+\end{aligned}
+\]
+我们能将前式改写成
+\begin{equation}
+{\mathscr L}_{\text{D}_1+\text{D}_2} = \ri\bar\Psi\gamma_\mu\partial^\mu\Psi\text{。}
+\end{equation}
+
+这个拉格朗日量在{\bf 全局}\sutw 变换
+\begin{eqnarray}
+\Psi \rightarrow\Psi' &=& \ue^{\ri a_i \frac{\sigma_i}{2}}\Psi \\
+\Rightarrow \bar\Psi \rightarrow\bar\Psi' &=& \bar\Psi\ue^{-\ri a_i \frac{\sigma_i}{2}} \text{，}
+\end{eqnarray}
+下不变。其中重复指标$i$代表求和，$a_i$为任意实数而$\frac{\sigma_i}{2}$是\sutw 群的常用生成元，$\sigma_i$是泡利矩阵。
+
+为了看明白不变性，我们将变换后的拉格朗日量写出%
+\mpar{这里我们丢掉了质量项。形如$-m_1\bar\Psi\Psi$和$-m_2\bar\Psi\Psi$的项可以借助$\Psi$的二分量定义和质量矩阵
+\[
+m:= \begin{pmatrix}
+m_1 & 0 \\ 0 & m_2
+\end{pmatrix}
+\]
+写作
+\[
+{\mathscr L}_{\text{D}_1+\text{D}_2} = -\bar\Psi m\Psi\text{。}
+\]
+不幸的是，这一项并不是\sutw 不变的，即
+\[
+{\mathscr L}'_{\text{D}_1+\text{D}_2} = -\bar\Psi' m\Psi'= \ri\bar\Psi\underbrace{\ue^{-\ri a_i \frac{\sigma_i}{2}}m\ue^{\ri a_i \frac{\sigma_i}{2}}}_{\ne m}\Psi\text{。}
+\]
+当质量相等$m_1=m_2$时，它自然是不变的，但是等会能看到我们可以在不违背对称性的情况下包含任意大小的质量。实验告诉我们二重态的两个场并没有产生相同质量的粒子，即$m_1\ne m_2$。稍后会有更加详细的讨论。}\footnote{\textcolor{red}{译注：原文边注公式缺一 prime ，已更正}}
+\begin{equation}
+\begin{aligned}
+{\mathscr L}'_{\text{D}_1+\text{D}_2} &= \ri\bar\Psi'\gamma_\mu\partial^\mu\Psi' \\
+&=\ri\bar\Psi\ue^{-\ri a_i \frac{\sigma_i}{2}}\gamma_\mu\partial^\mu\ue^{\ri a_i \frac{\sigma_i}{2}}\Psi \\
+&=\ri\bar\Psi\gamma_\mu\partial^\mu\Psi = {\mathscr L}_{\text{D}_1+\text{D}_2}\text{，}\quad \checkmark
+\end{aligned}
+\end{equation}
+最后一行源于我们的变换$\ue^{\ri a_i\frac{\sigma_i}{2}}$作用在我们的新定义的二分量对象$\Psi$上，而$\gamma_\mu$作用在二重态里面的对象上，即 Dirac 旋量%
+\footnote{译注：用线性代数的话来讲，两个变换分别作用在两个子空间上，而这两个子空间的直积才是二重态所处的线性空间。}%
+。我们可以用指标来将其写清楚\footnote{译注：指标真尼玛多。}
+\[
+\left[\left(\ue^{-\ri a_i\frac{\sigma_i}{2}}\right)_{ab}\delta_{\alpha\beta}\right]\left[\delta_{bc}\gamma_\mu^{\beta\delta}\right]\left[\left(\ue^{\ri a_i\frac{\sigma_i}{2}}\right)_{cd}\delta_{\delta\epsilon}\right]=\left[\delta_{ad}\gamma_\mu^{\alpha\beta}\right]
+\]
+
+这个对称性也该作为局域对称性。\sutw 变换将二重态的两个分量混合起来。稍后我们将会将这两个场称作电子和电子中微子场。对称性告诉我们，把哪个叫电子哪个叫电子中微子其实无所谓，因为用了\sutw 变换，想怎么换就怎么换。如果这仅仅是一个全局变换，那么当我们确定一个选择%
+\mpar{这叫{\bf 规范选取(choosing a gauge)}。}%
+，即哪个叫电子哪个叫电子中微子后，这个选择将瞬间适用到整个宇宙上去。故我们得研究局域变换。我们再一次发现它不是的，但正如局域\uo 对称性的情形一样，我们将尽最大努力让拉格朗日量具有局域\sutw 不变性。
+
+问题依旧出在求导上，这会导致额外项：
+\begin{equation}
+\begin{aligned}
+{\mathscr L}'_{\text{D}_1+\text{D}_2} &= \ri\bar\Psi'\gamma_\mu\partial^\mu\Psi' &\\
+&=\ri\bar\Psi\ue^{-\ri a_i(x) \frac{\sigma_i}{2}}\gamma_\mu\partial^\mu\ue^{\ri a_i(x) \frac{\sigma_i}{2}}\Psi &\\
+&=\ri\bar\Psi\gamma_\mu\partial^\mu\Psi-\bar\Psi\gamma_\mu\left(\partial^\mu a_i(x)\frac{\sigma_i}{2}\right)\Psi &\ne {\mathscr L}_{\text{D}_1+\text{D}_2}\text{。}
+\end{aligned}
+\end{equation}
+有着\ref{sec7.1}节中处理\uo 的经验，我们很清楚接下来该做什么。我们将一步一步的导出一个局域\sutw 不变的拉格朗日量，这会花一些时间。为了避免读者陷入迷惑，在这里先列出接下来要进行的步骤：
+\begin{itemize}
+\item 最后的结论是，加上用以描述两个\spint 场$\begin{pmatrix} \psi_1\\ \psi_2 \end{pmatrix}$和三个有质量自旋为$1$的场$W_i^\mu$相互作用的额外项$\ri\bar\Psi\gamma_\mu W^\mu_i\sigma_i\Psi$后，拉格朗日量成为局域\sutw 不变的。
+\item 注意，不变性仅当按照下式变换
+\[
+(W_\mu)_i\rightarrow (W'_\mu)_i=(W_\mu)_i+\partial_\mu a_i(x)+\epsilon_{ijk}a_j(x)(W_\mu)_k
+\]
+而不是
+\[
+(W_\mu)_i\rightarrow (W'_\mu)_i=(W_\mu)_i+\partial_\mu a_i(x)\text{，}
+\]
+即不同于\uo 对称性时的情况。
+\item 仅当自由场拉格朗日量为如下形式\footnote{\textcolor{red}{译注：原文字体错误，已更正。}}
+\[
+{\mathscr L}=\frac{1}{4}(W_{\mu\nu})_i(W^{\mu\nu})^i
+\]
+其中
+\[
+(W_{\mu\nu})_i=\partial_\mu(W_\nu)_i-\partial_\nu(W_\mu)_i+\epsilon_{ijk}(W_\mu)_j(W_\nu)_k
+\]
+而不是
+\[
+(W_{\mu\nu})_i=\partial_\mu(W_\nu)_i-\partial_\nu(W_\mu)_i\text{。}
+\]
+时，对称性才存在。换言之，为了得到一个局域\sutw 不变的拉格朗日量，我们必须重新定义三个$W^\mu_i$场的拉格朗日量，使得其在变换
+\[
+(W_\mu)_i\rightarrow (W'_\mu)_i=(W_\mu)_i+\partial_\mu a_i(x)+\epsilon_{ijk}a_j(x)(W_\mu)_k
+\]
+下不变。
+\end{itemize}
+
+现在我们来具体执行这些步骤。从\ref{eq:7.11}式中我们得知自旋为$1$的场有内禀对称性
+\[
+A_\mu\rightarrow A'(x)+\partial_\mu a(x)
+\]
+而这里我们将会使用三个自旋为$1$的场$W_1^\mu,W_2^\mu$和$W_3^\mu$，这是因为\sutw 有三个生成元$\frac{\sigma_i}{2}$，由指数上的求和$a_i(x)\frac{\sigma_i}{2}$产生的每一个额外项都需要一个场。这导致了局域内禀对称性
+\[
+(W_\mu)_i\rightarrow (W'_\mu)_i=(W'_\mu)_i+\partial_\mu a_i(x)
+\]
+故我们尝试在拉格朗日量里添加项
+\[
+\bar\Psi\gamma_\mu\frac{\sigma_j}{2}W^\mu_j\Psi\text{。}
+\]
+不幸的是，这样并不能得到局域\sutw 不变的拉格朗日量%
+\footnote{\textcolor{red}{译注：原文下式上下标混乱，以及最后两行漏$1/2$因子，以及倒数第二个等号应该为不等号，已更正。}}
+\begin{equation}
+\begin{aligned}
+{\mathscr L}'_{\text{D}_1+\text{D}_2+\text{额外项}} &= \ri\bar\Psi'\gamma_\mu\partial^\mu\Psi'+\bar\Psi'\gamma_\mu\frac{\sigma_j}{2} {W'}_j^\mu \Psi' \\
+&= \ri\bar\Psi\ue^{-\ri a_i(x)\frac{\sigma_i}{2}}\gamma_\mu\partial^\mu\ue^{\ri a_i(x)\frac{\sigma_i}{2}}\Psi \\
+& \quad +\ri\bar\Psi\ue^{-\ri a_i(x)\frac{\sigma_i}{2}}\gamma_\mu\frac{\sigma_j}{2}\left(W_j^\mu+\partial^\mu a_j(x)\right)\ue^{\ri a_i(x)\frac{\sigma_i}{2}}\Psi \\
+&= \ri\bar\Psi\gamma_\mu\partial^\mu\Psi - \bar\Psi\gamma_\mu\left(\partial^\mu a_i(x)\frac{\sigma_i}{2}\right)\Psi \\
+& \quad + \bar\Psi\underbrace{\ue^{-\ri a_i(x)\frac{\sigma_i}{2}}\gamma_\mu\frac{\sigma_j}{2}W_j^\mu\ue^{\ri a_i(x)\frac{\sigma_i}{2}}}_{\mathclap{\ne \gamma_\mu\frac{\sigma_j}{2}W_j^\mu\text{因为}[\frac{\sigma_i}{2},\frac{\sigma_j}{2}]=\epsilon_{ijk}\frac{\sigma_k}{2}\ne 0 }} \Psi \\
+& \quad +\ri\bar\Psi\ue^{-\ri a_i(x)\frac{\sigma_i}{2}}\gamma_\mu\frac{\sigma_j}{2}\left(\partial^\mu a_j(x)\right)\ue^{\ri a_i(x)\frac{\sigma_i}{2}}\Psi \\
+&\ne \ri\bar\Psi\gamma_\mu\partial^\mu\Psi -\cancel{\bar\Psi\gamma_\mu\left(\partial^\mu a_i(x)\frac{\sigma_i}{2}\right)\Psi} + \bar\Psi\gamma_\mu\frac{\sigma_i}{2}W^\mu_i\Psi \\
+& \quad + \cancel{\bar\Psi\gamma_\mu\left(\partial^\mu a_i(x)\frac{\sigma_i}{2}\right)\Psi} \\
+&= \ri\bar\Psi\gamma_\mu\partial^\mu\Psi + \bar\Psi\gamma_\mu\frac{\sigma_i}{2}W^\mu_i\Psi = {\mathscr L}_{\text{D}_1+\text{D}_2+\text{额外项}} \quad \checkmark \label{eq:7.50}
+\end{aligned}
+\end{equation}
+容易发现问题出在\sutw 的生成元不对易上%
+\mpar{数学上将有非对易元素的群称为非阿贝尔的。作为对比，\uo 是阿贝尔的，此时一切都相对简单。}%
+。我们来仔细研究一下这个困难。正如通常处理 Lie 群的那样，将目光集中在无穷小变换上，略去高阶项：
+\begin{equation}
+\begin{aligned}
+\ue^{-\ri a_i(x)\frac{\sigma_i}{2}}\frac{\sigma_j}{2}\ue^{\ri a_i(x)\frac{\sigma_i}{2}} & = \left(1-\ri a_i(x)\frac{\sigma_i}{2}\right)\frac{\sigma_j}{2}\left(1+\ri a_i\frac{\sigma_i}{2}\right)\\
+& = \frac{\sigma_j}{2}-a_i(x)\frac{\sigma_i}{2}\frac{\sigma_j}{2}+a_i(x)\frac{\sigma_j}{2}\frac{\sigma_i}{2}+{\mathcal O}(a^2)\\
+& = \frac{\sigma_j}{2}+a_i(x)\left[\frac{\sigma_j}{2},\frac{\sigma_i}{2}\right]+{\mathcal O}(a^2)\\
+& = \frac{\sigma_j}{2}-a_i(x)\epsilon_{ijk}\frac{\sigma_k}{2}+{\mathcal O}(a^2)\ne\frac{\sigma_j}{2} \label{eq:7.51}
+\end{aligned}
+\end{equation}
+作为无穷小变换，${\mathcal O}(n^2)$和更高阶的项都可以略去，拉格朗日量为
+\begin{equation}
+\begin{aligned}
+{\mathscr L}'_{\text{D}_1+\text{D}_2+\text{额外项}} &= \ri\bar\Psi'\gamma_\mu\partial^\mu\Psi'+\bar\Psi'\gamma_\mu\frac{\sigma_j}{2} {W'}_j^\mu \Psi' \\
+&\underbrace{=}_{\mathclap{\text{\ref{eq:7.50}式}}} \ri\bar\Psi\gamma_\mu\partial^\mu\Psi - \bar\Psi\gamma_\mu\left(\partial^\mu a_i(x)\frac{\sigma_i}{2}\right)\Psi + \bar\Psi\ue^{-\ri a_i(x)\frac{\sigma_i}{2}}\gamma_\mu\frac{\sigma_j}{2}W_j^\mu\ue^{\ri a_i(x)\frac{\sigma_i}{2}} \Psi \\
+&\quad  +\ri\bar\Psi\ue^{-\ri a_i(x)\frac{\sigma_i}{2}}\gamma_\mu\frac{\sigma_j}{2}\left(\partial^\mu a_j(x)\right)\ue^{\ri a_i(x)\frac{\sigma_i}{2}}\Psi \\
+&\underbrace{\approx}_{\mathclap{\text{\ref{eq:7.51}式}}}\ri\bar\Psi\gamma_\mu\partial^\mu\Psi - \bar\Psi\gamma_\mu\left(\partial^\mu a_i(x)\frac{\sigma_i}{2}\right)\Psi + \bar\Psi\gamma_\mu \left(\frac{\sigma_j}{2}-a_i(x)\epsilon_{ijk}\frac{\sigma_k}{2}\right) W_j^\mu \Psi \\
+&\quad  +\ri\bar\Psi\gamma_\mu\left(\frac{\sigma_j}{2}-a_i(x)\epsilon_{ijk}\frac{\sigma_k}{2}\right)\left(\partial^\mu a_j(x)\right)\Psi \\
+&=\ri\bar\Psi\gamma_\mu\partial^\mu\Psi - \cancel{\bar\Psi\gamma_\mu\left(\partial^\mu a_i(x)\frac{\sigma_i}{2}\right)\Psi} + \bar\Psi\gamma_\mu \frac{\sigma_j}{2} W_j^\mu \Psi - \bar\Psi\gamma_\mu a_i(x)\epsilon_{ijk}\frac{\sigma_k}{2} W_j^\mu \Psi \\
+&\quad + \cancel{\bar\Psi\gamma_\mu\left(\partial^\mu a_i(x)\frac{\sigma_i}{2}\right)\Psi} - \underbrace{\ri\bar\Psi\gamma_\mu a_i(x)\epsilon_{ijk}\frac{\sigma_k}{2}\left(\partial^\mu a_j(x)\right)\Psi}_{{\mathcal O}(a^2)} \\
+&=\ri\bar\Psi\gamma_\mu\partial^\mu\Psi + \bar\Psi\gamma_\mu \frac{\sigma_j}{2} W_j^\mu \Psi - \bar\Psi\gamma_\mu a_i(x)\epsilon_{ijk}\frac{\sigma_k}{2} W_j^\mu \Psi \label{eq:7.52}
+\end{aligned}
+\end{equation}
+属于$(W_\mu)_i$的能保证\sutw 不变的内禀对称性只能是
+\[
+(W_\mu)_i\rightarrow (W'_\mu)_i=(W_\mu)_i+\partial_\mu a_i(x)+\epsilon_{ijk}a_j(x)(W_\mu)_k
+\]
+因为它能够在拉格朗日量中添加一项，恰好抵消掉那个破坏对称性的家伙%
+\footnote{\textcolor{red}{译注：原文上下标混乱，且等号注释位置有误，已更正。}}
+\begin{equation}
+\begin{aligned}
+{\mathscr L}'_{\text{D}_1+\text{D}_2+\text{额外项}} &= \ri\bar\Psi'\gamma_\mu\partial^\mu\Psi'+\bar\Psi'\gamma_\mu\frac{\sigma_j}{2} {W'}_j^\mu \Psi' \\
+&=\ri\bar\Psi\ue^{-\ri a_i(x)\frac{\sigma_i}{2}}\gamma_\mu\partial^\mu\ue^{\ri a_i(x)\frac{\sigma_i}{2}}\Psi \\
+& \quad +\ri\bar\Psi\ue^{-\ri a_i(x)\frac{\sigma_i}{2}}\gamma_\mu\frac{\sigma_j}{2}\left(W_j^\mu+\partial^\mu a_j(x)+\epsilon_{jlm}a_l(x)(W^\mu)_m\right)\ue^{\ri a_i(x)\frac{\sigma_i}{2}}\Psi \\
+&\underbrace{=}_{\mathclap{\text{\ref{eq:7.52}式}}} \ri\bar\Psi\gamma_\mu\partial^\mu\Psi + \bar\Psi\gamma_\mu \frac{\sigma_j}{2} W_j^\mu \Psi - \cancel{\bar\Psi\gamma_\mu a_i(x)\epsilon_{ijk}\frac{\sigma_k}{2} W_j^\mu \Psi} + \cancel{\bar\Psi\gamma_\mu \frac{\sigma_j}{2} \epsilon_{ilm}a_l(x) W_m^\mu \Psi} \\
+&= {\mathscr L}_{\text{D}_1+\text{D}_2+\text{额外项}} \quad \checkmark
+\end{aligned}
+\end{equation}
+接下来得看看这个到底是不是三个自旋为$1$的自由粒子的拉格朗日量的内禀对称性。三个自旋为$1$的粒子的拉格朗日量是
+\begin{equation}
+\begin{aligned}
+{\mathscr L}_{3\times\text{Maxwell}} &= \frac{1}{4}(W^{\mu\nu})_1(W_{\mu\nu})_1+\frac{1}{4}(W^{\mu\nu})_2(W_{\mu\nu})_2+\frac{1}{4}(W^{\mu\nu})_3(W_{\mu\nu})_3\\
+&=\frac{1}{4}(W^{\mu\nu})_i(W_{\mu\nu})_i
+\end{aligned}
+\end{equation}
+其中
+\begin{equation*}
+(W_{\mu\nu})_i=\partial_\mu(W_\nu)_i-\partial_\nu(W_\mu)_i\text{。}
+\end{equation*}
+
+我们希望拉格朗日量在变换
+\[
+(W_\mu)_i\rightarrow (W'_\mu)_i=(W'_\mu)_i+\partial_\mu a_i(x)+\epsilon_{ijk}a_j(x)(W_\mu)_k
+\]
+下不变。变换后的拉格朗日量是
 
 \section[质量项、${\mathcal U}(1)$和$\mathcal{SU}(2)$的统一]{Mass Terms and Unification of ${\mathcal U}(1)$ and $\mathcal{SU}(2)$ \quad 质量项、${\mathcal U}(1)$和$\mathcal{SU}(2)$的统一}\label{sec7.3}
 

@@ -34,7 +34,7 @@ Translation of `Physics from Symmetry'.
     Lagrange        拉格朗日
     Lagrangian      拉格朗日量
     Lagrangian formalism        拉格朗日形式
-    
+    abelian         阿贝尔（的）
     Lie group       Lie群
     
     unitary matrix 幺正矩阵
@@ -48,7 +48,7 @@ Translation of `Physics from Symmetry'.
 
 疑难名词(尽量按字母表顺序添加)
     
-    (0,0) representation of  the Lorentz group      洛伦兹群的(0,0)表示
+    (0,0) representation of  the Lorentz group      Lorentz 群的(0,0)表示
     
     covariant energy-impulse vector     协变能动矢量  四动量
     
