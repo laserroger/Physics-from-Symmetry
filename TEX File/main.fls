@@ -631,6 +631,7 @@ INPUT Pictures/chapter_head_1.pdf
 INPUT ./Chaps/Chap7.tex
 INPUT ./Chaps/Chap7.tex
 INPUT Pictures/chapter_head_1.pdf
+INPUT c:/texlive/texmf-dist/fonts/tfm/public/lm/ec-lmbx6.tfm
 OUTPUT main.ptc
 INPUT main.aux
 INPUT Preface.aux
