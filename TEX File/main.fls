@@ -612,6 +612,9 @@ INPUT c:/texlive/texmf-dist/fonts/tfm/public/lm/ec-lmri7.tfm
 INPUT Pictures/fig3_7.eps
 INPUT Pictures/fig3_7.eps
 INPUT c:/texlive/texmf-dist/fonts/tfm/public/amsfonts/euler/eufm10.tfm
+INPUT c:/texlive/texmf-dist/fonts/tfm/public/lm/ec-lmbx6.tfm
+INPUT Pictures/fig3_8.eps
+INPUT Pictures/fig3_8.eps
 INPUT ./Chaps/Chap4.tex
 INPUT ./Chaps/Chap4.tex
 INPUT Pictures/chapter_head_1.pdf
@@ -631,7 +634,6 @@ INPUT Pictures/chapter_head_1.pdf
 INPUT ./Chaps/Chap7.tex
 INPUT ./Chaps/Chap7.tex
 INPUT Pictures/chapter_head_1.pdf
-INPUT c:/texlive/texmf-dist/fonts/tfm/public/lm/ec-lmbx6.tfm
 OUTPUT main.ptc
 INPUT main.aux
 INPUT Preface.aux
