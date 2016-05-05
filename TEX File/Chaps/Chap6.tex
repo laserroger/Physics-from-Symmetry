@@ -40,11 +40,56 @@ S = \int dx\mathcal{L}
 \end{align}
 得出，其中$dx$可以理解为对时间和空间的积分。因此，诸如$\Phi\partial_\mu\partial^\mu\Phi$的项实际是没必要的，因为它等效于$\partial_\mu\Phi\partial^\mu\Phi$，从分部积分就可以直接地看到这一点\mpar{很直接的，边界项会被小区，因为在远处场很小。值得注意的是，这是由于我们物理里面的速度是有上限的（第\ref{sec2.3}节）。因此，很远处的场对于有限远的$x$位置的场不会有影响}。
 
-不仅如此，Lorentz{\bf 不变形}要求拉格朗日量必须是一个标量。因此，所有奇数阶的$\partial_\mu$，比如$\partial_\mu\Phi$是禁止的。值得一提的是，如果常数，比如$a, c$，有一个Lorentz指标的话，这说明这些常数是一个$4$-矢量，标定了时空的方向从二破坏了空间的各向同性的要求。我们实际上可以忽略常数项，也就是$A=0$，因为我们的物理理论需要从欧拉-拉格朗日方程中得到，因此一个常数项对运动方程没有影响\mpar{考虑\eqref{eq4.10}：$\frac{\partial{\mathcal{L}}}{\partial\Phi}-\partial_\mu\left(\frac{\partial{\mathcal{L}}}{\partial(\partial_\mu\Phi)}\right)$，因此$\mathcal{L}\to\mathcal{L}+A$中的常数项$A$并不改变任何东西：$\frac{\partial({\mathcal{L}}+A)}{\partial\Phi}-\partial_\mu\left(\frac{\partial({\mathcal{L}}+A)}{\partial(\partial_\mu\Phi)}\right) = \frac{\partial{\mathcal{L}}}{\partial\Phi}-\partial_\mu\left(\frac{\partial{\mathcal{L}}}{\partial(\partial_\mu\Phi)}\right)$}。
+不仅如此，Lorentz{\bf 不变形}要求拉格朗日量必须是一个标量。因此，所有奇数阶的$\partial_\mu$，比如$\partial_\mu\Phi$是禁止的。值得一提的是，如果常数，比如$a, c$，有一个Lorentz指标的话，这说明这些常数是一个$4$-矢量，标定了时空的方向从二破坏了空间的各向同性的要求。我们实际上可以忽略常数项，也就是$A=0$，因为我们的物理理论需要从欧拉-拉格朗日方程中得到，因此一个常数项对运动方程没有影响\mpar{考虑\eqref{eq4.10}：$\frac{\partial{\mathcal{L}}}{\partial\Phi}-\partial_\mu\left(\frac{\partial{\mathcal{L}}}{\partial(\partial_\mu\Phi)}\right)$，因此$\mathcal{L}\to\mathcal{L}+A$中的常数项$A$并不改变任何东西：$\frac{\partial({\mathcal{L}}+A)}{\partial\Phi}-\partial_\mu\left(\frac{\partial({\mathcal{L}}+A)}{\partial(\partial_\mu\Phi)}\right) = \frac{\partial{\mathcal{L}}}{\partial\Phi}-\partial_\mu\left(\frac{\partial{\mathcal{L}}}{\partial(\partial_\mu\Phi)}\right)$}。除此之外，我们可以忽略掉$\Phi$的线性项，也就是说$B=0$，因为从欧拉－拉格朗日方程中可以看出这一项只会给运动方程增加一个常数\mpar{$\mathcal{L}\to\mathcal{L}+B\Phi$使得$\frac{\partial(\mathcal{L}+B\Phi)}{\partial\Phi}-\partial_\mu\left(\frac{\partial(\mathcal{L}+B\Phi)}{\partial(\partial_\mu\Phi)}\right)=\frac{\partial\mathcal{L}}{\partial\Phi}-\partial_\mu\left(\frac{\partial{\mathcal{L}}}{\partial(\partial_\mu\Phi)}\right)+B=0$}。那么，剩下的项就是：
+\begin{align}
+\mathcal{L}=C\Phi^2+E\partial_\mu\Phi\partial^\mu\Phi
+\end{align}
+
+我们在本章开始的时候就指明了我们想建立一个自由场的理论，这就是说我们只有一个$\Phi$而不会有形如$\Phi_1\Phi_2$这种相互作用形式；我们在下一章会建立一种理论来描述它。
+
+还有一件事情需要注意：我们最后留了两个常数$C$和$E$，用变分法我们可以把它俩最重收为一个常数，因为拉格朗日量整体差一个常数对物理没有影响\mpar{$\mathcal{L}\to C\mathcal{L}$得到
+\[\begin{split}
+\frac{\partial(C\mathcal{L})}{\partial\Phi}&-\partial_\mu\left(\frac{\partial(C\mathcal{L})}{\partial(\partial_\mu\phi)}\right)=0\\
+&\updownarrow\\
+\frac{\partial(\mathcal{L})}{\partial\Phi}&-\partial_\mu\left(\frac{\partial(\mathcal{L})}{\partial(\partial_\mu\phi)}\right)=0
+\end{split} \]}。不仅如此，通常我们都在拉格朗日量前增加一个$\frac{1}{2}$，然后称另外的常数位$-m^2$\mpar{后面我们就会明白的看到为什么这样称呼这个常数：它和拉格朗日量用来描述例子质量的形式是一样的。}。因此，我们最重得到了
+\begin{align}
+\mathcal{L}=\frac{1}{2}(\partial_\mu\Phi\partial^\mu\Phi-m^2\Phi^2)
+\end{align}
+
+如果我们现在用变分来处理的话，也就是说把拉格朗日量带入到欧拉－拉格朗日方程\eqref{eq:4.10}的话，我们就得到了运动方程
+\begin{align}
+\begin{split}
+&\frac{\mathcal{L}}{\partial\Phi}-\partial_\mu\left(\frac{\partial(\mathcal{L})}{\partial(\partial_\mu\phi)}\right)=0\\
+&\rightarrow\frac{\partial}{\partial\Phi}\left(\frac{1}{2}(\partial_\mu\Phi\partial^\mu\Phi-m^2\Phi^2)\right)-\partial_\mu\left(\frac{\partial}{\partial(\partial_\mu\Phi)}\left(\frac{1}{2}(\partial_\mu\Phi\partial^\mu\Phi-m^2\Phi^2)\right)\right)=0 \\
+&\rightarrow(\partial_\mu\partial^\mu+m^2)\Phi=0
+\end{split}
+\end{align}
+
+这就是著名的{\bf Kelin-Gordon方程}，是描述自由的自旋$0$的场/粒子的正确的方程。
 
 \subsection[复Kelin-Gordon场]{Complex Kelin-Gordon Field 复Kelin-Gordon场}\label{sec6.2.1}
 
+对于自旋$0$的场来说，我们可以构造Lorentz协变的拉格朗日量而不是用标量场的复共轭。然而对弈自旋$\frac{1}{2}$场$\Psi$来说就不一样了，这会带来非常有趣的结果\mpar{完全不必惊讶：每个自旋$\frac{1}{2}$的粒子都有反粒子。用复数场实际上就是同时考虑两个场，我们接下来会说到。因此，我们强制的令Lorentz协变性同时在{\bf 两个}(紧密联系的)场上作要求，其通常就被解释为粒子和反粒子场。}。而且，我们甚至也可以像很多教科书一样研究等价的Lorentz协变的拉格朗日量
+\[L=\partial_\mu\phi^\dagger\partial^\mu\phi-m^2\phi^\dagger\phi \]
+这实际上与考虑{\bf 两个}同等质量标量场的相互作用是一样的：
+\[L=\frac{1}{2}\partial_\mu\phi_1\partial^\mu\phi_1-\frac{1}{2}m^2\phi_1^2+\frac{1}{2}\partial_\mu\phi_2\partial^\mu\phi_2-\frac{1}{2}m^2\phi_2^2 \]
+因为我们有
+\[\phi\equiv\frac{1}{\sqrt2}(\phi_1+i\phi_2) \]
+Lorentz对称性决定了拉格朗日量的形式。基本的标量(自旋$0$)粒子非常罕见，事实上，只有Higgs玻色子是实验上验证了的这种例子，但是这个拉格朗日量可以用来描述复合系统，比如介子。至此，我们就不在研究这种拉格朗日量了，而且大多数教科书中也仅仅是用它来做练习用。
+
 \section[Dirac方程]{Dirac Equation Dirac 方程}\label{sec6.3}
+\begin{quote}
+Dirac的另一个故事是他第一次遇到Feynman的时候，在漫长的寂静之后他说：``我有一个方程。你也有吗？''\\
+\phantom{Dirac的另一个故事是他第一次遇到}--{\bf Anthony Zee\mpar{Anthony Zee. {\it Quantum Field Theory in a Nutshell}. Princeton University Press, 1st edition, 3 2003. ISBN 9780691010199}}
+\end{quote}
+
+我们这节想要研究自由的自旋$\frac{1}{2}$场/粒子的运动方程。我们会使用Lorentz群的$(\frac{1}{2},0)\oplus(0,\frac{1}{2})$表示，因为要描述宇称变换下的对称性的理论必须同时有$(\frac{1}{2},0)$和$(0,\frac{1}{2})$表示\mpar{我们在第\ref{sec3.7.9}节中说明了，宇称变换会把$\frac{1}{2},0)$表示变成$(0,\frac{1}{2})$表示}。而在这种对称群表示下做变换的东西我们叫做Dirac旋量，同时包含右手旋量和左手旋量。就像已经在第\ref{sec3.7.9}节中讨论的一样，Dirac旋量定义为
+\begin{align}
+\Psi\equiv\left(\begin{matrix}\xi_L\\ \chi_R\end{matrix}\right)=\left(\begin{matrix}\xi_a\\ \chi^{\dot{a}}\end{matrix}\right)
+\end{align}
+
+现在，我们要找Lorentz协变的东西来建立Dirac旋量。
 
 
 \section[Proca方程]{Proca Equation Proca 方程}\label{sec6.4}
