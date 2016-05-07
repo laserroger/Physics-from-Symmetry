@@ -138,13 +138,107 @@ I_4:=(\chi^a)^T\partial_\mu(\sigma^\mu)_{a\dot{b}}\chi^{\dot{b}}=(\chi_R)^\dagge
 因为
 \[\Psi^\dagger\gamma_0\Psi=\left(\begin{matrix}(\xi_L)^\dagger&(\chi_R)^\dagger\end{matrix}\right) \left(\begin{matrix}0&\bar\sigma_0\\\sigma_0&0\end{matrix}\right) \left(\begin{matrix}\xi_L\\\chi_R\end{matrix}\right) = \underbrace{(\xi_L)^\dagger\bar\sigma_0\chi_R}_{=I_1}+\underbrace{(\chi_R)^\dagger\sigma_0\xi_L}_{=I_2} \]
 其余我们之前找到的两个不变量完全一致\mpar{记住$\sigma_0$只是单位矩阵而已，我们有$\bar\sigma_0=\sigma_0$。}，并且
+\[\begin{split}
+\Psi^\dagger\gamma_0\gamma^\mu\partial_\mu\Psi &= \left(\begin{matrix}(\xi_L)^\dagger&(\chi_R)^\dagger\end{matrix}\right)\left(\begin{matrix}0&\bar\sigma_0\\\sigma_0&0\end{matrix}\right)\left(\begin{matrix}0&\sigma^\mu\partial_\mu\\\sigma^\mu\bar\partial_\mu&0\end{matrix}\right)\left(\begin{matrix}\xi_L\\\chi_R\end{matrix}\right)\\
+& =\underbrace{(\xi_L)^\dagger\bar\sigma_0\bar\sigma^\mu\partial_\mu\chi_R}_{=I_3}+\underbrace{(\chi_R)^\dagger\sigma_0\sigma^\mu\partial_\mu\xi_L}_{=I_4} 
+\end{split}\]
+就想说过的那样给出了另外两个不变量\mpar{记得$\sigma^\mu\partial_\mu=\partial_\mu\sigma^\mu$，因为$\sigma^\mu$仅仅是常数矩阵而已。}。通常来说会引入这个记法\footnote{译者注：在一些其它教科书里，一般也会写成$\cancel{\Psi}$。}
+\begin{align}
+\bar\Psi:=(\Psi)^\dagger\gamma_0
+\end{align}
+
+现在，我们已经有了我们我们在第\ref{sec4.2}节讨论过的，所有符合那些约束\mpar{回忆一下，这些约束是关于$\Psi$最高两阶，并且最低阶的非平凡的$\partial_\mu$贡献（这里就是一阶）。}的，用Dirac旋量写出来的，需要的用来构建Lorentz不变的拉格朗日量的东西了\footnote{译者注：这句话太绕口了。直接看英文会好点：Now we have everything we need to construct a Lorentz-invariant Lagrangian that is in agreement with the restrictions discussed in Sec. \ref{sec4.2} using Dirac spinors}：
+\[\mathscr{L}=A\Psi^\dagger\gamma_0\Psi+B\Psi^\dagger\gamma_0\gamma^\mu\partial_\mu\Psi=A\bar\Psi\Psi+ B\bar\Psi\gamma^\mu\partial_\mu\Psi\]
+带路常数($A=-m,B=i$)，我们得到了完整的{\bf Dirac拉格朗日量}
+\begin{align}
+\mathscr{L}_{\text{Dirac}}=-m\bar\Psi\Psi+ i\bar\Psi\gamma^\mu\partial_\mu\Psi=\bar\Psi(i\gamma^\mu\partial_\mu-m)\Psi
+\end{align}
+注意到我们拉格朗日量里面实际上有两个不同的场，因为$\Psi$是复的\mpar{因此左手旋量和右手旋量也都是复的}。不这样的话我们就没办法Lorentz不变了。更准确的说，我们有
+\[\Psi=\Psi_1+i\Psi_2 \]
+其中$\Psi_1,\Psi_2$是实数场。通常我们使用两个不同的复数场$\Psi$和$\bar\Psi$比两个实数场要更方便。
+如果我们把这个拉格朗日量代入到欧拉-拉格朗日方程的话（方便起见，我们在这里再写一遍），
+\begin{align}
+\frac{\partial\mathscr{L}}{\partial\Psi}-\partial_\mu\left(\frac{\partial\mathscr{L}}{\partial(\partial_\mu\Psi)}\right)=0 
+\end{align}
+我们有
+\[-m\bar\Psi-i\partial_\mu\bar\Psi\gamma^\mu=0\to(i\partial^\mu\bar\Psi\gamma_\mu+m\bar\Psi)=0 \]
+同样对场$\bar\Psi$做欧拉-拉格朗日方程
+\[\frac{\partial\mathscr{L}}{\partial\bar\Psi}-\partial_\mu\left(\frac{\partial\mathscr{L}}{\partial(\partial_\mu\bar\Psi)}\right)=0 \]
+我们有
+\begin{align}
+(i\gamma_\mu\partial^\mu-m)\Psi=0
+\end{align}
+这就是著名的{\bf Dirac方程}。记住我们对拉格朗日量进行分部积分也会得到完全一样的东西
+\[-m\bar\Psi\Psi+i\bar\Psi\gamma_\mu\partial^\mu\Psi\underbrace{=}_{\mathclap{分部积分。假想我们这里在进行作用量的那个积分}}-m\bar\Psi\Psi-(i\partial^\mu\bar\Psi)\gamma_\mu\Psi \]
+然后利用欧拉-拉格朗日方程，
+\[\to-m\Psi+i\partial_\mu\gamma^\mu\Psi=0 \]
+因此我们写拉格朗日量的方式是没有约束的。除了它的反对称性\mpar{你完全可以使用更长的拉格朗日量来包含更多的可能的项，但事实上结果没有区别}。
+
 
 
 \section[Proca方程]{Proca Equation Proca 方程}\label{sec6.4}
 
+我们现在想找那些根据Lorentz群的$(\frac{1}{2},\frac{1}{2})$表示变换的东西的运动方程。我们已经看到这个表示{\bf 是}矢量表示，因此这件事就比较简单了。我们首先去一个任意的矢量场$A_\mu$，然后构造所有符合第\ref{sec4.2}节约束的可能的Lorentz不变的项。我们必须结合下标和上标，因为我们在第\ref{sec2.4}节定义的Minkowski空间的标量积是这样的，而标量才是我们拉格朗日量里面需要的。可能的不变量有\mpar{由于我们可以分部积分，我们再一次扔掉了$\partial_\mu\partial^\mu A^\nu A_\nu$这项，而仅留着$\partial^\mu A^\nu\partial_\mu A_\nu$。}
+\[\begin{split}
+I_1=\partial^\mu A^\nu\partial_\mu A_\nu\quad &,\quad I_2=\partial^\mu A^\nu\partial_\nu A_\mu\\
+I_3=A^\mu A_\mu\quad &,\quad I_4=\partial^\mu A_\mu
+\end{split}\]
+而拉格朗日量就写为
+\begin{align}\label{eq6.19}
+\mathscr{L}_{\text{Proka}}C_1\partial^\mu A^\nu\partial_\mu A_\nu+C_2\partial^\mu A^\nu\partial_\nu A_\mu+C_3A^\mu A_\mu+C_4\partial^\mu A_\mu
+\end{align}
+我们可以忽略最后一项$\partial^\mu A_\mu$，因为根据欧拉拉格朗日方程，它只在运动方程里面提供一项常数$C_4$，并不产生什么影响。因此，对$\partial_\mu$来说，一阶是平凡的。
 
+如果我们想要用欧拉-拉格朗日方程分别计算每个场分量的运动方程，
+\[\frac{\partial\mathscr{L}}{\partial A_\rho}=\partial_\sigma\left(\frac{\partial\mathscr{L}}{\partial(\partial_\sigma A_\rho)}\right) \]
+我们就需要非常仔细的处理这些指标。我们先看一下欧拉-拉格朗日方程的右边，并计算与$C_1$有关的项：
+\[\begin{split}
+\partial_\sigma\left(\frac{\partial}{\partial(\partial_\sigma A_\rho)}(C_1\partial^\mu A^\nu\partial_\mu A_\nu\right)\\
+\underbrace{=}_{\mathclap{\text{product rule}}}C_1\partial_\sigma\left((\partial_\mu A_\nu)\frac{\partial(\partial^\mu A^\nu)}{\partial(\partial_\sigma A_\rho)}+(\partial^\mu A^\nu)\frac{\partial(\partial_\mu A_\nu)}{\partial(\partial_\sigma A_\rho)}\right)\\
+\underbrace{=}_{\mathclap{\text{用度规降指标}}}C_a\partial_\sigma\left((\partial_\mu A_\nu)g^{\mu\kappa}g^{\nu\lambda}\frac{\partial(\partial_\kappa A_\lambda)}{\partial(\partial_\sigma A_\rho)}+(\partial^\mu A^\nu)\frac{\partial(\partial_\mu A_\nu)}{\partial(\partial_\sigma A_\rho)}\right)\\
+=C_a\partial_\sigma\left((\partial_\mu A_\nu)g^{\mu\kappa}g^{\nu\lambda}\delta^\sigma_\kappa\delta^\rho_\lambda+(\partial^\mu A^\nu)\delta^\sigma_\mu\delta^\rho_\nu\right)\\
+=C_1\partial_\sigma(\partial^\sigma A^\rho+\partial^\sigma A^\rho)=2C_1\partial_\sigma\partial^\sigma A^\rho
+\end{split} \]
+类似的，我们可以计算出
+\[\partial_\sigma\left(\frac{\partial}{\partial(\partial_\sigma A^\rho)}(C_2\partial^\mu A^\nu\partial_\nu A_\mu)\right)=2C_2\partial^\rho(\partial_\sigma A^\sigma) \]
+因此，\eqref{6.19}的拉格朗日量得到的运动方程为
+\[2C_3A^\rho=2C_1\partial_\sigma\partial^\sigma A^\rho+2C_2\partial^\rho(\partial_\sigma A^\sigma) \]
+如果我们用惯例的常数的话，这就是
+\begin{align}
+\to m^2A^\rho=\frac{1}{2}\partial_\sigma(\partial^\sigma A^\rho-\partial^\rho A^\sigma)
+\end{align}
 
+这被称为{\bf Proca方程组}\mpar{称为方程组是因为我们队以每一个分量$\rho$都有一个方程}，这是有质量自旋为$1$的粒子的波动方程。对于无质量$(m=0)$自旋为$1$的粒子，即光子，方程为
+\begin{align}
+\to 0=\frac{1}{2}\partial_\sigma(\partial^\sigma A^\rho-\partial^\rho A^\sigma)
+\end{align}
 
+这就是没有电流情况下的{\bf 非齐次Maxwell方程组}。通常我们定义电磁张量
+\begin{align}
+F^{\sigma\rho}:=\partial^\sigma A^\rho-\partial^\rho A^\sigma
+\end{align}
+而非齐次Maxwell方程组则是
+\begin{align}
+\partial_\rho F^{\sigma\rho}=0
+\end{align}
+注意我们可以对无质量的自旋$1$场重新写拉格朗日量
+\[\mathscr{L}=\frac{1}{2}(\partial^\mu A^\nu\partial_\mu A_\nu - \partial^\mu A^\nu\partial_\nu A_\mu) \]
+为
+\begin{align}
+\begin{split}
+\mathscr{L}_{\text{Maxwell}}&=\frac{1}{4}F^{\mu\nu}F_{\mu\nu}\\
+&=\frac{1}{4}(\partial^\mu A^\nu-\partial^\nu A^\mu)(\partial_\mu A_\nu-\partial_\nu A_\mu)\\
+&\underbrace{=}_{\text{对哑指标重新命名}}\frac{1}{4}(\partial^\mu A^\nu\partial_\mu A_\nu - \partial^\mu A^\nu\partial_\nu A_\mu-\partial^\mu A^\nu\partial_\nu A_\mu+\partial^\mu A^\nu\partial_\mu A_\nu)\\
+&=\frac{1}{4}(2\partial^\mu A^\nu\partial_\mu A_\nu - 2\partial^\mu A^\nu\partial_\nu A_\mu)\\
+&=\frac{1}{2}(\partial^\mu A^\nu\partial_\mu A_\nu - \partial^\mu A^\nu\partial_\nu A_\mu)\checkmark
+\end{split}
+\end{align}
+$\mathscr{L}_{\text{Maxwell}}$是我们惯用的鞋拉格朗日量的办法。等价的，有质量的自旋$1$的场的拉格朗日量可以写成
+\begin{align}
+\mathscr{L}_{\text{Proca}}\frac{1}{4}F^{\mu\nu}F_{\mu\nu}+m^2A_\mu A^\mu=\frac{1}{2}(\partial^\mu A^\nu\partial_\mu A_\nu - \partial^\mu A^\nu\partial_\nu A_\mu)+m^2A_\mu A^\mu
+\end{align}
+
+在本章，我们得到了描述自由场/粒子们的运动方程。我们像鸦片理解我们根据这些方程能对实验做出什么语言，但是在此之前我们需要更多的方程才行，因为实验永远是涉及相互作用的。比如，我们只能通过其他粒子，比如光子，来测量电子。因此，下一章我们就会得到哪些描述不同的场/粒子之间相互作用的拉格朗日量。
 
 
 
