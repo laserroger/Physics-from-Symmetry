@@ -325,7 +325,7 @@ J_\text{trans} = \frac{\partial\mathcal L}{\partial \dot\vec q} \vec a = m {\dot
 其中$\vec{p}=m{\dot\vec q}$是经典力学中的{\bf 动量(momentum)}。由于等式$\frac{\rd J}{\rd t}$对于任意$\vec a$都成立，所以说：{\bf 拉格朗日量的空间平移不变性导致了动量守恒。}
 
 现在考虑旋转变换，这得需要大于一的维度，因为一维上的旋转是没有意义的。下面将不会使用类似$\vec q$的矢量符号，而是更方便的指标记号。我们能将所有方程简单的用$\vec{q}\rightarrow q_i$改写。考虑无穷小旋转%
-\mpar{这里我们用 Levi-Civita 符号来写旋转生成元。参见\ref{eq:3.63}式下的文字。}%
+\mpar{这里我们用 Levi-Civita 符号来写旋转生成元。参见\ref{equ3.63}式下的文字。}%
 $q_i \rightarrow q_i + \epsilon_{ijk} q_j a_k$，由此$\delta q_i=\epsilon_{ijk}q_j a_k$。仍然是因为由于${\mathcal L}=\frac{1}{2}m{\dot\vec q}^2$不依赖于$\vec q$，我们的拉格朗日量在这样的变换下也不改变，其对应的守恒量是%
 \mpar{下式由\ref{eq:4.16}式导出，这里对应的依旧是$G=0$的情况}
 \begin{equation}
@@ -419,7 +419,7 @@ Noether 定理向我们展示了，为什么这些记号%
 \delta\Phi = \epsilon_{\mu\nu}S^{\mu\nu}\Phi(x)-\frac{\partial\Phi(x)}{\partial x_\mu}\delta x_\mu \text{，}
 \label{eq:4.30}
 \end{equation}
-其中$\epsilon_{\mu\nu}$为旋转参数，$S_{\mu\nu}$为相应的有限维群表示中的旋转算符，额外的负号仅为了方便。$S_{\mu\nu}$是由旋转生成元$S_{i}=\frac{1}{2}\epsilon_{ijk}S_{jk}$和推动生成元$K_i=S_{i0}$构成，类似于\ref{eq:3.165}式中$M_{\mu\nu}$的定义。$S_{\mu\nu}$的这个定义使得我们同时进行旋转和推动。
+其中$\epsilon_{\mu\nu}$为旋转参数，$S_{\mu\nu}$为相应的有限维群表示中的旋转算符，额外的负号仅为了方便。$S_{\mu\nu}$是由旋转生成元$S_{i}=\frac{1}{2}\epsilon_{ijk}S_{jk}$和推动生成元$K_i=S_{i0}$构成，类似于\ref{equ3.165}式中$M_{\mu\nu}$的定义。$S_{\mu\nu}$的这个定义使得我们同时进行旋转和推动。
 
 第一项仅在旋转和推动时较重要，因为平移不会导致场分量的混合。推动所对应的守恒量依旧不是特别有意思，就像在粒子理论中得到的那样。所以实际上这一项只和旋转相关。
 
@@ -486,7 +486,7 @@ P_i &=& \int\rd^3\bm{x}~T_i^0 \label{eq:4.41}
 \[
 x_\mu \rightarrow {x'}_\mu = x_\mu + \delta x_\mu = x_\mu + M_\mu^\sigma x_\sigma
 \]
-其中$M_\mu^\sigma$是转动和推动的在无穷维表示下的生成元，即在\ref{eq:3.240}式中所定义的微分算符。
+其中$M_\mu^\sigma$是转动和推动的在无穷维表示下的生成元，即在\ref{equ3.240}式中所定义的微分算符。
 
 将$\delta x_\mu = M_\mu^\sigma x_\sigma$代入\ref{eq:4.33}中得
 \begin{eqnarray}
@@ -500,13 +500,13 @@ x_\mu \rightarrow {x'}_\mu = x_\mu + \delta x_\mu = x_\mu + M_\mu^\sigma x_\sigm
  &=&\frac{1}{2}\partial_\nu ( T^{\mu\nu} x^\sigma+\partial^\nu T^{\sigma\nu}x^\mu) M_{\mu\sigma} = 0 \nonumber\\
  &\rightarrow& \text{引入}(J^\nu)^{\sigma\mu} \equiv T^{\mu\nu} x^\sigma-\partial^\nu T^{\sigma\nu}x^\mu \rightarrow \partial_\nu (J^\nu)^{\sigma\mu} = 0 \text{。}
 \end{eqnarray}
-在最后一步引入的$J^\nu$被称为{\bf Noether 流(Noether current)}。注意到，由于在\ref{eq:3.165}式定义$
+在最后一步引入的$J^\nu$被称为{\bf Noether 流(Noether current)}。注意到，由于在\ref{equ3.165}式定义$
 M$时引入的反对称性$M_{\mu\sigma}=-M_{\sigma\mu}$，有$M_{\mu\mu}=0$。由此我们找到了六个不同的连续性方程$\partial_\nu (J^\nu) = 0$，分别对应于每一个非零的$M_{\mu\sigma}$\footnote{译注：排除了零元的同时，也将始终互为相反数的一对元视作一个}。使用与\ref{eq:4.39}式一样的方式，我们可以论证如下的量不随时间改变
 \begin{equation}
 Q^{\mu\sigma} = \int \rd^3 \bm{x}~ \left(T^{\mu 0} x^\sigma- T^{\sigma 0}x^\mu\right)
 \end{equation}
 由此我们得到了对应于转动%
-\mpar{回忆一下\ref{eq:3.165}式中提到的转动生成元$J_i$和$M_{\mu\nu}$之间的关系：$J_i = \frac{1}{2}\epsilon_{ijk}M_{jk}$，这里我们使用拉丁字母$i,j\in \{1,2,3\}$而不是希腊字母$\mu,\nu\in\{0,1,2,3\}$，将其限制在空间分量上。}%
+\mpar{回忆一下\ref{equ3.165}式中提到的转动生成元$J_i$和$M_{\mu\nu}$之间的关系：$J_i = \frac{1}{2}\epsilon_{ijk}M_{jk}$，这里我们使用拉丁字母$i,j\in \{1,2,3\}$而不是希腊字母$\mu,\nu\in\{0,1,2,3\}$，将其限制在空间分量上。}%
 不变性的守恒量
 \begin{equation}
 L_\text{orbit}^i = \frac{1}{2}\epsilon_{ijk}Q_{jk} = \frac{1}{2}\epsilon_{ijk} \int \rd^3 \bm{x}~ \left(T^{\mu 0} x^\sigma-\partial^\nu T^{\sigma 0}x^\mu\right) \text{，}

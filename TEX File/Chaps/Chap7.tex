@@ -26,7 +26,7 @@ $\mathcal{U}(1)$对称性出发来得到拉格朗日量
 {\mathscr L} = -m\bar\Psi\Psi+\ri\bar\Psi\gamma_\mu\partial^\mu\Psi + A_\mu\bar\Psi\gamma^\mu\Psi + \partial^\mu A^\nu\partial_\mu A_\nu - \partial^\mu A^\nu \partial_\nu A_\mu \text{，}
 \]
 即{\bf 量子电动力学(quantum electrodynamics)}的拉格朗日量。这个拉格朗日量描述了有电荷有质量的场和无质量自旋为$1$的场（光子场）之间的相互作用。在排除了形如$mA_\mu A^\mu$的“质量项”后（这和用$A_\mu$来描述的光子是无质量的实验事实相符），拉格朗日量只有这样才是局域$\mathcal{U}(1)$不变的%
-\mpar{译注：应该为“只有这样才是且仅是”。}%
+\footnote{译注：应该为“只有这样才是且仅是”。}%
 。利用 Noether 定理，我们能从\uo 对称性中导出一个新的守恒量，它常被解释为{\bf 电荷(electric charge)}。
 
 接下来是$\mathcal{SU}(2)$对称性。引入一个二分量的{\bf 二重态(doublet)}
@@ -178,6 +178,7 @@ A_\mu \rightarrow A_\mu' = A_\mu+a_\mu(x)
 \item 上一节中我们发现了无质量自旋为一的场的一个局域内禀对称性
 \begin{equation}
 A_\mu \rightarrow A_\mu' = A_\mu +\partial_\mu a(x) \text{，}
+\label{eq:7.13}
 \end{equation}
 它仅当我们加上的是一个任意函数的导数$\partial_\mu a(x)$，而不是一个任意函数$a_\mu(x)$时,才是一个局域对称性。
 \end{itemize}
@@ -204,7 +205,7 @@ $g$。这样拉格朗日量
 {\mathscr L}_\text{Dirac+额外项} = -m\bar\Psi\Psi +\ri\bar\Psi\gamma_\mu\partial^\mu\Psi + g A_\mu\bar\Psi\gamma^\mu\Psi \text{。}
 \]
 依据$\Psi$、$\bar\Psi$和$A_\mu$局域变换的规则来变换这个拉格朗日量，得到%
-\mpar{$\Psi$、$\bar\Psi$和$A_\mu$的联合变换被称作\uo 规范变换。}
+\mpar{$\Psi$、$\bar\Psi$和$A_\mu$的联合变换被称作\uo {\bf 规范变换}。}
 \begin{eqnarray}
 {\mathscr L}_\text{Dirac+额外项}' &=& -m\bar\Psi'\Psi' +\ri\bar\Psi'\gamma_\mu\partial^\mu\Psi' + g A_\mu'\bar\Psi'\gamma^\mu\Psi' \nonumber\\
 &\underbrace{=}_{\mathclap{\text{见\ref{eq:7.5}式}}}&  -m\bar\Psi\Psi +\ri\bar\Psi\gamma_\mu\partial^\mu\Psi - g (\partial_\mu a(x))\bar\Psi\gamma^\mu\Psi + g A_\mu'\bar\Psi'\gamma^\mu\Psi' \nonumber \\
@@ -259,7 +260,7 @@ D_\mu \equiv \ri \partial_\mu + gA_\mu\text{，}
 
 现在我们有了用来描述 Dirac 旋量在外加电磁场中的行为的方程(\ref{eq:7.21}式)，所以说可以来兑现在\ref{sec3.7.10}节中许下的承诺了。在那儿我们宣称电荷共轭变换，带有一个暗示性的名字，改变其描述对象的电荷。换言之，如果$\Psi$描述带电荷$+e$的某些东西，而电荷共轭旋量$\Psi^C$描述带电荷$-e$的某些东西。电荷决定了\spint 粒子/场和外加自旋为一的场的耦合强度，我们将考虑$\Psi^C$的运动方程是什么。之后我们将谈谈第三个方程，\ref{eq:7.22}式。
 \subsection{再一次电荷共轭变换}\label{sec7.1.5}
-为了得到对应的方程，我们需要找到 Dirac 旋量的电荷共轭变换算符确切的形式。我们在\ref{sec3.7.10}节中得到了变换（\ref{eq3.236}式）
+为了得到对应的方程，我们需要找到 Dirac 旋量的电荷共轭变换算符确切的形式。我们在\ref{sec3.7.10}节中得到了变换（\ref{equ3.236}式）
 \begin{equation}
 \Psi = \begin{pmatrix}
 \chi_L \\ \tilde\xi_R
@@ -380,12 +381,14 @@ Q = \int\rd^3\bm{x}\underbrace{\rho}_{\text{电荷密度}} = \int\rd^3\bm{x}~J^0
 但是，复标量理论
 \begin{equation}
 {\mathscr L}= \frac{1}{2}(\partial_\mu\Phi^*\partial^\mu\Phi-m^2\Phi^*\Phi)
+\label{eq:7.40}
 \end{equation}
 具有\uo 对称性，因为有$\Phi\rightarrow\Phi'=\ue^{\ri a}\Phi$及$\Phi^*\rightarrow(\Phi^*)'=\ue^{-\ri a}\Phi^*$。所以我们有机会像\ref{sec7.1}节中对\spint 理论所做的那样，导出一个相互作用理论。推导完全是类似的%
 \mpar{正确的拉格朗日量可以仅通过做替换$\partial_\mu \rightarrow D_\mu = \ri \partial_\mu + A_\mu$来得到}%
 ，结果是
 \begin{equation}
 {\mathscr L}= \frac{1}{2}\left(\left((\partial_\mu-\ri qA)\Phi^*\right)\left((\partial^\mu+\ri qA^\mu)\Phi\right)-m^2\Phi^*\Phi\right)
+\label{eq:7.41}
 \end{equation}
 代入拉格朗日方程
 \[
@@ -604,9 +607,9 @@ A_\mu\rightarrow A'(x)+\partial_\mu a(x)
 \end{equation*}
 
 我们希望拉格朗日量在变换
-\[
-(W_\mu)_i\rightarrow (W'_\mu)_i=(W'_\mu)_i+\partial_\mu a_i(x)+\epsilon_{ijk}a_j(x)(W_\mu)_k
-\]
+\begin{equation}
+(W_\mu)_i\rightarrow (W'_\mu)_i=(W'_\mu)_i+\partial_\mu a_i(x)+\epsilon_{ijk}a_j(x)(W_\mu)_k\label{eq:7.55}
+\end{equation}
 下不变。变换后的拉格朗日量是
 \begin{equation}
 \begin{aligned}
@@ -663,7 +666,195 @@ A_\mu\rightarrow A'(x)+\partial_\mu a(x)
 \[
 B^{\mu\nu}:=\partial^\mu B^\nu-\partial^\nu B^\mu
 \]
-由于自旋为$1$的场$B^\mu$能保证拉格朗日量\uo 不变性，所以其常被称作\uo {\bf 规范场}。
+由于自旋为$1$的场$B^\mu$能保证拉格朗日量的\uo 不变性，所以其常被称作\uo {\bf 规范场}。
+
+局域\sutw 不变的拉格朗日量是\mpar{之前为了简明起见略去的三个$W_i^\mu$场的耦合常数，现在记做$g'$。}
+\[
+{\mathscr L}_\text{局域\sutw 不变} = \bar\Psi\gamma_\mu(\ri\partial^\mu+g'\sigma_j W^\mu_j)\Psi - \frac{1}{4}(W_{\mu\nu})_i(W^{\mu\nu})_i
+\]
+其中
+\[
+(W_{\mu\nu})_i = \partial_\mu(W_\nu)_i - \partial_\nu(W_\mu)_i + \epsilon_{ijk}(W_\mu)_j(W_\nu)_k
+\]
+以及二重态
+\[
+\Psi := \begin{pmatrix}
+\psi_1 \\ \psi_2
+\end{pmatrix}
+\]
+类似的，由于这三个自旋为$1$的场$(W_\nu)_i$能保证拉格朗日量的局域\sutw 不变性，故其常被称为\sutw 规范场。
+
+将它们加到一起我们能得到一个局域\uo {\bf 且}\sutw 不变的拉格朗日量
+\begin{equation}
+{\mathscr L}_\text{\sutw 且\uo} = \bar\Psi\gamma_\mu(\ri\partial^\mu+ g B^\mu+g'\sigma_j W^\mu_j)\Psi - \frac{1}{4}(W_{\mu\nu})_i(W^{\mu\nu})_i -\frac{1}{4}B^{\mu\nu}B_{\mu\nu}\text{。}
+\end{equation}
+
+现在，该怎么在不破坏\sutw 对称性的前提下加入质量项呢？至今我们还没用过的唯一一个东西是零自旋场，所以来看看这个。零自旋场具有全局\uo 不变性的拉格朗日量由\ref{eq:7.40}式给出
+\begin{equation}
+{\mathscr L}_\text{零自旋} = \frac{1}{2}\left(\partial_\mu\phi^\dag\partial^\mu\phi - m^2\phi^\dag\phi\right)\text{。}
+\end{equation}
+我们还能在不破坏任何对称约束的情况下在这个拉格朗日量中添加$\phi$的高阶项%
+\mpar{记住，唯一真正禁止的是高阶导数项，否则无法得到合理的理论。$\phi$的高幂次项描述场$\phi$的自作用，在希望得到一个“自由”理论的时候被略去。}%
+。故我们写出下式，其中常数改作了惯用的记号
+\begin{equation}
+{\mathscr L}_\text{零自旋+额外项} = \partial_\mu\phi^\dag\partial^\mu\phi + \rho^2\phi^\dag\phi - \lambda^2(\phi^\dag\phi)^2\text{。}
+\end{equation}
+从\ref{eq:7.41}已经得知如何在使拉格朗日量局域\uo 不变的前提下，在零自旋场和\uo 规范场$B_\mu$间添加耦合项：
+\begin{equation}
+\begin{aligned}
+{\mathscr L}_\text{零自旋+额外项+自旋1耦合} &= (\partial_\mu-\ri\frac{1}{2}gB_\mu)\phi^\dag(\partial^\mu+\ri\frac{1}{2}gB^\mu)\phi \\
+ &+ \rho^2\phi^\dag\phi - \lambda^2(\phi^\dag\phi)^2
+\label{eq:7.63}
+\end{aligned}
+\end{equation}
+其具有对称性%
+\mpar{见\ref{eq:7.13}式，并记得整体乘在拉格朗日量上的一个常数不会影响物理。}
+\begin{eqnarray}
+B_\mu &\rightarrow B_\mu' &= B_\mu+\partial_\mu a(x) \\
+\phi(x) &\rightarrow \phi'(x) &= \ue^{\ri a(x)}\phi(x) \text{。}
+\end{eqnarray}
+
+用我们在上一节中对\spint 场导出局域\sutw 不变拉格朗日量同样的办法，我们能对零自旋场的二重态%
+\mpar{\(\Phi = \begin{pmatrix} \phi_1 \\ \phi_2 \end{pmatrix}\)}%
+写出一个局域\sutw 不变的拉格朗日量
+\begin{equation}
+\begin{aligned}
+{\mathscr L}_\text{\sutw 且\uo} &= (\partial_\mu-\ri g'\sigma_i(W_\mu)_i-\ri\frac{1}{2}gB_\mu)\Phi^\dag(\partial^\mu+\ri g'\sigma_i(W^\mu)_i+\ri\frac{1}{2}gB^\mu)\Phi \\
+ &+ \underbrace{\rho^2\Phi^\dag\Phi - \lambda^2(\Phi^\dag\Phi)^2}_{\equiv -V(\Phi)}
+\label{eq:7.66}
+\end{aligned}
+\end{equation}
+其中\(\Phi := \begin{pmatrix} \phi_1 \\ \phi_2 \end{pmatrix}\)，对称变换为（\ref{eq:7.55}式）
+\begin{equation}
+(W_\mu)_i\rightarrow (W'_\mu)_i=(W'_\mu)_i+\partial_\mu b_i(x)+\epsilon_{ijk}b_j(x)(W_\mu)_k
+\end{equation}
+和
+\begin{equation}
+\Phi \rightarrow \Phi' = \ue^{\ri b_i(x)\sigma_i}\Phi, \quad \bar\Phi \rightarrow \bar\Phi' = \bar\Phi\ue^{-\ri b_i(x)\sigma_i}
+\end{equation}
+
+我们从局域\sutw 不变的拉格朗日量出发，研究它是如何为场$(W_\mu)_i$和$(B_\mu)_i$给出质量项的。手动添加质量项是不可行的， 因为它会破坏对称性从而导致不可接受的理论%
+\mpar{这个理由很复杂，具体讨论不会在本书中给出。技术上讲：我们需要一个局域\sutw 对称的拉格朗日量来得到一个可重整的理论。感兴趣的读者可以参阅本节末给出的参考书目。}。
+
+我们在上面定义了
+\begin{equation}
+\begin{aligned}
+V(\Phi) &= -\rho^2 \Phi^\dag\Phi + \lambda(\Phi^\dag\Phi)^2\\
+ &= -\rho^2\phi_1^\dag\phi_1 + \lambda(\phi_1^\dag\phi_1)^2 -\rho^2\phi_2^\dag\phi_2 + \lambda(\phi_2^\dag\phi_2)^2 \\
+ &= V(\phi_1) + V(\phi_2)
+\label{eq:7.69}
+\end{aligned}
+\end{equation}
+这常称作 Higgs 势。其参数$\rho$取不同值而$\lambda$取正的图绘制于图\ref{fig:7.1}
+\marginpar{
+	\includegraphics[width=0.4\textwidth]{./Figure/fig7_1.jpg}
+	\figcaption{Higgs 势取不同参数$\rho$值的图像，$\rho$被认为是由于宇宙暴涨所造成的宇宙冷却而改变。Figure adapted from ``Spontaneous symmetry breaking'' by FT2 (Wikimedia Commons) released under a CC BY-SA 3.0 licence: \url{http://creativecommons.org/licenses/by-sa/3.0/deed.en}. URL:\url{http://commons.wikimedia.org/wiki/File:Spontaneous_symmetry_breaking_(explanatory_diagram).png}, Accessed: 8.12.2014}
+	\label{fig:7.1}
+}
+
+这个想法是这样的：在相当高的温度下，例如宇宙早期，势能会像图左那样。极小值点，这里成为真空值，毫无疑问的在$\phi=0$处。参数$\lambda$和$\rho$随着温度的下降发生改变，势能的形状也是一样。当温度低于某个临界值时，如图右所示，$\phi=0$处不再是极小点。此时将会有许多点都能取到极小值。
+
+事实上，这个势能有无穷多个极小值点。其可用通常的办法计算得到
+\begin{eqnarray}
+&V(\phi) = -\rho^2|\phi|^2 + \lambda |\phi|^4 \\
+&\frac{\partial V(\phi)}{\partial \phi} = -2\rho^2|\phi|+4\lambda|\phi|^3 \\
+\rightarrow &|\phi|(-2\rho^2+4\lambda|\phi|^2) \overset{\text{!}}{=} 0\\
+\rightarrow &|\phi|^2  \overset{\text{!}}{=} \frac{\rho^2}{2\lambda} \\
+\rightarrow &|\phi|  \overset{\text{!}}{=} \sqrt{\frac{\rho^2}{2\lambda}} \\
+&\phi_{\min} = \sqrt{\frac{\rho^2}{2\lambda}} \ue^{\ri {\varphi}}\text{。}
+\end{eqnarray}
+这对于$\varphi$的任意取值都是极小值，所以我们有无穷多个极小点。全体极小点躺在了半径为$\sqrt{\frac{\rho^2}{2\lambda}}$的一个圆上。图\ref{fig:7.2}即为 Higgs 的三维图。就如同一粒弹珠从墨西哥草帽顶端自发而随机的滚落，一个新的真空值有无穷多种选择。
+\marginpar{
+	\includegraphics[width=0.4\textwidth]{Figure/fig7_2.png}
+	\figcaption{Higgs 的三维图。 Figure adapted from ``Mexican hat potential polar'' by Rupert Millard (Wikimedia Commons) released under a public domain licence. URL:\url{http://commons.wikimedia.org/wiki/File:Mexican_hat_potential_polar.svg}, Accessed: 7.5.2014}
+	\label{fig:7.2}
+}
+
+从\ref{eq:7.69}中我们可知对于二重态，两个分量都需要作出这种选择。则对于二重态其极小点为
+\begin{equation}
+\Phi_{\min} = \begin{pmatrix}
+\phi_{1\min} \\ \phi_{2\min}
+\end{pmatrix}
+\end{equation}
+一个经济的{\bf 选择}%
+\mpar{复习：对称破缺意味着{\bf 一个}极小值有无穷多种选取方式}%
+是
+\begin{equation}
+\Phi_{\min} = \begin{pmatrix}
+0 \\ \sqrt{\frac{\rho^2}{2\lambda}}
+\end{pmatrix} \equiv \begin{pmatrix}
+0 \\ \frac{v}{\sqrt{2}}
+\end{pmatrix} \text{，}
+\end{equation}
+其中因子$\frac{1}{2}$只是为了使计算简洁而引入，自然有$v\equiv\sqrt{\frac{\rho^2}{\lambda}}$。下一步中我们会将场$\Phi$在极小值附近展开以得到我们想要的物理。之后我们将会学到，由于得不到精确解，量子场论中的计算总是围绕着极小值点的一系列级数。为了得到有意义的结果，我们必须将场移动到新的极小点。故我们考虑
+\begin{equation}
+\Phi = \begin{pmatrix}
+\phi_{1r}+\ri \phi_{1c} \\ \frac{v}{\sqrt{2}}\phi_{2r}+\ri \phi_{2c}
+\end{pmatrix}\text{。}
+\end{equation}
+
+改写作\mpar{等会就能看到这个形式有多有用了。}
+\begin{equation}
+\Phi = \ue^{\ri \theta_i \frac{\sigma_i}{2}} \begin{pmatrix}
+0 \\ \frac{v+h}{\sqrt{2}}
+\end{pmatrix}\text{，}
+\label{eq:7.79}
+\end{equation}
+这是由于考虑将指数函数展开成级数，代入泡利矩阵$\sigma_i$矩阵的具体形式，在一阶意义上
+\begin{equation}
+\begin{aligned}
+\ue^{\ri \theta_i \frac{\sigma_i}{2}} \begin{pmatrix}
+0 \\ \frac{v+h}{\sqrt{2}}
+\end{pmatrix} &\approx (1+\ri \theta_i \frac{\sigma_i}{2}) \begin{pmatrix}
+0 \\ \frac{v+h}{\sqrt{2}}
+\end{pmatrix} \\
+ &= (1+\ri \theta_1 \frac{\sigma_1}{2}+\ri \theta_2 \frac{\sigma_2}{2}+\ri \theta_3 \frac{\sigma_3}{2}) \begin{pmatrix}
+0 \\ \frac{v+h}{\sqrt{2}}
+\end{pmatrix} \\
+ &= \begin{pmatrix}
+ 1 + \ri\frac{1}{2}\theta_3 & \frac{1}{2}\theta_1 - \ri \frac{1}{2}\theta_2 \\
+ \frac{1}{2}\theta_1 + \ri \frac{1}{2}\theta_2 & 1 - \ri\frac{1}{2}\theta_3
+ \end{pmatrix}\begin{pmatrix}
+0 \\ \frac{v+h}{\sqrt{2}}
+\end{pmatrix} \\
+ & = \begin{pmatrix}
+ (\frac{1}{2}\theta_1 - \ri \frac{1}{2}\theta_2)\frac{v+h}{\sqrt{2}} \\ (1 - \ri\frac{1}{2}\theta_3)\frac{v+h}{\sqrt{2}}
+ \end{pmatrix} \\
+ \text{重新定义}\rightarrow & \equiv \begin{pmatrix}
+ \phi_{1r}+\ri \phi_{1c} \\ \frac{v}{\sqrt{2}}\phi_{2r}+\ri \phi_{2c}
+ \end{pmatrix}\text{。}
+\end{aligned}
+\end{equation}
+
+将零自旋复二重态写成这个形式，有助于利用局域\sutw （规范）对称性化简计算。为了得到物理结果，我们必须选取{\bf 一个}规范，而合适的选择会使生活更美好%
+\mpar{不同的规范适用于不同的问题。而这里我们采用的叫做幺正规范，这对理解一个理论的物理内容也是有益的。}。
+
+一个一般的局域\sutw 变换写作
+\begin{equation}
+\Phi \rightarrow \Phi' = \ue^{\ri b_i(x)\frac{\sigma_i}{2}}\Phi\text{，}
+\end{equation}
+通过选取合适的$b_i(x)$，我们可以消去\ref{eq:7.79}式中的指数因子。在{\bf 幺正规范(unitary gauge)}下，复标量二重态为
+\begin{equation}
+\Phi_{un} = \begin{pmatrix}
+0 \\ \frac{v+h}{\sqrt{2}}
+\end{pmatrix}\text{。}
+\label{eq:7.82}
+\end{equation}
+这件事也可以这样理解：复标量二重态的四个分量和\sutw 规范的自由度恰好相等%
+\mpar{注意，这仅在满足如下这些条件下时成立：有一个局域\sutw 理论，场$\theta=\theta(x)$理所应当的依赖于时空坐标。对于一个全局对称性，这些分量怎么也不能被规范掉，此时将其解释为无质量 boson，称为 Goldstein bosons。}%
+。这样，这三个场分量便是非物理的%
+\mpar{局域\sutw 对称在实验上不存在任何可观测的效应。这仅仅是我们方程的对称性，规范自由度从不在任何实验测量量中出现。否则我们将无法做出预言，因为我们将有无穷多个相同可能性的预言（它们由\sutw 变换相联系）。尽管这样，这个对称性也不是没用的，它能将我们导向拉格朗日量的正确形式。}%
+，不可能被实验观测到。最后留下来的便是{\bf 一个}物理场$h$，称作 {\bf Higgs 场}。
+
+接下来，我们希望看看拉格朗日量对称性破缺的具体含义。我们将\ref{eq:7.66}\footnote{\textcolor{red}{译注：原文引用公式有误，已更正}}式给出的拉格朗日量重新写在这里，并调整一下记号
+\begin{equation}
+\begin{aligned}
+{\mathscr L} &= (\partial_\mu-\ri g'\sigma_i(W_\mu)_i-\ri\frac{1}{2}gB_\mu)\Phi^\dag(\partial^\mu+\ri g'\sigma_i(W^\mu)_i+\ri\frac{1}{2}gB^\mu)\Phi \\
+ & -V(\Phi)
+\end{aligned}
+\end{equation}
+
+现在将场$\Phi$用平移且取幺正规范的场，即\ref{eq:7.82}式代入。
 
 \section[宇称破坏]{Parity Violation\quad 宇称破坏}\label{sec7.4}
 
