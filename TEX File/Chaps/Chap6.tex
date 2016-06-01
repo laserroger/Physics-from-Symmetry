@@ -153,13 +153,13 @@ I_4:=(\xi^a)^T\partial_\mu(\sigma^\mu)_{a\dot{b}}\xi^{\dot{b}}=(\xi_R)^\dagger\p
 \Psi^\dagger\gamma_0\Psi \text{\ \ 和\ \ }\Psi^\dagger\gamma_0\gamma^\mu\partial_\mu\Psi,
 \end{align}
 因为
-\[\Psi^\dagger \gamma_0 \Psi = \left( 
+\[\Psi^\dagger \gamma_0 \Psi = \left(
     \begin{matrix}
         (\chi_L)^\dagger&(\xi_R)^\dagger
-    \end{matrix} 
+    \end{matrix}
 \right) \left(
     \begin{matrix}
-    0 & \bar\sigma_0\\ 
+    0 & \bar\sigma_0\\
     \sigma_0 & 0
     \end{matrix}
 \right) \left(
@@ -171,7 +171,7 @@ I_4:=(\xi^a)^T\partial_\mu(\sigma^\mu)_{a\dot{b}}\xi^{\dot{b}}=(\xi_R)^\dagger\p
 这与我们之前找到的两个不变量完全一致\mpar{$\sigma_0$只是单位矩阵而已，因此$\bar\sigma_0=\sigma_0$。}，并且
 \[\begin{split}
 \Psi^\dagger\gamma_0\gamma^\mu\partial_\mu\Psi &= \left(\begin{matrix}(\xi_L)^\dagger&(\chi_R)^\dagger\end{matrix}\right)\left(\begin{matrix}0&\bar\sigma_0\\\sigma_0&0\end{matrix}\right)\left(\begin{matrix}0&\sigma^\mu\partial_\mu\\\sigma^\mu\bar\partial_\mu&0\end{matrix}\right)\left(\begin{matrix}\xi_L\\\chi_R\end{matrix}\right)\\
-& =\underbrace{(\xi_L)^\dagger\bar\sigma_0\bar\sigma^\mu\partial_\mu\chi_R}_{=I_3}+\underbrace{(\chi_R)^\dagger\sigma_0\sigma^\mu\partial_\mu\xi_L}_{=I_4} 
+& =\underbrace{(\xi_L)^\dagger\bar\sigma_0\bar\sigma^\mu\partial_\mu\chi_R}_{=I_3}+\underbrace{(\chi_R)^\dagger\sigma_0\sigma^\mu\partial_\mu\xi_L}_{=I_4}
 \end{split}\]
 就想说过的那样给出了另外两个不变量\mpar{注意$\sigma^\mu\partial_\mu=\partial_\mu\sigma^\mu$，因为$\sigma^\mu$仅仅是常数矩阵而已。}。通常引入记号\footnote{译者注：在一些其它教科书里，一般也会写成$\cancel{\Psi}$。}
 \begin{align}
@@ -192,7 +192,7 @@ I_4:=(\xi^a)^T\partial_\mu(\sigma^\mu)_{a\dot{b}}\xi^{\dot{b}}=(\xi_R)^\dagger\p
 把这个拉格朗日量代入到欧拉-拉格朗日方程（方便起见，这里再写一遍），
 \begin{align}
 \label{equ6.17}
-\frac{\partial\mathscr{L}}{\partial\Psi}-\partial_\mu\left(\frac{\partial\mathscr{L}}{\partial(\partial_\mu\Psi)}\right)=0 
+\frac{\partial\mathscr{L}}{\partial\Psi}-\partial_\mu\left(\frac{\partial\mathscr{L}}{\partial(\partial_\mu\Psi)}\right)=0
 \end{align}
 我们有
 \[-m\bar\Psi-i\partial_\mu\bar\Psi\gamma^\mu=0\to(i\partial^\mu\bar\Psi\gamma_\mu+m\bar\Psi)=0 \]
@@ -280,6 +280,3 @@ $\mathscr{L}_{\text{Maxwell}} = \frac{1}{4} F^{\mu \nu} F_{\mu \nu}$是我们惯
 \end{align}
 
 本章导出了描述自由场/粒子们的运动方程。我们想知道这些方程能预言什么实验现象，但在此之前需要更多的方程才行，因为实验永远是涉及相互作用的。比如只能通过其他粒子，比如光子，来测量电子。因此，下一章将推导描述不同的场/粒子之间相互作用的拉格朗日量。
-
-
-

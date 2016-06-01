@@ -1,4 +1,4 @@
-%!TEX root = ..\main.tex
+%!TEX root = ../main.tex
 %!TEX encoding = UTF-8 Unicode
 
 %——————————————————————————————————————————————————————————-
@@ -849,13 +849,174 @@ V(\Phi) &= -\rho^2 \Phi^\dag\Phi + \lambda(\Phi^\dag\Phi)^2\\
 接下来，我们希望看看拉格朗日量对称性破缺的具体含义。我们将\ref{eq:7.66}\footnote{\textcolor{red}{译注：原文引用公式有误，已更正}}式给出的拉格朗日量重新写在这里，并调整一下记号
 \begin{equation}
 \begin{aligned}
-{\mathscr L} &= (\partial_\mu-\ri g'\sigma_i(W_\mu)_i-\ri\frac{1}{2}gB_\mu)\Phi^\dag(\partial^\mu+\ri g'\sigma_i(W^\mu)_i+\ri\frac{1}{2}gB^\mu)\Phi \\
+{\mathscr L} &= (\partial_\mu-\ri g'\frac{1}{2}\sigma_i(W_\mu)_i-\ri\frac{1}{2}gB_\mu)\Phi^\dag(\partial^\mu+\ri g'\frac{1}{2}\sigma_i(W^\mu)_i+\ri\frac{1}{2}gB^\mu)\Phi \\
  & -V(\Phi)
 \end{aligned}
 \end{equation}
+现在将场$\Phi$用平移且取幺正规范的场，即\ref{eq:7.82}式代入。我们对新出现的包含有真空值$v$的项尤其感兴趣。而其他项描述了 Higgs 场的自作用以及 Higgs 场与其他场的相互作用，我们不会再对其做出进一步的讨论。我们将极小值点$\Phi\rightarrow\Phi_{\min}= \begin{pmatrix}
+0 \\\frac{v}{\sqrt{2}}
+\end{pmatrix}$（即不计入$h$），代入得
+\[
+\begin{aligned}
+& (\partial_\mu-\ri g'\frac{1}{2}\sigma_i(W_\mu)_i-\ri\frac{1}{2}gB_\mu)\Phi^\dag_{\min}(\partial^\mu+\ri g'\frac{1}{2}\sigma_i(W^\mu)_i+\ri\frac{1}{2}gB^\mu)\Phi_{\min} \\
+& = \left|(\partial^\mu+\ri g'\frac{1}{2}\sigma_i(W^\mu)_i+\ri\frac{1}{2}gB^\mu)\Phi_{\min}\right|^2 \\
+& = \left|(\partial^\mu+\ri g'\frac{1}{2}\sigma_i(W^\mu)_i+\ri\frac{1}{2}gB^\mu)\frac{1}{\sqrt{2}}\begin{pmatrix}
+0 \\ v
+\end{pmatrix}\right|^2 \\
+& = \frac{v^2}{8} \left|( g'\sigma_i(W^\mu)_i+gB^\mu)\begin{pmatrix} 0 \\ 1 \end{pmatrix}\right|^2
+\end{aligned}
+\]
+现在将用$2\times 2$单位阵表出的$B_\mu$和 Pauli 矩阵的具体形式\mpar{$\sigma_iW_i= \begin{pmatrix}
+W_3 & W_1-\ri W_2 \\ W_1+\ri W_2 & -W_3
+\end{pmatrix}$}代入得
+\begin{equation}
+\begin{aligned}
+& = \frac{v^2}{8} \left|\begin{pmatrix}
+g'W_3^\mu+gB^\mu & g'W_1^\mu-\ri g'W_2^\mu \\ g'W_1^\mu+\ri g'W_2^\mu & -g'W_3^\mu+gB^\mu
+\end{pmatrix}\begin{pmatrix} 0 \\ 1 \end{pmatrix}\right|^2 \\
+& = \frac{v^2}{8} \left|\begin{pmatrix}
+g'W_1^\mu-\ri g'W_2^\mu \\  -g'W_3^\mu+gB^\mu
+\end{pmatrix}\right|^2 \\
+& = \frac{v^2}{8} \left((g')^2((W_1^\mu)^2+ (W_2^\mu)^2) +  (g'W_3^\mu-gB^\mu)^2\right)
+\end{aligned}
+\label{eq:7.84}
+\end{equation}
 
-现在将场$\Phi$用平移且取幺正规范的场，即\ref{eq:7.82}式代入。
+用已有的场定义两个新的自旋场
+\begin{eqnarray}
+W_+^\mu &\equiv \frac{1}{\sqrt{2}}(W_1-\ri W_2) \\
+W_-^\mu &\equiv \frac{1}{\sqrt{2}}(W_1+\ri W_2)
+\end{eqnarray}
+即$W_+^\mu$是$W_-^\mu$的复共轭。\ref{eq:7.84}式中的第一项可以写作
+\begin{equation}
+(W_1^\mu)^2+ (W_2^\mu)^2 = 2 (W^+)_\mu(W^-)^\mu
+\end{equation}
+把前面的常数添上，有
+\begin{equation}
+\left(\underbrace{\frac{g'v}{2}}_{\equiv m_W}\right)(W^+)_\mu(W^-)^\mu
+\end{equation}
+这就像一个典型的“质量”项。
 
+\ref{eq:7.84}式中的第二项可以写作矩阵形式\footnote{\textcolor{red}{译注：原文下式有误，已更正。}}
+\begin{equation}
+(g'W_3^\mu-gB^\mu)^2 = \begin{pmatrix}
+(W_3)^\mu & B^\mu
+\end{pmatrix} \underbrace{\begin{pmatrix}
+g'^2 & -gg' \\ -gg' & g^2
+\end{pmatrix}}_{\equiv G} \begin{pmatrix}
+(W_3)_\mu & B_\mu
+\end{pmatrix}
+\label{eq:7.89}
+\end{equation}
+为了将其解释为质量项，我们需要将矩阵$G$对角化%
+\mpar{马上就能看到一个对角矩阵会带给我们和其他质量项长得一模一样的项。这使我们能将其对应的场诠释成实验上能够观测到的物理场。我们当然也可以就用$W_3^\mu$和$B^\mu$干活，但是却难以找到其直接的物理意义。}%
+。线性代数说我们需要先得到矩阵$G$的本征值$\lambda_1$，$\lambda_2$以及归一%
+\mpar{长度为一，即$v\cdot v= 1$。}%
+的本征向量$v_1$，$v_2$。简单的计算得到
+\[
+\begin{aligned}
+&\lambda_1 = 0 &\rightarrow v_1 = \frac{1}{\sqrt{g^2+g'^2}} \begin{pmatrix}
+g\\ g'
+\end{pmatrix} \\
+&\lambda_2 = g^2+g'^2 &\rightarrow v_2 = \frac{1}{\sqrt{g^2+g'^2}} \begin{pmatrix}
+g'\\ -g
+\end{pmatrix}
+\end{aligned}
+\]
+用本征向量排成的矩阵$M$可以将$G$对角化，即$G_\text{diag}=M^{-1}GM$，其中
+\begin{equation}
+M = \frac{1}{\sqrt{g^2+g'^2}} \begin{pmatrix}
+g & g'\\ g'&-g
+\end{pmatrix}
+\end{equation}
+以及
+\begin{equation}
+G_\text{diag} = \begin{pmatrix}
+\lambda_1 & 0 \\ 0 & \lambda_2
+\end{pmatrix} = \begin{pmatrix}
+0 & 0 \\ 0 & g^2+g'^2
+\end{pmatrix}
+\end{equation}
+由于我们用的是归一的本征向量，故矩阵$M$是正交的$M^T = M^{-1}$：
+\begin{equation}
+\begin{aligned}
+M^TM & = \frac{1}{\sqrt{g^2+g'^2}} \begin{pmatrix}
+g & g'\\ g'&-g
+\end{pmatrix} \frac{1}{\sqrt{g^2+g'^2}} \begin{pmatrix}
+g & g'\\ g'&-g
+\end{pmatrix} \\
+& = \frac{1}{g^2+g'^2} \begin{pmatrix}
+g^2+g'^2 & gg'-gg'\\ gg'-gg'&g^2+g'^2
+\end{pmatrix} = \begin{pmatrix}
+1 & 0\\ 0 & 1
+\end{pmatrix}\text{。}
+\end{aligned}
+\end{equation}
+由此在\ref{eq:7.89}式中插入两个单位阵$1 = M^TM$：
+\begin{equation}
+\begin{aligned}
+&\begin{pmatrix}
+(W_3)^\mu & B^\mu
+\end{pmatrix} \underbrace{MM^T}_{=1} G \underbrace{MM^T}_{=1} \begin{pmatrix}
+(W_3)_\mu & B_\mu
+\end{pmatrix} \\ =& \begin{pmatrix}
+(W_3)^\mu & B^\mu
+\end{pmatrix} M\underbrace{M^TGM}_{=G_\text{diag}}M^T \begin{pmatrix}
+(W_3)_\mu & B_\mu
+\end{pmatrix} \text{。}
+\end{aligned}
+\end{equation}
+剩下的任务即是计算$M^T \begin{pmatrix}
+W_3^\mu & B^\mu
+\end{pmatrix}$，以得到两个新的，有对应质量项的场：
+\begin{equation}
+\begin{aligned}
+M^T \begin{pmatrix}
+W_3^\mu & B^\mu
+\end{pmatrix} &= \frac{1}{\sqrt{g^2+g'^2}} \begin{pmatrix}
+g & g'\\ g'&-g
+\end{pmatrix} \begin{pmatrix}
+W_3^\mu & B^\mu
+\end{pmatrix} \\
+& = \frac{1}{\sqrt{g^2+g'^2}} \begin{pmatrix}
+gW_3^\mu + g'B^\mu \\ gW_3^\mu - g'B^\mu
+\end{pmatrix} \equiv \begin{pmatrix}
+A^\mu \\ Z^\mu
+\end{pmatrix}
+\end{aligned}
+\end{equation}
+由此将第二项改做\footnote{译注：从而我们再次得到了\ref{eq:7.84}式中的第二项——作者你绕了这么大一个弯子累不累啊？}
+\begin{equation}
+\begin{aligned}
+\begin{pmatrix}
+ A_\mu & Z_\mu
+ \end{pmatrix} G_\text{diag} \begin{pmatrix}
+ A^\mu & Z^\mu
+ \end{pmatrix} &= \begin{pmatrix}
+ A_\mu & Z_\mu
+ \end{pmatrix} \begin{pmatrix}
+0 & 0 \\ 0 & g^2+g'^2
+\end{pmatrix} \begin{pmatrix}
+ A^\mu & Z^\mu
+ \end{pmatrix} \\
+& = (g^2 + g'^2)(Z^\mu)^2 + 0\cdot (A^\mu)^2\text{。}
+\end{aligned}
+\end{equation}
+
+综上，我们从自旋为$1$的无质量场$W_i^\mu$和$B^\mu$的拉格朗日量出发
+\begin{equation}
+(\partial_\mu-\ri g'\frac{1}{2}\sigma_i(W_\mu)_i-\ri\frac{1}{2}gB_\mu)\Phi^\dag(\partial^\mu+\ri g'\frac{1}{2}\sigma_i(W^\mu)_i+\ri\frac{1}{2}gB^\mu)\Phi\text{。}
+\end{equation}
+通过自发对称性破缺，我们在拉格朗日量中得到了可以被解释成质量项的新项
+\begin{equation}
+\underbrace{\frac{1}{8}v^2g'^2}_{=\frac{1}{2}M_W^2}(W^+)_\mu(W^-)^\mu + \underbrace{\frac{1}{8}v^2(g^2+g'^2)}_{=\frac{1}{2}M_Z^2}Z_\mu^2+\frac{1}{8}v^2\cdot 0 \cdot A^2_\mu
+\end{equation}
+
+我们能看到其中一个自旋为$1$的场$A_\mu$在对称性自发破缺后仍然是无质量的。这是电磁的光子场，现有的所有实验都表明光子是无质量的%
+\mpar{注意，在这一节中，我略去了一些重要的概念：超荷和 Weinberg 角。Weiberg 角 $\theta_W$由$\cos(\theta_W)=\frac{g}{g^2+g'^2}$或$\sin(\theta_W)=\frac{g'}{g^2+g'^2}$来定义。通过它可以简化本节中的一些记号。超荷略复杂一些，感兴趣的读者可以参考量子场论的标准教材，部分推荐数目见第\ref{chap9}章末。}%
+。注意对应于 Z-bosons 的$Z_\mu$和对应于光子的$A_\mu$是场$B_\mu$和$W_\mu^3$的正交组合。它们竟有一个同样的起源！
+
+同样的推演可以用来在不破坏局域\sutw 对称性的情况下得到\spint 场的质量项，但在具体讨论这个之前，我们需要先谈谈自然界中一个有趣的事实：宇称破坏。
 \section[宇称破坏]{Parity Violation\quad 宇称破坏}\label{sec7.4}
 
 \section[轻子质量项]{Lepton Mass Terms\quad 轻子质量项}\label{sec7.5}
