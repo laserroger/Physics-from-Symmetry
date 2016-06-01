@@ -636,6 +636,13 @@ INPUT ./Chaps/Chap7.tex
 INPUT Pictures/chapter_head_1.pdf
 INPUT ./Figure/fig7_1.jpg
 INPUT Figure/fig7_2.png
+INPUT ./Parts/Part4.tex
+INPUT ./Parts/Part4.tex
+INPUT main.ptc
+INPUT main.ptc
+INPUT ./Chaps/Chap8.tex
+INPUT ./Chaps/Chap8.tex
+INPUT Pictures/chapter_head_1.pdf
 OUTPUT main.ptc
 INPUT main.aux
 INPUT Preface.aux
