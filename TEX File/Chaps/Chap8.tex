@@ -16,7 +16,63 @@
 在讨论过了量子的框架是如何运作的之后，我们就对Klein-Gordon方程做了非相对论性极限，得到了著名的{\bf Schrödinger方程}。这样做是因为这个方程实际上只是对最简单的标量型粒子做的运动方程。
 方程的解被解释为概率振幅，并且我们随后用{\bf 波动力学}的方法分析了两个简单的例子。
 
-之后呢，我们引入了{Dirac符号}，这对于我们理解量子力学的结构十分有帮助。系统的初始态被一个抽象的态矢量$|i\rangle$标记，我们乘它为{\bf 右矢}。测量这个初始态变成某个特定的末态的概率振幅可以通过形式上作用一个我们称之为{\bf 左矢}，记为$\langle f|$的东西上去。左矢和右矢在一起会形成一个复数，我们解释为过程$i\to f$的概率振幅$A$。发生这个过程的概率就是$|A|^2$。之后我们会讲{\bf 投影算符}。我们会看它是如何与{\bf 完备性关系}一起用来把任意一个态用任意一个算符的本征态来进行展开的。我们之前使用的波动力学的角度可以看成是一个特例，我们用坐标来进行的展开。在Dirac符号下，Schrödinger方程是被用来计算态的时间演化的。为了明确的建立这种联系，我们用Dirac符号来会看一个我们已经用波动力学解过的例子。
+之后呢，我们引入了{Dirac符号}，这对于我们理解量子力学的结构十分有帮助。系统的初始态被一个抽象的态矢量$|i\rangle$标记，我们乘它为{\bf 右矢}。测量这个初始态变成某个特定的末态的概率振幅可以通过形式上作用一个我们称之为{\bf 左矢}，记为$\langle f|$的东西上去。左矢和右矢在一起会形成一个复数，我们解释为过程$i\to f$的概率振幅$A$。发生这个过程的概率就是$|A|^2$。之后我们会讲{\bf 投影算符}。我们会看它是如何与{\bf 完备性关系}一起用来把任意一个态用任意一个算符的本征态来进行展开的。我们之前使用的波动力学的角度可以看成是一个特例，我们用坐标来进行的展开。在Dirac符号下，Schrödinger方程是被用来计算态的时间演化的。为了明确的建立这种联系，我们会用Dirac符号来看一个我们已经用波动力学解过的例子。
 
-\section[]{Particle Theory Identifications }
+\section[对应到粒子理论]{Particle Theory Identifications 对应到粒子理论}\label{sec8.1}
+我们到现在得到的方程\mpar{Klein-Gordon, Dirac, Proka, Maxwell方程}可以用在粒子理论和场理论中。本章李，我们想要研究其在粒子理论中的应用。因此，我们研究的动力学变量就是坐标，能量和动量了。如我们在第\ref{chap5}中做的那样，我们把这些视作相应对称性的生成元\mpar{见\eqref{equ3.240}，\eqref{equ3.244}和第\ref{chap5}章}
+\begin{itemize}
+\item 动量$\hat{p}_i=-i\partial_i$\\
+\item 坐标$\hat{x}_i=x_i$\\
+\item 能量$\hat{E}=i\partial_0$\\
+\item 角动量$\hat{L}_i=i\frac{1}{2}\epsilon_{ijk}(x^j\partial^k-x^k\partial^j)$
+\end{itemize}
 
+在进一步讨论这些算符是如何用在量子力学里的之前，我们先用它们得到现代物理最重要的方程之一。
+\section[相对论性能量-动量关系]{Relativistic Energy-Momentum Relation 相对论性能量-动量关系}\label{sec8.2}
+在第\ref{sec6.2}中，我们得到了自由的自旋$0$的场的运动方程，即Klein-Gordon方程：
+\[(\partial_\mu\partial^\mu+m^2)\Phi=0 \]
+利用上面做的那些对应关系\mpar{$p_\mu=\left(\begin{matrix}p_0\\p_1\\p_2\\p_3\end{matrix}\right)=\left(\begin{matrix}p_0\\\vec{p}\end{matrix}\right)=\left(\begin{matrix}E\\\vec{p}\end{matrix}\right)$}，
+\begin{align}\begin{split}
+(\partial_\mu\partial^\mu+m^2)\Phi&=(\partial_0\partial_0-\partial_i\partial_i+m^2)\Phi\\
+&=\left(\left(\frac{1}{i}E\right)\left(\frac{1}{i}E\right)-\left(-\frac{1}{i}p_i\right)\left(-\frac{1}{i}p_i\right)+m^2\right)\Phi\\
+&=(-E^2+\vec{p}^{\,2}+m^2)\Phi=0
+\end{split}\end{align}
+\begin{align}
+\to\ E^2=\vec{p}^{\,2}+m^2\quad\text{ 或者用4-矢量表示， }p_\mu p^\mu=m^2
+\end{align}
+其就是著名的狭义相对论下的{\bf 能量-动量关系}。对于一个静止的粒子，即$\vec{p}=0$，给出了爱因斯坦著名的方程
+\[E^2=m^2\to E=mc^2 \]
+其中为了明确起见我们把$c^2$写回来。我们现在就理解了\eqref{equ3.258}中，Poincare群里面的Casimir算符$p_\mu p^\mu$的标量值我们选为$m^2$了。在这个问题里面，$p_\mu p^\mu$就代表着粒子质量的平方，而通过实验，比如说测量粒子的能量和动量，可以测量这个质量$m=\sqrt{E^2-\vec{p}^{\,2}}$。同理，我们也可以理解为什么在第\ref{sec6.2}的时候要给拉格朗日量里面的系数常数记作$m^2$。
+
+\section[量子力学的数学形式]{The Quantum Formalism 量子力学的数学形式}
+
+我们的物理量已经用算符来表示了，我们需要找到这些算符作用在什么东西上面。首先需要注意我们对每个算符都有一组本征函数，就像矩阵的本征向量一样。矩阵是有限维的，因此我们得到有限多个本征向量；而我们的算符通常作用在无限维的矢量空间中，而得到其本征函数。比如，动量算符的本征函数必须满足
+\begin{align}
+\underbrace{\mathclap{\text{算符}}}{-i\partial_i\Psi}=\underbrace{\mathclap{\text{本征值}}}{p_i}\overbrace{\mathclap{\text{本征函数}}}{\Psi}
+\end{align}
+其中，$p_i$是一个数。一个显然的解为
+\[\underbrace{\mathclap{=\text{常数}}}{C}e^{ip_ix_i} \]
+\begin{align}
+\to-i\partial_iCe^{ip_ix_i}=p_iCe^{ip_ix_i}\checkmark
+\end{align}
+但要注意，对于任意的$p_i$，这都是一个解。因此我们发现有无穷多个动量算符$\hat{p}_i=-i\partial_i$的本征函数。能量本征函数同理
+\begin{align}
+i\partial_0\Phi=E\Phi
+\end{align}
+
+\subsection[期望值]{Expectation Value 期望值}\label{sec8.3.1}
+
+\section[Schrödinger 方程]{Schrödinger Equation Schrödinger 方程}\label{sec8.4}
+\subsection[有外场的 Schrödinger 方程]{Schrödinger Equation with External Field 有外场的 Schrödinger 方程}\label{sec8.4.1}
+\section[从波动方程到粒子的运动]{From Wave Equations to Particle Motion 从波动方程到粒子的运动}\label{sec8.5}
+\subsection[例：自由粒子]{Example: Free Particle 例：自由粒子}\label{sec8.5.1}
+\subsection[例：盒子中的粒子]{Example: Particle in a Box 例：盒子中的粒子}\label{sec8.5.2}
+\subsection[Dirac符号]{Dirac Notation Dirac符号}\label{sec8.5.3}
+\subsection[例：盒子中的粒子，续]{Example: Particle in a Box, Again 例：盒子中的粒子，续}\label{sec8.5.4}
+\subsection[自旋]{Spin 自旋}\label{sec8.5.5}
+\section[Heisenberg 不确定性原理]{Heisenberg’s Uncertainty PrincipleHeisenberg 不确定性原理}\label{sec8.6}
+\section[对于几种诠释的评议]{Comments on Interpretations 对于几种诠释的评议}\label{sec8.7}
+\section[附录：Dirac 旋量分量的诠释]{Appendix: Interpretation of the Dirac Spinor Components 附录：Dirac 旋量分量的诠释}\label{sec8.8}
+\section[附录：解Dirac 方程]{Appendix: Solving the Dirac Equation 附录：解Dirac 方程}\label{sec8.9}
+\section[附录：Dirac 旋量的不同的基]{Appendix: Dirac Spinors in Different Bases 附录：Dirac 旋量的不同的基}\label{sec8.10}
+\subsection[质量基下解 Dirac 方程]{Solutions of the Dirac Equation in the Mass Basis 质量基下解 Dirac 方程}\label{sec8.10.1}
