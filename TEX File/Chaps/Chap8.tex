@@ -48,10 +48,10 @@
 
 我们的物理量已经用算符来表示了，我们需要找到这些算符作用在什么东西上面。首先需要注意我们对每个算符都有一组本征函数，就像矩阵的本征向量一样。矩阵是有限维的，因此我们得到有限多个本征向量；而我们的算符通常作用在无限维的矢量空间中，而得到其本征函数。比如，动量算符的本征函数必须满足
 \begin{align}
-\underbrace{\mathclap{\text{算符}}}{-i\partial_i\Psi}=\underbrace{\mathclap{\text{本征值}}}{p_i}\overbrace{\mathclap{\text{本征函数}}}{\Psi}
+\underbrace{-i\partial_i\Psi}_{\mathclap{\text{算符}}}=\underbrace{p_i}_{\mathclap{\text{本征值}}}\overbrace{\Psi}^{\mathclap{\text{本征函数}}}
 \end{align}
 其中，$p_i$是一个数。一个显然的解为
-\[\underbrace{\mathclap{=\text{常数}}}{C}e^{ip_ix_i} \]
+\[\underbrace{C}_{\mathclap{=\text{常数}}}e^{ip_ix_i} \]
 \begin{align}
 \to-i\partial_iCe^{ip_ix_i}=p_iCe^{ip_ix_i}\checkmark
 \end{align}
@@ -59,8 +59,83 @@
 \begin{align}
 i\partial_0\Phi=E\Phi
 \end{align}
+或者角动量的本征函数\mpar{对于角动量的本征函数来时就要更复杂一点，因为这里的算符比其它的算符本身就要更复杂。我们找不到一组三个角动量分量共同的本征态，因为$[\hat{L}_i,\hat{L}_j]\neq0$。这在后面就会仔细的讨论，最终的结果就是我们选取的本征函数是角动量第三个方向$\hat{L}_3$（和角动量算符的平方$\hat{L}^2$，其与其它的角动量分量都对易$[\hat{L}^2,\hat{L}_j]=0$）作为使用的完备归一的基，即著名的{\bf 球谐函数基}。}。类比于矩阵的本征矢量，这些本征函数可以看做基\mpar{在矩阵中，本征矢量是矩阵对应的矢量空间的基}，而这就意味着我们可以把任意的函数$\Psi$按照这些基进行展开。例如，在动量本征函数\mpar{注意，这其实就是我们在附录\ref{appendixD.1}中介绍的Fourier变换，因子$\frac{1}{\sqrt{2\pi}}$是出于惯例的考虑。}进行展开（为了方便，在一维中进行这个操作）
+\begin{align}
+\Psi=\frac{1}{\sqrt{2\pi}}\int_{-\infty}^\infty dp\Psi_pe^{-ipx}
+\end{align}
+其中，$\Psi_p$是展开的系数，类似于矢量$\vec{v}=v_1\vec{e}_1+v_2\vec{e}_2+v_3\vec{e}_3$中的$v_1,v_2,v_3$。对于一些系统来说，我们的边界条件使得最后得到的基是离散而不连续的。我们可以，比如说，用能量本征态$\Phi_{E_c}$进行展开：
+\begin{align}
+\Psi=\sum_n c_n\Phi_{E_n}
+\end{align}
+注意，一般来说，一个算符的一组本征函数并不是另一个算符的本征函数。只有当两个算符对易，即$[A,B]=AB-BA=0$的是时候，我们可以找到一组同时是两个算符本征函数的基。关于这点，我们假定有$[C,D]\neq0\to CD\neq DC$，而对于$C$的某个本征函数$\Psi$，我们有$C\Psi=c\Psi$，其中$c$是它的本征值。如果$\Psi$同时也是$D$的本征函数$D\Psi=d\Psi$，则有
+\[CD\Psi=Cd\Psi\underbrace{=}_{\mathclap{\text{因为$d$只是一个数}}}dC\Psi=dc\Psi \]
+\[DC\Psi=Dc\Psi=cD\Psi=cd\Psi\underbrace{=}_{\mathclap{\text{因为数之间互相对易}}}dc\Psi \]
+\begin{align}
+\to DC=CD\quad \text{这个与$[C,D]\neq0$矛盾}
+\end{align}
+
+一般来说，我们的算符作用在我们称之为\mpar{这里使用$\Psi$是出于量子力学的惯例；尽管在此之前我们都仅仅用它来代表旋量，我们这里也可以用它来代表自旋$0$的粒子。}描述物理系统的{\bf 态}$\Psi$上。我通过解运动方程来得到这个$\Psi$。
+
+而一般的，这种解如果我们按照某组基展开都会有超过一项。举个例子，考虑我们的态用两个能量本征态\mpar{这意味着所有的展开系数$\Psi=\sum_nc_n\Phi_{E_n}$是零。}来写出来$\Psi=c_1\phi_{E_1}+c_s\phi_{E_2}$，则作用能量算符在上面我们得到
+\begin{align}
+\hat{E}\Psi=\hat{E}(c_1\phi_{E_1}+c_s\phi_{E_2})=c_1E_1\phi_{E_1}+c_2E_2\phi_{E_2}\neq E(c_1\phi_{E_1}+c_s\phi_{E_2})
+\end{align}
+一般来说，不同能量（的能量本征态）形成的{\bf 叠加态}是不是能量算符的本征态的，因为本征态需要满足定义，即存在某个数$E$使得$\hat{E}\Psi=E\Psi$。但是，用$\Psi$描述的系统的能量是多少呢？两个能量本征态的叠加态又意味着什么呢？我们如何用物理的术语来解释这些事情？
+
+首先我们能从拉格朗日量的$U(1)$对称性中得到一点提示，它让我们看到从$\Psi$的运动方程得到的解并不直接与物理相等\mpar{如果我们假定$\Psi$某种程度上直接的描述粒子，那么其同样存在的$U(1)$变换的解$\Psi'=e^{i\alpha}\Psi$描述的是什么呢？}。
+
+另一方面，注意到对于运动方程我们的道德所有的解都是$\vec{x},t$的函数\mpar{下一节会对这点详细说明}，即$\Psi=\Psi(\vec{x},t)$。
+
+标准的诠释方式是，波函数$\Psi(\vec{x},t)$的模长的平方$|\Psi(\vec{x},t)|^2$给出了它位置的概率密度。注意$U(1)$对称性对于$|\Psi|^2=\Psi^\dagger\Psi\to(\Psi')^\dagger(\Psi')=\Psi^\dagger e^{-i\alpha}e^{i\alpha}\Psi=\Psi^\dagger\Psi$这样的量是没有影响的。换句话说，$\Psi(x,t)$是在$[x,x+dx]$区间内测量到粒子的概率振幅。因此，如果我们对整个空间积分的话，我们有
+\begin{align}
+\int dx\Psi^*(x,t)\Psi(x,t)\overset{!}{=}1
+\end{align}
+这被称为归一化处理，因为在空间中找到一个粒子的概率必须为$100\%=1$。
+
+如果我们想要对其它物理量做出一些语言，我们必须把波函数用相应的基展开。比如说用能量本征函数$\Psi=c_1\Phi_{E_1}+c_2\Phi_{E_2}+\cdots$。标准的量子力学诠释是，测量由$\Psi$描述的体系，并且测量到某一个能量本征值为$E_1$的概率为$\Psi$与$\Phi_{E_1}$的函数交叠
+\[P(E_1)=\left|\int dx\Phi^*_{E_1}(x,t)\Psi(x,t)\right|^2 \]
+在我们的例子中，它就是
+\begin{align}
+\begin{split}
+P(E_1)&=\left|\int dx\Phi^*_{E_1}(x,t)\Psi(x,t)\right|^2 =\left|\int dx\Phi^*_{E_1}(x,t)(c_1\Phi_{E_1}+c_2\Phi_{E_2}+\cdots)\right|^2 \\
+&=\left|c_1\underbrace{\int dx\Phi^*_{E_1}(x,t)\Phi_{E_1}}_{=1\text{ 如之前所讲}}+\underbrace{\int dx\Phi^*_{E_1}(x,t) (c_2\Phi_{E_2}+\cdots)}_{\mathclap{=0\text{ 因为本征态是正交的}}}\right|^2\\
+&=|c_1|^2
+\end{split}
+\end{align}
+类似的，如果我们可以将其他的什么$\Psi(\vec{x},t)$展开成动量本征函数
+\[\Psi(\vec{x},t)=\frac{1}{\sqrt{2\pi}}\int_{-\infty}^{\infty}dp\Psi(\vec{p},t)e^{-i\vec{p}\cdot\vec{x}} \]
+我们就有$\Psi(\vec{p},t)$是系统动量处于$[p,p+dp]$区间内的概率振幅。
+
+这种解释可以用来对系统做几率性预测，比如用下一节介绍的统计期望值的办法。之后需我们会得到非相对论性量子力学的运动方程，并看两个例子。
 
 \subsection[期望值]{Expectation Value 期望值}\label{sec8.3.1}
+
+统计学中，期望值是类比于加权平均定义的。比如，如果掷骰子十次得到的结果为$2,4,1,3,3,6,3,1,4,5$，那么它的平均值就是
+\[\langle x \rangle = (2+4+1+3+3+6+3+1+4+5)\cdot\frac{1}{10}=3.2 \]
+而另一种计算这个的方法是计算每种相同结果的权重，给出经验几率
+\[\langle x \rangle = \frac{2}{10}\cdot1+\frac{1}{10}\cdot2+\frac{3}{10}\cdot3+\frac{2}{10}\cdot4+\frac{1}{10}\cdot5+\frac{1}{10}\cdot6=3.2 \]
+一般的，我们可以写
+\begin{align}
+\langle x\rangle = \sum_i\rho_i x_i
+\end{align}
+其中$\rho_i$表示几率。对一个连续分布的情况我们同样有
+\begin{align}
+\langle x\rangle = \int dx\rho(x)x
+\end{align}
+
+在量子力学中，物理量$\hat{\mathcal{O}}$期望值是类比着定义的
+\begin{align}
+\langle \hat{\mathcal{O}}\rangle = \int d^3x\Psi^*\hat{\mathcal{O}}\Psi
+\end{align}
+一般的，我们必须把$\Psi$按照$\hat{\mathcal{O}}$的本征函数展开，比如说动量本征函数。然后，把算符$\hat{\mathcal{O}}$作用在这些态上，得到对应的本征值，然后我们就得到了加权和。
+
+举个例子，我们有一些例子的坐标的期望值
+\begin{align}
+\langle \hat{x}\rangle = \int d^3x\Psi^*\hat{x}\Psi= \int d^3x\Psi^*{x}\Psi= \int d^3xx\underbrace{\Psi^*\Psi}_{\mathclap{\text{在该位置的几率密度}}}
+\end{align}
+
+为了计算方便，我们现在取Klein-Gordon方程的非相对论极限。
+
 
 \section[Schrödinger 方程]{Schrödinger Equation Schrödinger 方程}\label{sec8.4}
 \subsection[有外场的 Schrödinger 方程]{Schrödinger Equation with External Field 有外场的 Schrödinger 方程}\label{sec8.4.1}
