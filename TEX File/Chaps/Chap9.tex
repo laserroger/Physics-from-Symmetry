@@ -1,0 +1,89 @@
+%!TEX encoding = UTF-8 Unicode
+
+%----------------------------------------------------------------------------------------
+%	CHAPTER 8
+%   translator: laserdog
+%----------------------------------------------------------------------------------------
+
+\chapterimage{chapter_head_1.pdf}
+\usepackage{mathrsfs}
+
+
+\chapter[量子场论]{Quantum Field Theory }
+\label{chap9}
+
+\section*{总结}
+本章引入了量子场论的框架，从我们在Chap.5中推导出的公式开始
+$$[\Phi(x),\pi(y)]=i\delta(x-y)$$
+
+我们可以看出场本身就是算符。对于自旋为0，1/2，1的场的运动方程的解是用它们的傅立叶变换\mpar{傅立叶变换背后的思想在附录\ref{sec D.1}中进行了解释}写出来的。
+
+利用上面的对易关系,我们发现傅立叶系数现在也是算符。之后，我们会看到这些算符，当然还包括带有它们的场是如何产生和湮灭粒子的。用对应场的拉格朗日量，我们能够推导出代表能量的哈密顿算符。\\
+之后，我们开始发展有相互作用的理论，它是量子场论的核心。 我们会看到在相互作用的理论中，哈密顿量是由自由场的哈密顿量和相互作用的哈密顿量线性组合而成的。这个观察可以在之后被用到相互作用绘景中，在这个绘景下场的时间烟花是由自由哈密顿量主导的，而态的时间演化是由相互作用哈密顿量主导的。在这个绘景下，我们能够推导出散射过程的几率幅，用狄拉克记号可以表示成
+$$\langle f | \hat{S} | i\rangle$$
+
+这里$\hat{S}$表示描述散射过程的算符，$|i\rangle$是初态而$\langle f|$是末态。 我们会发现算子$\hat{S}$可以用相互作用哈密顿量$H_{I}$写成
+$$\hat{S}(t,t_{i})=e^{-i\int_{t_{i}}^{t} dt' H_{I}}$$
+
+这个式子解不出来，因此我们用它的级数展开形式来计算这个指数，对于大多数实验而言，前面几项就足以得到精确的描述了。
+级数展开中的每一项可以在物理上理解成是用来描述不同种类的散射过程的。相互作用哈密顿量包含了场的线性组合，就如上面提到的，是用来产生或者湮灭场的。对于首个非平庸级次，我们得到8项并且我们会看到第一项描述了一个从$e^{-} e^{+} \to \gamma$的散射过程。这意味着我们从一个由电子和正电子组成的初态$|e^{-}e^{+} \rangle$出发，这个初态被自旋1/2的场算符湮灭，并且之后一个光子$\langle \gamma |$由光子场产生。其他项当作用在初态$|e^{-}e^{+} \rangle$时的结果是0.\\
+这个级数的下一级由许多，许多项所组成，我们只看其中的一项，同样地，我们从初态$|e^{-}e^{+} \rangle$开始然后我们会看到其中的一项描述了如下过程$e^{-}e^{+} \to \gamma \to e^{-}e^{+}$, 这里初末的正负电子对一般具有不同的动量。\\
+同样地，所有这些项可以被理解成所有的相互作用哈密顿量。一个图形化的来简化这些计算的方法就是著名的费曼图。在这个图中每一条线，每一个顶点代表了我们上面计算的东西的一个因子。
+\section{场论的定义}
+在这一节，我们想要理解由对称性限制得到的拉氏量是怎样被用到场论的框架之下的。得到一个描述自然界的场论的第一步是将我们发现的拉氏量和Chap.5,尤其是\ref{equ5.5}结合起来，我们在这里为了方便重复一次
+\begin{equation} \label{equ9.1}
+[\Phi(x),\pi(y)]=i\delta(x-y)
+\end{equation}
+这里共轭动量密度$\pi(y)$给出如下
+\begin{equation} \label{equ9.2}
+\pi(y)=\frac{\partial \mathcal{L}}{\partial(\partial_{0}\Phi(y))}
+\end{equation}
+\section{自旋为0的自由场理论}
+一个产生的艺术首先是一个毁灭的艺术－－毕加索\mpar{引自，梅若罗\textit{The Courage to Create}. W.W.Norton and Company,reprint edition,3 1994. ISBN 9780393311068}
+再一次的，让我们从最简单的例子出发，自由的0自旋场，由在洛伦兹变换下不发生变化的标量来描述，正如在Sec.3.7.4中推导的一样。我们已经在Chap.6.2中推出了相对应的拉氏量
+\begin{equation} \label{equ9.3}
+\mathcal{L}=\frac{1}{2}(\partial_{\mu}\Phi \partial^{\mu}\Phi-m^{2}\Phi^{2})
+\end{equation}
+以及运动方程叫做克莱因高登方程
+\begin{equation} \label{equ9.4}
+(\partial_{\mu}\partial^{\mu}+m^{2})\Phi=0
+\end{equation}
+计算共轭动量是直接的
+$$\pi(x)=\frac{\partial \mathcal{L}}{\partial( \partial_{0}\Phi(x))}=\frac{\partial}{\partial(\partial_{0}\Phi(x))} \frac{1}{2}(\partial_{\mu}\Phi(x)\partial^{\mu}\Phi(x)-m^{2}\Phi^{2}(x))=\partial_{0}\Phi(x)$$
+
+克莱因高登方程的最一般的解可以写成傅立叶展开的形式
+\mpar{如果想知道关于积分测度的详细的计算过程，以及为什么写出这种形式的解的验证请看本章最后\ref{sec9.6}的附录}
+\begin{equation} \label{equ9.5}
+\Phi(x)=\int dk^{3}\frac{1}{(2\pi)^{3}2\omege_{k}}(a(k)e^{-ikx}+b(k)e^{ikx})
+\end{equation}
+其中$\omega^{2}=\vec{k}^{2}+m^{2}$,如果限制在实标量场的情况我们可以把它写成
+\begin{equation} \label{equ9.6}
+\Phi(x)=\int dk^{3}\frac{1}{(2\pi)^{3}2\omega_{k}}(a(k)e^{-ikx}+a^{\dag}(k)e^{ikx})
+\end{equation}
+因为$c+c^{\dag}=\underbrace{Re(c)+i \cdot Im(c)}_{c}+\underbrace{Re(c)-i \cdot Im(c)}_{c^{\dag}}=2Re(c)$\\
+现在我们来看\ref{equ9.1}意味着什么，不为零的对易子是$[\Phi(x),\pi(y)]\neq 0$. 这意味着$\Phi(x)$和$\pi(y)$不是普通的函数而必须是算符，因为一般的函数是对易的：$(3+x)(7xy)=(7xy)(3+x)$, 看\ref{equ9.6}，我们得到结论傅立叶系数$a(k)$和$a(k)^{\dag}$是算符，因为$e^{\pm ikx}$只是复数，而复数是对易的。
+用\ref{equ9.1}我们可以计算\mpar{例如可以参考Lewis H.Ryder书的4.1节，\textit{Quantum Field Theory}. Cambridge University Press, 2nd edition, 6 1996. ISBN 9780521478114}
+\begin{equation} \label{equ9.7}
+[a(k),a^{\dag}(k')]=(2\pi)^{3}\delta^{3}(\vec{k}-\vec{k'})
+\end{equation}
+\begin{equation} \label{equ9.8}
+[a(k),a(k')]=0
+\end{equation}
+\begin{equation} \label{equ9.9}
+[a^{\dag}(k),a^{\dag}(k')]=0
+\end{equation}
+现在既然我们已经知道了场本身就是一个算符，那么接下来很自然的事情是问：它作用在什么上面？在粒子理论中，我们将算符作用在某些东西上得到的动力学变量用来描述粒子（波函数，抽象的狄拉克矢量等等).在场论中，我们现在没有什么东西来描述粒子。在这一点上，粒子是怎么出现在场论中是完全不清楚的。然而，让我们看一看我们的场的展开系数$a(k)$和$a^{\dag}(k)$是如何作用在一些抽象的东西上的，通过做这件事情，我们当然可以知道场是如何作用在一些抽象的东西上的了。为了对这里发生的事情建立直观，让我们首先来看一下我们是所熟悉的物理量：能量。\\
+一个标量场的能量是由我们通过时间平移不变性导出的\ref{equ4.40}给出的
+\begin{align} \label{equ9.10}
+E=\int d^{3}x T^{00}\\&=\int d^{3}x(\frac{\partial \mathcal{L}}{\partial(\partial_{0}\Phi)}\underbrace{\frac{\partial \Phi}{\partial x_{0}}}_{\partial_{0}\Phi}-\mathcal{L})\\&=\int d^{3}x(\partial_{0}\Phi)^{2}-\frac{1}{2}(\partial_{\mu}\Phi \partial^{\mu}\Phi-m^{2}\Phi^{2})\\ &\underbrace{=}_{\partial_{\mu}\partial^{\mu}=\partial_{0} \partial_{0}-\partial_{i}\partial_{i}}\frac{1}{2}\int d^{3}x( (\partial_{0}\Phi)^{2}+(\partial_{i}\Phi)^{2}+m^{2}\Phi^{2})
+\end{align}
+将\ref{equ9.6}代入\ref{equ9.10},并且用(\ref{equ9.7}-\ref{equ9.9})， 我们可以写成
+\begin{align} \label{equ9.11}
+E=\frac{1}{2}\int dk^{3}\frac{1}{(2\pi)^{3}} \omega_{k}(a^{\dag}(k)a(k)+a(k)a^{\dag}(k))\\ &\underbrace{=}_{\ref{equ 9.7}}\int dk^{3}\frac{1}{(2\pi)^{3}} \omega_{k}(a^{\dag}(k)a(k)+\frac{1}{2}(2\pi)^{3}\delta^{3}(0))
+\end{align}
+这时，我们发现我们的理论发散了。积分中的第二项是无穷大的。我们可以在这里停下并且说这个理论并不奏效。然而，一些勇敢的人挖掘的更深一步，忽略了无穷大的项并且发现了一个可以非常准确的用来描述自然界的理论。从这里继续的标准的做法就是忽略第二项,并且关于这一点没有解释。这里的关键是这一项出现在每个系统的能量中，并且我们只能够测量到能量的差值。因此这个无穷大的常数项不会对我们的测量造成影响。
+
+
+
+
+
