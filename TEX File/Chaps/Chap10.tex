@@ -76,7 +76,7 @@
 其中$\tau$是固有时（见\ref{sec2.2}节）。$(ds)^2$的平方根自然是不变量，由此可以构造一个用来取极小值，并且形式上最简单的量：
 \begin{equation}
 \label{equ10.5}
-    S = int C d \tau \text{其中}C\text{是常数，} d\tau = \sqrt{(cdt)^2 - (dx)^2 - (dy)^2 - (dz)^2}
+    S = \int C d \tau,\  \text{其中}C\text{是常数，} d\tau = \frac{1}{c} \sqrt{(cdt)^2 - (dx)^2 - (dy)^2 - (dz)^2}
 \end{equation}
 后面会看到$C = -mc^2$，因此我们要使
 \begin{equation}
@@ -115,3 +115,30 @@
     \frac{d}{dt} \left( \frac{m \dot{x}}{ \sqrt{1 - \frac{\dot{x}^2}{c^2} } } \right) = - \frac{dV}{dx} \equiv F
 \end{equation}
 注意在非相对论极限$\dot{x} \ll c$之下$\sqrt{1 - \frac{\dot{x}^2}{c^2} } \approx 1$，于是上式化为Newton第二定律形式(\ref{equ10.3})式。
+
+\section[非相对论力学的拉格朗日量]{The Lagrangian of Non-Relativistic Mechanics \quad 非相对论力学的拉格朗日量}
+\label{sec10.2}
+上一节导出的拉格朗日量在非相对论极限下的行为非常值得讨论，非相对论极限指粒子速度远小于光速的情形：$\dot{x} \ll c$. 由此可利用Taylor公式\mpar{Taylor公式的简介见附录B.3.}：
+\begin{equation}
+\label{equ10.12}
+    -mc^2 \sqrt{1 - \frac{\dot{x}^2}{c^2}} = -mc^2 \left( 1 - \frac{1}{2} \frac{\dot{x}^2}{c^2} + \dots \right).
+\end{equation}
+在$\dot{x} \ll c$的极限下可以忽略$\dot{x}/c$的高阶小量，于是拉格朗日量化为：
+\begin{equation}
+\label{equ10.13}
+    \mathcal{L} = -mc^2 + \frac{1}{2} m \dot{x}^2 - V(x)
+\end{equation}
+前面说过，拉格朗日量中$-mc^2$这样的常数对运动方程没有影响，因此{非相对论力学的拉格朗日量}为：
+\begin{equation}
+\label{equ10.14}
+    \mathcal{L} = \frac{1}{2} m \dot{x}^2 - V(x)
+\end{equation}
+在外势场为零，即$V(x) = 0$的情形下，$\mathcal{L} = \frac{1}{2} m \dot{x}^2$正是\ref{sec4.5.1}节中由Noether定理导出守恒量所用的拉格朗日量。把\ref{equ10.14}式的拉格朗日量带入欧拉-拉格朗日方程\ref{equ4.7}式可得：
+\begin{align}
+    \frac{\partial \mathcal{L}}{\partial x} - \frac{d}{dt} \left( \frac{\partial \mathcal{L}}{\partial \dot{x}} \right) = 0 \notag \\
+    \to \frac{\partial}{\partial x} \left( \frac{1}{2} m \dot{x}^2 \right) - \frac{d}{dt} \left( \frac{\partial}{\partial \dot{x}} \left( \frac{1}{2} m \dot{x}^2 - V(x) \right) \right) = 0 \notag \\
+    \to -\frac{\partial}{\partial x} V(x) - \frac{d}{dt} (m \dot{x}) = 0 \notag \\
+\label{equ10.15}
+    \to \frac{d}{dt} (m \dot{x}) = - \frac{\partial}{\partial x} V(x)
+\end{align}
+这正是本章开头导出的Newton第二定律\ref{equ10.3}式。
