@@ -82,42 +82,50 @@
 \contentsline {subsection}{\numberline {7.1.1}自旋$\frac {1}{2}$自由场的内禀对称性}{127}{subsection.7.1.1}
 \contentsline {subsection}{\numberline {7.1.2}自旋为$1$自由场的内禀对称性}{129}{subsection.7.1.2}
 \contentsline {subsection}{\numberline {7.1.3}把奇怪的东西堆一起}{130}{subsection.7.1.3}
-\contentsline {subsection}{\numberline {7.1.4}非齐次麦克斯韦方程和最小耦合}{132}{subsection.7.1.4}
+\contentsline {subsection}{\numberline {7.1.4}非齐次麦克斯韦方程和最小耦合}{133}{subsection.7.1.4}
 \contentsline {subsection}{\numberline {7.1.5}再一次电荷共轭变换}{134}{subsection.7.1.5}
 \contentsline {subsection}{\numberline {7.1.6}内禀${\mathcal U}(1)$对称性的 Noether 定理}{135}{subsection.7.1.6}
 \contentsline {subsection}{\numberline {7.1.7}零自旋有质量场的相互作用}{137}{subsection.7.1.7}
-\contentsline {subsection}{\numberline {7.1.8}自旋为$1$有质量场的相互作用}{137}{subsection.7.1.8}
+\contentsline {subsection}{\numberline {7.1.8}自旋为$1$有质量场的相互作用}{138}{subsection.7.1.8}
 \contentsline {section}{\numberline {7.2}$\mathcal {SU}(2)$相互作用}{138}{section.7.2}
 \contentsline {section}{\numberline {7.3}质量项、${\mathcal U}(1)$和$\mathcal {SU}(2)$的统一}{145}{section.7.3}
-\contentsline {section}{\numberline {7.4}宇称破坏}{153}{section.7.4}
-\contentsline {section}{\numberline {7.5}轻子质量项}{153}{section.7.5}
-\contentsline {section}{\numberline {7.6}夸克质量项}{153}{section.7.6}
-\contentsline {section}{\numberline {7.7}同位旋}{153}{section.7.7}
-\contentsline {subsection}{\numberline {7.7.1}Labelling 态}{153}{subsection.7.7.1}
-\contentsline {section}{\numberline {7.8}$\mathcal {SU}(3)$相互作用}{153}{section.7.8}
-\contentsline {subsection}{\numberline {7.8.1}色}{153}{subsection.7.8.1}
-\contentsline {subsection}{\numberline {7.8.2}夸克描述}{153}{subsection.7.8.2}
-\contentsline {section}{\numberline {7.9}Bosons 和 Fermions 间的相互影响}{153}{section.7.9}
-\contentsline {part}{\@mypartnumtocformat {IV}{Applications 应用}}{155}{part.4}
+\contentsline {section}{\numberline {7.4}宇称破坏}{154}{section.7.4}
+\contentsline {section}{\numberline {7.5}轻子质量项}{158}{section.7.5}
+\contentsline {section}{\numberline {7.6}夸克质量项}{162}{section.7.6}
+\contentsline {section}{\numberline {7.7}同位旋}{163}{section.7.7}
+\contentsline {subsection}{\numberline {7.7.1}Labelling 态}{165}{subsection.7.7.1}
+\contentsline {section}{\numberline {7.8}$\mathcal {SU}(3)$相互作用}{166}{section.7.8}
+\contentsline {subsection}{\numberline {7.8.1}色}{169}{subsection.7.8.1}
+\contentsline {subsection}{\numberline {7.8.2}夸克描述}{170}{subsection.7.8.2}
+\contentsline {section}{\numberline {7.9}Bosons 和 Fermions 间的游戏}{171}{section.7.9}
+\contentsline {part}{\@mypartnumtocformat {IV}{Applications 应用}}{173}{part.4}
 \ttl@stoptoc {default@3}
 \ttl@starttoc {default@4}
-\contentsline {chapter}{\numberline {8}量子力学}{157}{chapter.8}
-\contentsline {section}{\numberline {8.1}对应到粒子理论}{158}{section.8.1}
-\contentsline {section}{\numberline {8.2}相对论性能量-动量关系}{158}{section.8.2}
-\contentsline {section}{\numberline {8.3}量子力学的数学形式}{159}{section.8.3}
-\contentsline {subsection}{\numberline {8.3.1}期望值}{162}{subsection.8.3.1}
-\contentsline {section}{\numberline {8.4}Schrödinger 方程}{163}{section.8.4}
-\contentsline {subsection}{\numberline {8.4.1}有外场的 Schrödinger 方程}{163}{subsection.8.4.1}
-\contentsline {section}{\numberline {8.5}从波动方程到粒子的运动}{163}{section.8.5}
-\contentsline {subsection}{\numberline {8.5.1}例：自由粒子}{163}{subsection.8.5.1}
-\contentsline {subsection}{\numberline {8.5.2}例：盒子中的粒子}{163}{subsection.8.5.2}
-\contentsline {subsection}{\numberline {8.5.3}Dirac符号}{163}{subsection.8.5.3}
-\contentsline {subsection}{\numberline {8.5.4}例：盒子中的粒子，续}{163}{subsection.8.5.4}
-\contentsline {subsection}{\numberline {8.5.5}自旋}{163}{subsection.8.5.5}
-\contentsline {section}{\numberline {8.6}Heisenberg 不确定性原理}{163}{section.8.6}
-\contentsline {section}{\numberline {8.7}对于几种诠释的评议}{163}{section.8.7}
-\contentsline {section}{\numberline {8.8}附录：Dirac 旋量分量的诠释}{163}{section.8.8}
-\contentsline {section}{\numberline {8.9}附录：解Dirac 方程}{163}{section.8.9}
-\contentsline {section}{\numberline {8.10}附录：Dirac 旋量的不同的基}{163}{section.8.10}
-\contentsline {subsection}{\numberline {8.10.1}质量基下解 Dirac 方程}{163}{subsection.8.10.1}
+\contentsline {chapter}{\numberline {8}量子力学}{175}{chapter.8}
+\contentsline {section}{\numberline {8.1}对应到粒子理论}{176}{section.8.1}
+\contentsline {section}{\numberline {8.2}相对论性能量-动量关系}{176}{section.8.2}
+\contentsline {section}{\numberline {8.3}量子力学的数学形式}{177}{section.8.3}
+\contentsline {subsection}{\numberline {8.3.1}期望值}{180}{subsection.8.3.1}
+\contentsline {section}{\numberline {8.4}Schrödinger 方程}{181}{section.8.4}
+\contentsline {subsection}{\numberline {8.4.1}有外场的 Schrödinger 方程}{181}{subsection.8.4.1}
+\contentsline {section}{\numberline {8.5}从波动方程到粒子的运动}{181}{section.8.5}
+\contentsline {subsection}{\numberline {8.5.1}例：自由粒子}{181}{subsection.8.5.1}
+\contentsline {subsection}{\numberline {8.5.2}例：盒子中的粒子}{181}{subsection.8.5.2}
+\contentsline {subsection}{\numberline {8.5.3}Dirac符号}{181}{subsection.8.5.3}
+\contentsline {subsection}{\numberline {8.5.4}例：盒子中的粒子，续}{181}{subsection.8.5.4}
+\contentsline {subsection}{\numberline {8.5.5}自旋}{181}{subsection.8.5.5}
+\contentsline {section}{\numberline {8.6}Heisenberg 不确定性原理}{181}{section.8.6}
+\contentsline {section}{\numberline {8.7}对于几种诠释的评议}{181}{section.8.7}
+\contentsline {section}{\numberline {8.8}附录：Dirac 旋量分量的诠释}{181}{section.8.8}
+\contentsline {section}{\numberline {8.9}附录：解Dirac 方程}{181}{section.8.9}
+\contentsline {section}{\numberline {8.10}附录：Dirac 旋量的不同的基}{181}{section.8.10}
+\contentsline {subsection}{\numberline {8.10.1}质量基下解 Dirac 方程}{181}{subsection.8.10.1}
+\contentsline {chapter}{\numberline {9}量子场论}{183}{chapter.9}
+\contentsline {section}{\numberline {9.1}场论的定义}{184}{section.9.1}
+\contentsline {section}{\numberline {9.2}自旋为0的自由场理论}{184}{section.9.2}
+\contentsline {chapter}{\numberline {10}经典力学}{193}{chapter.10}
+\contentsline {section}{\numberline {10.1}相对论力学}{195}{section.10.1}
+\contentsline {section}{\numberline {10.2}非相对论力学的拉格朗日量}{196}{section.10.2}
+\contentsline {chapter}{\numberline {11}电动力学}{199}{chapter.11}
+\contentsline {section}{\numberline {11.1}齐次Maxwell方程组}{200}{section.11.1}
 \contentsfinish 
