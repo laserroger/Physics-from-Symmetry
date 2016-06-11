@@ -1,0 +1,67 @@
+%!TEX root = ..\main.tex
+%!TEX encoding = UTF-8 Unicode
+
+%——————————————————————————————————————————————————————————-
+%	CHAPTER 4
+%   Translator：SI
+%——————————————————————————————————————————————————————————-
+\chapterimage{chapter_head_1.pdf} % Chapter heading image
+
+
+\chapter[电动力学]{Electrodynamics \quad 电动力学}
+\label{chap11}
+第\ref{chap7}章已经导出了经典电动力学最重要的方程 --- 非齐次Maxwell方程（组）\ref{equ7.22}式：
+\begin{equation}
+\label{equ11.1}
+    \partial_\sigma (\partial^\sigma A^\rho - \partial^\rho A^\sigma ) = J_\rho
+\end{equation}
+利用电磁张量\mpar{电磁张量$F^{\sigma \rho} \equiv (\partial^\sigma A^\rho - \partial^\rho A^\sigma)$.}可将上式写为更紧凑的形式：
+\begin{equation}
+\label{equ11.2}
+    \partial_\sigma F^{\sigma \rho} = J^\rho
+\end{equation}
+\ref{sec7.1.6}节导出了$J_\rho$是Noether流(Noether current)，即$\partial_\rho J^\rho = 0$. 这一守恒流即为宏观理论中的四维电流。电磁张量$F^{\sigma \rho}$是反称张量（$F^{\sigma \rho} = -F^{\rho \sigma}$），这可以从定义式$F^{\sigma \rho} \equiv \partial^\sigma A^\rho - \partial^\rho A^\sigma$直接看出，因此$F^{\sigma \rho}$只有$6$个独立分量，其中三个是
+\begin{equation}
+\label{equ11.3}
+    F^{i0} = \partial^{i} A^0 - \partial^0 A^i
+\end{equation}
+另外三个是
+\begin{equation}
+\label{equ11.4}
+    F^{ij} = \partial^i A^j - \partial^j A^i = (\delta^i_\ell \delta^j_m - \delta^i_m \delta^j_\ell) \partial^\ell A^m \underbrace{=}_{\mathclap{ \delta^i_\ell \delta^j_m - \delta^i_m \delta^j_\ell = \epsilon^{ijk} \epsilon^{k\ell m}, \text{证明作为习题} }} \epsilon^{ijk} \epsilon^{k\ell m} \partial_\ell A^m
+\end{equation}
+这些独立分量通常记为：
+\begin{align}
+\label{equ11.5}
+    \partial^i A^0 - \partial^0 A^i &\equiv E^i \\
+\label{equ11.6}
+    \epsilon^{ijk} \partial^j A^k  &\equiv -B^i
+\end{align}
+因此
+\begin{align}
+\label{equ11.7}
+    F^{i0} &= E^i \\
+\label{equ11.8}
+    F^{ij} &= \epsilon^{ijk} \epsilon^{k\ell m} \partial^\ell A^m = -\epsilon^{ijk} B^k
+\end{align}
+将非齐次Maxwell方程组\mpar{\ref{equ11.2}式称为方程组是因为它代表了$\rho = 0, 1, 2, 3$一共四个方程。}重新写为：
+\begin{equation}
+\label{equ11.9}
+    \partial_\sigma F^{\rho \sigma} = \partial_0 F^{\rho 0} - \partial_k F^{\rho k} = J^\rho
+\end{equation}
+对于三个空间分量($\rho \to i$)有\mpar{$\epsilon^{jk\ell} \partial_k B^\ell = \big( \nabla \times \vec{B} \big)^j$，后者就是向量分析里面的旋度运算（nabla算子叉乘向量）。}：
+\begin{align}
+    \partial_0 F^{i0} - \partial_k F^{ik} = \partial_0 E^i + \epsilon^{ik\ell} \partial_k B^\ell = J_i \notag \\
+\label{equ11.10}
+    \to \partial_t \vec{E} + \nabla \times \vec{B} = \vec{J}
+\end{align}
+对于时间分量（$\rho = 0$分量）：
+\begin{align}
+    \partial_0 \underbrace{F^{00}}_{\mathclap{ =0, \text{见} F^{\rho \sigma} \text{定义式} }} - \partial_k F^{0k} &\overbrace{=}^{F^{\mu \nu} = -F^{\nu \mu}} \partial_k F^{k0} \underbrace{=}_{\ref{equ11.7} \text{式}} \partial_k E^k = J^0 \notag \\
+\label{equ11.11}
+    \to \nabla \cdot \vec{E} &= J_0 
+\end{align}
+这是非齐次Maxwell方程组的常用形式。
+
+\section[齐次Maxwell方程组]{The Homogeneous Maxwell Equations \quad 齐次Maxwell方程组}
+\label{sec11.1}
