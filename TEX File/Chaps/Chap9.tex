@@ -1,68 +1,72 @@
 %!TEX encoding = UTF-8 Unicode
 
 %----------------------------------------------------------------------------------------
-%	CHAPTER 8
-%   translator: laserdog
+%   CHAPTER 9
+%   translator: 不变态的海森堡
+%   proofreader: inempty
 %----------------------------------------------------------------------------------------
 
 \chapterimage{chapter_head_1.pdf}
 
 
 
-\chapter[量子场论]{Quantum Field Theory }
+\chapter[量子场论]{Quantum Field Theory}
 \label{chap9}
 
 \section*{总结}
-本章引入了量子场论的框架，从我们在Chap.5中推导出的公式开始
+本章引入了量子场论的框架，从我们在第五章中推导出的公式开始
 $$[\Phi(x),\pi(y)]=i\delta(x-y)$$
 
-我们可以看出场本身就是算符。对于自旋为0，1/2，1的场的运动方程的解是用它们的傅立叶变换\mpar{傅立叶变换背后的思想在附录\ref{sec D.1}中进行了解释}写出来的。
+我们可以看出场本身就是算符。自旋为0，1/2，1的场的运动方程的解是用它们的傅立叶变换\mpar{傅立叶变换背后的思想在附录D.1中进行了解释.}写出来的。
 
 利用上面的对易关系,我们发现傅立叶系数现在也是算符。之后，我们会看到这些算符，当然还包括带有它们的场是如何产生和湮灭粒子的。用对应场的拉格朗日量，我们能够推导出代表能量的哈密顿算符。\\
-之后，我们开始发展有相互作用的理论，它是量子场论的核心。 我们会看到在相互作用的理论中，哈密顿量是由自由场的哈密顿量和相互作用的哈密顿量线性组合而成的。这个观察可以在之后被用到相互作用绘景中，在这个绘景下场的时间烟花是由自由哈密顿量主导的，而态的时间演化是由相互作用哈密顿量主导的。在这个绘景下，我们能够推导出散射过程的几率幅，用狄拉克记号可以表示成
+之后，我们开始发展有相互作用的理论，它是量子场论的核心。 我们会看到在相互作用的理论中，哈密顿量是由自由场的哈密顿量和相互作用的哈密顿量线性组合而成的。这一洞察可以在之后被用到相互作用绘景中，在这个绘景下场的时间演化是由自由哈密顿量主导的，而态的时间演化是由相互作用哈密顿量主导的。在这个绘景下，我们能够推导出散射过程的几率幅，用狄拉克记号可以表示成
 $$\langle f | \hat{S} | i\rangle$$
 
 这里$\hat{S}$表示描述散射过程的算符，$|i\rangle$是初态而$\langle f|$是末态。 我们会发现算子$\hat{S}$可以用相互作用哈密顿量$H_{I}$写成
 $$\hat{S}(t,t_{i})=e^{-i\int_{t_{i}}^{t} dt' H_{I}}$$
 
 这个式子解不出来，因此我们用它的级数展开形式来计算这个指数，对于大多数实验而言，前面几项就足以得到精确的描述了。
-级数展开中的每一项可以在物理上理解成是用来描述不同种类的散射过程的。相互作用哈密顿量包含了场的线性组合，就如上面提到的，是用来产生或者湮灭场的。对于首个非平庸级次，我们得到8项并且我们会看到第一项描述了一个从$e^{-} e^{+} \to \gamma$的散射过程。这意味着我们从一个由电子和正电子组成的初态$|e^{-}e^{+} \rangle$出发，这个初态被自旋1/2的场算符湮灭，并且之后一个光子$\langle \gamma |$由光子场产生。其他项当作用在初态$|e^{-}e^{+} \rangle$时的结果是0.\\
-这个级数的下一级由许多，许多项所组成，我们只看其中的一项，同样地，我们从初态$|e^{-}e^{+} \rangle$开始然后我们会看到其中的一项描述了如下过程$e^{-}e^{+} \to \gamma \to e^{-}e^{+}$, 这里初末的正负电子对一般具有不同的动量。\\
-同样地，所有这些项可以被理解成所有的相互作用哈密顿量。一个图形化的来简化这些计算的方法就是著名的费曼图。在这个图中每一条线，每一个顶点代表了我们上面计算的东西的一个因子。
+级数展开中的每一项可以在物理上理解成是用来描述不同种类的散射过程的。相互作用哈密顿量包含了场的线性组合，就如上面提到的，是用来产生或者湮灭场的。对于最低的非平凡阶次，我们得到8项，且第一项描述了一个从$e^{-} e^{+} \to \gamma$的散射过程。这意味着我们从一个由电子和正电子组成的初态$|e^{-}e^{+} \rangle$出发，这个初态被自旋1/2的场算符湮灭，并且之后一个光子$\langle \gamma |$由光子场产生。其他项作用在初态$|e^{-}e^{+} \rangle$时的结果是0。\\
+
+这个级数的下一级由许多项组成，我们只看其中的一项，同样地，我们从初态$|e^{-}e^{+} \rangle$开始，然后我们会看到其中的一项描述了如下过程$e^{-}e^{+} \to \gamma \to e^{-}e^{+}$, 这里初末的正负电子对一般具有不同的动量。\\
+
+同样地，所有这些项可以被理解成所有的相互作用哈密顿量。一种简化这类计算的图形化方法是著名的费曼图。在这个图中每一条线，每一个顶点代表了我们上面计算的东西的一个因子。
+
 \section{场论的定义}
-在这一节，我们想要理解由对称性限制得到的拉氏量是怎样被用到场论的框架之下的。得到一个描述自然界的场论的第一步是将我们发现的拉氏量和Chap.5,尤其是\ref{equ5.5}结合起来，我们在这里为了方便重复一次
+在这一节，我们想要理解由对称性限制得到的拉氏量是怎样被用到场论的框架之下的。得到一个描述自然界的场论的第一步是将我们发现的拉氏量和第五章,尤其是\ref{equ5.5}结合起来，我们在这里为了方便重复一次
 \begin{equation} \label{equ9.1}
 [\Phi(x),\pi(y)]=i\delta(x-y)
 \end{equation}
 这里共轭动量密度$\pi(y)$给出如下
 \begin{equation} \label{equ9.2}
-\pi(y)=\frac{\partial \mathcal{L}}{\partial(\partial_{0}\Phi(y))}
+\pi(y)=\frac{\partial \mathscr{L}}{\partial(\partial_{0}\Phi(y))}
 \end{equation}
 \section{自旋为0的自由场理论}
-一个产生的艺术首先是一个毁灭的艺术－－毕加索\mpar{引自，梅若罗\textit{The Courage to Create}. W.W.Norton and Company,reprint edition,3 1994. ISBN 9780393311068}
-再一次的，让我们从最简单的例子出发，自由的0自旋场，由在洛伦兹变换下不发生变化的标量来描述，正如在Sec.3.7.4中推导的一样。我们已经在Chap.6.2中推出了相对应的拉氏量
+{\small “一个产生的艺术首先是一个毁灭的艺术”\\\rightline{——\textbf{Pablo Picasso}}}\mpar{引自，Rollo May，\textit{The Courage to Create}. W.W.Norton and Company,reprint edition,3 1994. ISBN 9780393311068}\\\par
+再一次的，让我们从最简单的例子出发，自由的0自旋场，由在洛伦兹变换下不发生变化的标量来描述，正如在\ref{sec3.7.4}节中推导的一样。我们已经在\ref{sec6.2}节中推出了相对应的拉氏量
 \begin{equation} \label{equ9.3}
-\mathcal{L}=\frac{1}{2}(\partial_{\mu}\Phi \partial^{\mu}\Phi-m^{2}\Phi^{2})
+\mathscr{L}=\frac{1}{2}(\partial_{\mu}\Phi \partial^{\mu}\Phi-m^{2}\Phi^{2})
 \end{equation}
 以及运动方程叫做克莱因高登方程
 \begin{equation} \label{equ9.4}
 (\partial_{\mu}\partial^{\mu}+m^{2})\Phi=0
 \end{equation}
-计算共轭动量是直接的
-$$\pi(x)=\frac{\partial \mathcal{L}}{\partial( \partial_{0}\Phi(x))}=\frac{\partial}{\partial(\partial_{0}\Phi(x))} \frac{1}{2}(\partial_{\mu}\Phi(x)\partial^{\mu}\Phi(x)-m^{2}\Phi^{2}(x))=\partial_{0}\Phi(x)$$
+可直接计算出共轭动量
+$$\pi(x)=\frac{\partial \mathscr{L}}{\partial( \partial_{0}\Phi(x))}=\frac{\partial}{\partial(\partial_{0}\Phi(x))} \frac{1}{2}(\partial_{\mu}\Phi(x)\partial^{\mu}\Phi(x)-m^{2}\Phi^{2}(x))=\partial_{0}\Phi(x)$$
 
 克莱因高登方程的最一般的解可以写成傅立叶展开的形式
 \mpar{如果想知道关于积分测度的详细的计算过程，以及为什么写出这种形式的解的验证请看本章最后\ref{sec9.6}的附录}
 \begin{equation} \label{equ9.5}
 \Phi(x)=\int dk^{3}\frac{1}{(2\pi)^{3}2\omega_{k}}(a(k)e^{-ikx}+b(k)e^{ikx})
 \end{equation}
-其中$\omega^{2}=\vec{k}^{2}+m^{2}$,如果限制在实标量场的情况我们可以把它写成
+其中$\omega_k^{2}=\vec{k}^{2}+m^{2}$,如果限制在实标量场的情况我们可以把它写成
 \begin{equation} \label{equ9.6}
 \Phi(x)=\int dk^{3}\frac{1}{(2\pi)^{3}2\omega_{k}}(a(k)e^{-ikx}+a^{\dag}(k)e^{ikx})
 \end{equation}
-因为$c+c^{\dag}=\underbrace{Re(c)+i \cdot Im(c)}_{c}+\underbrace{Re(c)-i \cdot Im(c)}_{c^{\dag}}=2Re(c)$\\
-现在我们来看\ref{equ9.1}意味着什么，不为零的对易子是$[\Phi(x),\pi(y)]\neq 0$. 这意味着$\Phi(x)$和$\pi(y)$不是普通的函数而必须是算符，因为一般的函数是对易的：$(3+x)(7xy)=(7xy)(3+x)$, 看\ref{equ9.6}，我们得到结论傅立叶系数$a(k)$和$a(k)^{\dag}$是算符，因为$e^{\pm ikx}$只是复数，而复数是对易的。
-用\ref{equ9.1}我们可以计算\mpar{例如可以参考Lewis H.Ryder书的4.1节，\textit{Quantum Field Theory}. Cambridge University Press, 2nd edition, 6 1996. ISBN 9780521478114}
+因为$c+c^{\dag}=\underbrace{\text{Re}(c)+i \cdot \text{Im}(c)}_{c}+\underbrace{\text{Re}(c)-i \cdot \text{Im}(c)}_{c^{\dag}}=2\text{Re}(c)$\\
+现在我们来看方程\ref{equ9.1}意味着什么，不为零的对易子是$[\Phi(x),\pi(y)]\neq 0$. 这意味着$\Phi(x)$和$\pi(y)$不是普通的函数而必须是算符，因为一般的函数是对易的：$(3+x)(7xy)=(7xy)(3+x)$。看方程\ref{equ9.6}，我们得到结论傅立叶系数$a(k)$和$a(k)^{\dag}$是算符，因为$e^{\pm ikx}$只是复数，而复数是对易的。
+用方程\ref{equ9.1}我们可以计算\mpar{例如可以参考Lewis H.Ryder书的4.1节，\textit{Quantum Field Theory}. Cambridge University Press, 2nd edition, 6 1996. ISBN 9780521478114}
 \begin{equation} \label{equ9.7}
 [a(k),a^{\dag}(k')]=(2\pi)^{3}\delta^{3}(\vec{k}-\vec{k'})
 \end{equation}
@@ -73,20 +77,24 @@ $$\pi(x)=\frac{\partial \mathcal{L}}{\partial( \partial_{0}\Phi(x))}=\frac{\part
 [a^{\dag}(k),a^{\dag}(k')]=0
 \end{equation}
 现在既然我们已经知道了场本身就是一个算符，那么接下来很自然的事情是问：它作用在什么上面？在粒子理论中，我们将算符作用在某些东西上得到的动力学变量用来描述粒子（波函数，抽象的狄拉克矢量等等).在场论中，我们现在没有什么东西来描述粒子。在这一点上，粒子是怎么出现在场论中是完全不清楚的。然而，让我们看一看我们的场的展开系数$a(k)$和$a^{\dag}(k)$是如何作用在一些抽象的东西上的，通过做这件事情，我们当然可以知道场是如何作用在一些抽象的东西上的了。为了对这里发生的事情建立直观，让我们首先来看一下我们是所熟悉的物理量：能量。\\
-一个标量场的能量是由我们通过时间平移不变性导出的\ref{equ4.40}给出的
+一个标量场的能量由我们通过时间平移不变性导出的方程\ref{equ4.40}给出
 \begin{align} \label{equ9.10}
-E=\int d^{3}x T^{00}\\&=\int d^{3}x(\frac{\partial \mathcal{L}}{\partial(\partial_{0}\Phi)}\underbrace{\frac{\partial \Phi}{\partial x_{0}}}_{\partial_{0}\Phi}-\mathcal{L})\\&=\int d^{3}x(\partial_{0}\Phi)^{2}-\frac{1}{2}(\partial_{\mu}\Phi \partial^{\mu}\Phi-m^{2}\Phi^{2})\\ &\underbrace{=}_{\partial_{\mu}\partial^{\mu}=\partial_{0} \partial_{0}-\partial_{i}\partial_{i}}\frac{1}{2}\int d^{3}x( (\partial_{0}\Phi)^{2}+(\partial_{i}\Phi)^{2}+m^{2}\Phi^{2})
+E&=\int d^{3}x T^{00}\\&=\int d^{3}x(\frac{\partial \mathscr{L}}{\partial(\partial_{0}\Phi)}\underbrace{\frac{\partial \Phi}{\partial x_{0}}}_{\partial_{0}\Phi}-\mathscr{L})\\&=\int d^{3}x(\partial_{0}\Phi)^{2}-\frac{1}{2}(\partial_{\mu}\Phi \partial^{\mu}\Phi-m^{2}\Phi^{2})\\ &\underbrace{=}_{\partial_{\mu}\partial^{\mu}=\partial_{0} \partial_{0}-\partial_{i}\partial_{i}}\frac{1}{2}\int d^{3}x( (\partial_{0}\Phi)^{2}+(\partial_{i}\Phi)^{2}+m^{2}\Phi^{2})
 \end{align}
-将\ref{equ9.6}代入\ref{equ9.10},并且用(\ref{equ9.7}-\ref{equ9.9})， 我们可以写成
+将方程\ref{equ9.6}代入方程\ref{equ9.10},并且用(方程\ref{equ9.7}-方程\ref{equ9.9})， 我们可以写成
 \begin{align} \label{equ9.11}
-E=\frac{1}{2}\int dk^{3}\frac{1}{(2\pi)^{3}} \omega_{k}(a^{\dag}(k)a(k)+a(k)a^{\dag}(k))\\ &\underbrace{=}_{\ref{equ 9.7}}\int dk^{3}\frac{1}{(2\pi)^{3}} \omega_{k}(a^{\dag}(k)a(k)+\frac{1}{2}(2\pi)^{3}\delta^{3}(0))
+E&=\frac{1}{2}\int dk^{3}\frac{1}{(2\pi)^{3}} \omega_{k}(a^{\dag}(k)a(k)+a(k)a^{\dag}(k))\nonumber\\ 
+&\underbrace{=}_{\text{方程\ref{equ 9.7}}}\int dk^{3}\frac{1}{(2\pi)^{3}} \omega_{k}(a^{\dag}(k)a(k)+\frac{1}{2}(2\pi)^{3}\delta^{3}(0))
 \end{align}
-这时，我们发现我们的理论发散了。积分中的第二项是无穷大的。我们可以在这里停下并且说这个理论并不奏效。然而，一些勇敢的人挖掘的更深一步，忽略了无穷大的项并且发现了一个可以非常准确的用来描述自然界的理论。从这里继续的标准的做法就是忽略第二项,并且关于这一点没有解释。这里的关键是这一项出现在每个系统的能量中，并且我们只能够测量到能量的差值。因此这个无穷大的常数项不会对我们的测量造成影响。
+这时，我们发现我们的理论发散了。积分中的第二项是无穷大的。我们可以在这里停下并且说这个理论并不奏效。然而，一些勇敢的人挖掘的更深一步，忽略了无穷大的项并且发现了一个精确描述自然的理论。从这里继续的标准的做法就是忽略第二项，这种做法的可行性尚未得到解释。这里的关键是这一项出现在每个系统的能量中，并且我们只能够测量到能量的差值。因此这个无穷大的常数项不会对我们的测量造成影响。
 
 按照习惯，写作算符的能量叫做哈密顿量$\hat{H}$, 我们可以计算$\hat{H}$和Fourier系数$a(k)$以及$a^{\dag}(k)$的对易子\mpar{之后会看到为什么它是有用的}。我们得到了
 \begin{align}
 \label{equ9.12}
-[\hat{H},a^{\dag}(k')]=\int dk^{3}\frac{1}{(2\pi)^{3}} \omega_{k}[a^{\dag}(k)a(k),a^{\dag}(k')]\\&\underbrace{=}_{[a^{\dag}(k),a^{\dag}(k')]=0} \int dk^{3}\frac{1}{(2\pi)^{3}} \omega_{k} a^{\dag}(k) [a(k),a^{\dag}(k')]\\&=\int dk^{3}\omega_{k}a^{\dag}(k)\delta^{3}(k-k')\\&\underbrace{=}_{见附录D.2} \omega_{k'}a^{\dag}(k')
+[\hat{H},a^{\dag}(k')]&=\int dk^{3}\frac{1}{(2\pi)^{3}} \omega_{k}[a^{\dag}(k)a(k),a^{\dag}(k')]\nonumber\\
+&\underbrace{=}_{\mathclap{[a^{\dag}(k),a^{\dag}(k')]=0}} \int dk^{3}\frac{1}{(2\pi)^{3}} \omega_{k} a^{\dag}(k) [a(k),a^{\dag}(k')]\nonumber\\
+&=\int dk^{3}\omega_{k}a^{\dag}(k)\delta^{3}(k-k')\nonumber\\
+&\underbrace{=}_{\text{见附录D.2}} \omega_{k'}a^{\dag}(k')
 \end{align}
 同样的
 \begin{equation}
@@ -97,23 +105,23 @@ E=\frac{1}{2}\int dk^{3}\frac{1}{(2\pi)^{3}} \omega_{k}(a^{\dag}(k)a(k)+a(k)a^{\
 \begin{equation} \label{equ9.14}
 \hat{H} |?\rangle=E | ?\rangle
 \end{equation}
-我们现在回到开始的那个问题：场是如何作用到我们的系统上的？\mpar{记住：场＝算符}我们先来看一下\mpar{这里我们采取了非常聪明的处理方式，它是Dirac在处理量子力学中谐振子的问题时首先被引入的}第一个Fourier系数（现在是一个算符）对于系统能量的影响
+我们现在回到开始的那个问题：\textbf{场是如何作用到我们的系统上的？}\mpar{记住：场＝算符}我们先来看一下\mpar{这里我们采取了非常聪明的处理方式，它是Dirac在处理量子力学中谐振子的问题时首先被引入的}第一个Fourier系数（现在是一个算符）对于系统能量的影响
 \begin{align}
 \label{equ9.15}
-\hat{H}(a(k')| ?\rangle)=(a(k')\hat{H}+\underbrace{\hat{H}a(k')-a(k')\hat{H}}_{[\hat{H},a(k')]}) |?\rangle \\&=a(k')\underbrace{\hat{H}| ?\rangle}_{E |?\rangle}+[\hat{H},a(k')]| ?\rangle \\&=(a(k')E+[\hat{H},a(k')])|?\rangle\\&\underbrace{=}_{\ref{equ9.13}}(a(k')E-\omega_{k'}a(k'))| ?\rangle\\&=(E-\omega_{k'})(a(k')| ? \rangle)
+\hat{H}(a(k')| ?\rangle)&=(a(k')\hat{H}+\underbrace{\hat{H}a(k')-a(k')\hat{H}}_{[\hat{H},a(k')]}) |?\rangle \\&=a(k')\underbrace{\hat{H}| ?\rangle}_{E |?\rangle}+[\hat{H},a(k')]| ?\rangle \\&=(a(k')E+[\hat{H},a(k')])|?\rangle\\&\underbrace{=}_{\text{方程\ref{equ9.13}}}(a(k')E-\omega_{k'}a(k'))| ?\rangle\\&=(E-\omega_{k'})(a(k')| ? \rangle)
 \end{align}
 同样地对于第二个Fourier系数
 \begin{equation} 
 \label{equ9.16}
 \hat{H}a^{\dag}(k')| ?\rangle=(E+\omega_{k'})a^{\dag}(k')| ?\rangle
 \end{equation}
-我们怎么理解它呢？ 我们看到$a(k')| ?\rangle$可以被理解为一个具有能量$E-\omega_{k}$的新的系统。更精确的，我们定义
+我们怎么理解它呢？ 我们看到$a(k')| ?\rangle$可以被理解为一个具有能量$E-\omega_{k}$的新的系统。更确切的，我们定义
 $$|?_{2} \rangle \equiv a(k')| ?\rangle$$
-$$\hat{H} |?_{2} \rangle \underbrace{=}_{用\ref{equ9.15}}(E-\omega_{k'}) |?_{2}\rangle$$
-它暗示了我们应该如何理解场的作用，想象一个真空态系统$|0\rangle$，定义为$H| 0\rangle=0| 0\rangle$ 如果我们现在用$a^{\dag}(k')$作用于真空态$|0\rangle$上，我们知道它将真空的体系变到了一个具有能量$\omega_{k'}$的体系
+$$\hat{H} |?_{2} \rangle \underbrace{=}_{\text{用方程\ref{equ9.15}}}(E-\omega_{k'}) |?_{2}\rangle$$
+它暗示了我们应该如何理解场的作用，想象一个真空态系统$|0\rangle$，依定义有$H| 0\rangle=0| 0\rangle$。 如果我们现在用$a^{\dag}(k')$作用于真空态$|0\rangle$上，我们知道它将真空的体系变到了一个具有能量$\omega_{k'}$的体系
 \begin{equation}
 \label{equ9.17}
-\hat{H}a^{\dag}(k')| 0\rangle\underbrace{=}_{用\ref{equ9.16}}\omega_{k'}a^{\dag}(k')|0\rangle
+\hat{H}a^{\dag}(k')| 0\rangle\underbrace{=}_{\text{用方程\ref{equ9.16}}}\omega_{k'}a^{\dag}(k')|0\rangle
 \end{equation}
 我们看到$a^{\dag}(k')$在一个全空的体系中产生了一些具有能量为$\omega_{k'}$的东西，我们把它叫做一个动量为$k'$的粒子！如果我们再用$a^{\dag}$作用在这个系统上一次，我们得到了具有相同动量的第二个粒子。如果我们用$a^{\dag}(k'‘)$作用。我们可以得到具有动量$k''$的粒子等等。因此，我们叫$a^{\dag}$产生算符。和$a^{\dag}(k')$类似，我们可以理解$a(k')$: $a(k')$破坏或者湮灭一个具有能量为$\omega_{k'}$的粒子，所以叫做湮灭算符。为了使其更加精确，我们引入一个关于粒子态的新的记号
 \begin{equation} \label{equ9.18}
@@ -155,22 +163,21 @@ $$E=\sum_{k}\omega_{k}N(k)$$
 a^{\dag}(k) |n_{k}\rangle=C | n_{k}+1 \rangle
 \end{equation}
 这里$n_{k}$记作动量为$k$的粒子数，C是某个数。通过它我们得到 \mpar{记得$|n_{k}\rangle^{\dag}=\langle n_{k}|$,我们当然也有$(a^{\dag})^{\dag}=a$.}：
-
-$$(a^{\dag}(k)| n_{k} \rangle)^{\dag}=(C |n_{k}+1\rangle)^{\dag}$$
-\begin{equation} \label{equ9.25}
-\to \langle n_{k} | a(k)=\langle n_{k}+1| C^{\dag}
-\end{equation}
+\begin{align} \label{equ9.25}
+(a^{\dag}(k)| n_{k} \rangle)^{\dag}&=(C |n_{k}+1\rangle)^{\dag}\nonumber\\
+\to \langle n_{k} | a(k)&=\langle n_{k}+1| C^{\dag}
+\end{align}
 我们可以因此写出
 \begin{equation}
 \label{equ9.26}
-\underbrace{\langle n_{k} | a(k)}_{\ref{equ9.25}}\underbrace{a^{\dag}(k) | n_{k}\rangle}_{\ref{equ9.24}} =\langle n_{k}+1|\underbrace{C^{\dag}C}_{一个数而不是算符} |n_{k}+1 \rangle=C^{\dag}C \underbrace{ \langle n_{k}+1|| n_{k}+1\rangle}_{=1}
+\underbrace{\langle n_{k} | a(k)}_{\text{方程\ref{equ9.25}}}\underbrace{a^{\dag}(k) | n_{k}\rangle}_{\text{方程\ref{equ9.24}}} =\langle n_{k}+1|\underbrace{C^{\dag}C}_{\mathclap{\text{一个数而不是算符}}} |n_{k}+1 \rangle=C^{\dag}C \underbrace{ \langle n_{k}+1|| n_{k}+1\rangle}_{=1}
 \end{equation}
-或者用离散的对易关系(\ref{equ9.23})
+或者用离散的对易关系(方程\ref{equ9.23})
 \begin{align}
 \label{equ9.27}
-\langle n_{k} | a(k)a^{\dag}(k)| n_{k}\rangle=\langle n_{k} |(\underbrace{a^{\dag}(k)a(k)}_{=N(k) \ref{equ9.21}}+\underbrace{\delta_{k,k}}_{=1})|n_{k}\rangle \\& \overbrace{=}^{\ref{equ9.22}} \langle n_{k}|\underbrace{(n_{k}+1) }_{一个数而不是算符}| n_{k}\rangle=(n_{k}+1)\underbrace{\langle n_{k}||n_{k}\rangle}_{=1}
+\langle n_{k} | a(k)a^{\dag}(k)| n_{k}\rangle&=\langle n_{k} |(\underbrace{a^{\dag}(k)a(k)}_{=N(k) |\text{方程\ref{equ9.21}}}+\underbrace{\delta_{k,k}}_{=1})|n_{k}\rangle \\& \overbrace{=}^{\text{方程\ref{equ9.22}}} \langle n_{k}|\underbrace{(n_{k}+1) }_{\text{一个数而不是算符}}| n_{k}\rangle=(n_{k}+1)\underbrace{\langle n_{k}||n_{k}\rangle}_{=1}
 \end{align}
-结合\ref{equ9.26}和\ref{equ9.27}得到
+结合方程\ref{equ9.26}和方程\ref{equ9.27}得到
 \begin{equation}\label{equ9.28}
 C^{\dag}C=n_{k}+1 \to C=\sqrt{n_{k}+1}
 \end{equation}
@@ -184,9 +191,11 @@ a^{\dag}(k)| n_{k}\rangle=\sqrt{n_{k}+1} |n_{k}+1 \rangle
 a |n_{k}\rangle=\sqrt{n_{k}} |n_{k}-1\rangle
 \end{equation}
 这时出现了两个问题。首先，如果我们想要在全空的系统中湮灭一个粒子会发生什么？第二：能量守恒和电荷守恒怎么办？我们如何能够从什么都没有的情况产生一些东西而不违背守恒律？首先，守恒律从来没有被违背，但是这一点只有在我们进一步深入这个理论之后
-才会变的清晰起来。在这一点上，Richard-Feymann也有同样的问题\mpar{Feynman's Nobel Lecture(December11,1965}，看一看或许对我们有帮助\\
-我记得当某个人开始教我关于产生和湮灭算符的东西的时候，当说到这个算符产生了一个电子，我说：“你怎么能够产生一个电子，它不符合电荷守恒。就这样，我从思想上的抵触阻碍了我学习一个非常实际的计算方法。
-第二，我们当然永远不能湮灭那些一开始就不存在的东西，如果我们用湮灭算符作用到一个全空的集合$|0\rangle$,从\ref{equ9.30}得到
+才会变的清晰起来。在这一点上，Richard Feymann也有同样的问题\mpar{Feynman的Nobel演讲(December11,1965）}，看一看或许对我们有帮助\\
+\begin{center}
+\parbox{0.9\textwidth}{\small 我记得当某个人开始教我关于产生和湮灭算符的东西的时候，当说到这个算符产生了一个电子，我说：“你怎么能够产生一个电子，它不符合电荷守恒。就这样，我从思想上的抵触阻碍了我学习一个非常实际的计算方法。}
+\end{center}\vspace{4mm}
+第二，我们当然永远不能湮灭那些一开始就不存在的东西，如果我们用湮灭算符作用到一个全空的集合$|0\rangle$,从方程\ref{equ9.30}得到
 \begin{equation}
 \label{equ9.31}
 a(k)|0_{k} \rangle=\sqrt{0}|0_{k}-1_{k} \rangle=0
@@ -198,7 +207,6 @@ a(k‘)|1_{k} \rangle=\sqrt{0}|1_{k}0_{k'}-1_{k'} \rangle=0
 \end{equation}
 我们看到，如果我们用湮灭算符$a(k')$作用到一个不包含动量k'的粒子的右矢上，比如$|k\rangle$，结果依然是0.产生算符和湮灭算符出现在场的Fourier展开中，这个傅立叶展开包含了对于所有可能动量的积分（或求和），因此当这些场作用到一个像$|k\rangle$的右矢上时，只有一个湮灭算符会导致不为0的结果。这一点在我们试图用量子场论来描述相互作用的时候是非常重要的。
 在我们开始研究相互作用之前，我们先来简单的看看自旋1/2和自旋1的自由场。
-
 
 
 
