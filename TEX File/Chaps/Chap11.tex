@@ -2,7 +2,7 @@
 %!TEX encoding = UTF-8 Unicode
 
 %——————————————————————————————————————————————————————————-
-%	CHAPTER 4
+%   CHAPTER 11
 %   Translator：SI
 %——————————————————————————————————————————————————————————-
 \chapterimage{chapter_head_1.pdf} % Chapter heading image
@@ -65,3 +65,136 @@
 
 \section[齐次Maxwell方程组]{The Homogeneous Maxwell Equations \quad 齐次Maxwell方程组}
 \label{sec11.1}
+定义{\bf 对偶(dual)电磁张量}$\tilde{F}^{\mu \nu}$为四维Levi-Civita符号%
+\mpar{四维Levi-Civita符号$\epsilon^{\mu \nu \rho \sigma}$的定义见附录B.5.5.}%
+与电磁张量的缩并：
+\begin{equation}
+\label{equ11.12}
+    \tilde{F}^{\mu \nu} = \epsilon^{\mu \nu \rho \sigma} F^{\rho \sigma}
+\end{equation}
+从$F^{\mu \nu}$的定义可以导出，$F^{\mu \nu}$与任意全反称张量（比如$\epsilon^{\mu \nu \rho \sigma}$）缩并后的导数为零，即：
+\begin{equation}
+\label{equ11.13}
+    \partial_\mu \tilde{F}^{\mu \nu} = \partial_\mu \epsilon^{\mu \nu \rho \sigma} (\partial_\sigma A_\rho - \partial_\rho A_\sigma) = 0
+\end{equation}
+这一结论实际是如下命题的情形之一：两个对称指标与两个反对称指标缩并\footnote{例如，张量$A^{\alpha \beta \mu \nu} = A^{\alpha \beta \nu \mu}$, $\mu, \nu$是一对对称指标；张量$B_{\rho \sigma \eta \delta} = -B_{\sigma \rho \eta \delta}$, $\rho, \sigma$是一对反称指标。一对对称指标与反称指标的缩并结果必为零（即所得张量分量均为$0$）：$C^{\alpha \beta}_{\eta \delta} \equiv A^{\alpha \beta \gamma \varphi} B_{\gamma \varphi \eta \delta} = 0.$}所得结果为零%
+\mpar{详见附录B.5.4.}。%
+以\ref{equ11.13}式括号内的第一项为例：
+\begin{align}
+    \epsilon^{\mu \nu \rho \sigma} \partial_\mu \partial_\sigma A_\rho &= \frac{1}{2} ( \epsilon^{\mu \nu \rho \sigma} \partial_\mu \partial_\sigma A_\rho + \epsilon^{\mu \nu \rho \sigma} \partial_\mu \partial_\sigma A_\rho) \notag \\
+    & \underbrace{=}_{\mathclap{ \text{重命名哑指标} }} \frac{1}{2} ( \epsilon^{\mu \nu \rho \sigma} \partial_\mu \partial_\sigma A_\rho + \epsilon^{\sigma \nu \rho \mu} \partial_\sigma \partial_\mu A_\rho) \notag \\
+\label{equ11.14}
+    & \underbrace{=}_{\mathclap{ \epsilon^{\mu \nu \rho \sigma} = -\epsilon^{\sigma \nu \rho \mu}, \partial_\mu \partial_\sigma = \partial_\sigma \partial_\mu } } \frac{1}{2} (\epsilon^{\mu \nu \rho \sigma} \partial_\mu \partial_\sigma A_\rho - \epsilon^{\mu \nu \rho \sigma} \partial_\mu \partial_\sigma A_\rho) = 0 \quad \surd
+\end{align}
+同理可导出括号中的第二项为零。方程组%
+\mpar{下式代表$\nu = 0, 1, 2, 3$四个方程组成的方程组。}%
+\begin{equation}
+\label{equ11.15}
+    \partial_\mu \tilde{F}^{\mu \nu} = 0
+\end{equation}
+称为{\bf 齐次Maxwell方程组(homogeneous Maxwell equations)}。从推导过程可见它源自电磁张量$F^{\mu \nu}$的定义。下面将它写成用电场$\vec{E}$与磁场$\vec{B}$表示的形式，考虑$\nu = 0$对应的方程：
+\begin{align}
+    0 &= \partial_\mu \tilde{F}^{\mu 0} \notag \\
+    &= \partial_\mu \epsilon^{\mu 0 \rho \sigma} F^{\rho \sigma} \notag \\
+    &= \partial_0 \underbrace{\epsilon^{00 \rho \sigma}}_{= 0} F^{\rho \sigma} - \partial_i \epsilon^{i0\rho \sigma} F^{\rho \sigma} \notag \\
+    & \underbrace{=}_{\mathclap{ \epsilon^{i 0 \rho \sigma} = 0, \text{对于} \rho = 0 \text{或} \sigma = 0 }} -\partial_i \epsilon^{i0jk} F^{jk} \notag \\
+    &= \partial_i \epsilon^{0ijk} F^{jk} \notag \\
+    &\underbrace{=}_{ \ref{equ11.8} \text{式} } -\partial_i \underbrace{\epsilon^{0ijk} \epsilon^{\ell jk} }_{= 2\delta^{i \ell}} B^\ell \notag \\
+    &= -2 \partial_i \delta_{i\ell} B^\ell = -2 \partial_i B^i \notag \\
+\label{equ11.16}
+    \Rightarrow & \partial_i B^i = 0, \text{用向量记号表示：} \nabla \cdot \vec{B} = 0
+\end{align}
+考虑空间分量：$\nu = i$对应的方程可以导出：
+\begin{equation}
+\label{equ11.17}
+    \nabla \times \vec{E} + \partial_t \vec{B} = 0
+\end{equation}
+这是齐次 Maxwell 方程组的常用形式。
+
+\section[Lorentz力]{The Lorentz Force \quad Lorentz力}
+\label{sec11.2}
+利用上一章导出的量子与经典力学的联系（Ehrenfest定理）可以推导著名的Lorentz力公式。考虑在电磁场中运动的非相对论性无自旋的粒子，其Schrodinger方程包含电磁场的耦合项（\ref{equ8.23}式）%
+\mpar{该式是从与外电磁场耦合的Klein-Gordon方程导出，亦即，从\ 与自旋$1$无质量场（电磁场）耦合的自旋$0$的粒子的拉格朗日量导出的。因此推导的出发点还是用来导出拉格朗日量的Lorentz对称性与规范对称性。}%：
+\begin{equation}
+\label{equ11.18}
+    i \partial_t \Psi = \underbrace{ \left( \frac{1}{2m} (\vec{p} - q\vec{A})^2 + q \Phi \right)}_{\equiv H} \Psi
+\end{equation}
+定义该系统的动量%
+\mpar{这个定义来自Noether定理：系统的平移不变性对应守恒量-动量，$\frac{\partial L}{\partial \dot{x}} = \Pi$.}%
+为$\vec{\Pi} = \vec{p} - q \vec{A}$, 则系统的蛤密顿量为：
+\begin{equation*}
+    H = \frac{1}{2m} |\vec{\Pi}|^2 + q \Phi
+\end{equation*}
+有了蛤密顿量，再重复与上一章相同的过程，就能得到类似\ref{equ10.1}式的结果。因为这里涉及到依赖于时间的算符，因而推导中包含对时间的偏导数项：
+\begin{align*}
+    \frac{d}{dt} \langle \hat{O} \rangle &= \frac{1}{i} \langle [O, H] \rangle + \langle \frac{\partial \hat{O}}{\partial t} \rangle \\
+    \to \frac{d}{dt} \langle \vec{\Pi} \rangle &= \frac{1}{i} \langle [\vec{\Pi}, H] \rangle + \langle \frac{\partial \vec{\Pi}}{\partial t} \rangle,
+\end{align*}
+$\partial \vec{\Pi} / \partial t \neq 0$, 因为$\vec{A}$显含时间。将$H$的具体形式带入得：
+\begin{align*}
+    \to \frac{d}{dt} \langle \vec{\Pi} \rangle &= \frac{1}{i} \langle [\vec{\Pi}, \frac{1}{2m} |\vec{\Pi}|^2 + q \Phi] \rangle + \langle \frac{\partial \vec{\Pi}}{\partial t} \rangle \\
+    \to \frac{d}{dt} \langle \vec{\Pi} \rangle &= \frac{1}{i} \langle [\vec{\Pi}, \frac{1}{2m} |\vec{\Pi}|^2 \rangle + \underbrace{ \frac{1}{i} \langle [\vec{\Pi}, q\Phi] \rangle }_{ = \langle q \nabla \Phi \rangle } + \langle \frac{\partial \vec{\Pi}}{\partial t} \rangle .
+\end{align*}
+最后一步中$[\vec{\Pi}, q\Phi]$的推导可类比于上一章中$[\hat{p}, V]$的推导（因为$[\vec{A}, \Phi] = 0$）。接下来计算$[|\vec{\Pi}|^2, \vec{\Pi}]$，它不等于零，因为各分量$\Pi_i$之间不对易：
+\begin{equation}
+\label{equ11.19}
+    [\Pi_i, \Pi_j] = -\frac{q}{i} \left( \frac{\partial A_j}{\partial x_i} - \frac{\partial A_i}{\partial x_j} \right) = -\frac{q}{i} \epsilon_{ijk} \underbrace{B_k}_{\mathclap{= \epsilon_{k\ell m}\frac{\partial}{\partial x_\ell} A_m }}
+\end{equation}
+上面利用了磁场定义$\vec{B} = \nabla \times \vec{A}$的指标形式。粒子的速度%
+\mpar{（Newton极限下）动量除以质量即为速度：$p = mv$。}%
+定义为$\vec{v} \equiv \vec{\Pi} / m$，由此可得：
+\begin{align*}
+    \frac{d}{dt} \langle \vec{\Pi} \rangle = \langle q \nabla \Phi \rangle - \langle q (\vec{v} \times \vec{B}) \rangle +  \underbrace{\left\langle \frac{\partial \vec{\Pi}}{\partial t} \right\rangle}_{= -q \frac{\partial \vec{A}}{\partial t}} \\
+    \frac{d}{dt} = -q \langle (\vec{v} \times \vec{B}) \rangle + q \underbrace{\left\langle \nabla \Phi - \frac{\partial \vec{A}}{\partial t} \right\rangle}_{ = \langle E \rangle, \text{见}\ref{equ11.5}\text{式} }
+\end{align*}
+最终得到
+\begin{equation}
+\label{equ11.20}
+    \frac{d}{dt} \langle \vec{\Pi} \rangle \equiv F_{\text{Lorentz}} = -q \big( \langle (\vec{v} \times \vec{B}) \rangle + \langle E \rangle \big).
+\end{equation}
+上式即为带电粒子在外电磁场中的运动方程，其解即为粒子轨迹。
+
+\section[Coulomb 势]{Coulomb Potential \quad Coulomb 势}
+\label{equ11.3}
+第\ref{chap7}章讲过拉格朗日量具有内禀对称性，可以利用这一自由度简化计算，也就是说将场进行内禀变换以使计算大大简化。只要进行规范变换（使拉格朗日量不变），则变换前后的场蕴含的物理规律是相同的。通常选择的规范是关于光子场$A^\mu$的，规定%
+\mpar{这一规范条件的存在性可以证明（这里略）。相关细节可参见电动力学教材。}%
+$\partial_\mu A^\mu = 0$，这称为Lorentz规范。利用这一规范条件将非齐次Maxwell方程组简化为：
+\begin{equation}
+\label{equ11.21}
+    \partial_\sigma (\partial^\sigma A^\rho - \partial^\rho A^\sigma) = \partial_\sigma \partial^\sigma A^\rho = J^\rho
+\end{equation}
+考虑静电情况，静止的电荷关于坐标系原点对称分布。求解外部区域（无源，即$J\rho = 0$）的电磁场，外部区域的Maxwell方程组为\footnote{原文下式等号右侧上下标有误，译文已更正。}：
+\begin{equation}
+\label{equ11.22}
+    \partial_\sigma \partial^\sigma A^\rho = \partial_0 \partial^0 A^\rho - \partial_i \partial^i A^\rho = 0.
+\end{equation}
+考虑到系统是静态（$\partial_0 A^\rho = 0$）、对称的，因此将方程用球坐标表示%
+\mpar{除了用直角坐标$x, y, z$表示物体的位置外，还可用球坐标$r, \theta, \phi$表示。 $\partial_i \partial^i A^\rho = \frac{\partial^2}{\partial r^2} (r A^\rho) + \frac{1}{r^2 \sin \theta} \frac{\partial}{\partial \theta} \left( \sin \theta \frac{\partial A^\rho}{\partial \theta} \right) + \frac{1}{r^2 \sin^2 \theta} \frac{\partial^2 A^\rho}{\partial \phi^2}$. 当系统具有球对称性时选择球坐标十分方便，因为物理量只与$r$（到原点的距离）有关。}%
+。这样可以忽略除了包含$\partial_r$之外的所有项%
+\mpar{对于球对称性的场，$\partial_\theta A = \partial_\phi A = 0$.}%
+，由此可得：
+\begin{equation}
+\label{equ11.23}
+    \to \frac{\partial^2}{\partial r^2} (r A^\mu) = 0.
+\end{equation}
+上式具有通解：
+\begin{equation}
+\label{equ11.24}
+    A^\mu = \epsilon^\mu \frac{C}{r} + \epsilon^\mu D
+\end{equation}
+其中$\epsilon^\mu$表示某个常数4-向量，$C, D$表示常数。场$A^\mu$在无穷远处为零，故$D = 0$，$A^\mu$的$0$分量即为著名的Coulomb势：
+\begin{equation}
+\label{equ11.25}
+    A^0 = \Phi = \frac{C}{r} = \frac{Ze}{r},
+\end{equation}
+其中$Z$为整数，$e$为元电荷（电子电荷）。由于电子电荷是量子化的，故常数$C$写为$Ze$的形式。标准模型不能对电荷量子化做出满意的解释。
+
+\section*{Further Reading Tips \quad 阅读建议}
+\begin{itemize}
+    \item {\bf Richard P. Feynman - The Feynman Lectures on Physics Volume 2}%
+    \mpar{Richard P. Feynman, Robert B. Leighton, and Matthew Sands. The Feynman Lectures on Physics: Volume 2. Addison-Wesley, 1st edition, 2 1977. ISBN 9780201021172}% 
+    是不错的电动力学入门教材。
+    \item {\bf David J. Griffiths - Introduction to Electrodynamics}%
+    \mpar{David J. Griffiths. Introduction to Electrodynamics. Addison-Wesley, 4th edition, 10 2012. ISBN 9780321856562}%
+    是更详细的电动力学优秀入门教材。
+\end{itemize}
