@@ -1,8 +1,8 @@
 %!TEX encoding = UTF-8 Unicode
 
 %----------------------------------------------------------------------------------------
-%	CHAPTER 8
-%   translator: laserdog
+%   CHAPTER 8
+%   translator: laserdog, 日始之音
 %----------------------------------------------------------------------------------------
 
 \chapterimage{chapter_head_1.pdf} % Chapter heading image
@@ -145,7 +145,24 @@ P(E_1)&=\left|\int dx\Phi^*_{E_1}(x,t)\Psi(x,t)\right|^2 =\left|\int dx\Phi^*_{E
 \subsection[Dirac符号]{Dirac Notation Dirac符号}\label{sec8.5.3}
 \subsection[例：盒子中的粒子，续]{Example: Particle in a Box, Again 例：盒子中的粒子，续}\label{sec8.5.4}
 \subsection[自旋]{Spin 自旋}\label{sec8.5.5}
+
 \section[Heisenberg 不确定性原理]{Heisenberg’s Uncertainty PrincipleHeisenberg 不确定性原理}\label{sec8.6}
+现在可以来讨论量子力学中最奇妙的特征之一了。从上节我们已经知道，对粒子x方向上自旋的测量会破坏我们已知的在z方向上粒子自旋的信息，这一情况在量子力学中的很多测量中都存在。我们可以从\mpar{我们把自旋算子和对应的有限维旋转生成元认同，其满足对易关系$[J_i,J_j]=J_i J_j -J_j J_i=i\epsilon_{ijk}J_k\ne 0 \to J_i J_j \ne J_j J_i$。 举个例子来说，如果我们描述的是自旋1/2的粒子，那么我们应采用对应的二维表示$J_i={\sigma_i \over 2}$。} $\hat S_x \hat S_z \ne \hat S_z \hat S_x$ 出发来考察这一点，此式说明先对z 方向自旋后对x 方向自旋进行测量和先对x 方向自旋后对z 方向自旋进行测量的结果是不同的。这一点并不令人惊奇，因为对z 方向自旋进行测量后，系统应处于$\hat S_z$ 的一个本征态上，而对x 方向自旋进行测量后，系统应处于$\hat S_x$ 的本征态上，而$\hat S_z$ 和$\hat S_x$的本征态均不同，最后的结果也就并不相同。
+\par
+我们可以换种角度来描述这个现象：\textbf{我们不能同时确定系统z方向和x方向的自旋状态！}每次我们测量z方向的自旋时，都会让x方向的自旋信息再次变为未知，反之亦然。这一结论对于z 方向/x方向和y方向的自旋也是一样的。
+\par
+你也许觉得自旋是比较奇怪的物理量，但我们在粒子位置和动量的测量上也发现了同样的结果。回顾一下式(\ref{equ5.3})，为了方便我们在这里重新写一遍：
+\begin{equation}
+\label{equ8.61}
+[\hat p_i,\hat x_j]=\hat p_i \hat x_j - \hat x_j \hat p_j =i \delta_{ij}
+\end{equation}
+由上我们看出，对特定方向的粒子位置进行测量，会导致之前对其该方向动量的测量结果再次变得不确定。换句话说，我们不能同时{\it{足够精确地}}确定粒子在同一方向上的位置与动量。注意，只有沿相同方向的位置和动量算子的对易子才不为零
+\footnote{Kronecher delta函数$\delta_{ij}$在$i\ne j$时为0，$i=j$时为1，其定义在附录B.5.5。}，所以y方向上动量的测量不会干扰我们对x方向上位置的测量。
+\par
+每次我们测量动量会使位置信息变得不确定，反之亦然，这就是著名的\textbf{Heisenberg 不确定原理}。同样的现象也发生在沿不同方向的角动量上，因为其对应的对易子也不为零。总而言之，我们可以检查任意两个物理量的对易性，如果它们不对易，它们就不能同时{足够精确地}被确定。
+\par
+这一点可能并不像看上去那么令人惊奇。量子力学使用对应对称的生成元作为测量算子，比如说，对动量的测量等价于平移生成元的作用\mpar{记住，系统的平移不变性使我们导出动量守恒定律。}，这一生成元将我们的系统平移了一小点，所以粒子的位置也被改变了。真正令人惊奇的是大自然就是这么运作的，许多年来有很多实验验证Heisenberg不确定原理，它们都证明了这个原理的正确性。
+
 \section[对于几种诠释的评议]{Comments on Interpretations 对于几种诠释的评议}\label{sec8.7}
 \section[附录：Dirac 旋量分量的诠释]{Appendix: Interpretation of the Dirac Spinor Components 附录：Dirac 旋量分量的诠释}\label{sec8.8}
 \section[附录：解Dirac 方程]{Appendix: Solving the Dirac Equation 附录：解Dirac 方程}\label{sec8.9}
