@@ -134,32 +134,32 @@
 \ttl@stoptoc {default@4}
 \ttl@starttoc {default@5}
 \contentsline {chapter}{\numberline {A}矢量代数}{209}{appendix.A}
-\contentsline {section}{\numberline {A.1}基矢}{209}{section.A.1}
-\contentsline {section}{\numberline {A.2}坐标系变换}{209}{section.A.2}
-\contentsline {section}{\numberline {A.3}矩阵乘法}{209}{section.A.3}
-\contentsline {section}{\numberline {A.4}标量}{209}{section.A.4}
-\contentsline {section}{\numberline {A.5}左手/右手坐标系}{209}{section.A.5}
-\contentsline {chapter}{\numberline {B}微积分}{211}{appendix.B}
-\contentsline {section}{\numberline {B.1}Product Rule}{211}{section.B.1}
-\contentsline {section}{\numberline {B.2}分部积分}{211}{section.B.2}
-\contentsline {section}{\numberline {B.3}Taylor 级数}{211}{section.B.3}
-\contentsline {section}{\numberline {B.4}级数}{211}{section.B.4}
-\contentsline {subsection}{\numberline {B.4.1}几个重要的级数}{211}{subsection.B.4.1}
-\contentsline {subsection}{\numberline {B.4.2}分裂求和}{211}{subsection.B.4.2}
-\contentsline {subsection}{\numberline {B.4.3}Einstein 求和约定}{211}{subsection.B.4.3}
-\contentsline {section}{\numberline {B.5}指标记号}{211}{section.B.5}
-\contentsline {subsection}{\numberline {B.5.1}哑指标}{211}{subsection.B.5.1}
-\contentsline {subsection}{\numberline {B.5.2}带多个指标的对象}{211}{subsection.B.5.2}
-\contentsline {subsection}{\numberline {B.5.3}对称/反对称指标}{211}{subsection.B.5.3}
-\contentsline {subsection}{\numberline {B.5.4}对称和反对称求和}{211}{subsection.B.5.4}
-\contentsline {subsection}{\numberline {B.5.5}两个重要的符号}{211}{subsection.B.5.5}
-\contentsline {chapter}{\numberline {C}线性代数}{213}{appendix.C}
-\contentsline {section}{\numberline {C.1}基本的变换}{213}{section.C.1}
-\contentsline {section}{\numberline {C.2}矩阵指数函数}{213}{section.C.2}
-\contentsline {section}{\numberline {C.3}行列式}{213}{section.C.3}
-\contentsline {section}{\numberline {C.4}本征值与本征向量}{213}{section.C.4}
-\contentsline {section}{\numberline {C.5}对角化}{213}{section.C.5}
-\contentsline {chapter}{\numberline {D}其他数学概念}{215}{appendix.D}
-\contentsline {section}{\numberline {D.1}Fourier 变换}{215}{section.D.1}
-\contentsline {section}{\numberline {D.2}Delta 分布}{215}{section.D.2}
+\contentsline {section}{\numberline {A.1}基矢}{210}{section.A.1}
+\contentsline {section}{\numberline {A.2}坐标系变换}{212}{section.A.2}
+\contentsline {section}{\numberline {A.3}矩阵乘法}{213}{section.A.3}
+\contentsline {section}{\numberline {A.4}标量}{214}{section.A.4}
+\contentsline {section}{\numberline {A.5}左手/右手坐标系}{215}{section.A.5}
+\contentsline {chapter}{\numberline {B}微积分}{217}{appendix.B}
+\contentsline {section}{\numberline {B.1}Product Rule}{217}{section.B.1}
+\contentsline {section}{\numberline {B.2}分部积分}{217}{section.B.2}
+\contentsline {section}{\numberline {B.3}Taylor 级数}{217}{section.B.3}
+\contentsline {section}{\numberline {B.4}级数}{217}{section.B.4}
+\contentsline {subsection}{\numberline {B.4.1}几个重要的级数}{217}{subsection.B.4.1}
+\contentsline {subsection}{\numberline {B.4.2}分裂求和}{217}{subsection.B.4.2}
+\contentsline {subsection}{\numberline {B.4.3}Einstein 求和约定}{217}{subsection.B.4.3}
+\contentsline {section}{\numberline {B.5}指标记号}{217}{section.B.5}
+\contentsline {subsection}{\numberline {B.5.1}哑指标}{217}{subsection.B.5.1}
+\contentsline {subsection}{\numberline {B.5.2}带多个指标的对象}{217}{subsection.B.5.2}
+\contentsline {subsection}{\numberline {B.5.3}对称/反对称指标}{217}{subsection.B.5.3}
+\contentsline {subsection}{\numberline {B.5.4}对称和反对称求和}{217}{subsection.B.5.4}
+\contentsline {subsection}{\numberline {B.5.5}两个重要的符号}{217}{subsection.B.5.5}
+\contentsline {chapter}{\numberline {C}线性代数}{219}{appendix.C}
+\contentsline {section}{\numberline {C.1}基本的变换}{219}{section.C.1}
+\contentsline {section}{\numberline {C.2}矩阵指数函数}{219}{section.C.2}
+\contentsline {section}{\numberline {C.3}行列式}{219}{section.C.3}
+\contentsline {section}{\numberline {C.4}本征值与本征向量}{219}{section.C.4}
+\contentsline {section}{\numberline {C.5}对角化}{219}{section.C.5}
+\contentsline {chapter}{\numberline {D}其他数学概念}{221}{appendix.D}
+\contentsline {section}{\numberline {D.1}Fourier 变换}{221}{section.D.1}
+\contentsline {section}{\numberline {D.2}Delta 分布}{221}{section.D.2}
 \contentsfinish 
