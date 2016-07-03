@@ -123,43 +123,48 @@
 \contentsline {chapter}{\numberline {9}量子场论}{185}{chapter.9}
 \contentsline {section}{\numberline {9.1}场论的定义}{186}{section.9.1}
 \contentsline {section}{\numberline {9.2}自旋为0的自由场理论}{187}{section.9.2}
-\contentsline {chapter}{\numberline {10}经典力学}{195}{chapter.10}
-\contentsline {section}{\numberline {10.1}相对论力学}{197}{section.10.1}
-\contentsline {section}{\numberline {10.2}非相对论力学的拉格朗日量}{198}{section.10.2}
-\contentsline {chapter}{\numberline {11}电动力学}{201}{chapter.11}
-\contentsline {section}{\numberline {11.1}齐次Maxwell方程组}{202}{section.11.1}
-\contentsline {section}{\numberline {11.2}Lorentz力}{204}{section.11.2}
-\contentsline {section}{\numberline {11.3}Coulomb 势}{205}{section.11.3}
-\contentsline {part}{\@mypartnumtocformat {V}{Appendix 附录}}{207}{part.5}
+\contentsline {section}{\numberline {9.3}Interacting Field Theory 相互作用场论}{193}{section.9.3}
+\contentsline {subsection}{\numberline {9.3.1}Scatter Amplitudes 散射振幅}{194}{subsection.9.3.1}
+\contentsline {subsection}{\numberline {9.3.2}Time Evolution of States 态的时间演化}{194}{subsection.9.3.2}
+\contentsline {subsection}{\numberline {9.3.3}Dyson Series Dyson级数}{198}{subsection.9.3.3}
+\contentsline {subsection}{\numberline {9.3.4}Evaluating the Series 计算级数}{199}{subsection.9.3.4}
+\contentsline {chapter}{\numberline {10}经典力学}{205}{chapter.10}
+\contentsline {section}{\numberline {10.1}相对论力学}{207}{section.10.1}
+\contentsline {section}{\numberline {10.2}非相对论力学的拉格朗日量}{208}{section.10.2}
+\contentsline {chapter}{\numberline {11}电动力学}{211}{chapter.11}
+\contentsline {section}{\numberline {11.1}齐次Maxwell方程组}{212}{section.11.1}
+\contentsline {section}{\numberline {11.2}Lorentz力}{214}{section.11.2}
+\contentsline {section}{\numberline {11.3}Coulomb 势}{215}{section.11.3}
+\contentsline {part}{\@mypartnumtocformat {V}{Appendix 附录}}{217}{part.5}
 \ttl@stoptoc {default@4}
 \ttl@starttoc {default@5}
-\contentsline {chapter}{\numberline {A}矢量代数}{209}{appendix.A}
-\contentsline {section}{\numberline {A.1}基矢}{210}{section.A.1}
-\contentsline {section}{\numberline {A.2}坐标系变换}{212}{section.A.2}
-\contentsline {section}{\numberline {A.3}矩阵乘法}{213}{section.A.3}
-\contentsline {section}{\numberline {A.4}标量}{214}{section.A.4}
-\contentsline {section}{\numberline {A.5}左手/右手坐标系}{215}{section.A.5}
-\contentsline {chapter}{\numberline {B}微积分}{217}{appendix.B}
-\contentsline {section}{\numberline {B.1}Product Rule}{217}{section.B.1}
-\contentsline {section}{\numberline {B.2}分部积分}{217}{section.B.2}
-\contentsline {section}{\numberline {B.3}Taylor 级数}{217}{section.B.3}
-\contentsline {section}{\numberline {B.4}级数}{217}{section.B.4}
-\contentsline {subsection}{\numberline {B.4.1}几个重要的级数}{217}{subsection.B.4.1}
-\contentsline {subsection}{\numberline {B.4.2}分裂求和}{217}{subsection.B.4.2}
-\contentsline {subsection}{\numberline {B.4.3}Einstein 求和约定}{217}{subsection.B.4.3}
-\contentsline {section}{\numberline {B.5}指标记号}{217}{section.B.5}
-\contentsline {subsection}{\numberline {B.5.1}哑指标}{217}{subsection.B.5.1}
-\contentsline {subsection}{\numberline {B.5.2}带多个指标的对象}{217}{subsection.B.5.2}
-\contentsline {subsection}{\numberline {B.5.3}对称/反对称指标}{217}{subsection.B.5.3}
-\contentsline {subsection}{\numberline {B.5.4}对称和反对称求和}{217}{subsection.B.5.4}
-\contentsline {subsection}{\numberline {B.5.5}两个重要的符号}{217}{subsection.B.5.5}
-\contentsline {chapter}{\numberline {C}线性代数}{219}{appendix.C}
-\contentsline {section}{\numberline {C.1}基本的变换}{219}{section.C.1}
-\contentsline {section}{\numberline {C.2}矩阵指数函数}{219}{section.C.2}
-\contentsline {section}{\numberline {C.3}行列式}{219}{section.C.3}
-\contentsline {section}{\numberline {C.4}本征值与本征向量}{219}{section.C.4}
-\contentsline {section}{\numberline {C.5}对角化}{219}{section.C.5}
-\contentsline {chapter}{\numberline {D}其他数学概念}{221}{appendix.D}
-\contentsline {section}{\numberline {D.1}Fourier 变换}{221}{section.D.1}
-\contentsline {section}{\numberline {D.2}Delta 分布}{221}{section.D.2}
+\contentsline {chapter}{\numberline {A}矢量代数}{219}{appendix.A}
+\contentsline {section}{\numberline {A.1}基矢}{220}{section.A.1}
+\contentsline {section}{\numberline {A.2}坐标系变换}{222}{section.A.2}
+\contentsline {section}{\numberline {A.3}矩阵乘法}{223}{section.A.3}
+\contentsline {section}{\numberline {A.4}标量}{224}{section.A.4}
+\contentsline {section}{\numberline {A.5}左手/右手坐标系}{225}{section.A.5}
+\contentsline {chapter}{\numberline {B}微积分}{227}{appendix.B}
+\contentsline {section}{\numberline {B.1}Product Rule}{227}{section.B.1}
+\contentsline {section}{\numberline {B.2}分部积分}{227}{section.B.2}
+\contentsline {section}{\numberline {B.3}Taylor 级数}{227}{section.B.3}
+\contentsline {section}{\numberline {B.4}级数}{227}{section.B.4}
+\contentsline {subsection}{\numberline {B.4.1}几个重要的级数}{227}{subsection.B.4.1}
+\contentsline {subsection}{\numberline {B.4.2}分裂求和}{227}{subsection.B.4.2}
+\contentsline {subsection}{\numberline {B.4.3}Einstein 求和约定}{227}{subsection.B.4.3}
+\contentsline {section}{\numberline {B.5}指标记号}{227}{section.B.5}
+\contentsline {subsection}{\numberline {B.5.1}哑指标}{227}{subsection.B.5.1}
+\contentsline {subsection}{\numberline {B.5.2}带多个指标的对象}{227}{subsection.B.5.2}
+\contentsline {subsection}{\numberline {B.5.3}对称/反对称指标}{227}{subsection.B.5.3}
+\contentsline {subsection}{\numberline {B.5.4}对称和反对称求和}{227}{subsection.B.5.4}
+\contentsline {subsection}{\numberline {B.5.5}两个重要的符号}{227}{subsection.B.5.5}
+\contentsline {chapter}{\numberline {C}线性代数}{229}{appendix.C}
+\contentsline {section}{\numberline {C.1}基本的变换}{229}{section.C.1}
+\contentsline {section}{\numberline {C.2}矩阵指数函数}{229}{section.C.2}
+\contentsline {section}{\numberline {C.3}行列式}{229}{section.C.3}
+\contentsline {section}{\numberline {C.4}本征值与本征向量}{229}{section.C.4}
+\contentsline {section}{\numberline {C.5}对角化}{229}{section.C.5}
+\contentsline {chapter}{\numberline {D}其他数学概念}{231}{appendix.D}
+\contentsline {section}{\numberline {D.1}Fourier 变换}{231}{section.D.1}
+\contentsline {section}{\numberline {D.2}Delta 分布}{231}{section.D.2}
 \contentsfinish 
