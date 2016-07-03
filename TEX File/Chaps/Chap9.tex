@@ -209,5 +209,258 @@ a(k‘)|1_{k} \rangle=\sqrt{0}|1_{k}0_{k'}-1_{k'} \rangle=0
 在我们开始研究相互作用之前，我们先来简单的看看自旋1/2和自旋1的自由场。
 
 
+\section{Interacting Field Theory 相互作用场论}\label{sec9.5}
+下一步考虑不同自旋的场之间的相互作用。相应拉氏量已经在先前章节中，通过洛伦兹对称性与规范对称性导出。举例来说，有质量自旋$\frac{1}{2}$场与无质量自旋$1$场之间的相互作用，可用以下拉氏量描述（方程\ref{equ7.17}）
+\begin{align}\label{equ9.45}
+\mathscr{L}_\text{Dirac+Extra-Term}=-m\bar{\Psi}\Psi+i\bar{\Psi}\gamma_\mu\partial^\mu\Psi+gA_\mu\bar{\Psi}\gamma^\mu\Psi
+\end{align}
+由此可导出哈密顿量\mpar{我们很快会用到这一哈密顿量！}
+\begin{align}\label{equ9.46}
+H&=\int{d^3x T^{00}}\nonumber\\
+&=\int{d^3x\Bigl(\underbrace{\frac{\partial\mathscr{L}}{\partial(\partial_0\Psi)} }_{i\bar{\Psi}\gamma_0}\partial_0\Psi-\mathscr{L} \Bigl)}\nonumber\\
+&=\int d^3x\Bigl( i\bar{\Psi}\gamma_0\partial_0\Psi+m\bar{\Psi}\Psi-i\bar{\Psi}\underbrace{\gamma_\mu\partial^\mu}_{\mathclap{\gamma_0\partial_0-\gamma_i\partial_i}}\Psi-gA_\mu\bar{\Psi}\gamma^\mu\Psi \Bigl)\nonumber\\
+&=\underbrace{\int d^3x( m\bar{\Psi}\Psi+i\bar{\Psi}\gamma_i\partial^i\Psi)}_{=H^{\frac{1}{2}}_\text{free}}- \underbrace{\int d^3x (gA_\mu\bar{\Psi}\gamma^\mu\Psi )}_{\equiv-H_I}\nonumber\\
+&=H_\text{free}^{\frac{1}{2}}+H_I
+\end{align}
 
+\subsection{Scatter Amplitudes 散射振幅}\label{sec9.5.1}
+计算动量为$p_1,p_2,\ldots,p_n$的$n$个粒子转变为动量为$q_1,q_2,\ldots,q_{n'}$的数量、动量都可能不同的多个粒子的概率\mpar{这便是物理学家在碰撞实验中所制备的。}，是量子场论的基本目标之一。我们可将概率幅写为：
+\begin{align}\label{equ9.47}
+\langle q_1,q_2,\ldots,q_{n'}|\hat{S}|p_1,p_2,\ldots,p_n\rangle
+\end{align}
+其中$\hat{S}$为描述散射过程的算符。下一节将导出这一算符更加具体的形式。在上式描述的过程中，初始时刻$t_i$时有数个粒子存在于空间点$x_i$，而在相互作用后的$t_f$时刻，（可能不同的）新粒子则存在于新位置$x_f$。
+
+于是问题来了：量子场论如何描述量子态$|?\rangle$的演化？
+
+\subsection{Time Evolution of States 态的时间演化}\label{sec9.5.2}
+为了解答这个问题，可以注意到能量算符一方面由时间平移算符$i\partial_0$给出，另一方面也是系统哈密顿量。举例来说，自旋$0$场有哈密顿量
+\begin{align}\label{equ9.48}
+H_\text{free}^0=\frac{1}{2}\int d^3x\left( (\partial_0\Phi)^2+(\partial_i\Phi)^2+m\Phi^2\right)
+\end{align}
+而自旋$\frac{1}{2}$场有
+\begin{align}\label{equ9.49}
+H_\text{free}^{\frac{1}{2}}=\int d^3x(m\bar{\Psi}\Psi+i\bar{\Psi}\gamma_i\partial^i\Psi)
+\end{align}
+考虑到“能量算符”在场论中的两种表示，可以写出
+\begin{align}\label{equ9.50}
+i\partial_0|?(t)\rangle=H|?(t)\rangle
+\end{align}
+这也是量子场论中态的演化方程。从这一方程出发，可以定义相应的时间演化算符，其效果是将某一时刻的量子态变换到另一时刻。为了简便，我们可取初始时刻$t=0$，于是有\mpar{一般来说$|?(t)\rangle=\mathcal{U}(t=t')|?(t')\rangle$}
+\begin{align}\label{equ9.51}
+|?(t)\rangle=\mathcal{U}(t)|?(0)\rangle
+\end{align}
+代入方程\ref{equ9.50}有
+\begin{align}\label{equ9.52}
+i\partial_0\mathcal{U}(t)|?(t)\rangle=H\mathcal{U}(t)|?(t)\rangle
+\end{align}
+这一方程对任意$|?(0)\rangle$成立，因此\mpar{我们在\ref{sec5.1}节的边注中讨论过这一思路。}
+\begin{align}\label{equ9.53}
+i\partial_0\mathcal{U}(t)=H\mathcal{U}(t)
+\end{align}
+可以找到通解
+\begin{align}\label{equ9.54}
+\mathcal{U}(t)=\text{e}^{-i\int_0^tdx_0H}
+\end{align}
+代入即可验证
+\begin{align}\label{equ9.55}
+i\partial_0\mathcal{U}(t)&\to i\partial_0\text{e}^{-i\int_0^tdx_0H}=H\text{e}^{-i\int_0^t dx_0H}\nonumber\\
+&\to i(-iH)\text{e}^{-i\int_0^tdx_0H}=H\text{e}^{-i\int_0^tdx_0H}\nonumber\\
+&\to H\text{e}^{-i\int_0^tdx_0H}=\text{e}^{-i\int_0^tdx_0H}\quad\checkmark
+\end{align}
+实验无法测量右矢$|?(t)\rangle$，而只能测左矢与右矢的乘积，一般来说，也就是下述形式的对象：
+\begin{align}\label{equ9.56}
+\langle f(t)|\hat{O}|i(t)\rangle
+\end{align}
+其中$\hat{O}$是某个算符，$|i(t)\rangle$是初态，$\langle f(t)|$是末态。此处量子态在$\mathcal{U}$的作用下演化，而算符则不含时。这一稍有些任意的选择被称为\textbf{Schr\"{o}dinger绘景}，下面将讨论其它不同的绘景。
+将上式用时间演化算符表出，得到\mpar{记得$\langle f|=|f\rangle^\dag$}
+\begin{align}\label{equ9.57}
+\langle f(0)|\mathcal{U}^\dag(t)\hat{O}\mathcal{U}(t)|i(0)\rangle
+\end{align}
+这里有一个重要的思想：我们可以改变观点，认为算符$\hat{O}$按照$\mathcal{U}^\dag(t) \hat{O}\mathcal{U}(t)$的形式随时间演化，而左右矢都不含时。这种新观点被称为Heisenberg绘景。
+
+下面讲一个在相互作用理论中非常有用的传统技巧。哈密顿量总可以写成自由哈密顿量和相互作用哈密顿量的和（方程\ref{equ9.46}）
+\begin{align}\label{equ9.58}
+H=H_\text{free}+H_I
+\end{align}
+这里的技巧便是混用上述两种观点：我们让量子态随$H_I$演化，而让算符随$H_\text{free}$演化\mpar{注意在量子场论中场即是算符}。这个技巧非常有用，因为在这一观点下自由场论中的所有结果都可以加以利用。我们把这种观点称为相互作用绘景。在相互作用绘景中，量子态是
+\begin{align}\label{equ9.59}
+|i(t)\rangle_I\equiv\mathcal{U}^\dag_\text{free}|i(t)\rangle_S
+\end{align}
+其中$U_\text{free}=\text{e}^{-i\int_0^tdx_0 H_\text{free}}$，指标$S$表示\textbf{薛定谔绘景}，也就是量子态随总哈密顿量演化，且算符不含时的标准观点。
+
+将方程\ref{equ9.59}与方程\ref{equ9.50}合并可得\mpar{这一形式的方程在Schr\"{o}dinger绘景下成立。因此需由$|i(t)\rangle_I\equiv \mathcal{U}^\dag_\text{free}|i(t)\rangle_S$求解$|i(t)\rangle_S$。在方程两边乘$U_\text{free}$，注意$\mathcal{U}_\text{free}\mathcal{U}_\text{free}^\dag=1$。由此可得$|i(t)\rangle_S=\mathcal{U}_\text{free}|i(t)\rangle_{I}$。这一结果随后可代入方程\ref{equ9.50}。}相互作用绘景下的演化方程。
+\begin{gather}\label{equ9.60}
+i\partial_0|i(t)\rangle_S=H|i(t)\rangle_S\nonumber\\
+\to i\partial_0\mathcal{U}_\text{free}|i(t)\rangle_I=H\mathcal{U}_\text{free}|i(t)\rangle_I\nonumber\\
+\to i\partial_0\text{e}^{-i\int_0^tdx_0 H_\text{free}}|i(t)\rangle_I=(H_\text{free}+H_I)\text{e}^{-i\int_0^tdx_0 H_\text{free}}|i(t)\rangle_I\nonumber\\
+\to \cancel{H_\text{free}\text{e}^{-i\int_0^tdx_0 H_\text{free}}|i(t)\rangle_I}+i\text{e}^{-i\int_0^tdx_0 H_\text{free}}\partial_0|i(t)\rangle_I\nonumber\\
+\quad=(\cancel{H_\text{free}}+H_I)\text{e}^{-i\int_0^tdx_0 H_\text{free}}|i(t)\rangle_I\nonumber\\
+\to i\text{e}^{-i\int_0^tdx_0 H_\text{free}}\partial_0|i(t)\rangle_I=H_I\text{e}^{-i\int_0^tdx_0 H_\text{free}}|i(t)\rangle_I\nonumber\\
+\to i\partial_0|i(t)\rangle_I=\underbrace{\text{e}^{i\int_0^tdx_0H_\text{free}} H_I\text{e}^{-i\int_0^tdx_0 H_\text{free}}}_{\mathclap{=H^\text{int}_I\text{相互作用绘景下的相互作用哈密顿量}}}|i(t)\rangle_I\nonumber\\
+\to i\partial_0|i(t)\rangle_I=H^\text{int}_I|i(t)\rangle_I
+\end{gather}
+总之，此时量子态的时间演化实际上由相互作用哈密顿量$H_I^\text{int}$决定。这一简短的方程在后续讨论中价值连城。
+
+现在回到最初的问题：怎么计算散射过程
+\begin{align}\label{equ9.61}
+\langle f(t_f)|\hat{S}(t_f,t_i)|i(t_i)\rangle\quad ?
+\end{align}
+算符$\hat{S}(t_f,t_i)$将$t_i$时刻的初态$|i(t_i)\rangle$变换为$t_f$时刻的末态$|\Psi(t_f)\rangle$。一般来说，末态不是一个确定的粒子态，而是多种可能结果的叠加。反过来说，若非如此则粒子物理学未免太过无聊：相互作用会永远导致同样的结果。好在现实中的情况更加多变，任意线性叠加都可能存在。这一点在详细讨论算符$\hat{S}$后就能明了。
+
+具体来说，$\hat{S}$将一个初态变换为一系列末态的线性叠加。为简洁起见，下面用$t$来表示$t_f$，有\mpar{这可以看成量子态$|\Psi(t)\rangle$对粒子态$|f(t)\rangle$的级数展开。}
+\begin{align}\label{equ9.62}
+\hat{S}(t_f,t_i)|i(t_i)\rangle=|\Psi(t)\rangle=\sum_f \underbrace{S_{fi}}_\text{复数}|f(t)\rangle
+\end{align}
+左乘$\langle f'(t)|$，只有一项非0
+\begin{align}\label{equ9.63}
+\langle f(t)|\sum_f S_{fi}|f(t)\rangle=\sum_f S_{fi}\underbrace{\langle f'(t)||f(t)\rangle}_{\mathclap{=\delta_{ff'}\text{因为作为基矢的量子态正交}}}=\sum_fS_{fi}\delta_{ff'}=S_{f'i}
+\end{align}
+于是这一过程发生的概率为$|S_{f'i}|^2$。
+
+现在详述散射算符$\hat{S}$。出于这一目的，请回顾上面导出的时间演化方程\mpar{即方程\ref{equ9.60}。为避免符号混乱我们省略“int”，即相互作用绘景的脚标。}
+\begin{align}\label{equ9.64}
+\to i\partial_t|\Psi(t)\rangle_I=H^\text{int}_I|\Psi(t)\rangle_I
+\end{align}
+利用方程\ref{equ9.62}，这一方程可用初态和算符$\hat{S}$重写为
+\begin{gather*}
+\to i\partial_t\hat{S(t,t_i)}|i(t_i)\rangle_I=H_I\hat{S}|i(t_i)\rangle_I\\
+\underbrace{\to}_{\mathclap{\text{乘积法则}}} i(\partial_t\hat{S(t,t_i)})|i(t_i)\rangle_I+i\hat{S(t,t_i)}\underbrace{\partial_t|i(t_i)\rangle_I}_{\mathclap{=0\text{因为}|i(t_i)\rangle_I\text{不含时}}}=H_I\hat{S}|i(t_i)\rangle_I
+\end{gather*}
+这对任意初态适用，于是
+\begin{align}\label{equ9.65}
+\to i\partial_t\hat{S}=H_I\hat{S}
+\end{align}
+有通解\mpar{此处我们忽略了一个重要因素：编时性。这将在下一节讨论。}
+\begin{align}\label{equ9.66}
+\hat{S}(t,t_i)=\text{e}^{-i\int_{t_i}^t dt' H_I}
+\end{align}
+乍一看问题很简单。已知$H_I$求上述积分，就得到了算符$\hat{S}(t,t_i)$，再将其作用到初态上就得到了不同过程的散射振幅。可惜这一积分却无法求解。为在数学上简化问题的形式，初始时刻可取为$t_i=-\infty$，末尾时刻可取为$t=\infty$。这样就避免了散射振幅的时间依赖性。比如说，在粒子散射实验中，特定过程发生的概率在“碰撞”发生后$10^{-24}$秒时，与“碰撞”后$2\cdot10^{-24}$秒时就不尽相同，因为相互作用还在持续！将时间尺度取得很大可以帮助避免这类问题，因为这样一来，测量结果就是相互作用完全结束后的数据。
+
+\subsection{Dyson Series Dyson级数}\label{sec9.5.3}
+由于散射振幅的指数积分无法解析求解，我们把它展开成Taylor级数\mpar{这在附录B.4.1中导出：$e^x=1+x+\frac{x^2}{2!}+\frac{x^3}{3!}+\frac{x^4}{4!}+\ldots$}
+\begin{align}\label{equ9.67}
+\hat{S}(-\infty,\infty)&=\text{e}^{-i\int_{-\infty}^\infty dt' H_I(t')}\nonumber\\
+&=1-i\int_{-\infty}^\infty dt_1 H_I(t_1)\nonumber\\
+&\quad-\frac{1}{2!}\left(\int_{-\infty}^{\infty}dt_1 H_I(t_1)\right)\left(\int_{-\infty}^{\infty}dt_2 H_I(t_2)\right)+\ldots
+\end{align}
+这被称为Dyson级数。注意第三项，$H_I(t_1)$与$H_I(t_2)$不是数值而是作用于右矢的算符。所以应保证时间靠前的算符先作用于右矢，之后再由时间靠后的算符作用。即算符应按照时间顺序依次作用于右矢。反过来说，先将$H_I(t=5\text{s})$，再将$H_I(t=2\text{s})$作用于量子态是没有意义的。在上述级数中，若$t_1<t_2$
+\begin{gather*}
+\left(\int_{-\infty}^{\infty}dt_2 H_I(t_2)\right)\left(\int_{-\infty}^{\infty}dt_1 H_I(t_1)\right)
+\end{gather*}
+而当$t_2<t_1$时则有
+\begin{gather*}
+\left(\int_{-\infty}^{\infty}dt_1 H_I(t_1)\right)\left(\int_{-\infty}^{\infty}dt_2 H_I(t_2)\right)
+\end{gather*}
+为此可定义抽象化的编时算符$T$：
+\begin{align}\label{equ9.68}
+T\{A(x)B(y)\}\coloneqq\begin{array}{c}A(t_1)B(t_2)\quad\text{若}\quad t_1>t_2\\B(t_2)A(t_1)\quad\text{若}\quad t_1<t_2\end{array}
+\end{align}
+于是级数展开变成
+\begin{align}\label{equ9.69}
+\hat{S}(\infty,-\infty)&=\underbrace{1}_{S^{(0)}}\underbrace{-i\int_{-\infty}^{\infty}dt_1H_I(t_1)}_{S^(1)}\nonumber\\
+&=\underbrace{\quad-\frac{1}{2!}T\left\{\left(\int_{-\infty}^{\infty}dt_1 H_I(t_1)\right)\left(\int_{-\infty}^{\infty}dt_2 H_I(t_2)\right)\right\}}_{S^{(2)}}+\ldots
+\end{align}
+或者写为求和形式
+\begin{align}\label{equ9.70}
+\hat{S}(\infty,-\infty)&=\sum_{n=0}^\infty\frac{(-i)^n}{n!}T\left\{\left(\int_{-\infty}^{\infty}dt_1 H_I(t_1)\right)\left(\int_{-\infty}^{\infty}dt_2 H_I(t_2)\right)\cdots\left(\int_{-\infty}^{\infty}dt_n H_I(t_n)\right)\right\}\nonumber\\
+&=\sum_{n=0}^\infty S^{(n)}
+\end{align}
+这一级数可用于实际计算，因为$H_I$包含一个数值因子\mpar{见方程\ref{equ9.46}，其中耦合常数为$e$。}：对应相互作用的耦合常数，即$H_I\propto g$。如在电磁相互作用中，这一耦合常数小于一。于是级数展开中第二项$S^{(2)}\propto(H_I)^2\propto g^2$，贡献小于第一项$S^{(1)}\propto g$。更高阶项贡献更小。为了描述考察的系统，计算级数展开的前几项常常就足够了。更高阶项导致的修正往往超出了实验测量的范围。
+
+然而沿这一思路深挖，需要进行繁冗的代数运算。第一步是建立Wick定理，将算符的编时乘积表示为算符对易子的组合。接下来需要计算这些对易子，得到著名的Feynman传播子。尽管如此，我们也确实希望继续讨论\mpar{因为有趣的部分才刚要开始啊！}，所以我们略去证明、直接使用这些结果。感兴趣的读者可以参考量子场论的标准文献。\mpar{本章最后一节列出了推荐的参考书目。}
+
+\subsection{Evaluating the Series 计算级数}\label{sec{9.5.4}}
+回到本节开始的例子：有质量自旋$\frac{1}{2}$场与无质量自旋$0$场的相互作用。相互作用哈密顿量为（方程\ref{equ9.46}）
+\begin{gather*}
+H_I=-\int d^3x g A_\mu\bar{\Psi}\gamma^\mu\Psi
+\end{gather*}
+如上所述，我们单独考察级数中的每一项。
+
+级数的第一项是平凡项，直接等于恒等算符
+\begin{align}\label{equ9.71}
+S^{(0)}=I
+\end{align}
+第二项更令人激动
+\begin{align}\label{equ9.72}
+S^{(1)}=-i\int_{-\infty}^\infty dt H_I = ig\int_{-\infty}^\infty d^4x A_\mu \bar{\Psi}\gamma^\mu\Psi
+\end{align}
+这可以用方程\ref{equ9.33}和方程\ref{equ9.44}重写为
+\begin{align}\label{equ9.73}
+S^{(1)}=ig\int_{-\infty}^\infty d^4x (A_\mu^++A_\mu^-) (\bar{\Psi}^++\bar{\Psi}^-)\gamma^\mu(\Psi^++\Psi^-)
+\end{align}
+可以看出，第二项实际含有8项。考虑将其中一项$S_1^{(1)}$作用于由一个电子和一个正电子组成的量子态$|e^+(p_1),e^-(p_2)\rangle$上
+\begin{gather*}
+ig\int_{-\infty}^{\infty}d^4xA^+_\mu\bar{\Psi}^+\gamma^\mu\Psi^+|e^+(p_1),e^-(p_2)\rangle
+\end{gather*}
+$\Psi^+$包括所有动量上\mpar{我们对所有可能动量积分！}粒子湮灭\mpar{记住带有$\dag$的算符是产生算符，没有的就是湮灭算符。$\Psi^+$由方程\ref{equ9.33}定义}算符与常数和$e^{-ip x_1}$因子的乘积。
+\begin{gather*}
+\Psi^+\propto\int d^3p c_r(p) \text{e}^{-ipx}
+\end{gather*}
+除$c_r(p)=c_r(p_2)$一项外，上式中所有算符都摧毁这一右矢，即作用后得数为0，因这些项所湮灭的粒子动量态并不存在于右矢之中。于是算符作用的结果是
+\begin{gather}
+\Psi^+|e^+(p_1),e^-(p_2)\rangle\propto \text{e}^{-ip_2x}|e^+,0\rangle
+\end{gather}
+同样的，作用$\bar{\Psi}^+$于右矢得到
+\begin{gather}
+\bar{\Psi}^+e^{-ip_2x}|e^+,0\rangle\propto \text{e}^{-ip_2 x}\text{e}^{-ip_1x}|0,0\rangle
+\end{gather}
+剩下纯粹的真空态与数个常数的乘积。最后$A^+_\mu$作用于右矢，产生所有动量的光子。
+{\marginpar{
+    \centering
+    \includegraphics[scale=0.15]{Figure/fig9_1.png}
+    \figcaption{过程$e^+e^-\to \gamma$的Feynman图}
+    \label{fig9.1}
+}}
+定性来说，这一项对产生一个动量$k'$光子态$\langle \gamma|$的散射振幅有贡献
+\begin{gather}\label{equ9.74}
+\langle f|S^{(1)}_1|i\rangle = \langle \gamma_{k'}|S^{(1)}_1|e^+(p_1),e^-(p_2)\rangle\\
+=\int_{-\infty}^\infty d^4x\langle\gamma_{k'}|\sum_k\text{constant}(k)|\gamma_k\rangle \text{e}^{-ix(p_1+p_2-k)}\nonumber\\
+=\int_{-\infty}^\infty d^4x\sum_k\text{constant}(k)\underbrace{\langle\gamma_{k'}||\gamma_k\rangle}_{\delta_{kk'}} \text{e}^{-ix(p_1+p_2-k)}\nonumber\\
+=\int_{-\infty}^{\infty} d^4x \text{constant}(k')\text{e}^{-ix(p_1+p_2-k)}\nonumber
+\end{gather}
+对$x$积分导致delta函数$\delta(p_1+p_2-k)$，它代表了动量守恒条件\mpar{$e^-$的4-动量（=能量$p_0=E$与通常动量$p_i$）与$e^+$的4-动量之和，必须等于光子$\gamma$4-动量：$p_1+p_2-k\stackrel{!}{=}0$。否则由附录D.2中的解释，有$\delta(p_1+p_2-k)=0$。}。实验中无法测量、制备确定动量的粒子，真实动量总处于一个范围内。因此在计算的最后，应将散射振幅对相应的动量范围积分。
+
+注意到其它七项对$\hat{S}^(1)$贡献为0，因为他们湮灭初态中不存在的粒子，如一个光子。若选取其它初态，如一个光子和一个正电子$|\gamma,e^+\rangle$，那么第一项贡献将为0，其余项则非0。
+
+下面我们定性考察$\hat{S}$级数展开的第三项。
+\begin{align}\label{equ9.75}
+S^{(2)}&=-\frac{1}{2!}T\left\{ \left( \int_{-\infty}^\infty d^4x_1\mathscr{H}_I(x_1)\right)\left( \int_{-\infty}^\infty d^4x_2\mathscr{H}_I(x_2)\right)\right\}\nonumber\\
+&=-\frac{1}{2!}T\left\{ \left( \int_{-\infty}^\infty d^4x_1gA_\mu(x_1)\bar{\Psi}(x_1)\gamma^\mu\Psi(x_1)\right)\left( \int_{-\infty}^\infty d^4x_2gA_\mu(x_2)\bar{\Psi}(x_2)\gamma^\mu\Psi(x_2)\right)\right\}
+\end{align}
+其中编时乘积可用Wick定理重写为对易子的正规序乘积之和，记为$N\{\}$。正规序意味着将所有产生算符放到左侧，湮灭算符则放到右侧。比如，$N\{aa^\dag a^\dag a\}=a^\dag a^\dag aa$。举例来说，求和中的一项是
+\begin{gather*}
+-\frac{1}{2!}g^2\int\int d^4x_1 d^4x_2 N\left\{ \bar{\Psi}(x_1)\gamma^\mu\Psi(x_1)[A_\mu(x_1),A_\mu(x_2)]\bar{\Psi}(x_2)\gamma^\mu\Psi(x_2)\right\}
+\end{gather*}
+其中对易子可由$A_\mu$的显式解求出，被称为光子传播子\mpar{传播子是量子场论中最难推导的对象之一。比如考虑标量传播子，推导的出发点是$i\Delta=\langle0|T\{\Phi(x)\Phi^\dag(y)\}|0\rangle$，即从真空中创造一个$y$处的粒子，再于$x$处令其湮灭。这可以重写为对易子$i\Delta=\langle0|[\Phi^{\dag+}(y),\Phi^-(x)]|0\rangle$。通过繁杂的数学计算可以得到$i\Delta=\frac{-i}{2\pi^3}\int\frac{d^3k}{\omega_k}\text{e}^{-ik(x-y)}$，这也是实际计算中使用的表达式。这些粗略描述有多处不完全正确，但它表达了这些数学构造的基本思想。}$[A_\mu(x_1),A_\mu(x_2)]\equiv iD_\mu(x_1-x_2)$。
+展开这一项后会得到许多项，因为每一个$\Psi,\bar{\Psi}$等算符都是两项之和，现在只考虑其中一项。如果再次选择包含电子和正电子的初态，可以定性得到其中一项\mpar{我们又选择了电子和正电子碰撞时非零的一项}的表达式，如下所示：
+\begin{align}\label{equ9.76}
+-\frac{1}{2!}g^2\int\int d^4x_1 d^4x_2 \bar{\Psi}^-(x_1)\Psi^-(x_1)D_\mu(x_1-x_2)\bar{\Psi}^+(x_2)\Psi^+(x_2)|e^+,e^-\rangle
+\end{align}
+这可以从物理角度加以理解：
+\begin{itemize}
+\item 初态中的两个粒子在$x_2$处被$\bar{\Psi}^+(x_2)\Psi^+(x_2)$湮灭。
+\item 之后传播子在$x_2$处产生一个“虚”光子，虚光子传播到$x_1$湮灭。
+\item 最后$\bar{\Psi}^-(x_1)\Psi^-(x_1)$再次于$x_1$处产生一个电子和一个正电子。
+\end{itemize}
+通过这一项可以计算出反应$e^+e^-\to e^+ e^-$的概率幅，其中入射和岀射粒子的动量当然可以完全不同，但总动量保持守恒。所有其它项也同样可以诠释为有质量\mpar{此处是电子和正电子。其它可能性也包括夸克和另两种轻子$\mu$和$\tau$。}自旋$\frac{1}{2}$场和无质量\mpar{此处为光子}自旋$0$场。
+{\marginpar{
+    \centering
+    \includegraphics[scale=0.15]{Figure/fig9_2.png}
+    \figcaption{过程$e^+e^-\to \gamma\to e^+e^-$的Feynman图}
+    \label{fig9.2}
+}}
+
+计算中得到的这类概率幅可以直接在实验中加以检验，因为概率幅直接联系于实验可测量量：散射截面。
+
+本章描述的技术可以用于推导量子场论中的许多重要结果。之前导出的其它相互作用项也可被加入相互作用哈密顿量，而后对应的概率幅也可类似求出。不行的是，针对$\mathcal{SU}(3)$规范对称性导致的相互作用项，这一思路并不总是有效，因为强相互作用的耦合常数过大，以致无法用级数展开加以计算。若耦合常数大于1，高阶项大于低阶项，便不能用级数的前几项近似级数和。这一物理学分支被称为量子色动力学，在这门学科中需要用到其他计算方案，超出了本书讨论的范围。
+
+\section*{Further Reading Tips 进一步的阅读建议}
+\begin{itemize}
+\item \textbf{Robert D. Klauber - 简明量子场论（Student Friendly Quantum Field Theory）\mpar{Robert D. Klauber. Student Friendly Quantum Field Theory. SandtrovePress, 2nd edition, 12 2013. ISBN9780984513956}}按我谦逊的观点看，是最好的量子场论导论教材。所有章节都极富教学技巧，因为作者曾花费许多时间考虑读者学习量子场论时的难点。
+\item \textbf{Francis Halzen, Alan D. Martin - 夸克与轻子：现代粒子物理学导论（Quarks and Leptons: An Introductory Course in Modern Particle Physics）\mpar{Francis Halzen and Alan D. Martin. Quarks and Leptons: An IntroductoryCourse in Modern Particle Physics. Wiley,1st edition, 1 1984. ISBN 9780471887416}}是一本聚焦于应用量子场论计算方案的极佳之作。
+\item \textbf{Anthony Zee - 果壳中的量子场论（Quantum Field Theory in a Nutshell）\mpar{Anthony Zee. Quantum Field Theory ina Nutshell. Princeton University Press,1st edition, 3 2003. ISBN 9780691010199}}包含许多独具匠心的论述。不过有些章节太短，初学者很难理解。对用其它书籍学过量子场论的读者，这本书十分值得一读。
+\item \textbf{Franz Mandl, Graham Shaw - 量子场论（Quantum Field Theory）\mpar{Franz Mandl and Graham Shaw. Quantum Field Theory. Wiley, 2ndedition, 5 2010. ISBN 9780471496847}}是学习弱、强相互作用理论的绝佳起点。
+\item \textbf{Michele Maggiore - 量子场论现代导引（A Modern Introduction to Quantum Field Theory）\mpar{Michele Maggiore. A Modern Introduction to Quantum Field Theory. OxfordUniversity Press, 1st edition, 2 2005.ISBN 9780198520740}}是一本极好的导论书籍，着重讨论了场论中的群论概念。
+\item \textbf{Ian J. R. Aitchison and Anthony J. G. Hey - 粒子物理学中的规范场论（Gauge Theories inParticle Physics）\mpar{Ian J.R. Aitchison and Anthony J.G.Hey. Gauge Theories in Particle Physics.CRC Press, 4th edition, 12 2012. ISBN9781466513174}}非常清晰地诠释了规范场论的思想。
+\end{itemize}
 
