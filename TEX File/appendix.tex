@@ -162,12 +162,10 @@ v_{x'}=(v_x+v_y\tan(\phi))\cos(\phi)&=\left(v_x+v_y\frac{\sin(\phi)}{\cos(\phi)}
 \tan(\phi)=\frac{v_y}{v_{y'}+b}\rightarrow b=v_{x'}\tan(\phi)
 \]
 再借助$\sin^2(\phi)+\cos^2(\phi)=1$导出
-\[
-\begin{align}
+\[\begin{split}
 v_{y'}&=v_y\frac{1}{\cos(\phi)}-v_{x'}\tan(\phi)=v_y\frac{1}{\cos(\phi)}-(v_x\cos(\phi)+v_y\sin(\phi))\frac{\sin(\phi)}{\cos(\phi)}  \\
 &= v_y\frac{\sin^2(\phi)+\cos^2(\phi)}{\cos(\phi)}-v_x\sin(\phi)-v_y\frac{\sin^2(\phi)}{\cos(\phi)} = v_y\cos(\phi)-v_x\sin(\phi)
-\end{align}
-\]
+\end{split}\]
 最终有$v_{y'}=-v_x\sin(\phi)+v_y\cos(\phi)$。
 
 我们能将其用一个旋转矩阵来表达：
