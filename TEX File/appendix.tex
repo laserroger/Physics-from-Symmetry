@@ -268,25 +268,118 @@ v_1 \\ v_2 \\ v_3
 \end{pmatrix}\text{。}
 \end{equation}
 
-\chapter[微积分]{Calulus 微积分}
+\chapter[微积分]{Calulus 微积分}\label{appendix.B}
 
-\section[Product Rule]{Product Rule 莱布尼兹律}
+\section[Product Rule]{Product Rule 莱布尼兹律}\label{appendix.B.1}
+莱布尼兹律\footnote{译注：直译为“乘积规则”，鉴于这种叫法在中文文本中较罕见，故译作“莱布尼兹律”。}
+\begin{equation}
+\frac{\rd}{\rd x} \left(f(x)g(x)\right) = \left(\frac{\rd f(x)}{\rd x}\right) g(x) + f(x) \left(\frac{\rd g(x)}{\rd x}\right) \equiv f'g + fg'
+\label{equB.1}
+\end{equation}
+可直接由导数的定义得到
+\begin{equation*}
+\begin{aligned}
+\frac{\rd}{\rd x} \left[f(x)g(x)\right] &= \lim_{h\rightarrow 0} \frac{f(x+h)g(x+h)-f(x)g(x)}{h} \\
+ &= \lim_{h\rightarrow 0} \frac{\left[f(x+h)g(x+h)-f(x+h)g(x)\right]+\left[f(x+h)g(x)-f(x)g(x)\right]}{h} \\
+ &= \lim_{h\rightarrow 0}{f(x+h)\frac{g(x+h)-g(x)}{h} +g(x)\frac{f(x+h)-f(x)}{h}} \\
+ &= f(x)g'(x)+g(x)f'(x)
+\end{aligned}
+\end{equation*}
+\section[分部积分]{Integration by Parts 分部积分}\label{appendix.B.2}
+\begin{quote}
+据说， Peter Lax 被授予美国国家科学奖章时，其他获奖人（可能不是数学家）问他凭借什么拿到的这个奖。 Lax 回答：“我做了个分部积分。” \\
+- Willie Wrong\mpar{是他在\url{www.math.stackexchange.com}上说的。}
+\end{quote}
 
-\section[分部积分]{Integration by Parts 分部积分}
+从莱布尼兹律可以直接得到一个重要的积分手段。将莱布尼兹律一式积分%
+\mpar{见\ref{equB.1}式，并利用微积分基本定理$\int_a^b h'(x)=h(b)-h(a)$。}
+\begin{equation}
+\underbrace{\int_a^b \rd x\, \frac{\rd}{\rd x}\left(f(x)g(x)\right)}_{=\left.f(x)g(x)\right|_a^b} = \int_a^b\rd x\, \left(\frac{\rd f(x)}{\rd x}\right)g(x) + \int_a^b\rd x\, f(x)\left(\frac{\rd g(x)}{\rd x}\right)
+\end{equation}
+移项，得到
+\begin{equation}
+\int_a^b \rd x\, \left(\frac{\rd f(x)}{\rd x}\right)g(x) = \left.f(x)g(x)\right|_a^b - \int_a^b\rd x\, f(x)\left(\frac{\rd g(x)}{\rd x}\right)\text{。}
+\label{equB.3}
+\end{equation}
+当讨论场的物理时，这个手段很是有用：在全空间作积分时，即$a=-\infty,b=\infty$，由于一切场量在无穷远处都必须为零%
+\mpar{\ref{sec2.4}节中我们说到了没什么能比光速还快，故无穷远处的场一定不会对有限$x$处的物理产生影响。}%
+，边界项为零$\left.f(x)g(x)\right|_a^b=0$。
 
-\section[Taylor 级数]{The Taylor Series\quad Taylor 级数}
+\section[Taylor 级数]{The Taylor Series\quad Taylor 级数}\label{appendix.B.3}
+Taylor 级数使我们能将任何无穷阶可微函数写成幂级数形式
+\begin{equation}
+f(x) = f(a) + (x-a)f'(a) + \frac{1}{2}(x-a)^2f''(a)+\dots
+\end{equation}
+\begin{itemize}
+\item 一方面我们能用它来求某些函数的级数形式。这可以用来，例如，说明$\ue^{\ri x}=\cos (x)+\ri\sin (x)$。
+\item 另一方面，也能用它来得到函数在某点附近的近似值。当出于某些原因我们可以略去高阶项，不用考虑无穷多项时，这公式的用处会很大。比如说我们要算函数$f(x)$在$y$的邻域中一点$y+\Delta y$的值，可以写出%
+\mpar{不要被这些变量的名字搞混了。上面的公式里我们是从$a$出发计算函数在$x$处的值。而这里我们是希望利用$y$处的信息来得到$f$在$y+\Delta y$处的性质。准确的关系是：$x=y+\Delta y$和$a=y$。}
+\end{itemize}
+\begin{equation}
+f(y+\Delta y) = f(y)+(y+\Delta y-y)f'(y)+\dots =f(y)+\Delta y f'(y)+\dots
+\end{equation}
+这就是说，通过在$y$处函数的性质，我们能得到其在$y+\Delta y$处的近似值。对于无穷小邻域%
+\footnote{\textcolor{red}{译注：原文有误，已更正。}}%
+$\Delta y=\epsilon\rightarrow 0$的极端情况，函数的改变量可以仅用 Taylor 级数的一（线性）项来表示
+\begin{equation}
+\Delta f =f(y+\epsilon)-f(y)=f(y)+\epsilon f'(y)+\dots -f(y)=\epsilon f'(y) + \underbrace{\dots}_{\mathclap{\approx 0\text{由于}\epsilon^2\approx 0}}
+\end{equation}
 
-\section[级数]{Series 级数}
-\subsection[几个重要的级数]{Important Series 几个重要的级数}
-\subsection[分裂求和]{Splitting Sums 分裂求和}
-\subsection[Einstein 求和约定]{Einstein’s Sum Convention\quad Einstein 求和约定}
+这个式子是最有用的数学工具之一，它也能通过微积分基本定理和分部积分推出来。基本定理说
+\begin{equation}
+\int_a^x\rd t\, f'(t) = f(x) - f(a) \rightarrow f(x)=f(a)+\int_a^x\rd t\, f'(t)\text{。}
+\end{equation}
+可以将第二项用分部积分写开：在$f'(t)$前面补一个$1$成$1f'(t)$，利用\ref{equB.3}式取$g'(t)=1$的情况。分部积分能改写积分%
+\mpar{\textcolor{red}{译注：原文有误，已更正。}}%
+$\int_a^b v'u = \left.vu\right|_a^b-\int_a^b vu'$，积掉一项而对另一项微分。这里我们积$g'(t)=1$而微分$f'(t)$，即式子里$g'=v'$及$f'=u$。求得
+\begin{equation}
+f(x) = f(a)+\int_a^x\rd t\, f'(t) = f(a) + \left.g(t)f(t)\right|_a^x - \int_a^b \rd t g(t)f''(t) \text{。}
+\end{equation}
 
-\section[指标记号]{Index Notation 指标记号}
-\subsection[哑指标]{Dummy Indices 哑指标}
-\subsection[带多个指标的对象]{Objects with more than One Index 带多个指标的对象}
-\subsection[对称/反对称指标]{Symmetric and Antisymmetric Indices 对称/反对称指标}
-\subsection[对称和反对称求和]{Antisymmetric $\times$ Symmetric Sums 对称和反对称求和}
-\subsection[两个重要的符号]{Two Important Symbols 两个重要的符号}
+现在的问题是$g(t)$是啥。我们目前只知道$g'(t)=1$，但却有无穷多个函数的导数都是这个：对于任意常数$c$，函数$g=t+c$都满足$g'(t)=1$。我们选取%
+\mpar{方程对任意$c$都成立，我们自然可以随便选一个，但那样就推不出我们想要的公式了。选取恰当的$c$是为了得到一个有用的关于$f(x)$的公式。否则$f(x)$将会同时出现在等式两侧。}%
+$g=t-x$，即将积分上界的负值$-x$作为我们的常数$c$。从而上式的第二项就可以写作
+\begin{equation}
+\left.g(t)f(t)\right|_a^x = \left.(t-x)f(t)\right|_a^x = \underbrace{(x-x)}_{=0}f(x) -(a-x)f(a) =(x-a)f(a)
+\end{equation}
+从而整个式子现在写作
+\begin{equation}
+f(x) = f(a) + (x-a)f'(a)+\int_a^x\rd t\, (x-t)f''(t)\text{。}
+\end{equation}
+对最后一项再次使用分部积分，现在是%
+\mpar{注意$v='(x-t)$对$t$的积分会出一个符号：$v=-(x-t)^2+d$积分常数$d$取作零。}
+$v'=(x-t)$和$u=f''(t)$：
+\begin{equation}
+\rightarrow \int_a^x \rd t\, \underbrace{(x-t)}_{\mathclap{=v'}}\underbrace{f''(t)}_{=u} = \left.\underbrace{-\frac{1}{2}(x-t)^2}_{=v} \underbrace{f''(t)}_{=u}\right|_a^x - \int_a^x \rd t\, \underbrace{\left(-\frac{1}{2}(x-t)^2\right)}_{=v}\underbrace{f'''(t)}_{=u'}
+\end{equation}
+边界项同样简单的是零
+\begin{equation}
+\left.-\frac{1}{2}(x-t)^2f''(t)\right|_a^x = -\frac{1}{2}\underbrace{(x-x)^2}_{=0}f''(x) + \frac{1}{2}(x-a)^2f''(a)\text{。}
+\end{equation}
+得到公式
+\begin{equation}
+f(x)=f(a)+(x-a)f'(a)+\frac{1}{2}(x-a)^2f''(a)+\int_a^x \rd t\, \frac{1}{2}(x-t)^2 f'''(t)\text{。}
+\end{equation}
+可以继续将最后一项分部积分，但是我们应该能直接肉眼观察出规律了。Taylor 级数可以利用求和号$\Sigma$写成更紧凑的形式：
+\begin{equation}
+\begin{aligned}
+f(x) =& \sum_{n=0}^\infty\frac{f^{(n)}(a)(x-a)^n}{n!} \\
+ =& \frac{f^{(0)}(a)(x-a)}{0!} + \frac{f^(1)(a)(x-a)^1}{1!} + \frac{f^{(2)}(a)(x-a)^2}{2!} \\
+ =& \frac{f^{(3)}(a)(x-a)^3}{3!}+\dots \text{，}
+\end{aligned}
+\end{equation}
+其中$f^{(n)}$代表$f$的$n$阶导数，例如$f^{(2)}=f''$，$n!$代表$n$的阶乘，即$n!=1\cdot 2\cdot 3\dots n$。比如对$n=5$有$5!=5\cdot 4\cdot 3\cdot 2\cdot 1=120$，$2!=2\cdot 1=2$，以及定义$0!=1$。级数是下一节的主题。
+\section[级数]{Series 级数}\label{appendix.B.4}
+\subsection[几个重要的级数]{Important Series 几个重要的级数}\label{appendix.B.4.1}
+\subsection[分裂求和]{Splitting Sums 分裂求和}\label{appendix.B.4.2}
+\subsection[Einstein 求和约定]{Einstein’s Sum Convention\quad Einstein 求和约定}\label{appendix.B.4.3}
+
+\section[指标记号]{Index Notation 指标记号}\label{appendix.B.5}
+\subsection[哑指标]{Dummy Indices 哑指标}\label{appendix.B.5.1}
+\subsection[带多个指标的对象]{Objects with more than One Index 带多个指标的对象}\label{appendix.B.5.2}
+\subsection[对称/反对称指标]{Symmetric and Antisymmetric Indices 对称/反对称指标}\label{appendix.B.5.3}
+\subsection[对称和反对称求和]{Antisymmetric $\times$ Symmetric Sums 对称和反对称求和}\label{appendix.B.5.4}
+\subsection[两个重要的符号]{Two Important Symbols 两个重要的符号}\label{appendix.B.5.5}
 
 \chapter[线性代数]{Linear Algebra 线性代数}
 \section[基本的变换]{Basic Transformations 基本的变换}
