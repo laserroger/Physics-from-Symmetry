@@ -266,32 +266,248 @@ v_1 \\ v_2 \\ v_3
 \end{pmatrix}\text{。}
 \end{equation}
 
-\chapter[微积分]{Calulus 微积分}
+\chapter[微积分]{Calulus 微积分}\label{appendix.B}
 
-\section[Product Rule]{Product Rule 莱布尼兹律}
+\section[Product Rule]{Product Rule 莱布尼兹律}\label{appendix.B.1}
+莱布尼兹律\footnote{译注：直译为“乘积规则”，鉴于这种叫法在中文文本中较罕见，故译作“莱布尼兹律”。}
+\begin{equation}
+\frac{\rd}{\rd x} \left(f(x)g(x)\right) = \left(\frac{\rd f(x)}{\rd x}\right) g(x) + f(x) \left(\frac{\rd g(x)}{\rd x}\right) \equiv f'g + fg'
+\label{equB.1}
+\end{equation}
+可直接由导数的定义得到
+\begin{equation*}
+\begin{aligned}
+\frac{\rd}{\rd x} \left[f(x)g(x)\right] &= \lim_{h\rightarrow 0} \frac{f(x+h)g(x+h)-f(x)g(x)}{h} \\
+ &= \lim_{h\rightarrow 0} \frac{\left[f(x+h)g(x+h)-f(x+h)g(x)\right]+\left[f(x+h)g(x)-f(x)g(x)\right]}{h} \\
+ &= \lim_{h\rightarrow 0}{f(x+h)\frac{g(x+h)-g(x)}{h} +g(x)\frac{f(x+h)-f(x)}{h}} \\
+ &= f(x)g'(x)+g(x)f'(x)
+\end{aligned}
+\end{equation*}
+\section[分部积分]{Integration by Parts 分部积分}\label{appendix.B.2}
+\begin{quote}
+据说， Peter Lax 被授予美国国家科学奖章时，其他获奖人（可能不是数学家）问他凭借什么拿到的这个奖。 Lax 回答：“我做了个分部积分。” \\
+- Willie Wrong\mpar{是他在\url{www.math.stackexchange.com}上说的。}
+\end{quote}
 
-\section[分部积分]{Integration by Parts 分部积分}
+从莱布尼兹律可以直接得到一个重要的积分手段。将莱布尼兹律一式积分%
+\mpar{见\ref{equB.1}式，并利用微积分基本定理$\int_a^b h'(x)=h(b)-h(a)$。}
+\begin{equation}
+\underbrace{\int_a^b \rd x\, \frac{\rd}{\rd x}\left(f(x)g(x)\right)}_{=\left.f(x)g(x)\right|_a^b} = \int_a^b\rd x\, \left(\frac{\rd f(x)}{\rd x}\right)g(x) + \int_a^b\rd x\, f(x)\left(\frac{\rd g(x)}{\rd x}\right)
+\end{equation}
+移项，得到
+\begin{equation}
+\int_a^b \rd x\, \left(\frac{\rd f(x)}{\rd x}\right)g(x) = \left.f(x)g(x)\right|_a^b - \int_a^b\rd x\, f(x)\left(\frac{\rd g(x)}{\rd x}\right)\text{。}
+\label{equB.3}
+\end{equation}
+当讨论场的物理时，这个手段很是有用：在全空间作积分时，即$a=-\infty,b=\infty$，由于一切场量在无穷远处都必须为零%
+\mpar{\ref{sec2.4}节中我们说到了没什么能比光速还快，故无穷远处的场一定不会对有限$x$处的物理产生影响。}%
+，边界项为零$\left.f(x)g(x)\right|_a^b=0$。
 
-\section[Taylor 级数]{The Taylor Series\quad Taylor 级数}
+\section[Taylor 级数]{The Taylor Series\quad Taylor 级数}\label{appendix.B.3}
+Taylor 级数使我们能将任何无穷阶可微函数写成幂级数形式
+\begin{equation}
+f(x) = f(a) + (x-a)f'(a) + \frac{1}{2}(x-a)^2f''(a)+\dots
+\end{equation}
+\begin{itemize}
+\item 一方面我们能用它来求某些函数的级数形式。这可以用来，例如，说明$\ue^{\ri x}=\cos (x)+\ri\sin (x)$。
+\item 另一方面，也能用它来得到函数在某点附近的近似值。当出于某些原因我们可以略去高阶项，不用考虑无穷多项时，这公式的用处会很大。比如说我们要算函数$f(x)$在$y$的邻域中一点$y+\Delta y$的值，可以写出%
+\mpar{不要被这些变量的名字搞混了。上面的公式里我们是从$a$出发计算函数在$x$处的值。而这里我们是希望利用$y$处的信息来得到$f$在$y+\Delta y$处的性质。准确的关系是：$x=y+\Delta y$和$a=y$。}
+\end{itemize}
+\begin{equation}
+f(y+\Delta y) = f(y)+(y+\Delta y-y)f'(y)+\dots =f(y)+\Delta y f'(y)+\dots
+\end{equation}
+这就是说，通过在$y$处函数的性质，我们能得到其在$y+\Delta y$处的近似值。对于无穷小邻域%
+\footnote{\textcolor{red}{译注：原文有误，已更正。}}%
+$\Delta y=\epsilon\rightarrow 0$的极端情况，函数的改变量可以仅用 Taylor 级数的一（线性）项来表示
+\begin{equation}
+\Delta f =f(y+\epsilon)-f(y)=f(y)+\epsilon f'(y)+\dots -f(y)=\epsilon f'(y) + \underbrace{\dots}_{\mathclap{\approx 0\text{由于}\epsilon^2\approx 0}}
+\end{equation}
 
-\section[级数]{Series 级数}
-\subsection[几个重要的级数]{Important Series 几个重要的级数}
-\subsection[分裂求和]{Splitting Sums 分裂求和}
-\subsection[Einstein 求和约定]{Einstein’s Sum Convention\quad Einstein 求和约定}
+这个式子是最有用的数学工具之一，它也能通过微积分基本定理和分部积分推出来。基本定理说
+\begin{equation}
+\int_a^x\rd t\, f'(t) = f(x) - f(a) \rightarrow f(x)=f(a)+\int_a^x\rd t\, f'(t)\text{。}
+\end{equation}
+可以将第二项用分部积分写开：在$f'(t)$前面补一个$1$成$1f'(t)$，利用\ref{equB.3}式取$g'(t)=1$的情况。分部积分能改写积分%
+\mpar{\textcolor{red}{译注：原文有误，已更正。}}%
+$\int_a^b v'u = \left.vu\right|_a^b-\int_a^b vu'$，积掉一项而对另一项微分。这里我们积$g'(t)=1$而微分$f'(t)$，即式子里$g'=v'$及$f'=u$。求得
+\begin{equation}
+f(x) = f(a)+\int_a^x\rd t\, f'(t) = f(a) + \left.g(t)f(t)\right|_a^x - \int_a^b \rd t g(t)f''(t) \text{。}
+\end{equation}
 
-\section[指标记号]{Index Notation 指标记号}
-\subsection[哑指标]{Dummy Indices 哑指标}
-\subsection[带多个指标的对象]{Objects with more than One Index 带多个指标的对象}
-\subsection[对称/反对称指标]{Symmetric and Antisymmetric Indices 对称/反对称指标}
-\subsection[对称和反对称求和]{Antisymmetric $\times$ Symmetric Sums 对称和反对称求和}
-\subsection[两个重要的符号]{Two Important Symbols 两个重要的符号}
+现在的问题是$g(t)$是啥。我们目前只知道$g'(t)=1$，但却有无穷多个函数的导数都是这个：对于任意常数$c$，函数$g=t+c$都满足$g'(t)=1$。我们选取%
+\mpar{方程对任意$c$都成立，我们自然可以随便选一个，但那样就推不出我们想要的公式了。选取恰当的$c$是为了得到一个有用的关于$f(x)$的公式。否则$f(x)$将会同时出现在等式两侧。}%
+$g=t-x$，即将积分上界的负值$-x$作为我们的常数$c$。从而上式的第二项就可以写作
+\begin{equation}
+\left.g(t)f(t)\right|_a^x = \left.(t-x)f(t)\right|_a^x = \underbrace{(x-x)}_{=0}f(x) -(a-x)f(a) =(x-a)f(a)
+\end{equation}
+从而整个式子现在写作
+\begin{equation}
+f(x) = f(a) + (x-a)f'(a)+\int_a^x\rd t\, (x-t)f''(t)\text{。}
+\end{equation}
+对最后一项再次使用分部积分，现在是%
+\mpar{注意$v='(x-t)$对$t$的积分会出一个符号：$v=-(x-t)^2+d$积分常数$d$取作零。}
+$v'=(x-t)$和$u=f''(t)$：
+\begin{equation}
+\rightarrow \int_a^x \rd t\, \underbrace{(x-t)}_{\mathclap{=v'}}\underbrace{f''(t)}_{=u} = \left.\underbrace{-\frac{1}{2}(x-t)^2}_{=v} \underbrace{f''(t)}_{=u}\right|_a^x - \int_a^x \rd t\, \underbrace{\left(-\frac{1}{2}(x-t)^2\right)}_{=v}\underbrace{f'''(t)}_{=u'}
+\end{equation}
+边界项同样简单的是零
+\begin{equation}
+\left.-\frac{1}{2}(x-t)^2f''(t)\right|_a^x = -\frac{1}{2}\underbrace{(x-x)^2}_{=0}f''(x) + \frac{1}{2}(x-a)^2f''(a)\text{。}
+\end{equation}
+得到公式
+\begin{equation}
+f(x)=f(a)+(x-a)f'(a)+\frac{1}{2}(x-a)^2f''(a)+\int_a^x \rd t\, \frac{1}{2}(x-t)^2 f'''(t)\text{。}
+\end{equation}
+可以继续将最后一项分部积分，但是我们应该能直接肉眼观察出规律了。Taylor 级数可以利用求和号$\Sigma$写成更紧凑的形式：
+\begin{equation}
+\begin{aligned}
+f(x) =& \sum_{n=0}^\infty\frac{f^{(n)}(a)(x-a)^n}{n!} \\
+ =& \frac{f^{(0)}(a)(x-a)}{0!} + \frac{f^(1)(a)(x-a)^1}{1!} + \frac{f^{(2)}(a)(x-a)^2}{2!} \\
+ =& \frac{f^{(3)}(a)(x-a)^3}{3!}+\dots \text{，}
+\end{aligned}
+\end{equation}
+其中$f^{(n)}$代表$f$的$n$阶导数，例如$f^{(2)}=f''$，$n!$代表$n$的阶乘，即$n!=1\cdot 2\cdot 3\dots n$。比如对$n=5$有$5!=5\cdot 4\cdot 3\cdot 2\cdot 1=120$，$2!=2\cdot 1=2$，以及定义$0!=1$。级数是下一节的主题。
+\section[级数]{Series 级数}\label{appendix.B.4}
+\subsection[几个重要的级数]{Important Series 几个重要的级数}\label{appendix.B.4.1}
+\subsection[分裂求和]{Splitting Sums 分裂求和}\label{appendix.B.4.2}
+\subsection[Einstein 求和约定]{Einstein’s Sum Convention\quad Einstein 求和约定}\label{appendix.B.4.3}
 
-\chapter[线性代数]{Linear Algebra 线性代数}
-\section[基本的变换]{Basic Transformations 基本的变换}
+\section[指标记号]{Index Notation 指标记号}\label{appendix.B.5}
+\subsection[哑指标]{Dummy Indices 哑指标}\label{appendix.B.5.1}
+\subsection[带多个指标的对象]{Objects with more than One Index 带多个指标的对象}\label{appendix.B.5.2}
+\subsection[对称/反对称指标]{Symmetric and Antisymmetric Indices 对称/反对称指标}\label{appendix.B.5.3}
+\subsection[对称和反对称求和]{Antisymmetric $\times$ Symmetric Sums 对称和反对称求和}\label{appendix.B.5.4}
+\subsection[两个重要的符号]{Two Important Symbols 两个重要的符号}\label{appendix.B.5.5}
+
+\section[基本变换]{Basic Transformations 基本变换}
+\label{appendix.C.1}
+{\bf 矩阵的复共轭}定义为：
+\begin{equation}
+\label{equc.1}
+	M^*_{ij} = 
+		\begin{pmatrix}
+			M^*_{11} & M^*_{12} \\
+			M^*_{21} & M^*_{22}
+		\end{pmatrix},
+\end{equation}
+即对每个矩阵元取复共轭%
+\mpar{复数$z = a + ib$（$a$为$z$的实部，$b$为虚部，$a, b$均为实数）的复共轭为$z^* = a - ib$。}%
+。
+
+{\bf 矩阵的转置}定义为$M^T_{ij} = M_{ji}$，用矩阵形式表示为：
+\begin{equation}
+\label{equC.2}
+	M_{ij} = 
+		\begin{pmatrix}
+			M_{11} & M_{12} \\
+			M_{21} & M_{22}
+		\end{pmatrix}
+	\ \to \ 
+	M^T_{ij} = 
+		\begin{pmatrix}
+			M_{11} & M_{21} \\
+			M_{12} & M_{22}
+		\end{pmatrix},
+\end{equation}
+即交换矩阵的行与列。两个矩阵的乘积的转置$(MN)^T \neq M^T N^T$，而是$(MN)^T = N^T M^T$，即乘积的转置需要调换乘积顺序，这用指标记号不难证明：
+\begin{align}
+	MN \equiv (MN)_{ij} = M_{ik} N_{kj} \notag \\
+	(MN)^T \equiv \big( (MN)_{ij} \big)^T = (MN)_{ji} = (M_{ik} N_{kj})^T \notag \\
+\label{equC.3}
+	(M_{ik} N_{kj})^T = M^T_{ik} N^T_{kj} = M_{ki} N_{jk} = N_{jk} M_{ki} \equiv N^T M^T,
+\end{align}
+其中最后一步利用了矩阵乘法的指标记号，左侧矩阵的行乘以右侧矩阵的列。我们将$M_{ki} N_{jk}$写为$N_{jk} M_{ki}$的形式，后者即为左侧矩阵的行乘以右侧矩阵的列的形式，这样就能用矩阵乘法记作$N^T M^T$.
+
+注意在指标记号下乘积中的各项顺序可自由颠倒，例如$M_{ki} N_{jk} = N_{jk} M_{ki}$，因为各$M_{ki}$与$N_{jk}$只代表数字。
+
+
 \section[矩阵指数函数]{Matrix Exponential Function 矩阵指数函数}
+\label{sec.C.2}
+前面已经导出了指数函数的级数形式，由此可定义矩阵的指数函数$\mathrm{e}^M$，其中$M$为任意方阵：
+\begin{equation}
+\label{equC.4}
+	\mathrm{e}^M = \sum_{n = 0}^\infty \frac{M^n}{n!}.
+\end{equation}
+必须注意，一般$\mathrm{e}^M \mathrm{e}^N \neq \mathrm{e}^{M + N}$。$\mathrm{e}^M \mathrm{e}^N = \mathrm{e}^{M + N}$当且仅当$MN = NM$.
+
 \section[行列式]{Determinants 行列式}
+\label{sec.C.3}
+矩阵行列式的概念不太直观，但是相当有用。例如，若矩阵的行列式非零，则该矩阵可逆%
+\mpar{若矩阵$M$可逆，则它存在逆矩阵，记作$M^{-1}$，满足$M^{-1} M = M M^{-1} = \mathbf{1}\text{（单位矩阵）}$.}%
+。这个命题的证明有点复杂，读者可在任何一本线性代数教材中查阅。
+
+$3 \times 3$矩阵的行列式$\det (A)$可以用Levi-Civita符号定义：
+\begin{equation}
+\label{equC.5}
+	\det (A) = \sum_{i = 1}^3 \sum_{j = 1}^3 \sum_{k = 1}^3 \epsilon_{ijk} A_{1i} A_{2j} A_{3k},
+\end{equation}
+$n \times n$矩阵的行列式的定义类似：
+\begin{equation}
+\label{equC.6}
+	\det (A) = \sum_{i_1 = 1}^n \sum_{i_2 = 1}^n \cdots \sum_{i_n = 1}^n \epsilon_{i_1 i_2 \dots i_n} A_{1 i_1} A_{2 i_2} \dots A_{n i_n}.
+\end{equation}
+例：$2 \times 2$矩阵的行列式
+\[
+	\det (A) = \det 
+		\begin{pmatrix}
+			3 & 1 \\
+			5 & 2
+		\end{pmatrix}
+	= (3 \cdot 2) - (t \cdot 1) = 1
+\]
+一般$3 \times 3$矩阵的行列式：
+\begin{equation}
+\label{equC.7}
+	\det
+		\begin{pmatrix}
+			a_1 & a_2 & a_3 \\
+			b_1 & b_2 & b_3 \\
+			c_1 & c_2 & c_3
+		\end{pmatrix}
+	= a_1 (b_2 c_3 - b_3 c_2) - a_2 (b_1 c_3 - b_3 c_1) + a_3 (b_1 c_2 - b_2 c_1).
+\end{equation}
+
+
 \section[本征值与本征向量]{Eigenvalues and Eigenvectors 本征值与本征向量}
+\label{sec.C.4}
+本征值与本征向量是物理学中大用特用的线性代数概念。矩阵$M$的特征值$\lambda$与特征向量$\vec{v}$满足：
+\begin{equation}
+\label{equC.8}
+	M \vec{v} = \lambda \vec{v}.
+\end{equation}
+上式两侧作用的是同一向量$\vec{v}$，这意味着$\vec{v}$经矩阵$M$变换后只改变原来的常数$\lambda$倍。每一本征向量对应一个本征值。计算本征值与本征向量的过程有点繁复，可以参考任何一本线性代数教材。
+
+本征向量重要性的一个例子是旋转变换，我们用旋转矩阵描述旋转操作，用旋转矩阵的本征向量定义各旋转轴。
+
+
 \section[对角化]{Diagonalization 对角化}
+\label{sec.C.5}
+利用本征值与本征向量可以使矩阵对角化，这能简化计算，并且有助于解释方程的物理意义。可以证明任意可对角化的矩阵$M$能写为如下形式%
+\mpar{一般情况，变换$M' = N^{-1} M N$意味着基的变换，$M'$是$M$在新坐标系中的形式。因此矩阵对角化的含义就是可以找到一个坐标系使得矩阵$M$在该坐标系中的形式简单（对角矩阵）。}%
+：
+\begin{equation}
+\label{equC.9}
+	M = N^{-1} D N,
+\end{equation}
+其中矩阵$N$由$M$的本征向量组成，矩阵$D$是以$M$的本征值为对角元的对角矩阵：
+\begin{equation}
+\label{equC.10}
+	\begin{pmatrix}
+		M_{11} & M_{12} \\
+		M_{21} & M_{22}
+	\end{pmatrix}
+	= N^{-1}
+		\begin{pmatrix}
+			\lambda_1 & 0 \\
+			0 & \lambda_2
+		\end{pmatrix}
+	N = \Big( \vec{v}_1, \vec{v}_2 \Big)^{-1}
+		\begin{pmatrix}
+			\lambda_1 & 0 \\
+			0 & \lambda_2
+		\end{pmatrix}
+	\Big( \vec{v}_1, \vec{v}_2 \Big).
+\end{equation}
 
 \chapter[其他数学概念]{Additional Mathematical
 Notions 其他数学概念}
