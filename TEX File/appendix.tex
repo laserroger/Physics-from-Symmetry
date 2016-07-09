@@ -379,12 +379,135 @@ f(x) =& \sum_{n=0}^\infty\frac{f^{(n)}(a)(x-a)^n}{n!} \\
 \subsection[对称和反对称求和]{Antisymmetric $\times$ Symmetric Sums 对称和反对称求和}\label{appendix.B.5.4}
 \subsection[两个重要的符号]{Two Important Symbols 两个重要的符号}\label{appendix.B.5.5}
 
-\chapter[线性代数]{Linear Algebra 线性代数}
-\section[基本的变换]{Basic Transformations 基本的变换}
+\section[基本变换]{Basic Transformations 基本变换}
+\label{appendix.C.1}
+{\bf 矩阵的复共轭}定义为：
+\begin{equation}
+\label{equc.1}
+	M^*_{ij} = 
+		\begin{pmatrix}
+			M^*_{11} & M^*_{12} \\
+			M^*_{21} & M^*_{22}
+		\end{pmatrix},
+\end{equation}
+即对每个矩阵元取复共轭%
+\mpar{复数$z = a + ib$（$a$为$z$的实部，$b$为虚部，$a, b$均为实数）的复共轭为$z^* = a - ib$。}%
+。
+
+{\bf 矩阵的转置}定义为$M^T_{ij} = M_{ji}$，用矩阵形式表示为：
+\begin{equation}
+\label{equC.2}
+	M_{ij} = 
+		\begin{pmatrix}
+			M_{11} & M_{12} \\
+			M_{21} & M_{22}
+		\end{pmatrix}
+	\ \to \ 
+	M^T_{ij} = 
+		\begin{pmatrix}
+			M_{11} & M_{21} \\
+			M_{12} & M_{22}
+		\end{pmatrix},
+\end{equation}
+即交换矩阵的行与列。两个矩阵的乘积的转置$(MN)^T \neq M^T N^T$，而是$(MN)^T = N^T M^T$，即乘积的转置需要调换乘积顺序，这用指标记号不难证明：
+\begin{align}
+	MN \equiv (MN)_{ij} = M_{ik} N_{kj} \notag \\
+	(MN)^T \equiv \big( (MN)_{ij} \big)^T = (MN)_{ji} = (M_{ik} N_{kj})^T \notag \\
+\label{equC.3}
+	(M_{ik} N_{kj})^T = M^T_{ik} N^T_{kj} = M_{ki} N_{jk} = N_{jk} M_{ki} \equiv N^T M^T,
+\end{align}
+其中最后一步利用了矩阵乘法的指标记号，左侧矩阵的行乘以右侧矩阵的列。我们将$M_{ki} N_{jk}$写为$N_{jk} M_{ki}$的形式，后者即为左侧矩阵的行乘以右侧矩阵的列的形式，这样就能用矩阵乘法记作$N^T M^T$.
+
+注意在指标记号下乘积中的各项顺序可自由颠倒，例如$M_{ki} N_{jk} = N_{jk} M_{ki}$，因为各$M_{ki}$与$N_{jk}$只代表数字。
+
+
 \section[矩阵指数函数]{Matrix Exponential Function 矩阵指数函数}
+\label{sec.C.2}
+前面已经导出了指数函数的级数形式，由此可定义矩阵的指数函数$\mathrm{e}^M$，其中$M$为任意方阵：
+\begin{equation}
+\label{equC.4}
+	\mathrm{e}^M = \sum_{n = 0}^\infty \frac{M^n}{n!}.
+\end{equation}
+必须注意，一般$\mathrm{e}^M \mathrm{e}^N \neq \mathrm{e}^{M + N}$。$\mathrm{e}^M \mathrm{e}^N = \mathrm{e}^{M + N}$当且仅当$MN = NM$.
+
 \section[行列式]{Determinants 行列式}
+\label{sec.C.3}
+矩阵行列式的概念不太直观，但是相当有用。例如，若矩阵的行列式非零，则该矩阵可逆%
+\mpar{若矩阵$M$可逆，则它存在逆矩阵，记作$M^{-1}$，满足$M^{-1} M = M M^{-1} = \mathbf{1}\text{（单位矩阵）}$.}%
+。这个命题的证明有点复杂，读者可在任何一本线性代数教材中查阅。
+
+$3 \times 3$矩阵的行列式$\det (A)$可以用Levi-Civita符号定义：
+\begin{equation}
+\label{equC.5}
+	\det (A) = \sum_{i = 1}^3 \sum_{j = 1}^3 \sum_{k = 1}^3 \epsilon_{ijk} A_{1i} A_{2j} A_{3k},
+\end{equation}
+$n \times n$矩阵的行列式的定义类似：
+\begin{equation}
+\label{equC.6}
+	\det (A) = \sum_{i_1 = 1}^n \sum_{i_2 = 1}^n \cdots \sum_{i_n = 1}^n \epsilon_{i_1 i_2 \dots i_n} A_{1 i_1} A_{2 i_2} \dots A_{n i_n}.
+\end{equation}
+例：$2 \times 2$矩阵的行列式
+\[
+	\det (A) = \det 
+		\begin{pmatrix}
+			3 & 1 \\
+			5 & 2
+		\end{pmatrix}
+	= (3 \cdot 2) - (t \cdot 1) = 1
+\]
+一般$3 \times 3$矩阵的行列式：
+\begin{equation}
+\label{equC.7}
+	\det
+		\begin{pmatrix}
+			a_1 & a_2 & a_3 \\
+			b_1 & b_2 & b_3 \\
+			c_1 & c_2 & c_3
+		\end{pmatrix}
+	= a_1 (b_2 c_3 - b_3 c_2) - a_2 (b_1 c_3 - b_3 c_1) + a_3 (b_1 c_2 - b_2 c_1).
+\end{equation}
+
+
 \section[本征值与本征向量]{Eigenvalues and Eigenvectors 本征值与本征向量}
+\label{sec.C.4}
+本征值与本征向量是物理学中大用特用的线性代数概念。矩阵$M$的特征值$\lambda$与特征向量$\vec{v}$满足：
+\begin{equation}
+\label{equC.8}
+	M \vec{v} = \lambda \vec{v}.
+\end{equation}
+上式两侧作用的是同一向量$\vec{v}$，这意味着$\vec{v}$经矩阵$M$变换后只改变原来的常数$\lambda$倍。每一本征向量对应一个本征值。计算本征值与本征向量的过程有点繁复，可以参考任何一本线性代数教材。
+
+本征向量重要性的一个例子是旋转变换，我们用旋转矩阵描述旋转操作，用旋转矩阵的本征向量定义各旋转轴。
+
+
 \section[对角化]{Diagonalization 对角化}
+\label{sec.C.5}
+利用本征值与本征向量可以使矩阵对角化，这能简化计算，并且有助于解释方程的物理意义。可以证明任意可对角化的矩阵$M$能写为如下形式%
+\mpar{一般情况，变换$M' = N^{-1} M N$意味着基的变换，$M'$是$M$在新坐标系中的形式。因此矩阵对角化的含义就是可以找到一个坐标系使得矩阵$M$在该坐标系中的形式简单（对角矩阵）。}%
+：
+\begin{equation}
+\label{equC.9}
+	M = N^{-1} D N,
+\end{equation}
+其中矩阵$N$由$M$的本征向量组成，矩阵$D$是以$M$的本征值为对角元的对角矩阵：
+\begin{equation}
+\label{equC.10}
+	\begin{pmatrix}
+		M_{11} & M_{12} \\
+		M_{21} & M_{22}
+	\end{pmatrix}
+	= N^{-1}
+		\begin{pmatrix}
+			\lambda_1 & 0 \\
+			0 & \lambda_2
+		\end{pmatrix}
+	N = \Big( \vec{v}_1, \vec{v}_2 \Big)^{-1}
+		\begin{pmatrix}
+			\lambda_1 & 0 \\
+			0 & \lambda_2
+		\end{pmatrix}
+	\Big( \vec{v}_1, \vec{v}_2 \Big).
+\end{equation}
 
 \chapter[其他数学概念]{Additional Mathematical
 Notions 其他数学概念}

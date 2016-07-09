@@ -5,6 +5,8 @@
 %   translator: laserdog, 日始之音
 %----------------------------------------------------------------------------------------
 
+\def\pmm{\begin{pmatrix}}
+\def\pmme{\end{pmatrix}}
 \chapterimage{chapter_head_1.pdf} % Chapter heading image
 
 \chapter[量子力学]{Quantum Mechanics 量子力学}\label{chap8}
@@ -165,6 +167,45 @@ P(E_1)&=\left|\int dx\Phi^*_{E_1}(x,t)\Psi(x,t)\right|^2 =\left|\int dx\Phi^*_{E
 
 \section[对于几种诠释的评议]{Comments on Interpretations 对于几种诠释的评议}\label{sec8.7}
 \section[附录：Dirac 旋量分量的诠释]{Appendix: Interpretation of the Dirac Spinor Components 附录：Dirac 旋量分量的诠释}\label{sec8.8}
+
 \section[附录：解Dirac 方程]{Appendix: Solving the Dirac Equation 附录：解Dirac 方程}\label{sec8.9}
+{\it 和上节一样，我们把Dirac自旋量中的二分量量记做{\rm u}和{\rm v}，把四分量量记做$u$和$v$。也就是说例如$u_1,u_2$的记号代表的是四分量量，在不特别区分这些量的时候我们只写$u$。同时${\rm u_1}$和${\rm u_2}$是这个四分量量中的两个二分量量：$u=\pmm \rm u_1 \\ \rm u_2 \pmme $}。
+\par
+本附录中我们将在{\it 手性基底}上解{\it 静止参考系}下的Dirac方程。其他任意参考系的解能够通过本节解做伪转动变换得到。除了我们在上一节的讨论，我们在第六章讨论量子场论的时候也会用到这些解。\par
+Dirac方程为：
+\begin{equation}
+(i\partial_\mu \gamma^\mu -m)\psi=0
+\end{equation}
+我们考虑其平面波解，设$\Psi=ue^{-ipx}$，其中$u$是一四分量量，因为矩阵$\gamma_\mu$是$4 \times 4$的。在静止参考系中，三维动量$\vec{p}=0$,指数项因此变为$-ipx=-i(p_0x_0-\vec{p}\vec{x})=-ip_0x_0$。现在使用我们本章初推导得到的相对论能量动量关系$E=\sqrt{|\vec{p}|^2+m^2}$，已知$p_0=E$和$x_0=t$，我们得到$-ipx=-iEt=-i\sqrt{|\vec{p}|^2+m^2}t=-imt$。把此式带入到Dirac方程中：
+\begin{equation}
+\begin{split}
+&(i\partial_\mu\gamma^\mu-m)ue^{-imt}=0\\
+&\to (i(\partial_0\gamma^0-\partial_i\gamma_i)-m)ue^{-imt}=0\\
+&\to (i(-im)\gamma^0-m)ue^{-imt}=0\\
+&\to (m\gamma^0-m)u=0\\
+&\to (\pmm 0 & 1 \\ 1 & 0 \pmme -\pmm 1 & 0 \\ 0 & 1 \pmme)u=0\\
+&\to \pmm -1 & 1 \\ 1 & -1 \pmme \pmm \rm u_1 \\ \rm u_2 \pmme =0\\
+&\to \pmm \rm -u_1+u_2 \\ \rm u_1-u_2 \pmme =0
+\end{split}
+\end{equation}
+注意这里矩阵中的1实际上代表的是$2 \times 2$的单位矩阵，所以$\rm u_1$和$\rm u_2$是二分量量。我们看出我们假设的平面波解在$\rm u_1 =u_2$的条件下符合方程，由此我们找到了Dirac方程两个线性独立的解：
+\begin{equation}
+\Psi_1=\pmm 1\\0\\1\\0 \pmme e^{-imt},~~~\Psi_2=\pmm 0\\1\\0\\1 \pmme e^{-imt}
+\end{equation}
+我们可以通过设$\tilde \Psi =ve^{ipx}$来得到另外两个解，在静止参考系下这一解形式化为$\tilde \Psi=ve^{imt}$，带入方程得
+\begin{equation}
+\begin{split}
+&(i\partial_\mu\gamma^\mu-m)ve^{imt}=0\\
+&\to (-m\gamma^0-m)v=0\\
+&\to \pmm -1 & -1 \\ -1 & -1 \pmme \pmm \rm v_1 \\ \rm v_2 \pmme =0\\
+&\to \pmm \rm -v_1-v_2 \\ \rm -v_1-v_2 \pmme =0
+\end{split}
+\end{equation}
+我们由此得到时间依赖为$e^{imt}$的两个解，其满足$\rm -v_1=v_2$的条件。此时两个线性独立的解为：
+\begin{equation}
+\tilde \Psi_1=\pmm 1\\0\\-1\\0 \pmme e^{imt},~~~\tilde \Psi_2=\pmm 0\\1\\0\\-1 \pmme e^{imt}
+\end{equation}
+
+
 \section[附录：Dirac 旋量的不同的基]{Appendix: Dirac Spinors in Different Bases 附录：Dirac 旋量的不同的基}\label{sec8.10}
 \subsection[质量基下解 Dirac 方程]{Solutions of the Dirac Equation in the Mass Basis 质量基下解 Dirac 方程}\label{sec8.10.1}
