@@ -1,10 +1,18 @@
 %!TEX encoding = UTF-8 Unicode
 
 %----------------------------------------------------------------------------------------
-%   CHAPTER 8
+%	CHAPTER 8
 %   translator: laserdog, 日始之音
 %----------------------------------------------------------------------------------------
+<<<<<<< HEAD
+=======
 
+<<<<<<< HEAD
+>>>>>>> origin/master
+=======
+>>>>>>> origin/master
+\def\pmm{\begin{pmatrix}}
+\def\pmme{\end{pmatrix}}
 \chapterimage{chapter_head_1.pdf} % Chapter heading image
 
 \chapter[量子力学]{Quantum Mechanics 量子力学}\label{chap8}
@@ -37,7 +45,7 @@
 &=\left(\left(\frac{1}{i}E\right)\left(\frac{1}{i}E\right)-\left(-\frac{1}{i}p_i\right)\left(-\frac{1}{i}p_i\right)+m^2\right)\Phi\\
 &=(-E^2+\vec{p}^{\,2}+m^2)\Phi=0
 \end{split}\end{align}
-\begin{align}
+\begin{align}\label{eq8.2}
 \to\ E^2=\vec{p}^{\,2}+m^2\quad\text{ 或者用4-矢量表示， }p_\mu p^\mu=m^2
 \end{align}
 其就是著名的狭义相对论下的{\bf 能量-动量关系}。对于一个静止的粒子，即$\vec{p}=0$，给出了爱因斯坦著名的方程
@@ -138,33 +146,271 @@ P(E_1)&=\left|\int dx\Phi^*_{E_1}(x,t)\Psi(x,t)\right|^2 =\left|\int dx\Phi^*_{E
 
 
 \section[Schrödinger 方程]{Schrödinger Equation Schrödinger 方程}\label{sec8.4}
+Klein-Gordon方程有平面波解
+\[\Phi = e^{\pm ip_\mu x^\mu}=\equiv e^{\pm ip\cdot x} \]
+其中，$p_\mu=(E,\vec{p})^T$，是粒子守恒的四动量。我们可以看到
+\begin{align}
+\begin{split}
+0&=(\partial_\mu\partial^\mu+m^2)\Phi\\
+&=(\partial_\mu\partial^\mu+m^2)e^{\pm ip_\mu x^\mu}\\
+&=(ip_\mu p^\mu+m^2)e^{\pm ip_\mu x^\mu}=0\\
+&=(-m^2+m^2)e^{\pm ip_\mu x^\mu}=0\quad \checkmark
+\end{split}
+\end{align}
+
+我们可以把解写成稍不同的形式
+\[\Phi=e^{\pm ip_\mu x^\mu}=\Phi=e^{i(-Et+\vec{x}\cdot\vec{p})} \]
+然后我们可以看到对时间的依赖是$e^{-iEt}$，即$\Phi\propto e^{-iEt}$。从\eqref{eq8.2}中我们知道
+\[E=\sqrt{\vec{p}^2+m^2}=\sqrt{m^2\left(\frac{\vec{p}^2}{m^2}+1\right)}=m\sqrt{\frac{\vec{p}^2}{m^2}+1} \]
+在非相对论极限下$|\vec{p}|\ll m$，这就意味着我们的研究对象的移动速度比光速要慢很多，从而其动量比质量也要小很多，我们因此就可以利用泰勒展开得到能量的近似
+\[\begin{split}
+E&=m\left(1+\frac{1}{2}\frac{\vec{p}^2}{m^2}+\cdots\right)\\
+&\to E\approx\underbrace{m}_{\mathclap{\text{静质量}}}+\underbrace{\frac{\vec{p}^2}{2m}}_{\mathclap{\text{动能}}}
+\end{split} \]
+我们现在可以写
+\begin{align}
+\Phi=e^{i(-Et+\vec{x}\cdot\vec{p})}\approx e^{-imt}\underbrace{e^{i\vec{p}\cdot\vec{x}-i(p^2/2m)t}}_{\equiv\phi(\vec{x},t)}=e^{-imt}\phi(\vec{x},t)
+\end{align}
+
+从$|\vec{p}|\ll m$中，我们利用了静质量远大于动能的效应，因此时间相关的振动中除了$e^{-imt}$之外的成分是很小的。如果我们把这个作为试探\footnote{译者注：ansatz是个很奇怪的词，我不知道怎么翻译。。比如Bethe-Ansatz，叫Bethe近似嘛也不对，叫啥都不对}带入Klein-Gordon方程，我们就有
+\[(\partial_\mu\partial^\mu+m^2)e^{-imt}\phi(\vec{x},t)=(\partial_0\partial^0+\partial_i\partial^i+m^2)e^{-imt}\phi(\vec{x},t)=0 \]
+然后我们用$\partial_te^{-imt}(\dots)=e^{-imt}(-im+\partial_t)(\dots)$，即简单的把微分算符作用出来，我们得到
+\[e^{-imt}((-im+\partial_t)^2+\partial_i\partial^i+m^2)\phi(\vec{x},t)=0 \]
+我们可以除掉$e^{-imt}$，因为它肯定不是零。因此，
+\[\begin{split}
+\to((-im+\partial_t)^2+\nabla^2+m^2)\phi(\vec{x},t)=0\\
+\to(-m^2-2im\partial_t+(\partial_t)^2+\nabla^2+m^2)\phi(\vec{x},t)=0
+\end{split} \]
+把第三项
+\begin{align}
+\begin{split}
+(\partial_t)^2\phi(\vec{x},t)&=(\partial_t)^2\exp[i\vec{p}\cdot\vec{x}-i(\vec{p}^2/2m)t]\\
+&=(\vec{p}^2/2m)^2\exp[i\vec{p}\cdot\vec{x}-i(\vec{p}^2/2m)t]\propto\frac{p^4}{m^2}
+\end{split}
+\end{align}
+与第二项对比
+\begin{align}
+\begin{split}
+im\partial_t\phi(\vec{x},t)&=im\partial_t\exp[i\vec{p}\cdot\vec{x}-i(\vec{p}^2/2m)t]\\
+&=m(\vec{p}^2/2m)\exp[i\vec{p}\cdot\vec{x}-i(\vec{p}^2/2m)t]\propto\frac{p^4}{m^2}
+\end{split}
+\end{align}
+这表明，在$|\vec{p}|\ll m$的极限下，我们可以忽略掉第三项，因此
+\[\begin{split}
+(-2im\partial_t+\nabla^2)\phi(\vec{x},t)=0\\
+\underbrace{\to}_{\mathclap{\text{除掉}(-2m)}}\left(i\partial_t=\frac{1}{2m}\nabla^2\right)\phi(\vec{x},t)=0
+\end{split}\]
+
+
+
 \subsection[有外场的 Schrödinger 方程]{Schrödinger Equation with External Field 有外场的 Schrödinger 方程}\label{sec8.4.1}
+
+此外，我们可以对{\bf 相互作用}Klein-Gordon方程\eqref{eq7.43}，即描述有质量的$0$自旋场与无质量的自旋$1$场（光子场）的方程，做同样的非相对论性近似。于是我们得到
+\begin{align}
+\left(i\partial_t-\frac{1}{2m}\left(\nabla-ia\vec{A}\right)^2+q\Phi\right)\phi(\vec{x},t)=0
+\end{align}
+
 \section[从波动方程到粒子的运动]{From Wave Equations to Particle Motion 从波动方程到粒子的运动}\label{sec8.5}
 \subsection[例：自由粒子]{Example: Free Particle 例：自由粒子}\label{sec8.5.1}
 \subsection[例：盒子中的粒子]{Example: Particle in a Box 例：盒子中的粒子}\label{sec8.5.2}
 \subsection[Dirac符号]{Dirac Notation Dirac符号}\label{sec8.5.3}
 \subsection[例：盒子中的粒子，续]{Example: Particle in a Box, Again 例：盒子中的粒子，续}\label{sec8.5.4}
 \subsection[自旋]{Spin 自旋}\label{sec8.5.5}
-
 \section[Heisenberg 不确定性原理]{Heisenberg’s Uncertainty PrincipleHeisenberg 不确定性原理}\label{sec8.6}
+
 现在可以来讨论量子力学中最奇妙的特征之一了。从上节我们已经知道，对粒子x方向上自旋的测量会破坏我们已知的在z方向上粒子自旋的信息，这一情况在量子力学中的很多测量中都存在。我们可以从\mpar{我们把自旋算子和对应的有限维旋转生成元认同，其满足对易关系$[J_i,J_j]=J_i J_j -J_j J_i=i\epsilon_{ijk}J_k\ne 0 \to J_i J_j \ne J_j J_i$。 举个例子来说，如果我们描述的是自旋1/2的粒子，那么我们应采用对应的二维表示$J_i={\sigma_i \over 2}$。} $\hat S_x \hat S_z \ne \hat S_z \hat S_x$ 出发来考察这一点，此式说明先对z 方向自旋后对x 方向自旋进行测量和先对x 方向自旋后对z 方向自旋进行测量的结果是不同的。这一点并不令人惊奇，因为对z 方向自旋进行测量后，系统应处于$\hat S_z$ 的一个本征态上，而对x 方向自旋进行测量后，系统应处于$\hat S_x$ 的本征态上，而$\hat S_z$ 和$\hat S_x$的本征态均不同，最后的结果也就并不相同。
 \par
 我们可以换种角度来描述这个现象：\textbf{我们不能同时确定系统z方向和x方向的自旋状态！}每次我们测量z方向的自旋时，都会让x方向的自旋信息再次变为未知，反之亦然。这一结论对于z 方向/x方向和y方向的自旋也是一样的。
 \par
-你也许觉得自旋是比较奇怪的物理量，但我们在粒子位置和动量的测量上也发现了同样的结果。回顾一下式(\ref{equ5.3})，为了方便我们在这里重新写一遍：
+你也许觉得自旋是比较奇怪的物理量，但我们在粒子位置和动量的测量上也发现了同样的结果。回顾一下式(5.3)，为了方便我们在这里重新写一遍：
 \begin{equation}
-\label{equ8.61}
 [\hat p_i,\hat x_j]=\hat p_i \hat x_j - \hat x_j \hat p_j =i \delta_{ij}
 \end{equation}
-由上我们看出，对特定方向的粒子位置进行测量，会导致之前对其该方向动量的测量结果再次变得不确定。换句话说，我们不能同时{\it{足够精确地}}确定粒子在同一方向上的位置与动量。注意，只有沿相同方向的位置和动量算子的对易子才不为零
-\footnote{Kronecher delta函数$\delta_{ij}$在$i\ne j$时为0，$i=j$时为1，其定义在附录B.5.5。}，所以y方向上动量的测量不会干扰我们对x方向上位置的测量。
+由上我们看出，对特定方向的粒子位置进行测量，会导致之前对其该方向动量的测量结果再次变得不确定。换句话说，我们不能同时{\it 足够精确地}确定粒子在同一方向上的位置与动量。注意，只有沿相同方向的位置和动量算子的对易子才不为零
+\mpar{Kronecher delta函数$\delta_{ij}$在$i\ne j$时为0，$i=j$时为1，其定义在附录B.5.5。}，所以y方向上动量的测量不会干扰我们对x方向上位置的测量。
 \par
-每次我们测量动量会使位置信息变得不确定，反之亦然，这就是著名的\textbf{Heisenberg 不确定原理}。同样的现象也发生在沿不同方向的角动量上，因为其对应的对易子也不为零。总而言之，我们可以检查任意两个物理量的对易性，如果它们不对易，它们就不能同时{足够精确地}被确定。
+每次我们测量动量会使位置信息变得不确定，反之亦然，这就是著名的\textbf{Heisenberg 不确定原理}。同样的现象也发生在沿不同方向的角动量上，因为其对应的对易子也不为零。总而言之，我们可以检查任意两个物理量的对易性，如果它们不对易，它们就不能同时{\it 足够精确地}被确定。
 \par
 这一点可能并不像看上去那么令人惊奇。量子力学使用对应对称的生成元作为测量算子，比如说，对动量的测量等价于平移生成元的作用\mpar{记住，系统的平移不变性使我们导出动量守恒定律。}，这一生成元将我们的系统平移了一小点，所以粒子的位置也被改变了。真正令人惊奇的是大自然就是这么运作的，许多年来有很多实验验证Heisenberg不确定原理，它们都证明了这个原理的正确性。
 
 \section[对于几种诠释的评议]{Comments on Interpretations 对于几种诠释的评议}\label{sec8.7}
 \section[附录：Dirac 旋量分量的诠释]{Appendix: Interpretation of the Dirac Spinor Components 附录：Dirac 旋量分量的诠释}\label{sec8.8}
+<<<<<<< HEAD
+<<<<<<< HEAD
+\section[附录：Dirac 方程的求解]{Appendix: Solving the Dirac Equation 附录：Dirac 方程的求解}\label{sec8.9}
+=======
+
 \section[附录：解Dirac 方程]{Appendix: Solving the Dirac Equation 附录：解Dirac 方程}\label{sec8.9}
+>>>>>>> origin/master
+=======
+
+\section[附录：解Dirac 方程]{Appendix: Solving the Dirac Equation 附录：解Dirac 方程}\label{sec8.9}
+>>>>>>> origin/master
+{\it 和上节一样，我们把Dirac自旋量中的二分量量记做{\rm u}和{\rm v}，把四分量量记做$u$和$v$。也就是说例如$u_1,u_2$的记号代表的是四分量量，在不特别区分这些量的时候我们只写$u$。同时${\rm u_1}$和${\rm u_2}$是这个四分量量中的两个二分量量：$u=\pmm \rm u_1 \\ \rm u_2 \pmme $}。
+\par
+本附录中我们将在{\it 手性基底}上解{\it 静止参考系}下的Dirac方程。其他任意参考系的解能够通过本节解做伪转动变换得到。除了我们在上一节的讨论，我们在第六章讨论量子场论的时候也会用到这些解。\par
+Dirac方程为：
+\begin{equation}
+(i\partial_\mu \gamma^\mu -m)\psi=0
+\end{equation}
+我们考虑其平面波解，设$\Psi=ue^{-ipx}$，其中$u$是一四分量量，因为矩阵$\gamma_\mu$是$4 \times 4$的。在静止参考系中，三维动量$\vec{p}=0$,指数项因此变为$-ipx=-i(p_0x_0-\vec{p}\vec{x})=-ip_0x_0$。现在使用我们本章初推导得到的相对论能量动量关系$E=\sqrt{|\vec{p}|^2+m^2}$，已知$p_0=E$和$x_0=t$，我们得到$-ipx=-iEt=-i\sqrt{|\vec{p}|^2+m^2}t=-imt$。把此式带入到Dirac方程中：
+\begin{equation}
+\begin{split}
+&(i\partial_\mu\gamma^\mu-m)ue^{-imt}=0\\
+&\to (i(\partial_0\gamma^0-\partial_i\gamma_i)-m)ue^{-imt}=0\\
+&\to (i(-im)\gamma^0-m)ue^{-imt}=0\\
+&\to (m\gamma^0-m)u=0\\
+&\to (\pmm 0 & 1 \\ 1 & 0 \pmme -\pmm 1 & 0 \\ 0 & 1 \pmme)u=0\\
+&\to \pmm -1 & 1 \\ 1 & -1 \pmme \pmm \rm u_1 \\ \rm u_2 \pmme =0\\
+&\to \pmm \rm -u_1+u_2 \\ \rm u_1-u_2 \pmme =0
+\end{split}
+\end{equation}
+注意这里矩阵中的1实际上代表的是$2 \times 2$的单位矩阵，所以$\rm u_1$和$\rm u_2$是二分量量。我们看出我们假设的平面波解在$\rm u_1 =u_2$的条件下符合方程，由此我们找到了Dirac方程两个线性独立的解：
+\begin{equation}
+\Psi_1=\pmm 1\\0\\1\\0 \pmme e^{-imt},~~~\Psi_2=\pmm 0\\1\\0\\1 \pmme e^{-imt}
+\end{equation}
+我们可以通过设$\tilde \Psi =ve^{ipx}$来得到另外两个解，在静止参考系下这一解形式化为$\tilde \Psi=ve^{imt}$，带入方程得
+\begin{equation}
+\begin{split}
+&(i\partial_\mu\gamma^\mu-m)ve^{imt}=0\\
+&\to (-m\gamma^0-m)v=0\\
+&\to \pmm -1 & -1 \\ -1 & -1 \pmme \pmm \rm v_1 \\ \rm v_2 \pmme =0\\
+&\to \pmm \rm -v_1-v_2 \\ \rm -v_1-v_2 \pmme =0
+\end{split}
+\end{equation}
+我们由此得到时间依赖为$e^{imt}$的两个解，其满足$\rm -v_1=v_2$的条件。此时两个线性独立的解为：
+\begin{equation}
+\tilde \Psi_1=\pmm 1\\0\\-1\\0 \pmme e^{imt},~~~\tilde \Psi_2=\pmm 0\\1\\0\\-1 \pmme e^{imt}
+\end{equation}
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/master
+=======
+
+
+>>>>>>> origin/master
 \section[附录：Dirac 旋量的不同的基]{Appendix: Dirac Spinors in Different Bases 附录：Dirac 旋量的不同的基}\label{sec8.10}
-\subsection[质量基下解 Dirac 方程]{Solutions of the Dirac Equation in the Mass Basis 质量基下解 Dirac 方程}\label{sec8.10.1}
+
+在拉格朗日量中，Dirac 旋量$\psi$总是和矩阵$\gamma_\mu$组合出现。
+这个特性可以通过转换到一个不同的基来简化计算。
+这种简化之所以行得通，是因为对于任意的可逆矩阵$N$，我们都可以通过在$\psi$和$\gamma_\mu$之间插入形如$1=N^{-1}N$的项来重新定义两者。
+\begin{align}
+  \partial_\mu\bar{\psi}\gamma_\mu\psi = \partial_\mu\bar{\psi}\underbrace{N^{-1}N}_{\mathclap{=1}}\gamma_\mu\underbrace{N^{-1}N}_{\mathclap{=1}}\psi = \partial_\mu\underbrace{\bar{\psi}N^{-1}}_{\mathclap{\equiv\bar{\psi}'}}\underbrace{N\gamma_\mu N^{-1}}_{\mathclap{\equiv\gamma'_\mu}}\underbrace{N\psi}_{\mathclap{\equiv\psi'}}
+\end{align}
+目前为止我们在本书中使用的基被称为手性基或者 Weyl 基。
+而习惯上 Dirac 方程的求解中用的是另一种基，被称为质量基或者 Dirac 基。
+在我们目前为止使用的手性或 Weyl 基中，Dirac 拉格朗日量
+\begin{align}
+  \mathcal{L}_D=i\chi_L^\dagger\sigma^\mu\partial_\mu \chi_L+i\xi_R^\dagger\bar{\sigma}^\mu\partial_\mu \xi_R-m\chi_L^\dagger\xi_R-m\xi_R^\dagger\chi_L
+\end{align}
+具有非对角的质量项——也就是混合了不同的态的质量项。
+我们可以利用选择基的自由度来找到一组使得质量项对角的基，并将之称为质量基。
+
+这意味着我们想要形如$\psi^\dagger m\psi$的质量项，其中$m=\begin{pmatrix}m_1&0\\0&m_2\end{pmatrix}$,
+于是我们就得到了质量项的形式是
+\begin{align}
+  \bar{\psi}'M'\psi'=(\psi')^\dagger%此处原书中不带'，应为印刷错误，但是勘误表中没有。带‘应为正确形式，故改正并说明。
+  \gamma'_0M'\psi'=\begin{pmatrix}u'\\v'\end{pmatrix}^\dagger\begin{pmatrix}m_1&0\\0&m_2\end{pmatrix}
+  \begin{pmatrix}u'\\v'\end{pmatrix}=(u')^\dagger m_1u'+(v')^\dagger m_2v',
+\end{align}
+而我们正在处理的是
+\begin{align}
+  \bar{\psi}M\psi=\psi^\dagger\gamma_0M\psi=\begin{pmatrix}\chi_L\\\xi_R\end{pmatrix}^\dagger\begin{pmatrix}0&m\\m&0\end{pmatrix}
+  \begin{pmatrix}\chi_L\\\xi_R\end{pmatrix}=m\chi_L^\dagger\xi_R+m\xi_R^\dagger\chi_L.
+\end{align}
+我们目前为止一直使用的后一个基很容易体现出手性，然而质量基下的 Dirac 旋量会更容易和物理中的传播粒子建立联系。
+
+为了得到第二个形式和第一个形式间的关系，我们需要把矩阵$M=\begin{pmatrix}0&m\\m&0\end{pmatrix}=m\begin{pmatrix}0&1\\1&0\end{pmatrix}$对角化。
+这个矩阵的对角化可以通过矩阵$N=\frac{1}{\sqrt{2}}\begin{pmatrix}-1&1\\1&1\end{pmatrix}$来实现，
+也就是说
+\begin{align}
+  N^{-1}\underbrace{\begin{pmatrix}-m&0\\0&m\end{pmatrix}}_{\mathclap{\equiv M'}}N=M
+\end{align}
+\begin{align}
+  \rightarrow m\frac{1}{\sqrt{2}}\begin{pmatrix}-1&1\\1&1\end{pmatrix}^-1\begin{pmatrix}-1&0\\0&1\end{pmatrix}\frac{1}{\sqrt{2}}
+  \begin{pmatrix}-1&1\\1&1\end{pmatrix}=m\begin{pmatrix}0&1\\1&0\end{pmatrix}
+\end{align}
+于是我们就可以相应地重新定义 Dirac 旋量
+\begin{align}
+\begin{split}
+  \bar{\psi}M\psi=&\bar{\psi}\underbrace{NN^{-1}}_{\mathclap{=-1}}M\underbrace{NN^{-1}}_{\mathclap{=-1}}\psi\\
+  =&\underbrace{\bar{\psi}N}_{\mathclap{\equiv\bar{\psi}'}}
+  \underbrace{N^{-1}MN}_{\mathclap{\equiv M'}}\underbrace{N^{-1}\psi}_{\mathclap{\equiv\psi'}}\\
+  =&\bar{\psi}'M'\psi'
+  \end{split}
+\end{align}
+
+观察一下在这个基下的手性投影算符$P_L=\frac{1-\gamma_5}{2}$是很有帮助的。
+因此我们需要得出相应的$\gamma_5$矩阵
+\begin{align}
+\begin{split}
+  \bar{\gamma}_5=N^{-1}\gamma_5N=&\frac{1}{\sqrt{2}}\begin{pmatrix}1&1\\1&-1\end{pmatrix}\begin{pmatrix}1&0\\0&-1\end{pmatrix}
+  \frac{1}{\sqrt{2}}\begin{pmatrix}1&1\\1&-1\end{pmatrix}\\
+  =&\frac{1}{2}\begin{pmatrix}1&1\\1&-1\end{pmatrix}\begin{pmatrix}1&1\\-1&1\end{pmatrix}\\
+  =&\begin{pmatrix}0&1\\1&0\end{pmatrix}
+\end{split}
+\end{align}
+与此对应的本征向量是$\frac{1}{\sqrt{2}}\begin{pmatrix}1\\-1\end{pmatrix}$和$\frac{1}{\sqrt{2}}\begin{pmatrix}1\\1\end{pmatrix}$。
+这表示手性本征态现在由具有上下分量的 Dirac 旋量描述，
+例如，左手态在这个基下的形式就是$\frac{1}{\sqrt{2}}\begin{pmatrix}1\\-1\end{pmatrix}$
+相比之下，在手性基下$\gamma_5$是对角的，左手本征态由只有上分量的 Dirac 旋量$\psi_L=\begin{pmatrix}\chi_L\\0\end{pmatrix}$给出，
+右手本征态则由只有下分量的 Dirac 旋量$\psi_R=\begin{pmatrix}0\\\xi_R\end{pmatrix}$给出。
+
+在这个基下手性投影算符写成
+\begin{align}
+  P_L=\frac{1-\gamma_5}{2}=\frac{1}{2}\begin{pmatrix}1&-1\\-1&1\end{pmatrix}
+\end{align}
+
+\subsection[质量基下 Dirac 方程的解]{Solutions of the Dirac Equation in the Mass Basis 质量基下 Dirac 方程的解}\label{sec8.10.1}
+
+我们可以求解质量基下的 Dirac 方程
+\begin{align}
+  (i\gamma_\mu\partial^\mu-m)\Psi=0
+\end{align}
+通过假设$\psi=ue^{-ipx}$，可以导出
+\[(\gamma_\mu p^\mu-m)ue^{-ipx}=0\]
+\[\rightarrow(\gamma_\mu p^\mu-m)u=0.\]
+等价地，我们可以假设$\psi=ve^{-ipx}$导出
+\[(-\gamma_\mu p^\mu-m)ve^{ipx}=0\]
+\[\rightarrow(-\gamma_\mu p^\mu-m)v=0.\]
+类似在手性基中的解，我们这里也在静止坐标系中求解，也就是$\vec{p}=0$。
+我们做这样的选择之所以可行，是因为物理规律在所有参照系中都是相同的，所以我们可以选择最符合我们需求的一个。
+在这个参照系中，由于$p_i=0$，所以我们有
+\[\rightarrow(\gamma_0p^0-m)u=0\]
+\[\rightarrow(-\gamma_0p^0-m)v=0.\]
+此外还有$p_0=E$，并且我们可以使用我们在本章开头（式\ref{eq:8.2}）推导的相对论能-动量关系。
+在静止参照系中我们有$E=\sqrt{(p_i)^2+m^2}=m$。
+现在我们可以利用上面给出的矩阵$N$和$\gamma'_0=N^{-1}\gamma_0N$计算出$\gamma_0$在质量基或 Dirac 基中的精确形式。
+要记得在$m$中我们还包含着一个单位矩阵，因此
+\[\rightarrow\left(\begin{pmatrix}1&0\\0&-1\end{pmatrix}m-m\begin{pmatrix}1&0\\0&1\end{pmatrix}\right)u=0\]
+\[\rightarrow\left(-\begin{pmatrix}1&0\\0&-1\end{pmatrix}m-m\begin{pmatrix}1&0\\0&1\end{pmatrix}\right)v=0.\]
+\[\rightarrow\begin{pmatrix}0&0\\0&-2\end{pmatrix}u=0\]
+\[\rightarrow\begin{pmatrix}-2&0\\0&0\end{pmatrix}v=0.\]
+要记得每个 Dirac 旋量都包含两个二分量的变量，我们可以推出$u$的下面的二分量变量和$v$的上面的二分量变量必定是0：
+\[\rightarrow\begin{pmatrix}0&0\\0&-2\end{pmatrix}\begin{pmatrix}u_1\\u_2\end{pmatrix}=\begin{pmatrix}0\\-2u_2\end{pmatrix}=0\rightarrow u_2=0\]
+\[\rightarrow\begin{pmatrix}-2&0\\0&0\end{pmatrix}\begin{pmatrix}v_1\\v_2\end{pmatrix}=\begin{pmatrix}-2v_1\\0\end{pmatrix}=0\rightarrow v_1=0.\]
+
+我们可以看到在这个基下物理的传播粒子（也就是 Dirac 方程的解）可以用只含有上分量的旋量描述，而等价地对于反粒子则只含有下分量。
+从而我们可以再次得到四个线性独立的解
+\begin{align}
+\Psi'_1=\begin{pmatrix}1\\0\\0\\0\end{pmatrix}e^{-imt}~~~~~~\Psi'_2=\begin{pmatrix}0\\1\\0\\0\end{pmatrix}e^{-imt}
+\end{align}
+和
+
+\begin{align}
+\Psi'_3=\begin{pmatrix}0\\0\\1\\0\end{pmatrix}e^{imt}~~~~~~\Psi'_4=\begin{pmatrix}0\\0\\0\\1\end{pmatrix}e^{imt}
+\end{align}
+
+在这个参照系中这个基下的一般解，可以写成线性组合的形式
+\begin{align}
+\psi=ue^{-ipx}+ve^{ipx}=\begin{pmatrix}u_1\\0\end{pmatrix}e^{-ipx}+\begin{pmatrix}0\\v_1\end{pmatrix}e^{ipx}
+\end{align}
+并且我们可以通过将这个解做一个 Lorentz 推动变换得到任意一个参照系中的解。
+此外，最一般的解是所有动量和自旋态\mpar{注意 Weyl 旋量的两个分量代表不同的自旋态。}的解的叠加
+
+\begin{align}
+\Psi=\sum_r\sqrt{\frac{m}{(2\pi)^3}}\int\frac{d^3p}{\sqrt{E_p}}\left(c_r(p)u_r(p)e^{-ipx}+d^\dagger_r(p)v_r(p)e^{+ipx}\right)
+\end{align}
