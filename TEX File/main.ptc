@@ -27,7 +27,7 @@
 \contentsline {subsection}{\numberline {3.4.3}$\mathcal {SU}(2)$的生成元与Lie代数}{44}{subsection.3.4.3}
 \contentsline {subsection}{\numberline {3.4.4}Lie群的抽象定义}{46}{subsection.3.4.4}
 \contentsline {section}{\numberline {3.5}表示论}{48}{section.3.5}
-\contentsline {section}{\numberline {3.6}$\mathcal {SU}$(2)}{51}{section.3.6}
+\contentsline {section}{\numberline {3.6}$\mathcal {SU}$(2)}{52}{section.3.6}
 \contentsline {subsection}{\numberline {3.6.1}The Finite-dimensional Irreducible Representations of $\mathcal {SU}$(2) $\mathcal {SU}$(2)群的有限维不可约表示}{52}{subsection.3.6.1}
 \contentsline {subsection}{\numberline {3.6.2}$\mathcal {SU}$(2)的 Casimir算符}{54}{subsection.3.6.2}
 \contentsline {subsection}{\numberline {3.6.3}$\mathcal {SU}$(2)的一维表示}{55}{subsection.3.6.3}
@@ -58,10 +58,10 @@
 \contentsline {section}{\numberline {4.4}欧拉-拉格朗日方程}{93}{section.4.4}
 \contentsline {section}{\numberline {4.5}Noether 定理}{95}{section.4.5}
 \contentsline {subsection}{\numberline {4.5.1}粒子理论的Noether 定理}{95}{subsection.4.5.1}
-\contentsline {subsection}{\numberline {4.5.2}场论中的 Neother 定理——时空对称性}{99}{subsection.4.5.2}
-\contentsline {subsection}{\numberline {4.5.3}旋转和推动}{102}{subsection.4.5.3}
+\contentsline {subsection}{\numberline {4.5.2}场论中的 Neother 定理——时空对称性}{100}{subsection.4.5.2}
+\contentsline {subsection}{\numberline {4.5.3}旋转和推动}{103}{subsection.4.5.3}
 \contentsline {subsection}{\numberline {4.5.4}自旋}{104}{subsection.4.5.4}
-\contentsline {subsection}{\numberline {4.5.5}场论中的 Neother 定理——内禀对称性}{104}{subsection.4.5.5}
+\contentsline {subsection}{\numberline {4.5.5}场论中的 Neother 定理——内禀对称性}{105}{subsection.4.5.5}
 \contentsline {section}{\numberline {4.6}附录：粒子理论中的推动不变性与其守恒量}{107}{section.4.6}
 \contentsline {section}{\numberline {4.7}附录：场论中的推动不变性与其守恒量}{108}{section.4.7}
 \contentsline {part}{\@mypartnumtocformat {III}{The Equations of Nature 自然界的方程}}{109}{part.3}
@@ -101,65 +101,67 @@
 \contentsline {part}{\@mypartnumtocformat {IV}{Applications 应用}}{175}{part.4}
 \ttl@stoptoc {default@3}
 \ttl@starttoc {default@4}
-\contentsline {chapter}{\numberline {8}量子力学}{177}{chapter.8}
-\contentsline {section}{\numberline {8.1}对应到粒子理论}{178}{section.8.1}
-\contentsline {section}{\numberline {8.2}相对论性能量-动量关系}{178}{section.8.2}
-\contentsline {section}{\numberline {8.3}量子力学的数学形式}{179}{section.8.3}
-\contentsline {subsection}{\numberline {8.3.1}期望值}{182}{subsection.8.3.1}
-\contentsline {section}{\numberline {8.4}Schrödinger 方程}{183}{section.8.4}
-\contentsline {subsection}{\numberline {8.4.1}有外场的 Schrödinger 方程}{183}{subsection.8.4.1}
-\contentsline {section}{\numberline {8.5}从波动方程到粒子的运动}{183}{section.8.5}
-\contentsline {subsection}{\numberline {8.5.1}例：自由粒子}{183}{subsection.8.5.1}
-\contentsline {subsection}{\numberline {8.5.2}例：盒子中的粒子}{183}{subsection.8.5.2}
-\contentsline {subsection}{\numberline {8.5.3}Dirac符号}{183}{subsection.8.5.3}
-\contentsline {subsection}{\numberline {8.5.4}例：盒子中的粒子，续}{183}{subsection.8.5.4}
-\contentsline {subsection}{\numberline {8.5.5}自旋}{183}{subsection.8.5.5}
-\contentsline {section}{\numberline {8.6}Heisenberg 不确定性原理}{183}{section.8.6}
-\contentsline {section}{\numberline {8.7}对于几种诠释的评议}{184}{section.8.7}
-\contentsline {section}{\numberline {8.8}附录：Dirac 旋量分量的诠释}{184}{section.8.8}
-\contentsline {section}{\numberline {8.9}附录：解Dirac 方程}{184}{section.8.9}
-\contentsline {section}{\numberline {8.10}附录：Dirac 旋量的不同的基}{184}{section.8.10}
-\contentsline {subsection}{\numberline {8.10.1}质量基下解 Dirac 方程}{184}{subsection.8.10.1}
-\contentsline {chapter}{\numberline {9}量子场论}{185}{chapter.9}
-\contentsline {section}{\numberline {9.1}场论的定义}{186}{section.9.1}
-\contentsline {section}{\numberline {9.2}自旋为0的自由场理论}{187}{section.9.2}
-\contentsline {chapter}{\numberline {10}经典力学}{195}{chapter.10}
-\contentsline {section}{\numberline {10.1}相对论力学}{197}{section.10.1}
-\contentsline {section}{\numberline {10.2}非相对论力学的拉格朗日量}{198}{section.10.2}
-\contentsline {chapter}{\numberline {11}电动力学}{201}{chapter.11}
-\contentsline {section}{\numberline {11.1}齐次Maxwell方程组}{202}{section.11.1}
-\contentsline {section}{\numberline {11.2}Lorentz力}{204}{section.11.2}
-\contentsline {section}{\numberline {11.3}Coulomb 势}{205}{section.11.3}
-\contentsline {part}{\@mypartnumtocformat {V}{Appendix 附录}}{207}{part.5}
+\contentsline {chapter}{\numberline {8}量子力学}{179}{chapter.8}
+\contentsline {section}{\numberline {8.1}对应到粒子理论}{180}{section.8.1}
+\contentsline {section}{\numberline {8.2}相对论性能量-动量关系}{180}{section.8.2}
+\contentsline {section}{\numberline {8.3}量子力学的数学形式}{181}{section.8.3}
+\contentsline {subsection}{\numberline {8.3.1}期望值}{184}{subsection.8.3.1}
+\contentsline {section}{\numberline {8.4}Schrödinger 方程}{185}{section.8.4}
+\contentsline {subsection}{\numberline {8.4.1}有外场的 Schrödinger 方程}{187}{subsection.8.4.1}
+\contentsline {section}{\numberline {8.5}从波动方程到粒子的运动}{187}{section.8.5}
+\contentsline {subsection}{\numberline {8.5.1}例：自由粒子}{187}{subsection.8.5.1}
+\contentsline {subsection}{\numberline {8.5.2}例：盒子中的粒子}{187}{subsection.8.5.2}
+\contentsline {subsection}{\numberline {8.5.3}Dirac符号}{187}{subsection.8.5.3}
+\contentsline {subsection}{\numberline {8.5.4}例：盒子中的粒子，续}{187}{subsection.8.5.4}
+\contentsline {subsection}{\numberline {8.5.5}自旋}{187}{subsection.8.5.5}
+\contentsline {section}{\numberline {8.6}Heisenberg 不确定性原理}{187}{section.8.6}
+\contentsline {section}{\numberline {8.7}对于几种诠释的评议}{188}{section.8.7}
+\contentsline {section}{\numberline {8.8}附录：Dirac 旋量分量的诠释}{188}{section.8.8}
+\contentsline {section}{\numberline {8.9}附录：Dirac 方程的求解}{188}{section.8.9}
+\contentsline {section}{\numberline {8.10}附录：解Dirac 方程}{189}{section.8.10}
+\contentsline {section}{\numberline {8.11}附录：解Dirac 方程}{189}{section.8.11}
+\contentsline {section}{\numberline {8.12}附录：Dirac 旋量的不同的基}{191}{section.8.12}
+\contentsline {subsection}{\numberline {8.12.1}质量基下 Dirac 方程的解}{193}{subsection.8.12.1}
+\contentsline {chapter}{\numberline {9}量子场论}{197}{chapter.9}
+\contentsline {section}{\numberline {9.1}场论的定义}{198}{section.9.1}
+\contentsline {section}{\numberline {9.2}自旋为0的自由场理论}{199}{section.9.2}
+\contentsline {chapter}{\numberline {10}经典力学}{207}{chapter.10}
+\contentsline {section}{\numberline {10.1}相对论力学}{209}{section.10.1}
+\contentsline {section}{\numberline {10.2}非相对论力学的拉格朗日量}{210}{section.10.2}
+\contentsline {chapter}{\numberline {11}电动力学}{213}{chapter.11}
+\contentsline {section}{\numberline {11.1}齐次Maxwell方程组}{214}{section.11.1}
+\contentsline {section}{\numberline {11.2}Lorentz力}{216}{section.11.2}
+\contentsline {section}{\numberline {11.3}Coulomb 势}{217}{section.11.3}
+\contentsline {part}{\@mypartnumtocformat {V}{Appendix 附录}}{219}{part.5}
 \ttl@stoptoc {default@4}
 \ttl@starttoc {default@5}
-\contentsline {chapter}{\numberline {A}矢量代数}{209}{appendix.A}
-\contentsline {section}{\numberline {A.1}基矢}{210}{section.A.1}
-\contentsline {section}{\numberline {A.2}坐标系变换}{212}{section.A.2}
-\contentsline {section}{\numberline {A.3}矩阵乘法}{213}{section.A.3}
-\contentsline {section}{\numberline {A.4}标量}{214}{section.A.4}
-\contentsline {section}{\numberline {A.5}左手/右手坐标系}{215}{section.A.5}
-\contentsline {chapter}{\numberline {B}微积分}{217}{appendix.B}
-\contentsline {section}{\numberline {B.1}Product Rule}{217}{section.B.1}
-\contentsline {section}{\numberline {B.2}分部积分}{217}{section.B.2}
-\contentsline {section}{\numberline {B.3}Taylor 级数}{218}{section.B.3}
-\contentsline {section}{\numberline {B.4}级数}{220}{section.B.4}
-\contentsline {subsection}{\numberline {B.4.1}几个重要的级数}{220}{subsection.B.4.1}
-\contentsline {subsection}{\numberline {B.4.2}分裂求和}{222}{subsection.B.4.2}
-\contentsline {subsection}{\numberline {B.4.3}Einstein 求和约定}{223}{subsection.B.4.3}
-\contentsline {section}{\numberline {B.5}指标记号}{224}{section.B.5}
-\contentsline {subsection}{\numberline {B.5.1}哑指标}{224}{subsection.B.5.1}
-\contentsline {subsection}{\numberline {B.5.2}带多个指标的对象}{224}{subsection.B.5.2}
-\contentsline {subsection}{\numberline {B.5.3}对称/反对称指标}{225}{subsection.B.5.3}
-\contentsline {subsection}{\numberline {B.5.4}对称和反对称求和}{225}{subsection.B.5.4}
-\contentsline {subsection}{\numberline {B.5.5}两个重要的符号}{226}{subsection.B.5.5}
-\contentsline {chapter}{\numberline {C}线性代数}{229}{appendix.C}
-\contentsline {section}{\numberline {C.1}基本的变换}{229}{section.C.1}
-\contentsline {section}{\numberline {C.2}矩阵指数函数}{229}{section.C.2}
-\contentsline {section}{\numberline {C.3}行列式}{229}{section.C.3}
-\contentsline {section}{\numberline {C.4}本征值与本征向量}{229}{section.C.4}
-\contentsline {section}{\numberline {C.5}对角化}{229}{section.C.5}
-\contentsline {chapter}{\numberline {D}其他数学概念}{231}{appendix.D}
-\contentsline {section}{\numberline {D.1}Fourier 变换}{231}{section.D.1}
-\contentsline {section}{\numberline {D.2}Delta 分布}{231}{section.D.2}
+\contentsline {chapter}{\numberline {A}矢量代数}{221}{appendix.A}
+\contentsline {section}{\numberline {A.1}基矢}{222}{section.A.1}
+\contentsline {section}{\numberline {A.2}坐标系变换}{224}{section.A.2}
+\contentsline {section}{\numberline {A.3}矩阵乘法}{225}{section.A.3}
+\contentsline {section}{\numberline {A.4}标量}{226}{section.A.4}
+\contentsline {section}{\numberline {A.5}左手/右手坐标系}{227}{section.A.5}
+\contentsline {chapter}{\numberline {B}微积分}{229}{appendix.B}
+\contentsline {section}{\numberline {B.1}Product Rule}{229}{section.B.1}
+\contentsline {section}{\numberline {B.2}分部积分}{229}{section.B.2}
+\contentsline {section}{\numberline {B.3}Taylor 级数}{230}{section.B.3}
+\contentsline {section}{\numberline {B.4}级数}{232}{section.B.4}
+\contentsline {subsection}{\numberline {B.4.1}几个重要的级数}{232}{subsection.B.4.1}
+\contentsline {subsection}{\numberline {B.4.2}分裂求和}{234}{subsection.B.4.2}
+\contentsline {subsection}{\numberline {B.4.3}Einstein 求和约定}{235}{subsection.B.4.3}
+\contentsline {section}{\numberline {B.5}指标记号}{236}{section.B.5}
+\contentsline {subsection}{\numberline {B.5.1}哑指标}{236}{subsection.B.5.1}
+\contentsline {subsection}{\numberline {B.5.2}带多个指标的对象}{236}{subsection.B.5.2}
+\contentsline {subsection}{\numberline {B.5.3}对称/反对称指标}{237}{subsection.B.5.3}
+\contentsline {subsection}{\numberline {B.5.4}对称和反对称求和}{237}{subsection.B.5.4}
+\contentsline {subsection}{\numberline {B.5.5}两个重要的符号}{238}{subsection.B.5.5}
+\contentsline {chapter}{\numberline {C}线性代数}{241}{appendix.C}
+\contentsline {section}{\numberline {C.1}基本变换}{241}{section.C.1}
+\contentsline {section}{\numberline {C.2}矩阵指数函数}{242}{section.C.2}
+\contentsline {section}{\numberline {C.3}行列式}{242}{section.C.3}
+\contentsline {section}{\numberline {C.4}本征值与本征向量}{243}{section.C.4}
+\contentsline {section}{\numberline {C.5}对角化}{243}{section.C.5}
+\contentsline {chapter}{\numberline {D}其他数学概念}{245}{appendix.D}
+\contentsline {section}{\numberline {D.1}Fourier 变换}{245}{section.D.1}
+\contentsline {section}{\numberline {D.2}Delta 分布}{245}{section.D.2}
 \contentsfinish 
