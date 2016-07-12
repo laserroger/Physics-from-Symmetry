@@ -347,13 +347,13 @@ f(x) = f(a) + (x-a)f'(a)+\int_a^x\rd t\, (x-t)f''(t)\text{。}
 对最后一项再次使用分部积分，现在是%
 \mpar{注意$v='(x-t)$对$t$的积分会出一个符号：$v=-(x-t)^2+d$积分常数$d$取作零。}
 $v'=(x-t)$和$u=f''(t)$：
-\begin{equation}
+\begin{equation*}
 \rightarrow \int_a^x \rd t\, \underbrace{(x-t)}_{\mathclap{=v'}}\underbrace{f''(t)}_{=u} = \left.\underbrace{-\frac{1}{2}(x-t)^2}_{=v} \underbrace{f''(t)}_{=u}\right|_a^x - \int_a^x \rd t\, \underbrace{\left(-\frac{1}{2}(x-t)^2\right)}_{=v}\underbrace{f'''(t)}_{=u'}
-\end{equation}
+\end{equation*}
 边界项同样简单的是零
-\begin{equation}
+\begin{equation*}
 \left.-\frac{1}{2}(x-t)^2f''(t)\right|_a^x = -\frac{1}{2}\underbrace{(x-x)^2}_{=0}f''(x) + \frac{1}{2}(x-a)^2f''(a)\text{。}
-\end{equation}
+\end{equation*}
 得到公式
 \begin{equation}
 f(x)=f(a)+(x-a)f'(a)+\frac{1}{2}(x-a)^2f''(a)+\int_a^x \rd t\, \frac{1}{2}(x-t)^2 f'''(t)\text{。}
@@ -365,26 +365,247 @@ f(x) =& \sum_{n=0}^\infty\frac{f^{(n)}(a)(x-a)^n}{n!} \\
  =& \frac{f^{(0)}(a)(x-a)}{0!} + \frac{f^(1)(a)(x-a)^1}{1!} + \frac{f^{(2)}(a)(x-a)^2}{2!} \\
  =& \frac{f^{(3)}(a)(x-a)^3}{3!}+\dots \text{，}
 \end{aligned}
+\label{equ.appendix.B.12}
 \end{equation}
 其中$f^{(n)}$代表$f$的$n$阶导数，例如$f^{(2)}=f''$，$n!$代表$n$的阶乘，即$n!=1\cdot 2\cdot 3\dots n$。比如对$n=5$有$5!=5\cdot 4\cdot 3\cdot 2\cdot 1=120$，$2!=2\cdot 1=2$，以及定义$0!=1$。级数是下一节的主题。
 \section[级数]{Series 级数}\label{appendix.B.4}
+上一节中我们碰巧发现了含有无穷求和的一个重要等式。在这一节里将介绍关于求和的一些小技巧和几个重要级数。
 \subsection[几个重要的级数]{Important Series 几个重要的级数}\label{appendix.B.4.1}
-\subsection[分裂求和]{Splitting Sums 分裂求和}\label{appendix.B.4.2}
-\subsection[Einstein 求和约定]{Einstein’s Sum Convention\quad Einstein 求和约定}\label{appendix.B.4.3}
+从上一节中我们学到了任意无穷可微的函数都可以写成级数的形式%
+\footnote{译注：一个典型的反例是$f(x)=\exp(-1/x^2)$，它在原点处（补充定义后）任意阶导数都为零。}%
+。让我们从最重要的例子开始：指数函数$\ue^{x}$。它的泰勒展开式可以直接写出：
+\begin{equation}
+\ue^x  = \sum\limits_{n=0}^{\infty} \frac{x^n}{n!} \text{，}
+\end{equation}
+用到了指数函数的%
+\footnote{译注：某一种}
+定义，导函数等于自身：$(\ue^x)'=\ue^x$。将$a=0$带入 Taylor 级数，利用$\ue^0=1$，便得到指数函数的 Taylor 级数（\ref{equ.appendix.B.12}式）：
+\begin{equation}
+\ue^x = \sum\limits_{n=0}^\infty \frac{\ue^0(x-0)^n}{n!} = \sum\limits_{n=0}^\infty \frac{x^n}{n!}
+\end{equation}
 
+这个级数也可以作为$\ue^x$的定义式。
+
+另外两个无穷可微的重要函数是$\sin(x)$和$\cos(x)$。利用$(\sin(x))'=\cos(x)$，$(\cos(x))'=-\sin(x)$，$\cos(0)=1$以及$\sin(0)=0$，可以推得它们的泰勒级数。
+\begin{equation*}
+\sin(x) = \sum\limits_{n=0}^\infty \frac{\sin^{(n)}(0)(x-0)^n}{n!}\text{。}
+\end{equation*}
+由于$\sin(0)=0$，故全部偶数$n$项都为零，由此可以将求和分开：注意到
+\begin{equation}
+\begin{aligned}
+\sum\limits_{n=0}^{\intfy}n &= \sum\limits_{n=0}^\infty (2n+1) + \sum\limits_{n=0}^\infty (2n) \\
+1+2+3+4+5+6\dots &= 1+3+5\dots + 2+4+6+\dots
+\end{aligned}
+\end{equation}
+将$\sin(x)$的求和分裂开来
+\begin{equation}
+\begin{aligned}
+\sin(x) &= \sum\limits_{n=0}^\infty \frac{\sin^{(2n+1)}(0)(x-0)^{2n+1}}{(2n+1)!}+ \underbrace{\sum\limits_{n=0}^\infty \frac{\sin^{(2n)}(0)(x-0)^{2n}}{(2n)!}}_{=0} \\
+ &= \sum\limits_{n=0}^\infty \frac{\sin^{(2n+1)}(0)(x-0)^{2n+1}}{(2n+1)!}\text{。}
+\end{aligned}
+\label{equ.appendix.B.16}
+\end{equation}
+$\sin(x)$的全部偶数阶导数，$\sin^{(2n)}$也是$\sin(x)$（除去可能有的负号），由于$\sin(0)=0$所以说第二项为零。$\sin(x)$全部奇数阶导数是$\cos(x)$，除去可能的负号。我们有
+\begin{equation}
+\begin{aligned}
+\sin(x)^{(1)}&=\cos(x) \\
+\sin(x)^{(2)}&=\cos'(x)=-\sin(x) \\
+\sin(x)^{(3)}&=-\sin'(x)=-\cos(x) \\
+\sin(x)^{(4)}&=-\cos'(x)=\sin(x) \\
+\sin(x)^{(5)}&=\sin'(x)=\cos(x) \\
+\end{aligned}
+\end{equation}
+规律是$\sin^{(2n+1)}(x)=(-1)^n\cos(x)$，你可以将任意整数$n$带入验证%
+\mpar{$\sin(x)^{(1)}=\sin(x)^{(2\cdot 0+1)}=(-1)^0\cos(x)=\cos(x),
+\sin(x)^{(3)}=\sin(x)^{(2\cdot 1+1)}=(-1)^1\cos(x)=-\cos(x)$}%
+。由此将\ref{equ.appendix.B.16}式改写作
+\begin{equation}
+\begin{aligned}
+\sin(x) &= \sum\limits_{n=0}^{\infty}\frac{\sin^{(2n+1)}(0)(x-0)^{2n+1}}{(2n+1)!} \\
+&= \sum\limits_{n=0}^{\infty}\frac{(-1)^n\cos(0)(x-0)^{2n+1}}{(2n+1)!} \\
+&\underbrace{=}_{\cos(0)=1} \sum\limits_{n=0}^\infty \frac{(-1)^n(x)^{2n+1}}{(2n+1)!}
+\end{aligned}
+\label{equ.appendix.B.18}
+\end{equation}
+这就是$\sin(x)$的 Taylor 级数，也可以作为$\sin(x)$的定义式。类似的，我们可以得到
+\begin{equation}
+\cos(x)= \sum\limits_{n=0}^{\infty}\frac{(-1)^n(x)^{2n}}{(2n)!}\text{，}
+\label{equ.appendix.B.19}
+\end{equation}
+其奇数阶导数都正比于$\sin(0)=0$。
+
+\subsection[分裂求和]{Splitting Sums 分裂求和}\label{appendix.B.4.2}
+上一节中我们提到了一个有用的计算技巧。那儿我们用了下面这个例子
+\begin{equation}
+\begin{aligned}
+\sum\limits_{n=0}^{\intfy}n &= \sum\limits_{n=0}^\infty (2n+1) + \sum\limits_{n=0}^\infty (2n) \\
+1+2+3+4+5+6\dots &= 1+3+5\dots + 2+4+6+\dots
+\end{aligned}
+\end{equation}
+来表明我们可以将任何求和分解成偶数和奇数项。$2n$总是偶数，而$2n+1$总是奇数。在上一节中我们就看到了这很有用，但现在可以再看看另一个例子。如果将带有复变量$\ri x$的指数函数的级数分裂开来会怎样？
+\begin{equation}
+\begin{aligned}
+\ue^{\ri x}= &\sum\limits_{n=0}^\infty \frac{(\ri x)^n}{n!}\\
+ =& \sum\limits_{n=0}^\infty \frac{(\ri x)^{2n}}{(2n)!}+\sum\limits_{n=0}^\infty \frac{(\ri x)^{2n+1}}{(2n+1)!}
+\end{aligned}
+\end{equation}
+用$(\ri x)^{2n}=\ri^{2n}x^{2n}$和$\ri^{2n}=(\ri^2)^n=(-1)^n$来写开。另外也需要$\ri^{2n+1}=\ri\cdot \ri^{2n}=\ri(-1)^n$。由此有
+\begin{equation}
+\begin{aligned}
+\ue^{\ri x}= &\sum\limits_{n=0}^\infty \frac{(\ri x)^n}{n!}\\
+ =& \sum\limits_{n=0}^\infty \frac{(-1)^n(x)^{2n}}{(2n)!}+\ri\sum\limits_{n=0}^\infty \frac{(-1)^n(x)^{2n+1}}{(2n+1)!}\\
+ =& \underbrace{\sum\limits_{n=0}^\infty \frac{(-1)^n(x)^{2n}}{(2n)!}}_{=\cos(x)\text{ 见\ref{equ.appendix.B.19}式}}+\ri\underbrace{\sum\limits_{n=0}^\infty \frac{(-1)^n(x)^{2n+1}}{(2n+1)!}}_{=\sin(x)\text{ 见\ref{equ.appendix.B.18}式}}\\
+ =& \cos(x)+\ri\sin(x)
+\end{aligned}
+\end{equation}
+
+\subsection[Einstein 求和约定]{Einstein’s Sum Convention\quad Einstein 求和约定}\label{appendix.B.4.3}
+物理中经常有求和，老是写大大的求和号$\Sigma$是很烦人的一件事。所以说某个聪明人引入了一个约定，叫 Einstein 求和约定。根据这个约定每当一个指标在某些项中重复出现两次，如同上面的$n$，那么就意味着一个隐藏的求和号。即
+\begin{equation}
+a_na_n \equiv \sum\limits_n a_nb_n \text{。}
+\end{equation}
+其他形式的例子
+\begin{equation}
+a_nb_nc_m \equiv \sum\limits_n a_nb_nc_m \text{。}
+\end{equation}
+\begin{equation}
+a_mb_nc_m \equiv \sum\limits_m a_mb_nc_m \text{。}
+\end{equation}
+但是
+\begin{equation}
+a_nb_m \ne \sum\limits_n a_nb_m\text{，}
+\end{equation}
+因为一般而言$n\ne m$。没有同伴的指标叫做{\bf 自由指标(free index)}，而有同伴要求和的叫做{\bf 哑指标(dummy index)}。具体原因会在下一节中解释。
+
+在$a_nb_nc_m \equiv \sum\limits_n a_nb_nc_m$一例中，$n$是哑指标，而$m$是自由指标。对于$a_mb_nc_m \equiv \sum\limits_m a_mb_nc_m$，指标$m$是哑的而$n$是自由的。
 \section[指标记号]{Index Notation 指标记号}\label{appendix.B.5}
 \subsection[哑指标]{Dummy Indices 哑指标}\label{appendix.B.5.1}
+一定要注意到的一点是，有伴的指标事实上什么用处都没有。将$n$重命名为$k$，什么事都不改变%
+\mpar{当然我们不能将一个指标改成另一{\bf 类}指标。例如，我们可以将改$i\rightarrow j$但不能改$i\rightarrow \mu$，因为$\mu$这样的希腊字母指标总是从$0$加到$3$，而$i$这样的罗马数字指标是从$1$加到$3$。}%
+，即$n$已经被缩并掉了
+\begin{equation}
+a_nb_nc_m = a_kb_kc_m \equiv \sum\limtis_n a_nb_nc_m \equiv \sum\limits_k a_kb_kc_m \text{。}
+\end{equation}
+另一方面，自由指标却不能自由的被重命名。将$m$改写作$q$会造成区别，因为等式另一端也必须有相同的自由指标。这就是说当我们单独考察类似于$a_nb_nc_m$这样的项时，总需要将其他带有自由指标$m$的项拉进来，指标要改名就得一起改名。我们来看一个例子
+\begin{equation}
+F_i = \epsilon_{ijk}a_jb_k\text{。}
+\end{equation}
+这里除了一个新东西$\epsilon_{ijk}$，带着多个指标，我们暂且不去管它，待会儿会仔细讨论。这里我们能将$\epsilon_{ijk}a_jb_k$的指标$j,k$随意重命名，因为它们被缩并掉了。例如$j\rightarrow u$，$k\rightarrow z$，这样得到$\epsilon_{iuz}a_ub_z$和之前的完全是一样的。另一头，$i$就不是一个哑指标了，我们不能将其重命名$i\rightarrow m$：$\epsilon_{muz}a_ub_z$，因为这样的话上式就会变成
+\begin{equation}
+F_i = \epsilon_{muz}a_ub_z \text{。}
+\end{equation}
+再看之前那句话这就显得有点迂腐了，因为很明显得将$F_i$里的$i$改掉来得到一个有意义的等式。但一般来说我们都会单独的讨论一个对象，那就得清楚我们不能去改变哪些东西。
 \subsection[带多个指标的对象]{Objects with more than One Index 带多个指标的对象}\label{appendix.B.5.2}
-\subsection[对称/反对称指标]{Symmetric and Antisymmetric Indices 对称/反对称指标}\label{appendix.B.5.3}
-\subsection[对称和反对称求和]{Antisymmetric $\times$ Symmetric Sums 对称和反对称求和}\label{appendix.B.5.4}
-\subsection[两个重要的符号]{Two Important Symbols 两个重要的符号}\label{appendix.B.5.5}
+现在可以谈谈那些有多个指标的对象。带两个指标的自然就是矩阵了。第一个指标告诉我们变量是在哪一行而第二个指标代表哪一列。例如
+\begin{equation}
+M_{ij} \equiv \begin{pmatrix}
+M_{11} & M_{12} \\ M_{21} & M_{22}
+\end{pmatrix}\text{。}
+\end{equation}
+对于$M_{12}$就是在第一行第二列。
 
+利用指标可以简单的写出矩阵乘法。两个矩阵的乘积是
+\begin{equation}
+MN = (MN)_{ij} = M_{ik}N_{kj}\text{。}
+\end{equation}
+
+在左边是矩阵乘积$(MN)$的$i$行$j$列的元素，可以由$M$的第$i$行和$N$的第$j$列相乘得到。指标$k$出现了两次，代表一个隐含的求和。有时我们会给一个对象两个或更多的指标（张量）。在这本书中，两个一般就够用了，唯一的例外将在下面几节中讨论到。
+
+\subsection[对称/反对称指标]{Symmetric and Antisymmetric Indices 对称/反对称指标}\label{appendix.B.5.3}
+一个矩阵被称为是对称的，若$M_{ij}=M_{ji}$。对于二维情形来说就是$M_{12}=M_{21}$，一个对称矩阵的例子如下
+\begin{equation}
+\begin{pmatrix}
+9 & 3 \\ 3 & 17 \\
+\end{pmatrix}
+\end{equation}
+一个矩阵被称为是{\bf 全反对称的(totally antisymmetric)}，若$M_{ij}=M_{ji}$对于{\bf 全体}$i,j$成立。一个示例是
+\begin{equation}
+\begin{pamtrix}
+0 & 3 \\ -3 & 0
+\end{pamtrix}
+\end{equation}
+注意对角元都是零，这是因为$M_{11}=-M_{11}$仅当$M_{11}=0$时成立，对于$M_{22}$也一样。
+\subsection[对称和反对称求和]{Antisymmetric $\times$ Symmetric Sums 对称和反对称求和}\label{appendix.B.5.4}
+一个重要的事实：当我们将带有完全相同的指标的对称和反对称的对象乘起来求和时，结果为零：
+\begin{equation}
+\sum\limits_{ij}a_{ij}b_{ij} = 0
+\end{equation}
+若有$a_{ij}=-a_{ji}$和$b_{ij}=b_{ji}$对于全部$i,j$成立。这个结论很容易看出来：改写
+\begin{equation}
+\sum\limits_{ij}a_{ij}b_{ij} = \frac{1}{2}\left(\sum\limits_{ij}a_{ij}b_{ij}+\sum\limits_{ij}a_{ij}b_{ij}\right)
+\end{equation}
+正如之前解释过的，我们能自由的将哑指标重命名$i\rightarrow j$及$j\rightarrow i$，仅对第二项作用
+\begin{equation}
+\rightarrow \sum\limits_{ij}a_{ij}b_{ij} = \frac{1}{2}\left(\sum\limits_{ij}a_{ij}b_{ij}+\sum\limits_{ij}a_{ji}b_{ji}\right)
+\end{equation}
+然后利用$b_{ij}$的对称性和$a_{ij}$的反对称性，来翻转第二项中的指标，得到%
+\mpar{如果你觉得这是一个无聊的把戏，算几个真实的例子来验证其正确性。}
+\begin{equation}
+\begin{aligned}
+\rightarrow \sum\limits_{ij}a_{ij}b_{ij} &= \frac{1}{2}\left(\sum\limits_{ij}a_{ij}b_{ij}+\sum\limits_{ij}\underbrace{a_{ji}}_{=-a_{ij}}\underbrace{b_{ji}}_{=b_{ij}}\right)\\
+ &= \frac{1}{2}\left(\sum\limits_{ij}a_{ij}b_{ij}-\sum\limits_{ij}a_{ij}b_{ij}\right) = 0
+\end{aligned}
+\end{equation}
+\subsection[两个重要的符号]{Two Important Symbols 两个重要的符号}\label{appendix.B.5.5}
+第一个是单位矩阵。二维情形下为
+\begin{equation}
+1= \begin{pmatrix}
+1 & 0 \\ 0 & 1
+\end{pmatrix}\text{。}
+\end{equation}
+单位矩阵用指标记号来标记时称 Kronecker 符号$\delta_{ij}$，对任意维度都可由下式定义
+\begin{equation}
+\delta_{ij} = \begin{cases}
+1 & i=j \\
+0 & i\ne j
+\end{cases}
+\end{equation}
+Kronecker符号是对称的，有$\delta_{ij}=\delta_{ji}$。
+
+第二个是 Levi-Civita 符号$\epsilon_{ijk}$，在二维下由下式定义
+\begin{equation}
+\epsilon_{ij} = \begin{cases}
+1 & (i,j)={(1,2)} \\
+0 & i=j \\
+-1 & (i,j)={(2,1)}
+\end{cases}
+\end{equation}
+矩阵形式写作
+\begin{equation}
+\epsilon_{ij} = \begin{pmatrix}
+0 & 1 \\ -1 & 0
+\end{pmatrix}
+\end{equation}
+
+三维下的 Levi-Civita 符号是
+\begin{equation}
+\epsilon_{ijk} = \begin{cases}
+1 & (i,j,k)={(1,2,3),(2,3,1),(3,1,2)} \\
+0 & i=j\text{或}j=k\text{或}j=i \\
+-1 & (i,j,k)={(1,3,2),(3,2,1),(2,1,3)}
+\end{cases}
+\end{equation}
+对于四维
+\begin{equation}
+\epsilon_{ijkl} = \begin{cases}
+1 & \text{若}(i,j,k,l)\text{是}{(1,2,3,4)}\text{的偶置换} \\
+-1 & \text{若}(i,j,k,l)\text{是}{(1,2,3,4)}\text{的奇置换}\\
+0 & \text{其他}
+\end{cases}
+\end{equation}
+例如$(1,2,4,3)$和$(2,1,4,3)$就分别是$(1,2,3,4)$的奇置换（换了一个）和偶置换（换了两个）。
+
+Levi-Civita 符号是全反对称的：根据定义，当置换两个指标时，总是多一个负号：
+
+$\epsilon_{ijk}=-\epsilon_{jik}$，$\epsilon_{ijk}=-\epsilon_{ikj}$等。或者二维下$\epsilon_{ij}=\epsilon_{ji}$。
+
+\chapter[线性代数]{Linear Algebra 线性代数}
 \section[基本变换]{Basic Transformations 基本变换}
 \label{appendix.C.1}
 {\bf 矩阵的复共轭}定义为：
 \begin{equation}
 \label{equc.1}
-	M^*_{ij} = 
+	M^*_{ij} =
 		\begin{pmatrix}
 			M^*_{11} & M^*_{12} \\
 			M^*_{21} & M^*_{22}
@@ -397,13 +618,13 @@ f(x) =& \sum_{n=0}^\infty\frac{f^{(n)}(a)(x-a)^n}{n!} \\
 {\bf 矩阵的转置}定义为$M^T_{ij} = M_{ji}$，用矩阵形式表示为：
 \begin{equation}
 \label{equC.2}
-	M_{ij} = 
+	M_{ij} =
 		\begin{pmatrix}
 			M_{11} & M_{12} \\
 			M_{21} & M_{22}
 		\end{pmatrix}
-	\ \to \ 
-	M^T_{ij} = 
+	\ \to \
+	M^T_{ij} =
 		\begin{pmatrix}
 			M_{11} & M_{21} \\
 			M_{12} & M_{22}
@@ -448,7 +669,7 @@ $n \times n$矩阵的行列式的定义类似：
 \end{equation}
 例：$2 \times 2$矩阵的行列式
 \[
-	\det (A) = \det 
+	\det (A) = \det
 		\begin{pmatrix}
 			3 & 1 \\
 			5 & 2
