@@ -32,15 +32,15 @@ $\mathcal{U}(1)$对称性出发来得到拉格朗日量
 \footnote{译注：应该为“只有这样才是且仅是”。}%
 。利用 Noether 定理，我们能从\uo 对称性中导出一个新的守恒量，它一般称为{\bf 电荷(electric charge)}。
 
-接下来是$\mathcal{SU}(2)$对称性。引入一个二分量的{\bf 双重态(doublet)}
+接下来是$\mathcal{SU}(2)$对称性。引入一个二分量的{\bf 二重态(doublet)}
 \[
 \bar\Psi : = \begin{pmatrix}
 \bar\psi_1 & \bar\psi_2
 \end{pmatrix}\text{，}
 \]
-这样一个双重态场中包含了两个\spint 场，例如，电子和电子中微子场在$\mathcal{SU}(2)$的“旋转”变换下相互转换。
+这样一个二重态场中包含了两个\spint 场，例如，电子和电子中微子场在$\mathcal{SU}(2)$的“旋转”变换下相互转换。
 
-我们可以使用双重态记号写下局域$\mathcal{SU}(2)$不变的拉格朗日量%
+我们可以使用二重态记号写下局域$\mathcal{SU}(2)$不变的拉格朗日量%
 \mpar{$W_j^{\mu\nu}$这玩意会通过三个$W_j^\mu$定义，就像从\uo 规范场$A^\mu$定义$F_{\mu\nu}$一样。}
 \[
 {\mathscr L} = \ri\bar\Psi\gamma_\mu\partial^\mu\Psi + \bar\Psi\gamma_\mu\sigma_j W_j^\mu\Psi - \frac{1}{2}(W_{\mu\nu})_i(W^{\mu\nu})_i \text{，}
@@ -84,7 +84,7 @@ q_3
 “作为时空对称性的结果，特别是在局域尺度变换下的对称性”。将其称作规范对称性是有原因的，因为它意味着，例如，我们能任意改变用于定义长度标准的铂金尺（用来规范\footnote{译注：没有规矩，不成方圆。线长是某个线性空间中的某种范数，将改变线长的定义的变换，称作规范变换，应当是一个合理的称呼。关于 gauge 这个词的命名以及为何翻译成“规范”，可以参见 曹则贤 . Norm and Gauge[J]. 物理, 2013, 42(11): 815-819. }实验中测长的仪器），而不改变物理。这个尝试没有成功，但稍晚些时候，Weyl 找到了能正确导出电磁学的对称性，并仍用这个词来命名。
 
 \subsection{\spint 自由场的内禀对称性}\label{sec7.1.1}
-再来看一眼用来导出自由\spint 理论的拉格朗日量（\ref{equ6.16}式）
+再来看一眼用来导出自由\spint 理论的拉格朗日量（\ref{eq:6.16}式）
 \begin{equation}
 \label{equ7.1}
 {\mathscr L}_\text{Dirac} = -m\bar\Psi\Psi +\ri\bar\Psi\gamma_\mu\partial^\mu\Psi = \bar\Psi(\ri\gamma_\mu\partial^\mu-m)\Psi
@@ -184,7 +184,7 @@ A_\mu \rightarrow A_\mu' = A_\mu+a_\mu(x)
 总结一下咱现在都干了啥：
 \begin{itemize}
 \item 我们发现\spint 自由场的拉格朗日量有一个全局的内禀对称性$\Psi\rightarrow\Psi' = \ue^{\ri a}\Psi$。或者这样说：\spint 自由场的拉格朗日量在全局\uo 变换下不变。
-\item 这个对称性不是局域的（尽管它应当是），因为在$a=a(x)$的情况下，我们在拉格朗日量中得到如下形式的额外项（\ref{equ7.5}式）
+\item 这个对称性不是局域的（尽管它应当是），因为在$a=a(x)$的情况下，我们在拉格朗日量中得到如下形式的额外项（\ref{eq:7.5}式）
 \begin{equation}
 -(\partial_\mu a(x))\bar\Psi\gamma^\mu\Psi \text{。}
 \label{equ7.12}
@@ -228,7 +228,7 @@ $g$。这样拉格朗日量
 &\underbrace{=}_{\mathclap{\text{见\ref{equ7.5}式}}}  -m\bar\Psi\Psi +\ri\bar\Psi\gamma_\mu\partial^\mu\Psi - g (\partial_\mu a(x))\bar\Psi\gamma^\mu\Psi + g A_\mu'\bar\Psi'\gamma^\mu\Psi' \nonumber \\
 &= -m\bar\Psi\Psi +\ri\bar\Psi\gamma_\mu\partial^\mu\Psi - g (\partial_\mu a(x))\bar\Psi\gamma^\mu\Psi \nonumber \\
 &\quad + g (A_\mu+\partial_\mu a(x))(\ue^{-\ri ga(x)}\bar\Psi)\gamma^\mu(\ue^{\ri ga(x)}\Psi) \nonumber \\
-&= -m\bar\Psi\Psi +\ri\bar\Psi\gamma_\mu\partial^\mu\Psi - \cancel{g (\partial_\mu a(x))\bar\Psi\gamma^\mu\Psi} \nonumber \\
+&= -m\bar\Psi\Psi +\ri\bar\Psi\gamma_\mu\partial^\mu\Psi - \cancel{g (\partial_\mu a(x))\bar\Psi\gamma^\mu\Psi} \nonumber \\ 
 &\quad + g A_\mu\bar\Psi\gamma^\mu\Psi + \cancel{g (\partial_\mu a(x))\bar\Psi\gamma^\mu\Psi}\nonumber \\
 \label{equ7.16}
 &= -m\bar\Psi\Psi +\ri\bar\Psi\gamma_\mu\partial^\mu\Psi + g A_\mu\bar\Psi\gamma^\mu\Psi = {\mathscr L}_\text{Dirac+额外项} \text{。}
@@ -339,14 +339,14 @@ D_\mu \equiv \ri \partial_\mu + gA_\mu\text{，}
 \label{equ7.31}
 & \rightarrow (\underbrace{\gamma_2\gamma_\mu^*\gamma_2^{-1}}_{=-\gamma_\mu}(-\ri\partial^\mu-gA^\mu) - m\gamma_2\gamma_2^{-1})\gamma_2\Psi^* = 0 \text{。}\\
 \label{equ7.32}
-& \underbrace{\rightarrow}_{\mathclap{\text{方程乘上}\ri}} \left(-\gamma_\mu(-\ri\partial^\mu-gA^\mu) - m\right)\underbrace{\ri\gamma_2\Psi^*}_{\mathclap{=\Psi^C\text{见\ref{equ7.25}式}}} = 0 \text{。}\\
+& \underbrace{\rightarrow}_{\mathclap{\text{方程乘上}\ri}} \left(-\gamma_\mu(-\ri\partial^\mu-gA^\mu) - m\right)\underbrace{\ri\gamma_2\Psi^*}_{\mathclap{=\Psi^C\text{见\ref{eq:7.25}式}}} = 0 \text{。}\\
 \label{equ7.33}
 & \rightarrow \left(\gamma_\mu(\ri\partial^\mu + gA^\mu) - m\right)\Psi^C = 0 \text{，}
 \end{align}
 这和$\Psi$的运动方程只在耦合常数上差了个负号$g\rightarrow -g$。这与其名字，电荷共轭，相符%
 \mpar{注意$\Psi^C\ne \bar\Psi$。$\Psi^C=\ri\gamma_2\Psi^*$而$\bar\Psi=\Psi^\dag\gamma_0=(\Psi^*)^T\gamma_0$。电荷共轭变换让我们能用反粒子来解释一些东西，稍后便会详细讨论。}。
 
-接下来，我们转向上一节中的第三个式子，\ref{equ7.22}式，称为{\bf 有电流情况下的非齐次麦克斯韦方程(inhomogeneous Maxwell equation in the presence of an electric current)}。为了讲清楚这个名字，我们又需要 Noether 定理了。
+接下来，我们转向上一节中的第三个式子，\ref{eq:7.22}式，称为{\bf 有电流情况下的非齐次麦克斯韦方程(inhomogeneous Maxwell equation in the presence of an electric current)}。为了讲清楚这个名字，我们又需要 Noether 定理了。
 \subsection{内禀${\mathcal U}(1)$对称性的 Noether 定理}\label{sec7.1.6}
 在\ref{sec4.5.5}节中我们得知 Noether 定理将所有内禀对称性和一个守恒量联系了起来。和我们刚才发现的\uo 对称性相联系的守恒量是什么？Noether 定理告诉我们，从如下形式的变换
 \[
@@ -474,7 +474,7 @@ Lorentz 对称性表明拉格朗日量中的相互作用项一定具有形式
 \label{equ7.44}
 {\mathscr L}_{\text{D}_1+\text{D}_2} = \ri\bar\psi_1\gamma_\mu\partial^\mu\psi_1+\ri\bar\psi_2\gamma_\mu\partial^\mu\psi_2
 \end{equation}
-通过新定义{\bf 双重态(doublet)}$\Psi$
+通过新定义{\bf 二重态(doublet)}$\Psi$
 \[
 \begin{aligned}
 \Psi &:= \begin{pmatrix}
@@ -514,7 +514,7 @@ m_1 & 0 \\ 0 & m_2
 不幸的是，这一项并不是\sutw 不变的，即$
 {\mathscr L}'_{\text{D}_1+\text{D}_2} = -\bar\Psi' m\Psi'= \ri\bar\Psi\underbrace{\ue^{-\ri a_i \frac{\sigma_i}{2}}m\ue^{\ri a_i \frac{\sigma_i}{2}}}_{\ne m}\Psi\text{。}
 $
-当质量相等$m_1=m_2$时，它自然是不变的，但是等会能看到我们可以在不违背对称性的情况下包含任意大小的质量。实验告诉我们双重态的两个场并没有产生相同质量的粒子，即$m_1\ne m_2$。稍后会有更加详细的讨论。}\footnote{\textcolor{red}{译注：原文边注公式缺一 prime ，已更正}}
+当质量相等$m_1=m_2$时，它自然是不变的，但是等会能看到我们可以在不违背对称性的情况下包含任意大小的质量。实验告诉我们二重态的两个场并没有产生相同质量的粒子，即$m_1\ne m_2$。稍后会有更加详细的讨论。}\footnote{\textcolor{red}{译注：原文边注公式缺一 prime ，已更正}}
 \begin{equation}
 \label{equ7.48}
 \begin{aligned}
@@ -523,14 +523,14 @@ $
 &=\ri\bar\Psi\gamma_\mu\partial^\mu\Psi = {\mathscr L}_{\text{D}_1+\text{D}_2}\text{，}\quad \checkmark
 \end{aligned}
 \end{equation}
-最后一行源于我们的变换$\ue^{\ri a_i\frac{\sigma_i}{2}}$作用在我们的新定义的二分量对象$\Psi$上，而$\gamma_\mu$作用在双重态里面的对象上，即 Dirac 旋量%
-\footnote{译注：用线性代数的话来讲，两个变换分别作用在两个子空间上，而这两个子空间的直积才是双重态所处的线性空间。}%
+最后一行源于我们的变换$\ue^{\ri a_i\frac{\sigma_i}{2}}$作用在我们的新定义的二分量对象$\Psi$上，而$\gamma_\mu$作用在二重态里面的对象上，即 Dirac 旋量%
+\footnote{译注：用线性代数的话来讲，两个变换分别作用在两个子空间上，而这两个子空间的直积才是二重态所处的线性空间。}%
 。我们可以用指标来将其写清楚\footnote{译注：指标真尼玛多。}
 \[
 \left[\left(\ue^{-\ri a_i\frac{\sigma_i}{2}}\right)_{ab}\delta_{\alpha\beta}\right]\left[\delta_{bc}\gamma_\mu^{\beta\delta}\right]\left[\left(\ue^{\ri a_i\frac{\sigma_i}{2}}\right)_{cd}\delta_{\delta\epsilon}\right]=\left[\delta_{ad}\gamma_\mu^{\alpha\epsilon}\right]
 \]
 
-这个对称性也该作为局域对称性。\sutw 变换将双重态的两个分量混合起来。稍后我们将会将这两个场称作电子和电子中微子场。对称性告诉我们，把哪个叫电子哪个叫电子中微子其实无所谓，因为用了\sutw 变换，想怎么换就怎么换。如果这仅仅是一个全局变换，那么当我们确定一个选择%
+这个对称性也该作为局域对称性。\sutw 变换将二重态的两个分量混合起来。稍后我们将会将这两个场称作电子和电子中微子场。对称性告诉我们，把哪个叫电子哪个叫电子中微子其实无所谓，因为用了\sutw 变换，想怎么换就怎么换。如果这仅仅是一个全局变换，那么当我们确定一个选择%
 \mpar{这叫{\bf 规范选取(choosing a gauge)}。}%
 ，即哪个叫电子哪个叫电子中微子后，这个选择将瞬间适用到整个宇宙上去。故我们得研究局域变换。我们再一次发现它不是的，但正如局域\uo 对称性的情形一样，我们将尽最大努力让拉格朗日量具有局域\sutw 不变性。
 
@@ -727,7 +727,7 @@ B^{\mu\nu}:=\partial^\mu B^\nu-\partial^\nu B^\mu
 \[
 (W_{\mu\nu})_i = \partial_\mu(W_\nu)_i - \partial_\nu(W_\mu)_i + \epsilon_{ijk}(W_\mu)_j(W_\nu)_k
 \]
-以及双重态
+以及二重态
 \[
 \Psi := \begin{pmatrix}
 \psi_1 \\ \psi_2
@@ -770,7 +770,7 @@ B_\mu &\rightarrow B_\mu' = B_\mu+\partial_\mu a(x) \\
 \phi(x) &\rightarrow \phi'(x) = \ue^{\ri a(x)}\phi(x) \text{。}
 \end{align}
 
-用我们在上一节中对\spint 场导出局域\sutw 不变拉格朗日量同样的办法，我们能对零自旋场的双重态%
+用我们在上一节中对\spint 场导出局域\sutw 不变拉格朗日量同样的办法，我们能对零自旋场的二重态%
 \mpar{\(\Phi = \begin{pmatrix} \phi_1 \\ \phi_2 \end{pmatrix}\)}%
 写出一个局域\sutw 不变的拉格朗日量
 \begin{equation}
@@ -834,7 +834,7 @@ V(\Phi) &= -\rho^2 \Phi^\dag\Phi + \lambda(\Phi^\dag\Phi)^2\\
 	\label{fig:7.2}
 }
 
-从\ref{equ7.69}中我们可知对于双重态，两个分量都需要作出这种选择。则对于双重态其极小点为
+从\ref{equ7.69}中我们可知对于二重态，两个分量都需要作出这种选择。则对于二重态其极小点为
 \begin{equation}
 \label{equ7.76}
 \Phi_{\min} = \begin{pmatrix}
@@ -865,25 +865,25 @@ V(\Phi) &= -\rho^2 \Phi^\dag\Phi + \lambda(\Phi^\dag\Phi)^2\\
 \Phi = \ue^{\ri \theta_i \frac{\sigma_i}{2}} \begin{pmatrix}
 0 \\ \frac{v+h}{\sqrt{2}}
 \end{pmatrix}\text{，}
-\label{equ7.79}
+\label{eq:7.79}
 \end{equation}
 这是由于考虑将指数函数展开成级数，代入泡利矩阵$\sigma_i$矩阵的具体形式，在一阶意义上
 \begin{align}
-	\ue^{\ri \theta_i \frac{\sigma_i}{2}}
+	\ue^{\ri \theta_i \frac{\sigma_i}{2}} 
 			\begin{pmatrix}
 				0 \\ \frac{v+h}{\sqrt{2}}
-			\end{pmatrix}
-		&\approx (1+\ri \theta_i \frac{\sigma_i}{2})
+			\end{pmatrix} 
+		&\approx (1+\ri \theta_i \frac{\sigma_i}{2}) 
 			\begin{pmatrix}
 				0 \\ \frac{v+h}{\sqrt{2}}
-			\end{pmatrix}
+			\end{pmatrix} 
 	\nonumber \\
 	&= \big(1 + \ri \theta_1 \frac{\sigma_1}{2}+\ri \theta_2 \frac{\sigma_2}{2}+\ri \theta_3 \frac{\sigma_3}{2} \big)
 			\begin{pmatrix}
 				0 \\ \frac{v+h}{\sqrt{2}}
-			\end{pmatrix}
+			\end{pmatrix} 
 	\nonumber \\
-	&=
+	&= 
 		\begin{pmatrix}
 			1 + \ri\frac{1}{2}\theta_3 & \frac{1}{2}\theta_1 - \ri \frac{1}{2}\theta_2 \\
 			\frac{1}{2}\theta_1 + \ri \frac{1}{2}\theta_2 & 1 - \ri\frac{1}{2}\theta_3
@@ -892,19 +892,19 @@ V(\Phi) &= -\rho^2 \Phi^\dag\Phi + \lambda(\Phi^\dag\Phi)^2\\
 			0 \\ \frac{v+h}{\sqrt{2}}
 		\end{pmatrix}
 	\nonumber \\
-	& =
+	& = 
 		\begin{pmatrix}
 			(\frac{1}{2}\theta_1 - \ri \frac{1}{2}\theta_2)\frac{v+h}{\sqrt{2}} \\ (1 - \ri\frac{1}{2}\theta_3)\frac{v+h}{\sqrt{2}}
-		\end{pmatrix}
+		\end{pmatrix} 
 	\nonumber \\
 \label{equ7.80}
-	\text{重新定义}\rightarrow & \equiv
+	\text{重新定义}\rightarrow & \equiv 
 		\begin{pmatrix}
 			\phi_{1r}+\ri \phi_{1c} \\ \frac{v}{\sqrt{2}}\phi_{2r}+\ri \phi_{2c}
 		\end{pmatrix}\text{。}
 \end{align}
 
-将零自旋复双重态写成这个形式，有助于利用局域\sutw （规范）对称性化简计算。为了得到物理结果，我们必须选取{\bf 一个}规范，而合适的选择会使生活更美好%
+将零自旋复二重态写成这个形式，有助于利用局域\sutw （规范）对称性化简计算。为了得到物理结果，我们必须选取{\bf 一个}规范，而合适的选择会使生活更美好%
 \mpar{不同的规范适用于不同的问题。而这里我们采用的叫做幺正规范，这对理解一个理论的物理内容也是有益的。}。
 
 一个一般的局域\sutw 变换写作
@@ -912,14 +912,14 @@ V(\Phi) &= -\rho^2 \Phi^\dag\Phi + \lambda(\Phi^\dag\Phi)^2\\
 \label{equ7.81}
 \Phi \rightarrow \Phi' = \ue^{\ri b_i(x)\frac{\sigma_i}{2}}\Phi\text{，}
 \end{equation}
-通过选取合适的$b_i(x)$，我们可以消去\ref{equ7.79}式中的指数因子。在{\bf 幺正规范(unitary gauge)}下，复标量双重态为
+通过选取合适的$b_i(x)$，我们可以消去\ref{equ7.79}式中的指数因子。在{\bf 幺正规范(unitary gauge)}下，复标量二重态为
 \begin{equation}
 \Phi_{un} = \begin{pmatrix}
 0 \\ \frac{v+h}{\sqrt{2}}
 \end{pmatrix}\text{。}
 \label{equ7.82}
 \end{equation}
-这件事也可以这样理解：复标量双重态的四个分量和\sutw 规范的自由度恰好相等%
+这件事也可以这样理解：复标量二重态的四个分量和\sutw 规范的自由度恰好相等%
 \mpar{注意，这仅在满足如下这些条件下时成立：有一个局域\sutw 理论，场$\theta=\theta(x)$理所应当的依赖于时空坐标。对于一个全局对称性，这些分量怎么也不能被规范掉，此时将其解释为无质量 boson，称为 Goldstein bosons。}%
 。这样，这三个场分量便是非物理的%
 \mpar{局域\sutw 对称在实验上不存在任何可观测的效应。这仅仅是我们方程的对称性，规范自由度从不在任何实验测量量中出现。否则我们将无法做出预言，因为我们将有无穷多个相同可能性的预言（它们由\sutw 变换相联系）。尽管这样，这个对称性也不是没用的，它能将我们导向拉格朗日量的正确形式。}%
@@ -1109,7 +1109,9 @@ A^\mu \\ Z_\mu
 。注意对应于 Z-bosons 的$Z_\mu$和对应于光子的$A_\mu$是场$B_\mu$和$W_\mu^3$的正交组合。它们竟有一个同样的起源！
 
 同样的推演可以用来在不破坏局域\sutw 对称性的情况下得到\spint 场的质量项，但在具体讨论这个之前，我们需要先谈谈自然界中一个有趣的事实：宇称破坏。
-\section[宇称破坏]{Parity Violation\quad 宇称破坏}\label{sec7.4}
+
+\section[宇称破坏]{Parity Violation\quad 宇称破坏}
+\label{sec7.4}
 大自然不遵守宇称对称性，即宇称破坏，是科学史上最为重大的发现之一。通俗地说，宇称破坏使一部分物理实验表现出与其镜像实验所不同的物理现象。吴健雄在“吴实验”中最早发现了宇称破坏现象。这是一个漂亮的实验，但它的具体实现与本节主题无关，因此我们将只关注实验结果。
 
 “吴实验”发现，弱相互作用的媒介子（$W^+, W^-, Z$玻色子）仅与左手粒子耦合。换句话说，只有左手粒子才会通过弱作用力相互作用，这一物理机制与宇称破坏的关系将在本节结尾处加以解释。所有在弱相互作用中产生的粒子都是“左手”的。中微子只参与弱相互作用，因此右手中微子可能根本不存在\mpar{我们很快会看到，有质量的左手粒子总会在传播过程中获得右手分量。实验表明中微子有质量，因此也应当包含右手分量。然而这一右手分量不参与任何已知相互作用。}。另一方面，所有其它粒子都能通过另外三种相互作用产生，因此都可以具有“右手性”。
@@ -1395,7 +1397,7 @@ q=\begin{pmatrix}u\\d\end{pmatrix}
 可见，这里的全部数学构造，都类比于处理轻子质量时所用的方法：我们在最小值附近展开Higgs场\mpar{$\Phi=\begin{pmatrix}0 \\ \frac{v+h}{\sqrt{2}}  \end{pmatrix}$，电荷共轭Higgs场有类似结论。}，代入拉氏量，制造出质量项和夸克——Higgs耦合项。
 
 \section[同位旋]{Isospin \quad 同位旋}\label{sec7.7}
-现在，我们将讨论$\mathcal{SU}(2)$对称性所对应的守恒量。自由拉氏量只具有全局对称性，而加入相互作用项，则为其引入了局域对称性。注意到全局对称性是局域对称性的特例，因此全局对称性也存在于所有局域对称的拉氏量之中，其对应的守恒量也在两种情况下都守恒。由于Noether定理，$\mathcal{SU}(2)$对称性给出了一个新的守恒量：同位旋。同位旋与电荷类似，后者对应全局$U(1)$对称性。
+现在讨论$\mathcal{SU}(2)$对称性所对应的守恒量。自由拉氏量只具有全局对称性，而加入相互作用项，则为其引入了局域对称性。注意到全局对称性是局域对称性的特例，因此全局对称性也存在于所有局域对称的拉氏量之中，其对应的守恒量也在两种情况下都守恒。由于Noether定理，$\mathcal{SU}(2)$对称性给出了一个新的守恒量：同位旋。同位旋与电荷类似，后者对应全局$\mathcal{U}(1)$对称性。
 
 将Noether定理应用于内部对称性（见\ref{sec4.5.5}节，参考方程\ref{eq:4.56}）得到，
 \begin{align}
@@ -1407,20 +1409,20 @@ q=\begin{pmatrix}u\\d\end{pmatrix}
 \Psi\rightarrow e^{ia_i\frac{\sigma_i}{2}}\Psi=(1+ia_i\frac{\sigma_i}{2}+\ldots)\Psi
 \label{equ7.132}
 \end{align}
-于是无穷小变分写为$\delta\Psi=ia_i\frac{\sigma_i}{2}\Psi$，其中$a_i$为任意参量。可见每个生成元都对应了一个守恒量，因为取$a_i$中任意两个为0、第三个不为0时，拉氏量同样具有不变性。比如$a_2=a_3=0$而$a_1\ne0$，或$a_1=a_2=0$而$a_3\ne0$。当然，取$a_1\ne0,a_2\ne0$且$a_3\ne0$时我们还能得到一个守恒量，但它其实是上述与生成元对应的三个守恒量之和。换而言之，我们一共有三个独立的守恒量，它们与$\mathcal{SU}(2)$生成元一一对应。
+于是无穷小变分写为$\delta\Psi=ia_i\frac{\sigma_i}{2}  \Psi$，其中$a_i$为任意系数。可见每个生成元都对应了一个守恒量，因为取$a_i$中任意两个为0、第三个不为0时，拉氏量同样具有不变性。比如$a_2=a_3=0$而$a_1\ne0$，或$a_1=a_2=0$而$a_3\ne0$。当然，取$a_1\ne0,a_2\ne0$且$a_3\ne0$时我们还能得到一个守恒量，但它其实是上述与生成元对应的三个守恒量之和。换而言之，一共有三个独立的守恒量，它们与$\mathcal{SU}(2)$生成元一一对应。
 
 全局不变的自由拉氏量写为（方程\ref{equ7.45}）：
 \begin{align*}
 \mathscr{L}_\text{D\textsubscript{1}+D\textsubscript{2}}=i\bar{\Psi}\gamma_\mu\partial^\mu\Psi
 \end{align*}
 
-对应守恒量为$\mathcal{Q}_i$。举例来说，对电子——中微子双重态，我们有\mpar{见方程\ref{equ7.131}，与往常一样，定义中不含任意常数$a_i$。}
+对应守恒量为$\mathcal{Q}_i$。举例来说，对电子—中微子双重态，我们有\mpar{见方程\ref{equ7.131}，与往常一样，定义中不含任意常数$a_i$。}
 \begin{align}
 Q_i&=i\bar{\Psi}\gamma_0\frac{\sigma_i}{2}\Psi\nonumber\\
 &=\begin{pmatrix}\nu_e \\ e\end{pmatrix}^\dag\underbrace{\gamma_0\gamma_0}_{=1}\frac{\sigma_i}{2}\begin{pmatrix}\nu_e \\ e\end{pmatrix}
 \label{equ7.133}
 \end{align}
-注意泡利矩阵中只有$\sigma_3$是对角矩阵。因此对双重态$(e,\nu_e)$的两个分量来说，只有$i=3$的守恒量才有确定的取值。与此同时，分量$\nu_e$与$e$不是另两个生成元，即$\sigma_1$和$\sigma_2$的本征态。当然，我们可以自由选取不同的基矢，以保证如$\sigma_2$处于对角形式。这样一来，我们可以重新定义$\nu_e$和$e$，最终结果也并无不同。这里的重点在于，尽管存在三个与生成元一一对应的守恒量，但在每一时刻，我们却只能用其中一个来标记粒子或量子态。
+注意Pauli矩阵中只有$\sigma_3$是对角矩阵。因此对双重态$(\nu_e, e)$的两个分量来说，只有$i=3$的守恒量才有确定的取值。而分量$\nu_e$与$e$不是另两个生成元$\sigma_1$和$\sigma_2$的本征态。当然，可以自由选取基矢以保证如$\sigma_2$处于对角形式。这样一来，我们可以重新定义$\nu_e$和$e$，最终结果也并无不同。这里的重点在于，尽管存在三个与生成元一一对应的守恒量，但每一时刻却只能用其中一个来标记粒子或量子态。
 
 对$i=3$我们有
 \begin{align}
@@ -1429,7 +1431,7 @@ Q_3&=\begin{pmatrix}\nu_e \\ e\end{pmatrix}^\dag\frac{\sigma_3}{2}\begin{pmatrix
 &=\frac{1}{2}\nu_e^\dag\nu_e - \frac{1}{2}e^\dag e
 \label{equ7.134}
 \end{align}
-于是可用$\mathcal{Q}_3(\nu_e)=\frac{1}{2}$及$\mathcal{Q}_3(e)=-\frac{1}{2}$分别标记两种粒子。反过来说，对$i=1$，我们有
+于是可用$Q_3(\nu_e)=\frac{1}{2}$及$Q_3(e)=-\frac{1}{2}$分别标记两种粒子。反过来说，对$i=1$，我们有
 \begin{align}
 Q_1&=\begin{pmatrix}\nu_e \\ e\end{pmatrix}^\dag\frac{\sigma_1}{2}\begin{pmatrix}\nu_e \\ e\end{pmatrix}\nonumber\\
 &=\frac{1}{2}\begin{pmatrix}\nu_e \\ e\end{pmatrix}^\dag\begin{pmatrix}0  & 1 \\ 1 & 0 \end{pmatrix}\begin{pmatrix}\nu_e \\ e\end{pmatrix}\nonumber\\
@@ -1447,30 +1449,30 @@ Q_1&=\begin{pmatrix}\nu_e \\ e\end{pmatrix}^\dag\frac{\sigma_1}{2}\begin{pmatrix
 \end{align}
 $\mathcal{SU}(2)$只有一个Cartan生成元$J_3=\frac{1}{2}\sigma_3$，它的本征值为$+\frac{1}{2}$和$-\frac{1}{2}$。（左手）中微子$\begin{pmatrix}\nu_e\\0\end{pmatrix}$是这一生成元的本征态，具有本征值$-\frac{1}{2}$。这些本征值构成了粒子的新标记，亦即中微子和电子的同位旋。
 
-按照同样的方法，我们可以用同位旋标记右手单态。这些态随$\mathcal{SU}(2)$的一维表示变换。在一维表示中，生成元实际为0\mpar{在\ref{sec3.7.4}中，我们解释了右手单重态不参与变换的原因。}：$J_i=0$。因此这些单态正是Cartan生成元$J_3$本征值为$0$的本征态。总之，右手单重态，如$e_R$，具有0同位旋。这与前文中右手场不参与弱相互作用的事实前后呼应。正如不带电的对象不参与电磁相互作用，不带同位旋的场也不参与弱相互作用。
+按照同样的方法，我们可以用同位旋标记右手单重态。这些态随$\mathcal{SU}(2)$的一维表示变换。一维表示的生成元就是0\mpar{\ref{sec3.7.4}节解释了右手单重态不参与变换的原因。}：$J_i=0$。因此这些单态正是Cartan生成元$J_3$本征值为$0$的本征态。总之，右手单重态，如$e_R$，具有0同位旋。这与前文中右手场不参与弱相互作用的事实前后呼应。正如不带电的对象不参与电磁相互作用，不带同位旋的场也不参与弱相互作用。
 
 最后，我们为规范场$W_+^\mu,W_-^\mu,W_3^\mu$赋予同位旋，它们构成$\mathcal{SU}(2)$三重态：
 \begin{align}
 W^\mu=\begin{pmatrix} W^\mu_+ \\ W^\mu_- \\ W^\mu_3\end{pmatrix}
 \label{equ7.137}
 \end{align}
-随$\mathcal{SU}(2)$的三维表示变换。此时，Cartan生成元$J_3$有三个本征值：$+1,-1,0$\mpar{这可由方程\ref{equ3.121}中$J_3$的矩阵形式直接导出：$J_3=\begin{pmatrix}1 & 0 & 0 \\ 0 & -1 & 0 \\ 0 & 0 & 0 \end{pmatrix}$。}，于是我们得出$\mathcal{Q}_3(W^\mu_+)=1,\mathcal{Q}_3(W^\mu_-)=-1,\mathcal{Q}_3(W^\mu_3)=0$。这便是$W_+$与$W_-$玻色子的同位旋。
+随$\mathcal{SU}(2)$的三维表示变换。此时，Cartan生成元$J_3$有三个本征值：$+1,-1,0$\mpar{这可由方程\ref{equ3.121}中$J_3$的矩阵形式直接导出：$J_3=\begin{pmatrix}1 & 0 & 0 \\ 0 & -1 & 0 \\ 0 & 0 & 0 \end{pmatrix}$。}，于是我们得出$Q_3(W^\mu_+)=1, Q_3(W^\mu_-)=-1, Q_3(W^\mu_3)=0$。这便是$W_+$与$W_-$玻色子的同位旋。
 
-应注意，三重态$\begin{pmatrix} W^\mu_1 \\ W^\mu_2 \\ W^\mu_3\end{pmatrix}$对应另一组基矢，其中$J_3$不是对角阵。这是我们引入$W_{\pm}^\mu$的另一个原因。
+应注意，三重态$\begin{pmatrix} W^\mu_1 \\ W^\mu_2 \\ W^\mu_3\end{pmatrix}$对应另一组基矢，其中$J_3$不是对角阵。这是引入$W_{\pm}^\mu$的另一个原因。
 
-为了进一步阐明个中联系，我们回顾引入规范场$W^\mu_i$的过程。在拉氏量中，这三个规范场与群的生成元相组合，以$\sigma_iW_i^\mu$的形式出现。这可以看做对象$W^\mu$以$\sigma_i$为基的线性展开：$W^\mu=\sigma_iW_i^\mu=\sigma_3W_3^\mu+\sigma_2W_2^\mu+\sigma_3W_3^\mu$，如同矢量展开为基矢量的线性组合：$\vec{v}=v_1\vec{e}_1+v_2\vec{e}_2+v_3\vec{e}_3$。由于生成元是李代数$\mathcal{SU}(2)$中的元素\mpar{李代数构成向量空间！}，$W^\mu$也应是同一李代数中的元素。因此，$W^\mu$的变换规律将由$\mathcal{SU}(2)$在自身李代数上的表示所确定。换句话说，也就是由$\mathcal{SU}(2)$的元素如何作用于自身李代数中的元素（生成元）所确定。这一观念看似奇特，实则自然而然。请读者回忆群表示的定义：群表示，是从群到某一线性空间中所有线性算符集合的映射，这些线性算符也构成线性空间\mpar{准确的说，我们要求映射是同态映射，应满足一些限制条件。}。目前为止，我们只关注了“外在”的线性空间，如 Minkowski 空间。而与群相关的唯一\mpar{群本身不是向量空间。我们可以研究群如何作用于自身，但这不是群表示，而是群的具体化（realization）。}内生线性空间却正是群的李代数！由此可见，研究群在这一线性空间上的表示并不奇怪。这一具有特别重要性的群表示，被称为群的伴随表示。
+为了进一步阐明个中联系，我们回顾引入规范场$W^\mu_i$的过程。在拉氏量中，这三个规范场与群的生成元相组合，以$\sigma_iW_i^\mu$的形式出现。这可以看做对象$W^\mu$以$\sigma_i$为基的线性展开：$W^\mu=\sigma_iW_i^\mu=\sigma_3W_3^\mu+\sigma_2W_2^\mu+\sigma_3W_3^\mu$，如同矢量展开为基矢量的线性组合：$\vec{v}=v_1\vec{e}_1+v_2\vec{e}_2+v_3\vec{e}_3$。由于生成元是$\mathcal{SU}(2)$\, Lie代数中的元素\mpar{李代数构成向量空间！}，$W^\mu$也应是同一Lie代数中的元素。因此，$W^\mu$的变换规律将由$\mathcal{SU}(2)$在自身Lie代数上的表示所确定。也就是由$\mathcal{SU}(2)$的元素如何作用于自身Lie代数中的元素（生成元）所确定。这一观念看似奇特，实则自然而然。请读者回忆群表示的定义：群表示，是从群到某一线性空间中所有线性算符集合的映射，这些线性算符也构成线性空间\mpar{准确的说，我们要求映射是同态映射，应满足一些限制条件。}。目前为止，我们只关注了“外在”的线性空间，如 Minkowski 空间。而与群相关的唯一\mpar{群本身不是向量空间。我们可以研究群如何作用于自身，但这不是群表示，而是群的具体化（realization）。}内生线性空间却正是群的李代数！由此可见，研究群在这一线性空间上的表示并不奇怪。这一具有特别重要性的群表示，被称为群的{\bf 伴随表示}。
 
-规范场（如$W_+,W_-,W_3$）是规范群伴随表示中的元素。$\mathcal{SU}(2)$李代数是三维代数，因为它由三个生成元生成，并具有三维的伴随表示。正如我们将矢量的分量自上而下写在左右括号之间\mpar{$\vec{v}=\begin{pmatrix}v_1 \\ v_2 \\ v_3 \end{pmatrix}$}，我们也可以将$W^\mu$的三个分量自上而下写在括号之间\mpar{$W^\mu=\begin{pmatrix}W^\mu_1 \\ W^\mu_2 \\ W^\mu_3 \end{pmatrix}$}，并称之为三重态。这些伴随表示下的生成元，可以通过基矢变换与前面导出的三维生成元相联系。
+规范场（如$W_+,W_-,W_3$）是规范群伴随表示中的元素。$\mathcal{SU}(2)$ Lie代数是三维的，因为它由三个生成元生成，并具有三维的伴随表示。正如矢量的分量自上而下写在左右括号之间\mpar{$\vec{v}=\begin{pmatrix}v_1 \\ v_2 \\ v_3 \end{pmatrix}$}，我们也可以将$W^\mu$的三个分量自上而下写在括号之间\mpar{$W^\mu=\begin{pmatrix}W^\mu_1 \\ W^\mu_2 \\ W^\mu_3 \end{pmatrix}$}，并称之为三重态。这些伴随表示下的生成元，可以通过基矢变换与前面导出的三维生成元相联系。
 
-在下一节中，我们将讨论“更高阶”的内部对称群$\mathcal{SU}(3)$。我们将看到，要求拉氏量满足$\mathcal{SU}(3)$不变性，可以导出描述强相互作用的拉氏量。
+在下一节中，我们将讨论“更高阶”的内部对称群$\mathcal{SU}(3)$。我们将看到，要求拉氏量满足局域$\mathcal{SU}(3)$不变性，可以导出描述强相互作用的拉氏量。
 
-\section[\suth 相互作用]{\suth Interactions \quad \suth 相互作用}\label{sec7.8}
+\section[\suth\, 相互作用]{\suth Interactions \quad \suth 相互作用}\label{sec7.8}
 和上一节中在两个 fermion 场和\sutw 中干的一样，我们可以在{\bf 三个} fermion 场中找到一个局域\suth 不变的拉格朗日量。这个对称性不会破缺，对应于自旋为$1$的无质量胶子场。\suth 是由全体行列式为$1$的$3\times 3$幺正矩阵构成的群，即
 \begin{equation}
 {\mathcal U}^\dag {\mathcal U} ={\mathcal U} {\mathcal U}^\dag = I \quad \det {\mathcal U} =1\text{。}
 \label{equ7.138}
 \end{equation}
-如通常处理李群时一样，我们能将其写成指数函数%
+如通常处理Lie群时一样，我们能将其写成指数函数%
 \mpar{在\ref{sec2.4}中已经提到了，大写罗马字母$A,B,\dots$总是要从$1$到$8$求和。}
 \begin{equation}
 {\mathcal U} = \ue^{\ri T_A \theta_A}\text{。}
@@ -1480,7 +1482,7 @@ W^\mu=\begin{pmatrix} W^\mu_+ \\ W^\mu_- \\ W^\mu_3\end{pmatrix}
 ，该群的定义式\ref{equ7.138}要求其生成元是厄米且无迹的。
 \begin{align}
 T_A^\dag=T_A \\
-\Tr(T_A) = 0
+\mathrm{Tr}\, (T_A) = 0
 \end{align}
 一组这样的无迹厄米的基底，至少在{\bf 一种}表象下，由如下八个%
 \mpar{一般的，${\mathcal SU}(N)$群有$N^2-1$个生成元。生成元的数目常被称为群的{\bf 秩(rank)}。}%
@@ -1519,7 +1521,7 @@ $3\times 3$个矩阵给出，称为 Gell-Mann 矩阵：
 \begin{equation}
 [T^A,T^B]=\ri f^{ABC}T^C\text{，}
 \end{equation}
-这里我们仍约定诸如$A,B,C$的大写字母取遍$1$到$8$的全部值。$f^{ABC}$称为\suth 群的结构常数，对于\sutw 群它就是 Levi-Civita 符号$\epsilon_{ijk}$。这些系数可以直接暴力算出%
+这里仍约定诸如$A,B,C$的大写字母取遍$1$到$8$的全部值。$f^{ABC}$称为\suth 群的结构常数，对于\sutw 群它就是 Levi-Civita 符号$\epsilon_{ijk}$。这些系数可以直接暴力算出%
 \mpar{这个结果不是很优美，但为了完整性我们还是将其列出}
 \begin{align}
 f^{123}=1\\
@@ -1532,7 +1534,7 @@ f^{ABC}=-f^{BAC}=-f^{CBA}\text{。}
 \end{equation}
 还剩下一些不能通过重新给指标排序得到的项都是零。
 
-类似于我们在\ref{sec7.2}节中对\sutw 干过的事，我们引入\spint 场的三重态
+类似于我们在\ref{sec7.2}节中对\sutw 干过的事，引入\spint 场的三重态
 \begin{equation}
 Q = \begin{pmatrix}
 q_1 \\ q_2 \\ q_3
@@ -1542,12 +1544,12 @@ q_1 \\ q_2 \\ q_3
 
 为了使拉格朗日量
 \begin{equation}
-{\mathscr L}=\ri \tilde{Q}\partial_\mu\gamma^\mu Q -\tilde{Q}mQ
+{\mathscr L}=\ri \bar{Q}\partial_\mu\gamma^\mu Q -\bar{Q}mQ
 \end{equation}
-局域\suth 不变，又得添加\spint 场和新的自旋为$1$的场的耦合项。推导类似于\sutw 的情形，但具体计算会更加麻烦，所以我们仅给出最后的拉格朗日量%
-\mpar{记得对大写字母($A,B,C,\dots$)从$1$到$8$求和。}
+局域\suth 不变要求添加\spint 场和新的自旋$1$场的耦合项。推导类似于\sutw 的情形，但具体计算会更加麻烦，所以我们仅给出最后的拉格朗日量%
+\mpar{记得对大写字母($A,B,C,\dots$)从$1$到$8$求和。\sout{作者貌似已经重复三遍了}}
 \begin{equation}
-{\mathscr L}=-\frac{1}{4}F^A_{\alpha\beta}F_A^{\alpha\beta}+\tilde{Q}(\ri D_\mu\gamma^\mu)-m Q\text{，}
+{\mathscr L}=-\frac{1}{4}F^A_{\alpha\beta}F_A^{\alpha\beta}+\bar{Q}(\ri D_\mu\gamma^\mu-m) Q\text{，}
 \end{equation}
 自旋$1$胶子场$G^A_\alpha$的场强张量$F^A_{\alpha\beta}$定义为
 \begin{equation}
@@ -1559,7 +1561,7 @@ D_\alpha = \partial_\alpha +\ri gT^CG^C_\alpha
 \end{equation}
 其中$T_C$是此节一开始定义的\suth 群的生成元。可以看到，除了生成元和对易关系有一点区别，这里每一项都完全和\sutw 的情形相类似。
 \subsection[色]{Color\quad 色}\label{sec7.8.1}
-类似于\ref{sec7.7}节中对\sutw 的讨论，我们可以通过 Nother 定理从\suth 对称性中得到新的守恒量。完全相同的思路，这里我们有$8$个守恒量，每个生成元对应一个。我们同样也只能使用属于用粒子标记对角的生成元的守恒量。\suth 群有两个 Cartan \mpar{回忆， Cartan 生成元$=$对角生成元。}生成元$\frac{1}{2}\lambda_3$和$\lambda_8$。是故，每个通过强作用力相互作用的粒子携带两个额外的指标，对应于 Cartan 生成元的本征值。
+类似于\ref{sec7.7}节中对\sutw 的讨论，我们可以通过 Noether 定理从\suth 对称性中得到新的守恒量。完全相同的思路，这里我们有$8$个守恒量，每个生成元对应一个。同样也只能使用对角生成元的守恒量来标记粒子。\suth 群有两个 Cartan \mpar{回忆， Cartan 生成元$=$对角生成元。}生成元$\frac{1}{2}\lambda_3$和$\frac{1}{2} \lambda_8$。是故，每个通过强作用力相互作用的粒子携带两个额外的指标，对应于这两个 Cartan 生成元的本征值。
 
 $\frac{1}{2}\lambda_3=\frac{1}{2} \begin{pmatrix}
 1 & 0 & 0 \\ 0 & -1 & 0 \\ 0 & 0 & 0
@@ -1585,14 +1587,14 @@ $\frac{1}{2}\lambda_3=\frac{1}{2} \begin{pmatrix}
 \end{pmatrix}$。}%
 为$\frac{1}{2\sqrt{3}}$、$\frac{1}{2\sqrt{3}}$和$\frac{-1}{\sqrt{3}}$。
 
-故若我们将强相互作用 fermions 配成三重态（在由 Cartan 生成元的本征向量张成的基下），可以给它们指定如下带有任意旋量$\psi$的指标：
+若将强相互作用 fermions 配成三重态（在由 Cartan 生成元的本征向量构成的基下），可以给它们指定如下带有任意旋量$\psi$的指标：
 \[
 \left(+\frac{1}{2},\frac{1}{2\sqrt{3}}\right) \text{给} \begin{pmatrix}
 1 \\ 0 \\ 0
 \end{pmatrix}\psi
 \]
 人们常定义{\bf 红色(red)}$:=\left(+\frac{1}{2},\frac{1}{2\sqrt{3}}\right)$。这说的是具有$\begin{pmatrix}
-\Psi \\ 0 \\ 0
+\psi \\ 0 \\ 0
 \end{pmatrix}$形式的东西叫做红的。
 
 类似的
@@ -1617,24 +1619,24 @@ $\frac{1}{2}\lambda_3=\frac{1}{2} \begin{pmatrix}
 \]
 就像包含了所有颜色光的日光却是无色的一样。
 
-完全类似于我们在\sutw 上干的，将全体\suth 单态的色荷取做零，这样这些粒子间就不存在强相互作用了。细节上有点区别：它们是无色的。另外，也能通过完全类似于我们在\ref{sec7.7}节中给 W-Bosons 指定赝自旋的步骤，利用\suth 群的（$8$维%
+完全类似于我们在\sutw 上干的，将全体\suth 单态的色荷取做零，这样这些粒子间就不存在强相互作用了。细节上有点区别：它们是无色的。另外，也能通过完全类似于\ref{sec7.7}节中给 W-Bosons 指定赝自旋的步骤，利用\suth 群的（$8$维%
 \mpar{由于我们有$8$个生成元，所以说\suth 群的伴随表示是$8$维的。}%
 ）伴随表示来给规范场$G_A^\mu$（胶子）来指定颜色。
 \subsection[夸克描述]{Quark Description \quad 夸克描述}\label{sec7.8.2}
-还记得，通过强力相互作用的\spint 粒子%
+通过强力相互作用的\spint 粒子%
 \mpar{由\spint 场产生，在第\ref{chap6}章中已经详细讨论}%
 称为夸克。如果要对夸克进行讨论，我们得考虑一大堆事情：
 \begin{itemize}
 \item 夸克们是\suth 的三重态，用$Q$表示。一个三重态里有不同颜色的同类夸克，例如上夸克：${\mathcal U}= \begin{pmatrix}
 u_r \\ u_g \\ u_b
-\end{pmatrix}$。为了保证\suth 不变，三重态总是以$\tilde{Q}Q$的形式成对出现。我们也可以用指标记号将其写作$\tilde{Q}Q=\tilde{q}_cq_c$，其中指标$c$代表色$c=r,g,b$。
-\item 另外，夸克之间还有弱相互作用，所以也是\sutw 的双重态。双重态%
-\mpar{每一个双重态里有两个不同的夸克，例如一个上夸克和一个下夸克，或者一个顶夸克和一个底夸克。}%
+\end{pmatrix}$。为了保证\suth 不变，三重态总是以$\bar{Q}Q$的形式成对出现。我们也可以用指标记号将其写作$\bar{Q}Q=\bar{q}_cq_c$，其中指标$c$代表色$c=r,g,b$。
+\item 另外，夸克之间还有弱相互作用，所以也是\sutw 的二重态。二重态%
+\mpar{每一个二重态里有两个不同的夸克，例如一个上夸克和一个下夸克，或者一个顶夸克和一个底夸克。}%
 中的每一个元（$=$每一个夸克）是一个三重态：$q= \begin{pmatrix}
 u_c \\ d_c
-\end{pmatrix}$。这很是困扰人，所以说除非需要考虑强相互作用力，色指标$c$不会
+\end{pmatrix}$。这很是困扰人，所以说除非需要考虑强相互作用力，色指标$c$通常省略。
 \item 这还不够，要记得每一个夸克都由一个 Dirac 旋量描述，这又是一个二分量的对象$u_c= \begin{pmatrix}
-(\xi_u^L)_c \\ (\chi_u^R)_c
+(\chi_u^L)_c \\ (\xi_u^R)_c
 \end{pmatrix}$。上分量描述右手夸克而下分量描述一个同样的左手夸克。
 \end{itemize}
 
@@ -1642,7 +1644,7 @@ u_c \\ d_c
 
 除此之外， fermion 的质量项在\suth 对称性下也不是问题，因为如下形式的项
 \begin{equation}
-\tilde{Q}mQ
+\bar{Q}mQ
 \end{equation}
 当三重态中的全部粒子都是等质量时是\suth 不变的。即$m$正比于单位阵%
 \mpar{$m= m\begin{pmatrix}
@@ -1662,7 +1664,7 @@ u_r \\ u_b \\ u_g
 
 \section[Bosons 和 Fermions 间的游戏]{The Interplay Between Fermions and Bosons\quad Bosons 和 Fermions 间的游戏}\label{sec7.9}
 
-在这一节我们将使用更加物理的语言，对本章得到的所有内容作一个总结。我们之后将学到\spint 场能产生湮灭\spint 粒子，自旋为$1$的场也能产生和湮灭自旋为$1$的粒子。这一章中我们导出了用于描述不同的场以及对应的粒子相互作用的拉格朗日量。
+在这一节我们将使用更加物理的语言，对本章得到的所有内容作一个总结。我们之后将学到\spint 场能产生/湮灭\spint 粒子，自旋$1$的场也能产生和湮灭自旋$1$的粒子。这一章中我们导出用于描述不同的场以及对应的粒子相互作用的拉格朗日量。
 
 在\ref{sec1.3}节中就已经提到，我们称\spint 粒子为 fermion ，自旋为$1$粒子为 boson 。标准的说法是 fermion 构成了物质而 boson 作为物质间相互作用的媒介。现在我们能搞明白这句话说的是什么了。
 
