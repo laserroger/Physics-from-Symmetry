@@ -1,33 +1,26 @@
 %!TEX encoding = UTF-8 Unicode
 
 %----------------------------------------------------------------------------------------
-%	CHAPTER 8
+%   CHAPTER 8
 %   translator: laserdog, 日始之音
+%   proofreader: SI
 %----------------------------------------------------------------------------------------
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
->>>>>>> origin/master
-=======
->>>>>>> origin/master
 \def\pmm{\begin{pmatrix}}
 \def\pmme{\end{pmatrix}}
-\chapterimage{chapter_head_1.pdf} % Chapter heading image
 
-\chapter[量子力学]{Quantum Mechanics 量子力学}\label{chap8}
+\chapterimage{f08.png} % Chapter heading image
+
+\chapter[量子力学]{Quantum Mechanics \quad 量子力学}\label{chap8}
 
 {\Huge\bf 总结\\ \ \\}
-在这章中，我们将讲量子力学。这里的每一件事情的基础是我们第\ref{chap5}章做的那种对应。其结果就是我们可以得到{\bf 先对论性能量-动量关系}。
+本章讲述量子力学，基于第\ref{chap5}章讲过的对应关系\footnote{物理量$\to$ 对称性生成元，见\ref{equ5.1}式。}，由此首先可导出{\bf 相对论性能量-动量关系}。
 
-%而我们之前已经讨论过了量子的框架是如何运作的；这实际上只是对最简单的标量型粒子做运动方程，之后我们就对Klein-Gordon方程做了非相对论性极限，得到了著名的{\bf Schrödinger方程}。
-在讨论过了量子的框架是如何运作的之后，我们就对Klein-Gordon方程做了非相对论性极限，得到了著名的{\bf Schrödinger方程}。这样做是因为这个方程实际上只是对最简单的标量型粒子做的运动方程。
-方程的解被解释为概率振幅，并且我们随后用{\bf 波动力学}的方法分析了两个简单的例子。
+在建立量子力学的基本框架后，我们就对Klein-Gordon方程（最简单的标量型粒子的运动方程）取非相对论极限，得到著名的{\bf Schrödinger方程}，方程解被解释为概率幅，随后我们用{\bf 波动力学}的方法分析两个简单例子。
 
-之后呢，我们引入了{Dirac符号}，这对于我们理解量子力学的结构十分有帮助。系统的初始态被一个抽象的态矢量$|i\rangle$标记，我们乘它为{\bf 右矢}。测量这个初始态变成某个特定的末态的概率振幅可以通过形式上作用一个我们称之为{\bf 左矢}，记为$\langle f|$的东西上去。左矢和右矢在一起会形成一个复数，我们解释为过程$i\to f$的概率振幅$A$。发生这个过程的概率就是$|A|^2$。之后我们会讲{\bf 投影算符}。我们会看它是如何与{\bf 完备性关系}一起用来把任意一个态用任意一个算符的本征态来进行展开的。我们之前使用的波动力学的角度可以看成是一个特例，我们用坐标来进行的展开。在Dirac符号下，Schrödinger方程是被用来计算态的时间演化的。为了明确的建立这种联系，我们会用Dirac符号来看一个我们已经用波动力学解过的例子。
+之后呢，我们引入了{\bf Dirac符号}，这对于理解量子力学的结构十分有帮助。系统的初始态被一个抽象的态矢量$|i\rangle$标记，称之为{\bf 右矢}。测量该初始态得到某一特定末状态的概率幅可以用左矢（记作$\langle f|$，表示末态）乘以右矢$|i \rangle$计算。左矢与右矢的乘积$\langle f | i \rangle$是一个复数，即为状态$i \to f$的概率幅，发生这个过程的概率就是$|A|^2$。之后讨论{\bf 投影算符}。我们会看到它是如何与{\bf 完备性关系}一起用来把任意状态用任意一个算符的本征态来进行展开的。之前常用的波动力学方法可以视为将态矢在坐标基底展开的特例。在Dirac符号下，Schrödinger方程用来计算态的时间演化。为了阐明这一联系，我们会用Dirac符号来重新讨论一个前面用波动力学求解过的例子。
 
-\section[对应到粒子理论]{Particle Theory Identifications 对应到粒子理论}\label{sec8.1}
-我们到现在得到的方程\mpar{Klein-Gordon, Dirac, Proka, Maxwell方程}可以用在粒子理论和场理论中。本章李，我们想要研究其在粒子理论中的应用。因此，我们研究的动力学变量就是坐标，能量和动量了。如我们在第\ref{chap5}中做的那样，我们把这些视作相应对称性的生成元\mpar{见\eqref{equ3.240}，\eqref{equ3.244}和第\ref{chap5}章}
+\section[对应到粒子理论]{Particle Theory Identifications \quad 对应到粒子理论}\label{sec8.1}
+前面导出的方程\mpar{Klein-Gordon, Dirac, Proka, Maxwell方程}可以用在粒子理论和场理论中。本章考虑它们应用于粒子理论的情形。因此动力学变量就是粒子（们）的坐标、能量和动量。第\ref{chap5}章讲过，这些物理量可视为相应对称性的生成元：\mpar{见\eqref{equ3.240}，\eqref{equ3.244}和第\ref{chap5}章。}
 \begin{itemize}
 \item 动量$\hat{p}_i=-i\partial_i$\\
 \item 坐标$\hat{x}_i=x_i$\\
@@ -35,88 +28,98 @@
 \item 角动量$\hat{L}_i=i\frac{1}{2}\epsilon_{ijk}(x^j\partial^k-x^k\partial^j)$
 \end{itemize}
 
-在进一步讨论这些算符是如何用在量子力学里的之前，我们先用它们得到现代物理最重要的方程之一。
-\section[相对论性能量-动量关系]{Relativistic Energy-Momentum Relation 相对论性能量-动量关系}\label{sec8.2}
-在第\ref{sec6.2}中，我们得到了自由的自旋$0$的场的运动方程，即Klein-Gordon方程：
-\[(\partial_\mu\partial^\mu+m^2)\Phi=0 \]
-利用上面做的那些对应关系\mpar{$p_\mu=\left(\begin{matrix}p_0\\p_1\\p_2\\p_3\end{matrix}\right)=\left(\begin{matrix}p_0\\\vec{p}\end{matrix}\right)=\left(\begin{matrix}E\\\vec{p}\end{matrix}\right)$}，
-\begin{align}\begin{split}
-(\partial_\mu\partial^\mu+m^2)\Phi&=(\partial_0\partial_0-\partial_i\partial_i+m^2)\Phi\\
-&=\left(\left(\frac{1}{i}E\right)\left(\frac{1}{i}E\right)-\left(-\frac{1}{i}p_i\right)\left(-\frac{1}{i}p_i\right)+m^2\right)\Phi\\
-&=(-E^2+\vec{p}^{\,2}+m^2)\Phi=0
-\end{split}\end{align}
-\begin{align}\label{eq8.2}
-\to\ E^2=\vec{p}^{\,2}+m^2\quad\text{ 或者用4-矢量表示， }p_\mu p^\mu=m^2
-\end{align}
-其就是著名的狭义相对论下的{\bf 能量-动量关系}。对于一个静止的粒子，即$\vec{p}=0$，给出了爱因斯坦著名的方程
-\[E^2=m^2\to E=mc^2 \]
-其中为了明确起见我们把$c^2$写回来。我们现在就理解了\eqref{equ3.258}中，Poincare群里面的Casimir算符$p_\mu p^\mu$的标量值我们选为$m^2$了。在这个问题里面，$p_\mu p^\mu$就代表着粒子质量的平方，而通过实验，比如说测量粒子的能量和动量，可以测量这个质量$m=\sqrt{E^2-\vec{p}^{\,2}}$。同理，我们也可以理解为什么在第\ref{sec6.2}的时候要给拉格朗日量里面的系数常数记作$m^2$。
+在讨论这些算符是如何应用于量子力学之前，我们先用它们导出现代物理最重要的方程之一。
+\section[相对论性能量-动量关系]{Relativistic Energy-Momentum Relation \quad 相对论性能量-动量关系}\label{sec8.2}
+第\ref{sec6.2}节推导了自旋$0$自由场的运动方程——Klein-Gordon方程：
+\[(\partial_\mu\partial^\mu+m^2)\Phi=0, \]
 
-\section[量子力学的数学形式]{The Quantum Formalism 量子力学的数学形式}
-
-我们的物理量已经用算符来表示了，我们需要找到这些算符作用在什么东西上面。首先需要注意我们对每个算符都有一组本征函数，就像矩阵的本征向量一样。矩阵是有限维的，因此我们得到有限多个本征向量；而我们的算符通常作用在无限维的矢量空间中，而得到其本征函数。比如，动量算符的本征函数必须满足
+利用上一节的那些对应关系\mpar{$p_\mu=\left(\begin{matrix}p_0\\p_1\\p_2\\p_3\end{matrix}\right)=\left(\begin{matrix}p_0\\\vec{p}\end{matrix}\right)=\left(\begin{matrix}E\\\vec{p}\end{matrix}\right)$}，
 \begin{align}
-\underbrace{-i\partial_i\Psi}_{\mathclap{\text{算符}}}=\underbrace{p_i}_{\mathclap{\text{本征值}}}\overbrace{\Psi}^{\mathclap{\text{本征函数}}}
+  (\partial_\mu\partial^\mu+m^2)\Phi&=(\partial_0\partial_0-\partial_i\partial_i+m^2)\Phi \notag \\
+  &=\left(\left(\frac{1}{i}E\right)\left(\frac{1}{i}E\right)-\left(-\frac{1}{i}p_i\right)\left(-\frac{1}{i}p_i\right)+m^2\right)\Phi \notag \\
+\label{equ8.1}
+  &=(-E^2+\vec{p}^{\,2}+m^2)\Phi=0 \\
+\label{equ8.2}
+  \to\ E^2=\vec{p}^{\,2}+m^2 & \quad\text{ 或者用4-矢量表示：}p_\mu p^\mu=m^2
+\end{align}
+这就是著名的狭义相对论{\bf 能量-动量关系}。上式应用于静止粒子($\vec{p} = 0$)即得到Einstein著名的质能方程：
+\[E^2=m^2\to E=mc^2 \]
+其中为了明确起见我们把$c^2$写回来。现在就理解了Poincare群的第一个Casimir算符$p_\mu p^\mu$的标量值（见\ref{equ3.258}式）为何选为$m^2$了。$p_\mu p^\mu$就代表着粒子质量的平方，而通过实验，比如说测量粒子的能量和动量，就可测量质量$m=\sqrt{E^2-\vec{p}^{\,2}}$。同理，我们也可以理解为什么\ref{sec6.2}节要把拉格朗日量里面的系数常数记作$m^2$。
+
+\section[量子力学的数学形式]{The Quantum Formalism\quad 量子力学的数学形式}
+\label{sec8.3}
+
+前面说过，物理量用算符表示，这些算符作用于什么对象？首先需要注意每个算符都有一组本征函数，就像矩阵的本征向量一样。矩阵是有限维的，因此矩阵有有限多个本征向量；而算符通常作用在无限维的矢量空间中，而得到无穷多个本征函数。比如，动量算符的本征函数满足的本征方程为
+\begin{align}
+\label{equ8.3}
+	\underbrace{-i\partial_i\Psi}_{\mathclap{\text{算符}}}=\underbrace{p_i}_{\mathclap{\text{本征值}}}\overbrace{\Psi}^{\mathclap{\text{本征函数}}}
 \end{align}
 其中，$p_i$是一个数。一个显然的解为
-\[\underbrace{C}_{\mathclap{=\text{常数}}}e^{ip_ix_i} \]
 \begin{align}
-\to-i\partial_iCe^{ip_ix_i}=p_iCe^{ip_ix_i}\checkmark
+	&\underbrace{C}_{\mathclap{=\text{常数}}}e^{ip_ix_i} \notag \\
+\label{equ8.4}
+	&\to-i\partial_iCe^{ip_ix_i}=p_iCe^{ip_ix_i}\checkmark
 \end{align}
 但要注意，对于任意的$p_i$，这都是一个解。因此我们发现有无穷多个动量算符$\hat{p}_i=-i\partial_i$的本征函数。能量本征函数同理
 \begin{align}
 i\partial_0\Phi=E\Phi
 \end{align}
-或者角动量的本征函数\mpar{对于角动量的本征函数来时就要更复杂一点，因为这里的算符比其它的算符本身就要更复杂。我们找不到一组三个角动量分量共同的本征态，因为$[\hat{L}_i,\hat{L}_j]\neq0$。这在后面就会仔细的讨论，最终的结果就是我们选取的本征函数是角动量第三个方向$\hat{L}_3$（和角动量算符的平方$\hat{L}^2$，其与其它的角动量分量都对易$[\hat{L}^2,\hat{L}_j]=0$）作为使用的完备归一的基，即著名的{\bf 球谐函数基}。}。类比于矩阵的本征矢量，这些本征函数可以看做基\mpar{在矩阵中，本征矢量是矩阵对应的矢量空间的基}，而这就意味着我们可以把任意的函数$\Psi$按照这些基进行展开。例如，在动量本征函数\mpar{注意，这其实就是我们在附录\ref{appendixD.1}中介绍的Fourier变换，因子$\frac{1}{\sqrt{2\pi}}$是出于惯例的考虑。}进行展开（为了方便，在一维中进行这个操作）
+或者角动量的本征函数\mpar{角动量本征函数的求解更加复杂，因为角动量算符比其它算符本身就更复杂。我们找不到一组三个角动量分量共同的本征态，因为$[\hat{L}_i,\hat{L}_j]\neq0$。这在后面就会详细讨论，最终选取的本征函数是角动量第三个方向$\hat{L}_3$（和角动量算符的平方$\hat{L}^2$，它与其它的角动量分量都对易$[\hat{L}^2,\hat{L}_j]=0$）的完备归一基，即著名的{\bf 球谐函数基}。}。类比于矩阵的本征矢量，这些本征函数可以看做基\mpar{在矩阵中，本征矢量是矩阵对应的矢量空间的基}，而这就意味着我们可以把任意的函数$\Psi$按照这些基进行展开。例如，在动量本征函数\mpar{注意，这其实就是我们在附录\ref{appendixD.1}中介绍的Fourier变换，因子$\frac{1}{\sqrt{2\pi}}$是出于惯例的考虑。}进行展开（简明起见，考虑一维情形）
 \begin{align}
-\Psi=\frac{1}{\sqrt{2\pi}}\int_{-\infty}^\infty dp\Psi_pe^{-ipx}
+\label{equ8.6}
+	\Psi=\frac{1}{\sqrt{2\pi}}\int_{-\infty}^\infty dp\Psi_pe^{-ipx}
 \end{align}
-其中，$\Psi_p$是展开的系数，类似于矢量$\vec{v}=v_1\vec{e}_1+v_2\vec{e}_2+v_3\vec{e}_3$中的$v_1,v_2,v_3$。对于一些系统来说，我们的边界条件使得最后得到的基是离散而不连续的。我们可以，比如说，用能量本征态$\Phi_{E_c}$进行展开：
+其中，$\Psi_p$是展开系数，类似于矢量$\vec{v}=v_1\vec{e}_1+v_2\vec{e}_2+v_3\vec{e}_3$中的$v_1,v_2,v_3$。对于一些系统来说，我们的边界条件使得最后得到的基是离散而不连续的。我们可以，比如说，用能量本征态$\Phi_{E_c}$进行展开：
 \begin{align}
-\Psi=\sum_n c_n\Phi_{E_n}
+\label{equ8.7}
+	\Psi=\sum_n c_n\Phi_{E_n}
 \end{align}
-注意，一般来说，一个算符的一组本征函数并不是另一个算符的本征函数。只有当两个算符对易，即$[A,B]=AB-BA=0$的是时候，我们可以找到一组同时是两个算符本征函数的基。关于这点，我们假定有$[C,D]\neq0\to CD\neq DC$，而对于$C$的某个本征函数$\Psi$，我们有$C\Psi=c\Psi$，其中$c$是它的本征值。如果$\Psi$同时也是$D$的本征函数$D\Psi=d\Psi$，则有
+注意，一般来说，一个算符的本征函数并不是另一个算符的本征函数。只有当两个算符对易，即$[A,B]=AB-BA=0$时，才可以找到一组同时是两个算符本征函数的基。下面证明这个命题。设$[C,D]\neq0\to CD\neq DC$，而对于$C$的某个本征函数$\Psi$，有$C\Psi=c\Psi$，其中$c$是它的本征值。如果$\Psi$同时也是$D$的本征函数$D\Psi=d\Psi$，则有
 \[CD\Psi=Cd\Psi\underbrace{=}_{\mathclap{\text{因为$d$只是一个数}}}dC\Psi=dc\Psi \]
 \[DC\Psi=Dc\Psi=cD\Psi=cd\Psi\underbrace{=}_{\mathclap{\text{因为数之间互相对易}}}dc\Psi \]
 \begin{align}
-\to DC=CD\quad \text{这个与$[C,D]\neq0$矛盾}
+\label{equ8.8}
+	\to DC=CD\quad \text{这与$[C,D]\neq0$矛盾，因而不存在共同的本征函数。}
 \end{align}
 
-一般来说，我们的算符作用在我们称之为\mpar{这里使用$\Psi$是出于量子力学的惯例；尽管在此之前我们都仅仅用它来代表旋量，我们这里也可以用它来代表自旋$0$的粒子。}描述物理系统的{\bf 态}$\Psi$上。我通过解运动方程来得到这个$\Psi$。
+一般来说，物理量算符作用在描述物理系统的{\bf 态}\mpar{这里使用$\Psi$是出于量子力学的惯例，尽管前面只用它表示描述自旋$0$粒子的旋量。}$\Psi$上，通过求解运动方程得到$\Psi$。
 
-而一般的，这种解如果我们按照某组基展开都会有超过一项。举个例子，考虑我们的态用两个能量本征态\mpar{这意味着所有的展开系数$\Psi=\sum_nc_n\Phi_{E_n}$是零。}来写出来$\Psi=c_1\phi_{E_1}+c_s\phi_{E_2}$，则作用能量算符在上面我们得到
+一般的解按照某组基展开都会超过一项。举个例子，考虑两个能量本征态\footnote{即能量算符（蛤密顿算符）$\hat{H}$的本征态，能量本征值为$E$的本征态记作$\Phi_E$.}$\Psi = c_1 \Phi_{E_1} + c_2 \Phi_{E_2}$\mpar{这意味着所有的展开系数$\Psi=\sum_nc_n\Phi_{E_n}$是零。}，能量算符作用于它可得
 \begin{align}
-\hat{E}\Psi=\hat{E}(c_1\phi_{E_1}+c_s\phi_{E_2})=c_1E_1\phi_{E_1}+c_2E_2\phi_{E_2}\neq E(c_1\phi_{E_1}+c_s\phi_{E_2})
+\label{equ8.9}
+	\hat{E}\Psi = \hat{E}(c_1\Phi_{E_1} + c_2\Phi_{E_2})=c_1E_1\Phi_{E_1}+c_2E_2\Phi_{E_2}\neq E(c_1\Phi_{E_1}+c_2\Phi_{E_2})
 \end{align}
-一般来说，不同能量（的能量本征态）形成的{\bf 叠加态}是不是能量算符的本征态的，因为本征态需要满足定义，即存在某个数$E$使得$\hat{E}\Psi=E\Psi$。但是，用$\Psi$描述的系统的能量是多少呢？两个能量本征态的叠加态又意味着什么呢？我们如何用物理的术语来解释这些事情？
+由此可见不同能量（的能量本征态）形成的{\bf 叠加态}一般不是能量算符的本征态，因为本征态需要满足定义——存在某个数$E$使得$\hat{E}\Psi=E\Psi$。不过，处于$\Psi$状态系统的能量是多少呢？两个能量本征态的叠加态又意味着什么呢？它的物理意义是什么？
 
-首先我们能从拉格朗日量的$U(1)$对称性中得到一点提示，它让我们看到从$\Psi$的运动方程得到的解并不直接与物理相等\mpar{如果我们假定$\Psi$某种程度上直接的描述粒子，那么其同样存在的$U(1)$变换的解$\Psi'=e^{i\alpha}\Psi$描述的是什么呢？}。
+首先我们能从拉格朗日量的$\mathcal{U}(1)$对称性中得到一点提示，它表明从$\Psi$的运动方程得到的解没有直接的物理意义\mpar{如果假定$\Psi$直接描述粒子，那么它的$\mathcal{U}(1)$变换$\Psi'=e^{i\alpha}\Psi$（也是运动方程的解）描述的是什么呢？}。
 
-另一方面，注意到对于运动方程我们的道德所有的解都是$\vec{x},t$的函数\mpar{下一节会对这点详细说明}，即$\Psi=\Psi(\vec{x},t)$。
+另一方面，注意到运动方程所有的解都是$\vec{x},t$的函数\mpar{下一节会对这点详细说明。}，即$\Psi=\Psi(\vec{x},t)$。
 
-标准的诠释方式是，波函数$\Psi(\vec{x},t)$的模长的平方$|\Psi(\vec{x},t)|^2$给出了它位置的概率密度。注意$U(1)$对称性对于$|\Psi|^2=\Psi^\dagger\Psi\to(\Psi')^\dagger(\Psi')=\Psi^\dagger e^{-i\alpha}e^{i\alpha}\Psi=\Psi^\dagger\Psi$这样的量是没有影响的。换句话说，$\Psi(x,t)$是在$[x,x+dx]$区间内测量到粒子的概率振幅。因此，如果我们对整个空间积分的话，我们有
+标准的诠释是，{\bf 波函数}$\Psi(\vec{x},t)$模长的平方$|\Psi(\vec{x},t)|^2$表示粒子位置的概率密度。注意$\mathcal{U}(1)$变换对于$|\Psi|^2=\Psi^\dagger\Psi\to(\Psi')^\dagger(\Psi')=\Psi^\dagger e^{-i\alpha}e^{i\alpha}\Psi=\Psi^\dagger\Psi$这样的量是没有影响的。换句话说（以一维情形为例），$\Psi(x,t)$是在$[x, x+dx]$区间内测量到粒子的概率密度\footnote{即在区间$[x, x + dx]$测量到粒子的概率为$|\Psi(x, t)|^2 dx$.}。因此，如果对整个空间积分的话，必定有
 \begin{align}
-\int dx\Psi^*(x,t)\Psi(x,t)\overset{!}{=}1
+\label{equ8.10}
+	\int dx\Psi^*(x,t)\Psi(x,t)\overset{!}{=}1
 \end{align}
-这被称为归一化处理，因为在空间中找到一个粒子的概率必须为$100\%=1$。
+这称为波函数的归一化，因为在全空间中找到一个粒子的概率必定为$100\%=1$。
 
-如果我们想要对其它物理量做出一些语言，我们必须把波函数用相应的基展开。比如说用能量本征函数$\Psi=c_1\Phi_{E_1}+c_2\Phi_{E_2}+\cdots$。标准的量子力学诠释是，测量由$\Psi$描述的体系，并且测量到某一个能量本征值为$E_1$的概率为$\Psi$与$\Phi_{E_1}$的函数交叠
+如果要预言其他物理量，则必须把波函数用相应的本征函数基展开。比如说用能量本征基展开：$\Psi=c_1\Phi_{E_1}+c_2\Phi_{E_2}+\cdots$。标准的量子力学诠释是，测量$\Psi$状态的体系的能量，所得结果只能为能量本征值，测量结果为本征值$E_1$的概率为$\Psi$与能量本征函数$\Phi_{E_1}$的“交叠”（的绝对值平方）：
 \[P(E_1)=\left|\int dx\Phi^*_{E_1}(x,t)\Psi(x,t)\right|^2 \]
-在我们的例子中，它就是
+在上面的例子中，它就是
 \begin{align}
-\begin{split}
-P(E_1)&=\left|\int dx\Phi^*_{E_1}(x,t)\Psi(x,t)\right|^2 =\left|\int dx\Phi^*_{E_1}(x,t)(c_1\Phi_{E_1}+c_2\Phi_{E_2}+\cdots)\right|^2 \\
-&=\left|c_1\underbrace{\int dx\Phi^*_{E_1}(x,t)\Phi_{E_1}}_{=1\text{ 如之前所讲}}+\underbrace{\int dx\Phi^*_{E_1}(x,t) (c_2\Phi_{E_2}+\cdots)}_{\mathclap{=0\text{ 因为本征态是正交的}}}\right|^2\\
-&=|c_1|^2
-\end{split}
+\label{equ8.11}
+	\begin{split}
+	P(E_1)&=\left|\int dx\Phi^*_{E_1}(x,t)\Psi(x,t)\right|^2 =\left|\int dx\Phi^*_{E_1}(x,t)(c_1\Phi_{E_1}+c_2\Phi_{E_2}+\cdots)\right|^2 \\
+	&=\left|c_1\underbrace{\int dx\Phi^*_{E_1}(x,t)\Phi_{E_1}}_{=1\text{ 如之前所讲}}+\underbrace{\int dx\Phi^*_{E_1}(x,t) (c_2\Phi_{E_2}+\cdots)}_{\mathclap{=0\text{ 因为本征态是正交的}}}\right|^2\\
+	&=|c_1|^2
+	\end{split}
 \end{align}
-类似的，如果我们可以将其他的什么$\Psi(\vec{x},t)$展开成动量本征函数
-\[\Psi(\vec{x},t)=\frac{1}{\sqrt{2\pi}}\int_{-\infty}^{\infty}dp\Psi(\vec{p},t)e^{-i\vec{p}\cdot\vec{x}} \]
-我们就有$\Psi(\vec{p},t)$是系统动量处于$[p,p+dp]$区间内的概率振幅。
+类似的，可以将$\Psi(\vec{x}, t)$用动量本征函数展开：
+\[\Psi(\vec{x},t)=\frac{1}{\sqrt{2\pi}}\int_{-\infty}^{\infty}d^3 p\Psi(\vec{p},t)e^{-i\vec{p}\cdot\vec{x}}, \]
+则$\Psi(\vec{p},t)$是系统动量处于$[p,p+dp]$区间内的概率幅。
 
-这种解释可以用来对系统做几率性预测，比如用下一节介绍的统计期望值的办法。之后需我们会得到非相对论性量子力学的运动方程，并看两个例子。
+这种解释可以用来对系统做几率性预测，比如用下一节介绍的统计期望值的办法。之后我们会导出非相对论性量子力学的运动方程，并看两个例子。
 
-\subsection[期望值]{Expectation Value 期望值}\label{sec8.3.1}
+\subsection[期望值]{Expectation Value \quad 期望值}\label{sec8.3.1}
 
 统计学中，期望值是类比于加权平均定义的。比如，如果掷骰子十次得到的结果为$2,4,1,3,3,6,3,1,4,5$，那么它的平均值就是
 \[\langle x \rangle = (2+4+1+3+3+6+3+1+4+5)\cdot\frac{1}{10}=3.2 \]
@@ -124,81 +127,83 @@ P(E_1)&=\left|\int dx\Phi^*_{E_1}(x,t)\Psi(x,t)\right|^2 =\left|\int dx\Phi^*_{E
 \[\langle x \rangle = \frac{2}{10}\cdot1+\frac{1}{10}\cdot2+\frac{3}{10}\cdot3+\frac{2}{10}\cdot4+\frac{1}{10}\cdot5+\frac{1}{10}\cdot6=3.2 \]
 一般的，我们可以写
 \begin{align}
-\langle x\rangle = \sum_i\rho_i x_i
+\label{equ8.12}
+	\langle x\rangle = \sum_i\rho_i x_i
 \end{align}
-其中$\rho_i$表示几率。对一个连续分布的情况我们同样有
+其中$\rho_i$表示几率。对一个连续分布的情况同样有
 \begin{align}
-\langle x\rangle = \int dx\rho(x)x
+\label{equ8.13}
+	\langle x\rangle = \int dx\rho(x)x
 \end{align}
 
-在量子力学中，物理量$\hat{\mathcal{O}}$期望值是类比着定义的
+类比上面的形式，在量子力学中物理量$\hat{\mathcal{O}}$期望值的定义为
 \begin{align}
-\langle \hat{\mathcal{O}}\rangle = \int d^3x\Psi^*\hat{\mathcal{O}}\Psi
+\label{equ8.14}
+	\langle \hat{\mathcal{O}}\rangle = \int d^3x\Psi^*\hat{\mathcal{O}}\Psi
 \end{align}
-一般的，我们必须把$\Psi$按照$\hat{\mathcal{O}}$的本征函数展开，比如说动量本征函数。然后，把算符$\hat{\mathcal{O}}$作用在这些态上，得到对应的本征值，然后我们就得到了加权和。
+一般的，要把$\Psi$按照$\hat{\mathcal{O}}$的本征函数展开，比如说动量本征函数。然后，把算符$\hat{\mathcal{O}}$作用在这些态上，得到对应的本征值，这样就得到了加权和。
 
-举个例子，我们有一些例子的坐标的期望值
+举个例子，处于$\Psi$态的粒子的坐标期望值为
 \begin{align}
-\langle \hat{x}\rangle = \int d^3x\Psi^*\hat{x}\Psi= \int d^3x\Psi^*{x}\Psi= \int d^3xx\underbrace{\Psi^*\Psi}_{\mathclap{\text{在该位置的几率密度}}}
+\label{equ1.15}
+	\langle \hat{x}\rangle = \int d^3x\Psi^*\hat{x}\Psi= \int d^3x\Psi^*{x}\Psi= \int d^3x\, x\underbrace{\Psi^*\Psi}_{\mathclap{\text{在位置}x\text{的几率密度}}}
 \end{align}
 
-为了计算方便，我们现在取Klein-Gordon方程的非相对论极限。
+为了计算方便，下面取Klein-Gordon方程的非相对论极限。
 
 
-\section[Schrödinger 方程]{Schrödinger Equation Schrödinger 方程}\label{sec8.4}
+\section[Schrödinger 方程]{Schrödinger Equation \quad Schrödinger 方程}\label{sec8.4}
 Klein-Gordon方程有平面波解
-\[\Phi = e^{\pm ip_\mu x^\mu}=\equiv e^{\pm ip\cdot x} \]
-其中，$p_\mu=(E,\vec{p})^T$，是粒子守恒的四动量。我们可以看到
+\[\Phi = \mathrm{e}^{\pm ip_\mu x^\mu} \equiv \mathrm{e}^{\pm ip\cdot x} \]
+其中，$p_\mu=(E,\vec{p})^T$，是粒子四动量（满足守恒律）：
 \begin{align}
-\begin{split}
-0&=(\partial_\mu\partial^\mu+m^2)\Phi\\
-&=(\partial_\mu\partial^\mu+m^2)e^{\pm ip_\mu x^\mu}\\
-&=(ip_\mu p^\mu+m^2)e^{\pm ip_\mu x^\mu}=0\\
-&=(-m^2+m^2)e^{\pm ip_\mu x^\mu}=0\quad \checkmark
-\end{split}
+	0&=(\partial_\mu\partial^\mu+m^2)\Phi \notag \\
+	&=(\partial_\mu\partial^\mu+m^2) \mathrm{e}^{\pm ip_\mu x^\mu} \notag \\
+	&=(i^2 p_\mu p^\mu+m^2) \mathrm{e}^{\pm ip_\mu x^\mu}=0 \notag \\
+\label{equ8.16}
+	&=(-m^2+m^2) \mathrm{e}^{\pm ip_\mu x^\mu}=0\quad \checkmark
 \end{align}
 
 我们可以把解写成稍不同的形式
-\[\Phi=e^{\pm ip_\mu x^\mu}=\Phi=e^{i(-Et+\vec{x}\cdot\vec{p})} \]
-然后我们可以看到对时间的依赖是$e^{-iEt}$，即$\Phi\propto e^{-iEt}$。从\eqref{eq8.2}中我们知道
-\[E=\sqrt{\vec{p}^2+m^2}=\sqrt{m^2\left(\frac{\vec{p}^2}{m^2}+1\right)}=m\sqrt{\frac{\vec{p}^2}{m^2}+1} \]
-在非相对论极限下$|\vec{p}|\ll m$，这就意味着我们的研究对象的移动速度比光速要慢很多，从而其动量比质量也要小很多，我们因此就可以利用泰勒展开得到能量的近似
+\[\Phi = \mathrm{e}^{\pm ip_\mu x^\mu}=\Phi= \mathrm{e}^{i(-Et+\vec{x}\cdot\vec{p})} \]
+$\Phi$的时间部分是$\mathrm{e}^{-iEt}$，即$\Phi\propto \mathrm{e}^{-iEt}$。从\eqref{equ8.2}式可知
+\[E=\sqrt{\vec{p}^2+m^2}=\sqrt{m^2\left(\frac{\vec{p}^2}{m^2}+1\right)}=m\sqrt{\frac{\vec{p}^2}{m^2}+1}. \]
+在非相对论极限$|\vec{p}|\ll m$下，即研究对象的移动速度比光速要慢很多，从而其动量比质量也要小很多的情形下，可以对能量进行Taylor展开：
 \[\begin{split}
 E&=m\left(1+\frac{1}{2}\frac{\vec{p}^2}{m^2}+\cdots\right)\\
-&\to E\approx\underbrace{m}_{\mathclap{\text{静质量}}}+\underbrace{\frac{\vec{p}^2}{2m}}_{\mathclap{\text{动能}}}
+&\to E\approx\underbrace{m}_{\mathclap{\text{静质量}}}+\underbrace{\frac{\vec{p}^2}{2m}}_{\mathclap{\text{动能}}}.
 \end{split} \]
-我们现在可以写
+于是
 \begin{align}
-\Phi=e^{i(-Et+\vec{x}\cdot\vec{p})}\approx e^{-imt}\underbrace{e^{i\vec{p}\cdot\vec{x}-i(p^2/2m)t}}_{\equiv\phi(\vec{x},t)}=e^{-imt}\phi(\vec{x},t)
+\label{equ8.17}
+	\Phi=\mathrm{e}^{i(-Et+\vec{x}\cdot\vec{p})}\approx \mathrm{e}^{-imt}\underbrace{\mathrm{e}^{i\vec{p}\cdot\vec{x}-i(p^2/2m)t}}_{\equiv\phi(\vec{x},t)}=\mathrm{e}^{-imt}\phi(\vec{x},t)
 \end{align}
 
-从$|\vec{p}|\ll m$中，我们利用了静质量远大于动能的效应，因此时间相关的振动中除了$e^{-imt}$之外的成分是很小的。如果我们把这个作为试探\footnote{译者注：ansatz是个很奇怪的词，我不知道怎么翻译。。比如Bethe-Ansatz，叫Bethe近似嘛也不对，叫啥都不对}带入Klein-Gordon方程，我们就有
-\[(\partial_\mu\partial^\mu+m^2)e^{-imt}\phi(\vec{x},t)=(\partial_0\partial^0+\partial_i\partial^i+m^2)e^{-imt}\phi(\vec{x},t)=0 \]
-然后我们用$\partial_te^{-imt}(\dots)=e^{-imt}(-im+\partial_t)(\dots)$，即简单的把微分算符作用出来，我们得到
-\[e^{-imt}((-im+\partial_t)^2+\partial_i\partial^i+m^2)\phi(\vec{x},t)=0 \]
-我们可以除掉$e^{-imt}$，因为它肯定不是零。因此，
+由$|\vec{p}|\ll m$可知静质能远大于粒子动能，因此$\phi(\vec{x}, t)$的振动频率远低于$\mathrm{e}^{-imt}$. 把$\mathrm{e}^{-imt}\phi(\vec{x},t)$作为试探解\footnote{译者注：ansatz是个很奇怪的词，我不知道怎么翻译。。比如Bethe-Ansatz，叫Bethe近似嘛也不对，叫啥都不对。}带入Klein-Gordon方程可得\footnote{原文下式有误，译文已按照勘误表改正。}
+\[(\partial_\mu\partial^\mu+m^2) \mathrm{e}^{-imt}\phi(\vec{x},t)=(\partial_0\partial^0 - \partial_i\partial^i+m^2) \mathrm{e}^{-imt}\phi(\vec{x},t)=0. \]
+根据莱布尼兹律，$\partial_t \mathrm{e}^{-imt}(\dots)= \mathrm{e}^{-imt}(-im+\partial_t)(\dots)$，即简单的把微分算符作用出来，我们得到
+\[\mathrm{e}^{-imt} \big( (-im + \partial_t)^2 + \partial_i\partial^i + m^2 \big) \phi(\vec{x},t) = 0, \]
+两边可以除掉$\mathrm{e}^{-imt}$，因为它肯定不是零。因此，
 \[\begin{split}
-\to((-im+\partial_t)^2+\nabla^2+m^2)\phi(\vec{x},t)=0\\
-\to(-m^2-2im\partial_t+(\partial_t)^2+\nabla^2+m^2)\phi(\vec{x},t)=0
+\to \big((-im+\partial_t)^2+\nabla^2+m^2 \big)\phi(\vec{x},t)=0\\
+\to \big( -m^2 - 2im\partial_t + (\partial_t)^2 + \nabla^2 + m^2 \big) \phi(\vec{x},t)=0.
 \end{split} \]
 把第三项
 \begin{align}
-\begin{split}
-(\partial_t)^2\phi(\vec{x},t)&=(\partial_t)^2\exp[i\vec{p}\cdot\vec{x}-i(\vec{p}^2/2m)t]\\
-&=(\vec{p}^2/2m)^2\exp[i\vec{p}\cdot\vec{x}-i(\vec{p}^2/2m)t]\propto\frac{p^4}{m^2}
-\end{split}
+	(\partial_t)^2 \phi(\vec{x},t) &= (\partial_t)^2 \exp\big[i\vec{p}\cdot\vec{x}-i(\vec{p}^2/2m)t \big] \notag \\
+\label{equ8.18}
+	&= \left(\frac{\vec{p}^2}{2m}\right)^2 \exp\big[ i\vec{p}\cdot\vec{x} - i(\vec{p}^2/2m)t \big] \propto\frac{p^4}{m^2}.
 \end{align}
 与第二项对比
 \begin{align}
-\begin{split}
-im\partial_t\phi(\vec{x},t)&=im\partial_t\exp[i\vec{p}\cdot\vec{x}-i(\vec{p}^2/2m)t]\\
-&=m(\vec{p}^2/2m)\exp[i\vec{p}\cdot\vec{x}-i(\vec{p}^2/2m)t]\propto\frac{p^4}{m^2}
-\end{split}
+	im\partial_t\phi(\vec{x},t) &= im\partial_t\exp \big[i\vec{p}\cdot\vec{x} - i(\vec{p}^2/2m)t \big] \notag \\
+\label{equ8.19}
+	&= m \left( \frac{\vec{p}^2}{2m} \right) \exp\big[i\vec{p}\cdot\vec{x}-i(\vec{p}^2/2m)t \big] \propto p^2.
 \end{align}
 这表明，在$|\vec{p}|\ll m$的极限下，我们可以忽略掉第三项，因此
 \[\begin{split}
 (-2im\partial_t+\nabla^2)\phi(\vec{x},t)=0\\
-\underbrace{\to}_{\mathclap{\text{除掉}(-2m)}}\left(i\partial_t=\frac{1}{2m}\nabla^2\right)\phi(\vec{x},t)=0
+\underbrace{\to}_{\mathclap{\text{除掉}(-2m)}}\left(i\partial_t-\frac{1}{2m}\nabla^2\right)\phi(\vec{x},t)=0.
 \end{split}\]
 
 
@@ -220,7 +225,7 @@ im\partial_t\phi(\vec{x},t)&=im\partial_t\exp[i\vec{p}\cdot\vec{x}-i(\vec{p}^2/2
 
 现在可以来讨论量子力学中最奇妙的特征之一了。从上节我们已经知道，对粒子x方向上自旋的测量会破坏我们已知的在z方向上粒子自旋的信息，这一情况在量子力学中的很多测量中都存在。我们可以从\mpar{我们把自旋算子和对应的有限维旋转生成元认同，其满足对易关系$[J_i,J_j]=J_i J_j -J_j J_i=i\epsilon_{ijk}J_k\ne 0 \to J_i J_j \ne J_j J_i$。 举个例子来说，如果我们描述的是自旋1/2的粒子，那么我们应采用对应的二维表示$J_i={\sigma_i \over 2}$。} $\hat S_x \hat S_z \ne \hat S_z \hat S_x$ 出发来考察这一点，此式说明先对z 方向自旋后对x 方向自旋进行测量和先对x 方向自旋后对z 方向自旋进行测量的结果是不同的。这一点并不令人惊奇，因为对z 方向自旋进行测量后，系统应处于$\hat S_z$ 的一个本征态上，而对x 方向自旋进行测量后，系统应处于$\hat S_x$ 的本征态上，而$\hat S_z$ 和$\hat S_x$的本征态均不同，最后的结果也就并不相同。
 \par
-我们可以换种角度来描述这个现象：\textbf{我们不能同时确定系统z方向和x方向的自旋状态！}每次我们测量z方向的自旋时，都会让x方向的自旋信息再次变为未知，反之亦然。这一结论对于z 方向/x方向和y方向的自旋也是一样的。
+我们可以换种角度来描述这个现象：{\bf 我们不能同时确定系统z方向和x方向的自旋状态！}每次我们测量z方向的自旋时，都会让x方向的自旋信息再次变为未知，反之亦然。这一结论对于z 方向/x方向和y方向的自旋也是一样的。
 \par
 你也许觉得自旋是比较奇怪的物理量，但我们在粒子位置和动量的测量上也发现了同样的结果。回顾一下式(5.3)，为了方便我们在这里重新写一遍：
 \begin{equation}
@@ -233,19 +238,16 @@ im\partial_t\phi(\vec{x},t)&=im\partial_t\exp[i\vec{p}\cdot\vec{x}-i(\vec{p}^2/2
 \par
 这一点可能并不像看上去那么令人惊奇。量子力学使用对应对称的生成元作为测量算子，比如说，对动量的测量等价于平移生成元的作用\mpar{记住，系统的平移不变性使我们导出动量守恒定律。}，这一生成元将我们的系统平移了一小点，所以粒子的位置也被改变了。真正令人惊奇的是大自然就是这么运作的，许多年来有很多实验验证Heisenberg不确定原理，它们都证明了这个原理的正确性。
 
-\section[对于几种诠释的评议]{Comments on Interpretations 对于几种诠释的评议}\label{sec8.7}
-\section[附录：Dirac 旋量分量的诠释]{Appendix: Interpretation of the Dirac Spinor Components 附录：Dirac 旋量分量的诠释}\label{sec8.8}
-<<<<<<< HEAD
-<<<<<<< HEAD
-\section[附录：Dirac 方程的求解]{Appendix: Solving the Dirac Equation 附录：Dirac 方程的求解}\label{sec8.9}
-=======
+
+
+\section[对几种诠释的评议]{Comments on Interpretations \quad 对几种诠释的评议}\label{sec8.7}
+
+\section*{阅读建议}
+
+\section[附录：Dirac旋量分量的诠释]{Appendix: Interpretation of the Dirac Spinor Components \quad 附录：Dirac旋量分量的诠释}附录：\label{sec8.8}
 
 \section[附录：解Dirac 方程]{Appendix: Solving the Dirac Equation 附录：解Dirac 方程}\label{sec8.9}
->>>>>>> origin/master
-=======
 
-\section[附录：解Dirac 方程]{Appendix: Solving the Dirac Equation 附录：解Dirac 方程}\label{sec8.9}
->>>>>>> origin/master
 {\it 和上节一样，我们把Dirac自旋量中的二分量量记做{\rm u}和{\rm v}，把四分量量记做$u$和$v$。也就是说例如$u_1,u_2$的记号代表的是四分量量，在不特别区分这些量的时候我们只写$u$。同时${\rm u_1}$和${\rm u_2}$是这个四分量量中的两个二分量量：$u=\pmm \rm u_1 \\ \rm u_2 \pmme $}。
 \par
 本附录中我们将在{\it 手性基底}上解{\it 静止参考系}下的Dirac方程。其他任意参考系的解能够通过本节解做伪转动变换得到。除了我们在上一节的讨论，我们在第六章讨论量子场论的时候也会用到这些解。\par
@@ -282,16 +284,9 @@ Dirac方程为：
 \begin{equation}
 \tilde \Psi_1=\pmm 1\\0\\-1\\0 \pmme e^{imt},~~~\tilde \Psi_2=\pmm 0\\1\\0\\-1 \pmme e^{imt}
 \end{equation}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
 
->>>>>>> origin/master
-=======
 
-
->>>>>>> origin/master
 \section[附录：Dirac 旋量的不同的基]{Appendix: Dirac Spinors in Different Bases 附录：Dirac 旋量的不同的基}\label{sec8.10}
 
 在拉格朗日量中，Dirac 旋量$\psi$总是和矩阵$\gamma_\mu$组合出现。
