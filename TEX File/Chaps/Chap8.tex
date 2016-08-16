@@ -1,8 +1,6 @@
-%!TEX encoding = UTF-8 Unicode
-
 %----------------------------------------------------------------------------------------
 %   CHAPTER 8
-%   translator: laserdog, 日始之音
+%   translator: laserdog, 日始之音, SI
 %   proofreader: SI
 %----------------------------------------------------------------------------------------
 \def\pmm{\begin{pmatrix}}
@@ -13,7 +11,7 @@
 \chapter[量子力学]{Quantum Mechanics \quad 量子力学}\label{chap8}
 
 {\Huge\bf 总结\\ \ \\}
-本章讲述量子力学，基于第\ref{chap5}章讲过的对应关系\footnote{物理量$\to$ 对称性生成元，见\ref{equ5.1}式。}，由此首先可导出{\bf 相对论性能量-动量关系}。
+本章讲述量子力学，基于第\ref{chap5}章讲过的对应关系\footnote{物理量$\to$ 对称性生成元，见\eqref{equ5.1}式。}，由此首先可导出{\bf 相对论性能量-动量关系}。
 
 在建立量子力学的基本框架后，我们就对Klein-Gordon方程（最简单的标量型粒子的运动方程）取非相对论极限，得到著名的{\bf Schrödinger方程}，方程解被解释为概率幅，随后我们用{\bf 波动力学}的方法分析两个简单例子。
 
@@ -44,7 +42,7 @@
 \end{align}
 这就是著名的狭义相对论{\bf 能量-动量关系}。上式应用于静止粒子($\vec{p} = 0$)即得到Einstein著名的质能方程：
 \[E^2=m^2\to E=mc^2 \]
-其中为了明确起见我们把$c^2$写回来。现在就理解了Poincare群的第一个Casimir算符$p_\mu p^\mu$的标量值（见\ref{equ3.258}式）为何选为$m^2$了。$p_\mu p^\mu$就代表着粒子质量的平方，而通过实验，比如说测量粒子的能量和动量，就可测量质量$m=\sqrt{E^2-\vec{p}^{\,2}}$。同理，我们也可以理解为什么\ref{sec6.2}节要把拉格朗日量里面的系数常数记作$m^2$。
+其中为了明确起见我们把$c^2$写回来。现在就理解了Poincare群的第一个Casimir算符$p_\mu p^\mu$的标量值（见\eqref{equ3.258}式）为何选为$m^2$了。$p_\mu p^\mu$就代表着粒子质量的平方，而通过实验，比如说测量粒子的能量和动量，就可测量质量$m=\sqrt{E^2-\vec{p}^{\,2}}$。同理，我们也可以理解为什么\ref{sec6.2}节要把拉格朗日量里面的系数常数记作$m^2$。
 
 \section[量子力学的数学形式]{The Quantum Formalism\quad 量子力学的数学形式}
 \label{sec8.3}
@@ -200,27 +198,429 @@ E&=m\left(1+\frac{1}{2}\frac{\vec{p}^2}{m^2}+\cdots\right)\\
 \label{equ8.19}
 	&= m \left( \frac{\vec{p}^2}{2m} \right) \exp\big[i\vec{p}\cdot\vec{x}-i(\vec{p}^2/2m)t \big] \propto p^2.
 \end{align}
-这表明，在$|\vec{p}|\ll m$的极限下，我们可以忽略掉第三项，因此
-\[\begin{split}
-(-2im\partial_t+\nabla^2)\phi(\vec{x},t)=0\\
-\underbrace{\to}_{\mathclap{\text{除掉}(-2m)}}\left(i\partial_t-\frac{1}{2m}\nabla^2\right)\phi(\vec{x},t)=0.
-\end{split}\]
+这表明，在$|\vec{p}|\ll m$的极限下，第三项可忽略，因此\footnote{原文下式有误，译文已按勘误表修改}
+\begin{align}
+	(-2im\partial_t+\nabla^2)\phi(\vec{x},t)=0 \notag \\
+	\underbrace{\to}_{\mathclap{\text{除以}(-2m)}}\left(i\partial_t-\frac{1}{2m}\nabla^2\right)\phi(\vec{x},t)=0 \notag \\
+\label{equ8.20}
+	\to \left( i \partial_t + \frac{\nabla^2}{2m} \right) \phi(\vec{x}, t) = 0,
+\end{align}
+这就是著名的{\bf Schrödinger 方程}。利用本章开头物理量与算符的对应关系，Schrödinger方程写为\footnote{原文下式有误，译文已按勘误表修改}
+\begin{align}
+	& \to \bigg( E - \underbrace{\frac{\vec{p}^2}{2m} }_{=\text{动能}} \bigg) \phi (\vec{x}, t) = 0  \notag \\
+\label{equ8.21}
+	& \to E = \frac{\vec{p}^2}{2m}.
+\end{align}
+此即为{\bf 非相对论性能量—动量关系}。
+
+从该式出发很容易考虑粒子位于外势场$V$中的情况，因为外势场中粒子的能量就是动能加势能：
+\[
+	\to E = \frac{\vec{p}^2}{2m} + V.
+\]
+典型的例子有谐振子势$V = -k x^2$. Schrödinger方程通常用所有能量算符的总和（例如动能$\frac{\nabla^2}{2m}$加势能$\hat{V}$）——蛤密顿算符$\hat{H}$表示，即：
+\begin{align}
+	i \partial_t \phi(\vec{x}, t) = \underbrace{\frac{\nabla^2}{2m} }_{\equiv \hat{H}} \phi(\vec{x}, t) \notag \\
+\label{equ8.22}
+	\to i \partial_t \phi(\vec{x}, t) = \hat{H} \phi(\vec{x}, t).
+\end{align}
+Dirac方程的非相对论极限的计算过程类似，所得结果称为Pauli方程。
 
 
 
 \subsection[有外场的 Schrödinger 方程]{Schrödinger Equation with External Field 有外场的 Schrödinger 方程}\label{sec8.4.1}
 
-此外，我们可以对{\bf 相互作用}Klein-Gordon方程\eqref{eq7.43}，即描述有质量的$0$自旋场与无质量的自旋$1$场（光子场）的方程，做同样的非相对论性近似。于是我们得到
+此外，我们可以对{\bf 相互作用}Klein-Gordon方程\eqref{equ7.43}式，即描述有质量的$0$自旋场与无质量的自旋$1$场（光子场）相互作用的方程，做同样的非相对论性近似。所得结果为
 \begin{align}
-\left(i\partial_t-\frac{1}{2m}\left(\nabla-ia\vec{A}\right)^2+q\Phi\right)\phi(\vec{x},t)=0
+\label{equ8.23}
+	\left(i\partial_t-\frac{1}{2m}\left(\nabla-ia\vec{A}\right)^2+q\Phi\right)\phi(\vec{x},t)=0
 \end{align}
 
-\section[从波动方程到粒子的运动]{From Wave Equations to Particle Motion 从波动方程到粒子的运动}\label{sec8.5}
-\subsection[例：自由粒子]{Example: Free Particle 例：自由粒子}\label{sec8.5.1}
-\subsection[例：盒子中的粒子]{Example: Particle in a Box 例：盒子中的粒子}\label{sec8.5.2}
-\subsection[Dirac符号]{Dirac Notation Dirac符号}\label{sec8.5.3}
-\subsection[例：盒子中的粒子，续]{Example: Particle in a Box, Again 例：盒子中的粒子，续}\label{sec8.5.4}
-\subsection[自旋]{Spin 自旋}\label{sec8.5.5}
+\section[从波动方程到粒子的运动]{From Wave Equations to Particle Motion \quad 从波动方程到粒子的运动}\label{sec8.5}
+本节讨论量子力学标准诠释的两个典型例子。
+
+\subsection[例：自由粒子]{Example: Free Particle \quad 例：自由粒子}\label{sec8.5.1}
+自由粒子（无外部势场）Schrödinger方程\eqref{equ8.20}式的一个特解（称为平面波解）为：
+\begin{equation}
+\label{equ8.24}
+	\Psi = \mathrm{e}^{-i (Et - \vec{p} \cdot \vec{x})},
+\end{equation}
+验证：
+\begin{align}
+	i \partial_t \mathrm{e}^{-i (Et - \vec{p} \cdot \vec{x}) } &= -\frac{\nabla^2}{2m} \mathrm{e}^{-i (Et - \vec{p} \cdot \vec{x}) } \notag \\
+\label{equ8.25}
+	\to E \mathrm{e}^{-i(Et - \vec{p} \cdot \vec{x}) } &= \frac{\vec{p}^2}{2m} \mathrm{e}^{-i(Et - \vec{p} \cdot \vec{x}) }.
+\end{align}
+其中$E$是自由粒子总能量的值，$E = \frac{\vec{p}^2}{2m}$（\eqref{equ8.21}式）。各特解的线性组合为更一般的解：
+\[ \Psi = A \mathrm{e}^{-i(Et - \vec{p} \cdot \vec{x}) } + B \mathrm{e}^{-i (E' t + \vec{p}' \cdot \vec{x}) } + \dots . \]
+
+	\marginpar{
+		\centering
+		\includegraphics[scale=0.35]{fig8_1.png} 
+		\figcaption{自由高斯波包图示。 Figure by Inductiveload (Wikimedia Commons) released under
+		a public domain licence. URL: \url{http: //commons.wikimedia.org/wiki/File: Travelling_Particle_Wavepacket.svg ,Accessed: 4.5.2014}}}
+
+波函数$\Psi$被诠释为概率幅，因此描述真实粒子的波函数必定是归一化的，因为在粒子在全空间的概率为$100\% = 1$. 上面的波函数不能归一化，它散布在全空间。因此采用平面波的合适的线性组合（称为波包(wave-packet)）来描述一个真实的自由粒子：
+\begin{equation}
+\label{equ8.26}
+	\Psi_{WP} (\vec{x}, t) = \int d^3 p A(\vec{p}) \mathrm{e}^{i (\vec{p} \cdot \vec{x} - Et)},
+\end{equation}
+其中系数$A(\vec{p})$为复数，由归一化条件求出。典型的波包是高斯波包，它的$A(\vec{p})$服从高斯分布：
+\[
+	\Psi_{GWP} = \int d^3 p\, A(\vec{p}) \mathrm{e}^{i (\vec{p} \cdot \vec{x} - Et)} = \int d^3 p\, \psi_0 \mathrm{e}^{i (\vec{p} - \vec{\tilde{p}})^2 / 4\sigma^2} \mathrm{e}^{i (\vec{p} \cdot \vec{x} - Et)}.
+\]
+其中$\vec{\tilde{p}}$为常数向量。
+
+典型的高斯波包如图8.1. 在实际计算中经常采用特殊技巧避免求解复杂波包，而是处理更简单的波函数。
+
+\subsection[例：盒子中的粒子]{Example: Particle in a Box \quad 例：盒子中的粒子}\label{sec8.5.2}
+	\marginpar{
+		\centering
+		\includegraphics[scale=0.1]{fig8_2.png} 
+		\figcaption{一维无限深势阱（硬盒）。  Figure by Benjamin D. Esham (Wikimedia Commons) released under a public domain licence. URL: \url{http: //commons.wikimedia.org/wiki/File:Infinite_potential_well.svg}, Accessed: 4.5.2014 }
+	}
+
+下面讨论量子力学的标准例子\footnote{几乎任何一本量子力学教材都会有吧……}：一个粒子被限制在一维的、势垒无限高的硬盒内，即，盒子内的势能为零，盒外的势能为无穷大，如图8.2.
+
+无限深势阱数学上用一个分段函数表示：
+\begin{equation}
+\label{equ8.27}
+	V = 
+		\begin{cases}
+			0, & 0 < x < L, \\
+			\infty, & \text{其它}.
+		\end{cases}
+\end{equation}
+因此需要分段求解Schrödinger方程
+\[
+	i \partial_t \Psi(\vec{x}, t) = -\frac{1}{2m} \partial_x^2 \Psi(x, t) + V(x) \Psi(x, t).
+\]
+\begin{itemize}
+	\item 势阱内$V = 0, 0 < x < L$，方程的解即为自由粒子波函数。
+	\item 势阱外$V = \infty$，具有物理意义的解仅有$\Psi(x, t) = 0$，即由于势垒无穷大，粒子不可能在势阱外出现。
+\end{itemize}
+
+将自由粒子波函数的一般形式写为\mpar{下式利用了$\sin x = \frac{1}{2i} (\mathrm{e}^{ix} - \mathrm{e}^{-ix}$以及$\cos x = \frac{1}{2} (\mathrm{e}^{ix} + \mathrm{e}^{-ix})$, 这两个式子可以从$\cos x, \sin x, \mathrm{e}^{ix}$的级数展开式导出，详见附录B.4.1.}：
+\begin{align*}
+	\Psi (x, t) &= A \mathrm{e}^{-i (Et - \vec{p} \cdot \vec{x})} + B \mathrm{e}^{-i (Et + \vec{p} \cdot \vec{x})} \\
+	&= \Big( C \sin (\vec{p} \cdot \vec{x}) + D \cos (\vec{p} \cdot \vec{x}) \Big) \mathrm{e}^{-iEt},
+\end{align*}
+利用\eqref{equ8.21}式表示的非相对论能量-动量关系，上式写为：
+\begin{align}
+	E &= \frac{\vec{p}^2}{2m} \to |\vec{p}| = \sqrt{2mE} \notag \\
+\label{equ8.28}
+	\Psi (x, t) &= \Big( C \sin (\sqrt{2mE} x) + D \cos (\sqrt{2mE} x) \Big) \mathrm{e}^{-iEt}
+\end{align}
+利用波函数的连续性\mpar{如果波函数在某处不连续，则粒子动量$\hat{p}_x \Psi = -i\partial_x \Psi$为无穷大（跃变点处的导数无穷大），不符合基本法。}可得边界条件为$Psi(0) = \Psi(L) \stackrel{!}{=} 0.$ 带入上式，由于$\cos 0 = 1$故而$D \stackrel{!}{=} 0$. 此外还有
+\begin{equation}
+\label{equ8.29}
+	\sqrt{2mE} \stackrel{!}{=} \frac{n\pi}{L}, \quad n = 1, 2, 3, \dots
+\end{equation}
+于是满足边界条件的波函数为\mpar{注意下面给波函数添加了编号$n$，因为由上式可见每个$n$都对应一个解。}：
+\begin{equation}
+\label{equ8.30}
+	\Phi_n (x, t) = C \sin \left( \frac{n \pi}{L} x \right) \mathrm{e}^{-i E_n t}.
+\end{equation}
+验证：
+\begin{align*}
+	\to \Phi_n (L, t) &= C \sin \left( \frac{n\pi}{L} L \right) \mathrm{e}^{-i E_n t} = C \sin(n \pi) \mathrm{e}^{-i E_n t} = 0 \quad \checkmark \\
+	\to \Phi_n (0, t) &= C \sin \left( \frac{n\pi}{L} 0 \right) \mathrm{e}^{-i E_n t} = C \sin (0) \mathrm{e}^{-i E_n t} = 0 \quad \checkmark
+\end{align*}
+不难求出归一化常数$C = \sqrt{ \frac{2}{L} }$，注意在盒内($0 < x < L$)找到粒子的概率为$100 \% = 1$，而盒外的概率为零：
+\begin{align*}
+	P &= \int_0^L dx\, \Phi^*_n (x, t) \Phi_n (x, t) \stackrel{!}{=} 1 \\
+	P &= \int_0^L dx\, C^2 \sin \left( \frac{n \pi}{L} x \right) \mathrm{e}^{+iEt} \sin \left( \frac{n \pi}{L} x \right) \mathrm{e}^{-iEt} \\
+	&= C^2 \int_0^L dx\, \sin^2 \left( \frac{n \pi}{L} x \right) = C^2 \left[ \frac{x}{2} - \frac{ \sin\big( \frac{2n\pi}{L} x \big) }{ 4 \frac{n \pi}{L} } \right]_0^L \\
+	&= C^2 \left( \frac{L}{2} - \frac{ \sin \left(\frac{2n\pi}{L} L \right) }{ 4 \frac{n \pi}{L} } \right) = C^2 \frac{L}{2} \stackrel{!}{=} 1 \\
+	\to C^2 &\stackrel{!}{=} \frac{2}{L} \quad \checkmark
+\end{align*}
+解\eqref{equ8.29}式得到盒中粒子的能级为
+\begin{equation}
+\label{equ8.31}
+	E_n \stackrel{!}{=} \frac{n^2 \pi^2}{L^2 2m}.
+\end{equation}
+{\bf 粒子可能具有的能量是量子化的}，即能量只能是某个常量（这里是$\frac{\pi^2}{L^2 2m}$）的整数倍，这就是量子力学名字的来历。
+
+每个$n$都对应一个解，解的线性组合
+\[
+	\Phi (x, t) = A \Phi_1 (x, t) + B \Phi_2 (x, t) + \dots
+\]
+仍然是Schrödinger方程的解。各线性系数$A, B, \dots$要满足归一化条件\mpar{大于$1 = 100\%$的概率没有意义。}。
+
+下面考虑能量的问题\mpar{前面讨论的是粒子位置的概率分布。}，例如，测量一个（归一化的）状态为
+\[ 
+	\Psi (x, t) = \sqrt{\frac{3}{5}} \Phi_2 (x, t) + \sqrt{\frac{2}{5}} \Phi_3 (x, t).
+\]
+的粒子，测得能量$E = E_2 = \frac{2^2 \pi^2}{L^2 2m}$的概率是多少？
+
+量子力学经典诠释给出的答案是：概率$P (E = E_2)$等于粒子状态$\Psi$与$E_2$对应的本征态$\Phi_2$“重叠”绝对值的平方：
+\[
+	P ( E = \frac{2^2 \pi^2}{L^2 2m} ) = \left| \int dx\, \Phi_2^* (x, t) \Psi (x, t) \right|^2.
+\]
+$\Phi_2$与$\Psi$的重叠可以视为它们的标量积\mpar{实际上，$\Psi, \Phi_n$是Hilbert空间的向量，$(\Psi, \Phi_n)$正是它们的标量积。}：
+\[
+	(\Phi_2, \Psi) = \int dx\, \Phi_2^* \Psi = \underbrace{c}_{\mathclap{\text{复数}} }.
+\]
+上述积分可以利用本征状态的正交归一性大大简化计算
+\[
+	\int dx\, \Phi_n^* (x, t) \Phi_{n'} (x, t) = \delta_{n n'}
+\]
+例如\mpar{不难用分部积分或者Wolframalpha检验计算结果。}：
+\begin{align*}
+	\int_0^L dx\, \Phi_2^* \Phi_3 (x, t) &= \int_0^L dx\, C \sin \left( \frac{2\pi}{L} x \right) \mathrm{e}^{+iEt} C \sin \left( \frac{3\pi}{L} x \right) \mathrm{e}^{-iEt} \\
+	&= C^2 \int_0^L dx\, \sin \left( \frac{2\pi}{L} x \right) \sin \left( \frac{3\pi}{L} x \right) = 0.
+\end{align*}
+因此测量得到能量$E = \frac{2^2 \pi^2}{L^2 2m}$的概率为
+\begin{align}
+	P ( E = \frac{2^2 \pi^2}{L^2 2m} ) &= \left| \int dx\, \Phi_2^* (x, t) \Psi(x, t) \right|^2 \notag \\
+	&= \left| \int dx\, \Phi_2^* (x, t) \left( \sqrt{\frac{3}{5}} \Phi_2 (x, t) + \sqrt{\frac{2}{5}} \Phi_3 (x, t) \right) \right|^2 \notag \\
+	&= \left| \int dx\, \left( \sqrt{\frac{3}{5}} \underbrace{ \Phi_2^* (x, t) \Phi_2 (x, t) }_{ \text{积分后等于}1 } + \sqrt{\frac{2}{5}} \underbrace{ \Phi_2^* (x, t) \Phi_3(x, t) }_{ \text{积分后等于}0 } \right) \right|^2 \notag \\
+\label{equ8.32}
+	&= \left( \sqrt{\frac{3}{5}} \right)^2.
+\end{align}
+
+\eqref{equ8.30}式的波函数解称为能量算符$i \partial_t$的本征态，或者蛤密顿算符\mpar{这可以从Schrödinger方程直接导出：\[ i\partial_t \Phi = -\frac{\partial^2_x}{2m} \Phi \equiv \hat{H} \Phi. \]} $\hat{H} \equiv -\frac{\partial^2_x}{2m}$的本征态，因为
+\begin{equation}
+\label{equ8.33}
+	\hat{H} \Phi_n = E_n \Phi_n.
+\end{equation}
+能量算符作用于能量本征态得到的结果为该本征态的常数倍，这个常数即为该状态的能量。注意能量算符（或蛤密顿算符）作用于一般状态造成的变化不止变成常数倍这么简单。例如，考虑如下能量本征态的线性组合：
+\[
+	\Psi = \sqrt{\frac{3}{5}} \Phi_2 + \sqrt{\frac{2}{5}} \Phi_3.
+\]
+蛤密顿算符作用其上得到：
+\[
+	\hat{H} \Psi = \hat{H} \left( \sqrt{\frac{3}{5}} \Phi_2 + \sqrt{\frac{2}{5}} \Phi_3 \right) \underbrace{=}_{\mathclap{ \eqref{equ8.33}\text{式}} } \sqrt{\frac{3}{5}} E_2 \Phi_1 + \sqrt{\frac{2}{5}} E_3 \Phi_3.
+\]
+作用后的结果不能再写成$\Psi$的常数倍了，因为$E_2 \neq E_3$. 因此$\Psi$不是能量算符的本征态。然而$\Psi$可以表示为各$\Phi_n$的线性组合，因为能量本征态$\{ \Phi_n \}$构成一组完备基。
+
+下一节介绍由Dirac发明的十分便捷的Dirac符号，它有助于我们理解量子力学的框架结构。
+
+\subsection[Dirac符号]{Dirac Notation \quad Dirac符号}\label{sec8.5.3}
+Dirac符号中，系统状态由{\bf 右矢 (ket)}\mpar{它的含义稍后会进一步说明。}表示，记作
+\begin{equation}
+\label{equ8.34}
+	|\Psi \rangle,
+\end{equation}
+例如，一个硬盒中的状态为$\Phi_n$的粒子的能量本征方程用Dirac符号写为
+\[
+	\hat{H} |\Phi_n \rangle = E_n |\Phi_n \rangle.
+\]
+每个右矢可以定义相应的{\bf 左矢 (bra)}，记作$\langle \Psi|$，定义为
+\begin{equation}
+\label{equ8.35}
+	\langle \Psi|^\dag = |\Psi \rangle,
+\end{equation}
+其中符号$\dag$表示厄米共轭，即转置+复共轭。左矢是作用于右矢的数学对象，右矢之间的内积定义为
+\[
+	(|\Phi \rangle, |\Psi \rangle) \equiv \langle \Phi | | \Psi \rangle.
+\]
+左矢作用与右矢产生的结果为一个复数，记作
+\begin{equation}
+\label{equ8.36}
+	\langle \Phi || \Psi \rangle = c.
+\end{equation}
+复数$c$即为$|\Psi \rangle$状态的粒子观测位于$|\Phi\rangle$状态的概率幅，即相应的概率为$| \langle \Phi || \Psi \rangle |^2$. 例如测量一个$|\Psi \rangle$状态的粒子位于$[x, x + dx]$的概率为
+\[
+	\langle x | | \Psi \rangle \equiv \Psi(x).
+\]
+$\Psi(x)$即为前面使用的波函数。再比如，观测粒子的动量位于$[p, p + dp]$的概率幅是多少？答案用Dirac符号表示为
+\[
+	\langle p || \Psi \rangle \equiv \Psi(p).
+\]
+我们一直采用的是概率性诠释，因而物理状态必须是归一化的\mpar{粒子在全空间出现的的概率为$100\% = 1$，或等价地说，粒子的动量去任意值的概率为$100\% = 1$. 换句话说，所有状态的概率之和等于$1$.}，例如 
+\begin{align}
+\label{equ8.37}
+	\int dx\, |\Psi(x, t)|^2 &= \int dx \Psi^\dag(x, t) \Psi(x, t) \stackrel{!}{=} 1 \\
+\label{equ8.38}
+	\int dp\, |\Phi (p, t)|^2 &= \int dp\, \Phi^\dag (p, t) \Phi(p, t) \stackrel{!}{=} 1.
+\end{align}
+上两式用Dirac符号表示为
+\begin{align}
+\label{equ8.39}
+	\int dx\, | \langle x||\Psi \rangle|^2 &= \int dx\, \big( \langle x||\Psi \rangle \big)^\dag \langle x|| \Psi \rangle = \int dx\, \langle \Psi || x \rangle \langle x|| \Psi \rangle \stackrel{!}{=} 1 \\
+\label{equ8.40}
+	\int dp\, | \langle p||\Phi \rangle|^2 &= \int dp\, \big( \langle p||\Phi \rangle \big)^\dag \langle p|| \Phi \rangle = \int dp\, \langle \Phi || p \rangle \langle p|| \Phi \rangle \stackrel{!}{=} 1.
+\end{align}
+上面出现了一种新算符：$|p \rangle \langle p|$与$|x \rangle \langle x|$，这种形式的算符称为{\bf 投影算符 (projection operators)}\mpar{就像前面介绍过的左手旋量、右手旋量的投影算符那样，这些投影算符也满足条件$P^2 = P.$}。它们是算符，因为它们作用于右矢，得到新的右矢。例如
+\[
+	|x \rangle \underbrace{ \langle x || \Psi \rangle}_{\mathclap{\text{等于某个复数，记作}\Psi(x)} } = |x\rangle \Psi(x),
+\]
+等号右侧是复数乘以右矢，因而作用结果是一个右矢，而算符就是作用于右矢得到右矢的东西。由\eqref{equ8.39}式可以引入一个新算符：
+\begin{equation}
+\label{equ8.41}
+	\int dx\, \langle \Psi || x \rangle \langle x || \Psi \rangle = \big\langle \Psi \underbrace{ \left( \int dx\, |x\rangle \langle x| \right)}_{\equiv \hat{I} } | \Psi \rangle = \langle \Psi | \hat{I} | \Psi \rangle \stackrel{!}{=} 1.
+\end{equation}
+由此可得
+\begin{equation}
+\label{equ8.42}
+	\hat{I} | \Psi \rangle \stackrel{!}{=} | \Psi \rangle.
+\end{equation}
+任何表示物理状态的$|\Psi\rangle$都满足$\langle \Psi || \Psi \rangle = 1$，因为观测一个处于$|\Psi\rangle$状态的系统，所得结果为$|\Psi\rangle$的概率为$100\% = 1$. 例如，在$x_0$处放置一个粒子，即在$x_0$处观测到该粒子的概率为$1$，则$\langle x_0 || x_0 \rangle = 1$. $\hat{I}$由此称为单位算符，它的地位就像数字$1$在数字乘法中那样。关系式
+\begin{equation}
+\label{equ8.43}
+	\int dx\, | x \rangle \langle x| = \hat{I},
+\end{equation}
+或者当基矢为离散的情况下
+\begin{equation}
+\label{equ8.44}
+	\sum_i |i\rangle \langle i| = \hat{I}
+\end{equation}
+称为{\bf 完备性关系}。一般的右矢$|a\rangle$在基$\{ |i\rangle\}$下的分量为
+\[
+	|i\rangle^\dag |a\rangle \equiv \langle i || a\rangle \equiv a_i,
+\]
+分量$a_i$是复数。利用完备性关系，即$\sum_i |i \rangle \langle i| = \hat{I}$可得
+\[
+	|a\rangle = \sum_i |i\rangle \langle i || a \rangle = \sum_i |i \rangle a_i.
+\]
+这可以看做是$|a \rangle$在基$\{ |i \rangle \}$下的展开式\mpar{这与三维矢量用基向量展开（例如$\vec{v} = v_1 \vec{e}_1 + v_2 \vec{e}_2 + v_3 \vec{e}_3$）相似，详见附录A.1.}，$a_i$可以视为展开系数。对于连续基，展开式写为
+\[
+	|\Psi \rangle = \int dx\, |x\rangle \underbrace{ \langle x|| \Psi \rangle}_{\mathclap{\equiv \Psi(x), \text{复数}}} = \int dx\, |x\rangle \Psi(x).
+\]
+\ref{sec8.3.1}节介绍的期望值用Dirac符号表示为
+\[
+	\langle \hat{O} \rangle = \langle \Psi | \hat{O} | \Psi \rangle.
+\]
+下面重新回顾一下硬盒中的粒子，用Dirac符号表述。
+
+
+\subsection[例：盒子中的粒子，续]{Example: Particle in a Box, Again \quad 例：盒子中的粒子，续}
+\label{sec8.5.4}
+考虑前面求解过的问题：观测位于$|\Psi\rangle$状态粒子的能量，所得结果为$E = E_2 = \frac{n^2 \pi^2}{2mL^2}$的概率是多少？这个问题用Dirac符号可以简明地表示，概率为
+\begin{align*}
+	P(E_2) &= \left\langle E = \frac{n^2 \pi^2}{2mL^2} \bigg|\bigg| \Psi \right\rangle = \left\langle E = \frac{n^2 \pi^2}{2mL^2} \bigg| \underbrace{ \left( \int dx\, |x\rangle \langle x| \right) }_{= \hat{I}} \bigg| \Psi \right\rangle \\
+	&= \int dx\, \langle E = \frac{n^2 \pi^2}{2mL^2} || x \rangle \langle x || \Psi \rangle = \int dx\, \Phi_2^* (x) \Psi(x)
+\end{align*} 
+答案与\ref{sec8.5.2}节用波动力学标准方法的结果相同。
+
+
+\subsection[自旋]{Spin 自旋}
+\label{sec8.5.5}
+本节讨论\ref{sec5.1.1}节导出的新的角动量——自旋。关于自旋目前我们有两条线索。第一，我们用自旋标记Lorentz群的表示。例如描述自旋$\frac{1}{2}$的基本粒子需要用按照Lorentz群$\frac{1}{2}$表示进行变换的对象。第二，自旋是旋转对称性对应守恒量的一部分\mpar{见\ref{sec4.5.4}节。}。\ref{sec5.1.1}节导出的自旋算符作用于态矢给出粒子的自旋。对于标量表示（所描述的粒子），自旋算符$\hat{S} = 0$，即标量粒子任意状态的自旋为$0$.
+
+再考虑$(\frac{1}{2}, 0)$表示，用二维矩阵表示的旋转生成元为（推导见\ref{sec3.7.5}节）：
+\begin{equation}
+\label{equ8.45}
+	\hat{S}_i = \frac{\sigma_i}{2}
+\end{equation}
+其中$\sigma_i$为Pauli矩阵。描述粒子自旋的状态记作$\Psi$，下面将自旋算符作用与$\Psi$. 例如算符$\hat{S}_3$作用的结果是粒子自旋在第$3$方向，通常称为$z$方向的分量。同样$\hat{S}_2$表示自旋$y$分量，$\hat{S}_1$表示$x$分量。
+\marginpar{
+	\centering
+	\includegraphics[scale=0.45]{fig8_3.png} 
+	\figcaption{Stern-Gerlach实验图示。实验在最初使用银原子，它的自旋仅由原子轨道最外层电子的自旋决定，因此实验结果与电子相同。一束粒子流通过不均匀磁场，对于经典类型的轨道角动量，粒子在磁场偏离形成连续分布。然而实验只观测到两种偏离，即粒子流经磁场后只分为两束，一束为自旋$\frac{1}{2}$，另一束为$-\frac{1}{2}$。 图片作者为Theresa Knott (Wikimedia Commons)distributed under a CC BY-SA 3.0 license: \url{http://creativecommons.org/
+	licenses/by-sa/3.0/deed.en} 图片地址：\url{http://commons.wikimedia.org/wiki/File:Stern-Gerlach_experiment.PNG} }
+}
+
+
+算符$\hat{S}_3$的显式形式为
+\begin{equation}
+	\hat{S}_3 = \frac{\sigma_3}{2} = 
+		\begin{pmatrix}
+			\frac{1}{2} & 0 \\
+			0 & -\frac{1}{2}
+		\end{pmatrix}
+\label{equ8.46}
+\end{equation}
+相应的本征态为
+\begin{equation}
+	v_{\frac{1}{2}} = 
+		\begin{pmatrix}
+			1 \\ 0
+		\end{pmatrix}
+	\quad
+	v_{-\frac{1}{2}} =
+		\begin{pmatrix}
+			0 \\ 1
+		\end{pmatrix}
+\label{equ8.47}
+\end{equation}
+相应的本征值分别为$\frac{1}{2}, -\frac{1}{2}$。这意味着旋量\mpar{回顾：旋量是坐标变换下按照Lorentz群的$(\frac{1}{2}, 0)$表示或$(0, \frac{1}{2})$表示或$(\frac{1}{2}, 0) \oplus (0, \frac{1}{2})$表示变换的量。}描述的粒子的自旋为$\frac{1}{2}$，方向与坐标轴平行或反向。自旋$\frac{1}{2}$表示的名字正是来源于此。量子理论诠释为自旋只能取$\frac{1}{2}$或$-\frac{1}{2}$。\ref{sec4.5.4}节讲过，自旋与轨道角动量有些相似，并且它们源自旋转不变性。从上面的讨论可见自旋的观测结果有着奇特的性质，该性质最著名的实验验证是 Stern-Gerlach 实验（见图8.3）。
+
+自旋的这一性质在任意方向都成立。测量自旋的$x-, y-$或$z-$分量的结果只有$\frac{1}{2}$或$-\frac{1}{2}$.
+
+下面看一个用量子理论描述自旋测量的例子。前面说过，自旋算符（以$z$分量为例）的显式形式为（\eqref{equ5.4}式）：
+\begin{equation}
+\label{equ8.48}
+	\hat{S}_z = \frac{1}{2} \sigma_3 = 
+		\begin{pmatrix}
+			\frac{1}{2} & 0 \\
+			0 & -\frac{1}{2}
+		\end{pmatrix}
+\end{equation}
+本征态为$|\frac{1}{2}\rangle_z \hat{=} \begin{pmatrix} 1 \\ 0 \end{pmatrix}$以及$|-\frac{1}{2}\rangle_z \hat{=} \begin{pmatrix} 0 \\ 1 \end{pmatrix}$，其中下标$z$表示与$\hat{S}_z$有关。一般的旋量并非本征态自旋，而是它们的线性叠加，即$|X\rangle = a |\frac{1}{2}\rangle_z + b |-\frac{1}{2}\rangle_z$. 系数决定特定状态。如果观测一束粒子流的$z$分量，并“过滤”掉自旋$-\frac{1}{2}$的部分\footnote{这可以用前面提到的Stern-Gerlach实验装置完成。}，则筛选后的粒子自旋状态的系数$b = 0, a = 1$，在筛选之前，状态为$a = b = \frac{1}{\sqrt{2}}$，这意味着两种自旋的概率\mpar{系数$a, b$与概率幅直接相关，下面就会看到。}相等均为$\frac{1}{2}$。先后测量粒子自旋在不同方向分量（例如，先测量$S_z$再测量$S_x$）的结果十分有趣。即使把所有自旋$-\frac{1}{2}$粒子都筛选出去，其余的仍有$S_x = -\frac{1}{2}$的粒子。
+
+自旋算符$\hat{S}_z$作用于态矢意味着测量自旋的$z$分量。对于一般状态$|X \rangle$，测量结果为$\frac{1}{2}$或$-\frac{1}{2}$的概率由系数$a, b$决定。如果测量结果为$-\frac{1}{2}$的概率已知，则相应的概率幅为
+\begin{equation}
+	\ _z\langle -\frac{1}{2} || X \rangle = a\underbrace{ \ _z\langle -\frac{1}{2} || \frac{1}{2} \rangle_z }_{ = 0} + b \underbrace{ \ _z \langle -\frac{1}{2} || -\frac{1}{2} \rangle_z }_{=1} = b.
+\label{equ8.49}
+\end{equation}
+因此测量自旋$z$分量所得结果为$-\frac{1}{2}$的概率为$P_{z = -\frac{1}{2}} = |b|^2$. 测量其他方向的分量，例如$x$轴，即用自旋算符$\hat{S}_x$作用于态矢，$S_x$的矩阵形式为（\eqref{equ5.4}式）：
+\begin{equation}
+	S_x = 
+		\begin{pmatrix}
+			0 & \frac{1}{2} \\
+			\frac{1}{2} & 0
+		\end{pmatrix}
+\label{equ8.50}
+\end{equation}
+它的本征值仍为$\pm \frac{1}{2}$，本征矢分别为$|\frac{1}{2} \rangle_x \hat{=} \frac{1}{\sqrt{2}} \begin{pmatrix} 1 \\ 1 \end{pmatrix}$以及$|-\frac{1}{2} \rangle_x \hat{=} \frac{1}{\sqrt{2}} \begin{pmatrix} 1 \\ -1 \end{pmatrix}$，要计算$S_x = -\frac{1}{2}$的概率，需要将$|\frac{1}{2} \rangle_z$与$|-\frac{1}{2} \rangle_z$用$|\frac{1}{2} \rangle_x, |-\frac{1}{2} \rangle_x$表示：
+\begin{align}
+	\underbrace{|\frac{1}{2} \rangle_z}_{\begin{pmatrix} 1 \\ 0 \end{pmatrix} } = \frac{1}{\sqrt{2}} \Big( \underbrace{ |\frac{1}{2} \rangle_x }_{ \frac{1}{\sqrt{2}} \begin{pmatrix} 1 \\ 1 \end{pmatrix} } + \underbrace{ |-\frac{1}{2} \rangle_x}_{\frac{1}{\sqrt{2}} \begin{pmatrix} 1 \\ -1 \end{pmatrix} } \Big)
+\label{equ8.51} \\
+	\underbrace{-|\frac{1}{2} \rangle_z}_{\begin{pmatrix} 0 \\ 1 \end{pmatrix} } = \frac{1}{\sqrt{2}} \Big( \underbrace{ |\frac{1}{2} \rangle_x }_{ \frac{1}{\sqrt{2}} \begin{pmatrix} 1 \\ 1 \end{pmatrix} } - \underbrace{ |-\frac{1}{2} \rangle_x}_{\frac{1}{\sqrt{2}} \begin{pmatrix} 1 \\ -1 \end{pmatrix} } \Big)
+\label{equ8.52}
+\end{align}
+因此
+\begin{equation}
+	|X\rangle = a|\frac{1}{2}\rangle_z + b |-\frac{1}{2} \rangle_z = a\frac{1}{\sqrt{2}} \left( |\frac{1}{2} \rangle_x + |-\frac{1}{2} \rangle_x \right) + b \frac{1}{\sqrt{2}} \left( |\frac{1}{2} \rangle_x - |-\frac{1}{2} \rangle_x \right).
+\label{equ8.53}
+\end{equation}
+测量自旋$x$分量所得结果为$-\frac{1}{2}$的概率幅为
+\begin{equation}
+\begin{split}
+	\ _x \langle -\frac{1}{2} || X \rangle &= \ _x \langle -\frac{1}{2} | \left( a\frac{1}{\sqrt{2}} \left( |\frac{1}{2} \rangle_x + |-\frac{1}{2} \rangle_x \right) + b\frac{1}{\sqrt{2}} \left( |\frac{1}{2}_x - |-\frac{1}{2} \rangle_x \right) \right) \\
+	&= \frac{a}{\sqrt{2}} - \frac{b}{\sqrt{2}}
+\label{equ8.54}
+\end{split}
+\end{equation}
+即$P_{S_x = -\frac{1}{2}} = |\frac{a}{\sqrt{2}} - \frac{b}{\sqrt{2}}|^2$.
+
+现在考虑开头提出的问题。将所有$S_z = -\frac{1}{2}$的粒子剔除后，粒子的状态为
+\begin{equation}
+	|X\rangle_{z\text{方向筛选后}} = |\frac{1}{2} \rangle_z.
+\label{equ8.55}
+\end{equation}
+即$a = 1, b = 0$，因此$S_x = -\frac{1}{2}$的概率为$P_{S_x = -\frac{1}{2}} = |\frac{1}{\sqrt{2}} - \frac{0}{\sqrt{2}}|^2 = \frac{1}{2}$. 现在再筛选掉$S_x = -\frac{1}{2}$的粒子，然后测量$S_z$，所得结果十分神奇。筛选掉所有$S_x = -\frac{1}{2}$后粒子的状态为
+\begin{equation}
+	|X \rangle_{x\text{方向筛选后}} = |\frac{1}{2} \rangle_x.
+\label{equ8.56}
+\end{equation}
+要计算测量$S_z$所得结果为$-\frac{1}{2}$的概率需要将状态$|\frac{1}{2} \rangle_x$用$|\frac{1}{2} \rangle_z, |-\frac{1}{2} \rangle_z$展开：
+\begin{equation}
+	|X \rangle_{x\text{方向筛选后}} = \underbrace{ |\frac{1}{2} \rangle_x }_{\frac{1}{\sqrt{2}} \begin{pmatrix} 1 \\ 1 \end{pmatrix} } = \frac{1}{\sqrt{2}} \Big(  \underbrace{ |\frac{1}{2} \rangle_z}_{ \begin{pmatrix} 1 \\ 0 \end{pmatrix}} + \underbrace{|-\frac{1}{2} \rangle_z}_{\begin{pmatrix} 0 \\ 1 \end{pmatrix}} \Big)
+\label{equ8.57}
+\end{equation}
+于是$P_{z = -\frac{1}{2}} = | \langle -\frac{1}{2} |_z |X\rangle|^2 = \frac{1}{2}$. 将上述观测结果进行总结：
+
+\begin{itemize}
+\item	初始时粒子（流）的状态任意，观测自旋的$z$分量，筛选掉所有$S_z = -\frac{1}{2}$的粒子，筛选后粒子的状态为
+	\begin{equation}
+		|X\rangle_{z\text{方向筛选后}} = |\frac{1}{2} \rangle_z.
+	\label{equ8.58}
+	\end{equation}
+\item	测量筛选后粒子的自旋$z$分量的结果自然是全部为$+\frac{1}{2}$:
+	\begin{align}
+		\ _z\langle \frac{1}{2} || X \rangle_{z\text{方向筛选后}} &= 1. 
+	\label{equ8.59} \\
+		\ _z \langle -\frac{1}{2} | |X \rangle_{z\text{方向筛选后}} &= 0
+	\label{equ8.60}
+	\end{align}
+\item	再测量粒子的自旋$x$分量发现其中一半为$S_x = \frac{1}{2}$，另一半为$-\frac{1}{2}$。剔除其中所有$S_x = -\frac{1}{2}$的粒子后粒子的状态为$|X\rangle_{x\text{方向筛选后}} = |\frac{1}{2} \rangle_x$.
+\item 	现在再次测量粒子的自旋$z$分量，我们得到令人吃惊的测量结果：一半粒子为$S_z = \frac{1}{2}$，另一半为$S_z = -\frac{1}{2}$. 尽管在第一步已经筛选掉所有$S_z = -\frac{1}{2}$的粒子！
+\end{itemize}
+关于这部分内容的精彩讨论（包括实际的观测仪器）可见Feynman物理学讲义第三卷\mpar{ Richard P. Feynman, Robert B.
+Leighton, and Matthew Sands. The Feynman Lectures on Physics, Volume 3. Addison Wesley, 1st edition, 1 1971. ISBN 9780201021189}。
+
 \section[Heisenberg 不确定性原理]{Heisenberg’s Uncertainty PrincipleHeisenberg 不确定性原理}\label{sec8.6}
 
 现在可以来讨论量子力学中最奇妙的特征之一了。从上节我们已经知道，对粒子x方向上自旋的测量会破坏我们已知的在z方向上粒子自旋的信息，这一情况在量子力学中的很多测量中都存在。我们可以从\mpar{我们把自旋算子和对应的有限维旋转生成元认同，其满足对易关系$[J_i,J_j]=J_i J_j -J_j J_i=i\epsilon_{ijk}J_k\ne 0 \to J_i J_j \ne J_j J_i$。 举个例子来说，如果我们描述的是自旋1/2的粒子，那么我们应采用对应的二维表示$J_i={\sigma_i \over 2}$。} $\hat S_x \hat S_z \ne \hat S_z \hat S_x$ 出发来考察这一点，此式说明先对z 方向自旋后对x 方向自旋进行测量和先对x 方向自旋后对z 方向自旋进行测量的结果是不同的。这一点并不令人惊奇，因为对z 方向自旋进行测量后，系统应处于$\hat S_z$ 的一个本征态上，而对x 方向自旋进行测量后，系统应处于$\hat S_x$ 的本征态上，而$\hat S_z$ 和$\hat S_x$的本征态均不同，最后的结果也就并不相同。
@@ -241,13 +641,38 @@ E&=m\left(1+\frac{1}{2}\frac{\vec{p}^2}{m^2}+\cdots\right)\\
 
 
 \section[对几种诠释的评议]{Comments on Interpretations \quad 对几种诠释的评议}\label{sec8.7}
+本章采用的都是量子力学的标准诠释与通用符号，然而还有其他同样有效的体系。例如，就结果而言，Feynman路径积分体系\mpar{这方面内容可参考Richard P. Feynman and Albert R. Hibbs. {\it Quantum Mechanics and Path Integrals}: Emended Edition. Dover Publications, emended editon edition, 7\ 2010. ISBN 9780486477220}与本章描述的波动力学完全等价。但二者的计算过程相当不同。在路径积分体系中计算粒子从点$a$到$b$的概率，需要将从$a$到$b$的所有可能的路径叠加。尽管听起来很奇怪，但是可以证明它的计算结果和波动力学相同。Freeman Dyson曾经讲过关于路径积分的一个故事\mpar{Harry Woolf, editor. {\it Some Strangeness in the Proportion}. Addison-Wesley, 1st edition, 2\ 1981. ISBN 9780201099249}：
+
+\begin{quote}
+Dick Feynman向我讲述他量子力学“历史态叠加”的新理论。 "The electron does anything it likes," he said. "It just goes in any direction at any speed, forward or backward in time, however it likes, and then you add up the amplitudes and it gives you the wavefunction."
+我对他说：“你疯啦。”但实际上他没疯。
+\end{quote}
+
+量子力学基本方程的另一种基本诠释（比起路径积分更加偏离主流）是Bohm诠释。它的出发点是在Schrödinger方程中加入拟设项$R \mathrm{e}^{St}$. 方程的实部与虚部构成两个方程，其中一个可以类比为经典力学中的Hamilton-Jacobi方程（有附加项，附加项可以解释为与量子效应有关的额外势能），进一步的计算就与经典力学非常相似。对额外势求梯度得到新的力，可以带入Newton的经典方程$F = ma$中。因此在Bohm诠释中仍然存在经典的粒子轨道。据我所知，Bohm诠释的计算结果与标准非相对论量子力学的计算结果相同。然而由于额外势的非定域性使得它不受欢迎。
+
 
 \section*{阅读建议}
+\begin{enumerate}
+\item {\bf Richard P. Feynman - The Feynman Lectures on Physics, Vol. 3}\mpar{Richard P. Feynman, Robert B. Leighton, and Matthew Sands. {\it The Feynman Lectures on Physics, Volume 3}. Addison Wesley, 1st edition, 1 1971. ISBN 9780201021189} 是量子力学入门的出色教材。量子力学的大部分概念都在此书中有更清楚的解释。
+\item {\bf  David J. Griffiths - Introduction to Quantum Mechanics}\mpar{ David J. Griffiths. Introduction to Quantum Mechanics. Pearson Pren-
+tice Hall, 2nd edition, 4 2004. ISBN 9780131118928}
+是非常易读的、具有启发性的教材。
+\item {\bf  J. J. Sakurai - Modern Quantum Mechanics}\mpar{ {\it J. J. Sakurai. Modern Quantum Mechanaics}. Addison Wesley, 1st edition, 9 1993. ISBN 9780201539295}是一本精彩著作，它提供了量子力学的独特视角。
+\item {\bf Paul A. M. Dirac - Lectures on Quantum Mechanics}\mpar{Paul A. M. Dirac and Physics. {\it Lectures on Quantum Mechanics.} Dover Publications, 1st edition, 3 2001. ISBN 9780486417134}是量子力学的原始文献之一。尽管古老，但时至今日它的评价依然很高，因为阅读量子力学创始人的思想是非常具有启示意义。
+\item Dirac旋量的分量意义的详细诠释可参考附录8.8。
+\end{enumerate}
 
-\section[附录：Dirac旋量分量的诠释]{Appendix: Interpretation of the Dirac Spinor Components \quad 附录：Dirac旋量分量的诠释}附录：\label{sec8.8}
+
+\section[附录：Dirac旋量分量的诠释]{Appendix: Interpretation of the Dirac Spinor Components \quad 附录：Dirac旋量分量的诠释}\label{sec8.8}
+{\it 在接下来的附录中，$\mathbf{u}, \mathbf{v}$表示Dirac旋量里面的二分量对象，$u, v$表示四分量对象。例如，$u_1, u_2$描述两个不同的四分量对象。四分量对象$u$的二分量对象记作$\mathbf{u_1}, \mathbf{u_2}$，即$u = \begin{pmatrix} \mathbf{u}_1 \\ \mathbf{u}_2 \end{pmatrix}$.
+}
+
+目前我们对Dirac旋量中的两个Weyl旋量的认识还比较模糊。它们究竟表示什么？可以被诠释成什么？此外，每个Dirac旋量里的这种Weyl旋量也具有两个分量，这该怎么解释？下面就来讨论。
+
+{\it 简言之：}
+
 
 \section[附录：解Dirac 方程]{Appendix: Solving the Dirac Equation 附录：解Dirac 方程}\label{sec8.9}
-
 {\it 和上节一样，我们把Dirac自旋量中的二分量量记做{\rm u}和{\rm v}，把四分量量记做$u$和$v$。也就是说例如$u_1,u_2$的记号代表的是四分量量，在不特别区分这些量的时候我们只写$u$。同时${\rm u_1}$和${\rm u_2}$是这个四分量量中的两个二分量量：$u=\pmm \rm u_1 \\ \rm u_2 \pmme $}。
 \par
 本附录中我们将在{\it 手性基底}上解{\it 静止参考系}下的Dirac方程。其他任意参考系的解能够通过本节解做伪转动变换得到。除了我们在上一节的讨论，我们在第六章讨论量子场论的时候也会用到这些解。\par
@@ -376,7 +801,7 @@ Dirac方程为：
 在这个参照系中，由于$p_i=0$，所以我们有
 \[\rightarrow(\gamma_0p^0-m)u=0\]
 \[\rightarrow(-\gamma_0p^0-m)v=0.\]
-此外还有$p_0=E$，并且我们可以使用我们在本章开头（式\ref{eq:8.2}）推导的相对论能-动量关系。
+此外还有$p_0=E$，并且我们可以使用我们在本章开头（式\eqref{equ8.2}）推导的相对论能-动量关系。
 在静止参照系中我们有$E=\sqrt{(p_i)^2+m^2}=m$。
 现在我们可以利用上面给出的矩阵$N$和$\gamma'_0=N^{-1}\gamma_0N$计算出$\gamma_0$在质量基或 Dirac 基中的精确形式。
 要记得在$m$中我们还包含着一个单位矩阵，因此
