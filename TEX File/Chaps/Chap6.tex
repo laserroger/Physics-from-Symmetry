@@ -44,7 +44,7 @@ S = \int d\mathbf{x} \mathscr{L}
 \end{align}
 得出，其中$d \mathbf{x}$可以理解为对时间和空间的积分。因此，诸如$\Phi\partial_\mu\partial^\mu\Phi$的项实际是没必要的，因为它等效于$\partial_\mu\Phi\partial^\mu\Phi$，从分部积分就可以直接看出\mpar{分部积分产生的边界项为零，因为在远处场很小。值得注意的是，这是由于我们物理里面的速度是有上限的（第\ref{sec2.3}节）。因此，很远处的场对于有限远的$x$位置的场不会有影响。}。
 
-不仅如此，Lorentz{\bf 不变性}要求拉格朗日量必须是标量。因此，所有奇数阶的$\partial_\mu$，比如$\partial_\mu\Phi$是禁止的。值得一提的是，如果常数，比如$a, c$，有一个Lorentz指标的话，这说明这些常数是一个$4$-矢量，标定了时空的方向从而破坏了空间的各向同性。常数项实际上可忽略，也就是$A=0$，因为物理理论从欧拉-拉格朗日方程中导出，因此一个常数项对运动方程没有影响\mpar{考虑\eqref{eq4.10}式：$\frac{\partial{\mathscr{L}}}{\partial\Phi}-\partial_\mu\left(\frac{\partial{\mathscr{L}}}{\partial(\partial_\mu\Phi)}\right) = 0$，因此$\mathscr{L}\to\mathscr{L}+A$中的常数项$A$并不改变任何东西：$\frac{\partial({\mathscr{L}}+A)}{\partial\Phi}-\partial_\mu\left(\frac{\partial({\mathscr{L}}+A)}{\partial(\partial_\mu\Phi)}\right) = \frac{\partial{\mathscr{L}}}{\partial\Phi}-\partial_\mu\left(\frac{\partial{\mathscr{L}}}{\partial(\partial_\mu\Phi)}\right)$.}。除此之外，我们可以忽略掉$\Phi$的线性项，也就是说$B=0$，因为从欧拉-拉格朗日方程中可以看出这一项只会给运动方程增加一个常数\mpar{$\mathscr{L}\to\mathscr{L}+B\Phi$使得$\frac{\partial(\mathscr{L}+B\Phi)}{\partial\Phi}-\partial_\mu\left(\frac{\partial(\mathscr{L}+B\Phi)}{\partial(\partial_\mu\Phi)}\right)=\frac{\partial\mathscr{L}}{\partial\Phi}-\partial_\mu\left(\frac{\partial{\mathscr{L}}}{\partial(\partial_\mu\Phi)}\right)+B=0$，只产生运动方程中的可加常数。}。那么，剩下的项就是：
+不仅如此，Lorentz{\bf 不变性}要求拉格朗日量必须是标量。因此，所有奇数阶的$\partial_\mu$，比如$\partial_\mu\Phi$是禁止的。值得一提的是，如果常数，比如$a, c$，有一个Lorentz指标的话，这说明这些常数是一个$4$-矢量，标定了时空的方向从而破坏了空间的各向同性。常数项实际上可忽略，也就是$A=0$，因为物理理论从欧拉-拉格朗日方程中导出，因此一个常数项对运动方程没有影响\mpar{考虑\eqref{eq:4.10}式：$\frac{\partial{\mathscr{L}}}{\partial\Phi}-\partial_\mu\left(\frac{\partial{\mathscr{L}}}{\partial(\partial_\mu\Phi)}\right) = 0$，因此$\mathscr{L}\to\mathscr{L}+A$中的常数项$A$并不改变任何东西：$\frac{\partial({\mathscr{L}}+A)}{\partial\Phi}-\partial_\mu\left(\frac{\partial({\mathscr{L}}+A)}{\partial(\partial_\mu\Phi)}\right) = \frac{\partial{\mathscr{L}}}{\partial\Phi}-\partial_\mu\left(\frac{\partial{\mathscr{L}}}{\partial(\partial_\mu\Phi)}\right)$.}。除此之外，我们可以忽略掉$\Phi$的线性项，也就是说$B=0$，因为从欧拉-拉格朗日方程中可以看出这一项只会给运动方程增加一个常数\mpar{$\mathscr{L}\to\mathscr{L}+B\Phi$使得$\frac{\partial(\mathscr{L}+B\Phi)}{\partial\Phi}-\partial_\mu\left(\frac{\partial(\mathscr{L}+B\Phi)}{\partial(\partial_\mu\Phi)}\right)=\frac{\partial\mathscr{L}}{\partial\Phi}-\partial_\mu\left(\frac{\partial{\mathscr{L}}}{\partial(\partial_\mu\Phi)}\right)+B=0$，只产生运动方程中的可加常数。}。那么，剩下的项就是：
 \begin{align}
 \label{equ6.3}
 \mathscr{L}=C\Phi^2+E\partial_\mu\Phi\partial^\mu\Phi
@@ -109,7 +109,7 @@ I_1:=\chi_{\dot{a}}^T\xi^{\dot{a}}=(\chi_a^\star)^T\xi^{\dot{a}}=(\chi_a)^\dagge
 \label{equ6.8}
 I_2:=(\xi^a)^T\chi_a=((\xi^a)^\star)^T\chi_a=(\xi_R)^\dagger\chi_L
 \end{align}
-\ref{equ3.7.7}节讲过，Lorentz不变量总是要把带点的下标和带点的上标，或者不带点的下标和不带点的上标结合。这里再次看到右手旋量和左手旋量需要成对出现。
+\ref{sec3.7.7}节讲过，Lorentz不变量总是要把带点的下标和带点的上标，或者不带点的下标和不带点的上标结合。这里再次看到右手旋量和左手旋量需要成对出现。
 
 更进一步的，我们可以构造两种组合，其涉及到一阶导数且满足Lorentz协变，我们一会儿就会看到。但是首先需要理解旋量的导数意味着什么。\ref{sec3.7.8}节讲过如何从旋量构造4-矢量
 \[v_{a\dot{b}}=v_\nu\sigma^\nu_{a\dot{b}} \]
@@ -236,7 +236,7 @@ I_3=A^\mu A_\mu\quad &,\quad I_4=\partial^\mu A_\mu
 \end{split} \]
 类似的，我们可以计算出
 \[\partial_\sigma\left(\frac{\partial}{\partial(\partial_\sigma A^\rho)}(C_2\partial^\mu A^\nu\partial_\nu A_\mu)\right)=2C_2\partial^\rho(\partial_\sigma A^\sigma) \]
-因此，\eqref{6.19}的拉格朗日量得到的运动方程为
+因此，\eqref{eq6.19}的拉格朗日量得到的运动方程为
 \[2C_3A^\rho=2C_1\partial_\sigma\partial^\sigma A^\rho+2C_2\partial^\rho(\partial_\sigma A^\sigma) \]
 带入惯例的常数得到
 \begin{align}

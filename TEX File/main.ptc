@@ -138,7 +138,11 @@
 \contentsline {section}{\numberline {A.2}坐标系变换}{234}{section.A.2}
 \contentsline {section}{\numberline {A.3}矩阵乘法}{235}{section.A.3}
 \contentsline {section}{\numberline {A.4}标量}{236}{section.A.4}
+<<<<<<< HEAD
 \contentsline {section}{\numberline {A.5}左手/右手坐标系}{236}{section.A.5}
+=======
+\contentsline {section}{\numberline {A.5}左手/右手坐标系}{237}{section.A.5}
+>>>>>>> laserroger/master
 \contentsline {chapter}{\numberline {B}微积分}{239}{appendix.B}
 \contentsline {section}{\numberline {B.1}Product Rule}{239}{section.B.1}
 \contentsline {section}{\numberline {B.2}分部积分}{239}{section.B.2}
