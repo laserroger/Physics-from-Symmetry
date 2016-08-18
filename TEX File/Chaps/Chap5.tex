@@ -36,7 +36,7 @@
 上面利用算符给出了描述自然的理论中使用的物理量。接下来我们自然要问：这些算符作用在什么上面？它们是如何与实验中的可观测量联系起来的呢？下一章仔细讨论这件事情，在这里只需要知道物理量，也就是算符，是作用在{\it 某物}上的。不妨就认为它作用于一个抽象的对象上，称之为$\Psi$，后面会探究这个“{\it 某物}”是什么鬼。
 
 现在可以导出一些非常重要的\mpar{如果你完全不了解量子力学，为什么这些简单的式子会如此重要对你来说会看起来比较奇怪。你也许听说过Heisenberg不确定性原理。在第\ref{sec8.3}节，我们会更进一步的研究量子力学的形式与结构，然后就可以看到这个方程表明不能够以任意精度同时测量一个粒子的动量和坐标。我们的物理量的解释是算符的测量，而这个方程告诉我们先测量动量再测量位置与先测量位置再测量动量是完全不一样的。}量子力学的方程了。就像上面已经解释过的那样，我们假定算符作用在抽象的$\Psi$上。于是有
-\begin{align}\label{eq5.2}
+\begin{align}\label{equ5.2}
 \begin{split}
 [\hat{p}_i, \hat{x}_j] \Psi &= (\hat{p}_i \hat{x}_j - \hat{x}_j \hat{p}_i) \Psi = (-\partial_i \hat{x}_j + \hat{x}_j \partial_i) \Psi \\
 &\underbrace{=}_{\text{莱布尼兹律}} -(\partial_i \hat{x}_j) \Psi \cancel{\hat{x}_j (\partial_i \Psi)} + \cancel{\hat{x}_j (\partial_i \Psi)} \underbrace{=}_{\partial_i \hat{x}_j = \frac{\partial x_j}{\partial x_i}} -i \delta_{ij} \Psi
@@ -44,7 +44,7 @@
 \end{align}
 
 这个方程对任意的$\Psi$都成立，因为我们没有对$\Psi$做任何假设，因此我们可以不考虑它\mpar{如果这对你来说比较罕见，注意我们可以把{\bf 每}一个矢量方程都写成只包含数的形式。比如，牛顿第二定律$\vec{F} = m\vec{\ddot{x}}$，可以对于任意矢量$\vec{C}$写出$\vec{F}\vec{C} = m\vec{\ddot{x}}\vec{C}$。不仅如此，如果对于任意的$\vec{C}$都成立，那么一直把这个$\vec{C}$写着也就没什么意义了。}而直接的写出
-\begin{align}\label{eq5.3}
+\begin{align}\label{equ5.3}
 [\hat{p}_i,\hat{x}_j] = -i\delta_{ij}
 \end{align}
 
@@ -52,10 +52,10 @@
 
 上一章的第\ref{sec4.5.4}节中讲过，对标量理论而言，旋转不变性带来的守恒量有两个部分，第二部分对应轨道角动量，称之为{\bf 无限}维的轨道角动量生成元表示。$\hat{L}_i\to\text{转动生成元（无限维表示）}i\tfrac{1}{2}\epsilon_{ijk}(x^j\partial^k-x^k\partial^j)$。类似的， 第一部分称作自旋，对应{\bf 有限}维度的生成元\mpar{这是从场的分量的线性组合下的不变性带来的守恒量，因此是有限维的表示。}的表示。
 \[\text{自旋}\hat{S}_i\to\text{转动生成元（有限维表示）}S_i \]
-如前面\eqref{eq:4.30}式解释过的那样，$S_{\mu\nu}$和转动算符生成元$S_i$的关系为$S_i = \tfrac{1}{2}\epsilon_{ijk}S_{jk}$。
+如前面\eqref{equ4.30}式解释过的那样，$S_{\mu\nu}$和转动算符生成元$S_i$的关系为$S_i = \tfrac{1}{2}\epsilon_{ijk}S_{jk}$。
 
 比如，当我们考虑自旋$\tfrac{1}{2}$场的时候，我们需要用到我们在节\ref{sec3.7.5}中得到的二维表示：
-\begin{align}\label{eq5.4}
+\begin{align}\label{equ5.4}
 \hat{S}_i = i\frac{\sigma_i}{2}
 \end{align}
 其中$\sigma_i$是Pauli矩阵。在学习如何利用本章导出的这些算符之后，我们在\ref{sec8.5.5}节深入讨论这一有趣而奇怪的类型的角动量。时刻注意，只有这两部分角动量的{\bf 和}是守恒的。
@@ -64,12 +64,12 @@
 
 场论的最重要的客体当然就是{\bf 作为时空位置的函数}\mpar{这里，$x = x_0,x_1,x_2,x_3$，包含时间$x_0=t$。}的场了$\Phi = \Phi(x)$。我们接下来希望描述时空上的一个点发生的相互作用，从而我们需要考虑动力学变量$\pi = \pi(x)$的密度，而不是其其总量$\Pi = \int d^3x\pi(x)\neq\Pi(x)$。
 
-我们上一章发现了场自身的平移不变性$\Phi\to\Phi-i\epsilon$产生了一种新的守恒量，称为共轭动量$\Pi$。就像我们上一章做的那样，我们用对应的生成元\eqref{eq:4.59}式来表示共轭动量密度：
+我们上一章发现了场自身的平移不变性$\Phi\to\Phi-i\epsilon$产生了一种新的守恒量，称为共轭动量$\Pi$。就像我们上一章做的那样，我们用对应的生成元\eqref{equ4.59}式来表示共轭动量密度：
 \[\text{共轭动量密度}\pi(x)\to\text{关于场自身平移的生成元：}-i\frac{\partial}{\partial\Phi(x)} \]
 后面会看到量子场论与这里处理的稍稍不同，而现在的处理已经足够了。
 
 就像上一节讨论的那样，我们需要给算符一些作用的对象。这里同样使用抽象的$\Psi$，后面的章节会具体说明。同样可以得到一个针对量子场论\mpar{最后一步的时候我们类似$\tfrac{\partial x_i}{\partial x_j} = \delta_{ij}$给出delta分布$\tfrac{\partial f(x_i)}{\partial f(x_j)} = \delta(x_i-x_j)$，它实际上可以严格的说明的。更具体的内容请看附录D.2。}十分重要的方程。
-\begin{align}\label{eq5.5}
+\begin{align}\label{equ5.5}
 \begin{split}
 [\Phi(x),&\pi(y)]\Psi = \left[\Phi(x),-i\frac{\partial}{\partial\Phi(y)}
 \right]\Psi\\
