@@ -84,7 +84,7 @@ q_3
 “作为时空对称性的结果，特别是在局域尺度变换下的对称性”。将其称作规范对称性是有原因的，因为它意味着，例如，我们能任意改变用于定义长度标准的铂金尺（用来规范\footnote{译注：没有规矩，不成方圆。线长是某个线性空间中的某种范数，将改变线长的定义的变换，称作规范变换，应当是一个合理的称呼。关于 gauge 这个词的命名以及为何翻译成“规范”，可以参见 曹则贤 . Norm and Gauge[J]. 物理, 2013, 42(11): 815-819. }实验中测长的仪器），而不改变物理。这个尝试没有成功，但稍晚些时候，Weyl 找到了能正确导出电磁学的对称性，并仍用这个词来命名。
 
 \subsection{\spint 自由场的内禀对称性}\label{sec7.1.1}
-再来看一眼用来导出自由\spint 理论的拉格朗日量（\ref{eq:6.16}式）
+再来看一眼用来导出自由\spint 理论的拉格朗日量（\ref{equ6.16}式）
 \begin{equation}
 \label{equ7.1}
 {\mathscr L}_\text{Dirac} = -m\bar\Psi\Psi +\ri\bar\Psi\gamma_\mu\partial^\mu\Psi = \bar\Psi(\ri\gamma_\mu\partial^\mu-m)\Psi
@@ -184,7 +184,7 @@ A_\mu \rightarrow A_\mu' = A_\mu+a_\mu(x)
 总结一下咱现在都干了啥：
 \begin{itemize}
 \item 我们发现\spint 自由场的拉格朗日量有一个全局的内禀对称性$\Psi\rightarrow\Psi' = \ue^{\ri a}\Psi$。或者这样说：\spint 自由场的拉格朗日量在全局\uo 变换下不变。
-\item 这个对称性不是局域的（尽管它应当是），因为在$a=a(x)$的情况下，我们在拉格朗日量中得到如下形式的额外项（\ref{eq:7.5}式）
+\item 这个对称性不是局域的（尽管它应当是），因为在$a=a(x)$的情况下，我们在拉格朗日量中得到如下形式的额外项（\ref{equ7.5}式）
 \begin{equation}
 -(\partial_\mu a(x))\bar\Psi\gamma^\mu\Psi \text{。}
 \label{equ7.12}
@@ -228,7 +228,7 @@ $g$。这样拉格朗日量
 &\underbrace{=}_{\mathclap{\text{见\ref{equ7.5}式}}}  -m\bar\Psi\Psi +\ri\bar\Psi\gamma_\mu\partial^\mu\Psi - g (\partial_\mu a(x))\bar\Psi\gamma^\mu\Psi + g A_\mu'\bar\Psi'\gamma^\mu\Psi' \nonumber \\
 &= -m\bar\Psi\Psi +\ri\bar\Psi\gamma_\mu\partial^\mu\Psi - g (\partial_\mu a(x))\bar\Psi\gamma^\mu\Psi \nonumber \\
 &\quad + g (A_\mu+\partial_\mu a(x))(\ue^{-\ri ga(x)}\bar\Psi)\gamma^\mu(\ue^{\ri ga(x)}\Psi) \nonumber \\
-&= -m\bar\Psi\Psi +\ri\bar\Psi\gamma_\mu\partial^\mu\Psi - \cancel{g (\partial_\mu a(x))\bar\Psi\gamma^\mu\Psi} \nonumber \\ 
+&= -m\bar\Psi\Psi +\ri\bar\Psi\gamma_\mu\partial^\mu\Psi - \cancel{g (\partial_\mu a(x))\bar\Psi\gamma^\mu\Psi} \nonumber \\
 &\quad + g A_\mu\bar\Psi\gamma^\mu\Psi + \cancel{g (\partial_\mu a(x))\bar\Psi\gamma^\mu\Psi}\nonumber \\
 \label{equ7.16}
 &= -m\bar\Psi\Psi +\ri\bar\Psi\gamma_\mu\partial^\mu\Psi + g A_\mu\bar\Psi\gamma^\mu\Psi = {\mathscr L}_\text{Dirac+额外项} \text{。}
@@ -339,14 +339,14 @@ D_\mu \equiv \ri \partial_\mu + gA_\mu\text{，}
 \label{equ7.31}
 & \rightarrow (\underbrace{\gamma_2\gamma_\mu^*\gamma_2^{-1}}_{=-\gamma_\mu}(-\ri\partial^\mu-gA^\mu) - m\gamma_2\gamma_2^{-1})\gamma_2\Psi^* = 0 \text{。}\\
 \label{equ7.32}
-& \underbrace{\rightarrow}_{\mathclap{\text{方程乘上}\ri}} \left(-\gamma_\mu(-\ri\partial^\mu-gA^\mu) - m\right)\underbrace{\ri\gamma_2\Psi^*}_{\mathclap{=\Psi^C\text{见\ref{eq:7.25}式}}} = 0 \text{。}\\
+& \underbrace{\rightarrow}_{\mathclap{\text{方程乘上}\ri}} \left(-\gamma_\mu(-\ri\partial^\mu-gA^\mu) - m\right)\underbrace{\ri\gamma_2\Psi^*}_{\mathclap{=\Psi^C\text{见\ref{equ7.25}式}}} = 0 \text{。}\\
 \label{equ7.33}
 & \rightarrow \left(\gamma_\mu(\ri\partial^\mu + gA^\mu) - m\right)\Psi^C = 0 \text{，}
 \end{align}
 这和$\Psi$的运动方程只在耦合常数上差了个负号$g\rightarrow -g$。这与其名字，电荷共轭，相符%
 \mpar{注意$\Psi^C\ne \bar\Psi$。$\Psi^C=\ri\gamma_2\Psi^*$而$\bar\Psi=\Psi^\dag\gamma_0=(\Psi^*)^T\gamma_0$。电荷共轭变换让我们能用反粒子来解释一些东西，稍后便会详细讨论。}。
 
-接下来，我们转向上一节中的第三个式子，\ref{eq:7.22}式，称为{\bf 有电流情况下的非齐次麦克斯韦方程(inhomogeneous Maxwell equation in the presence of an electric current)}。为了讲清楚这个名字，我们又需要 Noether 定理了。
+接下来，我们转向上一节中的第三个式子，\ref{equ7.22}式，称为{\bf 有电流情况下的非齐次麦克斯韦方程(inhomogeneous Maxwell equation in the presence of an electric current)}。为了讲清楚这个名字，我们又需要 Noether 定理了。
 \subsection{内禀${\mathcal U}(1)$对称性的 Noether 定理}\label{sec7.1.6}
 在\ref{sec4.5.5}节中我们得知 Noether 定理将所有内禀对称性和一个守恒量联系了起来。和我们刚才发现的\uo 对称性相联系的守恒量是什么？Noether 定理告诉我们，从如下形式的变换
 \[
@@ -865,25 +865,25 @@ V(\Phi) &= -\rho^2 \Phi^\dag\Phi + \lambda(\Phi^\dag\Phi)^2\\
 \Phi = \ue^{\ri \theta_i \frac{\sigma_i}{2}} \begin{pmatrix}
 0 \\ \frac{v+h}{\sqrt{2}}
 \end{pmatrix}\text{，}
-\label{eq:7.79}
+\label{equ7.79}
 \end{equation}
 这是由于考虑将指数函数展开成级数，代入泡利矩阵$\sigma_i$矩阵的具体形式，在一阶意义上
 \begin{align}
-	\ue^{\ri \theta_i \frac{\sigma_i}{2}} 
+	\ue^{\ri \theta_i \frac{\sigma_i}{2}}
 			\begin{pmatrix}
 				0 \\ \frac{v+h}{\sqrt{2}}
-			\end{pmatrix} 
-		&\approx (1+\ri \theta_i \frac{\sigma_i}{2}) 
+			\end{pmatrix}
+		&\approx (1+\ri \theta_i \frac{\sigma_i}{2})
 			\begin{pmatrix}
 				0 \\ \frac{v+h}{\sqrt{2}}
-			\end{pmatrix} 
+			\end{pmatrix}
 	\nonumber \\
 	&= \big(1 + \ri \theta_1 \frac{\sigma_1}{2}+\ri \theta_2 \frac{\sigma_2}{2}+\ri \theta_3 \frac{\sigma_3}{2} \big)
 			\begin{pmatrix}
 				0 \\ \frac{v+h}{\sqrt{2}}
-			\end{pmatrix} 
+			\end{pmatrix}
 	\nonumber \\
-	&= 
+	&=
 		\begin{pmatrix}
 			1 + \ri\frac{1}{2}\theta_3 & \frac{1}{2}\theta_1 - \ri \frac{1}{2}\theta_2 \\
 			\frac{1}{2}\theta_1 + \ri \frac{1}{2}\theta_2 & 1 - \ri\frac{1}{2}\theta_3
@@ -892,13 +892,13 @@ V(\Phi) &= -\rho^2 \Phi^\dag\Phi + \lambda(\Phi^\dag\Phi)^2\\
 			0 \\ \frac{v+h}{\sqrt{2}}
 		\end{pmatrix}
 	\nonumber \\
-	& = 
+	& =
 		\begin{pmatrix}
 			(\frac{1}{2}\theta_1 - \ri \frac{1}{2}\theta_2)\frac{v+h}{\sqrt{2}} \\ (1 - \ri\frac{1}{2}\theta_3)\frac{v+h}{\sqrt{2}}
-		\end{pmatrix} 
+		\end{pmatrix}
 	\nonumber \\
 \label{equ7.80}
-	\text{重新定义}\rightarrow & \equiv 
+	\text{重新定义}\rightarrow & \equiv
 		\begin{pmatrix}
 			\phi_{1r}+\ri \phi_{1c} \\ \frac{v}{\sqrt{2}}\phi_{2r}+\ri \phi_{2c}
 		\end{pmatrix}\text{。}
@@ -1399,7 +1399,7 @@ q=\begin{pmatrix}u\\d\end{pmatrix}
 \section[同位旋]{Isospin \quad 同位旋}\label{sec7.7}
 现在讨论$\mathcal{SU}(2)$对称性所对应的守恒量。自由拉氏量只具有全局对称性，而加入相互作用项，则为其引入了局域对称性。注意到全局对称性是局域对称性的特例，因此全局对称性也存在于所有局域对称的拉氏量之中，其对应的守恒量也在两种情况下都守恒。由于Noether定理，$\mathcal{SU}(2)$对称性给出了一个新的守恒量：同位旋。同位旋与电荷类似，后者对应全局$\mathcal{U}(1)$对称性。
 
-将Noether定理应用于内部对称性（见\ref{sec4.5.5}节，参考方程\ref{eq:4.56}）得到，
+将Noether定理应用于内部对称性（见\ref{sec4.5.5}节，参考方程\ref{equ4.56}）得到，
 \begin{align}
 \partial_0\int{d^3x\underbrace{\frac{\partial\mathscr{L}}{\partial(\partial_0\Psi)}\delta\Psi}_{=Q}}=0
 \label{equ7.131}
