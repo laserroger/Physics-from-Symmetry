@@ -219,9 +219,9 @@ E&=m\left(1+\frac{1}{2}\frac{\vec{p}^2}{m^2}+\cdots\right)\\
 \[
 	\to E = \frac{\vec{p}^2}{2m} + V.
 \]
-典型的例子有谐振子势$V = -k x^2$. Schrödinger方程通常用所有能量算符的总和（例如动能$\frac{\nabla^2}{2m}$加势能$\hat{V}$）——蛤密顿算符$\hat{H}$表示，即：
+典型的例子有谐振子势$V = -k x^2$. Schrödinger方程通常用所有能量算符的总和（例如动能\footnote{\textcolor{red}{译注：原文缺负号，已更正。}}$-\frac{\nabla^2}{2m}$加势能$\hat{V}$）——蛤密顿算符$\hat{H}$表示，即：
 \begin{align}
-	i \partial_t \phi(\vec{x}, t) = \underbrace{\frac{\nabla^2}{2m} }_{\equiv \hat{H}} \phi(\vec{x}, t) \notag \\
+	i \partial_t \phi(\vec{x}, t) = \underbrace{-\frac{\nabla^2}{2m} }_{\equiv \hat{H}} \phi(\vec{x}, t) \notag \\
 \label{equ8.22}
 	\to i \partial_t \phi(\vec{x}, t) = \hat{H} \phi(\vec{x}, t).
 \end{align}
@@ -229,12 +229,12 @@ Dirac方程的非相对论极限的计算过程类似，所得结果称为Pauli�
 
 
 
-\subsection[有外场的 Schrödinger 方程]{Schrödinger Equation with External Field 有外场的 Schrödinger 方程}\label{sec8.4.1}
+\subsection[有外场的 Schr\"{o}dinger 方程]{Schr\"{o}dinger Equation with External Field 有外场的 Schr\"{o}dinger 方程}\label{sec8.4.1}
 
 此外，我们可以对{\bf 相互作用}Klein-Gordon方程\eqref{equ7.43}式，即描述有质量的$0$自旋场与无质量的自旋$1$场（光子场）相互作用的方程，做同样的非相对论性近似。所得结果为
 \begin{align}
 \label{equ8.23}
-	\left(i\partial_t-\frac{1}{2m}\left(\nabla-ia\vec{A}\right)^2+q\Phi\right)\phi(\vec{x},t)=0
+	\left(i\partial_t+\frac{1}{2m}\left(\nabla-ia\vec{A}\right)^2+q\Phi\right)\phi(\vec{x},t)=0
 \end{align}
 
 \section[从波动方程到粒子的运动]{From Wave Equations to Particle Motion \quad 从波动方程到粒子的运动}\label{sec8.5}

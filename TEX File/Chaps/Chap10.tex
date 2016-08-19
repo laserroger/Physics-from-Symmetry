@@ -1,9 +1,9 @@
+%!TEX root = ..\main.tex
 %!TEX encoding = UTF-8 Unicode
-
 %----------------------------------------------------------------------------------------
 %	CHAPTER 4
 %	Translator: SI(= Surgam Identidem)
-%	Proofreader: 
+%	Proofreader: lh1962
 %----------------------------------------------------------------------------------------
 
 \chapterimage{chapter_head_1.pdf} % Chapter heading image
@@ -15,17 +15,17 @@
 
 \chapter[经典力学]{Classical Mechanics \quad 经典力学}
 \label{chap10}
-本章探究量子力学与经典力学之间的联系，我们会看到动量算符期望值对时间的导数正是Newton第二定律（经典力学的基础之一）的形式。
+本章探究量子力学与经典力学之间的联系，我们会看到动量算符期望值对时间的导数正是 Newton 第二定律（经典力学的基础之一）的形式。
 
 力学量算符$\hat{\mathcal{O}}$的期望值为（\ref{equ8.14}式）：
 \[
     \langle \hat{\mathcal{O}} \rangle = \int d^3 x \Psi^* \hat{\mathcal{O}} \Psi
 \]
-势场$V$中单粒子的Schrodinger方程（\ref{equ8.22}式）：
+势场$V$中单粒子的 Schr\"{o}dinger 方程（\ref{equ8.22}式）：
 \[
 \begin{split}
-    (i \frac{d}{dt} - \frac{\nabla^2}{2m}) \Psi - V \Psi = 0 \\
-    \to i \frac{d}{dt} \Psi = \underbrace{ \left( \frac{\nabla^2}{2m} + V \right) }_{=: H} \Psi \\
+    (i \frac{d}{dt} + \frac{\nabla^2}{2m}) \Psi - V \Psi = 0 \\
+    \to i \frac{d}{dt} \Psi = \underbrace{ \left( -\frac{\nabla^2}{2m} + V \right) }_{=: H} \Psi \\
     \to \frac{d}{dt} \Psi = \frac{1}{i} H \Psi \\
     \underbrace{ \to }_{\mathclap{H^\dag = H}} \frac{d}{dt} \Psi^* = - \frac{1}{i} \underbrace{\Psi^*}_{\mathclap{\Psi^\dag = \Psi^*}} H
 \end{split}
@@ -35,13 +35,13 @@
 \[
     \frac{d}{dt} \langle \hat{\mathcal{O}} \rangle = \int d^3 x \left( \left( \frac{d}{dt} \Psi^* \right) \hat{\mathcal{O}} \Psi + \Psi^* \left( \frac{d}{dt} \hat{\mathcal{O}} \right) \Psi + \Psi^* \hat{\mathcal{O}} \left( \frac{d}{dt} \Psi \right) \right)
 \]
-对大部分算符都有$\frac{d}{dt} \hat{\mathcal{O}} = 0$，例如动量$\hat{\mathcal{O}} = \hat{\vec{p}} = -i \vec{\nabla} \neq \hat{\mathcal{O}} (t)$. 我们还利用Schrodinger方程来重写上式中波函数及其共轭对时间的导数项：
+对大部分算符都有$\frac{d}{dt} \hat{\mathcal{O}} = 0$，例如动量$\hat{\mathcal{O}} = \hat{\vec{p}} = -i \vec{\nabla} \neq \hat{\mathcal{O}} (t)$. 我们还利用Schr\"{o}dinger方程来重写上式中波函数及其共轭对时间的导数项：
 \begin{align}
     \frac{d}{dt} \langle \hat{\mathcal{O}} \rangle  &= \int d^3 x \left( \left( - \frac{1}{i} \Psi^* H \right) \hat{\mathcal{O}} \Psi + \Psi^* \hat{\mathcal{O}} \left( \frac{1}{i} H \Psi \right) \right) \notag \\
     &= \frac{1}{i} \int d^3 x \big( ( -\Psi^* H) \hat{\mathcal{O}} \Psi + \Psi^* \hat{\mathcal{O}} (H\Psi) \big) \notag \\
     &= \frac{1}{i} \int d^3 x \Psi^* [\hat{\mathcal{O}}, H] \Psi \notag \\
 \label{equ10.1}
-    &= \frac{1}{i} \langle [\hat{\mathcal{O}}, H] \rangle 
+    &= \frac{1}{i} \langle [\hat{\mathcal{O}}, H] \rangle
 \end{align}
 上式是著名的{\bf Ehrenfest 定理}。比如，考虑$\hat{\mathcal{O}} = \hat{p}$，$H = \frac{p^2}{2m} + V$：
 \begin{align}
@@ -55,9 +55,9 @@
     &\underbrace{=}_{\text{乘积法则}}  - \int d^3 x \Psi^* (\nabla V) \Psi - \int d^3 x \Psi^* V \nabla \Psi + \int d^3 x \Psi^* V \nabla \Psi \notag \\
     &= - \int d^3 x \Psi^* (\nabla V) \Psi \notag \\
 \label{equ10.2}
-    &= \langle - \nabla V \rangle = \langle F \rangle 
+    &= \langle - \nabla V \rangle = \langle F \rangle
 \end{align}
-上式意味着动量期望对时间的导数等于负的势能梯度（也就是力）的期望值，这正是{\bf Newton 第二定律}\mpar{在\ref{sec4.5}节由Noether定律解释守恒量的时候直接用过这个式子（没推导），这里正式把它推倒（无误）啦。}。它可以计算宏观物体的运动轨迹。历史上这个关于力的定律是从实验中总结的唯象定律，作用于一个物体上的力在方程的右端线性相加。定义唯象的物理量{\bf 动量} $p_{\text{mak}} = mv$，Newton第二定律可写为$\frac{d}{dt} p_{\text{mak}} = \frac{d}{dt} mv$，当物体的质量不变时等号右侧即为$m \frac{d}{dt} v$。速度就是坐标对时间的导数\mpar{换句话说，速度$v = \frac{d}{dt} x(t) = \dot{x}(t)$是物体坐标的时间变化率，同理，加速度$a = \frac{d}{dt} \frac{d}{dt} x(t) = \ddot{x}(t)$ 是速度的时间变化率。}，综上可得：
+上式意味着动量期望对时间的导数等于负的势能梯度（也就是力）的期望值，这正是{\bf Newton 第二定律}\mpar{在\ref{sec4.5}节由 Noether 定理解释守恒量的时候直接用过这个式子（没推导），这里正式把它推倒（无误）啦。}。它可以计算宏观物体的运动轨迹。历史上这个关于力的定律是从实验中总结的唯象定律，作用于一个物体上的力在方程的右端线性相加。定义唯象的物理量{\bf 动量} $p_{\text{mak}} = mv$， Newton 第二定律可写为$\frac{d}{dt} p_{\text{mak}} = \frac{d}{dt} mv$，当物体的质量不变时等号右侧即为$m \frac{d}{dt} v$。速度就是坐标对时间的导数\mpar{换句话说，速度$v = \frac{d}{dt} x(t) = \dot{x}(t)$是物体坐标的时间变化率，同理，加速度$a = \frac{d}{dt} \frac{d}{dt} x(t) = \ddot{x}(t)$ 是速度的时间变化率。}，综上可得：
 \begin{equation}
 \label{equ10.3}
     m \frac{d^2}{d t^2} x = F_1 + F_2 + \dots
@@ -78,7 +78,7 @@
 \label{equ10.5}
     S = \int C d \tau,\  \text{其中}C\text{是常数，} d\tau = \frac{1}{c} \sqrt{(cdt)^2 - (dx)^2 - (dy)^2 - (dz)^2}
 \end{equation}
-后面会看到$C = -mc^2$，因此我们要使
+正确的常数应当是$C = -mc^2$，即我们要使
 \begin{equation}
 \label{equ10.6}
     S = -mc^2 \int d\tau
@@ -95,16 +95,16 @@
 \begin{equation}
 \label{equ10.8}
     S = \int \underbrace{-mc^2 \sqrt{1 - \frac{\dot{x}^2}{c^2} }}_{\equiv \mathcal{L}} dt
-\end{equation} 
+\end{equation}
 
-像以前那样，将$\mathcal{L}$带入欧拉-拉格朗日方程\ref{equ4.7}式就使得$S$取极小值：
+像以前那样，通过将$\mathcal{L}$带入欧拉-拉格朗日方程\ref{equ4.7}式就可得到使$S$取极小值的方程：
 \begin{align}
     \frac{\partial \mathcal{L}}{\partial x} - \frac{d}{dt} \left( \frac{\partial \mathcal{L}}{\partial \dot{x}} \right) &= 0 \notag \\
     \to \underbrace{ \frac{\partial}{\partial x} \left( -mc^2 \sqrt{1 - \frac{\dot{x}^2}{c^2}} \right) }_{ = 0} - \frac{d}{dt} \left( \frac{\partial}{\partial \dot{x}} \left( -mc^2 \sqrt{1 - \frac{ \dot{x}^2}{c^2} } \right) \right) &= 0 \notag \\
 \label{equ10.9}
     \to c^2 \frac{d}{dt} \left( \frac{ -m \frac{\dot{x}}{c^2} }{\sqrt{1 - \frac{ \dot{x}^2}{c^2} } } \right) = 0 \rightarrow \frac{d}{dt} \left( \frac{m \dot{x}}{\sqrt{1 - \frac{\dot{x}^2}{c^2}}} \right) &= 0
 \end{align}
-这正是相对论下的{\bf 自由}粒子的运动方程。若粒子在外势场$V(x)$中运动，则在拉格朗日量中附上势能项就可以了\mpar{实际上添加的是$-V(x)$而非$V(x)$，因because then we get in the energy of the system, which we can compute using Noether’s theorem, the potential energy term $+ V ( x )$.}：
+这正是相对论下的{\bf 自由}粒子的运动方程。若粒子在外势场$V(x)$中运动，则在拉格朗日量中附上势能项就可以了\mpar{实际上添加的是$-V(x)$而非$V(x)$，这是为了保证待会儿根据 Noether 定理计算体系的能量时，势能项为$+ V ( x )$.}：
 \begin{equation}
 \label{equ10.10}
     \mathcal{L} = -mc^2 \sqrt{1 - \frac{\dot{x}^2}{c^2} } - V(x)
