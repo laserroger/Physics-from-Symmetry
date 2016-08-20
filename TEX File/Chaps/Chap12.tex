@@ -1,8 +1,10 @@
+%!TEX root = ..\main.tex
 %!TEX encoding = UTF-8 Unicode
 
 %——————————————————————————————————————————————————————————-
 %	CHAPTER 12
 %   Translator：SI
+%   Proofread : lh1962
 %——————————————————————————————————————————————————————————-
 \chapterimage{f12.png} % Chapter heading image
 
@@ -10,7 +12,7 @@
 \label{chap12}
 {\it 非常不幸，目前最靠谱的引力理论与本书其他部分（对称性）的三观不合。这是现代物理学的最大问题之一，本章尝试使读者对这一疑难有所认识。}
 
-现代的引力理论是{\bf Einstein}的{\bf 广义相对论}。广相的基本思想是引力为时空弯曲的结果。质量/能量改变时空的曲率，变化了的曲率进而影响质量/能量的运动。能量与曲率的这一互动由著名的Einstein场方程描述：
+现代的引力理论是{\bf Einstein}的{\bf 广义相对论(general relativity)}。广相的基本思想是引力为时空弯曲的结果。质量/能量改变时空的曲率，变化了的曲率进而影响质量/能量的运动。能量与曲率的这一互动由著名的Einstein场方程描述：
 \begin{equation}
 \label{equ12.1}
     G_{\mu \nu} = 8 \pi G T_{\mu \nu}.
@@ -26,23 +28,24 @@ $T_{\mu \nu}$，$G$是引力常数。
 \label{equ12.2}
     \partial^\mu T_{\mu \nu} = 0.
 \end{equation}
-下面介绍描述曲率的数学工具，它是广义相对论算起来超级复杂的万恶之源。我们已经见过关于曲率的重要的量——度规，它是计算两点间距离的数学工具%
-\mpar{目前为止用到的度规是Minkowski度规$\eta^{\mu \nu} = \begin{pmatrix} 1 & 0 & 0 & 0 \\ 0 & -1 & 0 & 0 \\ 0 & 0 & -1 & 0 \\ 0 & 0 & 0 & -1 \end{pmatrix}$以及Euclidean度规$\delta^{ij} = \begin{pmatrix} 1 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & 1 \end{pmatrix}.$}%
-。由图12.1可见，弯曲空间中的两点间距与平直时空的两点不同，因而度规在曲率的数学描述中起到十分重要的作用。
+下面介绍描述关于曲率的数学工具，它是广义相对论繁琐计算的根源。我们已经见过关于曲率的重要的量——度规，它用于计算两点间距离%
+\mpar{目前为止用到的度规包括 Minkowski 度规$\eta^{\mu \nu} = \begin{pmatrix} 1 & 0 & 0 & 0 \\ 0 & -1 & 0 & 0 \\ 0 & 0 & -1 & 0 \\ 0 & 0 & 0 & -1 \end{pmatrix}$和 Euclidean 度规$\delta^{ij} = \begin{pmatrix} 1 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & 1 \end{pmatrix}.$}%
+。由图\ref{fig12.1}可见，弯曲空间中的两点间距与平直时空的两点不同，因而度规在曲率的数学描述中起到十分重要的作用。
 
 \marginpar{
 	\includegraphics[scale=0.35]{fig12_1.eps}
 	\figcaption{弯曲空间与平直空间中的两点间距}
+    \label{fig12.1}
 }
 
-现在就能“导出”Einstein场方程了，因为能放在能动张量对面的量只有一个：Einstein张量$G_{\mu \nu}$。因为Einstein张量是度规$g_{\mu \nu}$及其一阶、二阶导数的函数中唯一的无散度%
+现在就能“导出” Einstein 场方程了，因为能放在能动张量对面的量只有一个：Einstein张量$G_{\mu \nu}$。这是因为 Einstein 张量是度规$g_{\mu \nu}$及其一阶、二阶导数的函数中唯一\footnote{译注：至多差一常数与度规张量的乘积，即著名的宇宙学常数$Lambda$} 的无散度%
 \mpar{即$\partial^\mu G_{\mu \nu} = 0$.}%
-函数。因此不管Einstein张量多复杂，放到等号一边描述曲率的量只能是它，因为
+函数。不管其多复杂，放到等号一边描述曲率的量只能是它，因为
 \begin{equation}
 \label{equ12.3}
     T_{\mu \nu} = C G_{\mu \nu}, \quad \text{由} \partial^\mu T_{\mu \nu} = 0 \to \partial^\mu G_{\mu \nu} = 0.
 \end{equation}
-Einstein张量是二阶张量%
+Einstein 张量是二阶张量%
 \mpar{二阶张量是指它有两个指标$\mu \nu$，这与散度为零一样也是限制之一，因为$T_{\mu \nu}$是二阶张量。}%
 ，正好符合要求。
 
@@ -56,10 +59,10 @@ Einstein张量通过Ricci张量$R_{\mu \nu}$、Ricci标量$R$（即Ricci张量�
 \label{equ12.5}
     R_{\alpha \beta} = \partial_\rho \Gamma^\rho_{\beta \alpha} - \partial_\beta \Gamma^\rho_{\rho \alpha} + \Gamma^\rho_{\rho \lambda} \Gamma^\lambda_{\beta \alpha} - \Gamma^\rho_{\beta \lambda} \Gamma^\lambda_{\rho \alpha}
 \end{equation}
-再其中...Christoffel符号通过度规张量定义：
+其中 Christoffel 符号通过度规张量定义：
 \begin{equation}
 \label{equ12.6}
-    \Gamma_{cab} = \frac{1}{2} \left( \frac{\partial g_{ca}}{\partial x^b} + \frac{\partial g_{cb}}{\partial x^a} - \frac{\partial g_{ab}}{\partial x^c} \right) = \frac{1}{2} (\partial_b g_{ca} + \partial_a g_{cb} - \partial_c g_{ab}).
+    \Gamma^d_{ab} = \frac{1}{2} g^{cd} \left( \frac{\partial g_{ca}}{\partial x^b} + \frac{\partial g_{cb}}{\partial x^a} - \frac{\partial g_{ab}}{\partial x^c} \right) = \frac{1}{2} g^{cd} (\partial_b g_{ca} + \partial_a g_{cb} - \partial_c g_{ab}).
 \end{equation}
 上面的式子复杂得吓人，这稍微揭示了广义相对论计算的繁复程度。
 
@@ -131,7 +134,7 @@ Einstein张量通过Ricci张量$R_{\mu \nu}$、Ricci标量$R$（即Ricci张量�
 \end{equation}
 尽管上面各式的形式相似，但引力无法像其他相互作用那样量子化。其他相互作用都是用量子理论描述的，都给出概率性的实验预言。而广义相对论是经典理论，因为广相中的粒子沿确定的轨迹运动，没有概率性因素。
 
-更糟糕的是目前没有任何实验能检测引力与其他力之间的相互作用。基本粒子间的引力太小，无法测量。因此忽视了引力，只考虑强、弱与电磁相互作用的标准模型与实验符合的相当好。大质量物体的广义相对论效应实验上可以测量，但量子效应却十分微弱，因为大质量物体包含大量基本粒子，所有量子效应被平均掉了。第\ref{chap10}章导出了平均值的运动方程，它正是经典物理的形式，毫无量子效应。
+更糟糕的是目前没有任何实验能检测引力与其他力之间的相互作用。基本粒子间的引力太小，无法测量。因此忽视了引力，只考虑强、弱与电磁相互作用的标准模型就可以与实验符合得相当好。大质量物体的广义相对论效应实验上可以测量，但量子效应却十分微弱，因为大质量物体包含大量基本粒子，所有量子效应被平均掉了。第\ref{chap10}章导出了平均值的运动方程，它正是经典物理的形式，毫无量子效应。
 
 引力的量子化的困难可以列出长长的列表，不过Einstein简明地论述了引力与其他相互作用的差异：
 \begin{quote}
@@ -173,6 +176,6 @@ $\dots$ 根据广义相对论，引力与其他相互作用（特别是电磁力
 关于尝试引力量子化的更多信息可见
 \begin{itemize}
     \item {\bf John C. Baez, Javier P. Muniain - Gauge Fields, Knots, and Gravity}%
-    \mpar{ John C. Baez and Javier P. Muniain. {\it Gauge Fields, Knots, and Gravity.} World Scientific Pub Co Inc, 1st edition, 9. 1994. ISBN 9789810220341}% 
+    \mpar{ John C. Baez and Javier P. Muniain. {\it Gauge Fields, Knots, and Gravity.} World Scientific Pub Co Inc, 1st edition, 9. 1994. ISBN 9789810220341}%
     以面向物理学家的方式介绍了引力量子化的数学工具。
 \end{itemize}

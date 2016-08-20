@@ -4,6 +4,7 @@
 %——————————————————————————————————————————————————————————-
 %   CHAPTER 11
 %   Translator：SI
+%   Proofread : lh1962
 %——————————————————————————————————————————————————————————-
 \chapterimage{chapter_head_1.pdf} % Chapter heading image
 
@@ -15,12 +16,12 @@
 \label{equ11.1}
     \partial_\sigma (\partial^\sigma A^\rho - \partial^\rho A^\sigma ) = J_\rho
 \end{equation}
-利用电磁张量\mpar{电磁张量$F^{\sigma \rho} \equiv (\partial^\sigma A^\rho - \partial^\rho A^\sigma)$.}可将上式写为更紧凑的形式：
+利用电磁张量\mpar{电磁张量\\ $F^{\sigma \rho} \equiv (\partial^\sigma A^\rho - \partial^\rho A^\sigma)$.}可将上式写为更紧凑的形式：
 \begin{equation}
 \label{equ11.2}
     \partial_\sigma F^{\sigma \rho} = J^\rho
 \end{equation}
-\ref{sec7.1.6}节导出了$J_\rho$是Noether流(Noether current)，即$\partial_\rho J^\rho = 0$. 这一守恒流即为宏观理论中的四维电流。电磁张量$F^{\sigma \rho}$是反称张量（$F^{\sigma \rho} = -F^{\rho \sigma}$），这可以从定义式$F^{\sigma \rho} \equiv \partial^\sigma A^\rho - \partial^\rho A^\sigma$直接看出，因此$F^{\sigma \rho}$只有$6$个独立分量，其中三个是
+\ref{sec7.1.6}节导出了$J_\rho$为Noether流，即$\partial_\rho J^\rho = 0$. 这一守恒流即为宏观理论中的四维电流。电磁张量$F^{\sigma \rho}$是反称张量（$F^{\sigma \rho} = -F^{\rho \sigma}$），这可以从定义式$F^{\sigma \rho} \equiv \partial^\sigma A^\rho - \partial^\rho A^\sigma$直接看出，因此$F^{\sigma \rho}$只有$6$个独立分量，其中三个是
 \begin{equation}
 \label{equ11.3}
     F^{i0} = \partial^{i} A^0 - \partial^0 A^i
@@ -61,9 +62,9 @@
 \label{equ11.11}
     \to \nabla \cdot \vec{E} &= J_0
 \end{align}
-这是非齐次Maxwell方程组的常用形式。
+这是非齐次 Maxwell 方程组在工程等领域中的常用形式。
 
-\section[齐次Maxwell方程组]{The Homogeneous Maxwell Equations \quad 齐次Maxwell方程组}
+\section[齐次 Maxwell 方程组]{The Homogeneous Maxwell Equations \quad 齐次Maxwell方程组}
 \label{sec11.1}
 定义{\bf 对偶(dual)电磁张量}$\tilde{F}^{\mu \nu}$为四维Levi-Civita符号%
 \mpar{四维Levi-Civita符号$\epsilon^{\mu \nu \rho \sigma}$的定义见附录B.5.5.}%
@@ -77,7 +78,7 @@
 \label{equ11.13}
     \partial_\mu \tilde{F}^{\mu \nu} = \partial_\mu \epsilon^{\mu \nu \rho \sigma} (\partial_\sigma A_\rho - \partial_\rho A_\sigma) = 0
 \end{equation}
-这一结论实际是如下命题的情形之一：两个对称指标与两个反对称指标缩并\footnote{例如，张量$A^{\alpha \beta \mu \nu} = A^{\alpha \beta \nu \mu}$, $\mu, \nu$是一对对称指标；张量$B_{\rho \sigma \eta \delta} = -B_{\sigma \rho \eta \delta}$, $\rho, \sigma$是一对反称指标。一对对称指标与反称指标的缩并结果必为零（即所得张量分量均为$0$）：$C^{\alpha \beta}_{\eta \delta} \equiv A^{\alpha \beta \gamma \varphi} B_{\gamma \varphi \eta \delta} = 0.$}所得结果为零%
+这一结论实际是如下命题的特殊情形：两个对称指标与两个反对称指标缩并\footnote{例如，张量$A^{\alpha \beta \mu \nu} = A^{\alpha \beta \nu \mu}$, $\mu, \nu$是一对对称指标；张量$B_{\rho \sigma \eta \delta} = -B_{\sigma \rho \eta \delta}$, $\rho, \sigma$是一对反称指标。一对对称指标与反称指标的缩并结果必为零（即所得张量分量均为$0$）：$C^{\alpha \beta}_{\eta \delta} \equiv A^{\alpha \beta \gamma \varphi} B_{\gamma \varphi \eta \delta} = 0.$}所得结果为零%
 \mpar{详见附录B.5.4.}。%
 以\ref{equ11.13}式括号内的第一项为例：
 \begin{align}
@@ -109,11 +110,11 @@
 \label{equ11.17}
     \nabla \times \vec{E} + \partial_t \vec{B} = 0
 \end{equation}
-这是齐次 Maxwell 方程组的常用形式。
+这是齐次 Maxwell 方程组在应用领域中的常见形式。
 
 \section[Lorentz力]{The Lorentz Force \quad Lorentz力}
 \label{sec11.2}
-利用上一章导出的量子与经典力学的联系（Ehrenfest定理）可以推导著名的Lorentz力公式。考虑在电磁场中运动的非相对论性无自旋的粒子，其Schrodinger方程包含电磁场的耦合项（\ref{equ8.23}式）%
+利用上一章导出的量子与经典力学的联系（Ehrenfest定理）可以推导著名的Lorentz力公式。考虑在电磁场中运动的非相对论性无自旋的粒子，其Schr\"{o}dinger方程包含电磁场的耦合项（\ref{equ8.23}式）%
 \mpar{该式是从与外电磁场耦合的Klein-Gordon方程导出，亦即，从\ 与自旋$1$无质量场（电磁场）耦合的自旋$0$的粒子的拉格朗日量导出的。因此推导的出发点还是用来导出拉格朗日量的Lorentz对称性与规范对称性。}%：
 \begin{equation}
 \label{equ11.18}
@@ -121,11 +122,11 @@
 \end{equation}
 定义该系统的动量%
 \mpar{这个定义来自Noether定理：系统的平移不变性对应守恒量-动量，$\frac{\partial L}{\partial \dot{x}} = \Pi$.}%
-为$\vec{\Pi} = \vec{p} - q \vec{A}$, 则系统的蛤密顿量为：
+为$\vec{\Pi} = \vec{p} - q \vec{A}$, 则系统的哈密顿量为：
 \begin{equation*}
     H = \frac{1}{2m} |\vec{\Pi}|^2 + q \Phi
 \end{equation*}
-有了蛤密顿量，再重复与上一章相同的过程，就能得到类似\ref{equ10.1}式的结果。因为这里涉及到依赖于时间的算符，因而推导中包含对时间的偏导数项：
+有了哈密顿量，再重复与上一章相同的过程，就能得到类似\ref{equ10.1}式的结果。因为这里涉及到依赖于时间的算符，因而推导中包含对时间的偏导数项：
 \begin{align*}
     \frac{d}{dt} \langle \hat{O} \rangle &= \frac{1}{i} \langle [O, H] \rangle + \langle \frac{\partial \hat{O}}{\partial t} \rangle \\
     \to \frac{d}{dt} \langle \vec{\Pi} \rangle &= \frac{1}{i} \langle [\vec{\Pi}, H] \rangle + \langle \frac{\partial \vec{\Pi}}{\partial t} \rangle,
@@ -150,15 +151,15 @@ $\partial \vec{\Pi} / \partial t \neq 0$, 因为$\vec{A}$显含时间。将$H$�
 最终得到
 \begin{equation}
 \label{equ11.20}
-    \frac{d}{dt} \langle \vec{\Pi} \rangle \equiv F_{\text{Lorentz}} = -q \big( \langle (\vec{v} \times \vec{B}) \rangle + \langle E \rangle \big).
+    \frac{d}{dt} \langle \vec{\Pi} \rangle \equiv F_{\text{Lorentz}} = -q \big( \langle \vec{v} \times \vec{B} \rangle + \langle E \rangle \big).
 \end{equation}
 上式即为带电粒子在外电磁场中的运动方程，其解即为粒子轨迹。
 
 \section[Coulomb 势]{Coulomb Potential \quad Coulomb 势}
 \label{sec11.3}
 第\ref{chap7}章讲过拉格朗日量具有内禀对称性，可以利用这一自由度简化计算，也就是说将场进行内禀变换以使计算大大简化。只要进行规范变换（使拉格朗日量不变），则变换前后的场蕴含的物理规律是相同的。通常选择的规范是关于光子场$A^\mu$的，规定%
-\mpar{这一规范条件的存在性可以证明（这里略）。相关细节可参见电动力学教材。}%
-$\partial_\mu A^\mu = 0$，这称为Lorentz规范。利用这一规范条件将非齐次Maxwell方程组简化为：
+\mpar{可以证明这一规范条件的存在性（略），相关细节可参见电动力学教材。}%
+$\partial_\mu A^\mu = 0$，这称为 Lorentz 规范。利用这一规范条件将非齐次 Maxwell 方程组简化为：
 \begin{equation}
 \label{equ11.21}
     \partial_\sigma (\partial^\sigma A^\rho - \partial^\rho A^\sigma) = \partial_\sigma \partial^\sigma A^\rho = J^\rho
