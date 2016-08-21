@@ -691,7 +691,85 @@ tice Hall, 2nd edition, 4 2004. ISBN 9780131118928}
 
 {\it 下面进行详细推导：}
 
-弱相互作用和宇称破缺
+弱相互作用和宇称破缺使得我们明白了左手手性和右手手性是截然不同的粒子这一重要观点。左手手性的粒子携带弱荷（同位旋），因此通过弱力来相互作用。右手手性的粒子则不携带，因此不相互作用，我们在\ref{sec7.7.1}中有过解释。
+
+我们自然界中的每一个粒子都有它对应的反粒子，而其反粒子的描述就是通过对粒子的荷进行共轭操作。荷的共轭操作会翻转所有的粒子的标签，当然包括同位旋。我们可以看看，对应于电子，其对应什么样的粒子。我们有
+\begin{itemize}
+\item 一个左手手性的{\it 电子}$\chi_L$，同位旋$-\frac{1}{2}$，带电$-e$，处于双重态。
+\item 一个右手手性的{\it 反-左手手性电子}$(\chi_L)^c=\chi_R$，将有同位旋$\frac{1}{2}$，电荷$+e$，也同样是处于双重态。这种特性不会因为荷共轭就消失。这可能看起来有点迷茫，但是到现在为止我们只讨论粒子\footnote{而不是反粒子，切记切记}间弱力带来的耦合。右手反粒子也会被弱相互作用耦合。
+\item 右手{\it 电子}$\xi_R$，同位旋$0$，电荷$-e$。
+\item 左手{\it 反-右手手性电子}$(\xi_R)^c=\xi_L$，同位旋$0$，电荷$+e$。
+\end{itemize}
+
+因此，当讨论电子的时候，我们实际上有{\bf 四}种不同的需要考虑的``东西''。因为他们都是不同的粒子，我们实际上需要给他们不同的名字！一般我们只会说两种：电子和正电子，我们马上会看到这意味着什么。
+
+{\it 我们接下来的讨论仅限于问题中的粒子静止的参考系。在其他的参考系中，这些讨论是类似的，但是会有琐碎的细节。}
+
+Dirac旋量和其荷共轭与这四种粒子直接相关。{\bf 物理的电子}和{\bf 物理的正电子}一般被认为是DIrac方程的解。Dirac方程是运动方程，也就是决定粒子的动力学的方程，其解为DIrac旋量的时间演化。我们需要求出来我们的粒子的时间演化，这就需要我们同时考虑这两种粒子。
+
+在附录，\ref{sec8.9}节中我们可以看到严格的推导。我们这里给出结论。Dirac方程有四个线性无关的解，其中两个有形式
+\begin{align}
+\psi_i=\left(\begin{matrix}\text{u}_i\\\text{u}_i\end{matrix}\right)
+\end{align}
+比如\mpar{这实际上是一种基的选取。任何选取只需要线性无关就可以。}$\text{u}_1=\left(\begin{matrix}1\\0\end{matrix}\right)e^{-imt}$和$\text{u}_2=\left(\begin{matrix}0\\1\end{matrix}\right)e^{-imt}$，而另外两个有形式
+\begin{align}
+\bar{\psi}_i=\left(\begin{matrix}-\text{v}_i\\\text{v}_i\end{matrix}\right)
+\end{align}
+比如$\text{v}_1=\left(\begin{matrix}1\\0\end{matrix}\right)e^{+imt}$和$\text{v}_2=\left(\begin{matrix}0\\1\end{matrix}\right)e^{+imt}$。
+
+Dirac方程告诉我们两个粒子的自旋由Dirac旋量里面的上下Weyl旋量来描述。不仅如此，他们的时间依赖必须一样。这些解就是我们通常认为的不同自旋的{\bf 物理电子}和{\bf 物理正电子}\mpar{注意这些解彼此之间的荷共轭。利用荷共轭算符来仔细计算：$\psi_1^c=i\gamma_2\psi_1^*$，因此$(\psi_1)^c=\bar{\psi}_2$，而$(\psi_2)^c=\bar{\psi}_1$。}。
+
+\begin{itemize}
+\item $\psi_1$是自旋向上的电子
+\item $\psi_2$是自旋向下的电子
+\item $\bar{\psi}_1$是自旋向上的电子
+\item $\bar{\psi}_2$是自旋向下的电子
+\end{itemize}
+
+我们可以看到一个物理电子有一个左手（上面的两分量）和右手（下面的两分量）成分。一个物理电子的左右手成分的自旋、时间依赖必须是一样的。就如上面所讨论的，左手和右手成分的行为是非常不一样的，因为他们有不同的弱荷！而为了描述他们的动力学，物理电子必须同时有这两个成分。
+
+注意这些解并不意味着我们用来描述物理电子用的是严格的上和下分量。只需要他们的自旋和时间依赖必须一样。上部分仍然是双重态，而下部分则不是。上部分按照$SU(2)$变化而下部分不是。用前面的符号来看的话，我们有
+\begin{align}
+\text{物理电子}=\left(\begin{matrix}\chi_L\\\xi_R\end{matrix}\right)\propto\left(\begin{matrix}\text{u}\\\text{u}\end{matrix}\right)
+\end{align}
+这并不说明$\chi_L=\xi_R$。Weyl旋量$\chi_L$是有同位旋的双重态，而由$\xi_R$描述的粒子则没有同位旋。不仅如此，我们也知道了Dirac旋量里面的上和下Weyl旋量在Lorentz推动下是不一样变化的。因此，我们使用不同的记号是非常有必要的。换句话说，左手电子$\chi_L$带一个$SU(2)$指标，因为$\chi_L$按照$SU(2)$双重态的一部分来变换。$\xi_R$则没有指标，按照$SU(2)$单重态来变化呢。
+
+一样的 ，我们有
+\begin{align}
+\text{物理正电子}=\left(\begin{matrix}-\xi_L\\\chi_R\end{matrix}\right)\propto\left(\begin{matrix}-\text{v}\\\text{v}\end{matrix}\right)
+\end{align}
+我们可以通过荷共轭看到\mpar{见第\ref{sec7.1.5}节，并利用\eqref{equ6.13}定义的矩阵的精确形式：$\gamma_2=\left(\begin{matrix}0&\bar{\sigma_2}\\\sigma_2&0\end{matrix}\right)=\left(\begin{matrix}0&-{\sigma_2}\\\sigma_2&0\end{matrix}\right)$。}
+\begin{align}
+\begin{split}
+(\text{物理电子})^c&=i\gamma_2\left(\begin{matrix}\xi_L\\\chi_R\end{matrix}\right)^*=\left(\begin{matrix}-\chi_L\\\xi_R\end{matrix}\right)\propto i\gamma_2\left(\begin{matrix}\text{u}\\\text{u}\end{matrix}\right)^*=\left(\begin{matrix}-\text{u}^c\\\text{u}^c\end{matrix}\right)\\
+&=\text{物理正电子}
+\end{split}
+\end{align}
+
+这告诉我们我们自然界中观测到的物理电子实际上大部分时候都是两种粒子的叠加：携带同位旋的左手电子和无同位旋的右手电子！一样的我们知道，物理正电子也是由携带同位旋的反-左手电子和无同位旋的反-右手粒子的混合。
+
+Dirac方程的解则告诉我们粒子如何进行时间演化。比如说我们考虑在一个弱相互作用下出现的一个自旋向上的电子，然后它如何进行时间演化呢？首先他是一个纯的左手电子，可以写为
+\begin{align}
+e_L^\uparrow=\left(\begin{matrix}1\\0\\0\\0\end{matrix}\right)
+\end{align}
+而它并不是Dirac方程的解，因此，为了得到它的时间演化，我们可以用Dirac方程的解展开：
+\begin{align}
+e_L^\uparrow=\left(\begin{matrix}1\\0\\0\\0\end{matrix}\right)=\frac{1}{2}\left(\left(\begin{matrix}1\\0\\1\\0\end{matrix}\right)-\left(\begin{matrix}-1\\0\\1\\0\end{matrix}\right)\right)=\Psi_1(t=0)-\bar{\Psi}_1(t=0)
+\end{align}
+我们知道$\Psi_1$和$\bar{\Psi}_1$如何时间演化
+\begin{align}
+\Psi_1(t)-\bar{\Psi}_1(t)=\to\frac{1}{2}\left(\left(\begin{matrix}1\\0\\1\\0\end{matrix}\right)e^{-imt}-\left(\begin{matrix}-1\\0\\1\\0\end{matrix}\right)e^{imt}\right)
+\end{align}
+对于$t=0$，这就是左手态，但是演化了一段时间，比如$t=\frac{\pi}{2m}$之后，我们有
+\begin{align}
+\to\frac{1}{2}\left(\left(\begin{matrix}1\\0\\1\\0\end{matrix}\right)\underbrace{e^{-i\frac{\pi}{2}}}_{=-i}-\left(\begin{matrix}-1\\0\\1\\0\end{matrix}\right)\underbrace{e^{i\frac{\pi}{2}}}_{=i}\right)=-i\left(\begin{matrix}0\\0\\1\\0\end{matrix}\right)=-ie_R^\uparrow
+\end{align}
+这描述了一个自旋向上的右手电子！这里我们了解到，随着时间演化，左手粒子会变成右手粒子，反之亦然。为了描述电子的演化，我们必须有$e_L$和$e_R$，这也就是我们把它们在一起写成Dirac旋量的原因。对正电子亦然。
+
+记得两种不同的粒子$e_L$，$e_R$有不同的弱荷，即同位旋，而时间演化可以使二者互相转换。大多数时候它们都是两种的混合物，而不是确切的处于某个本征态。同位旋和手性因此在时间演化中就不守恒。
+
+我们现在可以看到Dirac旋量的符号是必须的，因为我们有一个封闭的将本节开始提到的四种粒子中任意两种联系起来的动力学行为。手性和同位旋在传播过程中也就不守恒了。可以发现，不同时间的电子有的时候处于左手态，有的时候也会处于右手态。
+
 
 
 
