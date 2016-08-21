@@ -577,7 +577,64 @@ CRC Press, 4th edition, 12 2012. ISBN
 9781466513174}}非常清晰地诠释了规范场论的思想。
 \end{itemize}
 
+\section[Klein-Gordon 方程的一般解]{Appendix: Most General Solution of the Klein-Gordon Equation Klein-Gordon 方程的一般解}\label{sec9.6}
+不难得到Klein-Gordon方程的\textbf{一个解}：平面波即满足方程。
+\begin{gather*}
+\Phi(x)=a\text{e}^{i(px-Et)}=\text{e}^{-ip_\mu x^\mu}
+\end{gather*}
+由狭义相对论能量-动量关系可得：
+\begin{gather*}
+E^2=\vec{p}^2+m^2\to p_\mu p^\mu=m^2
+\end{gather*}
+于是有
+\begin{align}
+(\partial_\mu\partial^\mu+m^2)\Phi&=(\partial_\mu\partial^\mu+m^2)\text{e}^{-ip_\mu x^\mu}\\
+&=(-p_\mu p^\mu+m^2)\text{e}^{-ip_\mu x^\mu}\\
+&=(-m^2+m^2)\text{e}^{-ip_\mu x^\mu}\\
+&=0\quad\checkmark
+\end{align}
+由于推导中对场求导两次，指数中的符号不会影响最终结果。因而，
+\begin{gather*}
+\Phi^\dag(x)=a^\dag \text{e}^{-i(px-Et)}=a^\dag \text{e}^{ip_\mu x^\mu}
+\end{gather*}
+也是方程的解。将以上两解线性叠加，可以得到更多解。一般解由所有可能解得叠加得出，亦可写为解的Fourier展开\mpar{这便是$2\pi$因子的来源。同时，这也是解构成正交集的条件：$\int dk \text{e}^{ikx}\text{e}^{-ikx'}=\int dk \text{e}^{ik(x-x')}=2\pi\delta(x-x')$。于是$2\pi$因子即为归一化常数。}
+\begin{gather*}
+\Phi(x)=\int \frac{dp^4}{(2\pi)^4}(a(p)\text{e}^{-i(p_\mu x^\mu)}+a^\dag(p)\text{e}^{i(p_\mu x^\mu)})
+\end{gather*}
+注意到$a=a(p)$，因为不同$p$值可以对应不同的乘积因子，求和中每一项都是各自独立的解。
 
+在文献中，波数$k_i=\frac{p_i}{\hbar}$和频率$k_0=w=\frac{E}{\hbar}$常被用以代替能量和动量。由于我们使用单位制$\hbar=1$，只需将上面公式中的变量重新命名，即可得到标准教科书中的表达式。同时，缩写$kx\equiv k_\mu x^\mu$也很常用。于是可以写出
+\begin{gather*}
+\Phi(x)=\int \frac{dk^4}{(2\pi)^4}\left(a(k)\text{e}^{-i(kx)}+a^\dag(k)\text{e}^{i(kx)}\right)
+\end{gather*}
+注意到并非所有Klein-Gordon方程的解都适用于描述自然，因为需满足\textbf{“质壳”条件(``mass-shell" condition)}
+\begin{align}
+p_\mu p^\mu=k_\mu k^\mu=m^2\to k_0^2-k_i^2\stackrel{!}{=}m^2\to k^2\stackrel{!}{=}m^2
+\end{align}
+只有满足质壳条件的解才与相对论能量-动量关系相协调（方程\eqref{equ8.2}）。通过插入delta分布排除非物理（不在壳）解后\mpar{解释见附录 D. 2}，这一条件可被纳入上面的方程中。
+\begin{gather*}
+\Phi(x)_\text{physical}=\int\frac{dk^4}{(2\pi)^4}2\pi\delta(k^2-m^2)\left(a(k)\text{e}^{-i(kx)}+a^\dag(k)\text{e}^{i(kx)}\right)
+\end{gather*}
+除此之外，只有正能解有物理意义，原因前面已经提到过，否则能量没有下限、系统无法处于稳定态。利用Heavside函数$\theta(k_0)$（$k_0<0$时为0，$k_0\ge0$时为1）可将这一约束纳入方程。方程中的积分变为：
+\begin{gather*}
+\Phi(x)_\text{physical}=\int \frac{1}{(2\pi)^3}\underbrace{dk^4\delta(k^2-m^2)\theta(k_0)}_{\text{测度}}\left(a(k)\text{e}^{-i(kx)}+a^\dag(k)\text{e}^{i(kx)}\right)
+\end{gather*}
+等式中的测度可以重写为
+\begin{align}
+dk^4\delta(k^2-m^2)\theta(k_0)&=dk^4\delta(k_0^2-\vec{k}^2-m^2)\theta(k_0)
+\nonumber\\
+&=dk^4\delta(k_0^2-\omega_k^2)\theta(k_0)\nonumber\\
+&=dk^4\delta\left((k_0-\omega_k)(k_0+\omega_k)\right)\theta(k_0)
+\nonumber\\
+&\underbrace{=}_{\mathclap{\text{使用}\delta\left(f(x)\right)=\sum_i\frac{\delta(x-a_i)}{\left|\frac{df}{dx}(a_i)\right|}\text{，其中}a_i{为函数f的根，即}f(a_i)=0}}dk^4\frac{1}{2k_0}\left(\delta(k_0-\omega_k)+\delta(k_0+\omega_k)\right)\theta(k_0)\nonumber\\
+&\underbrace{=}_{\mathclap{\text{因为}\delta(k_0+\omega_k\text{的参数在}k_0\ge0\text{时永不为0}}}dk^4\frac{1}{k_0}\delta(k_0-\omega_k)\nonumber\\
+&=dk^3dk_0\frac{1}{2k_0}\delta(k_0-\omega_k)\nonumber\\
+&\underbrace{=}_{\text{对}k_0\text{积分}}dk^3\frac{1}{2\omega_k}
+\end{align}
+最终得到满足物理条件的Klein-Gordon方程一般解
+\begin{align}
+\Phi(x)=\int dk^3\frac{1}{(2\pi)^32\omega_k}\left(a(k)\text{e}^{-i(kx)}+a^\dag(k)\text{e}^{i(kx)}\right)
+\end{align}
 
 
 
