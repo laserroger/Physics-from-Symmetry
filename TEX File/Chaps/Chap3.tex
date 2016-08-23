@@ -891,9 +891,9 @@ R_1 =
 	\end{pmatrix}
 \end{equation}
 
-我们已经得出$\mathcal{SO}(3)$群的生成元显式的矩阵形式（\ref{equ3.62}式），这样就能直接计算生成元之间的Lie括号了\mpar{前面说过，Lie代数元素间的‘乘法’是Lie括号。直接计算生成元的基之间的Lie括号，就可得到所有生成元之间的Lie括号（任意生成元都是基的线性组合）。之后会看到生成元的基在Lie括号运算下的行为极其重要。Lie代数的所有重要信息都蕴含在生成元的基的Lie括号中。}，不难得到\mpar{例如：\begin{multline*}
-	[J_1, J_2] = J_1 J_2 - J_2 J_1 \\
-	= 	\begin{pmatrix}
+我们已经得出$\mathcal{SO}(3)$群的生成元显式的矩阵形式（\ref{equ3.62}式），这样就能直接计算生成元之间的Lie括号了\mpar{前面说过，Lie代数元素间的‘乘法’是Lie括号。直接计算生成元的基之间的Lie括号，就可得到所有生成元之间的Lie括号（任意生成元都是基的线性组合）。之后会看到生成元的基在Lie括号运算下的行为极其重要。Lie代数的所有重要信息都蕴含在生成元的基的Lie括号中。}，不难得到\mpar{例如：$
+	[J_1, J_2] = J_1 J_2 - J_2 J_1= 
+	 	\begin{pmatrix}
 			0 & 0 & 0 \\
 			0 & 0 & -1 \\
 			0 & 1 & 0
@@ -902,7 +902,7 @@ R_1 =
 			0 & 0 & 1 \\
 			0 & 0 & 0 \\
 			-1 & 0 & 0
-		\end{pmatrix} -\\
+		\end{pmatrix} -
 		\begin{pmatrix}
 			0 & 0 & 1 \\
 			0 & 0 & 0 \\
@@ -912,7 +912,7 @@ R_1 =
 			0 & 0 & 0 \\
 			0 & 0 & -1 \\
 			0 & 1 & 0
-		\end{pmatrix} =\\
+		\end{pmatrix} =
 		\begin{pmatrix}
 			0 & 0 & 0 \\
 			1 & 0 & 0 \\
@@ -924,16 +924,14 @@ R_1 =
 			0 & 0 & 0 \\
 			0 & 0 & 0
 		\end{pmatrix}
-		= \\
+		= 
 		\begin{pmatrix}
 			0 & -1 & 0 \\
 			1 & 0 & 0 \\
 			0 & 0 & 0
 		\end{pmatrix}
-		= \underbrace{\epsilon_{12k}}_{=0, \text{除了}k=3} J_k \\
-		= \epsilon_{123} J_3 = J_3
-\end{multline*}
-}：
+		= \underbrace{\epsilon_{12k}}_{\mathclap{=0, \text{除了}k=3}} J_k 
+		= \epsilon_{123} J_3 = J_3$}：
 \begin{equation}
 \label{equ3.71}
 [J_i, J_j] = \epsilon_{ijk} J_k

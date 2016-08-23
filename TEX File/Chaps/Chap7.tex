@@ -246,9 +246,9 @@ D_\mu \equiv \ri \partial_\mu + gA_\mu\text{，}
 \end{equation}
 称作{\bf 协变导数(covariant derivative)}\footnote{译注：常见的记号似乎与其差了一个虚数单位}。这样拉格朗日量写作
 \begin{align}
-{\mathscr L}_\text{Dirac+额外项+Maxwell} &= -m\bar\Psi\Psi +\bar\Psi\gamma_\mu \underbrace{(\ri\partial^\mu+ g A^\mu)}_{\equiv D^\mu} \Psi  + \partial^\mu A^\nu\partial_\mu A_\nu - \partial^\mu A^\nu \partial_\nu A_\mu \nonumber\\
+{\mathscr L}_\text{Dirac+额外项+Maxwell} &= -m\bar\Psi\Psi +\bar\Psi\gamma_\mu \underbrace{(\ri\partial^\mu+ g A^\mu)}_{\equiv D^\mu} \Psi  + \partial^\mu A^\nu\partial_\mu A_\nu \nonumber\\
 \label{equ7.19}
-&= -m\bar\Psi\Psi +\bar\Psi\gamma_\mu D^\mu\Psi  + \partial^\mu A^\nu\partial_\mu A_\nu - \partial^\mu A^\nu \partial_\nu A_\mu
+&=  - \partial^\mu A^\nu \partial_\nu A_\mu-m\bar\Psi\Psi +\bar\Psi\gamma_\mu D^\mu\Psi  + \partial^\mu A^\nu\partial_\mu A_\nu - \partial^\mu A^\nu \partial_\nu A_\mu
 \end{align}
 {\bf 这即为电磁场的量子场论}（常称为量子电动力学）{\bf 的正确拉格朗日量}。我们通过观察\spint 自由场和自旋为一的自由场的内禀对称性，简单的得到了它。
 
@@ -588,19 +588,17 @@ W_i^\mu \rightarrow W'^\mu_i= W^\mu_i+\partial^\mu a_i(x)
 \]
 不幸的是，这样并不能得到局域\sutw 不变的拉格朗日量%
 \footnote{\textcolor{red}{译注：原文下式上下标混乱，以及最后两行漏$1/2$因子，以及倒数第二个等号应该为不等号，已更正。} {\textcolor{blue}{原文的typo + 译文的修改 + 译文的typo让校对君无法区分哪里要改哪里不改，因此该式的修改在终审进行。}} }
-\begin{equation}
-\begin{aligned}
-{\mathscr L}'_{\text{D}_1+\text{D}_2+\text{额外项}} &= \ri\bar\Psi'\gamma_\mu\partial^\mu\Psi'+\bar\Psi'\gamma_\mu\frac{\sigma_j}{2} {W'}_j^\mu \Psi' \\
-&= \ri\bar\Psi\ue^{-\ri a_i(x)\frac{\sigma_i}{2}}\gamma_\mu\partial^\mu\ue^{\ri a_i(x)\frac{\sigma_i}{2}}\Psi \\
-& \quad +\ri\bar\Psi\ue^{-\ri a_i(x)\frac{\sigma_i}{2}}\gamma_\mu\frac{\sigma_j}{2}\left(W_j^\mu+\partial^\mu a_j(x)\right)\ue^{\ri a_i(x)\frac{\sigma_i}{2}}\Psi \\
-&= \ri\bar\Psi\gamma_\mu\partial^\mu\Psi - \bar\Psi\gamma_\mu\left(\partial^\mu a_i(x)\frac{\sigma_i}{2}\right)\Psi \\
-& \quad + \bar\Psi\underbrace{\ue^{-\ri a_i(x)\frac{\sigma_i}{2}}\gamma_\mu\frac{\sigma_j}{2}W_j^\mu\ue^{\ri a_i(x)\frac{\sigma_i}{2}}}_{\mathclap{\ne \gamma_\mu\frac{\sigma_j}{2}W_j^\mu\text{因为}[\frac{\sigma_i}{2},\frac{\sigma_j}{2}]=\epsilon_{ijk}\frac{\sigma_k}{2}\ne 0 }} \Psi \\
-& \quad +\ri\bar\Psi\ue^{-\ri a_i(x)\frac{\sigma_i}{2}}\gamma_\mu\frac{\sigma_j}{2}\left(\partial^\mu a_j(x)\right)\ue^{\ri a_i(x)\frac{\sigma_i}{2}}\Psi \\
-&\ne \ri\bar\Psi\gamma_\mu\partial^\mu\Psi -\cancel{\bar\Psi\gamma_\mu\left(\partial^\mu a_i(x)\frac{\sigma_i}{2}\right)\Psi} + \bar\Psi\gamma_\mu\frac{\sigma_i}{2}W^\mu_i\Psi \\
-& \quad + \cancel{\bar\Psi\gamma_\mu\left(\partial^\mu a_i(x)\frac{\sigma_i}{2}\right)\Psi} \\
+\begin{align}
+{\mathscr L}'_{\text{D}_1+\text{D}_2+\text{额外项}} &= \ri\bar\Psi'\gamma_\mu\partial^\mu\Psi'+\bar\Psi'\gamma_\mu\frac{\sigma_j}{2} {W'}_j^\mu \Psi' \nonumber\\
+&= \ri\bar\Psi\ue^{-\ri a_i(x)\frac{\sigma_i}{2}}\gamma_\mu\partial^\mu\ue^{\ri a_i(x)\frac{\sigma_i}{2}}\Psi \nonumber\\
+& \quad +\ri\bar\Psi\ue^{-\ri a_i(x)\frac{\sigma_i}{2}}\gamma_\mu\frac{\sigma_j}{2}\left(W_j^\mu+\partial^\mu a_j(x)\right)\ue^{\ri a_i(x)\frac{\sigma_i}{2}}\Psi \nonumber\\
+&= \ri\bar\Psi\gamma_\mu\partial^\mu\Psi - \bar\Psi\gamma_\mu\left(\partial^\mu a_i(x)\frac{\sigma_i}{2}\right)\Psi \nonumber\\
+& \quad + \bar\Psi\underbrace{\ue^{-\ri a_i(x)\frac{\sigma_i}{2}}\gamma_\mu\frac{\sigma_j}{2}W_j^\mu\ue^{\ri a_i(x)\frac{\sigma_i}{2}}}_{\mathclap{\ne \gamma_\mu\frac{\sigma_j}{2}W_j^\mu\text{因为}[\frac{\sigma_i}{2},\frac{\sigma_j}{2}]=\epsilon_{ijk}\frac{\sigma_k}{2}\ne 0 }} \Psi \nonumber\\
+& \quad +\ri\bar\Psi\ue^{-\ri a_i(x)\frac{\sigma_i}{2}}\gamma_\mu\frac{\sigma_j}{2}\left(\partial^\mu a_j(x)\right)\ue^{\ri a_i(x)\frac{\sigma_i}{2}}\Psi \nonumber\\
+&\ne \ri\bar\Psi\gamma_\mu\partial^\mu\Psi -\cancel{\bar\Psi\gamma_\mu\left(\partial^\mu a_i(x)\frac{\sigma_i}{2}\right)\Psi} + \bar\Psi\gamma_\mu\frac{\sigma_i}{2}W^\mu_i\Psi \nonumber\\
+& \quad + \cancel{\bar\Psi\gamma_\mu\left(\partial^\mu a_i(x)\frac{\sigma_i}{2}\right)\Psi} \nonumber\\
 &= \ri\bar\Psi\gamma_\mu\partial^\mu\Psi + \bar\Psi\gamma_\mu\frac{\sigma_i}{2}W^\mu_i\Psi = {\mathscr L}_{\text{D}_1+\text{D}_2+\text{额外项}} \quad \checkmark \label{equ7.50}
-\end{aligned}
-\end{equation}
+\end{align}
 容易发现问题出在\sutw 的生成元不对易上%
 \mpar{数学上将有非对易元素的群称为非阿贝尔的。作为对比，\uo 是阿贝尔的，此时一切都相对简单。}%
 。我们来仔细研究一下这个困难。正如通常处理 Lie 群的那样，将目光集中在无穷小变换上，略去高阶项：
@@ -613,18 +611,19 @@ W_i^\mu \rightarrow W'^\mu_i= W^\mu_i+\partial^\mu a_i(x)
 \end{aligned}
 \end{equation}
 作为无穷小变换，${\mathcal O}(n^2)$和更高阶的项都可以略去，拉格朗日量为
-\begin{equation}
-\begin{aligned}
-{\mathscr L}'_{\text{D}_1+\text{D}_2+\text{额外项}} &= \ri\bar\Psi'\gamma_\mu\partial^\mu\Psi'+\bar\Psi'\gamma_\mu\frac{\sigma_j}{2} {W'}_j^\mu \Psi' \\
-&\underbrace{=}_{\mathclap{\text{\ref{equ7.50}式}}} \ri\bar\Psi\gamma_\mu\partial^\mu\Psi - \bar\Psi\gamma_\mu\left(\partial_\mu a_i(x)\frac{\sigma_i}{2}\right)\Psi + \bar\Psi\ue^{-\ri a_i(x)\frac{\sigma_i}{2}}\gamma_\mu\frac{\sigma_j}{2}W_j^\mu\ue^{\ri a_i(x)\frac{\sigma_i}{2}} \Psi \\
-&\quad  +\bar\Psi\ue^{-\ri a_i(x)\frac{\sigma_i}{2}}\gamma_\mu\frac{\sigma_j}{2}\left(\partial_\mu a_j(x)\right)\ue^{-\ri a_i(x)\frac{\sigma_i}{2}}\Psi \\
-&\underbrace{\approx}_{\mathclap{\text{\ref{equ7.51}式}}}\ri\bar\Psi\gamma_\mu\partial^\mu\Psi - \bar\Psi\gamma_\mu\left(\partial_\mu a_i(x)\frac{\sigma_i}{2}\right)\Psi + \bar\Psi\gamma_\mu \left(\frac{\sigma_j}{2}-a_i(x)\epsilon_{ijk}\frac{\sigma_k}{2}\right) W_j^\mu \Psi \\
-&\quad  +\bar\Psi\gamma_\mu\left(\frac{\sigma_j}{2}-a_i(x)\epsilon_{ijk}\frac{\sigma_k}{2}\right)\left(\partial_\mu a_j(x)\right)\Psi \\
-&=\ri\bar\Psi\gamma_\mu\partial^\mu\Psi - \cancel{\bar\Psi\gamma_\mu\left(\partial_\mu a_i(x)\frac{\sigma_i}{2}\right)\Psi} + \bar\Psi\gamma_\mu \frac{\sigma_j}{2} W_j^\mu \Psi - \bar\Psi\gamma_\mu a_i(x)\epsilon_{ijk}\frac{\sigma_k}{2} W_j^\mu \Psi \\
-&\quad + \cancel{\bar\Psi\gamma_\mu\left(\partial^\mu a_j(x)\right)\Psi} - \underbrace{\bar\Psi\gamma_\mu a_i(x)\epsilon_{ijk}\frac{\sigma_k}{2}\left(\partial^\mu a_j(x)\right)\Psi}_{{\mathcal O}(a^2)} \\
+\begin{align}
+{\mathscr L}'_{\text{D}_1+\text{D}_2+\text{额外项}} &= \ri\bar\Psi'\gamma_\mu\partial^\mu\Psi'+\bar\Psi'\gamma_\mu\frac{\sigma_j}{2} {W'}_j^\mu \Psi'\nonumber \\
+&\underbrace{=}_{\mathclap{\text{\ref{equ7.50}式}}} \ri\bar\Psi\gamma_\mu\partial^\mu\Psi - \bar\Psi\gamma_\mu\left(\partial_\mu a_i(x)\frac{\sigma_i}{2}\right)\Psi\nonumber\\
+&\quad + \bar\Psi\ue^{-\ri a_i(x)\frac{\sigma_i}{2}}\gamma_\mu\frac{\sigma_j}{2}W_j^\mu\ue^{\ri a_i(x)\frac{\sigma_i}{2}} \Psi\nonumber \\
+&\quad  +\bar\Psi\ue^{-\ri a_i(x)\frac{\sigma_i}{2}}\gamma_\mu\frac{\sigma_j}{2}\left(\partial_\mu a_j(x)\right)\ue^{-\ri a_i(x)\frac{\sigma_i}{2}}\Psi \nonumber\\
+&\underbrace{\approx}_{\mathclap{\text{\ref{equ7.51}式}}}\ri\bar\Psi\gamma_\mu\partial^\mu\Psi - \bar\Psi\gamma_\mu\left(\partial_\mu a_i(x)\frac{\sigma_i}{2}\right)\Psi\nonumber\\
+&\quad + \bar\Psi\gamma_\mu \left(\frac{\sigma_j}{2}-a_i(x)\epsilon_{ijk}\frac{\sigma_k}{2}\right) W_j^\mu \Psi \nonumber\\
+&\quad  +\bar\Psi\gamma_\mu\left(\frac{\sigma_j}{2}-a_i(x)\epsilon_{ijk}\frac{\sigma_k}{2}\right)\left(\partial_\mu a_j(x)\right)\Psi \nonumber\\
+&=\ri\bar\Psi\gamma_\mu\partial^\mu\Psi - \cancel{\bar\Psi\gamma_\mu\left(\partial_\mu a_i(x)\frac{\sigma_i}{2}\right)\Psi} + \bar\Psi\gamma_\mu \frac{\sigma_j}{2} W_j^\mu \Psi  \nonumber\\
+&\quad - \bar\Psi\gamma_\mu a_i(x)\epsilon_{ijk}\frac{\sigma_k}{2} W_j^\mu \Psi+ \cancel{\bar\Psi\gamma_\mu\left(\partial^\mu a_j(x)\right)\Psi}\nonumber\\
+&\quad - \underbrace{\bar\Psi\gamma_\mu a_i(x)\epsilon_{ijk}\frac{\sigma_k}{2}\left(\partial^\mu a_j(x)\right)\Psi}_{{\mathcal O}(a^2)} \nonumber\\
 &=\ri\bar\Psi\gamma_\mu\partial^\mu\Psi + \bar\Psi\gamma_\mu \frac{\sigma_j}{2} W_j^\mu \Psi - \bar\Psi\gamma_\mu a_i(x)\epsilon_{ijk}\frac{\sigma_k}{2} W_j^\mu \Psi \label{equ7.52}
-\end{aligned}
-\end{equation}
+\end{align}
 属于$(W_\mu)_i$的能保证\sutw 不变的内禀对称性只能是
 \[
 (W_\mu)_i\rightarrow (W'_\mu)_i=(W_\mu)_i+\partial_\mu a_i(x)+\epsilon_{ijk}a_j(x)(W_\mu)_k
@@ -663,15 +662,22 @@ W_i^\mu \rightarrow W'^\mu_i= W^\mu_i+\partial^\mu a_i(x)
 \begin{align}
 {\mathscr L}'_{3\times\text{Maxwell}} &= \frac{1}{4}(W'^{\mu\nu})_i(W'_{\mu\nu})_i \nonumber\\
 &\underbrace{=}_{\mathclap{\text{见\ref{equ6.25}式}}} \partial^\mu(W'^\nu)_i\partial_\mu(W'_\nu)_i-\partial^\mu(W'^\nu)_i\partial_\nu(W'_\mu)_i \nonumber\\
-&= \partial^\mu\bigg((W^\nu)_i+\partial^\nu a_i(x)+\epsilon_{ijk}a_j(x)(W^\nu)_k\bigg)\partial_\mu\bigg((W_\nu)_i+\partial_\nu a_i(x)+\epsilon_{ijk}a_j(x)(W_\nu)_k\bigg) \nonumber\\
-&\quad\quad -\partial^\mu\bigg((W^\nu)_i+\partial^\nu a_i(x)+\epsilon_{ijk}a_j(x)(W^\nu)_k\bigg)\partial_\nu\bigg((W_\mu)_i+\partial_\mu a_i(x)+\epsilon_{ijk}a_j(x)(W_\mu)_k\bigg) \nonumber\\
-&\underbrace{=}_{\mathclap{\text{略去${\mathcal O}(a^2)$项}}} \partial^\mu(W^\mu)_i\partial_\mu(W_\nu)_i +\cancel{(\partial^\mu(W^\nu)_i)\partial_\mu\partial_\nu a_i(x)}+(\partial^\mu(W^\nu)_i)\partial_\mu\epsilon_{ijk} a_j(x)(W_\nu)_k \nonumber\\
+&= \partial^\mu\bigg((W^\nu)_i+\partial^\nu a_i(x)+\epsilon_{ijk}a_j(x)(W^\nu)_k\bigg)\nonumber\\
+&\quad\quad \partial_\mu\bigg((W_\nu)_i+\partial_\nu a_i(x)+\epsilon_{ijk}a_j(x)(W_\nu)_k\bigg) \nonumber\\
+&\quad -\partial^\mu\bigg((W^\nu)_i+\partial^\nu a_i(x)+\epsilon_{ijk}a_j(x)(W^\nu)_k\bigg)\nonumber\\
+&\quad\quad\quad \partial_\nu\bigg((W_\mu)_i+\partial_\mu a_i(x)+\epsilon_{ijk}a_j(x)(W_\mu)_k\bigg) \nonumber\\
+&\underbrace{=}_{\mathclap{\text{略去${\mathcal O}(a^2)$项}}} \partial^\mu(W^\mu)_i\partial_\mu(W_\nu)_i +\cancel{(\partial^\mu(W^\nu)_i)\partial_\mu\partial_\nu a_i(x)}\nonumber\\
+&\quad\quad +(\partial^\mu(W^\nu)_i)\partial_\mu\epsilon_{ijk} a_j(x)(W_\nu)_k \nonumber\\
 &\quad\quad +\cancel{\partial^\mu\partial^\nu a_i(x)(\partial_\mu(W_\nu)_i)} + \partial^\mu\epsilon_{ijk}a_j(x)(W^\nu)_k\partial_\mu(W_\nu)_i \nonumber\\
-&\quad\quad - \partial^\mu(W^\nu)_i\partial_\nu(W_\mu)_i - \cancel{(\partial^\mu(W^\nu)_i)\partial_\mu\partial_\nu a_i(x)} - \partial^\mu (W^\nu)_i \partial_\nu \epsilon_{ijk} a_j(x) (W_\mu)_k \nonumber\\
+&\quad\quad - \partial^\mu(W^\nu)_i\partial_\nu(W_\mu)_i - \cancel{(\partial^\mu(W^\nu)_i)\partial_\mu\partial_\nu a_i(x)} \nonumber\\
+&\quad\quad - \partial^\mu (W^\nu)_i \partial_\nu \epsilon_{ijk} a_j(x) (W_\mu)_k \nonumber\\
 &\quad\quad -\cancel{\partial^\mu\partial^\nu a_i(x)(\partial^\nu(W^\mu)_i)} - \partial^\mu\epsilon_{ijk}a_j(x)(W^\nu)_k\partial_\nu(W_\mu)_i \nonumber\\
-&= \underbrace{\partial^\mu(W^\nu)_i\partial_\mu(W_\nu)_i-\partial^\mu(W^\nu)_i\partial_\nu(W_\mu)_i}_{\mathclap{{\mathscr L}_{3\times\text{Maxwell}}}} + (\partial^\mu(W^\nu)_i)\partial_\mu\epsilon_{ijk} a_j(x)(W_\nu)_k \nonumber\\
-&\quad\quad +\partial^\mu\epsilon_{ijk}a_j(x)(W^\nu)_k\partial_\mu(W_\nu)_i - \partial^\mu (W^\nu)_i \partial_\nu \epsilon_{ijk} a_j(x) (W_\mu)_k - \partial^\mu \epsilon_{ijk} a_j(x) (W^\nu)_k \partial_\nu (W_\mu)_i \nonumber \\
-&\underbrace{=}_{\mathclap{\text{莱布尼兹律}}} {\mathscr L}_{3\times\text{自旋}1} - (\partial^\mu(W^\nu)_i)\epsilon_{ijk}(\partial_\mu a_j(x))(W_\nu)_k - \big( \partial^\mu (W^\nu)_i \big) \epsilon_{ijk} a_j(x) \big(\partial_\mu (W_\nu)_k \big)  \nonumber\\
+&= \underbrace{\partial^\mu(W^\nu)_i\partial_\mu(W_\nu)_i-\partial^\mu(W^\nu)_i\partial_\nu(W_\mu)_i}_{\mathclap{{\mathscr L}_{3\times\text{Maxwell}}}} \nonumber\\
+&\quad\quad + (\partial^\mu(W^\nu)_i)\partial_\mu\epsilon_{ijk} a_j(x)(W_\nu)_k \nonumber\\
+&\quad\quad +\partial^\mu\epsilon_{ijk}a_j(x)(W^\nu)_k\partial_\mu(W_\nu)_i - \partial^\mu (W^\nu)_i \partial_\nu \epsilon_{ijk} a_j(x) (W_\mu)_k \nonumber\\
+&\quad\quad - \partial^\mu \epsilon_{ijk} a_j(x) (W^\nu)_k \partial_\nu (W_\mu)_i \nonumber \\
+&\underbrace{=}_{\mathclap{\text{莱布尼兹律}}} {\mathscr L}_{3\times\text{自旋}1} - (\partial^\mu(W^\nu)_i)\epsilon_{ijk}(\partial_\mu a_j(x))(W_\nu)_k \nonumber\\
+&\quad\quad - \big( \partial^\mu (W^\nu)_i \big) \epsilon_{ijk} a_j(x) \big(\partial_\mu (W_\nu)_k \big)  \nonumber\\
 &\quad\quad -\epsilon_{ijk}(\partial^\mu a_j(x))(W^\nu)_k\partial_\mu(W_\nu)_i - \epsilon_{ijk}a_j(x)(\partial^\mu (W^\nu)_k)\partial_\mu(W_\nu)_i \nonumber\\
 &\quad\quad + \partial^\mu(W_\nu)_i\epsilon_{ijk}(\partial_\nu a_j(x))(W_\mu)_k + \partial^\nu(W^\nu)_i\epsilon_{ijk}a_j(x)\big(\partial_\nu(W_\mu)_k \big) \nonumber\\
 \label{equ7.56}
@@ -689,14 +695,12 @@ W_i^\mu \rightarrow W'^\mu_i= W^\mu_i+\partial^\mu a_i(x)
 \]
 这样三个自旋$1$场便有了一个新的拉格朗日量%
 \footnote{\textcolor{red}{译注：原文下式多一乘号，已更正}}
-\begin{equation}
+\begin{align}
 \label{equ7.57}
-\begin{aligned}
-{\mathscr L}_{3\times\text{Maxwell}} &=\frac{1}{4}(W_{\mu\nu})_i(W^{\mu\nu})_i \\
-&= \bigg(\partial_\mu(W_\nu)_i-\partial_\nu(W_\mu)_i-\epsilon_{ijk}(W_\mu)_j(W_\nu)_k\bigg) \\
+{\mathscr L}_{3\times\text{Maxwell}} &=\frac{1}{4}(W_{\mu\nu})_i(W^{\mu\nu})_i \nonumber\\
+&= \bigg(\partial_\mu(W_\nu)_i-\partial_\nu(W_\mu)_i-\epsilon_{ijk}(W_\mu)_j(W_\nu)_k\bigg) \nonumber\\
 &\quad \times \bigg(\partial^\mu(W^\nu)_i-\partial^\nu(W^\mu)_i-\epsilon_{ijk}(W^\mu)_j(W^\nu)_k\bigg)
-\end{aligned}
-\end{equation}
+\end{align}
 
 读者可自行完成冗长的计算以验证拉格朗日量的不变性。综上，我们找到了局域\sutw 不变的拉格朗日量，写作
 \begin{equation}
@@ -829,7 +833,7 @@ V(\Phi) &= -\rho^2 \Phi^\dag\Phi + \lambda(\Phi^\dag\Phi)^2\\
 \end{align}
 这对于$\varphi$的任意取值都是极小值，所以我们有无穷多个极小点。全体极小点躺在了半径为$\sqrt{\frac{\rho^2}{2\lambda}}$的一个圆上。图\ref{fig:7.2}即为 Higgs 的三维图。就如同一粒弹珠从墨西哥草帽顶端自发而随机的滚落，一个新的真空值有无穷多种选择。
 \marginpar{
-	\includegraphics[width=0.4\textwidth]{Figure/fig7_2.png}
+	\includegraphics[width=0.4\textwidth]{Figure/fig7_2.pdf}
 	\figcaption{Higgs 的三维图。 Figure adapted from ``Mexican hat potential polar'' by Rupert Millard (Wikimedia Commons) released under a public domain licence. URL:\url{http://commons.wikimedia.org/wiki/File:Mexican_hat_potential_polar.svg}, Accessed: 7.5.2014}
 	\label{fig:7.2}
 }
@@ -1142,7 +1146,7 @@ P_L\psi=P_L\begin{pmatrix}\chi_L\\\xi_R\end{pmatrix}=\begin{pmatrix}\chi_L\\0\en
 \end{align}
 矩阵$\gamma_5$被称为{\bf 手性算符}，因为单一手性态$\begin{pmatrix}\chi_L\\0\end{pmatrix}$或$\begin{pmatrix}0\\\xi_R\end{pmatrix}$，正是$\gamma_5$本征值为$-1$和$+1$的两个本征态。
 
-于是，投影算符$P_L$可以写为\mpar{读者可能会问，为什么我们要用这样复杂的方式定义$P_L$，而不是直接从矩阵形式出发呢？这样做的目的，是为了保留在其它基下工作的可能性，那时$\gamma_\mu$的矩阵形式可以非常不同。（读者可以在\ref{sec8.10}节中找到更多信息）注意到拉氏量中狄拉克旋量总与$\gamma_\mu$相伴出现。在这两者之间，我们总可以插入$1=\mathcal{U}^{-1}\mathcal{U}$，其中$\mathcal{U}$为任意可逆矩阵。例如$\partial_\mu\bar{\Psi}\gamma_\mu\Psi=\partial_\mu\bar{\Psi}\underbrace{\mathcal{U}^{-1}\mathcal{U}}_{=1}\gamma_\mu\underbrace{\mathcal{U}^{-1}\mathcal{U}}_{=1}\Psi=\partial_\mu\underbrace{\bar{\Psi}\mathcal{U}^{-1}}_{=\bar{\Psi}'}\underbrace{\mathcal{U}\gamma_\mu\mathcal{U}^{-1}}_{\gamma_\mu'}\underbrace{\mathcal{U}\Psi}_{\Psi'}$。物理事实当然独立于这类基矢变换，我们却可以利用它简化计算。本书正文偏好使用的基矢，被称为 Weyl 基。在其它基矢下，狄拉克旋量的两个分量是$\chi_L$与$\xi_R$的混合。尽管如此，通过$P_L=\frac{1-\gamma_5}{2}$定义的投影算符，总能将其投影为左手分量。这是因为$P^\text{Weyl}_L\Psi^\text{Weyl}=\Psi^\text{Weyl}_L\Rightarrow P_L'\Psi'=\frac{1-\gamma_5'}{2}\underbrace{\Psi'}_{\mathcal{U}\Psi^\text{Weyl}}=\frac{1-\mathcal{U}i\gamma_0\mathcal{U}^{-1}\mathcal{U}\gamma_1\mathcal{U}^{-1}\mathcal{U}\gamma_2\mathcal{U}^{-1}\mathcal{U}\gamma_3\mathcal{U}^{-1}}{2}\mathcal{U}\Psi^\text{Weyl}=\frac{\mathcal{U}-\mathcal{U}i\gamma_0\gamma_1\gamma_2\gamma_3}{2}\Psi^\text{Weyl}=\mathcal{U}\left(\frac{1-\gamma_5}{2}\right)\Psi^\text{Weyl}=\mathcal{U}\Psi^\text{Weyl}_L=\Psi_L'\quad\checkmark$}
+于是，投影算符$P_L$可以写为\mpar{读者可能会问，为什么我们要用这样复杂的方式定义$P_L$，而不是直接从矩阵形式出发呢？这样做的目的，是为了保留在其它基下工作的可能性，那时$\gamma_\mu$的矩阵形式可以非常不同。（读者可以在\ref{sec8.10}节中找到更多信息）注意到拉氏量中狄拉克旋量总与$\gamma_\mu$相伴出现。在这两者之间，我们总可以插入$1=\mathcal{U}^{-1}\mathcal{U}$，其中$\mathcal{U}$为任意可逆矩阵。例如$\partial_\mu\bar{\Psi}\gamma_\mu\Psi=\partial_\mu\bar{\Psi}\underbrace{\mathcal{U}^{-1}\mathcal{U}}_{=1}\gamma_\mu\underbrace{\mathcal{U}^{-1}\mathcal{U}}_{=1}\Psi=\partial_\mu\underbrace{\bar{\Psi}\mathcal{U}^{-1}}_{=\bar{\Psi}'}\underbrace{\mathcal{U}\gamma_\mu\mathcal{U}^{-1}}_{\gamma_\mu'}\underbrace{\mathcal{U}\Psi}_{\Psi'}$。物理事实当然独立于这类基矢变换，我们却可以利用它简化计算。本书正文偏好使用的基矢，被称为 Weyl 基。在其它基矢下，狄拉克旋量的两个分量是$\chi_L$与$\xi_R$的混合。尽管如此，通过$P_L=\frac{1-\gamma_5}{2}$定义的投影算符，总能将其投影为左手分量。这是因为$P^\text{Weyl}_L\Psi^\text{Weyl}=\Psi^\text{Weyl}_L\Rightarrow P_L'\Psi'=\frac{1-\gamma_5'}{2}\ \underbrace{\Psi'}_{\mathcal{U}\Psi^\text{Weyl}}=\frac{1-\mathcal{U}i\gamma_0\mathcal{U}^{-1}\mathcal{U}\gamma_1\mathcal{U}^{-1}\mathcal{U}\gamma_2\mathcal{U}^{-1}\mathcal{U}\gamma_3\mathcal{U}^{-1}}{2}\ \mathcal{U}\Psi^\text{Weyl}=\frac{\mathcal{U}-\mathcal{U}i\gamma_0\gamma_1\gamma_2\gamma_3}{2}\Psi^\text{Weyl}=\mathcal{U}\left(\frac{1-\gamma_5}{2}\right)\Psi^\text{Weyl}=\mathcal{U}\Psi^\text{Weyl}_L=\Psi_L'\quad\checkmark$}
 \begin{align}
 P_L=\frac{1-\gamma_5}{2}=\begin{pmatrix}1 & 0 \\ 0 & 0\end{pmatrix}
 \label{equ7.102}
