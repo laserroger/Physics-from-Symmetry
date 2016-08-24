@@ -460,8 +460,7 @@ T\{A(x)B(y)\}\coloneqq\begin{array}{c}A(t_1)B(t_2)\quad\text{若}\quad t_1>t_2\\
 \end{align}
 或者写为求和形式\footnote{原文下式有误，译文已修改。}
 \begin{align}
-	\hat{S} (\infty,-\infty) =& \sum_{n=0}^\infty \frac{(-i)^n}{n!} T\Bigg\{ \Big( \int_{-\infty}^{\infty} dt_1 H_I(t_1) \Big) \Big( \int_{-\infty}^{\infty} dt_2 H_I(t_2) \Big) \cdots\nonumber\\
-	&\quad \Big( \int_{-\infty}^{\infty} dt_n H_I(t_n) \Big) \Bigg\}\nonumber\\
+	\hat{S} (\infty,-\infty) =& \sum_{n=0}^\infty \frac{(-i)^n}{n!} \int_{-\infty}^\infty dt_1\, \int_{-\infty}^\infty dt_2\, \cdots \int_{-\infty}^\infty dt_n\, T H_I(t_1) H_I(t_2) \dots H_I(t_n) \nonumber \\
 	=&\sum_{n=0}^\infty S^{(n)} \label{equ9.70}
 \end{align}
 这一级数可用于实际计算，因为$H_I$包含一个数值因子\mpar{见方程\eqref{equ9.46}，其中耦合常数记作$e$。}：对应相互作用的耦合常数，即$H_I\propto g$。如在电磁相互作用中，这一耦合常数小于一。于是级数展开中第二项$S^{(2)}\propto(H_I)^2\propto g^2$，贡献小于第一项$S^{(1)}\propto g$。更高阶项贡献更小。为了描述考察的系统，计算级数展开的前几项常常就足够了。更高阶项导致的修正往往超出了实验测量的范围。
