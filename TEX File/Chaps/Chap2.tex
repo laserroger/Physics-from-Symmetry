@@ -1,3 +1,5 @@
+%!TEX root = ..\main.tex
+%!TEX encoding = UTF-8 Unicode
 %----------------------------------------------------------------------------------------
 %   CHAPTER 2
 %   translator: InSight
@@ -326,7 +328,7 @@ ds^2&=\eta^{\mu\nu}dx_\mu dx_\nu
    =dx_0^2-dx_1^2-dx_2^2-dx_3^2
 \end{equation}
 
-采用这种记法能让我们省不少事。对于$ds$，我们给出的解释是时空(Minkowski时空)中两事件的“距离”，这个“距离”并不只是空间距离，它还将时间间隔考虑在内。如果我们考虑3维Euclidean 空间\mpar{3维Euclidean空间就是经典物理中一般的空间，在此空间中我们将时间和空间分别处理，也就是未将时空考虑成一个整体的几何结构来考虑。但一旦将时间作为新坐标，结合出时空的观念，我们便能将时间空间放在同一坐标下考虑。}中两点间最短距离的平方\mpar{Kronecker函数$\delta_{ij}$即是单位矩阵在指标记法下的表示，详见附录B5.5}
+采用这种记法能让我们省不少事。对于$ds$，我们给出的解释是时空(Minkowski时空)中两事件的“距离”，这个“距离”并不只是空间距离，它还将时间间隔考虑在内。如果我们考虑3维Euclidean 空间\mpar{3维Euclidean空间就是经典物理中一般的空间，在此空间中我们将时间和空间分别处理，也就是未将时空考虑成一个整体的几何结构来考虑。但一旦将时间作为新坐标，结合出时空的观念，我们便能将时间空间放在同一坐标下考虑。}中两点间最短距离的平方\mpar{Kronecker函数$\delta_{ij}$即是单位矩阵在指标记法下的表示，详见附录\ref{appendix.B.5.5}}
 \[
   (ds)^2=dx_i \delta^{ij} dx_j
   =\left(
@@ -384,7 +386,7 @@ x^2=x \cdot x \equiv x_\mu x_\nu \eta^{\mu\nu}
  \!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!
   \eta^{\nu\mu}y_\mu
 \end{equation}
-因此，标量积可以写为\mpar{指标的名称如何选取并不影响最后的值，详见附录B5.1。}
+因此，标量积可以写为\mpar{指标的名称如何选取并不影响最后的值，详见附录\ref{appendix.B.5.1}。}
 \begin{equation}\label{equ2.31}
   x\cdot y\equiv x_\mu y_\nu \eta^{\mu\nu}=x_\mu y^\mu=x^\nu y_\nu
 \end{equation}
@@ -403,42 +405,22 @@ x^2=x \cdot x \equiv x_\mu x_\nu \eta^{\mu\nu}
   dx_\mu \rightarrow dx'_\mu=\Lambda^\sigma_\mu dx_\sigma
 \end{equation}
 由于$(ds)^2$在变换下不变
-\[
-(ds)^2=(ds')^2
-\]
-\[
-\rightarrow dx\cdot dx
-\overset{\text{!}}{=}
-dx' \cdot dx'
-\rightarrow
-dx_\mu dx_\nu\eta^{\mu\nu}
-\overset{\text{!}}{=}
-dx'_\mu dx'_\nu\eta^{\mu\nu}
-\!\underbrace{=}_{\text{式}\eqref{equ2.33}}\!
-\Lambda_\mu^\sigma dx_\sigma \Lambda_\nu^\gamma dx_\gamma\eta^{\mu\nu}
-\]
-\[
-\!\!\!\!\!\!\!
-\underbrace{\rightarrow}_{\text{重命名哑指标}}
-\!\!\!\!\!\!\!
-dx_\mu dx_\nu\eta^{\mu\nu}
-\overset{\text{!}}{=}
-\Lambda^\mu_\sigma dx_\mu \Lambda^\nu_\gamma dx_\nu\eta^{\sigma\gamma}
-\]
-\begin{equation}\label{equ2.34}
-  \!\!\!\underbrace{\rightarrow}_{dx_\nu\text{任意}}\!\!\!
-   \overset{\text{!}}{=}
-   \Lambda^\mu_\sigma\Lambda^\nu_\gamma\eta^{\sigma\gamma}
-\end{equation}
-或者用矩阵形式来写\mpar{详见附录C.1。}
+\begin{align}
+(ds)^2&=(ds')^2 \notag\\
+\rightarrow dx\cdot dx &\overset{\text{!}}{=} dx' \cdot dx' \\
+\rightarrow dx_\mu dx_\nu\eta^{\mu\nu} &\overset{\text{!}}{=} dx'_\mu dx'_\nu\eta^{\mu\nu} \underbrace{=}_{\mathclap{\ref{equ2.33}\text{式}}} \Lambda_\mu^\sigma dx_\sigma \Lambda_\nu^\gamma dx_\gamma\eta^{\mu\nu}\notag \\
+\underbrace{\rightarrow}_{\mathclap{\text{重命名哑指标}}} dx_\mu dx_\nu\eta^{\mu\nu} &\overset{\text{!}}{=} \Lambda^\mu_\sigma dx_\mu \Lambda^\nu_\gamma dx_\nu\eta^{\sigma\gamma}\notag\\
+\underbrace{\rightarrow}_{\mathclap{dx_\nu\text{任意}}} \eta^{\mu\nu} &\overset{\text{!}}{=} \Lambda^\mu_\sigma\Lambda^\nu_\gamma\eta^{\sigma\gamma}\label{equ2.34}
+\end{align}
+或者用矩阵形式来写\mpar{详见附录\ref{appendix.C.1}。}
 \begin{equation}\label{equ2.35}
   \eta=\Lambda^{\mathrm{T}}\eta\Lambda
 \end{equation}
 
 {\bf{此即变换$\Lambda_\mu^\nu$所需满足条件。}}
 
-这个条件现在看起来可能有些奇怪，但在后文中我们会用更自然的方式导出这个条件。在下一章里，我们会看到Euclidean空间中的旋转所导出的变换
-\mpar{稍后会讲明$O$的意义。}$O$能够保证Euclidean 空间的标量积不变\mpar{“$\cdot$”表示的是矢量的点乘，如果我们将矢量写为列向量，那么按矩阵相乘的定义有的$\vec{a}\cdot\vec{b}=\vec{a}^\mathrm{T}\cdot\vec{b}$。 有关$(Oa)^\mathrm{T}=a^\mathrm{T}O^\mathrm{T}$这一点详见附录C.1，式C.3。}% 此处原文有误
+这个条件现在看起来可能有些奇怪，但在后文中我们会用更自然的方式导出这个条件。在下一章里，我们会看到Euclidean空间中的旋转所导出的变换%
+\mpar{稍后会讲明$O$的意义。}$O$能够保证Euclidean 空间的标量积不变\mpar{“$\cdot$”表示的是矢量的点乘，如果我们将矢量写为列向量，那么按矩阵相乘的定义有的$\vec{a}\cdot\vec{b}=\vec{a}^\mathrm{T}\cdot\vec{b}$。 有关$(Oa)^\mathrm{T}=a^\mathrm{T}O^\mathrm{T}$这一点详见附录\ref{appendix.C.1}，式\ref{equC.3}。}% 此处原文有误
 \begin{equation}\label{equ2.36}
   \vec{a} \cdot \vec{b}
   \overset{\text{!}}{=}
@@ -452,8 +434,8 @@ dx_\mu dx_\nu\eta^{\mu\nu}
 因此
 \mpar{这一条件一般称为{\bf{正交性(orthogonality)}}条件，因此用字母$O$表示。满足$O^\mathrm{T} O={\bf{1}}$的矩阵称为正交矩阵，因为它列与列之间是正交的。换句话说，矩阵的每一列都可以看做一个矢量，正交性条件就是说这些矢量相互正交。}
 
-$O^\mathrm{T} {\bf{1}} O\overset{\text{!}}{=}{\bf{1}}$，恰巧Euclidean 空间的度规也是单位矩阵${\bf{1}}$，其地位正如Minkowski 度规在式\eqref{equ2.35} 中一样。按旋转原本的定义，旋转本身不改变矢量的长度，即是保证标量积不变
-\mpar{矢量的长度即是矢量与自身的标量积的平方根。}。此外我们还注意到旋转不改变坐标系的方向\mpar{详见附录A.5。}，这表明 $\text{det}(O) \overset{\text{!}}{=}1$，因为保证标量积不变的变换除了旋转变换还有空间反演\mpar{空间反演可简单地理解为映射$\vec{x}\rightarrow -\vec{x}$。这种变换满足$\text{det}(O) \overset{\text{!}}{=}$及$O^{\mathrm{T}}O={\bf{1}}$。 因此，如果我们要将变换限制为旋转变换，就需要加上条件$\text{det} (O) \overset{\text{!}}{=} {\bf{1}}$。此外，空间反演变换又称宇称变换。}。
+$O^\mathrm{T} {\bf{1}} O\overset{\text{!}}{=}{\bf{1}}$，恰巧Euclidean 空间的度规也是单位矩阵${\bf{1}}$，其地位正如Minkowski 度规在式\ref{equ2.35} 中一样。按旋转原本的定义，旋转本身不改变矢量的长度，即是保证标量积不变
+\mpar{矢量的长度即是矢量与自身的标量积的平方根。}。此外我们还注意到旋转不改变坐标系的方向\mpar{详见附录\ref{appendix.A.5}。}，这表明 $\text{det}(O) \overset{\text{!}}{=}1$，因为保证标量积不变的变换除了旋转变换还有空间反演\mpar{空间反演可简单地理解为映射$\vec{x}\rightarrow -\vec{x}$。这种变换满足$\text{det}(O) \overset{\text{!}}{=}$及$O^{\mathrm{T}}O={\bf{1}}$。 因此，如果我们要将变换限制为旋转变换，就需要加上条件$\text{det} (O) \overset{\text{!}}{=} {\bf{1}}$。此外，空间反演变换又称宇称变换。}。
 
 我们定义保Minkowski时空中标量积不变的变换为
 {\bf{Lorentz变换(Lorentz transformations)}}
