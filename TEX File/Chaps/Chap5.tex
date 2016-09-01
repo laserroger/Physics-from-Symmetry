@@ -38,8 +38,8 @@
 现在可以导出一些非常重要的\mpar{如果你完全不了解量子力学，为什么这些简单的式子会如此重要对你来说会看起来比较奇怪。你也许听说过Heisenberg不确定性原理。在第\ref{sec8.3}节，我们会更进一步的研究量子力学的形式与结构，然后就可以看到这个方程表明不能够以任意精度同时测量一个粒子的动量和坐标。我们的物理量的解释是算符的测量，而这个方程告诉我们先测量动量再测量位置与先测量位置再测量动量是完全不一样的。}量子力学的方程了。就像上面已经解释过的那样，我们假定算符作用在抽象的$\Psi$上。于是有
 \begin{align}\label{equ5.2}
 \begin{split}
-[\hat{p}_i, \hat{x}_j] \Psi &= (\hat{p}_i \hat{x}_j - \hat{x}_j \hat{p}_i) \Psi = (-\partial_i \hat{x}_j + \hat{x}_j \partial_i) \Psi \\
-&\underbrace{=}_{\text{莱布尼兹律}} -(\partial_i \hat{x}_j) \Psi \cancel{\hat{x}_j (\partial_i \Psi)} + \cancel{\hat{x}_j (\partial_i \Psi)} \underbrace{=}_{\partial_i \hat{x}_j = \frac{\partial x_j}{\partial x_i}} -i \delta_{ij} \Psi
+[\hat{p}_i, \hat{x}_j] \Psi &= (\hat{p}_i \hat{x}_j - \hat{x}_j \hat{p}_i) \Psi = i(-\partial_i \hat{x}_j + \hat{x}_j \partial_i) \Psi \\
+&\underbrace{=}_{\mathclap{\text{莱布尼兹律}}} -i(\partial_i \hat{x}_j) \Psi - \cancel{i\hat{x}_j (\partial_i \Psi)} + \cancel{i\hat{x}_j (\partial_i \Psi)} \underbrace{=}_{\mathclap{\partial_i \hat{x}_j = \frac{\partial x_j}{\partial x_i}}} -i \delta_{ij} \Psi
 \end{split}
 \end{align}
 
