@@ -12,6 +12,7 @@
 \contentsline {section}{\numberline {2.4}Minkowski记法}{15}{section.2.4}
 \contentsline {section}{\numberline {2.5}Lorentz变换}{18}{section.2.5}
 \contentsline {section}{\numberline {2.6}不变性，对称性，协变性}{19}{section.2.6}
+\contentsline {section}{\numberline {2.7}延伸阅读建议}{20}{section.2.7}
 \contentsline {part}{\@mypartnumtocformat {II}{Symmetry Tools 对称性工具}}{21}{part.2}
 \ttl@stoptoc {default@1}
 \ttl@starttoc {default@2}
@@ -28,7 +29,7 @@
 \contentsline {subsection}{\numberline {3.4.4}Lie群的抽象定义}{45}{subsection.3.4.4}
 \contentsline {section}{\numberline {3.5}表示论}{47}{section.3.5}
 \contentsline {section}{\numberline {3.6}$\mathcal {SU}$(2)}{51}{section.3.6}
-\contentsline {subsection}{\numberline {3.6.1} $\mathcal {SU}$(2)群的有限维不可约表示}{51}{subsection.3.6.1}
+\contentsline {subsection}{\numberline {3.6.1}$\mathcal {SU}$(2)群的有限维不可约表示}{51}{subsection.3.6.1}
 \contentsline {subsection}{\numberline {3.6.2}$\mathcal {SU}$(2)的 Casimir算符}{53}{subsection.3.6.2}
 \contentsline {subsection}{\numberline {3.6.3}$\mathcal {SU}$(2)的一维表示}{54}{subsection.3.6.3}
 \contentsline {subsection}{\numberline {3.6.4}$\mathcal {SU}$(2)的二维表示}{54}{subsection.3.6.4}
