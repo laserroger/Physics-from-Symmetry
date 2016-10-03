@@ -486,8 +486,8 @@ q^\dag q &\stackrel{!}{=} 1 \nonumber\\
 \nonumber \\
 \label{equ3.30}
 \mathbf{j} = \begin{pmatrix}
-				0 & -i \\ -i & 0
-			 \end{pmatrix}
+				0 & i \\ i & 0
+			 \end{pmatrix}\footnote{译者注：原文此式及后续\eqref{equ3.31}、\eqref{equ3.38}、\eqref{eq3.39}、\eqref{equ3.43}和\eqref{eq3.44}均有误，已据勘误表订正。}
 \quad &, \quad
 \mathbf{k} = \begin{pmatrix}
 				i & 0 \\
@@ -498,8 +498,8 @@ q^\dag q &\stackrel{!}{=} 1 \nonumber\\
 \begin{equation}
 \label{equ3.31}
 q = a\mathbf{1} + b\mathbf{i} + c\mathbf{j} + d\mathbf{k} = \begin{pmatrix}
-	a + di & -b - ci \\
-	b - ci & a - di
+	a + di & b + ci \\
+	- b + ci & a - di
 	\end{pmatrix}
 \end{equation}
 由上式可见
@@ -546,8 +546,8 @@ t = \cos \theta +  u\sin \theta
 \begin{equation}
 \label{equ3.38}
 \vec{v} = (v_x, v_y, v_z)^T = v_x \mathbf{i} + v_y \mathbf{j} + v_z \mathbf{k} \underbrace{=}_{\eqref{equ3.31}\text{式}} \begin{pmatrix}
-		iv_z & -v_x - iv_y \\
-		v_x - iv_y & -iv_z
+		iv_z & v_x + iv_y \\
+		-v_x + iv_y & -iv_z
 	\end{pmatrix}
 \end{equation}
 
@@ -556,7 +556,7 @@ t = \cos \theta +  u\sin \theta
 \label{equ3.39}
 \vec{v} &= (1, 0, 0)^T \rightarrow v = 1\mathbf{i} + 0\mathbf{j} + 0\mathbf{k} =
 	\begin{pmatrix}
-		0 & -1 \\ 1 & 0
+		0 & 1 \\ -1 & 0
 	\end{pmatrix}
 \\
 \label{equ3.40}
@@ -598,7 +598,7 @@ v' &= R_z^{-1} (\theta) v R_z(\theta) =
 		0 & \mathrm{e}^{i\theta}
 	\end{pmatrix}
 	\begin{pmatrix}
-	0 & -1 \\ 1 & 0
+	0 & 1 \\ -1 & 0
 	\end{pmatrix}
 	\begin{pmatrix}
 		\mathrm{e}^{i\theta} & 0 \\
@@ -607,12 +607,12 @@ v' &= R_z^{-1} (\theta) v R_z(\theta) =
 \nonumber \\
 \label{equ3.43}
 &= \begin{pmatrix}
-		0 & -\mathrm{e}^{-i 2\theta} \\
-		\mathrm{e}^{i 2\theta} & 0
+		0 & \mathrm{e}^{-i 2\theta} \\
+		-\mathrm{e}^{i 2\theta} & 0
 	\end{pmatrix}
 = \begin{pmatrix}
-		0 & -\cos (2\theta) + i\sin (2\theta) \\
-		\cos (2\theta) + i\sin (2\theta) & 0
+		0 & \cos (2\theta) - i\sin (2\theta) \\
+		-\cos (2\theta) - i\sin (2\theta) & 0
   \end{pmatrix}
 \end{align}
 另一方面，向量$v'$用四元数表示为：
@@ -620,8 +620,8 @@ v' &= R_z^{-1} (\theta) v R_z(\theta) =
 \label{equ3.44}
 v' =
 	\begin{pmatrix}
-		iv'_z & -v'_x - iv'_y \\
-		v'_x - iv'_y & -iv'_z
+		iv'_z & v'_x + iv'_y \\
+		-v'_x + iv'_y & -iv'_z
 	\end{pmatrix}
 \end{equation}
 上式与\eqref{equ3.43}式比较可得：
@@ -745,7 +745,7 @@ Lie群乘法与Lie代数结合法则之间的关系由著名的Baker-Campbell-Ha
 \underbrace{g}_{\in G} \circ \underbrace{h}_{\in G} = \mathrm{e}^X \circ \mathrm{e}^Y = \underbrace{\mathrm{e}^{ X + Y + \frac{1}{2} [X, Y] + \frac{1}{12}\big[X, [X, Y]\big] - \frac{1}{12} \big[Y, [X, Y]\big] + \dots }}_{\in G}
 \end{equation}
 
-上式等号右侧是群的一个群元，可见两个群元（$g,h$）相乘可表示为一些Lie代数元素的和（再取指数）。上两式出现的新运算$[,]$称为{\bf Lie括号}，对于矩阵Lie群，$[X, Y] = XY - YX$，$[X, Y]$称为$X, Y$的对易子。注意$XY$和$YX$一般不是Lie代数的元素，但它们的差一定是\mpar{John Stillwell. Naive Lie Theory. Springer, 1st edition, August 2008a. ISBN 978-0387782140 里面有漂亮的证明。}！
+上式等号右侧是群的一个群元，可见两个群元（$g,h$）相乘可表示为一些Lie代数元素的和（再取指数）。上两式出现的新运算$[,]$称为{\bf Lie括号}，对于矩阵Lie群，$[X, Y] = XY - YX$，$[X, Y]$称为$X, Y$的对易子。注意$XY$和$YX$一般不是Lie代数的元素，但它们的差一定是\mpar{John Stillwell.\\ {\it Naive Lie Theory}. Springer,\\ 1st edition, August 2008a.\\ ISBN 978-0387782140 里面有漂亮的证明。}！
 
 由BCH公式可知Lie代数元素间的乘法规则是Lie括号$[,]$，而非最初认为的矩阵乘法。就像群在群乘法$\circ$运算（矩阵群的$\circ$就是矩阵乘法）下封闭那样，我们称Lie代数在Lie括号运算下封闭。集合在某运算下封闭的含义是集合的任意两个元素进行该运算所得结果仍在此集合内\mpar{用数学语言表示封闭性：$\forall g, h \in G$, $g \circ h \in G$。 对于$X, Y \in \mathfrak{g}, [X, Y] \in \mathfrak{g}, X \circ Y \notin \mathfrak{g}$}。
 
@@ -1017,7 +1017,7 @@ Lie代数是一个向量空间$\mathfrak{g}$配备一个二元运算$[,]: \mathf
 \label{sec3.4.3}
 前面我们历经磨难终于找到描述三维旋转的第二法 --- $\mathcal{SU}(2)$群，并且发现$\mathcal{SU}(2)$是$\mathcal{SO}(3)$的双覆盖\mpar{复习一下，这意味着两个$\mathcal{SU}(2)$中的两个群元对应$\mathcal{SO}(3)$群的同一元素。}。
 
-$\mathcal{SU}(2)$群的群元是具有单位行列式\mpar{具有单位行列式正是‘特殊’($\mathcal{S}$)的含义。}的幺正的$2 \times 2$矩阵，即：
+$\mathcal{SU}(2)$群的群元是具有单位行列式\mpar{具有单位行列式正是“特殊”($\mathcal{S}$)的含义。}的幺正的$2 \times 2$矩阵，即：
 \begin{align}
 \label{equ3.75}
 \mathcal{U}^\dag \mathcal{U} = \mathcal{U} \mathcal{U}^\dag = \mathbf{1} \\
@@ -1043,7 +1043,7 @@ $\mathcal{SU}(2)$群的群元是具有单位行列式\mpar{具有单位行列式
 
 满足$J_i^\dag = J_i$的矩阵称为厄米矩阵，由上可见$\mathcal{SU}(2)$的生成元必须是厄米的。
 
-利用恒等式$\det (\mathrm{e}^A) = \mathrm{e}^{\tr (A)}$与\eqref{equ3.78}式可得：
+利用恒等式$\det (\mathrm{e}^A) = \mathrm{e}^{\tr (A)}$\footnote{可将$A$化成Jordan标准型来证明。 --- 译者}与\eqref{equ3.78}式可得：
 \begin{equation}
 \label{equ3.80}
 \det (\mathrm{e}^{i J_i}) = \mathrm{e}^{i \tr(J_i)} = 1 \underbrace{\rightarrow}_{\mathrm{e}^0 = 1} \tr (J_i) \stackrel{!}{=} 0
@@ -1093,13 +1093,14 @@ z^* z = (a + ib)^* (a + ib) = (a - ib)(a + ib) = a^2 + b^2 = 1
 \label{equ3.85}
 a^2 + b^2 + c^2 + d^2 \stackrel{!}{=} 1
 \end{equation}
-这与三维超球面$S^3$的定义\mpar{单位圆$S^1$的定义是$\{(x_1, x_2) | x_1^2 + x_2^2 = 1 \}$。二维球面$S^2$的定义是$\{(x_1, x_2, x_3) | x_1^2 + x_2^2 + x_3^2 = 1 \}$，它是三维球体的表面。三维超球面$S^3$的定义是$\{ (x_1, x_2, x_3, x_4) | x_1^2 + x_2^2 + x_3^2 + x_4^2 = 1 \}$。$S$的上标表示维数。在二维空间中加上单位长度的条件之后得到了一维对象$S^1$，相同地，在四维空间加上单位长度条件$x_1^2 + x_2^2 + x_3^2 + x_4^2 = 1$后得到三维对象$S^3$，它是四维超球体的‘表面’，注意区分$S^3$与三维球体。}相同！上式给出了一个$\mathcal{SU}(2)$与$S^3$之间的映射，该映射是同构映射（是单射也是满射），因此我们可以把$\mathcal{SU}(2)$与三维超球面$S^3$等同。
+这与三维超球面$S^3$的定义\mpar{单位圆$S^1$的定义是$\{(x_1, x_2) | x_1^2 + x_2^2 = 1 \}$。二维球面$S^2$的定义是$\{(x_1, x_2, x_3) | x_1^2 + x_2^2 + x_3^2 = 1 \}$，它是三维球体的表面。三维超球面$S^3$的定义是$\{ (x_1, x_2, x_3, x_4) | x_1^2 + x_2^2 + x_3^2 + x_4^2 = 1 \}$。$S$的上标表示维数。在二维空间中加上单位长度的条件之后得到了一维对象$S^1$，相同地，在四维空间加上单位长度条件$x_1^2 + x_2^2 + x_3^2 + x_4^2 = 1$后得到三维对象$S^3$，它是四维超球体的“表面”，注意区分$S^3$与三维球体。}相同！上式给出了一个$\mathcal{SU}(2)$与$S^3$之间的映射，该映射是同构映射（是单射也是满射），因此我们可以把$\mathcal{SU}(2)$与三维超球面$S^3$等同。
 
 结合上面的例子，Lie群的现代定义就不难理解了\mpar{下面定义里的数学细节不必在意，本书用不着那些内容。但必须记住现代定义的灵魂：Lie群 = 流形。}：
 
 {\it
 Lie群是一个群，也是一个微分流形\mpar{流形是满足某些条件的点集，例如球面就是一个流形，它局部看起来就像平坦Euclidean空间$\mathbb{R}^n$。或者，$n$维流形就是满足如下条件的点的集合：任意一点可以对应$n$个独立坐标。
 % flag： it’s a set which can be given n independent coordinates in some neighborhood of any point. 邻域（neighborhood）未能翻译出来
+%”任何一点的邻域内都可以设立$n$个独立坐标“？
 本章末的\ref{sec3.11}节有流形的详细说明。
 }。当然，这个流形要满足如下条件：
 
@@ -1116,11 +1117,11 @@ Lie群是一个群，也是一个微分流形\mpar{流形是满足某些条件�
 
 为啥有一个特别的群？因为这个特别的群是{\bf 单连通}的。单连通性是流形的性质，它的含义是流形上的任意闭合曲线可以平滑地收缩为一点\mpar{本书不讨论这些抽象内容。感兴趣的读者可以阅读本章末尾的推荐教材。在这里我们知道一个Lie代数总是有{\bf 一个}特别的群就够了。}。只有通过现代定义将群与流形联系起来才能找出特别的群。
 
-把上面的重点重复一遍\mpar{这个命题的证明可见Michael Spivak. {\it A Comprehensive Introduction to Differential Geometry}, Vol.1, 3rd Edition. Publish or Perish, 3rd edition, 1 1999. ISBN 9780914098706}：
+把上面的重点重复一遍\mpar{这个命题的证明可见Michael Spivak. \\{\it A Comprehensive Introduction \\ to Differential Geometry}, \\Vol.1, 3rd Edition. Publish or Perish, 3rd edition, 1 1999. ISBN 9780914098706}：
 
 {\bf 任一Lie代数仅对应一个单连通Lie群。}
 
-给定Lie代数，它可对应许多Lie群，而其中唯一的单连通Lie群可以视为其他群的‘母体’，因为总存在从这个单连通群到其他群的映射，反之则不一定。何妨把这个单连通群称为母群呢？数学家们给它起了一个不太文艺的名字：覆盖群。并且称该群覆盖了同一Lie代数对应的其他群。我们已经遭遇过这种情况：$\mathcal{SU}(2)$群是$\mathcal{SO}(3)$群的双覆盖，即两个$\mathcal{SU}(2)$元素对应一个$\mathcal{SO}(3)$的元素。
+给定Lie代数，它可对应许多Lie群，而其中唯一的单连通Lie群可以视为其他群的“母体”，因为总存在从这个单连通群到其他群的映射，反之则不一定。何妨把这个单连通群称为母群呢？数学家们给它起了一个不太文艺的名字：覆盖群。并且称该群覆盖了同一Lie代数对应的其他群。我们已经遭遇过这种情况：$\mathcal{SU}(2)$群是$\mathcal{SO}(3)$群的双覆盖，即两个$\mathcal{SU}(2)$元素对应一个$\mathcal{SO}(3)$的元素。
 
 $\mathcal{SU}(2)$就是三维超球面，它正是一个单连通流形。因此Lie代数\eqref{equ3.83}式对应的覆盖群就是$\mathcal{SU}(2)$。 从$\mathcal{SU}(2)$出发可以构造出其他所有对应的群。
 
@@ -1128,7 +1129,6 @@ $\mathcal{SO}(3)$是什么流形？已知$\mathcal{SU}(2)$到$\mathcal{SO}(3)$�
 
 	\marginpar{
 		\includegraphics[scale=0.3]{fig3_7.eps}
-		\figcaption{三维超球面$S^3$的一个二维切面（$S^3$自身是四维超球的‘表面’，愚蠢的人类没法直接把它画出来），图中可见球面的上半部分对应$\mathcal{SO}(3)$，因为从$\mathcal{SU}(2)$到$\mathcal{SO}(3)$的映射将前者中的$p$点与$p + 2\pi$映射到后者中的同一点。}
 	}
 
 因此从流形的角度看，$\mathcal{SU}(2)$群比$\mathcal{SO}(3)$更完整，$\mathcal{SO}(3)$只是其中的一部分。
@@ -1137,7 +1137,7 @@ $\mathcal{SO}(3)$是什么流形？已知$\mathcal{SU}(2)$到$\mathcal{SO}(3)$�
 
 世界似乎就是这么设计的！\footnote{先不管设计者有没有、到底是谁吧}比如必须用Poincar\'e群的双覆盖表示来描述基本粒子，而常用却不完整的4-向量表示就不行。要从最深刻的层面描述自然，必须使用覆盖群，而非从覆盖群导出的其他群。
 
-给定一个Lie代数，我们可以通过Lie代数的表示来导出它的覆盖群的表示\mpar{‘表示’的具体含义下一节就讲。}，然后把Lie代数元素（生成元）的矩阵表示扔进$\mathrm{e}$指数里面就能得到任意群元的矩阵表示。
+给定一个Lie代数，我们可以通过Lie代数的表示来导出它的覆盖群的表示\mpar{“表示”的具体含义下一节就讲。}，然后把Lie代数元素（生成元）的矩阵表示扔进$\mathrm{e}$指数里面就能得到任意群元的矩阵表示。
 
 这就是Lie理论的威力所在。人类通过纯数学就能揭示自然的某些深刻规律。狭义相对论的标准对称群隐藏了一些真相\mpar{学过量子力学的人可能听说过：标准对称群不能告诉我们自旋！}，因为它（尽管常用）不是这一对称性对应的最基本的覆盖群。Poincar\'e群\mpar{简明起见，我们省略了“双覆盖”或“覆盖群”的说法，我们利用Poincar\'e群的一个表示导出相应的Lie代数，然后利用此Lie代数导出相应覆盖群的表示，也就是Poincar\'e双覆盖群的表示。}的覆盖群才是最基本的，我们用它描述自然。
 
@@ -1172,11 +1172,12 @@ R: \underbrace{g}_{\in G} \mapsto R(g)
 	\item $R(g) \circ R(h) = R(g \circ h)$, 群元$g,h$结合对应的变换等于他们分别对应变换的结合。
 \end{itemize}
 
-群的表示\mpar{表示的定义可以进行推广，不一定非得是向量空间（别的空间也行）上的线性变换（非线性也可能），拓展后的映射叫{\bf realization}。物理主要考虑向量空间中的线性变换（例如量子力学的Heilbert空间、狭义相对论的Minkowski空间），因此对物理而言表示比更广泛的realization更重要。}将抽象的群元（群流形上的点）与向量空间中的线性变换相联系。尽管按定义来讲，表示是个映射，但大多数情况把表示看做许多矩阵的集合就行了。例如，向量空间\mpar{$\mathbb{R}^3$表示三维Euclidean空间，它的元素就是三维向量，附录A.1里面有很多例子。}$\mathbb{R}^3$中的旋转矩阵组成的集合就是$\mathcal{SO}(3)$群的一个表示，旋转矩阵就是$\mathbb{R}^3$上的线性变换。注意$\mathcal{SO}(3)$群对应的变换也可以作用到其他向量空间。
+群的表示\mpar{表示的定义可以进行推广，不一定非得是向量空间（别的空间也行）上的线性变换（非线性也可能），拓展后的映射叫{\bf realization}。物理主要考虑向量空间中的线性变换（例如量子力学的Hilbert空间、狭义相对论的Minkowski空间），因此对物理而言表示比更广泛的realization更重要。}将抽象的群元（群流形上的点）与向量空间中的线性变换相联系。尽管按定义来讲，表示是个映射，但大多数情况把表示看做许多矩阵的集合就行了。例如，向量空间\mpar{$\mathbb{R}^3$表示三维Euclidean空间，它的元素就是三维向量，附录A.1里面有很多例子。}$\mathbb{R}^3$中的旋转矩阵组成的集合就是$\mathcal{SO}(3)$群的一个表示，旋转矩阵就是$\mathbb{R}^3$上的线性变换。注意$\mathcal{SO}(3)$群对应的变换也可以作用到其他向量空间。
+%不知道`realization'应该怎么翻译
 
 表示论让我们能系统研究同一个群对不同向量空间的作用，这让群论变得精彩多了。
 
-$\mathcal{SU}(2)$是物理使用最多的群之一。它可以作用到许多向量空间上，比如作用于一维复数向量空间$C^1$，稍后会看到结果是很平凡的。再比如$C^2$，下面我们会详细探究，$C^2$的元素是二维复数向量，因此$\mathcal{SU}(2)$的群元以$2 \times 2$复数矩阵的形式出现，这是$\mathcal{SU}(2)$最常用的表示，之前一直采用此表示。$\mathcal{SU}(2)$还可作用到$C^3$，前人已经对此有完备的研究，$\mathcal{SU}(3)$以$3 \times 3$矩阵出现，作用于$3$维向量。剧透：$\mathcal{SU}(3)$的$C^3$版本的生成元是\mpar{下一节就推倒（无误）它，这里只是为了说明就算是$\mathcal{SU}(\text{`}2\text{'})$\sout{也有不得不守护的东西}，也可以作用于三维向量。}：\footnote{原文下式$J_3$的形式有误，译文已按勘误表修改。}
+$\mathcal{SU}(2)$是在物理里最常用的群之一。它可以作用到许多向量空间上，比如作用于一维复数向量空间$C^1$，稍后会看到结果是很平凡的。再比如作用于$C^2$，下面我们会详细探究这种作用，$C^2$的元素是二维复数向量，因此$\mathcal{SU}(2)$的群元以$2 \times 2$复数矩阵的形式出现，这是$\mathcal{SU}(2)$最常用的表示，之前一直采用此表示。$\mathcal{SU}(2)$还可作用到$C^3$，前人已经对此有完备的研究，$\mathcal{SU}(3)$作用于$3$维复向量的时候以$3 \times 3$矩阵的形式出现。剧透：$\mathcal{SU}(3)$的$C^3$版本的生成元是\mpar{下一节就推倒（无误）它，这里只是为了说明就算是$\mathcal{SU}(\text{`}2\text{'})$\sout{也有不得不守护的东西}，也可以作用于三维向量。}：\footnote{原文下式$J_3$的形式有误，译文已按勘误表修改。}
 \begin{equation}
 \label{equ3.87}
 J_1 = \frac{1}{\sqrt{2}}
@@ -1215,7 +1216,7 @@ J_3 = \frac{1}{\sqrt{2}}
 下面定义几个之后要用的概念，它们与表示的‘等级’有关（不是所有表示都是基本的）。
 
 
-{\bf 相似变换}。给定任意矩阵$R$与可逆\mpar{矩阵$S$可逆的含义是存在矩阵$T$使得$ST = TS = \mathbf{1}$，$S$的逆矩阵一般记作$S^{-1}$。}矩阵$S$。则可逆变换的形式为：
+首先是{\bf 相似变换}。给定任意矩阵$R$与可逆\mpar{矩阵$S$可逆的含义是存在矩阵$T$使得$ST = TS = \mathbf{1}$，$S$的逆矩阵一般记作$S^{-1}$。}矩阵$S$。则可逆变换的形式为：
 \begin{equation}
 \label{equ3.89}
 R \rightarrow R' = S^{-1} RS
@@ -1248,7 +1249,7 @@ R'(g) v = R(g) v,\quad \forall v \in V', g \in G
 
 定义了上述概念之后就能引入超级重要的{\bf 不可约表示}。群$G$在向量空间$V$上的不可约表示$R$意味着除了$0$空间和$V$自身之外再无不变子空间。不可约表示是基本的，它们不能再分解为子表示。从一个不可约表示可导出其他所有表示。
 
-还可以从另一个角度看不可约表示：不可约表示不能通过相似变换变成分块对角矩阵形式。而可约表示能被相似变换变成分块对角形式。表示的可约性很关键，比如描述基本粒子要用不可约表示\mpar{要不用啥呢？}，%flag: 边注里的what else没看懂啥意思。。。
+还可以从另一个角度看不可约表示：不可约表示不能通过相似变换变成分块对角矩阵形式。而可约表示能被相似变换变成分块对角形式。表示的可约性很关键，比如描述基本粒子要用不可约表示\mpar{要不用啥呢？\footnote{译者注：原文为`What else?'}}，%flag: 边注里的what else没看懂啥意思。。。
 基本粒子在变换下的行为由相应对称群的不可约表示描述。
 
 一个群有许多表示\mpar{比如我们前面讨论了二维旋转变换的两种方法 --- 单位复数、$2 \times 2$矩阵。它们都是群流形$S^1$的表示。}，怎么知道哪个是描述自然的基本表示？Casimir元可以给我们答案。Casimir元（记作$C$)从Lie代数的元素 --- 生成元导出，它的定义是，对任意生成元$X$都有
@@ -1258,7 +1259,7 @@ R'(g) v = R(g) v,\quad \forall v \in V', g \in G
 \end{equation}
 著名的Schur引理\mpar{Schur引理是群论的基本结论之一，它在任何一本群论书都有。}告诉我们，给定一个不可约群$R: \mathfrak{g} \rightarrow GL(V)$\footnote{$GL(V)$表示向量空间$V$上所有线性变换组成的集合。}，如果某个线性变换$T: V \rightarrow V$（即$T \in GL(V)$）与所有$R(g), \forall g \in G$对易\footnote{即$\forall g \in G, [R(g), T] = 0$。}，则$T$必为恒等变换的常数倍。因此Casimir元是群表示的‘常数’，这些‘常数’的值自然地为群表示‘编号’\mpar{具体内容见下一节的例子。}。之后我们就从Casimir元数值最低的不可约表示开始。
 
-群表示的定义与向量空间$V$有关。一个表示就是将抽象群到$V$的线性变换的映射。线性代数告诉我们以任意矩阵的本征向量为基可以张成一个向量空间。任意Lie群的生成元至少有一个可以通过相似变成对角矩阵\mpar{对角生成元的集合称为Cartan子代数，相应的集合元素称为Cartan生成元。它们在量子场论中大放异彩，因为Cartan生成元的本征值可以给基本粒子‘编号’。例如量子色动力学使用$\mathcal{SU}(3)$群，它有两个Cartan生成元。因此色动力学描述的粒子都有两个‘编号’。通常不用数字表示编号，而是用‘色’（红、蓝、绿…）来标注。再比如描述弱相互作用的$\mathcal{SU}(2)$群只有一个Cartan生成元，因此每个粒子只有一个标签 --- Cartan生成元的本征值。}，然后这个对角生成元的本征向量就可作为向量空间的基。
+群表示的定义与向量空间$V$有关。一个表示就是将抽象群到$V$的线性变换的映射。线性代数告诉我们以任意矩阵的本征向量为基可以张成一个向量空间。任意Lie群的生成元至少有一个可以通过相似变成对角矩阵\mpar{对角生成元的集合称为Cartan子代数，相应的集合元素称为Cartan生成元。它们在量子场论中大放异彩，因为Cartan生成元的本征值可以给基本粒子“编号”。例如量子色动力学使用$\mathcal{SU}(3)$群，它有两个Cartan生成元。因此色动力学描述的粒子都有两个“编号”。通常不用数字表示编号，而是用“色”（红、蓝、绿…）来标注。再比如描述弱相互作用的$\mathcal{SU}(2)$群只有一个Cartan生成元，因此每个粒子只有一个标签 --- Cartan生成元的本征值。}，然后这个对角生成元的本征向量就可作为向量空间的基。
 
 下一节导出$\mathcal{SU}(2)$群的不可约表示。研究$\mathcal{SU}(2)$是因为Lorentz群的Lie代数是两份$\mathcal{SU}(2)$的Lie代数。Lorentz群是Poincar\'e群的一部分，本章由浅入深对他们逐一讨论。
 
@@ -1283,8 +1284,8 @@ R'(g) v = R(g) v,\quad \forall v \in V', g \in G
 \end{align}
 用\eqref{equ3.83}式可以验证新定义的算符满足如下对易关系：
 \begin{align}
-  [J_3,J_\pm]=\pm J_\pm \label{equ3.96} \\
-  [J_+,J_-]=J_3. \label{equ3.97}
+  [J_3,J_\pm]=&\pm J_\pm \label{equ3.96} \\
+  [J_+,J_-]=&J_3. \label{equ3.97}
 \end{align}
 若$v$为$J_3$本征矢，本征值为$b$，用新的算符作用在$v$上会得到很有意思的结果：
 \begin{eqnarray}\label{equ3.98}
@@ -1301,7 +1302,7 @@ R'(g) v = R(g) v,\quad \forall v \in V', g \in G
 算符$J_-$和$J_+$通常称为降算符和升算符，也称{\bf{阶梯算符(ladder operators)}}。我们可以通过重复利用阶梯算符$J_\pm$来得到关于$J_3$的本征矢，但这个过程不能无休止地进行，因为不同本征值的本征矢之间是线性独立的，而我们处理的是有限维的表示。这意味着相应的矢量空间是有限维的，我们只能得到有限个独立的矢量。
 
 %此处书上的符号比较混乱，译者对此进行了调整
-我们推断一定有一本征矢对应着最大的本征值{\sout{$v_{max}$}}。 若将$J_+$作用到$v$ \  N次以后，得到本征值最大的本征矢$v_{max}$
+我们推断一定有一本征矢对应着最大的本征值{\sout{$v_{max}$}}。 若把$J_+$作用到$v$上N次以后，得到本征值最大的本征矢$v_{max}$
 \begin{equation}\label{equ3.100}
   v_{max}=J_+^N v
 \end{equation}
@@ -1313,7 +1314,7 @@ R'(g) v = R(g) v,\quad \forall v \in V', g \in G
 \begin{equation}\label{equ3.102}
   J_-v_{min}=0
 \end{equation}
-将$J_-$作用到$v_{\color{red}max}$\ M次以后，得到本征值最小的本征矢$v_{min}$
+把$J_-$作用到$v_{\color{red}max}$上M次以后，得到本征值最小的本征矢$v_{min}$
 \begin{equation}\label{equ3.103}
   v_{min}=J_-^M v_{max}
 \end{equation}
