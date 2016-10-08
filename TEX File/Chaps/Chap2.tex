@@ -22,7 +22,7 @@
 
 %翻译欠佳，主语应该换换
 正确的物理定律不应该随看实验的角度%这里我不太确定
-或是实验重复的时间而变。\footnote{原文为：The laws of physics, formulated correctly, shouldn’t change if you look at the experiment from a different perspective or repeat it tomorrow.}此外，狭义相对论的第一条假设告诉我们，不管是在匀速运动的马车上，还是是在静止的实验室中，做同一物理实验都会有相同的结果。以上论述均与与我们的生活经验相符。举个例子，如果你闭着眼睛坐在匀速运动的汽车上，你是没有办法分辨出你是真的在运动还是静止的。
+或是实验重复的时间而变。\footnote{原文为：The laws of physics, formulated correctly, shouldn't change if you look at the experiment from a different perspective or repeat it tomorrow.}此外，狭义相对论的第一条假设告诉我们，不管是在匀速运动的马车上，还是是在静止的实验室中，做同一物理实验都会有相同的结果。以上论述均与与我们的生活经验相符。举个例子，如果你闭着眼睛坐在匀速运动的汽车上，你是没有办法分辨出你是真的在运动还是静止的。
 
 如果没有了各向同性和均匀性，物理学就会遇到很大的麻烦：如果我们从实验中得到的物理定律将仅仅在空间中的某一点对于确定的某一方向成立，这样的物理定律显然是毫无用处的。
 
@@ -119,7 +119,7 @@ c \Delta t' =
  \!\!\!
  \underbrace{\left(\Delta x \right)^2}_{=0 \text{由式}2.3 \text{知}}
 \end{equation}
-终于，我们得到\mpar{\it{注意到我们在此处采用的是得到这个结果的最简方法，因为我们假定$t_A$时刻两坐标的原点重合。尽管如此，我们能够证明任意选择两惯性参考系原点的关系仍然能让结论成立，如果第二位观察者的参考系运动方向任意，那就不再有$\Delta y'=0$和$\Delta z'=0$，但能够证明方程仍然是成立的，因为物理定律在任意惯性系中都是一样的，这也给了我们任意选择参考系来简化计算的自由，证明任意情况无非是再多花些功夫罢了。}}
+终于，我们得到\mpar{\it{注意到我们在此处采用的是得到这个结果的最简方法，因为我们假定$t_A$时刻两坐标的原点是重合的。尽管如此，就算我们任意选择两惯性参考系原点的关系，仍然可以证明这个结论，只是过程会复杂一些。因为物理定律在任意惯性系中都是一样的，这给了我们任意选择便于计算的参考系的自由。如果第二位观察者的参考系运动方向是任意的，那就不再有$\Delta y'=0$和$\Delta z'=0$，但虽然如此，我们能够证明方程仍然是成立的，因为物理定律在任意惯性系中都是一样的。\footnote{译者注：原文的确把这句话说了两遍}}}
 
 \begin{equation}\label{equ2.11}
 \left( c \Delta t' \right)^2
@@ -266,7 +266,8 @@ $\tau$称为{\bf{固有时(proper time)}}。固有时是所有相对于该物体
 \begin{align}
 ds^2&=\eta^{\mu\nu}dx_\mu dx_\nu \notag \\
 &=\eta^{00}(dx_0)^2+\eta^{11}(dx_1)^2+\eta^{22}(dx_2)^2+\eta^{33}(dx_3)^2 \notag \\
-&=dx_0^2-dx_1^2-dx_2^2-dx_3^2=(cdt)^2-(dx)^2-(dy)^2-(dz)^2 \label{equ2.24}
+&=dx_0^2-dx_1^2-dx_2^2-dx_3^2\notag \\
+&=(cdt)^2-(dx)^2-(dy)^2-(dz)^2 \label{equ2.24}
 \end{align}
 在这里我们用了一些新的约定和记号，这些东西在近代物理中应用很广泛，所以越早熟悉越好：
 \begin{itemize}
@@ -274,22 +275,20 @@ ds^2&=\eta^{\mu\nu}dx_\mu dx_\nu \notag \\
   \item 像$\mu$，$\nu$，$\sigma$这样的希腊字母
   \mpar{像 $i$，$j$，$k$这样的罗马字母作指标时一般代表从1到3求和：$x_i x_i \equiv \sum_i^3 x_i x_i$。 后面我们还会用到大写的罗马字母如$A$，$B$，$C$，它们作指标时代表从1到8求和。} 作指标时，一般代表从0 到3 求和：$x_\mu y_\mu=\sum_{\mu=0}^3 x_\mu y_\mu $
   \item 我们约定变量$x_0\equiv ct$，$x_1\equiv x$，$x_2\equiv y$，$x_3\equiv z$。这样时间空间地位等同，也便于我们使用Einstein求和约定
-  \item 引入Minkowski度规($\eta$看作一矩阵，$\eta^{ij}$ 为其矩阵元)：$\eta^{00}=1$，$\eta^{11}=-1$，$\eta^{22}=-1$，$\eta^{33}=-1$，当$\mu \neq \nu$时$\eta^{\mu\nu}=0$  (也可简写为
-
-  \mpar{$\eta^{\mu\nu}= \left(
+  \item 引入Minkowski度规($\eta$看作一矩阵，$\eta^{ij}$ 为其矩阵元)：$\eta^{00}=1$，$\eta^{11}=-1$，$\eta^{22}=-1$，$\eta^{33}=-1$，当$\mu \neq \nu$时$\eta^{\mu\nu}=0$  (也可以等价的写为
+\mpar{$\eta^{\mu\nu}= \\ \\
+       \left(
        \begin{array}{cccc}
         1 & 0 & 0 & 0 \\
          0 & -1 & 0 & 0 \\
           0 & 0 & -1 & 0 \\
           0 & 0 & 0  & -1\\
-        \end{array}\right)$ }
-
-
+        \end{array}
+        \right)$ }
       $\eta^{\mu\nu} = \mathrm{diag} (1,-1,-1,-1)$)
 \end{itemize}
 
-除此之外，我们还要引入{\bf{四维矢量(four-vector)}}，简称
-{\bf{4矢}}。
+另外按常规我们还要引入{\bf{四维矢量(four-vector)}}，简称{\bf{4矢}}。
 \begin{equation}\label{equ2.25}
   dx_\mu =\left(\begin{array}{c}
             dx_0 \\
@@ -299,9 +298,9 @@ ds^2&=\eta^{\mu\nu}dx_\mu dx_\nu \notag \\
           \end{array}\right)
 \end{equation}
 式\eqref{equ2.24}可用4矢和Minkowski度规表出
-\[
-  (ds)^2=dx_\mu \eta^{\mu\nu} dx_\nu
-  =\left(
+\begin{align}
+  &(ds)^2=dx_\mu \eta^{\mu\nu} dx_\nu \notag \\
+  &=\left(
      \begin{array}{cccc}
        dx_0 & dx_1 & dx_2 & dx_3 \\
      \end{array}
@@ -323,40 +322,34 @@ ds^2&=\eta^{\mu\nu}dx_\mu dx_\nu \notag \\
        dx_2 \\
         dx_3\\
      \end{array}
-   \right)
-   \]
-\begin{equation}\label{equ2.26}
-   =dx_0^2-dx_1^2-dx_2^2-dx_3^2
-\end{equation}
+   \right)\notag \\
+   &=dx_0^2-dx_1^2-dx_2^2-dx_3^2 \label{equ2.26}
+\end{align}
 
 采用这种记法能让我们省不少事。对于$ds$，我们给出的解释是时空(Minkowski时空)中两事件的“距离”，这个“距离”并不只是空间距离，它还将时间间隔考虑在内。如果我们考虑3维Euclidean 空间\mpar{3维Euclidean空间就是经典物理中一般的空间，在此空间中我们将时间和空间分别处理，也就是未将时空考虑成一个整体的几何结构来考虑。但一旦将时间作为新坐标，结合出时空的观念，我们便能将时间空间放在同一坐标下考虑。}中两点间最短距离的平方\mpar{Kronecker函数$\delta_{ij}$即是单位矩阵在指标记法下的表示，详见附录\ref{appendix.B.5.5}}
-\[
-  (ds)^2=dx_i \delta^{ij} dx_j
-  =\left(
-     \begin{array}{ccc}
-     dx_1 & dx_2 & dx_3 \\
-     \end{array}
-   \right)
-   %
-   \left(
-     \begin{array}{ccc}
-       1 & 0 & 0  \\
-       0 & 1 & 0  \\
-        0 & 0 & 1  \\
-     \end{array}
-   \right)
-   %
-   \left(
-     \begin{array}{c}
-        dx_1 \\
-       dx_2 \\
-        dx_3\\
-     \end{array}
-   \right)
-   \]
-\begin{equation}\label{equ2.27}
-  =(ds)^2=(dx_1)^2+(dx_2)^2+(dx_3)^2
-\end{equation}
+\begin{align}
+  (ds)^2&=dx_i \delta^{ij} dx_j \notag \\
+            &=\left(
+               \begin{array}{ccc}
+                dx_1 & dx_2 & dx_3 \\
+               \end{array}
+               \right)
+               \left(
+               \begin{array}{ccc}
+                1 & 0 & 0  \\
+                0 & 1 & 0  \\
+                0 & 0 & 1  \\
+              \end{array}
+              \right)
+              \left(
+              \begin{array}{c}
+               dx_1 \\
+               dx_2 \\
+               dx_3\\
+              \end{array}
+              \right)\notag \\
+           &=(ds)^2=(dx_1)^2+(dx_2)^2+(dx_3)^2\label{equ2.27}
+\end{align}
 
 这种能够告诉我们无限临近的两点间的距离叫{\bf{度规(metric)}}。在Euclidean空间中度规就是单位矩阵$\delta_{ij}$。在广义相对论的弯曲时空中将会有更复杂的度规，但在狭义相对论中我们采用的是相对简单的Minkowski度规$\eta^{\mu\nu}$。度规是计算长度的工具，我们可以通过度规定义{\bf{4矢的长度(length of a four-vector)}}，即4矢与自身的标量积\mpar{此定义在Euclidean空间中同样适用：由于度规为
 $\delta_{ij}=\left(
@@ -408,10 +401,10 @@ x^2=x \cdot x \equiv x_\mu x_\nu \eta^{\mu\nu}
 由于$(ds)^2$在变换下不变
 \begin{align}
 (ds)^2&=(ds')^2 \notag\\
-\rightarrow dx\cdot dx &\overset{\text{!}}{=} dx' \cdot dx' \\
-\rightarrow dx_\mu dx_\nu\eta^{\mu\nu} &\overset{\text{!}}{=} dx'_\mu dx'_\nu\eta^{\mu\nu} \underbrace{=}_{\mathclap{\ref{equ2.33}\text{式}}} \Lambda_\mu^\sigma dx_\sigma \Lambda_\nu^\gamma dx_\gamma\eta^{\mu\nu}\notag \\
+\rightarrow dx\cdot dx &\overset{\text{!}}{=} dx' \cdot dx' \notag \\
+\rightarrow dx_\mu dx_\nu\eta^{\mu\nu} &\overset{\text{!}}{=} dx'_\mu dx'_\nu\eta^{\mu\nu} \underbrace{=}_{\mathclap{\eqref{equ2.33}\text{式}}} \Lambda_\mu^\sigma dx_\sigma \Lambda_\nu^\gamma dx_\gamma\eta^{\mu\nu}\notag \\
 \underbrace{\rightarrow}_{\mathclap{\text{重命名哑指标}}} dx_\mu dx_\nu\eta^{\mu\nu} &\overset{\text{!}}{=} \Lambda^\mu_\sigma dx_\mu \Lambda^\nu_\gamma dx_\nu\eta^{\sigma\gamma}\notag\\
-\underbrace{\rightarrow}_{\mathclap{dx_\nu\text{任意}}} \eta^{\mu\nu} &\overset{\text{!}}{=} \Lambda^\mu_\sigma\Lambda^\nu_\gamma\eta^{\sigma\gamma}\label{equ2.34}
+\underbrace{\rightarrow}_{\mathclap{因为dx_\nu\text{任意}}} \eta^{\mu\nu} &\overset{\text{!}}{=} \Lambda^\mu_\sigma\Lambda^\nu_\gamma\eta^{\sigma\gamma}\label{equ2.34}
 \end{align}
 或者用矩阵形式来写\mpar{详见附录\ref{appendix.C.1}。}
 \begin{equation}\label{equ2.35}
@@ -420,8 +413,8 @@ x^2=x \cdot x \equiv x_\mu x_\nu \eta^{\mu\nu}
 
 {\bf{此即变换$\Lambda_\mu^\nu$所需满足条件。}}
 
-这个条件现在看起来可能有些奇怪，但在后文中我们会用更自然的方式导出这个条件。在下一章里，我们会看到Euclidean空间中的旋转所导出的变换
-\mpar{稍后会讲明$O$的意义。}$O$能够保证Euclidean 空间的标量积不变\mpar{“$\cdot$”表示的是矢量的点乘，如果我们将矢量写为列向量，那么按矩阵相乘的定义有的$\vec{a}\cdot\vec{b}=\vec{a}^\mathrm{T}\cdot\vec{b}$。 有关$(Oa)^\mathrm{T}=a^\mathrm{T}O^\mathrm{T}$这一点详见附录\ref{appendix.C.1}，式\ref{equC.3}。}% 此处原文有误
+这个条件现在看起来可能有些奇怪，但在后文中我们会用更自然的方式导出这个条件。在下一章里，我们会看到Euclidean空间中的旋转所导出的变换%
+\mpar{稍后会讲明$O$的意义。}$O$能够保证Euclidean 空间的标量积不变\mpar{“$\cdot$”表示的是矢量的点乘，如果我们将矢量写为列向量，那么按矩阵相乘的定义有$\vec{a}\cdot\vec{b}=\vec{a}^\mathrm{T}\cdot\vec{b}$。 有关$(Oa)^\mathrm{T}=a^\mathrm{T}O^\mathrm{T}$这一点详见附录\ref{appendix.C.1}，式\ref{equC.3}。}% 此处原文有误
 \begin{equation}\label{equ2.36}
   \vec{a} \cdot \vec{b}
   \overset{\text{!}}{=}
@@ -435,8 +428,8 @@ x^2=x \cdot x \equiv x_\mu x_\nu \eta^{\mu\nu}
 因此
 \mpar{这一条件一般称为{\bf{正交性(orthogonality)}}条件，因此用字母$O$表示。满足$O^\mathrm{T} O={\bf{1}}$的矩阵称为正交矩阵，因为它列与列之间是正交的。换句话说，矩阵的每一列都可以看做一个矢量，正交性条件就是说这些矢量相互正交。}
 
-$O^\mathrm{T} {\bf{1}} O\overset{\text{!}}{=}{\bf{1}}$，恰巧Euclidean 空间的度规也是单位矩阵${\bf{1}}$，其地位正如Minkowski 度规在式\ref{equ2.35} 中一样。按旋转原本的定义，旋转本身不改变矢量的长度，即是保证标量积不变
-\mpar{矢量的长度即是矢量与自身的标量积的平方根。}。此外我们还注意到旋转不改变坐标系的方向\mpar{详见附录\ref{appendix.A.5}。}，这表明 $\text{det}(O) \overset{\text{!}}{=}1$，因为保证标量积不变的变换除了旋转变换还有空间反演\mpar{空间反演可简单地理解为映射$\vec{x}\rightarrow -\vec{x}$。这种变换满足$\text{det}(O) \overset{\text{!}}{=}$及$O^{\mathrm{T}}O={\bf{1}}$。 因此，如果我们要将变换限制为旋转变换，就需要加上条件$\text{det} (O) \overset{\text{!}}{=} {\bf{1}}$。此外，空间反演变换又称宇称变换。}。
+$O^\mathrm{T} {\bf{1}} O\overset{\text{!}}{=}{\bf{1}}$，恰巧Euclidean 空间的度规就是单位矩阵${\bf{1}}$，其地位正如Minkowski 度规在式\eqref{equ2.35} 中一样。这个性质是旋转的定义中的一部分，旋转不能改变矢量的长度，即在数学上保证标量积不变
+\mpar{矢量的长度即是矢量与自身的标量积的平方根。}\footnote{译者注：$\vec{a}\cdot \vec{b}=\frac{1}{2} [(\vec{a}+\vec{b})^2-\vec{a}^2-\vec{b}^2]$，若保证模长不变，标量积也不变。}此外我们还注意到旋转不改变坐标系的方向\mpar{详见附录\ref{appendix.A.5}。}，这表明 $\text{det}(O) \overset{\text{!}}{=}1$，因为保证标量积不变的变换除了旋转变换还有空间反演\mpar{空间反演可简单地理解为映射$\vec{x}\rightarrow -\vec{x}$。这种变换满足$\text{det}(O) \overset{\text{!}}{=}$及$O^{\mathrm{T}}O={\bf{1}}$。 因此，如果我们要将变换限制为旋转变换，就需要加上条件$\text{det} (O) \overset{\text{!}}{=} {\bf{1}}$。此外，空间反演变换又称宇称变换。}。
 
 我们定义保Minkowski时空中标量积不变的变换为
 {\bf{Lorentz变换(Lorentz transformations)}}
@@ -469,3 +462,14 @@ E'_2=y'^3+4az'y'+y'^2+8z'x'
 那么它就不是协变的，因为其形式已经变化。
 
 所有的物理规律都应具有Lorentz协变性\footnote{即在Lorentz变换下具有协变性---译者(InSight)}，因为只有这样的物理规律才能在任意参考系下成立。非协变的物理规律只能在某一特定参考系下成立，这会导致在东京和纽约具有不同的物理规律。显然这个主意糟透了，因为不存在一个特殊的参考系，我们得让物理规律在任意参考系中成立。我们将在后文中学到如何用协变的方法计算物理规律。
+
+\section*{Further Reading Tips\quad 阅读建议}
+\begin{itemize}
+\item {\bf E.Taylor and J.Wheeler - Spacetime Physics:Introduction to Special Relativity}\mpar{Edwin F.Taylor and John Archibald Wheeler.\\ {\it Spacetime Physics}.\\W.H.Freeman,2nd edition,\\3 1992.ISBN 9780716723271}适合用来入门。
+\item {\bf D.Fleisch - A Student’s Guide to Vectors and Tensors}\mpar{Daniel Fleisch.\\{\it A Student’s Guide \\ to Vectors and Tensors}.\\ Cambridge
+University Press,\\1st edition,11 2011.ISBN 9780521171908}对狭义相对论中用到的张量范式有很有创意的解释。比如对于协变与逆变分量的差异。
+\item {\bf N.Jeevanjee - An Introduction to Tensors and Group Theory for Physicists}\mpar{Nadir Jeevanjee. \\{\it An Introduction to Tensors and Group Theory for Physicists}.\\Birkhaeuser,1st edition,August 2011.\\ISBN 978-0817647148}是另一本把在狭义相对论中用到的数学讲的不错的书。
+\item {\bf A.Zee - Einstein Gravity in a nutshell}\mpar{Anthony Zee.\\{\it Einstein Gravity in a
+Nutshell}.\\Princeton University Press,\\1st
+edition,5 2013.\\ISBN 9780691145587}是一本关于广义相对论的书，但是里面也有很多关于狭义相对论的很棒的解释。
+\end{itemize}
