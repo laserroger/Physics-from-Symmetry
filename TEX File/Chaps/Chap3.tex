@@ -2120,12 +2120,12 @@ Lorentz推动变换为\footnote{原文为$B_\theta$，有误，已据勘误表�
 \end{quote}
 
 \begin{flushright}
-{\bf  ---  A. M. Steane}\mpar{ Andrew M. Steane.\\ {\it An introduction to spinors.} ArXiv e-prints, December 2013}
+{\bf  ---  A. M. Steane}\mpar{ Andrew M. Steane.\\ \url{https://arxiv.org/abs/1312.3824}{\it An introduction to spinors.} ArXiv e-prints, December 2013}
 \end{flushright}
 
 \subsection[$(0, \frac{1}{2})$表示]{The $(0, \frac{1}{2})$ Representation \quad $(0, \frac{1}{2})$表示}
 \label{sec3.7.6}
-$(0, \frac{1}{2})$表示的构造过程与之前的$(\frac{1}{2}, 0)$相似。这里$N_i^+$采用$1$维表示，即$N_i^+ = 0$，$N_i^-$采用$2$维表示，即$N_i^- = \frac{1}{2} \sigma_i$。容易认为$(0, \frac{1}{2})$表示和$(\frac{1}{2}, 0)$表示差不多，但并非如此！根据$\eqref{equ3.161}$式可得：
+$(0, \frac{1}{2})$表示的构造过程与之前的$(\frac{1}{2}, 0)$相似。这里$N_i^+$采用$1$维表示，即$N_i^+ = 0$，$N_i^-$采用$2$维表示，即$N_i^- = \frac{1}{2} \sigma_i$。容易认为$(0, \frac{1}{2})$表示会与$(\frac{1}{2}, 0)$表示极为相似，但并非如此！根据$\eqref{equ3.161}$式可得：
 \begin{align}
 \label{equ3.180}
 	N_i^+ = \frac{1}{2} (J_i + iK_i) = 0 \\
@@ -2340,7 +2340,7 @@ Van der Waerden符号非常便捷，它有效地体现了$\chi_L$与$\chi_R$之�
 
 \subsection[$(\frac{1}{2}, \frac{1}{2})$表示]{ The $( \frac{1}{2}, \frac{1}{2})$ Representation \quad $(\frac{1}{2}, \frac{1}{2})$表示}
 \label{sec3.7.8}
-在$(\frac{1}{2},  \frac{1}{2})$表示之下，两份$\mathcal{SU}(2)$\ Lie代数\mpar{数学上记作$(\frac{1}{2}, \frac{1}{2}) = (\frac{1}{2}, 0) \otimes (0, \frac{1}{2})$.}$N_i^+, N_i^-$都采用$2$维表示。首先考虑此表示下的Lorentz变换作用的对象是什么。两份Lie代数之间无相互作用，因为$N_i^+, N_i^-$是对易的，即$[N_i^+, N_i^-] = 0$。因此作用的对象（记作$v$）在两份Lie代数下各自独立变换。$v$有两个指标$v_a^{\dot{b}}$，每个指标在独立的$\mathcal{SU}(2)$Lie代数下变换。$v_a^{\dot{b}}$即采用了上节介绍的Van der Waerden符号。
+在$(\frac{1}{2},  \frac{1}{2})$表示之下，两份$\mathcal{SU}(2)$\ Lie代数\mpar{数学上记作$(\frac{1}{2}, \frac{1}{2}) = (\frac{1}{2}, 0) \otimes (0, \frac{1}{2})$.}$N_i^+, N_i^-$都采用$2$维表示。首先考虑此表示下的Lorentz变换作用的对象是什么。两份Lie代数之间无相互作用，因为$N_i^+, N_i^-$是对易的，即$[N_i^+, N_i^-] = 0$。因此作用的对象（记作$v$）在两份Lie代数下各自独立变换。$v$有两个指标$v_a^{\dot{b}}$，每个指标在独立的$\mathcal{SU}(2)$\ Lie代数下变换。$v_a^{\dot{b}}$即采用了上节介绍的Van der Waerden符号。
 
 $v_a^{\dot{b}}$的每个指标有两个取值（$\frac{1}{2}$和$-\frac{1}{2}$），\footnote{似乎指标应该为$1, 2$~? --- 译者} 因为每个表示都是$2$维的，$v$共有$4$个分量。因此$v$可表示为$2 \times 2$矩阵，但$v$也可以表示为四维向量，稍后会看到\mpar{在之前的二维旋转中遇到过类似情况，二维旋转操作可以用单位复数作用到向量对应的复数上来表示，在定义了复数与实数矩阵间的映射后，旋转也可以用实矩阵作用于列向量来表示。}。
 
@@ -2382,7 +2382,7 @@ $2 \times 2$ 厄米矩阵的一组基\mpar{它的含义是任意$2 \times 2$ 厄
 \label{equ3.218}
 	\underbrace{=}_{\text{若} v^\dag_{c \dot{d}} = v_{c \dot{d}}}& \bigg( \mathrm{e}^{ i \vec{\theta} \frac{ \vec{\sigma} }{2}  + \vec{\phi} \frac{\vec{\sigma}}{2}} \bigg)^{\dot{d}}_{\dot{b}} v_{c \dot{d}} \bigg(  \mathrm{e}^{ -i \vec{\theta} \frac{ \vec{\sigma} }{2}  + \vec{\phi} \frac{\vec{\sigma}}{2}}\bigg)^c_a \quad \checkmark
 \end{align}
-一般形式变换的计算过程冗长无聊，这里只推导一个特例\mpar{一般过程的推导可见Matthew Robinson. Symmetry and the Standard Model. Springer, 1st edition, August 2011. ISBN 978-1-4419-8267-4, 128页。}，考虑将$v$沿$z$轴做推动变换\mpar{沿$z$轴意味着$\vec{\phi} = (0, 0, \phi)^T$。沿$z$轴的推动变换形式最简单，因为只有$\sigma_3$是对角矩阵，其他方向的推动变换的$\mathrm{e}$指数计算较复杂。}：
+一般形式变换的计算过程冗长无聊，这里只推导一个特例\mpar{一般过程的推导可见Matthew Robinson.\\ {\it Symmetry and the Standard Model.} Springer, 1st edition, August 2011. ISBN 978-1-4419-8267-4, 128页。}，考虑将$v$沿$z$轴做推动变换\mpar{沿$z$轴意味着$\vec{\phi} = (0, 0, \phi)^T$。沿$z$轴的推动变换形式最简单，因为只有$\sigma_3$是对角矩阵，其他方向的推动变换的$\mathrm{e}$指数计算较复杂。}：
 \begin{align}
     v_{a\dot{b}} \stackrel{\text{沿} z \text{轴推动}}{\longrightarrow} v'^{a\dot{b}} &= \Big(\mathrm{e}^{\phi \frac{\sigma_3}{2}} \Big)^c_a v_{c \dot{d}} \Big( \mathrm{e}^{\phi \frac{\sigma_3}{2}} \Big)^{\dot{d}}_{\dot{b}} \nonumber \\
     &=  \begin{pmatrix}
@@ -2454,6 +2454,7 @@ $2 \times 2$ 厄米矩阵的一组基\mpar{它的含义是任意$2 \times 2$ 厄
         \end{pmatrix}
 \end{align}
 上述结果对任意Lorentz变换都成立，其他情形（如转动）由读者自行计算验证。由此可见$(\frac{1}{2}, \frac{1}{2})$表示{\bf 正是}4向量表示。用向量形式可以简化计算，因为用变换矩阵乘以向量比三个矩阵相乘要简单。人们熟悉的$4$向量其实与更基本的旋量有关，一个$4$向量{\bf 是}二阶旋量，即具有两个分量，根据Lorentz群的$(\frac{1}{2}, \frac{1}{2})$表示变换的量。此外，$4$向量并非描述最基本物理体系的量，它们不够基\ 本，有一些系统它们无法描述。
+%这个“基\ 本”中间的空格是干什么的？
 
 有人说“旋量是向量的平方根”，这话与“向量是二阶张量\mpar{不妨把二阶张量简单看成一个二阶矩阵$M_{\mu \nu}$}的平方根”相似，一个二阶张量有两个向量指标，一个向量有两个旋量指标。因此Lorentz变换作用的最基本的对象其实是旋量。
 
