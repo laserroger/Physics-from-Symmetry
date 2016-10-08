@@ -8,6 +8,22 @@
 
 \chapterimage{chapter_head_1.pdf} % Chapter heading image
 
+\begin{quote}%quote for every part.I have trouble inserting it into the part cover,so it's now there as a workaround.If you have a better way,please tell me.
+{\bf “如果你正在从给方程添加美感的方面考虑，你就在成功的路上了。”}\marginpar{"If one is working from the point of view of getting beauty into one’s equation,...one is on a sure line of progress."}
+
+
+\begin{flushright}
+-- Paul A. M. Dirac\\
+in {\it The evolution of the
+physicist's picture of nature.}
+\marginpar{%
+Scientiﬁc American,\\vol.208
+Issue 5,pp.45-53.\\
+Publication Date: 05/1963
+}
+\end{flushright}
+\end{quote}
+
 \chapter[测量]{Measuring Nature 测量}\label{chap5}
 
 现在已经发现对称性与守恒量之间的关系了，接下来就可以利用这种联系。用更专业的话说，Noether定理建立了对称变换的生成元与相应守恒量之间的联系。本章将利用这种联系。
@@ -24,7 +40,7 @@
 
 {\it 惯例用一个尖帽子$\hat{O}$来表示一个算符}
 
-拉格朗日量在空间平移变换的生成元的作用下不变可导出动量守恒。因此，由此可得
+拉格朗日量在空间平移变换的生成元的作用下不变可导出动量守恒。因此，由此可得\footnote{译者注：这里再次提醒一下，本书中虚数单位与指标经常共用字母$i$，相信聪明的读者有能力分辨。}
 \[\text{动量}\hat{p}_i\to\text{空间平移操作的生成元：} - i\partial_i \]
 
 类似的，时间平移生成元带来的不变性给出能量守恒，也就是
@@ -43,18 +59,20 @@
 \end{split}
 \end{align}
 
-这个方程对任意的$\Psi$都成立，因为我们没有对$\Psi$做任何假设，因此我们可以不考虑它\mpar{如果这对你来说比较罕见，注意我们可以把{\bf 每}一个矢量方程都写成只包含数的形式。比如，牛顿第二定律$\vec{F} = m\vec{\ddot{x}}$，可以对于任意矢量$\vec{C}$写出$\vec{F}\vec{C} = m\vec{\ddot{x}}\vec{C}$。不仅如此，如果对于任意的$\vec{C}$都成立，那么一直把这个$\vec{C}$写着也就没什么意义了。}而直接的写出
+这个方程对任意的$\Psi$都成立，因为我们没有对$\Psi$做任何假设，因此我们可以不考虑它\mpar{如果你以前没有过这个观念，注意我们可以把{\bf 每}一个矢量方程都写成只包含数的形式。比如，牛顿第二定律$\vec{F} = m\vec{\ddot{x}}$，可以对于任意矢量$\vec{C}$写出$\vec{F}\vec{C} = m\vec{\ddot{x}}\vec{C}$。不仅如此，如果对于任意的$\vec{C}$都成立，那么一直把这个$\vec{C}$写着也就没什么意义了。}而直接的写出
 \begin{align}\label{equ5.3}
 [\hat{p}_i,\hat{x}_j] = -i\delta_{ij}
 \end{align}
 
 \subsection[自旋与角动量]{Spin and Angular Momentum 自旋与角动量}\label{sec5.1.1}
 
-上一章的第\ref{sec4.5.4}节中讲过，对标量理论而言，旋转不变性带来的守恒量有两个部分，第二部分对应轨道角动量，称之为{\bf 无限}维的轨道角动量生成元表示。$\hat{L}_i\to\text{转动生成元（无限维表示）}i\tfrac{1}{2}\epsilon_{ijk}(x^j\partial^k-x^k\partial^j)$。类似的， 第一部分称作自旋，对应{\bf 有限}维度的生成元\mpar{这是从场的分量的线性组合下的不变性带来的守恒量，因此是有限维的表示。}的表示。
+上一章的第\ref{sec4.5.4}节中讲过，对标量理论而言，旋转不变性带来的守恒量有两个部分，第二部分对应轨道角动量，称之为{\bf 无限}维的轨道角动量生成元表示。
+\[\text{轨道角动量}\hat{L}_i\to\text{转动生成元（无限维表示）}i\tfrac{1}{2}\epsilon_{ijk}(x^j\partial^k-x^k\partial^j)\]
+类似的， 第一部分称作自旋，对应{\bf 有限}维度的生成元\mpar{这是从场的分量的线性组合下的不变性带来的守恒量，因此是有限维的表示。}的表示。
 \[\text{自旋}\hat{S}_i\to\text{转动生成元（有限维表示）}S_i \]
 如前面\eqref{equ4.30}式解释过的那样，$S_{\mu\nu}$和转动算符生成元$S_i$的关系为$S_i = \tfrac{1}{2}\epsilon_{ijk}S_{jk}$。
 
-比如，当我们考虑自旋$\tfrac{1}{2}$场的时候，我们需要用到我们在节\ref{sec3.7.5}中得到的二维表示：
+比如，当我们考虑自旋$\tfrac{1}{2}$场的时候，我们需要用到我们在\ref{sec3.7.5}节中得到的二维表示：
 \begin{align}\label{equ5.4}
 \hat{S}_i = i\frac{\sigma_i}{2}
 \end{align}
