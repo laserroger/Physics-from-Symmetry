@@ -11,7 +11,7 @@
 
 \chapter[电动力学]{Electrodynamics \quad 电动力学}
 \label{chap11}
-第\ref{chap7}章已经导出了经典电动力学最重要的方程 --- 非齐次Maxwell方程（组）\ref{equ7.22}式：
+第\ref{chap7}章已经导出了经典电动力学最重要的方程 --- 非齐次Maxwell方程（组）\eqref{equ7.22}式：
 \begin{equation}
 \label{equ11.1}
     \partial_\sigma (\partial^\sigma A^\rho - \partial^\rho A^\sigma ) = J_\rho
@@ -45,29 +45,29 @@
 \label{equ11.8}
     F^{ij} &= \epsilon^{ijk} \epsilon^{k\ell m} \partial^\ell A^m = -\epsilon^{ijk} B^k
 \end{align}
-将非齐次Maxwell方程组\mpar{\ref{equ11.2}式称为方程组是因为它代表了$\rho = 0, 1, 2, 3$一共四个方程。}重新写为：
+将非齐次Maxwell方程组\mpar{\eqref{equ11.2}式称为方程组是因为它代表了$\rho = 0, 1, 2, 3$一共四个方程。}重新写为：
 \begin{equation}
 \label{equ11.9}
     \partial_\sigma F^{\rho \sigma} = \partial_0 F^{\rho 0} - \partial_k F^{\rho k} = J^\rho
 \end{equation}
 对于三个空间分量($\rho \to i$)有\mpar{$\epsilon^{jk\ell} \partial_k B^\ell = \big( \nabla \times \vec{B} \big)^j$，后者就是向量分析里面的旋度运算（nabla算子叉乘向量）。}：
 \begin{align}
-    \partial_0 F^{i0} - \partial_k F^{ik} = \partial_0 E^i + \epsilon^{ik\ell} \partial_k B^\ell = J_i \notag \\
+    &\partial_0 F^{i0} - \partial_k F^{ik} = \partial_0 E^i + \epsilon^{ik\ell} \partial_k B^\ell = J_i \notag \\
 \label{equ11.10}
-    \to \partial_t \vec{E} + \nabla \times \vec{B} = \vec{J}
+    &\to \partial_t \vec{E} + \nabla \times \vec{B} = \vec{J}
 \end{align}
 对于时间分量（$\rho = 0$分量）：
 \begin{align}
-    \partial_0 \underbrace{F^{00}}_{\mathclap{ =0, \text{见} F^{\rho \sigma} \text{定义式} }} - \partial_k F^{0k} &\overbrace{=}^{F^{\mu \nu} = -F^{\nu \mu}} \partial_k F^{k0} \underbrace{=}_{\ref{equ11.7} \text{式}} \partial_k E^k = J^0 \notag \\
+   & \partial_0 \underbrace{F^{00}}_{\mathclap{ =0, \text{见} F^{\rho \sigma} \text{定义式} }} - \partial_k F^{0k} &\overbrace{=}^{F^{\mu \nu} = -F^{\nu \mu}} \partial_k F^{k0} \underbrace{=}_{\eqref{equ11.7} \text{式}} \partial_k E^k = J^0 \notag \\
 \label{equ11.11}
-    \to \nabla \cdot \vec{E} &= J_0
+   & \to \nabla \cdot \vec{E} &= J_0
 \end{align}
 这是非齐次 Maxwell 方程组在工程等领域中的常用形式。
 
 \section[齐次 Maxwell 方程组]{The Homogeneous Maxwell Equations \quad 齐次Maxwell方程组}
 \label{sec11.1}
 定义{\bf 对偶(dual)电磁张量}$\tilde{F}^{\mu \nu}$为四维Levi-Civita符号%
-\mpar{四维Levi-Civita符号$\epsilon^{\mu \nu \rho \sigma}$的定义见附录B.5.5.}%
+\mpar{四维Levi-Civita符号$\epsilon^{\mu \nu \rho \sigma}$的定义见附录\ref{appendix.B.5.5}。}%
 与电磁张量的缩并：
 \begin{equation}
 \label{equ11.12}
@@ -79,8 +79,8 @@
     \partial_\mu \tilde{F}^{\mu \nu} = \partial_\mu \epsilon^{\mu \nu \rho \sigma} (\partial_\sigma A_\rho - \partial_\rho A_\sigma) = 0
 \end{equation}
 这一结论实际是如下命题的特殊情形：两个对称指标与两个反对称指标缩并\footnote{例如，张量$A^{\alpha \beta \mu \nu} = A^{\alpha \beta \nu \mu}$, $\mu, \nu$是一对对称指标；张量$B_{\rho \sigma \eta \delta} = -B_{\sigma \rho \eta \delta}$, $\rho, \sigma$是一对反称指标。一对对称指标与反称指标的缩并结果必为零（即所得张量分量均为$0$）：$C^{\alpha \beta}_{\eta \delta} \equiv A^{\alpha \beta \gamma \varphi} B_{\gamma \varphi \eta \delta} = 0.$}所得结果为零%
-\mpar{详见附录B.5.4.}。%
-以\ref{equ11.13}式括号内的第一项为例：
+\mpar{详见附录\ref{appendix.B.5.4}。}。%
+以\eqref{equ11.13}式括号内的第一项为例：
 \begin{align}
     \epsilon^{\mu \nu \rho \sigma} \partial_\mu \partial_\sigma A_\rho &= \frac{1}{2} ( \epsilon^{\mu \nu \rho \sigma} \partial_\mu \partial_\sigma A_\rho + \epsilon^{\mu \nu \rho \sigma} \partial_\mu \partial_\sigma A_\rho) \notag \\
     & \underbrace{=}_{\mathclap{ \text{重命名哑指标} }} \frac{1}{2} ( \epsilon^{\mu \nu \rho \sigma} \partial_\mu \partial_\sigma A_\rho + \epsilon^{\sigma \nu \rho \mu} \partial_\sigma \partial_\mu A_\rho) \notag \\
@@ -100,7 +100,7 @@
     &= \partial_0 \underbrace{\epsilon^{00 \rho \sigma}}_{= 0} F^{\rho \sigma} - \partial_i \epsilon^{i0\rho \sigma} F^{\rho \sigma} \notag \\
     & \underbrace{=}_{\mathclap{ \epsilon^{i 0 \rho \sigma} = 0, \text{对于} \rho = 0 \text{或} \sigma = 0 }} -\partial_i \epsilon^{i0jk} F^{jk} \notag \\
     &= \partial_i \epsilon^{0ijk} F^{jk} \notag \\
-    &\underbrace{=}_{ \ref{equ11.8} \text{式} } -\partial_i \underbrace{\epsilon^{0ijk} \epsilon^{\ell jk} }_{= 2\delta^{i \ell}} B^\ell \notag \\
+    &\underbrace{=}_{ \eqref{equ11.8} \text{式} } -\partial_i \underbrace{\epsilon^{0ijk} \epsilon^{\ell jk} }_{= 2\delta^{i \ell}} B^\ell \notag \\
     &= -2 \partial_i \delta_{i\ell} B^\ell = -2 \partial_i B^i \notag \\
 \label{equ11.16}
     \Rightarrow & \partial_i B^i = 0, \text{用向量记号表示：} \nabla \cdot \vec{B} = 0
@@ -114,7 +114,7 @@
 
 \section[Lorentz力]{The Lorentz Force \quad Lorentz力}
 \label{sec11.2}
-利用上一章导出的量子与经典力学的联系（Ehrenfest定理）可以推导著名的Lorentz力公式。考虑在电磁场中运动的非相对论性无自旋的粒子，其Schr\"{o}dinger方程包含电磁场的耦合项（\ref{equ8.23}式）%
+利用上一章导出的量子力学与经典力学的联系（Ehrenfest定理）可以推导出著名的Lorentz力公式。考虑在电磁场中运动的非相对论性且无自旋的粒子，其Schr\"{o}dinger方程包含电磁场的耦合项（\eqref{equ8.23}式）%
 \mpar{该式是从与外电磁场耦合的Klein-Gordon方程导出，亦即，从\ 与自旋$1$无质量场（电磁场）耦合的自旋$0$的粒子的拉格朗日量导出的。因此推导的出发点还是用来导出拉格朗日量的Lorentz对称性与规范对称性。}%：
 \begin{equation}
 \label{equ11.18}
@@ -126,7 +126,7 @@
 \begin{equation*}
     H = \frac{1}{2m} |\vec{\Pi}|^2 + q \Phi
 \end{equation*}
-有了哈密顿量，再重复与上一章相同的过程，就能得到类似\ref{equ10.1}式的结果。因为这里涉及到依赖于时间的算符，因而推导中包含对时间的偏导数项：
+有了哈密顿量，再重复与上一章相同的过程，就能得到类似\eqref{equ10.1}式的结果。因为这里涉及到依赖于时间的算符，因而推导中包含对时间的偏导数项：
 \begin{align*}
     \frac{d}{dt} \langle \hat{O} \rangle &= \frac{1}{i} \langle [O, H] \rangle + \langle \frac{\partial \hat{O}}{\partial t} \rangle \\
     \to \frac{d}{dt} \langle \vec{\Pi} \rangle &= \frac{1}{i} \langle [\vec{\Pi}, H] \rangle + \langle \frac{\partial \vec{\Pi}}{\partial t} \rangle,
@@ -146,7 +146,7 @@ $\partial \vec{\Pi} / \partial t \neq 0$, 因为$\vec{A}$显含时间。将$H$�
 定义为$\vec{v} \equiv \vec{\Pi} / m$，由此可得：
 \begin{align*}
     \frac{d}{dt} \langle \vec{\Pi} \rangle = \langle q \nabla \Phi \rangle - \langle q (\vec{v} \times \vec{B}) \rangle +  \underbrace{\left\langle \frac{\partial \vec{\Pi}}{\partial t} \right\rangle}_{= -q \frac{\partial \vec{A}}{\partial t}} \\
-    \frac{d}{dt} = -q \langle (\vec{v} \times \vec{B}) \rangle + q \underbrace{\left\langle \nabla \Phi - \frac{\partial \vec{A}}{\partial t} \right\rangle}_{ = \langle E \rangle, \text{见}\ref{equ11.5}\text{式} }
+    \frac{d}{dt} = -q \langle (\vec{v} \times \vec{B}) \rangle + q \underbrace{\left\langle \nabla \Phi - \frac{\partial \vec{A}}{\partial t} \right\rangle}_{ = \langle E \rangle, \text{见}\eqref{equ11.5}\text{式} }
 \end{align*}
 最终得到
 \begin{equation}
@@ -193,9 +193,9 @@ $\partial_\mu A^\mu = 0$，这称为 Lorentz 规范。利用这一规范条件�
 \section*{Further Reading Tips \quad 阅读建议}
 \begin{itemize}
     \item {\bf Richard P. Feynman - The Feynman Lectures on Physics Volume 2}%
-    \mpar{Richard P. Feynman, Robert B. Leighton, and Matthew Sands. The Feynman Lectures on Physics: Volume 2. Addison-Wesley, 1st edition, 2 1977. ISBN 9780201021172}%
+    \mpar{Richard P. Feynman, Robert B. Leighton, and Matthew Sands. The Feynman Lectures on Physics: Volume 2. Addison-Wesley, 1st edition, 2 1977. ISBN 9780201021172}\footnote{译注：此书新版可在此免费在线查看： \url{http://www.feynmanlectures.caltech.edu/II_toc.html}。\\另有新版中译本：费恩曼,莱顿,桑兹著;李洪芳,王子辅,钟万蘅译.费恩曼物理学讲义,新千年版,第三卷,\\上海:上海科学技术出版社,4 2013,ISBN 9787547816370。} %
     是不错的电动力学入门教材。
     \item {\bf David J. Griffiths - Introduction to Electrodynamics}%
-    \mpar{David J. Griffiths. Introduction to Electrodynamics. Addison-Wesley, 4th edition, 10 2012. ISBN 9780321856562}%
+    \mpar{David J. Griffiths. Introduction to Electrodynamics. Addison-Wesley, 4th edition, 10 2012. ISBN 9780321856562}\footnote{译注：国内有由机械工业出版社出版的影印本和中译本，\\影印本ISBN为9787506272896，贾瑜等的中译本ISBN为9787111444046。}%
     是更详细的电动力学优秀入门教材。
 \end{itemize}

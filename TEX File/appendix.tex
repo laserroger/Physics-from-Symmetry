@@ -291,7 +291,7 @@ v_1 \\ v_2 \\ v_3
 \end{quote}
 
 从莱布尼兹律可以直接得到一个重要的积分手段。将莱布尼兹律一式积分%
-\mpar{见\ref{equB.1}式，并利用微积分基本定理$\int_a^b h'(x)=h(b)-h(a)$。}
+\mpar{见\eqref{equB.1}式，并利用微积分基本定理$\int_a^b h'(x)=h(b)-h(a)$。}
 \begin{equation}
 \underbrace{\int_a^b \rd x\, \frac{\rd}{\rd x}\left(f(x)g(x)\right)}_{=\left.f(x)g(x)\right|_a^b} = \int_a^b\rd x\, \left(\frac{\rd f(x)}{\rd x}\right)g(x) + \int_a^b\rd x\, f(x)\left(\frac{\rd g(x)}{\rd x}\right)
 \end{equation}
@@ -318,7 +318,7 @@ f(x) = f(a) + (x-a)f'(a) + \frac{1}{2}(x-a)^2f''(a)+\dots
 f(y+\Delta y) = f(y)+(y+\Delta y-y)f'(y)+\dots =f(y)+\Delta y f'(y)+\dots
 \end{equation}
 这就是说，通过在$y$处函数的性质，我们能得到其在$y+\Delta y$处的近似值。对于无穷小邻域%
-\footnote{\textcolor{red}{译注：原文有误，已更正。}}%
+\footnote{译注：原文有误，已更正。}%
 $\Delta y=\epsilon\rightarrow 0$的极端情况，函数的改变量可以仅用 Taylor 级数的一（线性）项来表示
 \begin{equation}
 \Delta f =f(y+\epsilon)-f(y)=f(y)+\epsilon f'(y)+\dots -f(y)=\epsilon f'(y) + \underbrace{\dots}_{\mathclap{\approx 0\text{由于}\epsilon^2\approx 0}}
@@ -328,8 +328,8 @@ $\Delta y=\epsilon\rightarrow 0$的极端情况，函数的改变量可以仅用
 \begin{equation}
 \int_a^x\rd t\, f'(t) = f(x) - f(a) \rightarrow f(x)=f(a)+\int_a^x\rd t\, f'(t)\text{。}
 \end{equation}
-可以将第二项用分部积分写开：在$f'(t)$前面补一个$1$成$1f'(t)$，利用\ref{equB.3}式取$g'(t)=1$的情况。分部积分能改写积分%
-\mpar{\textcolor{red}{译注：原文有误，已更正。}}%
+可以将第二项用分部积分写开：在$f'(t)$前面补一个$1$成$1f'(t)$，利用\eqref{equB.3}式取$g'(t)=1$的情况。分部积分能改写积分%
+\mpar{译注：原文有误，已更正。}%
 $\int_a^b v'u = \left.vu\right|_a^b-\int_a^b vu'$，积掉一项而对另一项微分。这里我们积$g'(t)=1$而微分$f'(t)$，即式子里$g'=v'$及$f'=u$。求得
 \begin{equation}
 f(x) = f(a)+\int_a^x\rd t\, f'(t) = f(a) + \left.g(t)f(t)\right|_a^x - \int_a^b \rd t g(t)f''(t) \text{。}
@@ -380,7 +380,7 @@ f(x) =& \sum_{n=0}^\infty\frac{f^{(n)}(a)(x-a)^n}{n!} \\
 \end{equation}
 用到了指数函数的%
 \footnote{译注：某一种}
-定义，导函数等于自身：$(\ue^x)'=\ue^x$。将$a=0$带入 Taylor 级数，利用$\ue^0=1$，便得到指数函数的 Taylor 级数（\ref{equ.appendix.B.12}式）：
+定义，导函数等于自身：$(\ue^x)'=\ue^x$。将$a=0$带入 Taylor 级数，利用$\ue^0=1$，便得到指数函数的 Taylor 级数（\eqref{equ.appendix.B.12}式）：
 \begin{equation}
 \ue^x = \sum\limits_{n=0}^\infty \frac{\ue^0(x-0)^n}{n!} = \sum\limits_{n=0}^\infty \frac{x^n}{n!}
 \end{equation}
@@ -417,9 +417,15 @@ $\sin(x)$的全部偶数阶导数，$\sin^{(2n)}$也是$\sin(x)$（除去可能�
 \end{aligned}
 \end{equation}
 规律是$\sin^{(2n+1)}(x)=(-1)^n\cos(x)$，你可以将任意整数$n$带入验证%
-\mpar{$\sin(x)^{(1)}=\sin(x)^{(2\cdot 0+1)}=(-1)^0\cos(x)=\cos(x),
-\sin(x)^{(3)}=\sin(x)^{(2\cdot 1+1)}=(-1)^1\cos(x)=-\cos(x)$}%
-。由此将\ref{equ.appendix.B.16}式改写作
+\mpar{\begin{align}
+\sin(x)^{(1)}=&\sin(x)^{(2\cdot 0+1)}\nonumber \\
+&=(-1)^0\cos(x)\nonumber \\
+&=\cos(x),\sin(x)^{(3)}\nonumber \\
+&=\sin(x)^{(2\cdot 1+1)}\nonumber \\
+&=(-1)^1\cos(x)\nonumber \\
+&=-\cos(x)\nonumber
+\end{align}}%
+。由此将\eqref{equ.appendix.B.16}式改写作
 \begin{equation}
 \begin{aligned}
 \sin(x) &= \sum\limits_{n=0}^{\infty}\frac{\sin^{(2n+1)}(0)(x-0)^{2n+1}}{(2n+1)!} \\
@@ -455,12 +461,12 @@ $\sin(x)$的全部偶数阶导数，$\sin^{(2n)}$也是$\sin(x)$（除去可能�
 \begin{aligned}
 \ue^{\ri x}= &\sum\limits_{n=0}^\infty \frac{(\ri x)^n}{n!}\\
  =& \sum\limits_{n=0}^\infty \frac{(-1)^n(x)^{2n}}{(2n)!}+\ri\sum\limits_{n=0}^\infty \frac{(-1)^n(x)^{2n+1}}{(2n+1)!}\\
- =& \underbrace{\sum\limits_{n=0}^\infty \frac{(-1)^n(x)^{2n}}{(2n)!}}_{=\cos(x)\text{ 见\ref{equ.appendix.B.19}式}}+\ri\underbrace{\sum\limits_{n=0}^\infty \frac{(-1)^n(x)^{2n+1}}{(2n+1)!}}_{=\sin(x)\text{ 见\ref{equ.appendix.B.18}式}}\\
+ =& \underbrace{\sum\limits_{n=0}^\infty \frac{(-1)^n(x)^{2n}}{(2n)!}}_{=\cos(x)\text{ 见\eqref{equ.appendix.B.19}式}}+\ri\underbrace{\sum\limits_{n=0}^\infty \frac{(-1)^n(x)^{2n+1}}{(2n+1)!}}_{=\sin(x)\text{ 见\eqref{equ.appendix.B.18}式}}\\
  =& \cos(x)+\ri\sin(x)
 \end{aligned}
 \end{equation}
 
-\subsection[Einstein 求和约定]{Einstein’s Sum Convention\quad Einstein 求和约定}\label{appendix.B.4.3}
+\subsection[Einstein 求和约定]{Einstein's Sum Convention\quad Einstein 求和约定}\label{appendix.B.4.3}
 物理中经常有求和，老是写大大的求和号$\Sigma$是很烦人的一件事。所以说某个聪明人引入了一个约定，叫 Einstein 求和约定。根据这个约定每当一个指标在某些项中重复出现两次，如同上面的$n$，那么就意味着一个隐藏的求和号。即
 \begin{equation}
 a_na_n \equiv \sum\limits_n a_nb_n \text{。}
@@ -519,7 +525,7 @@ MN = (MN)_{ij} = M_{ik}N_{kj}\text{。}
 9 & 3 \\ 3 & 17 \\
 \end{pmatrix}
 \end{equation}
-一个矩阵被称为是{\bf 全反对称的(totally antisymmetric)}，若$M_{ij}=M_{ji}$对于{\bf 全体}$i,j$成立。一个示例是
+一个矩阵被称为是{\bf 全反对称的(totally antisymmetric)}，若$M_{ij}=-M_{ji}$对于{\bf 全体}$i,j$成立。一个示例是
 \begin{equation}
 \begin{pmatrix}
 0 & 3 \\ -3 & 0
@@ -682,7 +688,7 @@ $n \times n$矩阵的行列式的定义类似：
 			3 & 1 \\
 			5 & 2
 		\end{pmatrix}
-	= (3 \cdot 2) - (t \cdot 1) = 1
+	= (3 \cdot 2) - (5 \cdot 1) = 1
 \]
 一般$3 \times 3$矩阵的行列式：
 \begin{equation}

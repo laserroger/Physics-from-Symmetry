@@ -73,7 +73,7 @@ ISBN 9781434495556%
 \begin{align}
 	&\underbrace{C}_{\mathclap{=\text{常数}}}e^{ip_ix_i} \notag \\
 \label{equ8.4}
-	&\to-i\partial_iCe^{ip_ix_i}=p_iCe^{ip_ix_i}\checkmark
+	&\to-i\partial_iCe^{ip_ix_i}=p_iCe^{ip_ix_i}\quad \checkmark
 \end{align}
 但要注意，对于任意的$p_i$，这都是一个解。因此我们发现有无穷多个动量算符$\hat{p}_i=-i\partial_i$的本征函数。能量本征函数也能用同样的办法来得到
 \begin{align}
@@ -200,15 +200,15 @@ E&=m\left(1+\frac{1}{2}\frac{\vec{p}^2}{m^2}+\cdots\right)\\
 	\Phi=\mathrm{e}^{i(-Et+\vec{x}\cdot\vec{p})}\approx \mathrm{e}^{-imt}\underbrace{\mathrm{e}^{i\vec{p}\cdot\vec{x}-i(p^2/2m)t}}_{\equiv\phi(\vec{x},t)}=\mathrm{e}^{-imt}\phi(\vec{x},t)
 \end{align}
 
-由$|\vec{p}|\ll m$可知静质能远大于粒子动能，因此$\phi(\vec{x}, t)$的振动频率远低于$\mathrm{e}^{-imt}$. 把$\mathrm{e}^{-imt}\phi(\vec{x},t)$作为试探解\footnote{译者注：ansatz是个很奇怪的词，我不知道怎么翻译。。比如Bethe-Ansatz，叫Bethe近似嘛也不对，叫啥都不对。}带入Klein-Gordon方程可得\footnote{原文下式有误，译文已按照勘误表改正。}
+由$|\vec{p}|\ll m$可知静质能远大于粒子动能，因此$\phi(\vec{x}, t)$的振动频率远低于$\mathrm{e}^{-imt}$. 把$\mathrm{e}^{-imt}\phi(\vec{x},t)$作为试探解\footnote{译者注：ansatz是个很奇怪的词，我不知道怎么翻译。。。比如Bethe-Ansatz，叫Bethe近似嘛也不对，叫啥都不对。}带入Klein-Gordon方程可得\footnote{原文下式有误，译文已按勘误表修改。}
 \[(\partial_\mu\partial^\mu+m^2) \mathrm{e}^{-imt}\phi(\vec{x},t)=(\partial_0\partial^0 - \partial_i\partial^i+m^2) \mathrm{e}^{-imt}\phi(\vec{x},t)=0. \]
 根据莱布尼兹律，$\partial_t \mathrm{e}^{-imt}(\dots)= \mathrm{e}^{-imt}(-im+\partial_t)(\dots)$，即简单的把微分算符作用出来，我们得到
 \[\mathrm{e}^{-imt} \big( (-im + \partial_t)^2 + \partial_i\partial^i + m^2 \big) \phi(\vec{x},t) = 0, \]
 两边可以除掉$\mathrm{e}^{-imt}$，因为它肯定不是零。因此，
-\[\begin{split}
-\to \big((-im+\partial_t)^2+\nabla^2+m^2 \big)\phi(\vec{x},t)=0\\
-\to \big( -m^2 - 2im\partial_t + (\partial_t)^2 + \nabla^2 + m^2 \big) \phi(\vec{x},t)=0.
-\end{split} \]
+\begin{align}
+&\to \big((-im+\partial_t)^2+\nabla^2+m^2 \big)\phi(\vec{x},t)=0\\ \notag
+7\to \big( -m^2 - 2im\partial_t + (\partial_t)^2 + \nabla^2 + m^2 \big) \phi(\vec{x},t)=0. \notag
+\end{align} 
 把第三项
 \begin{align}
 	(\partial_t)^2 \phi(\vec{x},t) &= (\partial_t)^2 \exp\big[i\vec{p}\cdot\vec{x}-i(\vec{p}^2/2m)t \big] \notag \\
@@ -299,7 +299,7 @@ Dirac 方程的非相对论极限的计算过程类似，所得结果称为 Paul
 	\marginpar{
 		\centering
 		\includegraphics[width = 4.2cm]{./../Pictures/fig8_2.png}
-		\figcaption{一维无限深势阱（硬盒）。  Figure by Benjamin D. Esham (Wikimedia Commons) released under a public domain licence. URL: \url{https://upload.wikimedia.org/wikipedia/commons/2/27/Infinite_potential_well.svg}, Accessed: 4.5.2014 }
+		\figcaption{一维无限深势阱（硬盒）。Figure by Benjamin D. Esham (Wikimedia Commons) released under a public domain licence. URL: \url{https://upload.wikimedia.org/wikipedia/commons/2/27/Infinite_potential_well.svg}, Accessed: 4.5.2014 }
 	}
 
 下面讨论量子力学的标准例子\footnote{几乎任何一本量子力学教材都会有吧……}：一个粒子被限制在一维的、势垒无限高的硬盒内，即，盒子内的势能为零，盒外的势能为无穷大，如图8.2.
@@ -642,8 +642,7 @@ $\Psi(x)$即为前面使用的波函数。再比如，观测粒子的动量位�
 \item	再测量粒子的自旋$x$分量发现其中一半为$S_x = \frac{1}{2}$，另一半为$-\frac{1}{2}$。剔除其中所有$S_x = -\frac{1}{2}$的粒子后粒子的状态为$|X\rangle_{x\text{方向筛选后}} = |\frac{1}{2} \rangle_x$.
 \item 	现在再次测量粒子的自旋$z$分量，我们得到令人吃惊的测量结果：一半粒子为$S_z = \frac{1}{2}$，另一半为$S_z = -\frac{1}{2}$. 尽管在第一步已经筛选掉所有$S_z = -\frac{1}{2}$的粒子！
 \end{itemize}
-关于这部分内容的精彩讨论（包括实际的观测仪器）可见Feynman物理学讲义第三卷\mpar{ Richard P. Feynman, Robert B.
-Leighton, and Matthew Sands. The Feynman Lectures on Physics, Volume 3. Addison Wesley, 1st edition, 1 1971. ISBN 9780201021189}。
+关于这部分内容的精彩讨论（包括实际的观测仪器）可见Feynman物理学讲义第三卷\mpar{ Richard P. Feynman, \\ Robert B.Leighton, and Matthew Sands. {\it The Feynman Lectures on Physics, Volume 3.} Addison Wesley, 1st edition, 1 1971. ISBN 9780201021189}。
 
 \section[Heisenberg 不确定性原理]{Heisenberg’s Uncertainty Principle \quad Heisenberg 不确定性原理}\label{sec8.6}
 
@@ -677,12 +676,11 @@ Dick Feynman向我讲述他量子力学“历史态叠加”的新理论。 “�
 
 \section*{阅读建议}
 \begin{itemize}
-\item {\bf Richard P. Feynman - The Feynman Lectures on Physics, Vol. 3}\mpar{Richard P. Feynman, Robert B. Leighton, and Matthew Sands. {\it The Feynman Lectures on Physics, Volume 3}. Addison Wesley, 1st edition, 1 1971. ISBN 9780201021189} 是量子力学入门的出色教材。量子力学的大部分概念都在此书中有更清楚的解释。
-\item {\bf  David J. Griffiths - Introduction to Quantum Mechanics}\mpar{ David J. Griffiths. Introduction to Quantum Mechanics. Pearson Pren-
-tice Hall, 2nd edition, 4 2004. ISBN 9780131118928}
+\item {\bf Richard P. Feynman - The Feynman Lectures on Physics, Vol. 3}\mpar{Richard P. Feynman, Robert B. Leighton, and Matthew Sands. {\it The Feynman Lectures on Physics, Volume 3}. Addison Wesley, 1st edition, 1\ 1971. ISBN 9780201021189}\footnote{译注：此书新版可在此免费在线查看： \url{http://www.feynmanlectures.caltech.edu/III_toc.html}。\\另有新版中译本：费恩曼,莱顿,桑兹著;李洪芳,王子辅,钟万蘅译.费恩曼物理学讲义,新千年版,第三卷,\\上海:上海科学技术出版社,4 2013,ISBN 9787547816387。} 是量子力学入门的出色教材。量子力学的大部分概念都在此书中有更清楚的解释。
+\item {\bf  David J. Griffiths - Introduction to Quantum Mechanics}\mpar{ David J. Griffiths. Introduction to Quantum Mechanics. Pearson Prentice Hall, 2nd edition, 4\ 2004. ISBN 9780131118928}\footnote{译注：国内有由机械工业出版社出版的影印本和中译本，\\影印本ISBN为9787111182948，贾瑜等的中译本ISBN为9787111278771。}
 是非常易读的、具有启发性的教材。
-\item {\bf  J. J. Sakurai - Modern Quantum Mechanics}\mpar{ {\it J. J. Sakurai. Modern Quantum Mechanaics}. Addison Wesley, 1st edition, 9 1993. ISBN 9780201539295}是一本精彩著作，它提供了量子力学的独特视角。
-\item {\bf Paul A. M. Dirac - Lectures on Quantum Mechanics}\mpar{Paul A. M. Dirac and Physics. {\it Lectures on Quantum Mechanics.} Dover Publications, 1st edition, 3 2001. ISBN 9780486417134}是量子力学的原始文献之一。尽管古老，但时至今日它的评价依然很高，因为阅读量子力学创始人的思想是非常具有启示意义。
+\item {\bf  J. J. Sakurai - Modern Quantum Mechanics}\mpar{ J. J. Sakurai.{\it  Modern Quantum Mechanaics}. Addison Wesley, 1st edition, 9 \1993. ISBN 9780201539295}\footnote{译注：本书第二版在国内有由世界图书出版公司出版的影印本，\\ISBN为9787510035067。}是一本精彩著作，它提供了量子力学的独特视角。
+\item {\bf Paul A. M. Dirac - Lectures on Quantum Mechanics}\mpar{Paul A. M. Dirac and Physics. {\it Lectures on Quantum Mechanics.} Dover Publications, 1st edition, 3\ 2001. ISBN 9780486417134}\footnote{译注：国内有科学出版社的影印本。}是量子力学的原始文献之一。尽管古老，但时至今日它的评价依然很高，因为阅读量子力学创始人的思想是非常具有启示意义。
 \item Dirac旋量的分量意义的详细诠释可参考附录\ref{sec8.8}。
 \end{itemize}
 
@@ -853,9 +851,9 @@ Dirac方程为：
 我们可以利用选择基的自由度来找到一组使得质量项对角的基，并将之称为质量基。
 
 这意味着我们想要形如$\psi^\dagger m\psi$的质量项，其中$m=\begin{pmatrix}m_1&0\\0&m_2\end{pmatrix}$,
-于是我们就得到了质量项的形式是
+于是我们就得到了质量项的形式是\footnote{此处原书中不带'，应为印刷错误，但是勘误表中没有。带‘应为正确形式，故改正并说明。}
 \begin{align}
-  \bar{\psi}'M'\psi'=(\psi')^\dagger%此处原书中不带'，应为印刷错误，但是勘误表中没有。带‘应为正确形式，故改正并说明。
+  \bar{\psi}'M'\psi'=(\psi')^\dagger
   \gamma'_0M'\psi'=\begin{pmatrix}u'\\v'\end{pmatrix}^\dagger\begin{pmatrix}m_1&0\\0&m_2\end{pmatrix}
   \begin{pmatrix}u'\\v'\end{pmatrix}=(u')^\dagger m_1u'+(v')^\dagger m_2v',
 \end{align}
@@ -872,7 +870,7 @@ Dirac方程为：
   N^{-1}\underbrace{\begin{pmatrix}-m&0\\0&m\end{pmatrix}}_{\mathclap{\equiv M'}}N=M
 \end{align}
 \begin{align}
-  \rightarrow m\frac{1}{\sqrt{2}}\begin{pmatrix}-1&1\\1&1\end{pmatrix}^-1\begin{pmatrix}-1&0\\0&1\end{pmatrix}\frac{1}{\sqrt{2}}
+  \rightarrow m\frac{1}{\sqrt{2}}\begin{pmatrix}-1&1\\1&1\end{pmatrix}^{-1}\begin{pmatrix}-1&0\\0&1\end{pmatrix}\frac{1}{\sqrt{2}}
   \begin{pmatrix}-1&1\\1&1\end{pmatrix}=m\begin{pmatrix}0&1\\1&0\end{pmatrix}
 \end{align}
 于是我们就可以相应地重新定义 Dirac 旋量
