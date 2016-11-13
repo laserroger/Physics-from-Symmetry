@@ -17,11 +17,11 @@
 \label{chap10}
 本章探究量子力学与经典力学之间的联系，我们会看到动量算符期望值对时间的导数正是 Newton 第二定律（经典力学的基础之一）的形式。
 
-力学量算符$\hat{\mathcal{O}}$的期望值为（\ref{equ8.14}式）：
+力学量算符$\hat{\mathcal{O}}$的期望值为（\eqref{equ8.14}式）：
 \[
     \langle \hat{\mathcal{O}} \rangle = \int d^3 x \Psi^* \hat{\mathcal{O}} \Psi
 \]
-势场$V$中单粒子的 Schr\"{o}dinger 方程（\ref{equ8.22}式）：
+势场$V$中单粒子的 Schr\"{o}dinger 方程（\eqref{equ8.22}式）：
 \[
 \begin{split}
     (i \frac{d}{dt} + \frac{\nabla^2}{2m}) \Psi - V \Psi = 0 \\
@@ -91,13 +91,13 @@
 \label{equ10.7}
     &= \frac{1}{c} (c dt) \sqrt{ 1 - \frac{1}{c^2} \left( \frac{dx}{dt} \right)^2 } \underbrace{=}_{\mathclap{\frac{dx}{dt} = \dot{x}, \text{即为粒子速度.}}} dt \sqrt{ 1 - \frac{\dot{x}^2}{c^2} }.
 \end{align}
-带入\ref{equ10.6}式可得：
+带入\eqref{equ10.6}式可得：
 \begin{equation}
 \label{equ10.8}
     S = \int \underbrace{-mc^2 \sqrt{1 - \frac{\dot{x}^2}{c^2} }}_{\equiv \mathcal{L}} dt
 \end{equation}
 
-像以前那样，通过将$\mathcal{L}$带入欧拉-拉格朗日方程\ref{equ4.7}式就可得到使$S$取极小值的方程：
+像以前那样，通过将$\mathcal{L}$带入欧拉-拉格朗日方程\eqref{equ4.7}式就可得到使$S$取极小值的方程：
 \begin{align}
     \frac{\partial \mathcal{L}}{\partial x} - \frac{d}{dt} \left( \frac{\partial \mathcal{L}}{\partial \dot{x}} \right) &= 0 \notag \\
     \to \underbrace{ \frac{\partial}{\partial x} \left( -mc^2 \sqrt{1 - \frac{\dot{x}^2}{c^2}} \right) }_{ = 0} - \frac{d}{dt} \left( \frac{\partial}{\partial \dot{x}} \left( -mc^2 \sqrt{1 - \frac{ \dot{x}^2}{c^2} } \right) \right) &= 0 \notag \\
@@ -114,7 +114,7 @@
 \label{equ10.11}
     \frac{d}{dt} \left( \frac{m \dot{x}}{ \sqrt{1 - \frac{\dot{x}^2}{c^2} } } \right) = - \frac{dV}{dx} \equiv F
 \end{equation}
-注意在非相对论极限$\dot{x} \ll c$之下$\sqrt{1 - \frac{\dot{x}^2}{c^2} } \approx 1$，于是上式化为Newton第二定律形式(\ref{equ10.3})式。
+注意在非相对论极限$\dot{x} \ll c$之下$\sqrt{1 - \frac{\dot{x}^2}{c^2} } \approx 1$，于是上式化为Newton第二定律形式(\eqref{equ10.3})式。
 
 \section[非相对论力学的拉格朗日量]{The Lagrangian of Non-Relativistic Mechanics \quad 非相对论力学的拉格朗日量}
 \label{sec10.2}
@@ -133,7 +133,7 @@
 \label{equ10.14}
     \mathcal{L} = \frac{1}{2} m \dot{x}^2 - V(x)
 \end{equation}
-在外势场为零，即$V(x) = 0$的情形下，$\mathcal{L} = \frac{1}{2} m \dot{x}^2$正是\ref{sec4.5.1}节中由Noether定理导出守恒量所用的拉格朗日量。把\ref{equ10.14}式的拉格朗日量带入欧拉-拉格朗日方程\ref{equ4.7}式可得：
+在外势场为零，即$V(x) = 0$的情形下，$\mathcal{L} = \frac{1}{2} m \dot{x}^2$正是\ref{sec4.5.1}节中由Noether定理导出守恒量所用的拉格朗日量。把\eqref{equ10.14}式的拉格朗日量带入欧拉-拉格朗日方程\eqref{equ4.7}式可得：
 \begin{align}
     \frac{\partial \mathcal{L}}{\partial x} - \frac{d}{dt} \left( \frac{\partial \mathcal{L}}{\partial \dot{x}} \right) = 0 \notag \\
     \to \frac{\partial}{\partial x} \left( \frac{1}{2} m \dot{x}^2 \right) - \frac{d}{dt} \left( \frac{\partial}{\partial \dot{x}} \left( \frac{1}{2} m \dot{x}^2 - V(x) \right) \right) = 0 \notag \\
@@ -141,4 +141,4 @@
 \label{equ10.15}
     \to \frac{d}{dt} (m \dot{x}) = - \frac{\partial}{\partial x} V(x)
 \end{align}
-这正是本章开头导出的Newton第二定律\ref{equ10.3}式。
+这正是本章开头导出的Newton第二定律\eqref{equ10.3}式。
