@@ -25,10 +25,10 @@
 \contentsline {subsection}{\numberline {3.4.1}$\mathcal {SO}(3)$群的生成元与Lie代数}{44}{subsection.3.4.1}
 \contentsline {subsection}{\numberline {3.4.2}Lie代数的抽象定义}{47}{subsection.3.4.2}
 \contentsline {subsection}{\numberline {3.4.3}$\mathcal {SU}(2)$的生成元与Lie代数}{48}{subsection.3.4.3}
-\contentsline {subsection}{\numberline {3.4.4}Lie群的抽象定义}{49}{subsection.3.4.4}
+\contentsline {subsection}{\numberline {3.4.4}Lie群的抽象定义}{50}{subsection.3.4.4}
 \contentsline {section}{\numberline {3.5}表示论}{52}{section.3.5}
 \contentsline {section}{\numberline {3.6}$\mathcal {SU}$(2)}{55}{section.3.6}
-\contentsline {subsection}{\numberline {3.6.1}$\mathcal {SU}$(2)群的有限维不可约表示}{55}{subsection.3.6.1}
+\contentsline {subsection}{\numberline {3.6.1}$\mathcal {SU}$(2)群的有限维不可约表示}{56}{subsection.3.6.1}
 \contentsline {subsection}{\numberline {3.6.2}$\mathcal {SU}$(2)的 Casimir算符}{58}{subsection.3.6.2}
 \contentsline {subsection}{\numberline {3.6.3}$\mathcal {SU}$(2)的一维表示}{59}{subsection.3.6.3}
 \contentsline {subsection}{\numberline {3.6.4}$\mathcal {SU}$(2)的二维表示}{59}{subsection.3.6.4}
@@ -37,7 +37,7 @@
 \contentsline {subsection}{\numberline {3.7.1}Lorentz群的$1$表示}{63}{subsection.3.7.1}
 \contentsline {subsection}{\numberline {3.7.2}Lorentz群其他部分的生成元}{67}{subsection.3.7.2}
 \contentsline {subsection}{\numberline {3.7.3}$\mathcal {SO}(1, 3)^\delimiter "3222378 $群的Lie代数}{69}{subsection.3.7.3}
-\contentsline {subsection}{\numberline {3.7.4}$(0, 0)$表示}{70}{subsection.3.7.4}
+\contentsline {subsection}{\numberline {3.7.4}$(0, 0)$表示}{71}{subsection.3.7.4}
 \contentsline {subsection}{\numberline {3.7.5}$(\frac {1}{2}, 0)$表示}{71}{subsection.3.7.5}
 \contentsline {subsection}{\numberline {3.7.6}$(0, \frac {1}{2})$表示}{73}{subsection.3.7.6}
 \contentsline {subsection}{\numberline {3.7.7}Van der Waerden 符号}{74}{subsection.3.7.7}
@@ -49,7 +49,7 @@
 \contentsline {section}{\numberline {3.9}基本粒子}{89}{section.3.9}
 \contentsline {section}{\numberline {3.10}附录：复向量空间中的旋转}{90}{section.3.10}
 \contentsline {section}{\numberline {3.11}附录：流形}{90}{section.3.11}
-\contentsline {chapter}{\numberline {4}框架/体系}{93}{chapter.4}
+\contentsline {chapter}{\numberline {4}理论框架}{93}{chapter.4}
 \contentsline {section}{\numberline {4.1}拉格朗日形式}{93}{section.4.1}
 \contentsline {subsection}{\numberline {4.1.1}Fermat 原理}{94}{subsection.4.1.1}
 \contentsline {subsection}{\numberline {4.1.2}变分法：基本思想}{94}{subsection.4.1.2}

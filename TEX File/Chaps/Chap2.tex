@@ -3,7 +3,7 @@
 %----------------------------------------------------------------------------------------
 %   CHAPTER 2
 %   translator: InSight
-%   proofreader: SI
+%   proofreader: SI, laserdog
 %----------------------------------------------------------------------------------------
 
 \chapterimage{chapter_head_1.pdf} % Chapter heading image
@@ -351,7 +351,7 @@ ds^2&=\eta^{\mu\nu}dx_\mu dx_\nu \notag \\
            &=(ds)^2=(dx_1)^2+(dx_2)^2+(dx_3)^2\label{equ2.27}
 \end{align}
 
-这种能够告诉我们无限临近的两点间的距离叫{\bf{度规(metric)}}。在Euclidean空间中度规就是单位矩阵$\delta_{ij}$。在广义相对论的弯曲时空中将会有更复杂的度规，但在狭义相对论中我们采用的是相对简单的Minkowski度规$\eta^{\mu\nu}$。度规是计算长度的工具，我们可以通过度规定义{\bf{4矢的长度(length of a four-vector)}}，即4矢与自身的标量积\mpar{此定义在Euclidean空间中同样适用：由于度规为
+这种数学工具叫{\bf{度规(metric)}}，它能够告诉我们无限临近的两点之间的距离。在Euclidean空间中度规就是单位矩阵$\delta_{ij}$。在广义相对论的弯曲时空中将会有更复杂的度规，但在狭义相对论中我们采用的是相对简单的Minkowski度规$\eta^{\mu\nu}$。度规是计算长度的工具，我们可以通过度规定义{\bf{4矢的长度(length of a four-vector)}}，即4矢与自身的标量积\mpar{此定义在Euclidean空间中同样适用：由于度规为
 $\delta_{ij}=\left(
  \begin{array}{ccc}
  1 & 0 & 0  \\
@@ -394,7 +394,7 @@ x^2=x \cdot x \equiv x_\mu x_\nu \eta^{\mu\nu}
   =ds^2
   =dx_\mu dx_\nu\eta^{\mu\nu}
 \end{equation}
-因此，两参考系间所允许的变换要能保证这个二次式的形式和Minkowski时空中的标量积在变换下不变。设变换为$\Lambda$，那么变换后
+因此，两参考系间所允许的变换要能保证这个二次式的形式，和Minkowski时空中的标量积在变换下不变。设变换为$\Lambda$，那么变换后
 \begin{equation}\label{equ2.33}
   dx_\mu \rightarrow dx'_\mu=\Lambda^\sigma_\mu dx_\sigma
 \end{equation}
@@ -435,8 +435,10 @@ $O^\mathrm{T} {\bf{1}} O\overset{\text{!}}{=}{\bf{1}}$，恰巧Euclidean 空间�
 {\bf{Lorentz变换(Lorentz transformations)}}
 ，这也是为保证狭义相对论的假设所必需的。相应的，每当我们需要得到在Lorentz变换下不变的项时，{\it{都必须结合上下指标}}：$x_\mu y^\mu=x_\mu y_\nu \eta^{\mu\nu}$。
 在学会一些非常优雅的技术来处理这样的情况之后，我们会在下一章构建这些转换具体的矩阵形式。
+
+
 \section[不变性，对称性，协变性]{Invariance, Symmetry and Covariance 不变性，对称性，协变性}
-在继续之前，我们有一些重要的概念要事先声明。首先，一个量能被称为{\bf{不变量(invariant)}}，这个量必须在变换下不变。比如说，我们考虑一个依赖于不同的量$A,B,C,\dots$任意函数$ F$，$F=F(A,B,C,\dots)$，如果我们将$A,B,C,\dots$变换为$A',B',C',\dots$，有
+在继续之前，我们有一些重要的概念要事先声明。首先，一个量能被称为{\bf{不变量(invariant)}}，这个量必须在变换下不变。比如说，我们考虑一个依赖于不同参数$A,B,C,\dots$的任意函数$ F$，$F=F(A,B,C,\dots)$，如果我们将$A,B,C,\dots$变换为$A',B',C',\dots$，有
 \begin{equation}\label{equ2.37}
   F(A',B',C',\dots)=F(A,B,C,\dots)
 \end{equation}
