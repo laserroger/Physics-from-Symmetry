@@ -158,6 +158,5 @@ pythontex-files-*/
 # Latexian
 TSWLatexianTemp*
 
-*.pdf
 
 *.ptc
