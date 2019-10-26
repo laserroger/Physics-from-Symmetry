@@ -53,6 +53,11 @@
 \renewcommand\themparcnt{\small{$^{\arabic{mparcnt}}$}}
 \newcommand\mpar[1]{\refstepcounter{mparcnt}{$^{\arabic{mparcnt}}$}\marginpar{\themparcnt\scriptsize#1}}
 
+\newcommand\picmpar[1]{\marginpar{%
+    \captionsetup{type=figure}
+    #1}%
+}
+
 \newcommand\tr{\text{tr}}
 
 %\makeatletter

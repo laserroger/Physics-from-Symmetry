@@ -100,24 +100,25 @@ ISBN 9780387966755
 	% flag1: This means they map every point of the set to a point that lies again in the set 没翻译， 因为觉得太啰嗦...
 	%我还是补上了，请管理员考虑是否merge
 
-	\marginpar{
+	\picmpar{
 		\includegraphics[scale=0.35]{fig3_1}
-		\figcaption{正方形}
+		\caption{正方形}
 	}
 
-	\marginpar{
+	\picmpar{
 		\includegraphics[scale=0.35]{fig3_2.pdf}
-		\figcaption{正方形绕中心顺时针旋转$5^\circ$}
+		\caption{正方形绕中心顺时针旋转$5^\circ$}
 	}
 
 	注意不是所有旋转变换对于正方形都是对称的。 如果我们关注顶点的变化就容易看出来， 比如绕中心顺时针旋转$5^\circ$， 这个变换将顶点映射到原来正方形点集之外，顶点$A$映射到了原来正方形集合之外的点$A'$。 因此这个旋转变换对正方形不具有对称性。当然，变换后的点集仍然是个正方形，但却是另一个正方形(即不同点的集合)。而绕中心转$90^\circ$是对称的， 如图\ref{fig3.3}， 顶点$A$变换到点$B$ 等等， 原来的正方形点集变换到相同的集合。
 
 	{
-	\centering{
+	\centering
+	\captionsetup{type=figure}
 	\includegraphics[scale=0.4]{fig3_3}
 	\figcaption{正方形绕中心旋转$90^\circ$}
 	\label{fig3.3}
-	}}
+	}
 
 	换个角度看：假如你看了一眼原来的正方形， 然后闭上眼睛， 这时有人可能把正方形做了一个变换。 如果你睁眼以后不能分辨这个正方形是否被人变换过， 那么这个变换就是个对称变换。
 
@@ -127,9 +128,9 @@ ISBN 9780387966755
 
 	单位圆绕圆心旋转任意角度都不变。 换言之， 变换参数(这里就是旋转角度)可以取任意值， 因此这个群是连续群。
 \end{enumerate}
-	\marginpar{
+	\picmpar{
 		\includegraphics[scale=0.35]{fig3_4.pdf}
-		\figcaption{单位圆旋转的示意图，单位圆绕圆心旋转任意角度都不变}
+		\caption{单位圆旋转的示意图，单位圆绕圆心旋转任意角度都不变}
 	}
 
 数学中除了几何图形之外还有好多别事物的都有对称性。 例如，对于向量， 我们可以考虑所有让向量长度不变的变换构成的集合。 看出本节开头对称性定义的普遍性了没? 对称性就是变换下的不变性。 非常幸运， 搞数学的早已建立了群论， 它可以研究所有类型的对称性\mpar{历史上数学家们建立群论最初是为了描述方程的对称性}。
@@ -282,10 +283,11 @@ $R_\theta$的模平方为:
 R_\theta^* R_\theta = \mathrm{e}^{-i\,\theta} \mathrm{e}^{i\,\theta} = \big( \cos \theta - i \sin \theta  \big) \big( \cos \theta + i \sin \theta \big) = 1
 \end{equation}
 
-\marginpar{
+\picmpar{
 	\includegraphics[scale=0.45]{fig3_5.pdf}
-	\figcaption{单位复数在复平面的单位圆上}
-	}\label{fig3.5}
+	\caption{单位复数在复平面的单位圆上}
+	\label{fig3.5}
+	}
 
 例：将向量$(3,  5)$对应的复数$z = 3 + 5i$旋转$90^\circ$：
 \begin{equation}
@@ -294,10 +296,12 @@ z \rightarrow z' = \mathrm{e}^{i\, 90^\circ}z = \bigg( \underbrace{\cos 90^\circ
 \end{equation}
 
 图\ref{fig3.6}绘制了旋转前后的向量（复数），图中可见复数乘以$\mathrm{e}^{i\, 90^\circ}$旋转了$90^\circ$.
-\marginpar{
+\picmpar{
 	\includegraphics[scale=0.45]{fig3_6.pdf}
-	\figcaption{复数通过乘以单位复数进行旋转}
-	}\label{fig3.6}
+	\caption{复数通过乘以单位复数进行旋转}
+	\label{fig3.6}
+	}
+
 需要注意$\mathrm{e}^{i\, 90^\circ}$作用于（乘以）向量对应的复数而非向量本身。描述二维旋转只需要一个参数：旋转角$\phi$. 而复数有两个自由度（实部和虚部），因此我们加上单位复数的限制：$|z| = \text{实部}^2 + \text{虚部}^2 = 1$，刚好只剩一个自由度。
 
 描述二维旋转的两种方式——单位复数与$2 \times 2$矩阵（矩阵元都是实数）通过如下方式相联系。定义：
@@ -1143,9 +1147,9 @@ $\mathcal{SU}(2)$就是三维超球面，它正是一个单连通流形。因此
 
 $\mathcal{SO}(3)$是什么流形？已知$\mathcal{SU}(2)$到$\mathcal{SO}(3)$的映射将$\mathcal{SU}(2)$的{\bf 两个}点映射为$\mathcal{SO}(3)$中的{\bf 一个}。因此$\mathcal{SO}(3)$是单位超球面的一半。
 
-	\marginpar{
+	\picmpar{
 		\includegraphics[scale=0.3]{fig3_7.pdf}
-		\figcaption{三维超球面$S^3$的一个二维切面（$S^3$自身是四维超球的“表面”，愚蠢的人类没法直接把它画出来），图中可见球面的上半部分对应$\mathcal{SO}(3)$，因为从$\mathcal{SU}(2)$到$\mathcal{SO}(3)$的映射将前者中的$p$点与$p + 2\pi$映射到后者中的同一点。}
+		\caption{三维超球面$S^3$的一个二维切面（$S^3$自身是四维超球的“表面”，愚蠢的人类没法直接把它画出来），图中可见球面的上半部分对应$\mathcal{SO}(3)$，因为从$\mathcal{SU}(2)$到$\mathcal{SO}(3)$的映射将前者中的$p$点与$p + 2\pi$映射到后者中的同一点。}
 	}
 
 因此从流形的角度看，$\mathcal{SU}(2)$群比$\mathcal{SO}(3)$更完整，$\mathcal{SO}(3)$只是其中的一部分。
