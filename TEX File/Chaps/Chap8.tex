@@ -12,12 +12,12 @@
 \chapterimage{chapter_head_1.pdf}
 
 \begin{quote}%quote for every part.I have trouble inserting it into the part cover,so it's now there as a workaround.If you have a better way,please tell me.
-{\bf “中用的东西都不中看”}\marginpar{``There is nothing truly beautiful but that which can never be of any use whatsoever;everything useful is ugly.''}
+{\bfseries “中用的东西都不中看”}\marginpar{``There is nothing truly beautiful but that which can never be of any use whatsoever;everything useful is ugly.''}
 
 
 \begin{flushright}
 --- Theophile Gautier\\
-in {\it Mademoiselle de Maupin.}\marginpar{%
+in {\itshape Mademoiselle de Maupin.}\marginpar{%
 Mademoiselle de Maupin.
 Wildside Press,11 2007.
 ISBN 9781434495556%
@@ -28,11 +28,11 @@ ISBN 9781434495556%
 \chapter[量子力学]{Quantum Mechanics \quad 量子力学}\label{chap8}
 
 \section*{Summary\quad 总结}
-本章讲述量子力学，基于第\ref{chap5}章讲过的对应关系\footnote{物理量$\to$ 对称性生成元，见\eqref{equ5.1}式。}，由此首先可导出{\bf 相对论性能量-动量关系}。
+本章讲述量子力学，基于第\ref{chap5}章讲过的对应关系\footnote{物理量$\to$ 对称性生成元，见\eqref{equ5.1}式。}，由此首先可导出{\bfseries 相对论性能量-动量关系}。
 
-在建立量子力学的基本框架后，我们就对Klein-Gordon方程（最简单的标量型粒子的运动方程）取非相对论极限，得到著名的{\bf Schr\"{o}dinger方程}，方程的解被诠释为概率幅，随后我们用{\bf 波动力学}的方法分析两个简单例子。
+在建立量子力学的基本框架后，我们就对Klein-Gordon方程（最简单的标量型粒子的运动方程）取非相对论极限，得到著名的{\bfseries Schr\"{o}dinger方程}，方程的解被诠释为概率幅，随后我们用{\bfseries 波动力学}的方法分析两个简单例子。
 
-之后呢，我们引入了{\bf Dirac符号}，这对于理解量子力学的结构十分有帮助。系统的初始态被一个抽象的态矢量$|i\rangle$标记，称之为右矢。测量该初始态得到某一特定末状态的概率幅可以用左矢（记作$\langle f|$，表示末态）乘以右矢$|i \rangle$计算。左矢与右矢的乘积$\langle f | i \rangle$是一个复数，即为状态$i \to f$的概率幅，发生这个过程的概率就是$|A|^2$。之后讨论{\bf 投影算符}。我们会看到它是如何与{\bf 完备性关系}一起用来把任意状态用任意一个算符的本征态来进行展开的。之前常用的波动力学方法可以视为将态矢在坐标基底展开的特例。在 Dirac 符号下， Schr\"{o}dinger 方程用于计算态的时间演化。为了阐明这一联系，我们会用 Dirac 符号来重新讨论一个前面用波动力学求解过的例子。
+之后呢，我们引入了{\bfseries Dirac符号}，这对于理解量子力学的结构十分有帮助。系统的初始态被一个抽象的态矢量$|i\rangle$标记，称之为右矢。测量该初始态得到某一特定末状态的概率幅可以用左矢（记作$\langle f|$，表示末态）乘以右矢$|i \rangle$计算。左矢与右矢的乘积$\langle f | i \rangle$是一个复数，即为状态$i \to f$的概率幅，发生这个过程的概率就是$|A|^2$。之后讨论{\bfseries 投影算符}。我们会看到它是如何与{\bfseries 完备性关系}一起用来把任意状态用任意一个算符的本征态来进行展开的。之前常用的波动力学方法可以视为将态矢在坐标基底展开的特例。在 Dirac 符号下， Schr\"{o}dinger 方程用于计算态的时间演化。为了阐明这一联系，我们会用 Dirac 符号来重新讨论一个前面用波动力学求解过的例子。
 
 \section[对应到粒子理论]{Particle Theory Identifications \quad 对应到粒子理论}\label{sec8.1}
 前面导出的方程\mpar{Klein-Gordon, Dirac, Proca, Maxwell方程}可以用在粒子理论和场理论中。本章考虑它们应用于粒子理论的情形。因此动力学变量就是粒子（们）的坐标、能量和动量。第\ref{chap5}章讲过，这些物理量可视为相应对称性的生成元：\mpar{见\eqref{equ3.240}，\eqref{equ3.244}和第\ref{chap5}章。}
@@ -57,7 +57,7 @@ ISBN 9781434495556%
 \label{equ8.2}
   \to\ E^2=\vec{p}^{\,2}+m^2 & \quad\text{ 或者用4-矢量表示：}p_\mu p^\mu=m^2
 \end{align}
-这就是著名的狭义相对论{\bf 能量-动量关系(energy-momentum relation)}。上式应用于静止粒子($\vec{p} = 0$)即得到 Einstein 著名的质能方程：
+这就是著名的狭义相对论{\bfseries 能量-动量关系(energy-momentum relation)}。上式应用于静止粒子($\vec{p} = 0$)即得到 Einstein 著名的质能方程：
 \[E^2=m^2\to E=mc^2 \]
 其中为了明确起见我们把$c^2$写了回来。现在就理解了 Poincar\'e 群的第一个 Casimir 算符$p_\mu p^\mu$的标量值（见\eqref{equ3.258}式）为何要用$m^2$这样的符号来标记了。$p_\mu p^\mu$就代表着粒子质量的平方，而通过实验，比如说测量粒子的能量和动量，就可测量质量$m=\sqrt{E^2-\vec{p}^{\,2}}$。同理，我们也可以理解为什么\ref{sec6.2}节要把拉格朗日量里面的系数常数记作$m^2$。
 
@@ -80,7 +80,7 @@ ISBN 9781434495556%
 i\partial_0\Phi=E\Phi
 \end{align}
 角动量的本征函数也是一样%
-\mpar{角动量本征函数的求解更加复杂，因为角动量算符比其它算符本身就更复杂。我们找不到一组三个角动量分量共同的本征态，因为$[\hat{L}_i,\hat{L}_j]\neq0$。这在后面就会详细讨论，最终选取的本征函数是角动量第三个方向$\hat{L}_3$（和角动量算符的平方$\hat{L}^2$，它与其它的角动量分量都对易$[\hat{L}^2,\hat{L}_j]=0$）的完备归一基，即著名的{\bf 球谐函数基}。}%
+\mpar{角动量本征函数的求解更加复杂，因为角动量算符比其它算符本身就更复杂。我们找不到一组三个角动量分量共同的本征态，因为$[\hat{L}_i,\hat{L}_j]\neq0$。这在后面就会详细讨论，最终选取的本征函数是角动量第三个方向$\hat{L}_3$（和角动量算符的平方$\hat{L}^2$，它与其它的角动量分量都对易$[\hat{L}^2,\hat{L}_j]=0$）的完备归一基，即著名的{\bfseries 球谐函数基}。}%
 。类比于矩阵的本征矢量，这些本征函数可以看做基%
 \mpar{在矩阵中，本征矢量是矩阵对应的矢量空间的基}%
 ，而这就意味着我们可以把任意的函数$\Psi$按照这些基进行展开。例如，在动量本征函数%
@@ -103,20 +103,20 @@ i\partial_0\Phi=E\Phi
 	\to DC=CD\quad \text{这与$[C,D]\neq0$矛盾，因而不存在共同的本征函数。}
 \end{align}
 
-一般来说，物理量算符作用在描述物理系统的{\bf 态(state)}\mpar{这里使用$\Psi$是出于量子力学的惯例，尽管前面只用它表示描述自旋$0$粒子的旋量。}$\Psi$上，通过求解运动方程得到$\Psi$。
+一般来说，物理量算符作用在描述物理系统的{\bfseries 态(state)}\mpar{这里使用$\Psi$是出于量子力学的惯例，尽管前面只用它表示描述自旋$0$粒子的旋量。}$\Psi$上，通过求解运动方程得到$\Psi$。
 
 一般的解按照某组基展开都会超过一项。举个例子，考虑两个能量本征态\footnote{即能量算符（哈密顿算符）$\hat{H}$的本征态，能量本征值为$E$的本征态记作$\Phi_E$.}$\Psi = c_1 \Phi_{E_1} + c_2 \Phi_{E_2}$\mpar{这意味着所有的展开系数$\Psi=\sum_nc_n\Phi_{E_n}$是零。}，能量算符作用于它可得
 \begin{align}
 \label{equ8.9}
 	\hat{E}\Psi = \hat{E}(c_1\Phi_{E_1} + c_2\Phi_{E_2})=c_1E_1\Phi_{E_1}+c_2E_2\Phi_{E_2}\neq E(c_1\Phi_{E_1}+c_2\Phi_{E_2})
 \end{align}
-由此可见不同能量（的能量本征态）{\bf 叠加(superposition)}形成的态一般不是能量算符的本征态，因为本征态需要满足定义——存在某个数$E$使得$\hat{E}\Psi=E\Psi$。不过，处于$\Psi$状态系统的能量是多少呢？两个能量本征态的叠加态又意味着什么呢？它的物理意义是什么？
+由此可见不同能量（的能量本征态）{\bfseries 叠加(superposition)}形成的态一般不是能量算符的本征态，因为本征态需要满足定义——存在某个数$E$使得$\hat{E}\Psi=E\Psi$。不过，处于$\Psi$状态系统的能量是多少呢？两个能量本征态的叠加态又意味着什么呢？它的物理意义是什么？
 
 首先我们能从拉格朗日量的$\mathcal{U}(1)$对称性中得到一点提示，它表明从$\Psi$的运动方程得到的解没有直接的物理意义\mpar{如果假定$\Psi$直接描述粒子，那么它的$\mathcal{U}(1)$变换$\Psi'=e^{i\alpha}\Psi$（也是运动方程的解）描述的是什么呢？}。
 
 另一方面，注意到运动方程所有的解都是$\vec{x},t$的函数\mpar{下一节会对这点详细说明。}，即$\Psi=\Psi(\vec{x},t)$。
 
-标准诠释是，{\bf 波函数}$\Psi(\vec{x},t)$的模方$|\Psi(\vec{x},t)|^2$表示粒子位置的概率密度。注意$\mathcal{U}(1)$变换对于$|\Psi|^2=\Psi^\dagger\Psi\to(\Psi')^\dagger(\Psi')=\Psi^\dagger e^{-i\alpha}e^{i\alpha}\Psi=\Psi^\dagger\Psi$这样的量是没有影响的。换句话说（以一维情形为例），$\Psi(x,t)$是在$[x, x+dx]$区间内测量到粒子的概率密度\footnote{即在区间$[x, x + dx]$测量到粒子的概率为$|\Psi(x, t)|^2 dx$.}。因此，如果对整个空间积分的话，必定有
+标准诠释是，{\bfseries 波函数}$\Psi(\vec{x},t)$的模方$|\Psi(\vec{x},t)|^2$表示粒子位置的概率密度。注意$\mathcal{U}(1)$变换对于$|\Psi|^2=\Psi^\dagger\Psi\to(\Psi')^\dagger(\Psi')=\Psi^\dagger e^{-i\alpha}e^{i\alpha}\Psi=\Psi^\dagger\Psi$这样的量是没有影响的。换句话说（以一维情形为例），$\Psi(x,t)$是在$[x, x+dx]$区间内测量到粒子的概率密度\footnote{即在区间$[x, x + dx]$测量到粒子的概率为$|\Psi(x, t)|^2 dx$.}。因此，如果对整个空间积分的话，必定有
 \begin{align}
 \label{equ8.10}
 	\int dx\Psi^*(x,t)\Psi(x,t)\overset{!}{=}1
@@ -228,13 +228,13 @@ E&=m\left(1+\frac{1}{2}\frac{\vec{p}^2}{m^2}+\cdots\right)\\
 \label{equ8.20}
 	\to \left( i \partial_t + \frac{\nabla^2}{2m} \right) \phi(\vec{x}, t) = 0,
 \end{align}
-这就是著名的{\bf Schr\"{o}dinger 方程}。利用本章开头物理量与算符的对应关系，Schr\"{o}dinger方程写为\footnote{原文下式有误，译文已按勘误表修改}
+这就是著名的{\bfseries Schr\"{o}dinger 方程}。利用本章开头物理量与算符的对应关系，Schr\"{o}dinger方程写为\footnote{原文下式有误，译文已按勘误表修改}
 \begin{align}
 	& \to \bigg( E - \underbrace{\frac{\vec{p}^2}{2m} }_{=\text{动能}} \bigg) \phi (\vec{x}, t) = 0  \notag \\
 \label{equ8.21}
 	& \to E = \frac{\vec{p}^2}{2m}.
 \end{align}
-此即为{\bf 非相对论性能量—动量关系}。
+此即为{\bfseries 非相对论性能量—动量关系}。
 
 从该式出发很容易考虑粒子位于外势场$V$中的情况，因为外势场中粒子的能量就是动能加势能：
 \[
@@ -252,7 +252,7 @@ Dirac 方程的非相对论极限的计算过程类似，所得结果称为 Paul
 
 \subsection[有外场的 Schr\"{o}dinger 方程]{Schr\"{o}dinger Equation with External Field\quad 有外场的 Schr\"{o}dinger 方程}\label{sec8.4.1}
 
-此外，我们可以对有{\bf 相互作用}的 Klein-Gordon 方程\eqref{equ7.43}式，即描述有质量的$0$自旋场与无质量的自旋$1$场（光子场）相互作用的方程，做同样的非相对论性近似。所得结果为
+此外，我们可以对有{\bfseries 相互作用}的 Klein-Gordon 方程\eqref{equ7.43}式，即描述有质量的$0$自旋场与无质量的自旋$1$场（光子场）相互作用的方程，做同样的非相对论性近似。所得结果为
 \begin{align}
 \label{equ8.23}
 	\left(i\partial_t+\frac{1}{2m}\left(\nabla-ia\vec{A}\right)^2+q\Phi\right)\phi(\vec{x},t)=0
@@ -362,7 +362,7 @@ Dirac 方程的非相对论极限的计算过程类似，所得结果称为 Paul
 \label{equ8.31}
 	E_n \stackrel{!}{=} \frac{n^2 \pi^2}{L^2 2m}.
 \end{equation}
-{\bf 粒子可能具有的能量是量子化的}，即能量只能是某个常量（这里是$\frac{\pi^2}{L^2 2m}$）的整数倍，这就是量子力学名字的来历。
+{\bfseries 粒子可能具有的能量是量子化的}，即能量只能是某个常量（这里是$\frac{\pi^2}{L^2 2m}$）的整数倍，这就是量子力学名字的来历。
 
 每个$n$都对应一个解，解的线性组合
 \[
@@ -420,7 +420,7 @@ $\Phi_2$与$\Psi$的重叠可以视为它们的标量积\mpar{实际上，$\Psi,
 下一节介绍由Dirac发明的十分便捷的Dirac符号，它有助于我们理解量子力学的框架结构。
 
 \subsection[Dirac符号]{Dirac Notation \quad Dirac符号}\label{sec8.5.3}
-Dirac符号中，系统状态由{\bf 右矢 (ket)}\mpar{它的含义稍后会进一步说明。}表示，记作
+Dirac符号中，系统状态由{\bfseries 右矢 (ket)}\mpar{它的含义稍后会进一步说明。}表示，记作
 \begin{equation}
 \label{equ8.34}
 	|\Psi \rangle,
@@ -429,7 +429,7 @@ Dirac符号中，系统状态由{\bf 右矢 (ket)}\mpar{它的含义稍后会进
 \[
 	\hat{H} |\Phi_n \rangle = E_n |\Phi_n \rangle.
 \]
-每个右矢可以定义相应的{\bf 左矢 (bra)}，记作$\langle \Psi|$，定义为
+每个右矢可以定义相应的{\bfseries 左矢 (bra)}，记作$\langle \Psi|$，定义为
 \begin{equation}
 \label{equ8.35}
 	\langle \Psi|^\dag = |\Psi \rangle,
@@ -465,7 +465,7 @@ $\Psi(x)$即为前面使用的波函数。再比如，观测粒子的动量位�
 \label{equ8.40}
 	\int dp\, | \langle p||\Phi \rangle|^2 &= \int dp\, \big( \langle p||\Phi \rangle \big)^\dag \langle p|| \Phi \rangle = \int dp\, \langle \Phi || p \rangle \langle p|| \Phi \rangle \stackrel{!}{=} 1.
 \end{align}
-上面出现了一种新算符：$|p \rangle \langle p|$与$|x \rangle \langle x|$，这种形式的算符称为{\bf 投影算符 (projection operators)}\mpar{就像前面介绍过的左手旋量、右手旋量的投影算符那样，这些投影算符也满足条件$P^2 = P.$}。它们是算符，因为它们作用于右矢，得到新的右矢。例如
+上面出现了一种新算符：$|p \rangle \langle p|$与$|x \rangle \langle x|$，这种形式的算符称为{\bfseries 投影算符 (projection operators)}\mpar{就像前面介绍过的左手旋量、右手旋量的投影算符那样，这些投影算符也满足条件$P^2 = P.$}。它们是算符，因为它们作用于右矢，得到新的右矢。例如
 \[
 	|x \rangle \underbrace{ \langle x || \Psi \rangle}_{\mathclap{\text{等于某个复数，记作}\Psi(x)} } = |x\rangle \Psi(x),
 \]
@@ -489,7 +489,7 @@ $\Psi(x)$即为前面使用的波函数。再比如，观测粒子的动量位�
 \label{equ8.44}
 	\sum_i |i\rangle \langle i| = \hat{I}
 \end{equation}
-称为{\bf 完备性关系(completeness relations)}。一般的右矢$|a\rangle$在基$\{ |i\rangle\}$下的分量为
+称为{\bfseries 完备性关系(completeness relations)}。一般的右矢$|a\rangle$在基$\{ |i\rangle\}$下的分量为
 \[
 	|i\rangle^\dag |a\rangle \equiv \langle i || a\rangle \equiv a_i,
 \]
@@ -643,30 +643,30 @@ $\Psi(x)$即为前面使用的波函数。再比如，观测粒子的动量位�
 \item	再测量粒子的自旋$x$分量发现其中一半为$S_x = \frac{1}{2}$，另一半为$-\frac{1}{2}$。剔除其中所有$S_x = -\frac{1}{2}$的粒子后粒子的状态为$|X\rangle_{x\text{方向筛选后}} = |\frac{1}{2} \rangle_x$.
 \item 	现在再次测量粒子的自旋$z$分量，我们得到令人吃惊的测量结果：一半粒子为$S_z = \frac{1}{2}$，另一半为$S_z = -\frac{1}{2}$. 尽管在第一步已经筛选掉所有$S_z = -\frac{1}{2}$的粒子！
 \end{itemize}
-关于这部分内容的精彩讨论（包括实际的观测仪器）可见Feynman物理学讲义第三卷\mpar{ Richard P. Feynman, \\ Robert B.Leighton, and Matthew Sands. {\it The Feynman Lectures on Physics, Volume 3.} Addison Wesley, 1st edition, 1 1971. ISBN 9780201021189}。
+关于这部分内容的精彩讨论（包括实际的观测仪器）可见Feynman物理学讲义第三卷\mpar{ Richard P. Feynman, \\ Robert B.Leighton, and Matthew Sands. {\itshape The Feynman Lectures on Physics, Volume 3.} Addison Wesley, 1st edition, 1 1971. ISBN 9780201021189}。
 
 \section[Heisenberg 不确定性原理]{Heisenberg’s Uncertainty Principle \quad Heisenberg 不确定性原理}\label{sec8.6}
 
 现在可以讨论量子力学中最奇妙的特征之一了。从上节可知，对粒子自旋$x$分量的测量会破坏已知的自旋$z$分量的信息，这一情况在量子力学的很多测量中都存在。我们可以从\mpar{我们把自旋算子和对应的有限维旋转生成元认同，其满足对易关系$[J_i,J_j]=J_i J_j -J_j J_i=i\epsilon_{ijk}J_k\ne 0 \to J_i J_j \ne J_j J_i$。 举个例子来说，描述自旋1/2的粒子应采用对应的二维表示$J_i=\frac{\sigma_i}{2}$。} $\hat S_x \hat S_z \ne \hat S_z \hat S_x$ 出发来考察这一点，此式说明先对自旋$z$分量后对$x$分量进行测量和先对$x$分量后对$z$分量进行测量的结果是不同的。这一点并不令人惊奇，因为对$z$方向自旋进行测量后，系统应处于$\hat S_z$ 的一个本征态上，而对$x$方向自旋进行测量后，系统应处于$\hat S_x$ 的本征态上，$\hat S_z$ 和$\hat S_x$的本征态均不同，最后的结果也就不同。
 
 
-上述现象可以从另一视角描述：{\bf 自旋的$x$分量与$z$分量不能同时确定！}每次测量$z$方向的自旋时，都会让$x$方向的自旋信息再次变为未知，反之亦然。这一结论对于$z$ 方向/$x$方向和$y$方向的自旋也是一样的。
+上述现象可以从另一视角描述：{\bfseries 自旋的$x$分量与$z$分量不能同时确定！}每次测量$z$方向的自旋时，都会让$x$方向的自旋信息再次变为未知，反之亦然。这一结论对于$z$ 方向/$x$方向和$y$方向的自旋也是一样的。
 
 你也许觉得自旋是比较奇怪的物理量，但在粒子位置和动量的测量上也发现了同样的结果。回顾一下式\eqref{equ5.3}，为了方便重写一遍：
 \begin{equation}
 \label{equ8.61}
 	[\hat p_i,\hat x_j]=\hat p_i \hat x_j - \hat x_j \hat p_j =i \delta_{ij}
 \end{equation}
-由上可见，对粒子位置的$x$分量进行测量，会导致之前对动量$x$分量的测量结果变得不确定。换句话说，我们不能同时{\it 足够精确地}确定粒子在同一方向上的位置与动量。注意，只有沿相同方向的位置和动量算符的对易子才不为零\mpar{Kronecker delta函数$\delta_{ij}$在$i\ne j$时为0，$i=j$时为1，其定义在附录\ref{appendix.B.5.5}。}，所以测量动量的$y$分量不会干扰对位置的$x$分量的测量。
+由上可见，对粒子位置的$x$分量进行测量，会导致之前对动量$x$分量的测量结果变得不确定。换句话说，我们不能同时{\itshape 足够精确地}确定粒子在同一方向上的位置与动量。注意，只有沿相同方向的位置和动量算符的对易子才不为零\mpar{Kronecker delta函数$\delta_{ij}$在$i\ne j$时为0，$i=j$时为1，其定义在附录\ref{appendix.B.5.5}。}，所以测量动量的$y$分量不会干扰对位置的$x$分量的测量。
 
-每次测量动量会使位置信息变得不确定，反之亦然，这就是著名的{\bf Heisenberg 不确定原理}。同样的现象也发生在的角动量的不同分量之间，因为它们的对易子不为零。总而言之，我们可以计算任意两个物理量的对易性，如果它们不对易，它们就不能同时{\it 足够精确地}被确定。
+每次测量动量会使位置信息变得不确定，反之亦然，这就是著名的{\bfseries Heisenberg 不确定原理}。同样的现象也发生在的角动量的不同分量之间，因为它们的对易子不为零。总而言之，我们可以计算任意两个物理量的对易性，如果它们不对易，它们就不能同时{\itshape 足够精确地}被确定。
 
 这其实不太奇怪。量子力学使用相应对称性的生成元作为测量算符，比如说，对动量的测量等价于平移生成元的作用\mpar{复习：系统的平移不变性导出动量守恒定律。}，这一生成元将我们的系统平移了一小点，所以粒子的位置也被改变了。真正令人惊奇的是大自然就是这么运作的，许多年来有很多实验验证Heisenberg不确定原理，它们都证明了这个原理的正确性。
 
 
 
 \section[对几种诠释的评议]{Comments on Interpretations \quad 对几种诠释的评议}\label{sec8.7}
-本章采用的都是量子力学的标准诠释与通用符号，然而还有其他同样有效的体系。例如，就结果而言，Feynman路径积分体系\mpar{这方面内容可参考Richard P. Feynman and Albert R. Hibbs. {\it Quantum Mechanics and Path Integrals}: Emended Edition. Dover Publications, emended editon edition, 7\ 2010. ISBN 9780486477220}与本章描述的波动力学完全等价。但二者的计算过程相当不同。在路径积分体系中计算粒子从点$a$到$b$的概率，需要将从$a$到$b$的所有可能的路径叠加。尽管听起来很奇怪，但是可以证明它的计算结果和波动力学相同。Freeman Dyson曾经讲过关于路径积分的一个故事\mpar{Harry Woolf, editor. {\it Some Strangeness in the Proportion}. Addison-Wesley, 1st edition, 2\ 1981. ISBN 9780201099249}：
+本章采用的都是量子力学的标准诠释与通用符号，然而还有其他同样有效的体系。例如，就结果而言，Feynman路径积分体系\mpar{这方面内容可参考Richard P. Feynman and Albert R. Hibbs. {\itshape Quantum Mechanics and Path Integrals}: Emended Edition. Dover Publications, emended editon edition, 7\ 2010. ISBN 9780486477220}与本章描述的波动力学完全等价。但二者的计算过程相当不同。在路径积分体系中计算粒子从点$a$到$b$的概率，需要将从$a$到$b$的所有可能的路径叠加。尽管听起来很奇怪，但是可以证明它的计算结果和波动力学相同。Freeman Dyson曾经讲过关于路径积分的一个故事\mpar{Harry Woolf, editor. {\itshape Some Strangeness in the Proportion}. Addison-Wesley, 1st edition, 2\ 1981. ISBN 9780201099249}：
 
 \begin{quote}
 Dick Feynman向我讲述他量子力学“历史态叠加”的新理论。 “电子它想干啥就干啥”，他说：“它朝着任意方向以任何速度往过去或未来行进，不管它怎么跑，你把这些的振幅全加起来，就能得到波函数。”我对他说：“你疯啦。”但实际上他没疯。
@@ -677,22 +677,22 @@ Dick Feynman向我讲述他量子力学“历史态叠加”的新理论。 “�
 
 \section*{阅读建议}
 \begin{itemize}
-\item {\bf Richard P. Feynman - The Feynman Lectures on Physics, Vol. 3}\mpar{Richard P. Feynman, Robert B. Leighton, and Matthew Sands. {\it The Feynman Lectures on Physics, Volume 3}. Addison Wesley, 1st edition, 1\ 1971. ISBN 9780201021189}\footnote{译注：此书新版可在此免费在线查看： \url{http://www.feynmanlectures.caltech.edu/III_toc.html}。\\另有新版中译本：费恩曼,莱顿,桑兹著;李洪芳,王子辅,钟万蘅译.费恩曼物理学讲义,新千年版,第三卷,\\上海:上海科学技术出版社,4 2013,ISBN 9787547816387。} 是量子力学入门的出色教材。量子力学的大部分概念都在此书中有更清楚的解释。
-\item {\bf  David J. Griffiths - Introduction to Quantum Mechanics}\mpar{ David J. Griffiths. Introduction to Quantum Mechanics. Pearson Prentice Hall, 2nd edition, 4\ 2004. ISBN 9780131118928}\footnote{译注：国内有由机械工业出版社出版的影印本和中译本，\\影印本ISBN为9787111182948，贾瑜等的中译本ISBN为9787111278771。}
+\item {\bfseries Richard P. Feynman - The Feynman Lectures on Physics, Vol. 3}\mpar{Richard P. Feynman, Robert B. Leighton, and Matthew Sands. {\itshape The Feynman Lectures on Physics, Volume 3}. Addison Wesley, 1st edition, 1\ 1971. ISBN 9780201021189}\footnote{译注：此书新版可在此免费在线查看： \url{http://www.feynmanlectures.caltech.edu/III_toc.html}。\\另有新版中译本：费恩曼,莱顿,桑兹著;李洪芳,王子辅,钟万蘅译.费恩曼物理学讲义,新千年版,第三卷,\\上海:上海科学技术出版社,4 2013,ISBN 9787547816387。} 是量子力学入门的出色教材。量子力学的大部分概念都在此书中有更清楚的解释。
+\item {\bfseries  David J. Griffiths - Introduction to Quantum Mechanics}\mpar{ David J. Griffiths. Introduction to Quantum Mechanics. Pearson Prentice Hall, 2nd edition, 4\ 2004. ISBN 9780131118928}\footnote{译注：国内有由机械工业出版社出版的影印本和中译本，\\影印本ISBN为9787111182948，贾瑜等的中译本ISBN为9787111278771。}
 是非常易读的、具有启发性的教材。
-\item {\bf  J. J. Sakurai - Modern Quantum Mechanics}\mpar{ J. J. Sakurai.{\it  Modern Quantum Mechanaics}. Addison Wesley, 1st edition, 9 \1993. ISBN 9780201539295}\footnote{译注：本书第二版在国内有由世界图书出版公司出版的影印本，\\ISBN为9787510035067。}是一本精彩著作，它提供了量子力学的独特视角。
-\item {\bf Paul A. M. Dirac - Lectures on Quantum Mechanics}\mpar{Paul A. M. Dirac and Physics. {\it Lectures on Quantum Mechanics.} Dover Publications, 1st edition, 3\ 2001. ISBN 9780486417134}\footnote{译注：国内有科学出版社的影印本。}是量子力学的原始文献之一。尽管古老，但时至今日它的评价依然很高，因为阅读量子力学创始人的思想是非常具有启示意义。
+\item {\bfseries  J. J. Sakurai - Modern Quantum Mechanics}\mpar{ J. J. Sakurai.{\itshape  Modern Quantum Mechanaics}. Addison Wesley, 1st edition, 9 \1993. ISBN 9780201539295}\footnote{译注：本书第二版在国内有由世界图书出版公司出版的影印本，\\ISBN为9787510035067。}是一本精彩著作，它提供了量子力学的独特视角。
+\item {\bfseries Paul A. M. Dirac - Lectures on Quantum Mechanics}\mpar{Paul A. M. Dirac and Physics. {\itshape Lectures on Quantum Mechanics.} Dover Publications, 1st edition, 3\ 2001. ISBN 9780486417134}\footnote{译注：国内有科学出版社的影印本。}是量子力学的原始文献之一。尽管古老，但时至今日它的评价依然很高，因为阅读量子力学创始人的思想是非常具有启示意义。
 \item Dirac旋量的分量意义的详细诠释可参考附录\ref{sec8.8}。
 \end{itemize}
 
 
 \section[附录：Dirac旋量分量的诠释]{Appendix: Interpretation of the Dirac Spinor Components \quad 附录：Dirac旋量分量的诠释}\label{sec8.8}
-{\it 在接下来的附录中，$\mathbf{u}, \mathbf{v}$表示Dirac旋量里面的二分量对象，$u, v$表示四分量对象。例如，$u_1, u_2$描述两个不同的四分量对象。一个一般的四分量对象$u$相应的二分量对象记作$\mathbf{u}_1, \mathbf{u}_2$，即$u = \begin{pmatrix} \mathbf{u}_1 \\ \mathbf{u}_2 \end{pmatrix}$.
+{\itshape 在接下来的附录中，$\mathbf{u}, \mathbf{v}$表示Dirac旋量里面的二分量对象，$u, v$表示四分量对象。例如，$u_1, u_2$描述两个不同的四分量对象。一个一般的四分量对象$u$相应的二分量对象记作$\mathbf{u}_1, \mathbf{u}_2$，即$u = \begin{pmatrix} \mathbf{u}_1 \\ \mathbf{u}_2 \end{pmatrix}$.
 }
 
 目前我们对Dirac旋量中的两个Weyl旋量的认识还比较模糊。它们究竟代表什么？应该被诠释成什么？此外，Dirac旋量里的Weyl旋量也具有两个分量，这该怎么解释？下面就来讨论。
 
-{\it 简言之：}
+{\itshape 简言之：}
 
 \begin{itemize}
 \item Dirac旋量$\psi \begin{pmatrix} \chi_L \\ \xi_R \end{pmatrix}$中的两个Weyl旋量$\chi_L, \xi_R$描述“不同的粒子”。然而惯例上仍然称它们是相同的粒子，只是手征性不同，例如对电子而言：
@@ -702,31 +702,31 @@ Dick Feynman向我讲述他量子力学“历史态叠加”的新理论。 “�
 \end{itemize}
 实际上它们是十分不同的粒子或场\mpar{它们由不同的量子数标记，因此实验性质相当不同！}，因为它们不能由宇称变换或电荷共轭相联系。因此采用不同的符号$\chi, \xi$表示它们。当然它们存在某些关系，不然为啥写在同一个旋量里呢，这一点稍后再详述。
 
-\item Weyl旋量的两个分量描述粒子不同的自旋构型\mpar{自旋构型在\ref{sec8.5.5}节讨论。复习一下，自旋与普通角动量的测量方法相似，只是例如自旋$\frac{1}{2}$粒子自旋所有方向分量的测量结果只能是$\frac{1}{2}$或$-\frac{1}{2}$，它们通常称作{\bf 自旋向上}与{\bf 自旋向下}。}。
+\item Weyl旋量的两个分量描述粒子不同的自旋构型\mpar{自旋构型在\ref{sec8.5.5}节讨论。复习一下，自旋与普通角动量的测量方法相似，只是例如自旋$\frac{1}{2}$粒子自旋所有方向分量的测量结果只能是$\frac{1}{2}$或$-\frac{1}{2}$，它们通常称作{\bfseries 自旋向上}与{\bfseries 自旋向下}。}。
 \begin{itemize}
-\item[-] 正比于$\begin{pmatrix} 1 \\ 0 \end{pmatrix}$的Weyl旋量描述{\bf 自旋向上(spin-up)}的粒子。
-\item[-] 正比于$\begin{pmatrix} 0 \\ 1 \end{pmatrix}$的Weyl旋量描述{\bf 自旋向下(spin-down)}的粒子。
+\item[-] 正比于$\begin{pmatrix} 1 \\ 0 \end{pmatrix}$的Weyl旋量描述{\bfseries 自旋向上(spin-up)}的粒子。
+\item[-] 正比于$\begin{pmatrix} 0 \\ 1 \end{pmatrix}$的Weyl旋量描述{\bfseries 自旋向下(spin-down)}的粒子。
 \item[-] 其他Weyl旋量仅仅是自旋向上/向下状态的叠加。
 \end{itemize}
 \end{itemize}
 
-{\it 下面进行详细推导：}
+{\itshape 下面进行详细推导：}
 
 弱相互作用和宇称破缺使得我们明白了左手手性和右手手性是截然不同的粒子这一重要观点。左手手性的粒子携带弱荷（同位旋），因此通过弱力来相互作用。右手手性的粒子则不携带，因此不相互作用，我们在\ref{sec7.7.1}节中有过解释。
 
 我们自然界中的每一个粒子都有它对应的反粒子，而其反粒子的描述就是通过对粒子的荷进行共轭操作。荷的共轭操作会翻转所有的粒子的标签，当然包括同位旋。我们可以看看，对应于电子，其对应什么样的粒子。我们有
 \begin{itemize}
-\item 一个左手手性的{\it 电子}$\chi_L$，同位旋$-\frac{1}{2}$，带电$-e$，处于双重态。
-\item 一个右手手性的{\it 反-左手手性电子}$(\chi_L)^c=\chi_R$，将有同位旋$\frac{1}{2}$，电荷$+e$，也同样是处于双重态。这种特性不会因为荷共轭就消失。这可能看起来有点迷茫，但是到现在为止我们只讨论粒子\footnote{而不是反粒子，切记切记}间弱力带来的耦合。右手反粒子也会被弱相互作用耦合。
-\item 右手{\it 电子}$\xi_R$，同位旋$0$，电荷$-e$。
-\item 左手{\it 反-右手手性电子}$(\xi_R)^c=\xi_L$，同位旋$0$，电荷$+e$。
+\item 一个左手手性的{\itshape 电子}$\chi_L$，同位旋$-\frac{1}{2}$，带电$-e$，处于双重态。
+\item 一个右手手性的{\itshape 反-左手手性电子}$(\chi_L)^c=\chi_R$，将有同位旋$\frac{1}{2}$，电荷$+e$，也同样是处于双重态。这种特性不会因为荷共轭就消失。这可能看起来有点迷茫，但是到现在为止我们只讨论粒子\footnote{而不是反粒子，切记切记}间弱力带来的耦合。右手反粒子也会被弱相互作用耦合。
+\item 右手{\itshape 电子}$\xi_R$，同位旋$0$，电荷$-e$。
+\item 左手{\itshape 反-右手手性电子}$(\xi_R)^c=\xi_L$，同位旋$0$，电荷$+e$。
 \end{itemize}
 
-因此，当讨论电子的时候，我们实际上有{\bf 四}种不同的需要考虑的``东西''。因为他们都是不同的粒子，我们实际上需要给他们不同的名字！一般我们只会说两种：电子和正电子，我们马上会看到这意味着什么。
+因此，当讨论电子的时候，我们实际上有{\bfseries 四}种不同的需要考虑的``东西''。因为他们都是不同的粒子，我们实际上需要给他们不同的名字！一般我们只会说两种：电子和正电子，我们马上会看到这意味着什么。
 
-{\it 我们接下来的讨论仅限于问题中的粒子静止的参考系。在其他的参考系中，这些讨论是类似的，但是会有琐碎的细节。}
+{\itshape 我们接下来的讨论仅限于问题中的粒子静止的参考系。在其他的参考系中，这些讨论是类似的，但是会有琐碎的细节。}
 
-Dirac旋量和其荷共轭与这四种粒子直接相关。{\bf 物理的电子}和{\bf 物理的正电子}一般被认为是DIrac方程的解。Dirac方程是运动方程，也就是决定粒子的动力学的方程，其解为DIrac旋量的时间演化。我们需要求出来我们的粒子的时间演化，这就需要我们同时考虑这两种粒子。
+Dirac旋量和其荷共轭与这四种粒子直接相关。{\bfseries 物理的电子}和{\bfseries 物理的正电子}一般被认为是DIrac方程的解。Dirac方程是运动方程，也就是决定粒子的动力学的方程，其解为DIrac旋量的时间演化。我们需要求出来我们的粒子的时间演化，这就需要我们同时考虑这两种粒子。
 
 附录\ref{sec8.9}节中有严格的推导，这里仅给出结论。 Dirac 方程有四个线性无关的解，其中两个有形式
 \begin{align}
@@ -738,7 +738,7 @@ Dirac旋量和其荷共轭与这四种粒子直接相关。{\bf 物理的电子}
 \end{align}
 比如$\text{v}_1=\left(\begin{matrix}1\\0\end{matrix}\right)e^{+imt}$和$\text{v}_2=\left(\begin{matrix}0\\1\end{matrix}\right)e^{+imt}$。
 
-Dirac方程告诉我们两个粒子的自旋由Dirac旋量里面的上下Weyl旋量来描述。不仅如此，他们的时间依赖必须一样。这些解就是我们通常认为的不同自旋的{\bf 物理电子( physical electron)}和{\bf 物理正电子(physical positron)}\mpar{注意这些解彼此之间的荷共轭。利用荷共轭算符来仔细计算：$\psi_1^c=i\gamma_2\psi_1^*$，因此$(\psi_1)^c=\bar{\psi}_2$，而$(\psi_2)^c=\bar{\psi}_1$。}。
+Dirac方程告诉我们两个粒子的自旋由Dirac旋量里面的上下Weyl旋量来描述。不仅如此，他们的时间依赖必须一样。这些解就是我们通常认为的不同自旋的{\bfseries 物理电子( physical electron)}和{\bfseries 物理正电子(physical positron)}\mpar{注意这些解彼此之间的荷共轭。利用荷共轭算符来仔细计算：$\psi_1^c=i\gamma_2\psi_1^*$，因此$(\psi_1)^c=\bar{\psi}_2$，而$(\psi_2)^c=\bar{\psi}_1$。}。
 
 \begin{itemize}
 \item $\psi_1$是自旋向上的电子
@@ -795,9 +795,9 @@ e_L^\uparrow=\left(\begin{matrix}1\\0\\0\\0\end{matrix}\right)=\frac{1}{2}\left(
 
 
 \section[附录：解Dirac 方程]{Appendix: Solving the Dirac Equation\quad 附录：解Dirac 方程}\label{sec8.9}
-{\it 和上节一样，我们把Dirac自旋量中的二分量量记做{\rm u}和{\rm v}，把四分量量记做$u$和$v$。也就是说例如$u_1,u_2$的记号代表的是四分量量，在不特别区分这些量的时候我们只写$u$。同时${\rm u_1}$和${\rm u_2}$是这个四分量量中的两个二分量量：$u=\pmm \rm u_1 \\ \rm u_2 \pmme $}。
+{\itshape 和上节一样，我们把Dirac自旋量中的二分量量记做{\rm u}和{\rm v}，把四分量量记做$u$和$v$。也就是说例如$u_1,u_2$的记号代表的是四分量量，在不特别区分这些量的时候我们只写$u$。同时${\rm u_1}$和${\rm u_2}$是这个四分量量中的两个二分量量：$u=\pmm \rm u_1 \\ \rm u_2 \pmme $}。
 \par
-本附录中我们将在{\it 手性基底}上解{\it 静止参考系}下的Dirac方程。其他任意参考系的解能够通过本节解做伪转动变换得到。除了我们在上一节的讨论，我们在第\ref{chap9}章讨论量子场论的时候也会用到这些解。\par
+本附录中我们将在{\itshape 手性基底}上解{\itshape 静止参考系}下的Dirac方程。其他任意参考系的解能够通过本节解做伪转动变换得到。除了我们在上一节的讨论，我们在第\ref{chap9}章讨论量子场论的时候也会用到这些解。\par
 Dirac方程为：
 \begin{equation}
 (i\partial_\mu \gamma^\mu -m)\psi=0

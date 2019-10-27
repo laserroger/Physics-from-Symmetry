@@ -43,7 +43,7 @@
 \label{equ10.1}
     &= \frac{1}{i} \langle [\hat{\mathcal{O}}, H] \rangle
 \end{align}
-上式是著名的{\bf Ehrenfest 定理}。比如，考虑$\hat{\mathcal{O}} = \hat{p}$，$H = \frac{p^2}{2m} + V$：
+上式是著名的{\bfseries Ehrenfest 定理}。比如，考虑$\hat{\mathcal{O}} = \hat{p}$，$H = \frac{p^2}{2m} + V$：
 \begin{align}
     \frac{d}{dt} \langle \hat{p} \rangle &= \frac{1}{i} \langle [\hat{p}, H] \rangle \notag \\
     &= \frac{1}{i} \left\langle [ \hat{p}, \frac{\hat{p}^2}{2m} + V] \right\rangle \notag \\
@@ -57,7 +57,7 @@
 \label{equ10.2}
     &= \langle - \nabla V \rangle = \langle F \rangle
 \end{align}
-上式意味着动量期望对时间的导数等于负的势能梯度（也就是力）的期望值，这正是{\bf Newton 第二定律}\mpar{在\ref{sec4.5}节由 Noether 定理解释守恒量的时候直接用过这个式子（没推导），这里正式把它推倒（无误）啦。}。它可以计算宏观物体的运动轨迹。历史上这个关于力的定律是从实验中总结的唯象定律，作用于一个物体上的力在方程的右端线性相加。定义唯象的物理量{\bf 动量} $p_{\text{mak}} = mv$， Newton 第二定律可写为$\frac{d}{dt} p_{\text{mak}} = \frac{d}{dt} mv$，当物体的质量不变时等号右侧即为$m \frac{d}{dt} v$。速度就是坐标对时间的导数\mpar{换句话说，速度$v = \frac{d}{dt} x(t) = \dot{x}(t)$是物体坐标的时间变化率，同理，加速度$a = \frac{d}{dt} \frac{d}{dt} x(t) = \ddot{x}(t)$ 是速度的时间变化率。}，综上可得：
+上式意味着动量期望对时间的导数等于负的势能梯度（也就是力）的期望值，这正是{\bfseries Newton 第二定律}\mpar{在\ref{sec4.5}节由 Noether 定理解释守恒量的时候直接用过这个式子（没推导），这里正式把它推倒（无误）啦。}。它可以计算宏观物体的运动轨迹。历史上这个关于力的定律是从实验中总结的唯象定律，作用于一个物体上的力在方程的右端线性相加。定义唯象的物理量{\bfseries 动量} $p_{\text{mak}} = mv$， Newton 第二定律可写为$\frac{d}{dt} p_{\text{mak}} = \frac{d}{dt} mv$，当物体的质量不变时等号右侧即为$m \frac{d}{dt} v$。速度就是坐标对时间的导数\mpar{换句话说，速度$v = \frac{d}{dt} x(t) = \dot{x}(t)$是物体坐标的时间变化率，同理，加速度$a = \frac{d}{dt} \frac{d}{dt} x(t) = \ddot{x}(t)$ 是速度的时间变化率。}，综上可得：
 \begin{equation}
 \label{equ10.3}
     m \frac{d^2}{d t^2} x = F_1 + F_2 + \dots
@@ -66,7 +66,7 @@
 
 \section[相对论力学]{Relativistic Mechanics \quad 相对论力学}
 \label{sec10.1}
-拉格朗日形式提供了有关经典力学相当不同的一种视角。描述一个粒子的运动需要一个方程。本书总是假设正确的方程是使{\it 某物}取极小值而导出的。第\ref{chap4}章中已经讲过它必须是Lorentz变换下的不变量，否则不同惯性系的运动规律会不同。
+拉格朗日形式提供了有关经典力学相当不同的一种视角。描述一个粒子的运动需要一个方程。本书总是假设正确的方程是使{\itshape 某物}取极小值而导出的。第\ref{chap4}章中已经讲过它必须是Lorentz变换下的不变量，否则不同惯性系的运动规律会不同。
 
 在狭义相对论中有一个现成的Lorentz不变量：时空间隔（在\ref{sec2.1}节推导）
 \begin{equation}
@@ -104,7 +104,7 @@
 \label{equ10.9}
     \to c^2 \frac{d}{dt} \left( \frac{ -m \frac{\dot{x}}{c^2} }{\sqrt{1 - \frac{ \dot{x}^2}{c^2} } } \right) = 0 \rightarrow \frac{d}{dt} \left( \frac{m \dot{x}}{\sqrt{1 - \frac{\dot{x}^2}{c^2}}} \right) &= 0
 \end{align}
-这正是相对论下的{\bf 自由}粒子的运动方程。若粒子在外势场$V(x)$中运动，则在拉格朗日量中附上势能项就可以了\mpar{实际上添加的是$-V(x)$而非$V(x)$，这是为了保证待会儿根据 Noether 定理计算体系的能量时，势能项为$+ V ( x )$.}：
+这正是相对论下的{\bfseries 自由}粒子的运动方程。若粒子在外势场$V(x)$中运动，则在拉格朗日量中附上势能项就可以了\mpar{实际上添加的是$-V(x)$而非$V(x)$，这是为了保证待会儿根据 Noether 定理计算体系的能量时，势能项为$+ V ( x )$.}：
 \begin{equation}
 \label{equ10.10}
     \mathcal{L} = -mc^2 \sqrt{1 - \frac{\dot{x}^2}{c^2} } - V(x)
