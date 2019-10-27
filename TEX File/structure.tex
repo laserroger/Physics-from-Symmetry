@@ -413,17 +413,31 @@ innerbottommargin=5pt]{cBox}
 \noindent\protect\colorbox{ocre!40}{\strut\protect\parbox[c][.7cm]{\linewidth}{\Large\sffamily\protect\centering #1\quad\mbox{}}}}{#1}}%
 \@endpart}
 
-\def\@endpart{\vfil\newpage
-\if@twoside
-\if@openright
-\null
-\thispagestyle{empty}%
-\newpage
-\fi
-\fi
-\if@tempswa
-\twocolumn
-\fi}
+% 删去换页的命令
+\def\@endpart{
+% \if@twoside
+%     \if@openright
+%         \null
+%         \thispagestyle{empty}%
+%         \newpage
+%     \fi
+% \fi
+% \if@tempswa
+%     \twocolumn
+% \fi
+}
+
+% \def\@endpart{\vfil\newpage
+% \if@twoside
+%     \if@openright
+%         \null
+%         \thispagestyle{empty}%
+%         \newpage
+%     \fi
+% \fi
+% \if@tempswa
+%     \twocolumn
+% \fi}
 
 %----------------------------------------------------------------------------------------
 %	CHAPTER HEADINGS
