@@ -131,7 +131,7 @@ S[q(t)]=\int {\mathcal L}~{\mathrm d}t
 另一套是场论：使用场而不是独立粒子的坐标来描述自然%
 \mpar{量子场论有一个特别优美的性质是关于如何引进粒子的。我们将在第\ref{chap6}章中看到场有能力产生和湮灭粒子}%
 。在这套理论中，时空构成了场\(\Phi(\vec{x},t)\)表演的舞台。利用前面提到过的限制，我们得到%
-\mpar{这里我故意使用了不同的符号\({\mathscr L}\)，因为在场论中大多数时候我们都在和拉格朗日量密度\({\mathscr L}\)打交道。两者之间满足关系式\({\mathcal L} = \int{\mathrm d}^3\bm{x}~{\mathscr L}\)}
+\mpar{这里我故意使用了不同的符号\({\mathscr L}\)，因为在场论中大多数时候我们都在和拉格朗日量密度\({\mathscr L}\)打交道。两者之间满足关系式\({\mathcal L} = \int{\mathrm d}^3\boldsymbol{x}~{\mathscr L}\)}
 \begin{equation}
 {\mathscr L} = {\mathscr L} (\Phi(\vec{x},t), \partial_\mu \Phi(\vec{x},t), \vec{x})
 \end{equation}
@@ -225,11 +225,11 @@ S = \int_{t_1}^{t_2} {\mathcal L}\left(q+\epsilon,\dot q + \dot \epsilon, t\righ
 
 我们可以用类似的办法处理场论。首先，注意到场论将时空同等对待。因此引入拉格朗日量密度：
 \begin{equation}
-{\mathcal L} = \int{\mathrm d}^3\bm{x}~{\mathscr L}(\Phi^i,\partial_\mu \Phi^i)
+{\mathcal L} = \int{\mathrm d}^3\boldsymbol{x}~{\mathscr L}(\Phi^i,\partial_\mu \Phi^i)
 \end{equation}
 并用拉格朗日量密度来表示作用量
 \begin{equation}
-S = \int \rd t~{\mathcal L} = \int{\mathrm d}^4\bm{x}~{\mathscr L}(\Phi^i,\partial_\mu \Phi^i)
+S = \int \rd t~{\mathcal L} = \int{\mathrm d}^4\boldsymbol{x}~{\mathscr L}(\Phi^i,\partial_\mu \Phi^i)
 \end{equation}
 依照上面讲过的步骤，我们可以得到场的运动方程组%
 \footnote{不对$i$求和}
@@ -463,18 +463,18 @@ T_\mu^\nu : = \frac{\partial\mathscr L}{\partial(\partial_\nu \Phi)}\frac{\parti
 \rightarrow &\partial_\nu T_\mu^\nu = \partial_0 T_\mu^0 - \partial_i T_\mu^i = 0 \label{equ4.37}
 \end{align}
 对于所有$\mu$成立。这直接告诉我们有守恒量的存在，例如取$\mu=0$我们有%
-\mpar{使用了$\partial_0 = \partial_t$\\ 和$\partial^i T_i^0=\nabla\cdot\vec{T}$，\\以及著名的散度定理$\int_V \rd^3 \bm{x}~\nabla A = \int_{\delta V} \rd^2 \bm{x}~A$，即能让体积分化作面积分。对于散度定理，在那儿叫 Gauss定理，有一个非常有启发性的证明，可以在Richard P. Feynman, Robert B. Leighton, and Matthew Sands.\\ The Feynman Lectures on Physics: Volume 2. Addison-Wesley,\\ 1st edition, 2 1977. \\ISBN 9780201021172 的第三章找到，可在此免费在线查看：\\ \url{http://www.feynmanlectures.caltech.edu/II_03.html}。\\（译注：有中译本：费恩曼,莱顿,桑兹著;李洪芳,王子辅,钟万蘅译.费恩曼物理学讲义,新千年版,第二卷,上海:上海科学技术出版社,4 2013,ISBN 9787547816370）}
+\mpar{使用了$\partial_0 = \partial_t$\\ 和$\partial^i T_i^0=\nabla\cdot\vec{T}$，\\以及著名的散度定理$\int_V \rd^3 \boldsymbol{x}~\nabla A = \int_{\delta V} \rd^2 \boldsymbol{x}~A$，即能让体积分化作面积分。对于散度定理，在那儿叫 Gauss定理，有一个非常有启发性的证明，可以在Richard P. Feynman, Robert B. Leighton, and Matthew Sands.\\ The Feynman Lectures on Physics: Volume 2. Addison-Wesley,\\ 1st edition, 2 1977. \\ISBN 9780201021172 的第三章找到，可在此免费在线查看：\\ \url{http://www.feynmanlectures.caltech.edu/II_03.html}。\\（译注：有中译本：费恩曼,莱顿,桑兹著;李洪芳,王子辅,钟万蘅译.费恩曼物理学讲义,新千年版,第二卷,上海:上海科学技术出版社,4 2013,ISBN 9787547816370）}
 \begin{equation*}
 \begin{aligned}
 \partial_0 T_0^0 - \partial_i T_0^i = 0 \rightarrow \partial_0 T_0^0 = \partial_i T_0^i \\
-\partial_t T_0^0 = - \nabla\cdot\vec{T} \underbrace{\rightarrow}_{\mathclap{\text{在某个无限的空间域$V$上积分}}} \int_V \rd^3 \bm{x}~\partial_t T_0^0 = - \int_V \rd^3 \bm{x}~\nabla\cdot\vec{T} %
+\partial_t T_0^0 = - \nabla\cdot\vec{T} \underbrace{\rightarrow}_{\mathclap{\text{在某个无限的空间域$V$上积分}}} \int_V \rd^3 \boldsymbol{x}~\partial_t T_0^0 = - \int_V \rd^3 \boldsymbol{x}~\nabla\cdot\vec{T} %
 \end{aligned}
 \end{equation*}
 \begin{equation}
-\partial_t \int_V \rd^3 \bm{x}~T_0^0 = - \int_V \rd^3 \bm{x}~\nabla\cdot\vec{T}\overbrace{\rightarrow}^{\mathclap{\text{散度定理；$\delta V$代表$V$的表面}}} = -\int_{\delta V}\rd^2 \bm{x}~\vec{T} \underbrace{=}_{\mathclap{\text{场在无穷远处为零}}} 0
+\partial_t \int_V \rd^3 \boldsymbol{x}~T_0^0 = - \int_V \rd^3 \boldsymbol{x}~\nabla\cdot\vec{T}\overbrace{\rightarrow}^{\mathclap{\text{散度定理；$\delta V$代表$V$的表面}}} = -\int_{\delta V}\rd^2 \boldsymbol{x}~\vec{T} \underbrace{=}_{\mathclap{\text{场在无穷远处为零}}} 0
 \end{equation}
 \begin{equation}
-\rightarrow \partial_t \int_V \rd^3 \bm{x}~T_0^0 = 0 \label{equ4.39}
+\rightarrow \partial_t \int_V \rd^3 \boldsymbol{x}~T_0^0 = 0 \label{equ4.39}
 \end{equation}
 
 最后一步中是这样处理的：考虑一个无限大的空间域，如一个有着无限大半径$r$的球体，我们需要在其表面计算积分，即在$r=\infty$处计算场值。在\ref{sec2.3}节中，我们发现了物理中任何东西都有一个速度上界。由此无穷远处的场不可能对有限远$x$处的物理有任何影响，故我们说场在无穷远处为零\footnote{译注：这段讨论怪怪的，正确性令人起疑。}。
@@ -483,8 +483,8 @@ T_\mu^\nu : = \frac{\partial\mathscr L}{\partial(\partial_\nu \Phi)}\frac{\parti
 \mpar{因为对于任意$a_\mu$都有$\partial_0 T_\mu^0 a_\mu = \partial_0 T_0^0 a_0 -\partial_0 T_i^0 a^i = 0$成立，所以对于每一个分量我们都能得到一个连续性方程。}%
 ，\eqref{equ4.39}式告诉我们它们是
 \begin{align}
-E =& \int\rd^3\bm{x}~T_0^0 \label{equ4.40}\\
-P_i =& \int\rd^3\bm{x}~T_i^0 \label{equ4.41}
+E =& \int\rd^3\boldsymbol{x}~T_0^0 \label{equ4.40}\\
+P_i =& \int\rd^3\boldsymbol{x}~T_i^0 \label{equ4.41}
 \end{align}
 其中$i=1,2,3$。它们分别被称为系统的总能量——因时间平移$x_0\rightarrow x_0+a_0$不变性而守恒；场的总动量——因空间平移$x_i\rightarrow x_i+a_i$不变性而守恒。
 
@@ -512,20 +512,20 @@ x_\mu \rightarrow {x'}_\mu = x_\mu + \delta x_\mu = x_\mu + M_\mu^\sigma x_\sigm
 在最后一步引入的$J^\nu$被称为{\bfseries Noether 流(Noether current)}。注意到，由于在\eqref{equ3.165}式定义$
 M$时引入的反对称性$M_{\mu\sigma}=-M_{\sigma\mu}$，有$M_{\mu\mu}=0$。由此我们找到了六个不同的连续性方程$\partial_\nu (J^\nu) = 0$，分别对应于每一个非零的$M_{\mu\sigma}$\footnote{译注：排除了零元的同时，也将始终互为相反数的一对元视作一个}。使用与\eqref{equ4.39}式一样的方式，我们可以论证如下的量不随时间改变
 \begin{equation}
-Q^{\mu\sigma} = \int \rd^3 \bm{x}~ \left(T^{\mu 0} x^\sigma- T^{\sigma 0}x^\mu\right)
+Q^{\mu\sigma} = \int \rd^3 \boldsymbol{x}~ \left(T^{\mu 0} x^\sigma- T^{\sigma 0}x^\mu\right)
 \end{equation}
 由此我们得到了对应于转动%
 \mpar{回忆一下\eqref{equ3.165}式中提到的转动生成元$J_i$和$M_{\mu\nu}$之间的关系：$J_i = \frac{1}{2}\epsilon_{ijk}M_{jk}$，这里我们使用拉丁字母$i,j\in \{1,2,3\}$而不是希腊字母$\mu,\nu\in\{0,1,2,3\}$，将其限制在空间分量上。}%
 不变性的守恒量
 \begin{equation}
-L_\text{orbit}^i = \frac{1}{2}\epsilon_{ijk}Q_{jk} = \frac{1}{2}\epsilon_{ijk} \int \rd^3 \bm{x}~ \left(T^{\mu 0} x^\sigma-\partial^\nu T^{\sigma 0}x^\mu\right) \text{，}
+L_\text{orbit}^i = \frac{1}{2}\epsilon_{ijk}Q_{jk} = \frac{1}{2}\epsilon_{ijk} \int \rd^3 \boldsymbol{x}~ \left(T^{\mu 0} x^\sigma-\partial^\nu T^{\sigma 0}x^\mu\right) \text{，}
 \label{equ4.45}
 \end{equation}
 其被称为场的轨道角动量\mpar{下标 orbit （轨道）的含义马上就会清楚，因为它实际上只是守恒量的一部分，我们马上就会去考察第二项。}。
 
 同样的，我们也有所对应的守恒量\mpar{请回忆推动生成元$K_i$和$M_{\mu\nu}$之间的关系：$K_i=M_{0i}$}
 \begin{equation}
-Q^{0i}=\int \rd^3 \bm{x}~ \left(T^{i 0} x^0- T^{0 0}x^i\right)
+Q^{0i}=\int \rd^3 \boldsymbol{x}~ \left(T^{i 0} x^0- T^{0 0}x^i\right)
 \label{equ4.46}
 \end{equation}
 将会在附录\ref{sec4.7}节中详细讨论。
@@ -543,7 +543,7 @@ Q^{0i}=\int \rd^3 \bm{x}~ \left(T^{i 0} x^0- T^{0 0}x^i\right)
 \end{equation}
 同时也使\eqref{equ4.45}式多了一项。完整的守恒量是
 \begin{equation}
-L^i = \frac{1}{2}\epsilon_{ijk}Q^{jk} = \frac{1}{2}\epsilon_{ijk} \int \rd^3 \bm{x}~ \left(\frac{\partial\mathscr L}{\partial (\partial_0 \Phi)}S^{jk}\Phi(x) + (T^{k 0} x^j-T^{j 0}x^k)\right)
+L^i = \frac{1}{2}\epsilon_{ijk}Q^{jk} = \frac{1}{2}\epsilon_{ijk} \int \rd^3 \boldsymbol{x}~ \left(\frac{\partial\mathscr L}{\partial (\partial_0 \Phi)}S^{jk}\Phi(x) + (T^{k 0} x^j-T^{j 0}x^k)\right)
 \end{equation}
 据此写出
 \begin{equation}
@@ -593,7 +593,7 @@ J^\mu \equiv \frac{\partial \mathscr{L}}{\partial (\partial_\mu \Phi)} \delta\Ph
 \end{equation}
 更进一步，用导出\eqref{equ4.39}式同样的办法，能得到一个对时间的守恒量
 \begin{equation}
-\partial_t \int \rd^3 \bm{x}~J^0 = 0 \text{。}
+\partial_t \int \rd^3 \boldsymbol{x}~J^0 = 0 \text{。}
 \label{equ4.56}
 \end{equation}
 
@@ -618,7 +618,7 @@ J^\mu \equiv \frac{\partial \mathscr{L}}{\partial (\partial_\mu \Phi)} \delta\Ph
 $\pi \equiv J_0$，通过\eqref{equ4.53}、\eqref{equ4.56}式，并利用守恒量中不需要包含$\delta\Phi = -\ri\epsilon$这件事。我们得到%
 \mpar{\eqref{equ4.54}式中的$\delta\Phi$成为一个常数$\epsilon$，因为这个量对于任何$\epsilon$都守恒，所以我们在定义守恒量时不需要它。}
 \begin{align}
-\partial_t \Pi = 0 ~\rightarrow~ \partial_t \Pi = \partial_t\int\rd^3\bm{x}~J_0 = \partial_t\int\rd^3\bm{x}~\pi = 0 \nonumber \\
+\partial_t \Pi = 0 ~\rightarrow~ \partial_t \Pi = \partial_t\int\rd^3\boldsymbol{x}~J_0 = \partial_t\int\rd^3\boldsymbol{x}~\pi = 0 \nonumber \\
 \text{用到了}~J_0 = \pi = \frac{\partial \mathscr{L}}{\partial (\partial_0 \Phi)}
 \label{equ4.60}
 \end{align}
@@ -629,11 +629,11 @@ p^i = T^{0i} = \frac{\partial \mathscr{L}}{\partial (\partial_0 \Phi)} \frac{\pa
 \]
 即之前在\eqref{equ4.41}式中导出的东西。下面数章中我们将会看到更多不同的内禀对称性，它们在发展相互作用理论时是无价的。现在来总结一下我们学过的场论中的对称性和守恒量：
 \begin{itemize}
-\item 空间平移不变性$\Rightarrow$ 物理动量\\$P^i = \int\rd^3\bm{x}~T^{0i}=\int\rd^3\bm{x}~ \frac{\partial \mathscr{L}}{\partial (\partial_0 \Phi)} \frac{\partial\Phi}{\partial x_i}$守恒
+\item 空间平移不变性$\Rightarrow$ 物理动量\\$P^i = \int\rd^3\boldsymbol{x}~T^{0i}=\int\rd^3\boldsymbol{x}~ \frac{\partial \mathscr{L}}{\partial (\partial_0 \Phi)} \frac{\partial\Phi}{\partial x_i}$守恒
 \item 推动不变性\mpar{推动又被称为在动量的空间平移}$\Rightarrow$ 能量中心的速度是常数
-\item 转动不变性$\Rightarrow$ 总角动量\\$L^i =\frac{1}{2}\epsilon_{ijk} \int \rd^3 \bm{x} \left(\frac{\partial\mathscr L}{\partial (\partial_0 \Phi)}S^{jk}\Phi(x) + (T^{k0} x^j-T^{j0}x^k)\right) $\\$= L_\text{spin}^i + L_\text{orbit}^i $，包含自旋和轨道角动量，守恒
-\item 时间平移不变性$\Rightarrow$ 能量\\$E = \int\rd^3\bm{x}~T^{00}=\int\rd^3\bm{x}~\left(\frac{\partial \mathscr{L}}{\partial (\partial_0 \Phi)} \frac{\partial\Phi}{\partial x_i}-\mathscr{L}\right)$守恒
-\item 场自身的平移不变性$\Rightarrow$ 共轭动量\\$\Pi = \int\rd^3\bm{x}~\frac{\partial \mathscr{L}}{\partial (\partial_0 \Phi)} = \int\rd^3\bm{x}~\pi$守恒
+\item 转动不变性$\Rightarrow$ 总角动量\\$L^i =\frac{1}{2}\epsilon_{ijk} \int \rd^3 \boldsymbol{x} \left(\frac{\partial\mathscr L}{\partial (\partial_0 \Phi)}S^{jk}\Phi(x) + (T^{k0} x^j-T^{j0}x^k)\right) $\\$= L_\text{spin}^i + L_\text{orbit}^i $，包含自旋和轨道角动量，守恒
+\item 时间平移不变性$\Rightarrow$ 能量\\$E = \int\rd^3\boldsymbol{x}~T^{00}=\int\rd^3\boldsymbol{x}~\left(\frac{\partial \mathscr{L}}{\partial (\partial_0 \Phi)} \frac{\partial\Phi}{\partial x_i}-\mathscr{L}\right)$守恒
+\item 场自身的平移不变性$\Rightarrow$ 共轭动量\\$\Pi = \int\rd^3\boldsymbol{x}~\frac{\partial \mathscr{L}}{\partial (\partial_0 \Phi)} = \int\rd^3\boldsymbol{x}~\pi$守恒
 \end{itemize}
 
 \section*{Further Reading Tips\quad 阅读建议}
@@ -684,20 +684,20 @@ J_\text{boost} = \underbrace{\frac{\partial \mathcal L}{\partial \dot q}}_{\math
 \section[附录：场论中的推动不变性与其守恒量]{Appendix: Conserved Quantity from Boost Invariance for Field Theories\quad 附录：场论中的推动不变性与其守恒量}\label{sec4.7}
 由场论中的推动不变性，我们有如下守恒量
 \begin{equation}
-Q^{0i}=\int \rd^3 \bm{x}~ \left(T^{i 0} x^0- T^{0 0}x^i\right)\text{，}
+Q^{0i}=\int \rd^3 \boldsymbol{x}~ \left(T^{i 0} x^0- T^{0 0}x^i\right)\text{，}
 \end{equation}
 即在\eqref{equ4.46}式中所导出的，利用了$K_i=M_{0i}$。
 
 我们怎样诠释这个守恒量呢？$Q^{0i}$是守恒的，意味着
 \begin{equation*}
 \begin{aligned}
-0= \frac{\partial Q^{0i}}{\partial t} &= \underbrace{\int \rd^3 \bm{x}~ \frac{\partial T^{i0}}{\partial t} x^0}_{\mathclap{=x^0\frac{\partial}{\partial t}}} + \int \rd^3 \bm{x}~ T^{i 0} \underbrace{\frac{\partial x^0}{\partial t}}_{\mathclap{=1~\text{因为}~x^0=t} }  - \frac{\partial}{\partial t}\int \rd^3\bm{x}~T^{00}x^i \\
-&= t\frac{\partial P^i}{\partial t} + P^i - \frac{\partial}{\partial t}\int \rd^3\bm{x}~T^{00}x^i
+0= \frac{\partial Q^{0i}}{\partial t} &= \underbrace{\int \rd^3 \boldsymbol{x}~ \frac{\partial T^{i0}}{\partial t} x^0}_{\mathclap{=x^0\frac{\partial}{\partial t}}} + \int \rd^3 \boldsymbol{x}~ T^{i 0} \underbrace{\frac{\partial x^0}{\partial t}}_{\mathclap{=1~\text{因为}~x^0=t} }  - \frac{\partial}{\partial t}\int \rd^3\boldsymbol{x}~T^{00}x^i \\
+&= t\frac{\partial P^i}{\partial t} + P^i - \frac{\partial}{\partial t}\int \rd^3\boldsymbol{x}~T^{00}x^i
 \end{aligned}
 \end{equation*}
 由\eqref{equ4.41}式\footnote{译注：原文公式引用有误，已改正。}可知$P^i$是守恒的$\frac{\partial P^i}{\partial t}=0\rightarrow P^i=\text{常量}$，故我们断言
 \begin{equation}
-\frac{\partial}{\partial t}\int \rd^3\bm{x}~T^{00}x^i = P^i = \text{常数。}
+\frac{\partial}{\partial t}\int \rd^3\boldsymbol{x}~T^{00}x^i = P^i = \text{常数。}
 \end{equation}
 故这个守恒律告诉我们%
 \mpar{不要太在意这一项的意义，因为它并不像其他守恒量那样有用。}%
