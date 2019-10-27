@@ -375,6 +375,7 @@ innerbottommargin=5pt]{cBox}
 \setlength\ecart{1.2cm-\esp}
 \newcommand{\thepartimage}{}%
 \newcommand{\partimage}[1]{\renewcommand{\thepartimage}{#1}}%
+
 \def\@part[#1]#2{%
 \ifnum \c@secnumdepth >-2\relax%
 \refstepcounter{part}%
@@ -387,15 +388,16 @@ innerbottommargin=5pt]{cBox}
 {\thispagestyle{empty}%
 \begin{tikzpicture}[remember picture,overlay]%
 \node at (current page.north west){\begin{tikzpicture}[remember picture,overlay]%
-\fill[ocre!20](0cm,0cm) rectangle (\paperwidth,-\paperheight);
-\node[anchor=north] at (4cm,-3.25cm){\color{ocre!40}\fontsize{220}{100}\sffamily\bfseries\@Roman\c@part};
+\fill[ocre!20](0cm,0cm) rectangle (\paperwidth,-\paperheight); % 背景填充
+\node[anchor=north] at (4cm,-3.25cm){\color{ocre!40}\fontsize{220}{100}\sffamily\bfseries\@Roman\c@part}; % Part 的罗马数字
 \node[anchor=south east] at (\paperwidth-1cm,-\paperheight+1cm){\parbox[t][][t]{8.5cm}{
 \printcontents{l}{0}{\setcounter{tocdepth}{1}}%
-}};
-\node[anchor=north east] at (\paperwidth-1.5cm,-3.25cm){\parbox[t][][t]{15cm}{\strut\raggedleft\color{white}\fontsize{30}{30}\sffamily\bfseries#2}};
+}}; % 此部分的目录
+\node[anchor=north east] at (\paperwidth-1.5cm,-3.25cm){\parbox[t][][t]{15cm}{\strut\raggedleft\color{white}\fontsize{30}{30}\sffamily\bfseries#2}}; % Part 标题
 \end{tikzpicture}};
 \end{tikzpicture}}%
 \@endpart}
+
 \def\@spart#1{%
 \startcontents%
 \phantomsection
@@ -410,6 +412,7 @@ innerbottommargin=5pt]{cBox}
 \setlength\fboxsep{0pt}%
 \noindent\protect\colorbox{ocre!40}{\strut\protect\parbox[c][.7cm]{\linewidth}{\Large\sffamily\protect\centering #1\quad\mbox{}}}}{#1}}%
 \@endpart}
+
 \def\@endpart{\vfil\newpage
 \if@twoside
 \if@openright
