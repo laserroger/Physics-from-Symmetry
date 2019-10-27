@@ -18,20 +18,14 @@
 
 \documentclass[11pt,fleqn,twoside]{book}
 \usepackage{ctex}
+\usepackage{indentfirst}
 \usepackage{zhlineskip}
 % \setCJKmainfont[BoldFont={SimHei},ItalicFont={KaiTi}]{SimSun}
-\setCJKmainfont{Noto Serif CJK SC}[
-  UprightFont       = *,
-  BoldFont          = * Bold,
-  ItalicFont        = FandolKai-Regular,
-  Script            = CJK Ideographic,
-  Language          = Chinese Simplified
-]
 \usepackage{mathrsfs}
-\usepackage{indentfirst}
 \usepackage{cancel}
 \usepackage{mathrsfs}
 % \usepackage{siunitx}
+\usepackage{physics}
 \usepackage{ulem}
 %\usepackage[version=3]{mhchem}
 % \usepackage{draftwatermark}
@@ -64,7 +58,6 @@
     #1}%
 }
 
-\newcommand\tr{\text{tr}}
 
 %\makeatletter
 %\def\mpar#1{%
@@ -185,6 +178,16 @@
 
 \input{appendix}
 
+\backmatter
+
+%----------------------------------------------------------------------------------------
+%	BIBLIOGRAPHY
+%----------------------------------------------------------------------------------------
+
+%\cleardoublepage
+%\bibliographystyle{apsrev4-1}
+%\bibliography{bibliography}
+
 %----------------------------------------------------------------------------------------
 %	INDEX
 %----------------------------------------------------------------------------------------
@@ -194,11 +197,6 @@
 %\setlength{\columnsep}{0.75cm}
 %\addcontentsline{toc}{chapter}{\textcolor{ocre}{Index}}
 %\printindex
-
-%----------------------------------------------------------------------------------------
-%\cleardoublepage
-%\bibliographystyle{apsrev4-1}
-%\bibliography{bibliography}
 
 
 
