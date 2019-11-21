@@ -8,22 +8,6 @@
 
 \chapterimage{chapter_head_1.pdf} % Chapter heading image
 
-\begin{quote}%quote for every part.I have trouble inserting it into the part cover,so it's now there as a workaround.If you have a better way,please tell me.
-{\bf “如果你正在从给方程添加美感的方面考虑，你就在成功的路上了。”}\marginpar{"If one is working from the point of view of getting beauty into one’s equation,...one is on a sure line of progress."}
-
-
-\begin{flushright}
--- Paul A. M. Dirac\\
-in {\it The evolution of the
-physicist's picture of nature.}
-\marginpar{%
-Scientiﬁc American,\\vol.208
-Issue 5,pp.45-53.\\
-Publication Date: 05/1963
-}
-\end{flushright}
-\end{quote}
-
 \chapter[测量]{Measuring Nature 测量}\label{chap5}
 
 现在已经发现对称性与守恒量之间的关系了，接下来就可以利用这种联系。用更专业的话说，Noether定理建立了对称变换的生成元与相应守恒量之间的联系。本章将利用这种联系。
@@ -38,7 +22,7 @@ Publication Date: 05/1963
 
 \section[量子力学中的算符]{Operators of Quantum Mechanics 量子力学中的算符}\label{sec5.1}
 
-{\it 惯例用一个尖帽子$\hat{O}$来表示一个算符}
+{\itshape 惯例用一个尖帽子$\hat{O}$来表示一个算符}
 
 拉格朗日量在空间平移变换的生成元的作用下不变可导出动量守恒。因此，由此可得\footnote{译者注：这里再次提醒一下，本书中虚数单位与指标经常共用字母$i$，相信聪明的读者有能力分辨。}
 \[\text{动量}\hat{p}_i\to\text{空间平移操作的生成元：} - i\partial_i \]
@@ -46,10 +30,10 @@ Publication Date: 05/1963
 类似的，时间平移生成元带来的不变性给出能量守恒，也就是
 \[\text{能量}\hat{E}\to\text{时间平移操作的生成元} - i\partial_0 \]
 
-没有关于``位置守恒''的对称性，所以位置并没有伴随生成元，我们有\mpar{或者说，我们可以观察守恒量与对应的推动下的不变性。注意到我们在\ref{sec4.6}节中得到的非相对论性Galilei推动下的守恒量是从非相对论性的拉格朗日量得出来的。同样，我们可以对相对论性拉格朗日量做一样的事情，得到守恒量$t\vec{p}-\vec{x}E$。相对论性能量由$E=\sqrt{m^2+p^2}$给出。在相对论性极限$c\to\infty$下，我们有$E\approx m$，并且，Lorentz推动下的守恒量回到我们的Galilei推动的结果。因此，粒子理论的守恒量为$M_i = (tp_i-x_iE)$。推动的生成元（见\eqref{equ3.240}，其中$K_i = M_{0i}$）为$K_i = i(x_0\partial_i-x_i\partial_0)$。比较两者，其中$x_0=t$，给出$M_i = (tp_i-x_iE)\leftrightarrow K_i = i(t\partial_i-x_i\partial_0)$。因此，利用我们之前的选择，很直观的我们有，坐标：$\hat{x}_i\to x_i$}
+没有关于“位置守恒''的对称性，所以位置并没有伴随生成元，我们有\mpar{或者说，我们可以观察守恒量与对应的推动下的不变性。注意到我们在\ref{sec4.6}节中得到的非相对论性Galilei推动下的守恒量是从非相对论性的拉格朗日量得出来的。同样，我们可以对相对论性拉格朗日量做一样的事情，得到守恒量$t\vec{p}-\vec{x}E$。相对论性能量由$E=\sqrt{m^2+p^2}$给出。在相对论性极限$c\to\infty$下，我们有$E\approx m$，并且，Lorentz推动下的守恒量回到我们的Galilei推动的结果。因此，粒子理论的守恒量为$M_i = (tp_i-x_iE)$。推动的生成元（见\eqref{equ3.240}，其中$K_i = M_{0i}$）为$K_i = i(x_0\partial_i-x_i\partial_0)$。比较两者，其中$x_0=t$，给出$M_i = (tp_i-x_iE)\leftrightarrow K_i = i(t\partial_i-x_i\partial_0)$。因此，利用我们之前的选择，很直观的我们有，坐标：$\hat{x}_i\to x_i$}
 \[\text{位置}\hat{x}_i\to x_i \]
 
-上面利用算符给出了描述自然的理论中使用的物理量。接下来我们自然要问：这些算符作用在什么上面？它们是如何与实验中的可观测量联系起来的呢？下一章仔细讨论这件事情，在这里只需要知道物理量，也就是算符，是作用在{\it 某物}上的。不妨就认为它作用于一个抽象的对象上，称之为$\Psi$，后面会探究这个“{\it 某物}”是什么鬼。
+上面利用算符给出了描述自然的理论中使用的物理量。接下来我们自然要问：这些算符作用在什么上面？它们是如何与实验中的可观测量联系起来的呢？下一章仔细讨论这件事情，在这里只需要知道物理量，也就是算符，是作用在{\itshape 某物}上的。不妨就认为它作用于一个抽象的对象上，称之为$\Psi$，后面会探究这个“{\itshape 某物}”是什么鬼。
 
 现在可以导出一些非常重要的\mpar{如果你完全不了解量子力学，为什么这些简单的式子会如此重要对你来说会看起来比较奇怪。你也许听说过Heisenberg不确定性原理。在第\ref{sec8.3}节，我们会更进一步的研究量子力学的形式与结构，然后就可以看到这个方程表明不能够以任意精度同时测量一个粒子的动量和坐标。我们的物理量的解释是算符的测量，而这个方程告诉我们先测量动量再测量位置与先测量位置再测量动量是完全不一样的。}量子力学的方程了。就像上面已经解释过的那样，我们假定算符作用在抽象的$\Psi$上。于是有
 \begin{align}\label{equ5.2}
@@ -59,16 +43,16 @@ Publication Date: 05/1963
 \end{split}
 \end{align}
 
-这个方程对任意的$\Psi$都成立，因为我们没有对$\Psi$做任何假设，因此我们可以不考虑它\mpar{如果你以前没有过这个观念，注意我们可以把{\bf 每}一个矢量方程都写成只包含数的形式。比如，牛顿第二定律$\vec{F} = m\vec{\ddot{x}}$，可以对于任意矢量$\vec{C}$写出$\vec{F}\vec{C} = m\vec{\ddot{x}}\vec{C}$。不仅如此，如果对于任意的$\vec{C}$都成立，那么一直把这个$\vec{C}$写着也就没什么意义了。}而直接的写出
+这个方程对任意的$\Psi$都成立，因为我们没有对$\Psi$做任何假设，因此我们可以不考虑它\mpar{如果你以前没有过这个观念，注意我们可以把{\bfseries 每}一个矢量方程都写成只包含数的形式。比如，牛顿第二定律$\vec{F} = m\vec{\ddot{x}}$，可以对于任意矢量$\vec{C}$写出$\vec{F}\vec{C} = m\vec{\ddot{x}}\vec{C}$。不仅如此，如果对于任意的$\vec{C}$都成立，那么一直把这个$\vec{C}$写着也就没什么意义了。}而直接的写出
 \begin{align}\label{equ5.3}
 [\hat{p}_i,\hat{x}_j] = -i\delta_{ij}
 \end{align}
 
 \subsection[自旋与角动量]{Spin and Angular Momentum 自旋与角动量}\label{sec5.1.1}
 
-上一章的第\ref{sec4.5.4}节中讲过，对标量理论而言，旋转不变性带来的守恒量有两个部分，第二部分对应轨道角动量，称之为{\bf 无限}维的轨道角动量生成元表示。
+上一章的第\ref{sec4.5.4}节中讲过，对标量理论而言，旋转不变性带来的守恒量有两个部分，第二部分对应轨道角动量，称之为{\bfseries 无限}维的轨道角动量生成元表示。
 \[\text{轨道角动量}\hat{L}_i\to\text{转动生成元（无限维表示）}i\tfrac{1}{2}\epsilon_{ijk}(x^j\partial^k-x^k\partial^j)\]
-类似的， 第一部分称作自旋，对应{\bf 有限}维度的生成元\mpar{这是从场的分量的线性组合下的不变性带来的守恒量，因此是有限维的表示。}的表示。
+类似的， 第一部分称作自旋，对应{\bfseries 有限}维度的生成元\mpar{这是从场的分量的线性组合下的不变性带来的守恒量，因此是有限维的表示。}的表示。
 \[\text{自旋}\hat{S}_i\to\text{转动生成元（有限维表示）}S_i \]
 如前面\eqref{equ4.30}式解释过的那样，$S_{\mu\nu}$和转动算符生成元$S_i$的关系为$S_i = \tfrac{1}{2}\epsilon_{ijk}S_{jk}$。
 
@@ -76,11 +60,11 @@ Publication Date: 05/1963
 \begin{align}\label{equ5.4}
 \hat{S}_i = i\frac{\sigma_i}{2}
 \end{align}
-其中$\sigma_i$是Pauli矩阵。在学习如何利用本章导出的这些算符之后，我们在\ref{sec8.5.5}节深入讨论这一有趣而奇怪的类型的角动量。时刻注意，只有这两部分角动量的{\bf 和}是守恒的。
+其中$\sigma_i$是Pauli矩阵。在学习如何利用本章导出的这些算符之后，我们在\ref{sec8.5.5}节深入讨论这一有趣而奇怪的类型的角动量。时刻注意，只有这两部分角动量的{\bfseries 和}是守恒的。
 
 \section[量子场论的算符]{The Operators of Quantum Field Theory 量子场论的算符}\label{sec5.2}
 
-场论的最重要的客体当然就是{\bf 作为时空位置的函数}\mpar{这里，$x = x_0,x_1,x_2,x_3$，包含时间$x_0=t$。}的场了$\Phi = \Phi(x)$。我们接下来希望描述时空上的一个点发生的相互作用，从而我们需要考虑动力学变量$\pi = \pi(x)$的密度，而不是其其总量$\Pi = \int d^3x\pi(x)\neq\Pi(x)$。
+场论的最重要的客体当然就是{\bfseries 作为时空位置的函数}\mpar{这里，$x = x_0,x_1,x_2,x_3$，包含时间$x_0=t$。}的场了$\Phi = \Phi(x)$。我们接下来希望描述时空上的一个点发生的相互作用，从而我们需要考虑动力学变量$\pi = \pi(x)$的密度，而不是其其总量$\Pi = \int d^3x\pi(x)\neq\Pi(x)$。
 
 我们上一章发现了场自身的平移不变性$\Phi\to\Phi-i\epsilon$产生了一种新的守恒量，称为共轭动量$\Pi$。就像我们上一章做的那样，我们用对应的生成元\eqref{equ4.59}式来表示共轭动量密度：
 \[\text{共轭动量密度}\pi(x)\to\text{关于场自身平移的生成元：}-i\frac{\partial}{\partial\Phi(x)} \]

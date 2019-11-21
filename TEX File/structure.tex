@@ -22,13 +22,14 @@
 \usepackage[top=3cm,bottom=3cm,left=3cm,right=3cm,headsep=10pt,a4paper,outer=7cm,marginparwidth=4cm, marginparsep=2cm]{geometry} % Page margins
 
 \usepackage{graphicx} % Required for including pictures
-\graphicspath{{Pictures/}} % Specifies the directory where pictures are stored
+\graphicspath{{Pictures/}{Figure/}} % Specifies the directory where pictures are stored
+\usepackage{caption}
 
-\usepackage{lipsum} % Inserts dummy text
+% \usepackage{lipsum} % Inserts dummy text
 
 \usepackage{tikz} % Required for drawing custom shapes
 
-\usepackage[english]{babel} % English language/hyphenation
+% \usepackage[english]{babel} % English language/hyphenation
 
 \usepackage{enumitem} % Customize lists
 \setlist{nolistsep} % Reduce spacing between bullet points and numbered lists
@@ -42,13 +43,13 @@
 %	FONTS
 %----------------------------------------------------------------------------------------
 
-\usepackage{avant} % Use the Avantgarde font for headings
+% \usepackage{avant} % Use the Avantgarde font for headings
 %\usepackage{times} % Use the Times font for headings
 %\usepackage{mathptmx} % Use the Adobe Times Roman as the default text font together with math symbols from the Sym­bol, Chancery and Com­puter Modern fonts
 
 %\usepackage{microtype} % Slightly tweak font spacing for aesthetics
-\usepackage[utf8]{inputenc} % Required for including letters with accents
-\usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
+% \usepackage[utf8]{inputenc} % Required for including letters with accents
+% \usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
 
 %----------------------------------------------------------------------------------------
 %	BIBLIOGRAPHY AND INDEX
@@ -374,6 +375,7 @@ innerbottommargin=5pt]{cBox}
 \setlength\ecart{1.2cm-\esp}
 \newcommand{\thepartimage}{}%
 \newcommand{\partimage}[1]{\renewcommand{\thepartimage}{#1}}%
+
 \def\@part[#1]#2{%
 \ifnum \c@secnumdepth >-2\relax%
 \refstepcounter{part}%
@@ -386,15 +388,16 @@ innerbottommargin=5pt]{cBox}
 {\thispagestyle{empty}%
 \begin{tikzpicture}[remember picture,overlay]%
 \node at (current page.north west){\begin{tikzpicture}[remember picture,overlay]%
-\fill[ocre!20](0cm,0cm) rectangle (\paperwidth,-\paperheight);
-\node[anchor=north] at (4cm,-3.25cm){\color{ocre!40}\fontsize{220}{100}\sffamily\bfseries\@Roman\c@part};
+\fill[ocre!20](0cm,0cm) rectangle (\paperwidth,-\paperheight); % 背景填充
+\node[anchor=north] at (4cm,-3.25cm){\color{ocre!40}\fontsize{220}{100}\sffamily\bfseries\@Roman\c@part}; % Part 的罗马数字
 \node[anchor=south east] at (\paperwidth-1cm,-\paperheight+1cm){\parbox[t][][t]{8.5cm}{
 \printcontents{l}{0}{\setcounter{tocdepth}{1}}%
-}};
-\node[anchor=north east] at (\paperwidth-1.5cm,-3.25cm){\parbox[t][][t]{15cm}{\strut\raggedleft\color{white}\fontsize{30}{30}\sffamily\bfseries#2}};
+}}; % 此部分的目录
+\node[anchor=north east] at (\paperwidth-1.5cm,-3.25cm){\parbox[t][][t]{15cm}{\strut\raggedleft\color{white}\fontsize{30}{30}\sffamily\bfseries#2}}; % Part 标题
 \end{tikzpicture}};
 \end{tikzpicture}}%
 \@endpart}
+
 \def\@spart#1{%
 \startcontents%
 \phantomsection
@@ -409,17 +412,32 @@ innerbottommargin=5pt]{cBox}
 \setlength\fboxsep{0pt}%
 \noindent\protect\colorbox{ocre!40}{\strut\protect\parbox[c][.7cm]{\linewidth}{\Large\sffamily\protect\centering #1\quad\mbox{}}}}{#1}}%
 \@endpart}
-\def\@endpart{\vfil\newpage
-\if@twoside
-\if@openright
-\null
-\thispagestyle{empty}%
-\newpage
-\fi
-\fi
-\if@tempswa
-\twocolumn
-\fi}
+
+% 删去换页的命令
+\def\@endpart{
+% \if@twoside
+%     \if@openright
+%         \null
+%         \thispagestyle{empty}%
+%         \newpage
+%     \fi
+% \fi
+% \if@tempswa
+%     \twocolumn
+% \fi
+}
+
+% \def\@endpart{\vfil\newpage
+% \if@twoside
+%     \if@openright
+%         \null
+%         \thispagestyle{empty}%
+%         \newpage
+%     \fi
+% \fi
+% \if@tempswa
+%     \twocolumn
+% \fi}
 
 %----------------------------------------------------------------------------------------
 %	CHAPTER HEADINGS
@@ -469,10 +487,10 @@ innerbottommargin=5pt]{cBox}
 %----------------------------------------------------------------------------------------
 
 \usepackage[colorlinks,linkcolor=red,anchorcolor=blue,citecolor=blue,urlcolor=black]{hyperref}
-\hypersetup{hidelinks,colorlinks=true,breaklinks=true,urlcolor= ocre,bookmarksopen=false,pdftitle={Title},pdfauthor={Author}}
+\hypersetup{hidelinks,colorlinks=true,breaklinks=true,urlcolor= ocre,bookmarksopen=false,pdftitle={基于对称性的现代物理学},pdfauthor={超理汉化组}}
 \usepackage{bookmark}
 \bookmarksetup{
-open,
+open, openlevel=0,
 numbered,
 addtohook={%
 \ifnum\bookmarkget{level}=0 % chapter
@@ -483,12 +501,3 @@ addtohook={%
 \fi
 }
 }
-
-%----------------------------------------------------------------------------------------
-%	CHINESE SETTING
-%----------------------------------------------------------------------------------------
-\usepackage{caption}
-\captionsetup{font={scriptsize}}
-\captionsetup{figurename={图}, tablename={表}}
-%\addto{\captionsenglish}{\renewcommand{\contentsname}{目\quad录}}
-\def\chntoday{\the\year~年~\the\month~月~\the\day~日}

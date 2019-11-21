@@ -31,10 +31,10 @@
 \label{sec2.1}
 在接下来的几节中，我们将使用狭义相对论的两个基本假设推导出Minkowski度规，有了它，我们就能计算两个物理事件的“距离”。物理事件在这里指在Minkowski 时空中的点，而整个狭义相对论都建立在Minkowski时空之上。我们从而得知任意两个不同惯性参考系之间的变换必须保证Minkowski度规不变，通过这一条件我们能够找到连接两个允许存在的惯性系（也就是光速为常数的参考系）之间所有的变换\footnote{非常类似我们要找旋转变换对应的各个参数的变换规律，而旋转变换保证了长度的守恒}。
 在本书其余的部分我们将会用到这些关于变换的知识，来寻找在这些变换下不变的方程。让我们从一个能导出一条狭义相对论假设的最重要的推论之一的思想实验开始。
-{\marginpar{
+{\picmpar{
     \centering
-    \includegraphics[scale=0.5]{fig2_1.eps}
-    \figcaption{思想实验图示}
+    \includegraphics[scale=0.5]{fig2_1.pdf}
+    \caption{思想实验图示}
     \label{fig2.1}
 }}
 设想坐标系中一观察者，在原点处向上发出一个光脉冲，经过一段时间后被垂直镜面反射回原点。如图\ref{fig2.1}所示
@@ -51,10 +51,10 @@
 \end{equation}
 式中$L$表示原点与反射点之间的距离。
 
-{\marginpar{
+{\picmpar{
         \centering
-        \includegraphics[scale=0.31]{fig2_2.eps}
-        \figcaption{思想实验图示. 第二位移动观察者向左移动, 因此第一位观察者相对他向右移动}
+        \includegraphics[scale=0.31]{fig2_2.pdf}
+        \caption{思想实验图示。 第二位移动观察者向左移动, 因此第一位观察者相对他向右移动}
         \label{fig2.2}
 }}
 
@@ -159,22 +159,22 @@ c \Delta t' =
 \section[固有时]{Proper Time \quad 固有时}
 \label{sec2.2}
 我们在上一节推导出了狭义相对论中的不变量$\Delta s^2$，其在所有观察者眼中都相同。接下来我们要讨论这个量的物理意义。
-    \marginpar{
-        \includegraphics[scale=0.4]{fig2_3.eps}
-        \figcaption{静止物体的世界线。物体位置不随时间流逝而变化。}\label{fig2.3}
+    \picmpar{
+        \includegraphics[scale=0.4]{fig2_3.pdf}
+        \caption{静止物体的世界线。物体位置不随时间流逝而变化。}\label{fig2.3}
     }
 为简便起见，我们将问题限制在一维空间中。对于一个相对于观察者静止的物体，我们能作出它的时空图(见图\ref{fig2.3})。相应的，一个匀速运动的物体能作出如图\ref{fig2.4}所示的时空图。
 
-    \marginpar{
-        \includegraphics[scale=0.35]{fig2_4.eps}\label{fig2.4}
-        \figcaption{某匀速直线运动物体的世界线。物体前后经过某两点记为事件A，B。它们间的空间距离为$\Delta x$，时间间隔为$\Delta t$}
+    \picmpar{
+        \includegraphics[scale=0.35]{fig2_4.pdf}
+        \caption{某匀速直线运动物体的世界线。物体前后经过某两点记为事件A，B。它们间的空间距离为$\Delta x$，时间间隔为$\Delta t$}\label{fig2.4}
     }
 我们画来用于确定物体在时空中位置的线称为{\bf{世界线(world line)}}。世界线总是依赖于观察者的。两不同观察者对于同一物体可能会画出完全不同的世界线。若一观察者眼中的物体时空图为图\ref{fig2.4}，那么对于速度与物体相同的观察者，其时空图将为图\ref{fig2.5}，即对于此观察者物体静止。为了解释两位观察者给出的不同描述，我们引入$x'$ 和$t'$ 表示第二位观察者的参考系中的时间和位置。\footnote{注意：我们这里使用的例子与节\ref{sec2.1}不同}
 
 我们可以看到，两个观察者将对事件$AB$之间的变化持不同观点。对于第一位观察者，$\Delta x \neq 0$， 但对于第二位观察者，$\Delta x' = 0$。 两观察者都认为事件$A$ 和$B$ 之间的时间间隔非零：$\Delta t \neq 0$ 和$\Delta t' \neq 0$，且认为$\Delta s^2$也相同(见上节推导的结论，任意观察者都有相同的$\Delta s^2$)。 这将导出一个令人惊讶的结论：事件$A$ 到$B$ 经历的时间对于两观察者不同
-    \marginpar{
-        \includegraphics[scale=0.35]{fig2_5.eps}
-        \figcaption{同一个运动物体的世界线，但观察者与该物体速度相同。该观察者观测到的事件AB之间的空间距离为$\Delta x' = 0$}\label{fig2.5}
+    \picmpar{
+        \includegraphics[scale=0.35]{fig2_5.pdf}
+        \caption{同一个运动物体的世界线，但观察者与该物体速度相同。该观察者观测到的事件AB之间的空间距离为$\Delta x' = 0$}\label{fig2.5}
     }
 \begin{equation}\label{equ2.14}
   (\Delta s)^2
@@ -419,10 +419,7 @@ x^2=x \cdot x \equiv x_\mu x_\nu \eta^{\mu\nu}
   \vec{a} \cdot \vec{b}
   \overset{\text{!}}{=}
   \vec{a'} \cdot \vec{b'}
-  \!\!\!\!\!\!\!\!\!\!
-  \underbrace{=}_{\text{注意}
-  (Oa)^\mathrm{T}=a^\mathrm{T}O^\mathrm{T}}
-  \!\!\!\!\!\!\!\!\!\!
+  \underbrace{=}_{\mathclap{\text{注意} (Oa)^\mathrm{T}=a^\mathrm{T}O^\mathrm{T}}}
   \vec{a}^\mathrm{T} O^\mathrm{T} O\vec{b}
 \end{equation}
 因此
@@ -463,15 +460,15 @@ E'_2=y'^3+4az'y'+y'^2+8z'x'
 \]
 那么它就不是协变的，因为其形式已经变化。
 
-所有的物理规律都应具有Lorentz协变性\footnote{即在Lorentz变换下具有协变性---译者(InSight)}，因为只有这样的物理规律才能在任意参考系下成立。非协变的物理规律只能在某一特定参考系下成立，这会导致在东京和纽约具有不同的物理规律。显然这个主意糟透了，因为不应该存在一个特殊的参考系，我们得让物理规律在任意参考系中成立。后面我们将讲述如何用协变的方法来计算物理规律。
+所有的物理规律都应具有Lorentz协变性\footnote{即在Lorentz变换下具有协变性——译者(InSight)}，因为只有这样的物理规律才能在任意参考系下成立。非协变的物理规律只能在某一特定参考系下成立，这会导致在东京和纽约具有不同的物理规律。显然这个主意糟透了，因为不应该存在一个特殊的参考系，我们得让物理规律在任意参考系中成立。后面我们将讲述如何用协变的方法来计算物理规律。
 
 \section*{Further Reading Tips\quad 阅读建议}
 \begin{itemize}
-\item {\bf E.Taylor and J.Wheeler - Spacetime Physics:Introduction to Special Relativity}\mpar{Edwin F.Taylor and John Archibald Wheeler.\\ {\it Spacetime Physics}.\\W.H.Freeman,2nd edition,\\3 1992.ISBN 9780716723271}适合用来入门。
-\item {\bf D.Fleisch - A Student’s Guide to Vectors and Tensors}\mpar{Daniel Fleisch.\\{\it A Student’s Guide \\ to Vectors and Tensors}.\\ Cambridge
+\item {\bfseries E.Taylor and J.Wheeler - Spacetime Physics:Introduction to Special Relativity}\mpar{Edwin F.Taylor and John Archibald Wheeler.\\ {\itshape Spacetime Physics}.\\W.H.Freeman,2nd edition,\\3 1992.ISBN 9780716723271}适合用来入门。
+\item {\bfseries D.Fleisch - A Student's Guide to Vectors and Tensors}\mpar{Daniel Fleisch.\\{\itshape A Student's Guide \\ to Vectors and Tensors}.\\ Cambridge
 University Press,\\1st edition,11 2011.ISBN 9780521171908}对狭义相对论中用到的张量范式有很有创意的解释。比如对于协变与逆变分量的差异。
-\item {\bf N.Jeevanjee - An Introduction to Tensors and Group Theory for Physicists}\mpar{Nadir Jeevanjee. \\{\it An Introduction to Tensors and Group Theory for Physicists}.\\Birkhaeuser,1st edition,August 2011.\\ISBN 978-0817647148}是另一本把在狭义相对论中用到的数学讲的不错的书。
-\item {\bf A.Zee - Einstein Gravity in a nutshell}\mpar{Anthony Zee.\\{\it Einstein Gravity in a
+\item {\bfseries N.Jeevanjee - An Introduction to Tensors and Group Theory for Physicists}\mpar{Nadir Jeevanjee. \\{\itshape An Introduction to Tensors and Group Theory for Physicists}.\\Birkhaeuser,1st edition,August 2011.\\ISBN 978-0817647148}是另一本把在狭义相对论中用到的数学讲的不错的书。
+\item {\bfseries A.Zee - Einstein Gravity in a nutshell}\mpar{Anthony Zee.\\{\itshape Einstein Gravity in a
 Nutshell}.\\Princeton University Press,\\1st
 edition,5 2013.\\ISBN 9780691145587}是一本关于广义相对论的书，但是里面也有很多关于狭义相对论的很棒的解释。
 \end{itemize}

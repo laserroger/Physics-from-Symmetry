@@ -1,6 +1,5 @@
 %!TEX TS-program = xelatex
 %!TEX encoding = UTF-8 Unicode
-%times,
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -18,27 +17,27 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \documentclass[11pt,fleqn,twoside]{book}
-\makeatletter
-\usepackage{ctex,amsmath}
-\usepackage{mathrsfs}
+\usepackage{ctex}
 \usepackage{indentfirst}
-\usepackage{xeCJK}
-\usepackage{cancel}
-\setCJKmainfont[BoldFont={SimHei},ItalicFont={KaiTi}]{SimSun}
-\usepackage{bm}
-\usepackage{amssymb}
+\usepackage{zhlineskip}
+% \setCJKmainfont[BoldFont={SimHei},ItalicFont={KaiTi}]{SimSun}
 \usepackage{mathrsfs}
-\usepackage[squaren]{SIunits}
-\usepackage{ulem}%\usepackage[version=3]{mhchem}
-\usepackage{draftwatermark}
-\SetWatermarkText{\textsc{Draft Translation}}
-\SetWatermarkLightness{0.9}
-\SetWatermarkScale{0.4}
-\usepackage{setspace}
+\usepackage{cancel}
+\usepackage{mathrsfs}
+% \usepackage{siunitx}
+\usepackage{physics}
+\usepackage{ulem}
+%\usepackage[version=3]{mhchem}
+% \usepackage{draftwatermark}
+% \SetWatermarkText{\textsc{Draft Translation}}
+% \SetWatermarkLightness{0.9}
+% \SetWatermarkScale{0.4}
 \usepackage{marginfix}
 %\include{marginpar}
 \input{structure}
 \usepackage{xypic}
+
+\makeatletter
 \def\UrlBreaks{\do\A\do\B\do\C\do\D\do\E\do\F\do\G\do\H\do\I\do\J
 \do\K\do\L\do\M\do\N\do\O\do\P\do\Q\do\R\do\S\do\T\do\U\do\V
 \do\W\do\X\do\Y\do\Z\do\[\do\\\do\]\do\^\do\_\do\`\do\a\do\b
@@ -47,15 +46,20 @@
 \do\.\do\@\do\\\do\/\do\!\do\_\do\|\do\;\do\>\do\]\do\)\do\,
 \do\?\do\'\do+\do\=\do\#}
 
-\makeatletter \newcommand\figcaption{\def\@captype{figure}\caption} \newcommand\tabcaption{\def\@captype{table}\caption} \makeatother
-
+\newcommand\figcaption{\def\@captype{figure}\caption} \newcommand\tabcaption{\def\@captype{table}\caption}
+\makeatother
 
 \newcounter{mparcnt}[chapter]
 \renewcommand\themparcnt{\small{$^{\arabic{mparcnt}}$}}
 \newcommand\mpar[1]{\refstepcounter{mparcnt}{$^{\arabic{mparcnt}}$}\marginpar{\themparcnt\scriptsize#1}}
-\makeatother
 
-\newcommand\tr{\text{tr}}
+\newcommand\picmpar[1]{\marginpar{%
+    \captionsetup{type=figure}
+    #1}%
+}
+
+\newenvironment{partquote}{\newpage\thispagestyle{empty}%
+~\vspace{\stretch{1}}\begin{quote}}{\end{quote}~\vspace{\stretch{2}}\cleardoublepage}
 
 %\makeatletter
 %\def\mpar#1{%
@@ -66,9 +70,13 @@
 %}
 %\makeatother
 
+%%% 中文句号改为中文点号
+%\catcode`\。=\active
+%\let。=．
+
 \begin{document}
+\frontmatter
 \allowdisplaybreaks
-%\pagestyle{fancy}
 
 %----------------------------------------------------------------------------------------
 %	TITLE PAGE
@@ -84,7 +92,7 @@
 \draw[anchor=north] (midpoint) node [fill=ocre!30!white,fill opacity=0.6,text opacity=1,inner sep=1cm]{\Huge\centering\bfseries\sffamily\parbox[c][][t]{\paperwidth}{\centering 基于对称性的现代物理学 \\[15pt] % Book title
 {\Large 原著：Jakob Schwichtenberg \quad 翻译：超理汉化组}\\[20pt] % Subtitle
 {\huge } % Author name
-{\huge Translate Version: \chntoday}
+{\huge Translate Version: \today}
 }};
 \end{tikzpicture}};
 \end{tikzpicture}
@@ -99,8 +107,8 @@
 ~\vfill
 \thispagestyle{empty}
 
-\noindent 本文档由热心网友翻译制作，原著书名为：Physics from Symmetry，属Springer公司Undergraduate Lecture Notes in Physics(ULNP)丛书，ISBN 978-3-319-19200-0，DOI 10.1007/978-3-319-19201-7。
-\\ {\bf 仅限教学科研使用，使用与传播应严格遵守相关法律规定。}\\\\\\
+\noindent 本文档由热心网友翻译制作，原著书名为：\emph{Physics from Symmetry}，属Springer公司Undergraduate Lecture Notes in Physics(ULNP)丛书，ISBN 978-3-319-19200-0，DOI 10.1007/978-3-319-19201-7。
+\\ {\bfseries 仅限教学科研使用，使用与传播应严格遵守相关法律规定。}\\\\\\
 
 \noindent《中华人民共和国著作权法》第四节第二十二条：\\
 在下列情况下使用作品，可以不经著作权人许可，不向其支付报酬，但应当指明作者姓名、作品名称，并且不得侵犯著作权人依照本法享有的其他权利：\\
@@ -125,7 +133,6 @@
 %----------------------------------------------------------------------------------------
 %	TABLE OF CONTENTS
 %----------------------------------------------------------------------------------------
-\begin{spacing}{1.4}
 \chapterimage{chapter_head_1.pdf} % Chapter heading image
 
 
@@ -140,14 +147,14 @@
 %	PART
 %----------------------------------------------------------------------------------------
 
-%\part*{Preface}
-\include{Preface}
-\include{Acknowledge}
+\input{Preface}
+\input{Acknowledge}
 
+\cleardoublepage
+\pdfbookmark[chapter]{\contentsname}{toc}
 \tableofcontents % Print the table of contents itself
 
-
-\setcounter{page}{0}
+\mainmatter
 
 \input{./Parts/Part1}
 \input{./Chaps/Chap1}
@@ -170,29 +177,19 @@
 \input{./Chaps/Chap12}
 \input{./Chaps/Chap13}
 
-\input{appendix}
-%\begin{table}[h]
-%\centering
-%\begin{tabular}{l l l}
-%\toprule
-%\textbf{Treatments} & \textbf{Response 1} & \textbf{Response 2}\\
-%\midrule
-%Treatment 1 & 0.0003262 & 0.562 \\
-%Treatment 2 & 0.0015681 & 0.910 \\
-%Treatment 3 & 0.0009271 & 0.296 \\
-%\bottomrule
-%\end{tabular}
-%\caption{Table caption}
-%\end{table}
+\appendix
 
-%\chapter*{Bibliography}
-%\addcontentsline{toc}{chapter}{\textcolor{ocre}{Bibliography}}
-%\section*{Books}
-%\addcontentsline{toc}{section}{Books}
-%\printbibliography[heading=bibempty,type=book]
-%\section*{Articles}
-%\addcontentsline{toc}{section}{Articles}
-%\printbibliography[heading=bibempty,type=article]
+\input{appendix}
+
+\backmatter
+
+%----------------------------------------------------------------------------------------
+%	BIBLIOGRAPHY
+%----------------------------------------------------------------------------------------
+
+%\cleardoublepage
+%\bibliographystyle{apsrev4-1}
+%\bibliography{bibliography}
 
 %----------------------------------------------------------------------------------------
 %	INDEX
@@ -203,12 +200,6 @@
 %\setlength{\columnsep}{0.75cm}
 %\addcontentsline{toc}{chapter}{\textcolor{ocre}{Index}}
 %\printindex
-
-%----------------------------------------------------------------------------------------
-%\cleardoublepage
-%\bibliographystyle{apsrev4-1}
-%\bibliography{bibliography}
-\end{spacing}
 
 
 

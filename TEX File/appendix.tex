@@ -1,7 +1,6 @@
 %!TEX root = main.tex
 %!TEX encoding = UTF-8 Unicode
 
-\appendix
 
 \part{Appendix 附录}
 \chapter[矢量代数]{Vector calculus 矢量代数}\label{appendix.A}
@@ -12,7 +11,7 @@ x \\ y \\ z
 \end{pmatrix}$是一个指向$y$轴方向的矢量。
 
 \marginpar{
-	\includegraphics[width=.4\textwidth]{./../Pictures/fig_appendix_A_1.png}
+	\includegraphics[width=.4\textwidth]{fig_appendix_A_1.png}
 }
 
 矢量间可以相加
@@ -93,19 +92,19 @@ $v_1,v_2,v_3$三个数叫做$\vec{v}$的分量。注意分量是依赖于基矢�
 0\\4\\0
 \end{pmatrix}$}$\vec{w}$由此可以写成$\vec{w}= 0\vec{e}_1 + 4\vec{e}_2 + 0\vec{e}_3$。对基矢另一个同样好的选法是
 \begin{equation}
-\tilde\vec{e}_1 = \frac{1}{\sqrt{2}} \begin{pmatrix}
+\tilde{\vec{e}}_1 = \frac{1}{\sqrt{2}} \begin{pmatrix}
 1 \\ 1 \\ 0
 \end{pmatrix}\text{，}\quad
-\tilde\vec{e}_2 = \frac{1}{\sqrt{2}} \begin{pmatrix}
+\tilde{\vec{e}}_2 = \frac{1}{\sqrt{2}} \begin{pmatrix}
 1 \\ -1 \\ 0
 \end{pmatrix} \text{，}\quad
-\tilde\vec{e}_3 = \begin{pmatrix}
+\tilde{\vec{e}}_3 = \begin{pmatrix}
 0 \\ 0 \\ 1
 \end{pmatrix}\text{。}
 \end{equation}
 在这组基下矢量$\vec{w}$看起来会有点不同：
 \begin{equation}
-\vec{w}= 2\sqrt{2}\tilde\vec{e}_1 -2\sqrt{2}\tilde\vec{e}_2 + 0\tilde\vec{e}_3
+\vec{w}= 2\sqrt{2}\tilde{\vec{e}}_1 -2\sqrt{2}\tilde{\vec{e}}_2 + 0\tilde{\vec{e}}_3
 = 2\sqrt{2} \frac{1}{\sqrt{2}} \begin{pmatrix}
 1 \\ 1 \\ 0
 \end{pmatrix}-2\sqrt{2}
@@ -117,27 +116,31 @@ $v_1,v_2,v_3$三个数叫做$\vec{v}$的分量。注意分量是依赖于基矢�
 \end{equation}
 从而将$\vec{w}$用在新基矢下的分量写出
 \[
-\tilde\vec{w} = \begin{pmatrix}
+\tilde{\vec{w}} = \begin{pmatrix}
 2\sqrt{2} \\ -2\sqrt{2} \\ 0
 \end{pmatrix}\text{。}
 \]
-这并不是一个不同的矢量，而只是一个不同的描述！准确地讲，$\tilde\vec{w}$是原坐标系中的矢量$\tilde\vec{w}$在一个相对有旋转的坐标系下描述。%
+这并不是一个不同的矢量，而只是一个不同的描述！准确地讲，$\tilde{\vec{w}}$是原坐标系中的矢量$\tilde{\vec{w}}$在一个相对有旋转的坐标系下描述。%
 \footnote{译注：在整个附录\ref{appendix.A}里作者就没说过几句准确的话，这句话也说得挺糙的。}
 
 \section[坐标系变换]{Change of Coordinate Systems 坐标系变换}\label{appendix.A.2}
-通过矩阵，我们可以更精确地描述不同坐标系间的联系。两个不同的坐标系可以代表实验中两个持不同视角的观察者，或者仅仅是{\bf 一个}想使用一套新的基矢的观察者。这些描述之间的关系是什么？为了避免复杂的讨论，让我们假定这两个坐标系的原点和$z$轴都是一样的。这样的话就只是$x$和$y$轴有区别了。进一步假定实验中某个重要的量用矢量$\vec{v}$描述。
+通过矩阵，我们可以更精确地描述不同坐标系间的联系。两个不同的坐标系可以代表实验中两个持不同视角的观察者，或者仅仅是{\bfseries 一个}想使用一套新的基矢的观察者。这些描述之间的关系是什么？为了避免复杂的讨论，让我们假定这两个坐标系的原点和$z$轴都是一样的。这样的话就只是$x$和$y$轴有区别了。进一步假定实验中某个重要的量用矢量$\vec{v}$描述。
 
 如果第一个观察者看到的是矢量$\vec{v}= \begin{pmatrix}
 v_x \\ v_y \\ v_z
 \end{pmatrix}$，我们能通过三角函数$\sin(\phi)$，$\cos(\phi)$和$\tan(\phi)=\frac{\sin(\phi)}{\cos(\phi)}$来计算出第二个观察者看到的$\vec{v}= \begin{pmatrix}
 v_{x'} \\ v_{y'} \\ v_{z'}
 \end{pmatrix}$，如图\ref{fig:appendix.A.1} 所示：
+
+{
+	\captionsetup{type=figure}
+	\includegraphics[width=\textwidth]{fig_appendix_A_3.png}
+
 \marginpar{
-	\figcaption{矢量在两个不同的坐标系下分量的示意图。细节见正文。}
+	\caption{矢量在两个不同的坐标系下分量的示意图。细节见正文。}
 	\label{fig:appendix.A.1}
 }
-
-\includegraphics[width=\textwidth]{./../Pictures/fig_appendix_A_3.png}
+}
 
 计算$v_x$和$v_{x'}$的关系，由
 \[
@@ -203,9 +206,9 @@ w_x \\ w_y \\ w_z
 
 类似的，两个矩阵的乘法也就是左边矩阵的每一行乘右边矩阵的每一列，如图\ref{fig:appendix.A.2}。下面是一个具体的例子
 
-\marginpar{
-	\includegraphics[width=.4\textwidth]{./../Pictures/fig_appendix_A_4.png}
-	\figcaption{矩阵乘法示意图。时时刻刻记住{\bf 行乘列}。第一个指标代表所在的行数，第二个代表列数。在例子中，乘积矩阵红色的元素$c_{1,2}=a_{1,1}b_{1,2}+a_{1,2}b_{2,2}$，蓝色的元素$c_{3,3}=a_{3,1}b_{1,3}+a_{3,2}b_{2,3}$。一般的，$c_{i,j}=a_{i,k}b_{k,j}=a_{i,1}b_{1,j}+a_{i,2}b_{2,j}+\dots$ Figure by Olivier Perrin (Bilou Wikimedia Commons) released under a CC BY-SA 3.0 licence: \url{http://creativecommons.org/licenses/by-sa/3.0/deed.en}. URL: \url{http://commons.wikimedia.org/wiki/File:Matrix_multiplication_diagram_2.svg}, Accessed: 28.1.2015}
+\picmpar{
+	\includegraphics[width=.4\textwidth]{fig_appendix_A_4.png}
+	\caption{矩阵乘法示意图。时时刻刻记住{\bfseries 行乘列}。第一个指标代表所在的行数，第二个代表列数。在例子中，乘积矩阵红色的元素$c_{1,2}=a_{1,1}b_{1,2}+a_{1,2}b_{2,2}$，蓝色的元素$c_{3,3}=a_{3,1}b_{1,3}+a_{3,2}b_{2,3}$。一般的，$c_{i,j}=a_{i,k}b_{k,j}=a_{i,1}b_{1,j}+a_{i,2}b_{2,j}+\dots$ Figure by Olivier Perrin (Bilou Wikimedia Commons) released under a CC BY-SA 3.0 licence: \url{http://creativecommons.org/licenses/by-sa/3.0/deed.en}. URL: \url{http://commons.wikimedia.org/wiki/File:Matrix_multiplication_diagram_2.svg}, Accessed: 28.1.2015}
 	\label{fig:appendix.A.2}
 }
 
@@ -231,7 +234,7 @@ MN = \begin{pmatrix}
 \end{pmatrix}
 \end{aligned}
 \end{equation}
-时刻把{\bf 行乘列}记在脑子里\footnote{译注：说起来，什么是行什么是列也是一个需要记牢的东西，尤其是与台湾友人交流时。}。注意两个矩阵的乘法是不对易的，即一般来说$MN\ne NM$。
+时刻把{\bfseries 行乘列}记在脑子里\footnote{译注：说起来，什么是行什么是列也是一个需要记牢的东西，尤其是与台湾友人交流时。}。注意两个矩阵的乘法是不对易的，即一般来说$MN\ne NM$。
 
 \section[标量]{Scalars 标量}\label{appendix.A.4}
 另一个值得注意的事情是，两个矢量标量积的结果对于所有观察者而言都是相同的。这看起来可以作为标量的定义：标量是对于全部观察者都相同的量。这不只是简单的在说每一个数都是标量，因为矢量的每一个分量都是一个数，但是它们对于不同的观察者而言却不一样。作为对比，两个矢量的标量积对于全体观察者却是相同的。这源于，矢量的长度与其与自身的标量积直接相关这一事实。改变观察的视角或位置并不会改变任何东西的长度。矢量的长度被称作旋转下的不变量，即无论我们怎样旋转系统其都保持原样。
@@ -239,9 +242,9 @@ MN = \begin{pmatrix}
 \section[左手/右手坐标系]{Right-handed and Left-handed Coordinate Systems 左手/右手坐标系}\label{appendix.A.5}
 当我们谈论两个观察者时，我们默认了它们对坐标系的定义都是相同的。而事实上，我们有两种可能的选择，它们这是依旧能通过矩阵乘法相联系，却不能靠转动了。两个观察者可能是一个选择了所谓的右手坐标系，而另一个选择了左手坐标系。
 
-\marginpar{
-	\includegraphics[width=.4\textwidth]{./../Pictures/fig_appendix_A_5.png}
-	\figcaption{右手坐标系和左手坐标系。 Figure by Primalshell (Wikimedia Commons) released under a CC-BY-SA-3.0 licence: \url{http://creativecommons.org/licenses/by-sa/3.0/deed.en}. URL:\url{http://commons.wikimedia.org/wiki/File:3D_Cartesian_Coodinate_Handedness.jpg}, Accessed: 1.12.2014}
+\picmpar{
+	\includegraphics[width=.4\textwidth]{fig_appendix_A_5.png}
+	\caption{右手坐标系和左手坐标系。 Figure by Primalshell (Wikimedia Commons) released under a CC-BY-SA-3.0 licence: \url{http://creativecommons.org/licenses/by-sa/3.0/deed.en}. URL:\url{http://commons.wikimedia.org/wiki/File:3D_Cartesian_Coodinate_Handedness.jpg}, Accessed: 1.12.2014}
 }
 
 我们无法将一个左手系旋转成一个右手系。事实上，这两类坐标系通过镜面反射相关联。这就是说，右手系和左手系由如下形式的变换相联系%
@@ -254,7 +257,7 @@ v_1 \\ v_2 \\ v_3
 -v_1 \\ -v_2 \\ -v_3
 \end{pmatrix}\text{，}
 \end{equation}
-就是说把全部空间坐标都反一个号。人们也习惯于将这类变换称作{\bf 宇称变换(parity transformation)}。我们可以用如下方式来表示一个宇称变换
+就是说把全部空间坐标都反一个号。人们也习惯于将这类变换称作{\bfseries 宇称变换(parity transformation)}。我们可以用如下方式来表示一个宇称变换
 \begin{equation}
 \vec{v} \rightarrow \vec{v}' = P\vec{v} = \begin{pmatrix}
 -1 & 0 & 0 \\ 0 & -1 & 0 \\ 0 & 0 & -1
@@ -286,8 +289,10 @@ v_1 \\ v_2 \\ v_3
 \end{equation*}
 \section[分部积分]{Integration by Parts 分部积分}\label{appendix.B.2}
 \begin{quote}
-据说， Peter Lax 被授予美国国家科学奖章时，其他获奖人（可能不是数学家）问他凭借什么拿到的这个奖。 Lax 回答：“我做了个分部积分。” \\
-- Willie Wrong\mpar{是他在\url{www.math.stackexchange.com}上说的。}
+据说， Peter Lax 被授予美国国家科学奖章时，其他获奖人（可能不是数学家）问他凭借什么拿到的这个奖。 Lax 回答：“我做了个分部积分。” 
+\begin{flushright}
+	--- Willie Wrong\mpar{是他在\url{www.math.stackexchange.com}上说的。}
+\end{flushright}
 \end{quote}
 
 从莱布尼兹律可以直接得到一个重要的积分手段。将莱布尼兹律一式积分%
@@ -482,13 +487,13 @@ a_mb_nc_m \equiv \sum\limits_m a_mb_nc_m \text{。}
 \begin{equation}
 a_nb_m \ne \sum\limits_n a_nb_m\text{，}
 \end{equation}
-因为一般而言$n\ne m$。没有同伴的指标叫做{\bf 自由指标(free index)}，而有同伴要求和的叫做{\bf 哑指标(dummy index)}。具体原因会在下一节中解释。
+因为一般而言$n\ne m$。没有同伴的指标叫做{\bfseries 自由指标(free index)}，而有同伴要求和的叫做{\bfseries 哑指标(dummy index)}。具体原因会在下一节中解释。
 
 在$a_nb_nc_m \equiv \sum\limits_n a_nb_nc_m$一例中，$n$是哑指标，而$m$是自由指标。对于$a_mb_nc_m \equiv \sum\limits_m a_mb_nc_m$，指标$m$是哑的而$n$是自由的。
 \section[指标记号]{Index Notation 指标记号}\label{appendix.B.5}
 \subsection[哑指标]{Dummy Indices 哑指标}\label{appendix.B.5.1}
 一定要注意到的一点是，有伴的指标事实上什么用处都没有。将$n$重命名为$k$，什么事都不改变%
-\mpar{当然我们不能将一个指标改成另一{\bf 类}指标。例如，我们可以将改$i\rightarrow j$但不能改$i\rightarrow \mu$，因为$\mu$这样的希腊字母指标总是从$0$加到$3$，而$i$这样的罗马数字指标是从$1$加到$3$。}%
+\mpar{当然我们不能将一个指标改成另一{\bfseries 类}指标。例如，我们可以将改$i\rightarrow j$但不能改$i\rightarrow \mu$，因为$\mu$这样的希腊字母指标总是从$0$加到$3$，而$i$这样的罗马数字指标是从$1$加到$3$。}%
 ，即$n$已经被缩并掉了
 \begin{equation}
 a_n b_n c_m = a_k b_k c_m \equiv \sum\limits_n a_nb_nc_m \equiv \sum\limits_k a_kb_kc_m \text{。}
@@ -525,7 +530,7 @@ MN = (MN)_{ij} = M_{ik}N_{kj}\text{。}
 9 & 3 \\ 3 & 17 \\
 \end{pmatrix}
 \end{equation}
-一个矩阵被称为是{\bf 全反对称的(totally antisymmetric)}，若$M_{ij}=-M_{ji}$对于{\bf 全体}$i,j$成立。一个示例是
+一个矩阵被称为是{\bfseries 全反对称的(totally antisymmetric)}，若$M_{ij}=-M_{ji}$对于{\bfseries 全体}$i,j$成立。一个示例是
 \begin{equation}
 \begin{pmatrix}
 0 & 3 \\ -3 & 0
@@ -616,7 +621,7 @@ $\epsilon_{ijk}=-\epsilon_{jik}$，$\epsilon_{ijk}=-\epsilon_{ikj}$等。或者�
 
 \section[基本变换]{Basic Transformations 基本变换}
 \label{appendix.C.1}
-{\bf 矩阵的复共轭}定义为：
+{\bfseries 矩阵的复共轭}定义为：
 \begin{equation}
 \label{equc.1}
 	M^*_{ij} =
@@ -629,7 +634,7 @@ $\epsilon_{ijk}=-\epsilon_{jik}$，$\epsilon_{ijk}=-\epsilon_{ikj}$等。或者�
 \mpar{复数$z = a + ib$（$a$为$z$的实部，$b$为虚部，$a, b$均为实数）的复共轭为$z^* = a - ib$。}%
 。
 
-{\bf 矩阵的转置}定义为$M^T_{ij} = M_{ji}$，用矩阵形式表示为：
+{\bfseries 矩阵的转置}定义为$M^T_{ij} = M_{ji}$，用矩阵形式表示为：
 \begin{equation}
 \label{equC.2}
 	M_{ij} =
